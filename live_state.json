@@ -1,0 +1,158 @@
+{
+  "format": "TENSURA_LIVE_STATE",
+  "schema_version": "2.0-fast",
+  "save_version": 3,
+  "base_snapshot": {
+    "file": "world_save.json",
+    "version": 3,
+    "blob_sha": "2843fdaacf77eb10fb6d811540cd3daccdcdff50",
+    "rule": "During normal gameplay world_save.json is a frozen base snapshot. Do not rewrite it for each scene."
+  },
+  "world_time": {
+    "day": "T+117",
+    "time": "~13:33",
+    "precision": "approximate"
+  },
+  "maestro": {
+    "id": "char_arlequino",
+    "location": "Блюмунд; покидает старый тренировочный двор у западной стены, следующий пункт не выбран",
+    "state": [
+      "awake",
+      "departure to Eurazania scheduled 18:00 south gate",
+      "Rena agreed to join",
+      "intends to take violin, papers, ink, quills; not yet confirmed packed"
+    ],
+    "personal_cash": "21g 66s 41c",
+    "guitar": "none; Rena owns the only guitar",
+    "violin": "owned; exact immediate location UNKNOWN until retrieved",
+    "horse": "exists; exact location UNKNOWN in save but known in-world to Gareth/Varn"
+  },
+  "last_scene": {
+    "id": "scene_t117_1326_1333_rena_reunion",
+    "time": "T+117 ~13:26-13:33",
+    "location": "old practice yard by western wall, Blumund",
+    "summary": "Arlequino and Rena spoke after the earlier mutual goodbye. Tension turned into teasing, anger and mutually reciprocated kissing. Arlequino invited Rena to leave Blumund with him. She refused blind agreement until he named the destination; after he revealed Eurazania, she chose to join. She now knows Gareth and Varn are the guards and the 18:00 south-gate meeting. Rena intends to bring sword, belongings and her guitar. Her mount/transport is UNKNOWN. Arlequino said he intends to take violin, papers, ink and quills. He joked about later visiting Frey because she is reputedly beautiful; Rena reacted with pointed jealousy. Arlequino then joked he would rewrite/re-sing the story and left the yard.",
+    "continue_from": "T+117 ~13:33, Blumund. Arlequino has just left the old practice yard. Do not choose his next destination/action. Rena intends to prepare independently and meet at south gate 18:00. Gareth/Varn have not yet been told Rena is joining. Rena transport/mount UNKNOWN. Personal cash 21g66s41c."
+  },
+  "travel": {
+    "destination": "Eurazania",
+    "departure": "T+117 18:00",
+    "meeting_place": "south gate, Blumund",
+    "route": "southern trade road bypassing Jura",
+    "estimated_arrival": "T+125-T+127 absent delay",
+    "party_planned": [
+      "char_arlequino",
+      "char_rena",
+      "char_gareth",
+      "char_varn"
+    ],
+    "facts": [
+      "Original guard contract was Arlequino client + Gareth/Varn guards, horseback.",
+      "Rena chose to join after learning destination.",
+      "Rena knows Eurazania, Gareth/Varn and 18:00 meeting.",
+      "Rena mount/transport UNKNOWN.",
+      "Gareth/Varn do not yet know Rena is joining.",
+      "Guard contract prepaid up to 9 days."
+    ]
+  },
+  "characters_live": {
+    "char_rena": {
+      "location": "old west practice yard at scene end; next preparation route not observed",
+      "status": "active; agreed to join Eurazania; renewed romantic contact",
+      "knows": [
+        "destination Eurazania",
+        "18:00 south gate",
+        "Gareth/Varn guards",
+        "guitar is hers",
+        "Arlequino plans violin/papers/ink/quills",
+        "Frey beauty joke"
+      ],
+      "unknowns": [
+        "mount/transport",
+        "guards' logistical response"
+      ]
+    },
+    "char_gareth": {
+      "location": "Блюмунд preparing for 18:00",
+      "status": "contracted guard",
+      "does_not_know": [
+        "Rena joining unless later informed"
+      ]
+    },
+    "char_varn": {
+      "location": "Блюмунд preparing for 18:00",
+      "status": "contracted guard",
+      "does_not_know": [
+        "Rena joining unless later informed"
+      ],
+      "open": "old 2s road float reconciliation"
+    },
+    "char_lissa": {
+      "location": "Блюмунд exact current place UNKNOWN",
+      "status": "autonomous publishing lead",
+      "does_not_know": [
+        "Rena joined unless realistically informed"
+      ]
+    },
+    "char_oren": {
+      "location": "Блюмунд exact current place UNKNOWN",
+      "status": "Stage I organizer"
+    }
+  },
+  "relationships_live": [
+    {
+      "pair": "Arlequino<->Rena",
+      "state": "renewed romantic involvement",
+      "facts": [
+        "Earlier mutual goodbye was not explicit breakup.",
+        "Mutual kissing resumed ~13:26-13:33.",
+        "Rena chose to travel with Arlequino.",
+        "Exact long-term commitment beyond evidence must not be invented."
+      ]
+    }
+  ],
+  "events": {
+    "active": [
+      "Rena prepares independently; sword/belongings/guitar; mount UNKNOWN",
+      "Oren Stage I instrument-production work — autonomous",
+      "Lissa publishing project — autonomous",
+      "44 adventurer stories — holder UNKNOWN",
+      "Jura unrest / organized orcs — autonomous world event"
+    ],
+    "scheduled": [
+      "T+117 18:00 south gate: depart for Eurazania with Arlequino, Rena, Gareth, Varn; Rena addition not yet communicated to guards"
+    ]
+  },
+  "economy": {
+    "personal_cash": "21g 66s 41c",
+    "promo_remaining": "27s36c",
+    "promo_separate": true,
+    "oren_project_fund": "4g",
+    "lissa_project_fund": "4g",
+    "open": [
+      "Varn old 2s float remainder UNKNOWN",
+      "extra guard days only if >9 days applicable"
+    ]
+  },
+  "unresolved": [
+    "Rena mount/transport UNKNOWN",
+    "Gareth/Varn must realistically learn Rena is joining",
+    "Arlequino packing/retrieval not yet confirmed",
+    "Queen farewell-letter action UNKNOWN",
+    "44-story bundle holder UNKNOWN",
+    "Varn old 2s road-float remainder UNKNOWN"
+  ],
+  "critical_rules": [
+    "Arlequino is controlled only by the user.",
+    "World/NPCs act autonomously and know only what they realistically learned.",
+    "Do not replace UNKNOWN with guesses.",
+    "Stop before Arlequino's next meaningful decision.",
+    "Include personal cash in every RP response.",
+    "After public performance report income/expense/net/new personal cash.",
+    "Personal cash is separate from promo/project funds.",
+    "Only Rena calls Arlequino павлин.",
+    "Rena joining does not automatically rewrite guard contract or create a mount."
+  ],
+  "latest_journal": null,
+  "journal_since_base": []
+}
