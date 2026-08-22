@@ -1,35 +1,44 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 74,
+  "save_version": 75,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:11",
+  "world_time": "T+129 ~19:15",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
       "official free concert underway",
       "first concert song was adapted 'Головы с плеч' for the swordsmen",
-      "second concert song was 'От копья', chosen after spearmen were the next-largest fighter group",
-      "violin in hand"
+      "second concert song was 'От копья' for the spearmen",
+      "then Arlequino played 'Танец лучников' for the archers",
+      "Arlequino currently has and performs with the violin",
+      "Arlequino does NOT have the guitar; the guitar is with Rena"
     ],
-    "personal_cash": "21g 12s 34c"
+    "personal_cash": "21g 12s 34c",
+    "instrument_locations": {
+      "violin": "with Arlequino at the concert",
+      "guitar": "with Rena; not with Arlequino"
+    }
   },
   "last_scene": {
-    "id": "scene_t129_1906_1911_ot_kopya",
-    "time": "T+129 ~19:06-19:11",
-    "summary": "Arlequino followed the swordsmen's opening number with a song titled 'От копья' for the spearmen, the next-largest fighter group. The exact lyrics/performer were not established and could not be reliably identified, so no lyrics or line-specific reactions were invented. The spearmen responded most strongly to being singled out for their own number; several raised spear shafts or struck butts against the ground in rhythm, while some swordsmen heckled them good-naturedly. Other spectators reacted unevenly according to the live performance rather than inferred lyrical meaning. Tips: +17s38c; expenses 0; net +17s38c.",
-    "continue_from": "T+129 ~19:11 at the small combat yard. 'От копья' has just ended; the official concert continues. Crowd is lively, with swordsmen and spearmen now both having received dedicated opening songs. Personal cash 21g12s34c."
+    "id": "scene_t129_1911_1915_archers_dance_transition",
+    "time": "T+129 ~19:11-19:15",
+    "summary": "After 'От копья', Arlequino continued the official concert with 'Танец лучников' (user typed 'Тацен лучников'). Direct correction: Arlequino is performing with his violin. The guitar is with Rena and must not appear in Arlequino's hands unless he later retrieves it in-world. The scene was cut for chat migration before GM resolution of crowd reactions or tip income for 'Танец лучников', so no retroactive reactions or money were invented.",
+    "continue_from": "T+129 ~19:15 at the small combat yard. Arlequino has just played 'Танец лучников' after 'От копья'. He has the violin. The guitar remains with Rena. Official concert continues. Before moving to the next song, the next chat may resolve audience reactions and tip income for 'Танец лучников'; until then personal cash remains the last confirmed 21g12s34c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep; current waking state unobserved",
-      "relationship": "active romantic relationship"
+      "relationship": "active romantic relationship",
+      "possessions_relevant": [
+        "Arlequino's guitar is with Rena"
+      ]
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -51,6 +60,7 @@
   },
   "active_threads": [
     "Free concert T+129 19:00 at small combat yard is underway.",
+    "Pending GM resolution: crowd reactions and tip income for 'Танец лучников' were not narrated before chat migration; do not fabricate a prior cash change.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; dawn departure T+130 intended.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -59,7 +69,10 @@
   "economy": {
     "currency": "1g=100s;1s=100c",
     "personal_cash": "21g 12s 34c",
-    "last_transaction": "concert performance 'От копья': tips +17s38c; expenses 0; net +17s38c",
+    "last_confirmed_transaction": "concert performance 'От копья': tips +17s38c; expenses 0; net +17s38c",
+    "pending_performance_accounting": [
+      "Танец лучников"
+    ],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -72,9 +85,10 @@
     "For known songs, use real listener-comment patterns when available and adapt only explicitly otherworldly/modern details; for user-supplied adapted lyrics, react to exact supplied lines.",
     "If a song is given only by title and exact lyrics were not supplied or reliably recoverable, do not invent lyrics or line-specific semantic reactions.",
     "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text when known, and listener personality.",
+    "Arlequino currently has the violin. The guitar is with Rena; never silently give Arlequino the guitar.",
     "No plot armor.",
     "Include personal cash in every RP response.",
-    "After every actual public performance report income, expense, net and new personal cash.",
+    "After every actually resolved public performance report income, expense, net and new personal cash.",
     "Personal cash is separate from promo/project funds.",
     "Only Rena calls Arlequino павлин.",
     "Jura is a region; no Jura Tempest Federation yet.",
