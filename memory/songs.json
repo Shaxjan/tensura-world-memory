@@ -1,269 +1,71 @@
 {
-  "audit_version": 1,
+  "audit_version": 2,
   "policy": {
-    "canonical_full_text_rule": "FULL_CANONICAL only if the entire checked text exists in one UTF-8 file under song_archive/.",
-    "no_reconstruction": "Missing user-adapted lyrics must never be reconstructed from an original song, web, memory guess or semantic summary.",
-    "legacy_shards": "Legacy line-sharded directories are historical evidence only; they are not the canonical working source after normalization."
+    "FULL_CANONICAL": "Entire checked text exists in one UTF-8 file under song_archive/.",
+    "FULL_LEGACY_SHARDS": "Entire exact text is recoverable in checked historical shards, but no physically verified one-file canonical copy exists.",
+    "PARTIAL_EXACT": "Only some exact text survives.",
+    "TEXT_LOST": "Performance/original composition survives in continuity but exact full text cannot currently be recovered.",
+    "TITLE_ONLY": "Title/performance is durable; exact lyrics are not.",
+    "rule": "Never fill missing user-adapted lyrics from web, the source song, semantic memory or a guessed reconstruction."
   },
   "full_canonical": [
-    {
-      "title": "Герои",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/geroi.txt",
-      "type": "Arlequino adaptation",
-      "notes": "Contains the Carrion adaptation and is planned for immediately before Carrion's bout with the tournament winner."
-    },
-    {
-      "title": "Оракул",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/orakul_machete_tensura.txt",
-      "type": "Arlequino/Tensura adaptation",
-      "notes": "Full long theatrical trial text."
-    },
-    {
-      "title": "Тьмы Князь",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/tmy_knyaz.txt",
-      "type": "stored exact performed text"
-    },
-    {
-      "title": "Космос",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/kosmos.txt",
-      "type": "user adaptation",
-      "normalized_from": "LIVE v84 filename shards",
-      "notes": "Original user wording/typos preserved exactly."
-    },
-    {
-      "title": "Созвездие Ангела",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/sozvezdie_angela.txt",
-      "type": "exact user-supplied song",
-      "normalized_from": "LIVE v85 69 line shards",
-      "notes": "Arlequino performed this for Rena; this is NOT Rena's lost original song for Arlequino."
-    },
-    {
-      "title": "Вьюга",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/vyuga.txt",
-      "type": "stored performed text",
-      "normalized_from": "LIVE v89 shards"
-    },
-    {
-      "title": "Та, что",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/ta_chto_adapted.txt",
-      "type": "user adaptation",
-      "normalized_from": "46 canonical shards",
-      "notes": "The old top-level file was truncated and was replaced with the full canonical shard reconstruction."
-    },
-    {
-      "title": "Мои враги",
-      "source_title": "Ichimdagi dushmanlarim",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/moji_vragi.txt",
-      "type": "literal Russian performance text",
-      "normalized_from": "translation_ru_01.txt..05.txt"
-    },
-    {
-      "title": "Принцесса",
-      "status": "FULL_CANONICAL",
-      "path": "song_archive/princessa.txt",
-      "type": "user adaptation",
-      "normalized_from": "verbatim lyrics embedded in LIVE v82 retcon"
-    }
+    {"title":"Герои","status":"FULL_CANONICAL","path":"song_archive/geroi.txt","type":"Arlequino adaptation","note":"Carrion adaptation; planned before Carrion vs tournament winner."},
+    {"title":"Оракул","status":"FULL_CANONICAL","path":"song_archive/orakul_machete_tensura.txt","type":"Tensura adaptation"},
+    {"title":"Тьмы Князь","status":"FULL_CANONICAL","path":"song_archive/tmy_knyaz.txt"},
+    {"title":"Созвездие Ангела","status":"FULL_CANONICAL","path":"song_archive/sozvezdie_angela.txt","type":"exact user-supplied text","note":"Arlequino's song performed for Rena; not Rena's lost song for Arlequino."},
+    {"title":"Мои враги","source_title":"Ichimdagi dushmanlarim","status":"FULL_CANONICAL","path":"song_archive/moji_vragi.txt","type":"full performed literal Russian text"},
+    {"title":"Принцесса","status":"FULL_CANONICAL","path":"song_archive/princessa.txt","type":"user adaptation","source":"LIVE v82 verbatim retcon"}
+  ],
+  "full_legacy_shards": [
+    {"title":"Космос","status":"FULL_LEGACY_SHARDS","paths":"live_v84/kosmos/*","line_count":74,"note":"All exact text survives in numbered filename shards. Audit attempts to create a single new file were physically truncated, so the truncated top-level copies were deleted and are not canonical."},
+    {"title":"Вьюга","status":"FULL_LEGACY_SHARDS","paths":"song_archive/vyuga/001.txt..end","note":"Full exact text survives across checked v89 shards. Audit one-file write was physically truncated and removed."},
+    {"title":"Та, что","status":"FULL_LEGACY_SHARDS","paths":"song_archive/ta_chto/001.txt..046.txt","note":"README says join 001..046 with newlines; empty files preserve blank lines. The old/new top-level copies were truncated and removed."}
   ],
   "partial_exact": [
-    {
-      "title": "Наблюдатель",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/nablyudatel.partial.txt",
-      "problem": "Multiple historical commits falsely said full/exact, but actual text ends at 'Я чувств'. The incomplete file was removed from song_archive/."
-    },
-    {
-      "title": "Головы с плеч",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/golovy_s_plech.partial.txt",
-      "type": "user adaptation",
-      "authority": "SAVE v37 retcon",
-      "problem": "Many exact lines and all canonical substitution rules survive, but the full contiguous text does not."
-    },
-    {
-      "title": "От копья",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/ot_kopya.partial.txt",
-      "type": "previously established Arlequino song",
-      "problem": "Opening stanza and refrain survive exactly; later comic verses survive only as semantic summary."
-    },
-    {
-      "title": "Заклинатель и осёл",
-      "source_reference": "Ведьма и осёл",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/zaklinatel_i_osel.partial.txt",
-      "type": "user adaptation",
-      "problem": "Premise and exact refrain survive; full adapted lyrics do not."
-    },
-    {
-      "title": "Для мира на земле",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/dlya_mira_na_zemle.partial.txt",
-      "type": "user adaptation",
-      "problem": "Key exact lines and story survive, but full adapted text does not."
-    },
-    {
-      "title": "С щитами не рождаются",
-      "source_reference": "Солдатами не рождаются",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/s_shchitami_ne_rozhdayutsya.partial.txt",
-      "type": "user adaptation",
-      "problem": "Theme and exact final line survive; full lyrics do not."
-    },
-    {
-      "title": "Авантюрист",
-      "status": "PARTIAL_EXACT",
-      "path": "song_fragments/avantiurist.partial.txt",
-      "type": "user-supplied performance text",
-      "problem": "SAVE says exact lyrics were supplied/performed, but durable storage kept only fragments and later place-name correction."
-    }
+    {"title":"Наблюдатель","status":"PARTIAL_EXACT","path":"song_fragments/nablyudatel.partial.txt","note":"Historical commits claiming full/exact were false in fact; surviving text breaks at 'Я чувств'."},
+    {"title":"Головы с плеч","status":"PARTIAL_EXACT","path":"song_fragments/golovy_s_plech.partial.txt","authority":"SAVE v37 retcon","note":"Many exact lines and all replacement rules survive; full contiguous adaptation does not."},
+    {"title":"От копья","status":"PARTIAL_EXACT","path":"song_fragments/ot_kopya.partial.txt","note":"Exact opening stanza/refrain survives; later comic verses only in semantic summary."},
+    {"title":"Заклинатель и осёл","source_reference":"Ведьма и осёл","status":"PARTIAL_EXACT","path":"song_fragments/zaklinatel_i_osel.partial.txt","note":"Premise and exact refrain survive; full user adaptation lost."},
+    {"title":"Для мира на земле","status":"PARTIAL_EXACT","path":"song_fragments/dlya_mira_na_zemle.partial.txt"},
+    {"title":"С щитами не рождаются","source_reference":"Солдатами не рождаются","status":"PARTIAL_EXACT","path":"song_fragments/s_shchitami_ne_rozhdayutsya.partial.txt"},
+    {"title":"Авантюрист","status":"PARTIAL_EXACT","path":"song_fragments/avantiurist.partial.txt","note":"Fragments plus exact correction 'Блюмундских Раздолий' survive."}
   ],
   "text_lost_or_title_only": [
-    {
-      "title": "Рена — оригинальная песня для Арлекино",
-      "status": "TEXT_LOST",
-      "path": "song_fragments/rena_song_for_arlequino.TEXT_LOST.md",
-      "type": "Rena original in-world composition",
-      "notes": "Rena worked on it for several weeks and performed it T+129. Exact title and lyrics are lost. User memory anchor 'Не быть великим , прийти домой. Ждут.' is NOT lyrics."
-    },
-    {
-      "title": "Самоэлегическая песня Арлекино при выезде из Блюмунда",
-      "status": "TEXT_LOST",
-      "type": "Arlequino original/new song",
-      "first_known_scene": "SAVE v12, T+117 ~17:49",
-      "notes": "Song presented Maestro Arlequino as dead/remembered; exact title and lyrics were never durably stored."
-    },
-    {
-      "title": "Принц Али",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+128 evening market set"
-    },
-    {
-      "title": "Прыгну со скалы",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+128 evening market set"
-    },
-    {
-      "title": "Легион",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+128 evening market set"
-    },
-    {
-      "title": "Темная ночь",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+128 evening market set"
-    },
-    {
-      "title": "Штиль",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+128 evening market set"
-    },
-    {
-      "title": "Танец лучника / Танец лучников",
-      "status": "TITLE_ONLY",
-      "notes": "Name varies across saves; later concert version was violin/martial-dance performance."
-    },
-    {
-      "title": "Мечник",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Сокрушитель великих",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Антиматерия",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Ухожу",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Крадущая сны",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+129 preconcert"
-    },
-    {
-      "title": "Лев спит",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+129 preconcert; exact user-supplied lyrics were used in scene but are not durably stored as full text"
-    },
-    {
-      "title": "Хакуна Матата",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+129 preconcert; performed theatrically in multiple roles with in-world translation/adaptation"
-    },
-    {
-      "title": "Если б я был Князем",
-      "status": "TEXT_LOST",
-      "type": "user-supplied parody",
-      "known_performance": "T+129 preconcert",
-      "notes": "Joke structure and some plot beats survive, but not the full user text."
-    },
-    {
-      "title": "Черная невеста",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Кукла колдуна",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+129 concert, magic-group sequence"
-    },
-    {
-      "title": "Тяни",
-      "status": "TITLE_ONLY",
-      "known_performance": "T+129 concert, healer-directed metaphorical performance"
-    },
-    {
-      "title": "Я вам не верю",
-      "status": "TITLE_ONLY"
-    },
-    {
-      "title": "Рена — песня про медведей",
-      "status": "TEXT_LOST",
-      "type": "Rena song known in current chat",
-      "notes": "Title and exact lyrics not recovered."
-    },
-    {
-      "title": "Рена — песня про зайцев",
-      "status": "TEXT_LOST",
-      "type": "Rena song known in current chat",
-      "notes": "Title and exact lyrics not recovered."
-    }
+    {"title":"Рена — оригинальная песня для Арлекино","status":"TEXT_LOST","path":"song_fragments/rena_song_for_arlequino.TEXT_LOST.md","type":"fully original in-world Rena composition","note":"Several weeks of work; performed T+129. Exact title/text lost. 'Не быть великим , прийти домой. Ждут.' is a memory anchor, not lyrics."},
+    {"title":"Самоэлегическая песня Арлекино при выезде из Блюмунда","status":"TEXT_LOST","scene":"SAVE v12, T+117 ~17:49"},
+    {"title":"Принц Али","status":"TITLE_ONLY"},
+    {"title":"Прыгну со скалы","status":"TITLE_ONLY"},
+    {"title":"Легион","status":"TITLE_ONLY"},
+    {"title":"Темная ночь","status":"TITLE_ONLY"},
+    {"title":"Штиль","status":"TITLE_ONLY"},
+    {"title":"Танец лучника / Танец лучников","status":"TITLE_ONLY"},
+    {"title":"Мечник","status":"TITLE_ONLY"},
+    {"title":"Сокрушитель великих","status":"TITLE_ONLY"},
+    {"title":"Антиматерия","status":"TITLE_ONLY"},
+    {"title":"Ухожу","status":"TITLE_ONLY"},
+    {"title":"Крадущая сны","status":"TITLE_ONLY"},
+    {"title":"Лев спит","status":"TITLE_ONLY","note":"Exact user-supplied lyrics were used in scene but not durably preserved as one full text."},
+    {"title":"Хакуна Матата","status":"TITLE_ONLY","note":"Theatrical multi-role in-world translation/adaptation performance."},
+    {"title":"Если б я был Князем","status":"TEXT_LOST","type":"user-supplied parody","note":"Comic structure survives, full text does not."},
+    {"title":"Черная невеста","status":"TITLE_ONLY"},
+    {"title":"Кукла колдуна","status":"TITLE_ONLY"},
+    {"title":"Тяни","status":"TITLE_ONLY"},
+    {"title":"Я вам не верю","status":"TITLE_ONLY"},
+    {"title":"Рена — песня про медведей","status":"TEXT_LOST","note":"Current chat confirms song exists; exact title/text unknown."},
+    {"title":"Рена — песня про зайцев","status":"TEXT_LOST","note":"Current chat confirms song exists; exact title/text unknown."}
   ],
   "instrumental": [
-    {
-      "title": "Asturias",
-      "status": "INSTRUMENTAL",
-      "notes": "Played by Arlequino on guitar for Eurazania beast-army endurance drill; no lyric archive required."
-    }
+    {"title":"Asturias","status":"INSTRUMENTAL","note":"No lyric archive required."}
   ],
-  "legacy_storage_not_source_of_truth": [
-    "live_v84/kosmos/*",
-    "live_v85/sozvezdie_angela/*",
-    "song_archive/vyuga/*",
-    "song_archive/ta_chto/*",
-    "song_archive/moji_vragi_ichimdagi_dushmanlarim/*",
-    "song_archive/tmy_knyaz/*"
-  ],
-  "current_chat_song_sequence_after_v124": [
-    "Наблюдатель — performed by Arlequino + Rena; canonical full lyric file unavailable",
-    "Rena bear song — title/text unknown",
-    "Rena rabbit song — title/text unknown",
-    "Вьюга — Rena solo; full text now canonical",
-    "Rena original song for Arlequino requested but old exact text lost; new/reworked version pending",
-    "Герои — full canonical",
-    "Головы с плеч — performed under current retcon using remembered/full in-world version, but GitHub still only has partial exact durable text",
-    "От копья — partial exact durable text",
-    "Заклинатель и осёл — partial exact durable text"
+  "current_chat_sequence_after_v124": [
+    "Наблюдатель — Arlequino + Rena",
+    "Rena bear song",
+    "Rena rabbit song",
+    "Вьюга — Rena",
+    "Rena original song requested; old exact text lost; new/reworked version pending",
+    "Герои",
+    "Головы с плеч",
+    "От копья",
+    "Заклинатель и осёл"
   ]
 }
