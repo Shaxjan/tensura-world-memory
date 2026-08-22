@@ -1,28 +1,29 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 73,
+  "save_version": 74,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:06",
+  "world_time": "T+129 ~19:11",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
-      "official free concert has begun",
-      "first concert song was Arlequino's adapted version of 'Головы с плеч'",
+      "official free concert underway",
+      "first concert song was adapted 'Головы с плеч' for the swordsmen",
+      "second concert song was 'От копья', chosen after spearmen were the next-largest fighter group",
       "violin in hand"
     ],
-    "personal_cash": "20g 94s 96c"
+    "personal_cash": "21g 12s 34c"
   },
   "last_scene": {
-    "id": "scene_t129_1901_1906_heads_off_shoulders_concert_open",
-    "time": "T+129 ~19:01-19:06",
-    "summary": "After the audience vote showed swordsmen as the largest single fighter group, Arlequino opened the official concert with his adapted 'Головы с плеч'. Returning listeners joined the chorus early; sword fighters answered the repeated sword/heads refrain loudly; 'Сильна Карионова ярость / С врагами зверолюди!' drew strong local approval; 'человечья кровь и гарь' split the crowd, with some younger fighters cheering while older listeners and a human trader reacted more grimly; 'Воля! Порядок! Вечная брань!' became a shouted call-response; the line about princely money and driving enemies out drew scattered laughter and argument rather than universal agreement; the final 'Все головы с плеч!' produced the loudest collective shout. Some non-fighters watched without joining and a few continued private conversations. Real-world discussion of the original song also describes it as notably divisive/ambiguous, supporting heterogeneous reactions rather than one universal response. Tips: +18s72c; expenses 0; net +18s72c.",
-    "continue_from": "T+129 ~19:06 at the small combat yard. First official concert song 'Головы с плеч' has just ended. Crowd is energized and mixed; returning listeners know parts of the refrain. Personal cash 20g94s96c."
+    "id": "scene_t129_1906_1911_ot_kopya",
+    "time": "T+129 ~19:06-19:11",
+    "summary": "Arlequino followed the swordsmen's opening number with a song titled 'От копья' for the spearmen, the next-largest fighter group. The exact lyrics/performer were not established and could not be reliably identified, so no lyrics or line-specific reactions were invented. The spearmen responded most strongly to being singled out for their own number; several raised spear shafts or struck butts against the ground in rhythm, while some swordsmen heckled them good-naturedly. Other spectators reacted unevenly according to the live performance rather than inferred lyrical meaning. Tips: +17s38c; expenses 0; net +17s38c.",
+    "continue_from": "T+129 ~19:11 at the small combat yard. 'От копья' has just ended; the official concert continues. Crowd is lively, with swordsmen and spearmen now both having received dedicated opening songs. Personal cash 21g12s34c."
   },
   "characters_live": {
     "rena": {
@@ -57,8 +58,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 94s 96c",
-    "last_transaction": "concert performance 'Головы с плеч': tips +18s72c; expenses 0; net +18s72c",
+    "personal_cash": "21g 12s 34c",
+    "last_transaction": "concert performance 'От копья': tips +17s38c; expenses 0; net +17s38c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -68,8 +69,9 @@
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
     "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
-    "For known songs, use real listener-comment patterns when available and adapt only explicitly otherworldly/modern details; for user-supplied adapted lyrics, react to the exact supplied lines.",
-    "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text and listener personality; do not reduce every song to its lyrical mood.",
+    "For known songs, use real listener-comment patterns when available and adapt only explicitly otherworldly/modern details; for user-supplied adapted lyrics, react to exact supplied lines.",
+    "If a song is given only by title and exact lyrics were not supplied or reliably recoverable, do not invent lyrics or line-specific semantic reactions.",
+    "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text when known, and listener personality.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
