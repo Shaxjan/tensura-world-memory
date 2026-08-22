@@ -1,7 +1,7 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 72,
+  "save_version": 73,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
@@ -21,7 +21,7 @@
   "last_scene": {
     "id": "scene_t129_1901_1906_heads_off_shoulders_concert_open",
     "time": "T+129 ~19:01-19:06",
-    "summary": "After the audience vote showed swordsmen as the largest single fighter group, Arlequino opened the official concert with his adapted 'Головы с плеч'. Reactions followed the already established adapted lines and the song's forceful refrain rather than generic sadness: returning listeners joined the chorus early; sword fighters answered the repeated sword/heads refrain loudly; 'Сильна Карионова ярость / С врагами зверолюди!' drew strong local approval; 'человечья кровь и гарь' split the crowd, with some younger fighters cheering while older listeners and a human trader reacted more grimly; 'Воля! Порядок! Вечная брань!' became a shouted call-response; the line about princely money and driving enemies out drew scattered laughter and argument rather than universal agreement; the final 'Все головы с плеч!' produced the loudest collective shout. Some non-fighters watched without joining and a few continued private conversations. Tips for this first official concert song: +18s72c; expenses 0; net +18s72c.",
+    "summary": "After the audience vote showed swordsmen as the largest single fighter group, Arlequino opened the official concert with his adapted 'Головы с плеч'. Returning listeners joined the chorus early; sword fighters answered the repeated sword/heads refrain loudly; 'Сильна Карионова ярость / С врагами зверолюди!' drew strong local approval; 'человечья кровь и гарь' split the crowd, with some younger fighters cheering while older listeners and a human trader reacted more grimly; 'Воля! Порядок! Вечная брань!' became a shouted call-response; the line about princely money and driving enemies out drew scattered laughter and argument rather than universal agreement; the final 'Все головы с плеч!' produced the loudest collective shout. Some non-fighters watched without joining and a few continued private conversations. Real-world discussion of the original song also describes it as notably divisive/ambiguous, supporting heterogeneous reactions rather than one universal response. Tips: +18s72c; expenses 0; net +18s72c.",
     "continue_from": "T+129 ~19:06 at the small combat yard. First official concert song 'Головы с плеч' has just ended. Crowd is energized and mixed; returning listeners know parts of the refrain. Personal cash 20g94s96c."
   },
   "characters_live": {
