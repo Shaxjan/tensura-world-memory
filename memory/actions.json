@@ -1,5 +1,5 @@
 {
-  "audit_version": 1,
+  "audit_version": 2,
   "festival": {
     "status": "SAVED_CANON",
     "official_name": "Фестиваль Эуразании: Неделя силы",
@@ -33,99 +33,44 @@
     "top10": "monetary rewards planned; exact amounts TBD"
   },
   "active_people_tasks": [
-    {
-      "person": "Мэйра",
-      "task": "lead general festival coordination and assemble/coordinate local functional team",
-      "status": "ACTIVE",
-      "remaining_fee": "1g"
-    },
-    {
-      "person": "Борга",
-      "task": "combat rules, admissions, judges, testing and tournament design/operations",
-      "status": "ACTIVE"
-    },
-    {
-      "person": "Гарет",
-      "task": "two-day full-capital survey of crowded places, public institutions/venues, markets, lodging, fighting grounds, bathhouses, trading/guild/craft places and performance-permission practicality",
-      "started": "T+129 ~14:28",
-      "fee": "25s paid",
-      "status": "ACTIVE / report not yet causally delivered in audited state"
-    },
-    {
-      "person": "Верн",
-      "task": [
-        "travel to Dwargon",
-        "visit Arlequino's known instrument master",
-        "visit Arlequino's known shopkeeper and collect Arlequino's share plus report if possible",
-        "deliver letter to owner of Каменная арка",
-        "pass greetings to Arlequino's students through that owner",
-        "return money/instruments/letters and unused float"
-      ],
-      "status": "ACTIVE; intended dawn T+130 departure, exact present road/task progress UNKNOWN",
-      "instrument_continuity_correction": "v121 is authoritative: Arlequino already has his own violin; Rena owns gifted old guitar; Vern's instruments are additional. Do not claim Arlequino waits for Vern for his own violin.",
-      "oren_boundary": "Oren is unrelated"
-    }
+    {"person":"Мэйра","task":"lead general festival coordination and local functional team","status":"ACTIVE","remaining_fee":"1g"},
+    {"person":"Борга","task":"combat rules, admissions, judges, testing and tournament operations","status":"ACTIVE"},
+    {"person":"Гарет","task":"two-day full-capital survey of crowded places, venues, markets, lodging, fighting grounds, bathhouses, trading/guild/craft places and performance-permission practicality","started":"T+129 ~14:28","fee":"25s paid","status":"ACTIVE; report not yet causally delivered"},
+    {"person":"Верн","task":["travel to Dwargon","visit Arlequino's known instrument master","visit known shopkeeper; collect Arlequino's share and report if possible","deliver letter to Каменная арка","pass greetings to Arlequino's students","return instruments/money/letters/unused float"],"status":"ACTIVE; exact present progress/location UNKNOWN","instrument_continuity_correction":"v121 authoritative: Arlequino already has personal violin; Rena owns gifted old guitar; Vern's instruments are additional","oren_boundary":"Oren is unrelated"}
   ],
   "mail": [
-    {
-      "recipient": "Lissa",
-      "destination": "Free Guild, Blumund",
-      "service": "urgent",
-      "last_known_status": "accepted for dispatch",
-      "delivery": "UNKNOWN"
-    },
-    {
-      "recipient": "Oren",
-      "destination": "Free Guild, Blumund",
-      "service": "urgent",
-      "last_known_status": "accepted for dispatch",
-      "delivery": "UNKNOWN"
-    }
+    {"recipient":"Lissa","destination":"Free Guild, Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"},
+    {"recipient":"Oren","destination":"Free Guild, Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"}
   ],
   "instrument_state": {
-    "arlequino_personal_violin": "owned and available in Eurazania",
-    "rena_guitar": "Arlequino's previous guitar, gifted to Rena; hers",
-    "vern_additional_instruments": "additional guitar + additional violin per latest v121 correction; older statements implying Arlequino lacks a violin are SUPERSEDED"
+    "arlequino_personal_violin":"owned and available in Eurazania",
+    "rena_guitar":"Arlequino's previous guitar, gifted to Rena; hers; currently temporarily with Arlequino during concert",
+    "vern_additional_instruments":"additional guitar + additional violin per v121; older statements implying Arlequino lacks a violin are SUPERSEDED"
   },
-  "chat_pending_checkpoint_current_concert": {
-    "status": "CHAT_PENDING_CHECKPOINT",
-    "time": "T+130 ~19:29",
-    "location": "big training yard, Eurazania capital",
-    "sequence_after_v124": [
+  "current_concert_checkpoint": {
+    "status":"SAVED_CANON",
+    "version":125,
+    "time":"T+130 ~19:29",
+    "location":"big training yard, Eurazania capital",
+    "sequence_after_v124":[
       "Rena/Arlequino warm-up including Наблюдатель and Rena's songs about bears, rabbits and Вьюга",
-      "Rena's old original song for Arlequino was requested; exact old lyrics remain lost; current continuity says she will make a new/reworked version rather than falsely reconstruct the old text",
-      "Arlequino took Rena's guitar for his turn",
-      "Герои performed after announcing it as the song also performed to Carrion and planned before Carrion-vs-winner",
-      "exact festival date was repeated aloud in-world; text label remains UNKNOWN to GM",
-      "Арлекино said first half of concert will be bloody, second half cute and fluffy",
-      "retconned full-text performance of Головы с плеч",
+      "Rena's old fully original song for Arlequino was requested; exact old lyrics remain lost; new/reworked version is pending rather than falsely reconstructed",
+      "Arlequino took Rena's guitar for his part",
+      "Герои; public statement that it was sung to Carrion and will be sung before Carrion-vs-winner",
+      "exact festival date repeated aloud in-world; written date label remains UNKNOWN to GM",
+      "Arlequino announced first half bloody, second half cute/fluffy",
+      "Головы с плеч after explicit retcon/economy review",
       "От копья",
       "Заклинатель и осёл"
     ],
-    "last_resolved_performance": "Заклинатель и осёл",
-    "current_personal_cash": "26g21s67c",
-    "next_action": "USER_CONTROLLED / not assigned"
+    "last_resolved_performance":"Заклинатель и осёл",
+    "personal_cash":"26g21s67c",
+    "next_action":"USER_CONTROLLED / not assigned"
   },
   "invalidated_history": [
-    {
-      "state": "LIVE v101",
-      "invalid_fact": "three Eurazania beast-army warriors appeared in Arlequino's room",
-      "correction": "LIVE v102 makes the entire external-warrior assertion NON-CANON; only Arlequino waking/getting up remains"
-    },
-    {
-      "state": "older instrument statements",
-      "invalid_fact": "Arlequino had no available personal violin / depended on Vern to get one",
-      "correction": "LIVE v121"
-    },
-    {
-      "state": "older Meira knowledge",
-      "invalid_fact": "Meira somehow knew tournament/100000/site decisions before causal transmission",
-      "correction": "LIVE v116"
-    },
-    {
-      "state": "older guard dialogue",
-      "invalid_fact": "palace guards had concert/logistics expertise",
-      "correction": "LIVE v107"
-    }
+    {"state":"LIVE v101","invalid_fact":"three Eurazania beast-army warriors appeared in Arlequino's room","correction":"LIVE v102: entire external-warrior assertion NON-CANON; only Arlequino waking/getting up remains"},
+    {"state":"older instrument statements","invalid_fact":"Arlequino lacked personal violin / depended on Vern for it","correction":"LIVE v121"},
+    {"state":"older Meira knowledge","invalid_fact":"Meira knew tournament/site decisions without causal transmission","correction":"LIVE v116"},
+    {"state":"older guard dialogue","invalid_fact":"palace guards had impossible concert/logistics expertise","correction":"LIVE v107"}
   ]
 }
