@@ -1,36 +1,35 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 65,
+  "save_version": 66,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:30",
+  "world_time": "T+129 ~18:35",
   "maestro": {
-    "location": "small combat yard, Eurazania capital",
+    "location": "small combat yard, Eurazania capital; standing on a sturdy low wooden box before the gathered audience",
     "state": [
       "awake and dressed",
-      "carrying violin",
-      "standing on a sturdy low wooden box used as a small stage",
-      "free concert starts 19:00"
+      "carrying and playing violin",
+      "performed the love song 'Крадущая сны' after teasing the archer about her request for a love song",
+      "official free concert start remains 19:00; current music is an early/pre-concert performance"
     ],
-    "personal_cash": "20g 03s 18c"
+    "personal_cash": "20g 11s 00c"
   },
   "last_scene": {
-    "id": "scene_t129_1830_archer_knowledge_correction",
-    "time": "T+129 ~18:30",
-    "summary": "At the small combat yard, Arlequino asked whether anyone present had heard him yesterday, and some audience members responded. He then teased that he remembered a lovely archer asking him for love. A GM response incorrectly gave the archer knowledge of the private nickname 'павлин' and implied knowledge of another woman/Rena. That response is RETCONNED: the archer does not know the nickname, Rena, or Arlequino's private relationship unless she later learns it through an in-world source. Only Rena may call Arlequino 'павлин'.",
-    "continue_from": "T+129 ~18:30 at the small combat yard. Arlequino has just said: 'И так . я помню одна прелестная лучница просила у меня любви😉'. The same archer from yesterday is present, but her reaction must use only what she could realistically know from public interactions. Concert starts 19:00. Personal cash 20g03s18c."
+    "id": "scene_t129_1830_1835_kradushchaya_sny",
+    "time": "T+129 ~18:30-18:35",
+    "summary": "After the archer publicly reminded Arlequino that she had asked for a love song, Arlequino performed 'Крадущая сны' (Pavel Plamenev). Audience reactions followed the actual lyrical arc rather than invented details: the opening admiration drew teasing and smiles; the turn toward knowing the pair can never be together quieted part of the yard; the final realization that the woman loves someone else produced a mix of sympathetic groans, laughter from some fighters, and a visibly more serious response from the archer. No NPC inferred anything about Rena or Arlequino's private life from the song. Tips from this concentrated free-yard audience for the song totaled 7s82c; expenses 0; net +7s82c.",
+    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны' on violin before the gathering audience. The archer who requested a love song is present. Official concert time is still 19:00, though Arlequino has begun playing early. Personal cash 20g11s00c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep after the long morning intimacy; current waking state unobserved",
-      "relationship": "active romantic relationship; affectionate, teasing and physically close",
-      "private_knowledge_rule": "Her relationship with Arlequino and her nickname 'павлин' are not public knowledge unless explicitly revealed in-world."
+      "relationship": "active romantic relationship; affectionate, teasing and physically close"
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -60,6 +59,15 @@
       "knows_lodging": true,
       "exact_lodging_name_for_gm": "UNKNOWN"
     },
+    "archer": {
+      "location": "small combat yard audience, Eurazania capital",
+      "status": "present; previously asked Arlequino for a love song; heard 'Крадущая сны'",
+      "knowledge_limits": [
+        "does not know Rena unless informed through an in-world source",
+        "does not know Arlequino's private relationship details",
+        "does not know Rena's nickname 'павлин'; only Rena uses it"
+      ]
+    },
     "lissa": {
       "location": "Blumund; exact location UNKNOWN",
       "status": "publishing project autonomous",
@@ -69,20 +77,10 @@
       "location": "Blumund; exact location UNKNOWN",
       "status": "instrument-production project autonomous",
       "mail": "urgent letter accepted for dispatch"
-    },
-    "archer_local": {
-      "location": "small combat yard audience",
-      "status": "heard Arlequino yesterday and is present before today's concert",
-      "knowledge_limits": [
-        "may know only what she personally heard/saw in public or learned through plausible in-world sources",
-        "does NOT know the private nickname 'павлин'",
-        "does NOT know Rena or Arlequino's private romantic relationship unless explicitly informed later"
-      ]
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard; admission free; venue fee 0.",
-    "Audience is gathering before the concert; some heard Arlequino yesterday, others are new.",
+    "Free concert T+129 19:00 at small combat yard; Arlequino has begun playing early; admission free; venue fee 0.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -90,8 +88,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 03s 18c",
-    "last_transaction": "corrected total for ~4h street performance/promo: +1g03s58c, expenses 0",
+    "personal_cash": "20g 11s 00c",
+    "last_transaction": "tips for public performance of 'Крадущая сны' +7s82c; expenses 0; net +7s82c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -106,9 +104,9 @@
     "User alone controls Arlequino dialogue, feelings, decisions and meaningful actions.",
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
-    "NPC knowledge must come from realistic in-world sources; no private-information leakage; UNKNOWN stays UNKNOWN.",
-    "Do not let one NPC inherit knowledge from another NPC or from GM memory without a causal information path.",
+    "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
     "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
+    "When reacting to a known song, tie reactions to actual supplied or verified lyrical moments; do not invent lines.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
