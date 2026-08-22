@@ -1,31 +1,29 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 63,
+  "save_version": 64,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:22",
+  "world_time": "T+129 ~18:28",
   "maestro": {
-    "location": "busy street in Eurazania capital after extended street-promo circuit",
+    "location": "small combat yard, Eurazania capital; arriving for concert prep",
     "state": [
       "awake and dressed",
       "carrying violin",
-      "has spent roughly four hours walking, singing and promoting tonight's concert",
-      "performed about sixteen three-song blocks, approximately 48 songs total, with a concert announcement after every three songs",
-      "concert prep 18:30",
-      "free concert starts 19:00 at the small combat yard"
+      "completed roughly four hours of street performance/promotion before the concert",
+      "free concert starts 19:00; prep begins 18:30"
     ],
-    "personal_cash": "19g 30s 44c"
+    "personal_cash": "20g 03s 18c"
   },
   "last_scene": {
-    "id": "scene_t129_1430_1822_extended_street_promo_corrected",
-    "time": "T+129 ~14:30-18:22",
-    "summary": "Direct user correction: Arlequino did not perform only a handful of short sets. He spent roughly four hours walking through the Eurazania capital, singing continuously with rests and announcements, announcing the free concert after every three songs. The scene is corrected to about sixteen three-song blocks, approximately 48 songs total. Street tips for the whole ~14:30-18:22 promo circuit are corrected to 30s84c total, expenses 0, net +30s84c. Earlier bookkeeping that described only four or five three-song sets and implied only 4s12c for the whole period is invalid; 4s12c had represented only the final short block in the flawed partition.",
-    "continue_from": "T+129 ~18:22 on a busy street in the Eurazania capital after roughly four hours of street singing and repeated concert promotion. Arlequino has his violin. Concert prep begins at 18:30; concert starts 19:00 at the small combat yard. Personal cash 19g30s44c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
+    "id": "scene_t129_1430_1828_street_promo_corrected_and_arrival",
+    "time": "T+129 ~14:30-18:28",
+    "summary": "Arlequino spent almost four hours moving through busy parts of the Eurazania capital, performing approximately 48 songs with brief rests and announcing the free 19:00 concert after each group of three songs, for roughly 16 announcements. Earlier GM compressions that treated this as only a handful of short sets and totals of 21s76c or 30s84c are invalid. Based on the already established local street-tip scale, the corrected total for the whole promenade is 1g03s58c, expenses 0, net +1g03s58c. Arlequino then headed to the small combat yard and arrived just before 18:30 prep.",
+    "continue_from": "T+129 ~18:28 at the small combat yard in the Eurazania capital. Arlequino has his violin and has just arrived for concert prep. Free concert starts at 19:00. Correct personal cash 20g03s18c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
   },
   "characters_live": {
     "rena": {
@@ -74,6 +72,7 @@
   },
   "active_threads": [
     "Free concert T+129 19:00 at small combat yard; prep 18:30; admission free; venue fee 0.",
+    "Street promotion before the concert completed: about 48 songs and about 16 concert announcements across almost four hours.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -81,8 +80,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "19g 30s 44c",
-    "last_transaction": "corrected whole street-promo circuit T+129 ~14:30-18:22: tips +30s84c; expenses 0; net +30s84c",
+    "personal_cash": "20g 03s 18c",
+    "last_transaction": "corrected total street-performance tips for T+129 ~14:30-18:28: +1g03s58c; expenses 0; net +1g03s58c; earlier lower totals for this same promenade are invalid",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
