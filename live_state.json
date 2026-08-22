@@ -1,67 +1,50 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 68,
+  "save_version": 69,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:35",
+  "world_time": "T+129 ~18:40",
   "maestro": {
-    "location": "small combat yard, Eurazania capital; standing on a sturdy low wooden box before the gathered audience",
+    "location": "small combat yard, Eurazania capital; on a sturdy low wooden box before the gathering audience",
     "state": [
       "awake and dressed",
-      "carrying violin",
-      "has just performed 'Крадущая сны' before the official concert start",
+      "playing violin and singing before the official concert",
+      "performed 'Лев спит' using the exact user-supplied lyrics",
       "official free concert start remains 19:00"
     ],
-    "personal_cash": "20g 11s 00c"
+    "personal_cash": "20g 20s 36c"
   },
   "last_scene": {
-    "id": "scene_t129_1835_reaction_model_correction",
-    "time": "T+129 ~18:35",
-    "summary": "User corrected the concert-reaction model. For known songs, crowd reactions must be grounded directly in real listener comments/reactions to that song rather than GM literary analysis. Use those reactions as-is in spirit and wording where appropriate; only adapt details that are explicitly out-of-world for Tensura, such as internet/platform references, modern brands/devices, Earth-specific institutions or similarly impossible references. Do not automatically turn sad lyrics into a sad crowd response; rhythm, energy and real listener reactions govern the scene. Existing NPC knowledge limits remain in force.",
-    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны'; the archer and gathering audience are present. Official concert start is 19:00. Personal cash 20g11s00c. Continue using real listener comments as the primary template for reactions to known songs, adapting only explicitly out-of-world details."
+    "id": "scene_t129_1836_1840_lev_spit",
+    "time": "T+129 ~18:36-18:40",
+    "summary": "Arlequino performed the new song 'Лев спит' before the official concert. Reaction model followed real listener-comment patterns rather than semantic mood analysis: the repeating 'a-wimoweh' hook was quickly picked up by some listeners, several began swaying or chanting along, the song was treated as catchy and hard to get out of one's head, and the contrast between 'Тише, детка' and the loud recurring chant drew laughter. The audience reaction was lively, playful and participatory rather than solemn. Lyrics were not altered because the supplied text contained no necessary otherworld adaptation. Tips +9s36c; expenses 0; net +9s36c.",
+    "continue_from": "T+129 ~18:40 at the small combat yard after 'Лев спит'. The audience is lively; several people are still repeating the chant. Roughly twenty minutes remain before the official 19:00 concert start. Personal cash 20g20s36c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
-      "state": "last directly observed asleep after the long morning intimacy; current waking state unobserved",
-      "relationship": "active romantic relationship; affectionate, teasing and physically close"
+      "state": "last directly observed asleep; current state unobserved",
+      "relationship": "active romantic relationship"
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
       "status": "paid two-day capital survey active",
-      "fee": "25s paid",
-      "task": "survey crowded places, venues, institutions and performance-permission practicality across the capital",
-      "knows_lodging": true,
-      "exact_lodging_name_for_gm": "UNKNOWN"
+      "fee": "25s paid"
     },
     "vern": {
       "location": "Eurazania capital; exact current location UNKNOWN",
       "status": "Dwargon errand commissioned and fully paid; departure intended T+130 dawn",
       "fee": "1g20s paid",
-      "instrument_float": "50s; unused remainder must be returned with accounting",
-      "carries": [
-        "letter to Arlequino's Dwargon instrument master",
-        "letter to Arlequino's known Dwargon shopkeeper",
-        "letter to owner/organizer of Каменная арка"
-      ],
-      "task": [
-        "obtain one guitar, one violin and one flute from known instrument master",
-        "collect Arlequino's share from known shopkeeper and request short sales report if possible",
-        "deliver Каменная арка letter and ask owner to pass greetings to Arlequino's students",
-        "return instruments, collected money, unused instrument float and any letters for Arlequino"
-      ],
-      "correction": "Oren is unrelated to Vern's Dwargon errand.",
-      "knows_lodging": true,
-      "exact_lodging_name_for_gm": "UNKNOWN"
+      "instrument_float": "50s; unused remainder must be returned with accounting"
     },
     "archer": {
-      "location": "small combat yard audience, Eurazania capital",
-      "status": "present; previously asked Arlequino for a love song; heard 'Крадущая сны'",
+      "location": "small combat yard audience",
+      "status": "present; previously asked Arlequino for a love song",
       "knowledge_limits": [
         "does not know Rena unless informed through an in-world source",
         "does not know Arlequino's private relationship details",
@@ -70,45 +53,37 @@
     },
     "lissa": {
       "location": "Blumund; exact location UNKNOWN",
-      "status": "publishing project autonomous",
-      "mail": "urgent letter accepted for dispatch"
+      "status": "publishing project autonomous; urgent letter in dispatch"
     },
     "oren": {
       "location": "Blumund; exact location UNKNOWN",
-      "status": "instrument-production project autonomous",
-      "mail": "urgent letter accepted for dispatch"
+      "status": "instrument-production project autonomous; urgent letter in dispatch"
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard; Arlequino has begun playing early; admission free; venue fee 0.",
+    "Free concert T+129 19:00 at small combat yard; Arlequino is playing early; admission free; venue fee 0.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
-    "Rena current waking state is unobserved."
+    "Rena current state is unobserved."
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 11s 00c",
-    "last_transaction": "tips for public performance of 'Крадущая сны' +7s82c; expenses 0; net +7s82c",
+    "personal_cash": "20g 20s 36c",
+    "last_transaction": "tips for public performance of 'Лев спит' +9s36c; expenses 0; net +9s36c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
   },
-  "unknowns": [
-    "exact current location of Gareth while surveying",
-    "exact current location of Vern",
-    "exact lodging name known in-world to Gareth and Vern but not supplied in user-visible text",
-    "Rena current waking state"
-  ],
   "critical_rules": [
     "User alone controls Arlequino dialogue, feelings, decisions and meaningful actions.",
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
-    "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
-    "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
-    "For known songs, use real listener comments/reactions as the primary source for crowd response. Do not replace them with GM literary analysis.",
-    "Adapt a real listener reaction only when it contains something explicitly impossible or out-of-world for Tensura; otherwise preserve its actual reaction pattern directly.",
-    "A sad or dark lyric does not imply a sad audience reaction; rhythm, energy, performance and actual listener response can dominate.",
+    "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
+    "NPC reactions follow personality and role, not universal expertise or therapy-speak.",
+    "For known real-world songs, use real listener comments as the primary reaction basis. Transfer those reactions directly into plausible in-world audience behavior/dialogue. Alter only explicitly otherworldly/modern references when necessary; do not replace the reaction with the GM's own lyrical analysis.",
+    "Musical energy, rhythm and crowd participation can dominate over sad or dark lyrics; do not force collective sadness from semantic content.",
+    "When user supplies lyrics, use those exact lyrics as the performance text and react to the actual supplied moments.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
@@ -121,7 +96,6 @@
     "mode": "ONE_WRITE",
     "normal_checkpoint": "update live_state.json only",
     "world_save_refresh": "only at major consolidation, chat migration, end of major arc/day, or explicit user request",
-    "target_file_size": "prefer under 15 KB",
     "minimum_checkpoint_scope": "natural scene boundary; batch micro-actions and short exchanges"
   }
 }
