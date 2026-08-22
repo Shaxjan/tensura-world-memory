@@ -1,44 +1,47 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 78,
+  "save_version": 79,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:26",
+  "world_time": "T+129 ~19:32",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
       "official free concert underway",
       "performed adapted 'Головы с плеч' for swordsmen",
       "performed 'От копья' for spearmen",
-      "played 'Танец лучников' for archers",
+      "performed 'Танец лучников' for archers",
       "performed adapted 'С щитами не рождаются' for shield-bearers",
-      "after naming the remaining magical groups as заклинатели, целители and маги, performed 'Кукла колдуна'",
+      "performed 'Кукла колдуна' for the magical groups",
+      "then addressed a healer as 'о прекрасная леди' and performed 'Тяни' metaphorically toward her",
       "Arlequino currently has and performs with the violin",
       "Arlequino does NOT have the guitar; the guitar is with Rena"
     ],
-    "personal_cash": "21g 73s 22c",
+    "personal_cash": "21g 94s 70c",
     "instrument_locations": {
       "violin": "with Arlequino at the concert",
       "guitar": "with Rena; not with Arlequino"
     }
   },
   "last_scene": {
-    "id": "scene_t129_1921_1926_kukla_kolduna_magic_groups",
-    "time": "T+129 ~19:21-19:26",
-    "summary": "Arlequino performed the user-supplied lyrics of 'Кукла колдуна' after the remaining magical audience groups were established as заклинатели, целители and simply маги. The performance played as an energetic theatrical horror-story rather than a technical description of magic. Real listener patterns for the original song support strong attachment to its memorable character/story and also mixed responses to its distinctive opening/arrangement, so crowd response remained heterogeneous. The magical groups reacted differently to the supplied text: some mages enjoyed the escalating mystery and the reveal of the controlling sorcerer; healers were more uneasy at the image of a person being used like a puppet; some enchanter-type listeners argued or joked about whether such control should even be called sorcery. The unfamiliar cross reference was treated only as a strange protective charm/symbol in the song, without importing Earth religion into NPC knowledge. The final warning that staying there was dangerous landed as a clean theatrical ending. Tips +22s48c; expenses 0; net +22s48c. Personal cash became 21g73s22c.",
-    "continue_from": "T+129 ~19:26 at the small combat yard. 'Кукла колдуна' has just ended. The crowd remains dense; magical groups are visibly engaged and arguing/joking among themselves. Arlequino remains on the low wooden box with violin; guitar remains with Rena. Official concert continues. Personal cash 21g73s22c. User controls Arlequino's next words/actions."
+    "id": "scene_t129_1927_1932_tyani_healer_metaphor",
+    "time": "T+129 ~19:27-19:32",
+    "summary": "After clarifying that the cross in 'Кукла колдуна' was a metaphor for a protective amulet, Arlequino looked at a female healer, called her 'о прекрасная леди', and introduced the next song as metaphorical. He then performed the user-supplied 'Тяни' (Король и Шут), a darkly comic song about a narrator who has jumped into a well, refuses rescue, repeatedly insists the woman above cannot pull him out, and frames her wish to help/love him as futile. Audience reaction was mixed and role-specific: healers caught the irony of a patient refusing help; some laughed at the absurd image of a rescuer being told not to rescue, while others found the fatalism irritating rather than romantic. The healer targeted by the dedication did not receive impossible private knowledge; she treated it as a public theatrical metaphor and a teasing challenge. Tips for the resolved performance: +21s48c, expenses 0, net +21s48c. Personal cash became 21g94s70c.",
+    "continue_from": "T+129 ~19:32 at the small combat yard. 'Тяни' has just ended. Arlequino remains on the low wooden box with violin; the guitar remains with Rena. The healer he addressed is still in the audience unless later causality changes that. Official concert continues. Personal cash 21g94s70c. User controls Arlequino's next words/actions."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep; current waking state unobserved",
       "relationship": "active romantic relationship",
-      "possessions_relevant": ["Arlequino's guitar is with Rena"]
+      "possessions_relevant": [
+        "Arlequino's guitar is with Rena"
+      ]
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -56,11 +59,19 @@
         "does not know Arlequino's private relationship details",
         "does not know or use Rena's nickname 'павлин'"
       ]
+    },
+    "healer": {
+      "location": "small combat yard audience",
+      "status": "present; publicly addressed by Arlequino as 'о прекрасная леди' and used as the metaphorical addressee for 'Тяни'",
+      "knowledge_limits": [
+        "knows only what she has directly observed or heard publicly at the concert",
+        "does not know Arlequino's private relationship details unless informed in-world"
+      ]
     }
   },
   "active_threads": [
     "Free concert T+129 19:00 at small combat yard is underway.",
-    "Magical audience categories named in-world during concert: заклинатели, целители, маги.",
+    "The three broad magical audience groups in this concert are currently labeled: заклинатели, целители, маги.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; dawn departure T+130 intended.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -68,8 +79,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "21g 73s 22c",
-    "last_confirmed_transaction": "concert performance 'Кукла колдуна': tips +22s48c; expenses 0; net +22s48c",
+    "personal_cash": "21g 94s 70c",
+    "last_confirmed_transaction": "concert performance 'Тяни': tips +21s48c; expenses 0; net +21s48c",
     "pending_performance_accounting": [],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
