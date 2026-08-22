@@ -1,7 +1,7 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 67,
+  "save_version": 68,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
@@ -13,17 +13,17 @@
     "location": "small combat yard, Eurazania capital; standing on a sturdy low wooden box before the gathered audience",
     "state": [
       "awake and dressed",
-      "carrying and playing violin",
-      "performed the love song 'Крадущая сны' after teasing the archer about her request for a love song",
-      "official free concert start remains 19:00; current music is an early/pre-concert performance"
+      "carrying violin",
+      "has just performed 'Крадущая сны' before the official concert start",
+      "official free concert start remains 19:00"
     ],
     "personal_cash": "20g 11s 00c"
   },
   "last_scene": {
-    "id": "scene_t129_1830_1835_kradushchaya_sny",
-    "time": "T+129 ~18:30-18:35",
-    "summary": "Arlequino performed 'Крадущая сны' after the archer's request for a love song. Correction: audience response must not be interpreted as uniformly sad just because the lyrics contain longing or disappointment. The musical delivery, rhythm, performance energy, social setting and each listener's personality matter independently from lyrical meaning. Some listeners can grin, sway, tap rhythm, tease the archer, enjoy the hook or performance energy, or barely follow the words; others may catch the bittersweet turn. The archer's response is personal, not a template for the whole crowd. Tips remain 7s82c; expenses 0; net +7s82c.",
-    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны' before the gathering audience. The archer who requested a love song is present. Official concert time is still 19:00, though Arlequino has begun playing early. Personal cash 20g11s00c."
+    "id": "scene_t129_1835_reaction_model_correction",
+    "time": "T+129 ~18:35",
+    "summary": "User corrected the concert-reaction model. For known songs, crowd reactions must be grounded directly in real listener comments/reactions to that song rather than GM literary analysis. Use those reactions as-is in spirit and wording where appropriate; only adapt details that are explicitly out-of-world for Tensura, such as internet/platform references, modern brands/devices, Earth-specific institutions or similarly impossible references. Do not automatically turn sad lyrics into a sad crowd response; rhythm, energy and real listener reactions govern the scene. Existing NPC knowledge limits remain in force.",
+    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны'; the archer and gathering audience are present. Official concert start is 19:00. Personal cash 20g11s00c. Continue using real listener comments as the primary template for reactions to known songs, adapting only explicitly out-of-world details."
   },
   "characters_live": {
     "rena": {
@@ -106,9 +106,9 @@
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
     "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
     "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
-    "Audience reactions to music must combine musical energy, rhythm, tempo, delivery, setting, crowd behavior, lyrics and individual personality. Sad or dark lyrics do not automatically make listeners sad; an energetic or catchy song can make people dance, chant, grin or feel exhilarated even when the story is painful.",
-    "Do not default every strong song reaction to the pattern 'this is horrible/sad, therefore it is good'. Use heterogeneous reactions: physical rhythm, amusement, excitement, attraction, irritation, boredom, misunderstanding, singing along, social teasing, indifference, personal resonance and other plausible responses.",
-    "When reacting to a known song, tie any lyric-specific reactions only to actual supplied or verified lyrical moments; do not invent lines.",
+    "For known songs, use real listener comments/reactions as the primary source for crowd response. Do not replace them with GM literary analysis.",
+    "Adapt a real listener reaction only when it contains something explicitly impossible or out-of-world for Tensura; otherwise preserve its actual reaction pattern directly.",
+    "A sad or dark lyric does not imply a sad audience reaction; rhythm, energy, performance and actual listener response can dominate.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
