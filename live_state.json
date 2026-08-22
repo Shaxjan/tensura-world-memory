@@ -1,35 +1,36 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 76,
+  "save_version": 77,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:17",
+  "world_time": "T+129 ~19:20",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
       "official free concert underway",
       "first concert song was adapted 'Головы с плеч' for the swordsmen",
       "second concert song was 'От копья' for the spearmen",
-      "third concert number was 'Танец лучников' for the archers; audience reaction and tips resolved",
+      "then Arlequino played 'Танец лучников' for the archers",
+      "then Arlequino performed adapted 'С щитами не рождаются' for the shield-bearers",
       "Arlequino currently has and performs with the violin",
       "Arlequino does NOT have the guitar; the guitar is with Rena"
     ],
-    "personal_cash": "21g 31s 98c",
+    "personal_cash": "21g 50s 74c",
     "instrument_locations": {
       "violin": "with Arlequino at the concert",
       "guitar": "with Rena; not with Arlequino"
     }
   },
   "last_scene": {
-    "id": "scene_t129_1915_1917_archers_dance_resolved",
-    "time": "T+129 ~19:15-19:17",
-    "summary": "GM resolution of the completed public performance 'Танец лучников'. No lyrics or line-specific meaning were invented. The archers and the wider crowd reacted mainly to the violin performance, rhythm and martial-dance character: several archers kept the beat with boots or bowstaves, some laughed and shouted approval, while a few older fighters remained more restrained but attentive. Tips collected for this performance were +19s64c; expenses 0; net +19s64c. Personal cash rose from 21g12s34c to 21g31s98c. Arlequino still has the violin; the guitar remains with Rena.",
-    "continue_from": "T+129 ~19:17 at the small combat yard. The reaction and accounting for 'Танец лучников' are complete. The official concert is still underway and the crowd is waiting for Arlequino's next move or next number. Arlequino has the violin. The guitar remains with Rena. Personal cash is 21g31s98c."
+    "id": "scene_t129_1915_1920_shieldbearers_song",
+    "time": "T+129 ~19:15-19:20",
+    "summary": "Arlequino looked toward the shield-bearers and performed his adapted version of 'Солдатами не рождаются' as 'С щитами не рождаются'. The supplied lyrics were grim, martial and deliberately ugly about war: bodies filling pits, red cloth over eyes, polished axes, shields going straight through, rot and stench, drinking, vomiting, tears, and the refrain that one is not born with a shield but dies a shield-bearer. The final supplied line was 'Чтоб жили те кто врага , за него добивают!'. Shield-bearer reaction was mixed but strong: younger soldiers reacted loudly to the refrain and rough soldier humor; veterans were more subdued and visibly affected; some listeners outside their ranks were uncomfortable with the gore and bawdy lines. Tips for the resolved performance: +18s76c, expenses 0, net +18s76c. Personal cash became 21g50s74c.",
+    "continue_from": "T+129 ~19:20 at the small combat yard. The adapted shield-bearers song has just ended. Arlequino remains on the low wooden box with his violin; the guitar remains with Rena. The official concert continues before a dense crowd. Personal cash is 21g50s74c. User controls Arlequino's next words/actions."
   },
   "characters_live": {
     "rena": {
@@ -50,7 +51,7 @@
     },
     "archer": {
       "location": "small combat yard audience",
-      "status": "present; publicly reacted to 'Танец лучников'; knows only public interactions with Arlequino",
+      "status": "present; knows only public interactions with Arlequino",
       "knowledge_limits": [
         "does not know Rena unless informed in-world",
         "does not know Arlequino's private relationship details",
@@ -67,8 +68,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "21g 31s 98c",
-    "last_confirmed_transaction": "concert performance 'Танец лучников': tips +19s64c; expenses 0; net +19s64c",
+    "personal_cash": "21g 50s 74c",
+    "last_confirmed_transaction": "concert performance adapted 'С щитами не рождаются': tips +18s76c; expenses 0; net +18s76c",
     "pending_performance_accounting": [],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
