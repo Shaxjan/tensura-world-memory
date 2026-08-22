@@ -1,80 +1,64 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 71,
+  "save_version": 72,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:00",
+  "world_time": "T+129 ~19:06",
   "maestro": {
-    "location": "small combat yard, Eurazania capital; on low wooden box before a dense audience",
+    "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
-      "awake and dressed",
-      "has violin",
-      "continued the dark sequence with 'Черная невеста' (Кукрыниксы)",
-      "song began just before 19:00 and its ending effectively carried the yard into the official concert start",
-      "free concert is now officially underway"
+      "official free concert has begun",
+      "first concert song was Arlequino's adapted version of 'Головы с плеч'",
+      "violin in hand"
     ],
-    "personal_cash": "20g 76s 24c"
+    "personal_cash": "20g 94s 96c"
   },
   "last_scene": {
-    "id": "scene_t129_1856_1900_chernaya_nevesta",
-    "time": "T+129 ~18:56-19:00",
-    "summary": "Arlequino said they would continue the darker branch and performed 'Черная невеста' by Кукрыниксы. Because the user supplied only the title, no exact lyrics were invented or quoted. Audience reactions were modeled from real listener comments rather than semantic analysis: some immediately treated it as a standout/favorite-type song, while one listener's response was adapted almost directly from a real comment — it was the second dark song they heard and they liked it even though the style was not really theirs. Other listeners were less engaged, preserving heterogeneous reception. The song ended around the scheduled 19:00 start, making it the bridge into the official free concert. Tips +16s44c; expenses 0; net +16s44c.",
-    "continue_from": "T+129 ~19:00 at the small combat yard. 'Черная невеста' has just ended and the free concert is now officially starting. The crowd is dense and mixed; the archer and gray-haired veteran remain present unless later causality removes them. Personal cash 20g76s24c."
+    "id": "scene_t129_1901_1906_heads_off_shoulders_concert_open",
+    "time": "T+129 ~19:01-19:06",
+    "summary": "After the audience vote showed swordsmen as the largest single fighter group, Arlequino opened the official concert with his adapted 'Головы с плеч'. Reactions followed the already established adapted lines and the song's forceful refrain rather than generic sadness: returning listeners joined the chorus early; sword fighters answered the repeated sword/heads refrain loudly; 'Сильна Карионова ярость / С врагами зверолюди!' drew strong local approval; 'человечья кровь и гарь' split the crowd, with some younger fighters cheering while older listeners and a human trader reacted more grimly; 'Воля! Порядок! Вечная брань!' became a shouted call-response; the line about princely money and driving enemies out drew scattered laughter and argument rather than universal agreement; the final 'Все головы с плеч!' produced the loudest collective shout. Some non-fighters watched without joining and a few continued private conversations. Tips for this first official concert song: +18s72c; expenses 0; net +18s72c.",
+    "continue_from": "T+129 ~19:06 at the small combat yard. First official concert song 'Головы с плеч' has just ended. Crowd is energized and mixed; returning listeners know parts of the refrain. Personal cash 20g94s96c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
-      "state": "last directly observed asleep after the long morning intimacy; current waking state unobserved",
+      "state": "last directly observed asleep; current waking state unobserved",
       "relationship": "active romantic relationship"
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
-      "status": "paid two-day capital survey active",
-      "fee": "25s paid",
-      "task": "survey crowded places, venues, institutions and performance-permission practicality across the capital"
+      "status": "paid two-day capital survey active"
     },
     "vern": {
       "location": "Eurazania capital; exact current location UNKNOWN",
-      "status": "Dwargon errand commissioned and fully paid; departure intended T+130 dawn",
-      "fee": "1g20s paid",
-      "instrument_float": "50s; unused remainder must be returned with accounting"
+      "status": "Dwargon errand commissioned and fully paid; departure intended T+130 dawn"
     },
     "archer": {
       "location": "small combat yard audience",
-      "status": "present through the pre-concert sequence",
+      "status": "present; knows only public interactions with Arlequino",
       "knowledge_limits": [
         "does not know Rena unless informed in-world",
         "does not know Arlequino's private relationship details",
         "does not know or use Rena's nickname 'павлин'"
       ]
-    },
-    "lissa": {
-      "location": "Blumund; exact location UNKNOWN",
-      "status": "publishing project autonomous",
-      "mail": "urgent letter accepted for dispatch"
-    },
-    "oren": {
-      "location": "Blumund; exact location UNKNOWN",
-      "status": "instrument-production project autonomous",
-      "mail": "urgent letter accepted for dispatch"
     }
   },
   "active_threads": [
-    "Free concert at small combat yard has officially begun at ~19:00; admission free; venue fee 0.",
+    "Free concert T+129 19:00 at small combat yard is underway.",
     "Gareth two-day Eurazania-capital survey active and paid.",
-    "Vern Dwargon errand active; intends dawn departure T+130.",
+    "Vern Dwargon errand active; dawn departure T+130 intended.",
     "Urgent letters to Lissa and Oren are in dispatch.",
     "Rena current waking state is unobserved."
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 76s 24c",
-    "last_transaction": "tips for public performance of 'Черная невеста' +16s44c; expenses 0; net +16s44c",
+    "personal_cash": "20g 94s 96c",
+    "last_transaction": "concert performance 'Головы с плеч': tips +18s72c; expenses 0; net +18s72c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -83,11 +67,9 @@
     "User alone controls Arlequino dialogue, feelings, decisions and meaningful actions.",
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
-    "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
-    "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
-    "For known real-world songs, use actual listener comments/reactions as the primary reaction source; adapt only clearly otherworld-incompatible details. Do not replace them with generic lyrical analysis.",
-    "If user supplies only a song title, do not invent exact lyrics.",
-    "Audience reactions must remain heterogeneous; not everyone listens, likes, understands, or reacts strongly.",
+    "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
+    "For known songs, use real listener-comment patterns when available and adapt only explicitly otherworldly/modern details; for user-supplied adapted lyrics, react to the exact supplied lines.",
+    "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text and listener personality; do not reduce every song to its lyrical mood.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
