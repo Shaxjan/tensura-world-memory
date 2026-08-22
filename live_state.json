@@ -1,7 +1,7 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 62,
+  "save_version": 63,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
@@ -10,21 +10,22 @@
   },
   "world_time": "T+129 ~18:22",
   "maestro": {
-    "location": "busy street in Eurazania capital after the fifth three-song street set",
+    "location": "busy street in Eurazania capital after extended street-promo circuit",
     "state": [
       "awake and dressed",
       "carrying violin",
-      "has completed five three-song street promo sets today and announced the free concert after each set",
+      "has spent roughly four hours walking, singing and promoting tonight's concert",
+      "performed about sixteen three-song blocks, approximately 48 songs total, with a concert announcement after every three songs",
       "concert prep 18:30",
       "free concert starts 19:00 at the small combat yard"
     ],
-    "personal_cash": "19g 21s 36c"
+    "personal_cash": "19g 30s 44c"
   },
   "last_scene": {
-    "id": "scene_t129_1750_1822_street_promo_fifth_set",
-    "time": "T+129 ~17:50-18:22",
-    "summary": "Arlequino continued walking through a busy part of the Eurazania capital, performed one more three-song street set, then announced the free 19:00 concert at the small combat yard. The evening crowd was mixed: some stopped and listened, some continued on, several fighters and workers reacted loudly, and a few listeners asked each other where the combat yard was. Tips for this set totaled 4s12c, expenses 0, net +4s12c.",
-    "continue_from": "T+129 ~18:22 on a busy street in the Eurazania capital immediately after the fifth three-song set and fifth concert announcement. Arlequino has his violin. Concert prep begins in about 8 minutes at 18:30; concert starts 19:00 at the small combat yard. Personal cash 19g21s36c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
+    "id": "scene_t129_1430_1822_extended_street_promo_corrected",
+    "time": "T+129 ~14:30-18:22",
+    "summary": "Direct user correction: Arlequino did not perform only a handful of short sets. He spent roughly four hours walking through the Eurazania capital, singing continuously with rests and announcements, announcing the free concert after every three songs. The scene is corrected to about sixteen three-song blocks, approximately 48 songs total. Street tips for the whole ~14:30-18:22 promo circuit are corrected to 30s84c total, expenses 0, net +30s84c. Earlier bookkeeping that described only four or five three-song sets and implied only 4s12c for the whole period is invalid; 4s12c had represented only the final short block in the flawed partition.",
+    "continue_from": "T+129 ~18:22 on a busy street in the Eurazania capital after roughly four hours of street singing and repeated concert promotion. Arlequino has his violin. Concert prep begins at 18:30; concert starts 19:00 at the small combat yard. Personal cash 19g30s44c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
   },
   "characters_live": {
     "rena": {
@@ -80,8 +81,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "19g 21s 36c",
-    "last_transaction": "fifth street promo set tips +4s12c; expenses 0; net +4s12c",
+    "personal_cash": "19g 30s 44c",
+    "last_transaction": "corrected whole street-promo circuit T+129 ~14:30-18:22: tips +30s84c; expenses 0; net +30s84c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
