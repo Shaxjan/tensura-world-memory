@@ -1,44 +1,41 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 80,
+  "save_version": 81,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:38",
+  "world_time": "T+129 ~19:45",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
       "official free concert underway",
       "Arlequino currently has and performs with the violin",
       "Arlequino does NOT have the guitar; the guitar is with Rena",
-      "fighter-group songs already performed for swordsmen, spearmen, archers and shield-bearers",
-      "magic-group sequence established as mages, healers and enchanters",
-      "mages received 'Кукла колдуна', healers received adapted 'Тяни', enchanters received adapted 'Заклинатель и осёл'"
+      "concert has included songs aimed at swordsmen, spearmen, archers, shield-bearers, magicians, healers and enchanters",
+      "latest performance was the user-supplied adapted 'Для мира на земле', addressed broadly to the war-experienced crowd rather than assigned to one preserved specialization"
     ],
-    "personal_cash": "22g 19s 06c",
+    "personal_cash": "22g 44s 20c",
     "instrument_locations": {
       "violin": "with Arlequino at the concert",
       "guitar": "with Rena; not with Arlequino"
     }
   },
   "last_scene": {
-    "id": "scene_t129_1933_1938_enchanter_and_donkey",
-    "time": "T+129 ~19:33-19:38",
-    "summary": "After the crowd reminded Arlequino that enchanters were the remaining magic group, he answered 'Ладно не в куклу 😈' and performed his supplied adaptation of КиШ 'Ведьма и осёл' as 'Заклинатель и осёл'. The comic premise was that an enchanter loses control after betrayal and accidentally turns the beloved into a donkey, then unsuccessfully tries to restore the person while caring for the donkey. Arlequino repeatedly emphasized the refrain 'Заклинатель я, эх, заклинатель я' and during the final refrain deliberately indicated the previously vocal enchanter with his face, making that listener the public punchline without assigning private knowledge. Crowd reaction was strongest to the donkey braying refrain, the contrast between frightening magic and ridiculous consequences, the enchanter's bad-luck refrain, and Arlequino's pointed look at the target. Enchanters reacted with a mix of laughter, groans and defensive heckling rather than uniform approval. Tips +24s36c, expenses 0, net +24s36c. Personal cash became 22g19s06c.",
-    "continue_from": "T+129 ~19:38 at the small combat yard. 'Заклинатель и осёл' has just ended. Arlequino remains on the low wooden box with violin; guitar remains with Rena. The official concert continues before a dense, lively crowd. All three named magic groups have now received a song: mages, healers, enchanters. Personal cash 22g19s06c. User controls Arlequino's next words/actions."
+    "id": "scene_t129_1939_1945_for_peace_on_earth",
+    "time": "T+129 ~19:39-19:45",
+    "summary": "After saying 'вспомнил.....', Arlequino performed his user-supplied adapted 'Для мира на земле' (based on Plamenev). The song was not comic: it described assault at dawn, bodies torn apart, the intoxicating taste of blood, dead friends, refusal to take prisoners, and then a turning point where the narrator spared a young enemy who had dropped his weapon. That spared enemy stabbed him in the stomach. Arlequino deliberately slowed the four words 'моё сердце замедляло ход' before the final refrain changed from 'я убивал' to 'я жизнь отдал / Для мира на земле'. Audience reaction was mixed and grounded in a martial society: younger fighters were initially caught by the brutal battle imagery; veterans became quieter at the refrain about dead friends; some soldiers approved of the earlier no-prisoners stance and treated the stabbing as proof, while others were disturbed that mercy was punished and still heard the final hope for peace as meaningful rather than foolish. The ending produced a short silence before applause rather than cheering throughout. Tips +25s14c; expenses 0; net +25s14c. Personal cash became 22g44s20c.",
+    "continue_from": "T+129 ~19:45 at the small combat yard. 'Для мира на земле' has just ended after Arlequino slowed 'моё сердце замедляло ход'. The final line expresses hope that the narrator gave his life for peace. The crowd is quieter and more divided than after the comic songs. Arlequino remains on the low wooden box with violin; guitar remains with Rena. Personal cash 22g44s20c. User controls Arlequino's next words/actions."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep; current waking state unobserved",
       "relationship": "active romantic relationship",
-      "possessions_relevant": [
-        "Arlequino's guitar is with Rena"
-      ]
+      "possessions_relevant": ["Arlequino's guitar is with Rena"]
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -59,16 +56,15 @@
     },
     "healer_woman": {
       "location": "small combat yard audience",
-      "status": "present; publicly bantered with Arlequino during the healer song; no private relationship or knowledge assumed"
+      "status": "present; publicly bantered with Arlequino during the healer song 'Тяни'; no private knowledge assumed"
     },
-    "enchanter": {
+    "enchanter_man": {
       "location": "small combat yard audience",
-      "status": "present; publicly bantered during the magic-group sequence and became the visual punchline of 'Заклинатель и осёл'; no private knowledge assumed"
+      "status": "present; recurring public banter target during 'Заклинатель и осёл'; no private knowledge assumed"
     }
   },
   "active_threads": [
     "Free concert T+129 19:00 at small combat yard is underway.",
-    "All three established magic audience groups have now received songs: mages, healers, enchanters.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; dawn departure T+130 intended.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -76,8 +72,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "22g 19s 06c",
-    "last_confirmed_transaction": "concert performance adapted 'Заклинатель и осёл': tips +24s36c; expenses 0; net +24s36c",
+    "personal_cash": "22g 44s 20c",
+    "last_confirmed_transaction": "concert performance adapted 'Для мира на земле': tips +25s14c; expenses 0; net +25s14c",
     "pending_performance_accounting": [],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
@@ -92,7 +88,6 @@
     "If a song is given only by title and exact lyrics were not supplied or reliably recoverable, do not invent lyrics or line-specific semantic reactions.",
     "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text when known, and listener personality.",
     "Arlequino currently has the violin. The guitar is with Rena; never silently give Arlequino the guitar.",
-    "Magic audience categories currently established by direct user correction: enchanters, healers, mages; third category is simply 'mage'.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actually resolved public performance report income, expense, net and new personal cash.",
