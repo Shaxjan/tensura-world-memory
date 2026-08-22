@@ -1,93 +1,111 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 69,
+  "save_version": 70,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:49",
+  "world_time": "T+129 ~18:55",
   "maestro": {
-    "location": "small combat yard, Eurazania capital; on a sturdy low wooden box before the gathering audience",
+    "location": "small combat yard, Eurazania capital; on low wooden box before a now denser pre-concert crowd",
     "state": [
       "awake and dressed",
-      "playing violin and performing loudly/theatrically",
-      "pre-concert set has included Крадущая сны, Лев спит, Хакуна Матата and Если б я был Князем",
-      "official free concert begins 19:00"
+      "carrying and playing violin",
+      "performed 'Тьмы Князь', an adapted version of АрктидА 'Валашский князь', as a loud theatrical mini-performance",
+      "official free concert begins at 19:00"
     ],
-    "personal_cash": "20g 45s 08c"
+    "personal_cash": "20g 59s 80c"
   },
   "last_scene": {
-    "id": "scene_t129_1840_1849_comic_preconcert_set",
-    "time": "T+129 ~18:40-18:49",
-    "summary": "Arlequino continued the early set with playful high-energy material. 'Лев спит' became a contagious call-and-response around the repeated chant; tips +9s36c. 'Хакуна Матата' was performed as multiple roles by Arlequino alone, loudly and theatrically, with foreign wording translated/adapted in-world; the crowd joined the refrain and laughed at the comic dialogue; tips +11s64c. He then performed the user-supplied parody 'Если б я был Князем', whose recurring joke structure contrasted the appeal of three wives with escalating inconveniences. The strongest crowd reactions landed on the concrete punchlines about three mothers-in-law, drunkenly coming home to three separate quarrels, and the final conclusion that if he were a ruler he would remain unmarried. The archer reacted especially to the lyric explicitly assigning her the task of mending boots. Reactions were varied rather than uniformly admiring. Tips for 'Если б я был Князем' +13s08c; expenses 0.",
-    "continue_from": "T+129 ~18:49 at the small combat yard. Roughly eleven minutes remain before the official 19:00 concert start. Arlequino is on the wooden box with violin; crowd is lively and still gathering. Personal cash 20g45s08c."
+    "id": "scene_t129_1850_1855_tmy_knyaz",
+    "time": "T+129 ~18:50-18:55",
+    "summary": "Arlequino said 'Давайте что то. .... По мрачнее что ли....' and performed 'Тьмы Князь', using the user-supplied adapted lyrics and presenting it as a dark, highly theatrical mini-play. Audience response was not inferred only from lyrical darkness: a directly recoverable real listener comment on the original song calls it 'эпичен)', and this was used as the core reaction model. Some spectators were drawn into the theatrical ruler/monster persona, some reacted most strongly to the recurring declaration of the dark prince and the hell/temptation imagery, while others remained more amused or wary than frightened. No Earth-specific names or historical references were introduced to NPC knowledge. Tips +14s72c, expenses 0, net +14s72c.",
+    "continue_from": "T+129 ~18:55 at the small combat yard. 'Тьмы Князь' has just ended. The audience is denser and the official concert starts in about five minutes. Personal cash 20g59s80c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
-      "state": "last directly observed asleep; current waking state unobserved",
-      "relationship": "active romantic relationship"
-    },
-    "archer": {
-      "location": "small combat yard audience",
-      "status": "present; previously requested a love song; now a recurring target of Arlequino's public teasing",
-      "knowledge_limits": [
-        "does not know Rena unless informed through an in-world source",
-        "does not know Arlequino's private relationship details",
-        "does not know/use Rena's nickname 'павлин'"
-      ]
+      "state": "last directly observed asleep after the long morning intimacy; current waking state unobserved",
+      "relationship": "active romantic relationship; affectionate, teasing and physically close"
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
-      "status": "paid two-day capital survey active"
+      "status": "paid two-day capital survey active",
+      "fee": "25s paid",
+      "task": "survey crowded places, venues, institutions and performance-permission practicality across the capital",
+      "knows_lodging": true,
+      "exact_lodging_name_for_gm": "UNKNOWN"
     },
     "vern": {
       "location": "Eurazania capital; exact current location UNKNOWN",
-      "status": "Dwargon errand paid; intends departure T+130 dawn",
-      "instrument_float": "50s; unused remainder must return with accounting"
+      "status": "Dwargon errand commissioned and fully paid; departure intended T+130 dawn",
+      "fee": "1g20s paid",
+      "instrument_float": "50s; unused remainder must be returned with accounting",
+      "carries": [
+        "letter to Arlequino's Dwargon instrument master",
+        "letter to Arlequino's known Dwargon shopkeeper",
+        "letter to owner/organizer of Каменная арка"
+      ],
+      "task": [
+        "obtain one guitar, one violin and one flute from known instrument master",
+        "collect Arlequino's share from known shopkeeper and request short sales report if possible",
+        "deliver Каменная арка letter and ask owner to pass greetings to Arlequino's students",
+        "return instruments, collected money, unused instrument float and any letters for Arlequino"
+      ],
+      "correction": "Oren is unrelated to Vern's Dwargon errand."
+    },
+    "archer": {
+      "location": "small combat yard audience, Eurazania capital",
+      "status": "present; previously asked for a love song and has been bantering publicly with Arlequino",
+      "knowledge_limits": [
+        "does not know Rena unless informed through an in-world source",
+        "does not know Arlequino's private relationship details",
+        "does not know Rena's nickname 'павлин'; only Rena uses it"
+      ]
     },
     "lissa": {
       "location": "Blumund; exact location UNKNOWN",
-      "status": "publishing project autonomous; urgent letter in dispatch"
+      "status": "publishing project autonomous",
+      "mail": "urgent letter accepted for dispatch"
     },
     "oren": {
       "location": "Blumund; exact location UNKNOWN",
-      "status": "instrument-production project autonomous; urgent letter in dispatch"
+      "status": "instrument-production project autonomous",
+      "mail": "urgent letter accepted for dispatch"
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard; admission free; venue fee 0; early set already underway.",
+    "Free concert T+129 19:00 at small combat yard; about five minutes remain; admission free; venue fee 0.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
-    "Rena current waking state unobserved."
+    "Rena current waking state is unobserved."
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 45s 08c",
-    "recent_performance_transactions": [
-      "Крадущая сны +7s82c",
-      "Лев спит +9s36c",
-      "Хакуна Матата +11s64c",
-      "Если б я был Князем +13s08c"
-    ],
-    "last_transaction": "Если б я был Князем: tips +13s08c; expenses 0; net +13s08c",
+    "personal_cash": "20g 59s 80c",
+    "last_transaction": "tips for public performance 'Тьмы Князь' +14s72c; expenses 0; net +14s72c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
   },
+  "unknowns": [
+    "exact current location of Gareth while surveying",
+    "exact current location of Vern",
+    "exact lodging name known in-world to Gareth and Vern but not supplied in user-visible text",
+    "Rena current waking state"
+  ],
   "critical_rules": [
     "User alone controls Arlequino dialogue, feelings, decisions and meaningful actions.",
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
-    "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
-    "NPC reactions follow personality/role and may be positive, negative, distracted, mocking or indifferent.",
-    "For known songs, use real listener comments/reactions as the primary reaction model. Preserve those reactions closely and only adapt explicitly otherworldly/modern references to fit Tensura.",
-    "Do not reduce song reactions to lyric sentiment; rhythm, energy, delivery and crowd dynamics can dominate.",
-    "When user supplies lyrics, tie reactions to actual supplied lines and do not invent lyric content.",
+    "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
+    "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
+    "For known Earth songs, use real listener comments/reactions as the primary basis for crowd response; adapt only clearly Earth-specific references to fit Tensura. Do not replace this with generic lyrical analysis.",
+    "When user supplies adapted lyrics, use those lyrics rather than silently reverting to the original.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
