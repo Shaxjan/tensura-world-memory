@@ -1,88 +1,40 @@
 {
-  "audit_version": 1,
-  "currency": {
-    "system": "g/s/c",
-    "conversion": "100c=1s;100s=1g"
-  },
-  "saved_canon": {
-    "live_pointer_version": 124,
-    "time": "T+130 ~18:44",
-    "personal_cash": "24g86s53c",
+  "audit_version": 2,
+  "currency": {"system":"g/s/c","conversion":"100c=1s;100s=1g"},
+  "current_saved_canon": {
+    "live_pointer_version": 125,
+    "time": "T+130 ~19:29",
+    "personal_cash": "26g21s67c",
     "status": "SAVED_CANON"
   },
-  "chat_pending_checkpoint": {
-    "time": "T+130 ~19:29",
-    "starting_cash_from_v124": "24g86s53c",
+  "since_v124": {
+    "baseline": {"version":124,"time":"T+130 ~18:44","personal_cash":"24g86s53c"},
     "transactions": [
-      {
-        "performance": "Герои",
-        "income": "+64s12c",
-        "expenses": "0",
-        "net": "+64s12c"
-      },
-      {
-        "performance": "Головы с плеч",
-        "income": "+29s74c",
-        "expenses": "0",
-        "net": "+29s74c",
-        "note": "retconned/recalculated after full-text/economy review"
-      },
-      {
-        "performance": "От копья",
-        "income": "+21s86c",
-        "expenses": "0",
-        "net": "+21s86c"
-      },
-      {
-        "performance": "Заклинатель и осёл",
-        "income": "+19s42c",
-        "expenses": "0",
-        "net": "+19s42c"
-      }
+      {"performance":"Герои","income":"+64s12c","expenses":"0","net":"+64s12c"},
+      {"performance":"Головы с плеч","income":"+29s74c","expenses":"0","net":"+29s74c","note":"retconned/recalculated after economy audit"},
+      {"performance":"От копья","income":"+21s86c","expenses":"0","net":"+21s86c"},
+      {"performance":"Заклинатель и осёл","income":"+19s42c","expenses":"0","net":"+19s42c"}
     ],
-    "net_change": "+1g35s14c",
-    "personal_cash": "26g21s67c",
-    "status": "CHAT_PENDING_CHECKPOINT"
+    "net_change":"+1g35s14c",
+    "result":"26g21s67c",
+    "checkpoint":"live_v125/delta.json"
   },
   "separate_funds_last_explicit_record": {
-    "promo_remaining": {
-      "amount": "27s36c",
-      "source_state": "SAVE v61 / repeated in later early LIVE states",
-      "note": "separate from personal cash; no later recorded spend found in audited chain"
-    },
-    "oren_project_fund": {
-      "amount": "4g",
-      "note": "separate project fund; do not mix with personal cash"
-    },
-    "lissa_project_fund": {
-      "amount": "4g",
-      "note": "separate project fund; do not mix with personal cash"
-    }
+    "promo_remaining":{"amount":"27s36c","note":"separate from personal cash; no later recorded spend found in audited chain"},
+    "oren_project_fund":{"amount":"4g","note":"separate project fund"},
+    "lissa_project_fund":{"amount":"4g","note":"separate project fund"}
   },
   "paid_and_held_money": {
-    "gareth": {
-      "paid": "25s",
-      "purpose": "two-day Eurazania-capital survey",
-      "status": "paid in full"
-    },
-    "vern": {
-      "work_travel_fee_paid": "1g20s",
-      "instrument_float_held": "50s",
-      "float_status": "actual spending/unused return currently UNKNOWN until Vern reports",
-      "note": "float is not personal cash in hand"
-    },
-    "meira": {
-      "fee_total": "1g20s",
-      "advance_paid": "20s",
-      "remaining_obligation": "1g"
-    }
+    "gareth":{"paid":"25s","purpose":"two-day Eurazania-capital survey","status":"paid in full"},
+    "vern":{"work_travel_fee_paid":"1g20s","instrument_float_held":"50s","float_status":"actual spending/unused return UNKNOWN until report","note":"not personal cash in Arlequino's hand"},
+    "meira":{"fee_total":"1g20s","advance_paid":"20s","remaining_obligation":"1g"}
   },
   "economy_rules": [
-    "Personal cash is always separate from promo/project funds.",
-    "Public performance accounting must report income, expenses, net and resulting personal cash.",
-    "Tips depend on audience size, paying share, local norm, reaction and situation.",
+    "Personal cash is separate from promo/project funds and held floats.",
+    "After public performance report income, expenses, net and resulting personal cash.",
+    "Tips = audience size × paying share × local norm × reaction × situation.",
     "Reputation affects audience size more strongly than tips per person.",
-    "Income is capped by the real free budget/liquidity of the audience.",
-    "Eurazania capital has medium wealth, lower liquidity, strong martial culture and a weaker elite market."
+    "Income is capped by actual free budget/liquidity.",
+    "Eurazania capital: medium wealth, lower liquidity, strong martial culture, weaker elite market."
   ]
 }
