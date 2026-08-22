@@ -1,0 +1,1 @@
+ECONOMY_MODEL_v1 active from next monetary event. Earlier earnings are not recalculated.
