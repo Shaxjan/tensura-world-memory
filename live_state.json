@@ -1,41 +1,55 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 81,
+  "save_version": 82,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:45",
+  "world_time": "T+129 ~19:50",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
     "state": [
       "official free concert underway",
       "Arlequino currently has and performs with the violin",
       "Arlequino does NOT have the guitar; the guitar is with Rena",
-      "concert has included songs aimed at swordsmen, spearmen, archers, shield-bearers, magicians, healers and enchanters",
-      "latest performance was the user-supplied adapted 'Для мира на земле', addressed broadly to the war-experienced crowd rather than assigned to one preserved specialization"
+      "after 'Для мира на земле', Arlequino offered a song about a girl, a princess and letters, then performed his adapted 'Принцесса'",
+      "RETCON: the exact user-supplied adapted lyrics of 'Принцесса' are now preserved verbatim in this LIVE state"
     ],
-    "personal_cash": "22g 44s 20c",
+    "personal_cash": "22g 67s 84c",
     "instrument_locations": {
       "violin": "with Arlequino at the concert",
       "guitar": "with Rena; not with Arlequino"
     }
   },
   "last_scene": {
-    "id": "scene_t129_1939_1945_for_peace_on_earth",
-    "time": "T+129 ~19:39-19:45",
-    "summary": "After saying 'вспомнил.....', Arlequino performed his user-supplied adapted 'Для мира на земле' (based on Plamenev). The song was not comic: it described assault at dawn, bodies torn apart, the intoxicating taste of blood, dead friends, refusal to take prisoners, and then a turning point where the narrator spared a young enemy who had dropped his weapon. That spared enemy stabbed him in the stomach. Arlequino deliberately slowed the four words 'моё сердце замедляло ход' before the final refrain changed from 'я убивал' to 'я жизнь отдал / Для мира на земле'. Audience reaction was mixed and grounded in a martial society: younger fighters were initially caught by the brutal battle imagery; veterans became quieter at the refrain about dead friends; some soldiers approved of the earlier no-prisoners stance and treated the stabbing as proof, while others were disturbed that mercy was punished and still heard the final hope for peace as meaningful rather than foolish. The ending produced a short silence before applause rather than cheering throughout. Tips +25s14c; expenses 0; net +25s14c. Personal cash became 22g44s20c.",
-    "continue_from": "T+129 ~19:45 at the small combat yard. 'Для мира на земле' has just ended after Arlequino slowed 'моё сердце замедляло ход'. The final line expresses hope that the narrator gave his life for peace. The crowd is quieter and more divided than after the comic songs. Arlequino remains on the low wooden box with violin; guitar remains with Rena. Personal cash 22g44s20c. User controls Arlequino's next words/actions."
+    "id": "scene_t129_1946_1950_princess_retcon",
+    "time": "T+129 ~19:46-19:50",
+    "summary": "RETCON replaces the earlier unresolved reconstruction of 'Принцесса'. Arlequino performed his exact user-supplied adapted lyrics. The audience had expected a romantic song about a girl, a princess and letters. The opening cemetery image immediately broke that expectation; 'Напишу в могилу ей / Напишу письмо' drew dark laughter and uneasy reactions. The sequence 'Три, девять, сорок дней' and the attempted summoning made the magical listeners pay closer attention. 'Не прошёл эксперимент' reframed the song as a failed necromantic experiment rather than romance. The strongest shocked/comic reaction came when the returned princess was described through 'Грязно-зеленый гной / Трупного процесса'. The final punchline 'В мире мертвых до сих пор / Нету почты' produced the largest laugh because it completed the earlier letter setup. Reactions remained mixed: some civilians found the corpse imagery disgusting, younger fighters and several magicians laughed at the black humor, and the healer woman visibly disliked the decomposition imagery. Tips +23s64c; expenses 0; net +23s64c. Personal cash became 22g67s84c.",
+    "continue_from": "T+129 ~19:50 at the small combat yard. Adapted 'Принцесса' has just ended on the punchline that there is still no post in the world of the dead. Crowd reaction is mixed but lively after the dark comic turn. Arlequino remains on the low wooden box with violin; guitar remains with Rena. Personal cash 22g67s84c. User controls Arlequino's next words/actions."
+  },
+  "adapted_song_archive": {
+    "Принцесса": {
+      "source_reference": "Пламенев — Принцесса",
+      "status": "user-adapted; canonical in simulation",
+      "lyrics_verbatim": "Кладбище, кладбище\nСпряталось у леса.\nСпит, уснула вечным сном\nЮная принцесса.\nЯ смотрю из за ветвей\nНа ее могилу.\nНапишу в могилу ей\nНапишу письмо\nТри, девять, сорок дней\nМне не дописаться\nДушу вызвать в мир людей\nА духу воплотиться\nНе прошёл эксперимент,\nВремя быстротечно.\nНе доступна она\nБудет вечно.\nГрязно-зеленый гной\nТрупного процесса\nВот стоит передо мной\nНовая принцесса\nДушу надо брать в упор\nНо противофазе\nВ мире мертвых до сих пор\nНету почты.",
+      "history_notes": [
+        "Previously performed in Blumund concert.",
+        "Full adapted text was also copied into a letter to Lissa; SAVE v52 preserved that fact but not the lyrics.",
+        "User supplied the exact text again as a RETCON at T+129 ~19:46; this exact text is authoritative."
+      ]
+    }
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep; current waking state unobserved",
       "relationship": "active romantic relationship",
-      "possessions_relevant": ["Arlequino's guitar is with Rena"]
+      "possessions_relevant": [
+        "Arlequino's guitar is with Rena"
+      ]
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -72,8 +86,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "22g 44s 20c",
-    "last_confirmed_transaction": "concert performance adapted 'Для мира на земле': tips +25s14c; expenses 0; net +25s14c",
+    "personal_cash": "22g 67s 84c",
+    "last_confirmed_transaction": "concert performance adapted 'Принцесса': tips +23s64c; expenses 0; net +23s64c",
     "pending_performance_accounting": [],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
@@ -86,6 +100,8 @@
     "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
     "For known songs, use real listener-comment patterns when available and adapt only explicitly otherworldly/modern details; for user-supplied adapted lyrics, react to exact supplied lines.",
     "If a song is given only by title and exact lyrics were not supplied or reliably recoverable, do not invent lyrics or line-specific semantic reactions.",
+    "Every song text adapted/rewritten by the user must be preserved verbatim in GitHub when supplied; never leave the only durable record as a summary.",
+    "For a later correction/RETCON of an adapted song, the newest exact user-supplied text overrides older summaries or reconstructions.",
     "Audience reactions are heterogeneous and driven by performance, rhythm, refrain, context, text when known, and listener personality.",
     "Arlequino currently has the violin. The guitar is with Rena; never silently give Arlequino the guitar.",
     "No plot armor.",
