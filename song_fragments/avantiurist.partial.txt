@@ -1,0 +1,23 @@
+STATUS: PARTIAL_EXACT — SAVE v38 says exact user-supplied lyrics were performed, but the durable save kept only fragments/reactions, not the full text.
+
+Exact surviving fragments:
+
+Ветер шальной гонит туман...
+Он, как и я, – авантюрист
+
+Вольному – воля
+
+Где-то, где-то любимая помнит и ждёт
+
+Кто же авантюристов умом понимает
+Душа её, сила её воспевает
+
+Ой дага-дагадай...
+
+Canonical place-name correction from SAVE v39:
+Блюмундских Раздолий
+
+Arlequino's exact spoken correction after the song:
+Блюмундских Раздолий - (поклон) моя ошибка 😁
+
+Полный текст сейчас не восстановлен; не дополнять по оригиналу/памяти.
