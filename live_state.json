@@ -1,29 +1,30 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 61,
+  "save_version": 62,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~17:50",
+  "world_time": "T+129 ~18:22",
   "maestro": {
-    "location": "busy street in Eurazania capital after the fourth three-song street set",
+    "location": "busy street in Eurazania capital after the fifth three-song street set",
     "state": [
       "awake and dressed",
       "carrying violin",
+      "has completed five three-song street promo sets today and announced the free concert after each set",
       "concert prep 18:30",
       "free concert starts 19:00 at the small combat yard"
     ],
-    "personal_cash": "19g 17s 24c"
+    "personal_cash": "19g 21s 36c"
   },
   "last_scene": {
-    "id": "scene_t129_1430_1750_street_promo",
-    "time": "T+129 ~14:30-17:50",
-    "summary": "Arlequino performed four three-song street sets in several busy parts of the Eurazania capital and announced the free 19:00 concert after each set. Reactions were mixed and local. Tips totaled 17s64c, expenses 0, net +17s64c.",
-    "continue_from": "T+129 ~17:50 on a busy street in the Eurazania capital after the fourth three-song set and fourth concert announcement. Arlequino has his violin. Concert prep 18:30, concert 19:00 at the small combat yard. Personal cash 19g17s24c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
+    "id": "scene_t129_1750_1822_street_promo_fifth_set",
+    "time": "T+129 ~17:50-18:22",
+    "summary": "Arlequino continued walking through a busy part of the Eurazania capital, performed one more three-song street set, then announced the free 19:00 concert at the small combat yard. The evening crowd was mixed: some stopped and listened, some continued on, several fighters and workers reacted loudly, and a few listeners asked each other where the combat yard was. Tips for this set totaled 4s12c, expenses 0, net +4s12c.",
+    "continue_from": "T+129 ~18:22 on a busy street in the Eurazania capital immediately after the fifth three-song set and fifth concert announcement. Arlequino has his violin. Concert prep begins in about 8 minutes at 18:30; concert starts 19:00 at the small combat yard. Personal cash 19g21s36c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
   },
   "characters_live": {
     "rena": {
@@ -79,8 +80,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "19g 17s 24c",
-    "last_transaction": "street performance tips +17s64c; expenses 0; net +17s64c",
+    "personal_cash": "19g 21s 36c",
+    "last_transaction": "fifth street promo set tips +4s12c; expenses 0; net +4s12c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
