@@ -1,35 +1,36 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 64,
+  "save_version": 65,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:28",
+  "world_time": "T+129 ~18:30",
   "maestro": {
-    "location": "small combat yard, Eurazania capital; arriving for concert prep",
+    "location": "small combat yard, Eurazania capital",
     "state": [
       "awake and dressed",
       "carrying violin",
-      "completed roughly four hours of street performance/promotion before the concert",
-      "free concert starts 19:00; prep begins 18:30"
+      "standing on a sturdy low wooden box used as a small stage",
+      "free concert starts 19:00"
     ],
     "personal_cash": "20g 03s 18c"
   },
   "last_scene": {
-    "id": "scene_t129_1430_1828_street_promo_corrected_and_arrival",
-    "time": "T+129 ~14:30-18:28",
-    "summary": "Arlequino spent almost four hours moving through busy parts of the Eurazania capital, performing approximately 48 songs with brief rests and announcing the free 19:00 concert after each group of three songs, for roughly 16 announcements. Earlier GM compressions that treated this as only a handful of short sets and totals of 21s76c or 30s84c are invalid. Based on the already established local street-tip scale, the corrected total for the whole promenade is 1g03s58c, expenses 0, net +1g03s58c. Arlequino then headed to the small combat yard and arrived just before 18:30 prep.",
-    "continue_from": "T+129 ~18:28 at the small combat yard in the Eurazania capital. Arlequino has his violin and has just arrived for concert prep. Free concert starts at 19:00. Correct personal cash 20g03s18c. Gareth is independently surveying the city; Vern intends to depart for Dwargon at dawn T+130."
+    "id": "scene_t129_1830_archer_knowledge_correction",
+    "time": "T+129 ~18:30",
+    "summary": "At the small combat yard, Arlequino asked whether anyone present had heard him yesterday, and some audience members responded. He then teased that he remembered a lovely archer asking him for love. A GM response incorrectly gave the archer knowledge of the private nickname 'павлин' and implied knowledge of another woman/Rena. That response is RETCONNED: the archer does not know the nickname, Rena, or Arlequino's private relationship unless she later learns it through an in-world source. Only Rena may call Arlequino 'павлин'.",
+    "continue_from": "T+129 ~18:30 at the small combat yard. Arlequino has just said: 'И так . я помню одна прелестная лучница просила у меня любви😉'. The same archer from yesterday is present, but her reaction must use only what she could realistically know from public interactions. Concert starts 19:00. Personal cash 20g03s18c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
       "state": "last directly observed asleep after the long morning intimacy; current waking state unobserved",
-      "relationship": "active romantic relationship; affectionate, teasing and physically close"
+      "relationship": "active romantic relationship; affectionate, teasing and physically close",
+      "private_knowledge_rule": "Her relationship with Arlequino and her nickname 'павлин' are not public knowledge unless explicitly revealed in-world."
     },
     "gareth": {
       "location": "Eurazania capital; exact survey location UNKNOWN",
@@ -68,11 +69,20 @@
       "location": "Blumund; exact location UNKNOWN",
       "status": "instrument-production project autonomous",
       "mail": "urgent letter accepted for dispatch"
+    },
+    "archer_local": {
+      "location": "small combat yard audience",
+      "status": "heard Arlequino yesterday and is present before today's concert",
+      "knowledge_limits": [
+        "may know only what she personally heard/saw in public or learned through plausible in-world sources",
+        "does NOT know the private nickname 'павлин'",
+        "does NOT know Rena or Arlequino's private romantic relationship unless explicitly informed later"
+      ]
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard; prep 18:30; admission free; venue fee 0.",
-    "Street promotion before the concert completed: about 48 songs and about 16 concert announcements across almost four hours.",
+    "Free concert T+129 19:00 at small combat yard; admission free; venue fee 0.",
+    "Audience is gathering before the concert; some heard Arlequino yesterday, others are new.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -81,7 +91,7 @@
   "economy": {
     "currency": "1g=100s;1s=100c",
     "personal_cash": "20g 03s 18c",
-    "last_transaction": "corrected total street-performance tips for T+129 ~14:30-18:28: +1g03s58c; expenses 0; net +1g03s58c; earlier lower totals for this same promenade are invalid",
+    "last_transaction": "corrected total for ~4h street performance/promo: +1g03s58c, expenses 0",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -96,7 +106,8 @@
     "User alone controls Arlequino dialogue, feelings, decisions and meaningful actions.",
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
-    "NPC knowledge must come from realistic sources; UNKNOWN stays UNKNOWN.",
+    "NPC knowledge must come from realistic in-world sources; no private-information leakage; UNKNOWN stays UNKNOWN.",
+    "Do not let one NPC inherit knowledge from another NPC or from GM memory without a causal information path.",
     "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
     "No plot armor.",
     "Include personal cash in every RP response.",
