@@ -1,7 +1,7 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 66,
+  "save_version": 67,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
@@ -22,8 +22,8 @@
   "last_scene": {
     "id": "scene_t129_1830_1835_kradushchaya_sny",
     "time": "T+129 ~18:30-18:35",
-    "summary": "After the archer publicly reminded Arlequino that she had asked for a love song, Arlequino performed 'Крадущая сны' (Pavel Plamenev). Audience reactions followed the actual lyrical arc rather than invented details: the opening admiration drew teasing and smiles; the turn toward knowing the pair can never be together quieted part of the yard; the final realization that the woman loves someone else produced a mix of sympathetic groans, laughter from some fighters, and a visibly more serious response from the archer. No NPC inferred anything about Rena or Arlequino's private life from the song. Tips from this concentrated free-yard audience for the song totaled 7s82c; expenses 0; net +7s82c.",
-    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны' on violin before the gathering audience. The archer who requested a love song is present. Official concert time is still 19:00, though Arlequino has begun playing early. Personal cash 20g11s00c."
+    "summary": "Arlequino performed 'Крадущая сны' after the archer's request for a love song. Correction: audience response must not be interpreted as uniformly sad just because the lyrics contain longing or disappointment. The musical delivery, rhythm, performance energy, social setting and each listener's personality matter independently from lyrical meaning. Some listeners can grin, sway, tap rhythm, tease the archer, enjoy the hook or performance energy, or barely follow the words; others may catch the bittersweet turn. The archer's response is personal, not a template for the whole crowd. Tips remain 7s82c; expenses 0; net +7s82c.",
+    "continue_from": "T+129 ~18:35 at the small combat yard. Arlequino has just finished 'Крадущая сны' before the gathering audience. The archer who requested a love song is present. Official concert time is still 19:00, though Arlequino has begun playing early. Personal cash 20g11s00c."
   },
   "characters_live": {
     "rena": {
@@ -106,7 +106,9 @@
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
     "NPC knowledge must come from realistic in-world sources; knowledge does not leak between NPCs; UNKNOWN stays UNKNOWN.",
     "NPC reactions follow personality/role, not universal expertise or therapy-speak.",
-    "When reacting to a known song, tie reactions to actual supplied or verified lyrical moments; do not invent lines.",
+    "Audience reactions to music must combine musical energy, rhythm, tempo, delivery, setting, crowd behavior, lyrics and individual personality. Sad or dark lyrics do not automatically make listeners sad; an energetic or catchy song can make people dance, chant, grin or feel exhilarated even when the story is painful.",
+    "Do not default every strong song reaction to the pattern 'this is horrible/sad, therefore it is good'. Use heterogeneous reactions: physical rhythm, amusement, excitement, attraction, irritation, boredom, misunderstanding, singing along, social teasing, indifference, personal resonance and other plausible responses.",
+    "When reacting to a known song, tie any lyric-specific reactions only to actual supplied or verified lyrical moments; do not invent lines.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
