@@ -1,34 +1,36 @@
 {
   "format": "TENSURA_LIVE_STATE",
   "schema_version": "3.0-one-write",
-  "save_version": 82,
+  "save_version": 83,
   "base_snapshot": {
     "file": "world_save.json",
     "version": 61,
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~19:50",
+  "world_time": "T+129 ~19:56",
   "maestro": {
-    "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd",
+    "location": "small combat yard, Eurazania capital; on the low wooden box before a dense concert crowd of roughly 310 people",
     "state": [
       "official free concert underway",
       "Arlequino currently has and performs with the violin",
       "Arlequino does NOT have the guitar; the guitar is with Rena",
-      "after 'Для мира на земле', Arlequino offered a song about a girl, a princess and letters, then performed his adapted 'Принцесса'",
-      "RETCON: the exact user-supplied adapted lyrics of 'Принцесса' are now preserved verbatim in this LIVE state"
+      "after adapted 'Принцесса', Arlequino stated that his promise of a song about a girl, princess and letters was fulfilled",
+      "Arlequino publicly mentioned a very dangerous song about power, declined to perform it here, then said he may sing it later at a larger concert",
+      "when the crowd left the next choice to him, Arlequino selected 'Я вам не верю' (reference: Григорий Лепс — 'Я тебе не верю')",
+      "the exact lyrics of 'Я вам не верю' were not supplied in this scene, so no line-specific text is treated as canonical"
     ],
-    "personal_cash": "22g 67s 84c",
+    "personal_cash": "22g 91s 96c",
     "instrument_locations": {
       "violin": "with Arlequino at the concert",
       "guitar": "with Rena; not with Arlequino"
     }
   },
   "last_scene": {
-    "id": "scene_t129_1946_1950_princess_retcon",
-    "time": "T+129 ~19:46-19:50",
-    "summary": "RETCON replaces the earlier unresolved reconstruction of 'Принцесса'. Arlequino performed his exact user-supplied adapted lyrics. The audience had expected a romantic song about a girl, a princess and letters. The opening cemetery image immediately broke that expectation; 'Напишу в могилу ей / Напишу письмо' drew dark laughter and uneasy reactions. The sequence 'Три, девять, сорок дней' and the attempted summoning made the magical listeners pay closer attention. 'Не прошёл эксперимент' reframed the song as a failed necromantic experiment rather than romance. The strongest shocked/comic reaction came when the returned princess was described through 'Грязно-зеленый гной / Трупного процесса'. The final punchline 'В мире мертвых до сих пор / Нету почты' produced the largest laugh because it completed the earlier letter setup. Reactions remained mixed: some civilians found the corpse imagery disgusting, younger fighters and several magicians laughed at the black humor, and the healer woman visibly disliked the decomposition imagery. Tips +23s64c; expenses 0; net +23s64c. Personal cash became 22g67s84c.",
-    "continue_from": "T+129 ~19:50 at the small combat yard. Adapted 'Принцесса' has just ended on the punchline that there is still no post in the world of the dead. Crowd reaction is mixed but lively after the dark comic turn. Arlequino remains on the low wooden box with violin; guitar remains with Rena. Personal cash 22g67s84c. User controls Arlequino's next words/actions."
+    "id": "scene_t129_1952_1956_ya_vam_ne_veryu",
+    "time": "T+129 ~19:52-19:56",
+    "summary": "After teasing the audience with a dangerous song about power and postponing it to a possible larger concert, Arlequino asked whether he should choose the next song himself. The crowd broadly agreed. He then performed 'Я вам не верю', identifying it by reference to Grigory Leps's 'Я тебе не верю'. Because the user supplied only the title/reference and not exact lyrics, reactions were based only on the recognizable overall character of the number: emotionally forceful distrust, accusation, wounded pride and a strong dramatic refrain, with no invented lyric quotations. The change from cemetery black comedy to a direct relationship song landed well. Some civilians and women in the crowd reacted strongly to the emotional tension; younger fighters initially joked about whether the title was aimed at the audience, then quieted once the performance committed to the dramatic tone; the healer woman watched with amused suspicion after the earlier bait-and-switch songs; the enchanter man joked that at least nobody was being transformed this time. The refrain drew clapping and some attempts to join the recognizable hook without any canonical quoted lines. Tips +24s12c; expenses 0; net +24s12c. Personal cash became 22g91s96c.",
+    "continue_from": "T+129 ~19:56 at the small combat yard. 'Я вам не верю' has just ended. The audience of roughly 310 is still engaged; mood is more emotionally charged and less comic than after 'Принцесса'. Arlequino remains on the low wooden box with violin; guitar remains with Rena. The dangerous song about power has been publicly deferred to a future larger concert, not performed. Personal cash 22g91s96c. User controls Arlequino's next words/actions."
   },
   "adapted_song_archive": {
     "Принцесса": {
@@ -78,7 +80,8 @@
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard is underway.",
+    "Free concert T+129 19:00 at small combat yard is underway; current audience roughly 310.",
+    "Arlequino has publicly deferred a dangerous song about power to a possible future larger concert.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; dawn departure T+130 intended.",
     "Urgent letters to Lissa and Oren are in dispatch.",
@@ -86,8 +89,8 @@
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "22g 67s 84c",
-    "last_confirmed_transaction": "concert performance adapted 'Принцесса': tips +23s64c; expenses 0; net +23s64c",
+    "personal_cash": "22g 91s 96c",
+    "last_confirmed_transaction": "concert performance 'Я вам не верю': tips +24s12c; expenses 0; net +24s12c",
     "pending_performance_accounting": [],
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
