@@ -8,48 +8,46 @@
     "commit": "96288a0b9f5681bfbe59b5db3341596d1985ef6e",
     "rule": "Archive snapshot only. Do not rewrite during normal gameplay."
   },
-  "world_time": "T+129 ~18:40",
+  "world_time": "T+129 ~18:49",
   "maestro": {
     "location": "small combat yard, Eurazania capital; on a sturdy low wooden box before the gathering audience",
     "state": [
       "awake and dressed",
-      "playing violin and singing before the official concert",
-      "performed 'Лев спит' using the exact user-supplied lyrics",
-      "official free concert start remains 19:00"
+      "playing violin and performing loudly/theatrically",
+      "pre-concert set has included Крадущая сны, Лев спит, Хакуна Матата and Если б я был Князем",
+      "official free concert begins 19:00"
     ],
-    "personal_cash": "20g 20s 36c"
+    "personal_cash": "20g 45s 08c"
   },
   "last_scene": {
-    "id": "scene_t129_1836_1840_lev_spit",
-    "time": "T+129 ~18:36-18:40",
-    "summary": "Arlequino performed the new song 'Лев спит' before the official concert. Reaction model followed real listener-comment patterns rather than semantic mood analysis: the repeating 'a-wimoweh' hook was quickly picked up by some listeners, several began swaying or chanting along, the song was treated as catchy and hard to get out of one's head, and the contrast between 'Тише, детка' and the loud recurring chant drew laughter. The audience reaction was lively, playful and participatory rather than solemn. Lyrics were not altered because the supplied text contained no necessary otherworld adaptation. Tips +9s36c; expenses 0; net +9s36c.",
-    "continue_from": "T+129 ~18:40 at the small combat yard after 'Лев спит'. The audience is lively; several people are still repeating the chant. Roughly twenty minutes remain before the official 19:00 concert start. Personal cash 20g20s36c."
+    "id": "scene_t129_1840_1849_comic_preconcert_set",
+    "time": "T+129 ~18:40-18:49",
+    "summary": "Arlequino continued the early set with playful high-energy material. 'Лев спит' became a contagious call-and-response around the repeated chant; tips +9s36c. 'Хакуна Матата' was performed as multiple roles by Arlequino alone, loudly and theatrically, with foreign wording translated/adapted in-world; the crowd joined the refrain and laughed at the comic dialogue; tips +11s64c. He then performed the user-supplied parody 'Если б я был Князем', whose recurring joke structure contrasted the appeal of three wives with escalating inconveniences. The strongest crowd reactions landed on the concrete punchlines about three mothers-in-law, drunkenly coming home to three separate quarrels, and the final conclusion that if he were a ruler he would remain unmarried. The archer reacted especially to the lyric explicitly assigning her the task of mending boots. Reactions were varied rather than uniformly admiring. Tips for 'Если б я был Князем' +13s08c; expenses 0.",
+    "continue_from": "T+129 ~18:49 at the small combat yard. Roughly eleven minutes remain before the official 19:00 concert start. Arlequino is on the wooden box with violin; crowd is lively and still gathering. Personal cash 20g45s08c."
   },
   "characters_live": {
     "rena": {
       "location": "small family inn, Eurazania capital",
-      "state": "last directly observed asleep; current state unobserved",
+      "state": "last directly observed asleep; current waking state unobserved",
       "relationship": "active romantic relationship"
-    },
-    "gareth": {
-      "location": "Eurazania capital; exact survey location UNKNOWN",
-      "status": "paid two-day capital survey active",
-      "fee": "25s paid"
-    },
-    "vern": {
-      "location": "Eurazania capital; exact current location UNKNOWN",
-      "status": "Dwargon errand commissioned and fully paid; departure intended T+130 dawn",
-      "fee": "1g20s paid",
-      "instrument_float": "50s; unused remainder must be returned with accounting"
     },
     "archer": {
       "location": "small combat yard audience",
-      "status": "present; previously asked Arlequino for a love song",
+      "status": "present; previously requested a love song; now a recurring target of Arlequino's public teasing",
       "knowledge_limits": [
         "does not know Rena unless informed through an in-world source",
         "does not know Arlequino's private relationship details",
-        "does not know Rena's nickname 'павлин'; only Rena uses it"
+        "does not know/use Rena's nickname 'павлин'"
       ]
+    },
+    "gareth": {
+      "location": "Eurazania capital; exact survey location UNKNOWN",
+      "status": "paid two-day capital survey active"
+    },
+    "vern": {
+      "location": "Eurazania capital; exact current location UNKNOWN",
+      "status": "Dwargon errand paid; intends departure T+130 dawn",
+      "instrument_float": "50s; unused remainder must return with accounting"
     },
     "lissa": {
       "location": "Blumund; exact location UNKNOWN",
@@ -61,16 +59,22 @@
     }
   },
   "active_threads": [
-    "Free concert T+129 19:00 at small combat yard; Arlequino is playing early; admission free; venue fee 0.",
+    "Free concert T+129 19:00 at small combat yard; admission free; venue fee 0; early set already underway.",
     "Gareth two-day Eurazania-capital survey active and paid.",
     "Vern Dwargon errand active; intends dawn departure T+130.",
     "Urgent letters to Lissa and Oren are in dispatch.",
-    "Rena current state is unobserved."
+    "Rena current waking state unobserved."
   ],
   "economy": {
     "currency": "1g=100s;1s=100c",
-    "personal_cash": "20g 20s 36c",
-    "last_transaction": "tips for public performance of 'Лев спит' +9s36c; expenses 0; net +9s36c",
+    "personal_cash": "20g 45s 08c",
+    "recent_performance_transactions": [
+      "Крадущая сны +7s82c",
+      "Лев спит +9s36c",
+      "Хакуна Матата +11s64c",
+      "Если б я был Князем +13s08c"
+    ],
+    "last_transaction": "Если б я был Князем: tips +13s08c; expenses 0; net +13s08c",
     "promo_remaining": "27s36c separate",
     "oren_project_fund": "4g separate",
     "lissa_project_fund": "4g separate"
@@ -80,10 +84,10 @@
     "Preserve user-supplied Arlequino wording verbatim when it matters.",
     "World and NPCs are autonomous; Arlequino is not the center of all events.",
     "NPC knowledge must come from realistic in-world sources; no knowledge leakage; UNKNOWN stays UNKNOWN.",
-    "NPC reactions follow personality and role, not universal expertise or therapy-speak.",
-    "For known real-world songs, use real listener comments as the primary reaction basis. Transfer those reactions directly into plausible in-world audience behavior/dialogue. Alter only explicitly otherworldly/modern references when necessary; do not replace the reaction with the GM's own lyrical analysis.",
-    "Musical energy, rhythm and crowd participation can dominate over sad or dark lyrics; do not force collective sadness from semantic content.",
-    "When user supplies lyrics, use those exact lyrics as the performance text and react to the actual supplied moments.",
+    "NPC reactions follow personality/role and may be positive, negative, distracted, mocking or indifferent.",
+    "For known songs, use real listener comments/reactions as the primary reaction model. Preserve those reactions closely and only adapt explicitly otherworldly/modern references to fit Tensura.",
+    "Do not reduce song reactions to lyric sentiment; rhythm, energy, delivery and crowd dynamics can dominate.",
+    "When user supplies lyrics, tie reactions to actual supplied lines and do not invent lyric content.",
     "No plot armor.",
     "Include personal cash in every RP response.",
     "After every actual public performance report income, expense, net and new personal cash.",
@@ -96,6 +100,7 @@
     "mode": "ONE_WRITE",
     "normal_checkpoint": "update live_state.json only",
     "world_save_refresh": "only at major consolidation, chat migration, end of major arc/day, or explicit user request",
+    "target_file_size": "prefer under 15 KB",
     "minimum_checkpoint_scope": "natural scene boundary; batch micro-actions and short exchanges"
   }
 }
