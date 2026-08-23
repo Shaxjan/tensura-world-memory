@@ -92,6 +92,7 @@ class SourceDocument:
     text: str
     data: Any
     version: int | None
+    parse_error: str | None = None
 
     @property
     def sha256(self) -> str:
@@ -118,10 +119,16 @@ class RepoCampaignPackage:
         return docs
 
 
-def _read_json_doc(root: Path, rel: str, version: int | None = None) -> SourceDocument:
+def _read_json_doc(root: Path, rel: str, version: int | None = None, *, tolerate_parse: bool = False) -> SourceDocument:
     path = root / rel
     text = path.read_text(encoding="utf-8")
-    return SourceDocument(rel, text, json.loads(text), version)
+    try:
+        data = json.loads(text)
+        return SourceDocument(rel, text, data, version, None)
+    except Exception as exc:
+        if not tolerate_parse:
+            raise
+        return SourceDocument(rel, text, None, version, str(exc))
 
 
 def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
@@ -150,16 +157,16 @@ def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
     deltas: list[SourceDocument] = []
     seen_versions: set[int] = set()
     duplicate_versions: list[int] = []
+    malformed_delta_versions: list[int] = []
     for path in sorted(root.glob("live_v*/delta.json"), key=lambda p: (_version_from_path(p) or -1, str(p))):
         v = _version_from_path(path)
         if v is None:
             continue
         rel = path.relative_to(root).as_posix()
-        try:
-            doc = _read_json_doc(root, rel, v)
-        except Exception as exc:
-            errors.append(f"delta parse failed:{rel}:{exc}")
-            continue
+        doc = _read_json_doc(root, rel, v, tolerate_parse=True)
+        if doc.parse_error:
+            malformed_delta_versions.append(v)
+            warnings.append(f"malformed historical delta archived raw:{rel}:{doc.parse_error}")
         if v in seen_versions:
             duplicate_versions.append(v)
         seen_versions.add(v)
@@ -184,6 +191,8 @@ def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
         warnings.append(f"unpointed_future_delta:max={max_v}:pointer={pointer_v}")
     if latest_delta is not None and pointer_v is not None and latest_delta.version != pointer_v:
         errors.append(f"pointer version mismatch:{pointer_v}!={latest_delta.version}")
+    if latest_delta is not None and latest_delta.parse_error:
+        errors.append(f"pointed delta is malformed:{latest_delta.path}:{latest_delta.parse_error}")
 
     def latest_top_value(key: str) -> tuple[Any, str | None]:
         for doc in reversed(deltas):
@@ -223,7 +232,12 @@ def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
         "named_npc_exact_locations_not_normalized",
         "relationship_history_not_numerically_normalized",
         "separate_project_funds_not_fully_normalized",
+        "live_market_baseline_not_imported",
+        "live_route_time_model_not_imported",
+        "autonomous_world_baseline_not_imported",
     ]
+    if malformed_delta_versions:
+        semantic_blockers.append("malformed_historical_deltas_not_semantically_normalized")
 
     base_version = None
     if base_doc and isinstance(base_doc.data, dict):
@@ -233,10 +247,9 @@ def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
             if pointer_v is not None and bv > pointer_v:
                 errors.append(f"archive base newer than live pointer:{bv}>{pointer_v}")
 
-    docs_for_hash = [pointer_doc] + ([base_doc] if base_doc else []) + deltas
-    source_paths = [d.path for d in docs_for_hash]
+    source_paths = [pointer_doc.path] + ([base_doc.path] if base_doc else []) + [d.path for d in deltas]
     source_hash = hashlib.sha256("\n".join(
-        f"{doc.path}:{doc.sha256}" for doc in docs_for_hash
+        f"{doc.path}:{doc.sha256}" for doc in ([pointer_doc] + ([base_doc] if base_doc else []) + deltas)
     ).encode("utf-8")).hexdigest()
 
     rehearsal_ready = not errors and not blockers and latest_delta is not None
@@ -276,6 +289,7 @@ def collect_repo_campaign(repo_root: str | Path) -> RepoCampaignPackage:
         "core_blockers": blockers,
         "semantic_blockers": semantic_blockers,
         "preserved_unknown_paths": unknowns,
+        "malformed_historical_delta_versions": sorted(malformed_delta_versions),
         "normalized_current": {
             "world_time_text": time_text,
             "world_minute": world_minute,
@@ -353,9 +367,9 @@ def apply_repo_campaign_rehearsal(world: Any, package: RepoCampaignPackage) -> d
             )
 
         enabled = {
-            "travel": (1, "exact current region is mapped; regional travel is deterministic"),
-            "buy": (1, "exact personal cash and regional market are deterministic"),
-            "wait": (1, "world clock is exact"),
+            "travel": (0, "live route times/topology are not authoritatively migrated"),
+            "buy": (0, "live market stock/prices are not authoritatively migrated"),
+            "wait": (0, "autonomous world baseline is not authoritatively migrated"),
             "attempt": (0, "player skill profile not authoritatively migrated"),
             "strike": (0, "player power/skill profile not authoritatively migrated"),
             "treat": (0, "player treatment skills/power not authoritatively migrated"),
