@@ -1,0 +1,27 @@
+{
+  "v": 155,
+  "time": "T+130 ~23:35",
+  "location": "lodging in Eurazania capital; exact inn name UNKNOWN",
+  "personal_cash": "26g05s92c",
+  "scene": {
+    "status": "late-night private conversation with Rena",
+    "arlequino_action": "after repeated kisses and another attempt to move a hand between Rena's legs, clarifies the Blumund guild idea",
+    "rena_boundary": "Rena's earlier pause on further sexual escalation remains in force tonight; kissing/embracing are allowed by her, but she intercepts attempts to go lower",
+    "guild_task_clarification": {
+      "country": "Blumund",
+      "mechanism": "ask Lissa to place a paid guild commission, not to take a guild quest",
+      "task": "spread announcements about the Eurazania festival",
+      "hook_exact_user_wording": "кто сильнее зверовоин или авантюрист",
+      "purpose": "use adventurers themselves as a distribution network and frame the festival/tournament as a challenge between beast-warriors and adventurers",
+      "delivery": "Rena is already authorized by Arlequino to send prepared letters tomorrow; Lissa's letter can carry this additional instruction",
+      "guild_reward_or_fee": "NOT SET; do not invent or automatically repurpose other funds without Arlequino's instruction"
+    }
+  },
+  "continuity": {
+    "letters": "prepared but not yet physically dispatched tonight",
+    "lissa_enclosure": "1g already set aside with Lissa's letter; its exact purpose must not be silently changed into the guild commission budget",
+    "dwargon_enclosure": "1g set aside for Dwargon organizer/distribution",
+    "queen_enclosure": "1 copper set aside for the Queen as Arlequino's joke",
+    "no_new_expense": true
+  }
+}
