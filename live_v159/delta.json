@@ -1,0 +1,25 @@
+{
+  "v": 159,
+  "time": "T+131 ~07:42",
+  "location": "Eurazania capital; Arlequino leaves lodging heading to Borga",
+  "personal_cash": "26g05s92c",
+  "family_budget": "0 currently; framework decided by Rena, no transfer has yet occurred",
+  "scene": {
+    "arlequino_action": "Finishes breakfast, takes Rena's guitar with her permission, tells Rena to decide their family budget, and heads to Borga.",
+    "rena_family_budget_decision": {
+      "authority": "Arlequino explicitly delegated the family-budget design to Rena.",
+      "framework": "Create a distinct family purse for shared household/lodging/travel/food and future common-home expenses. Personal gifts, instruments, festival costs, Lissa/Oren project money, and other work/project funds remain outside it.",
+      "funding_rule": "Until the family reserve reaches 5g, 10% of each partner's future personal income goes into the family purse. After it reaches 5g, contributions pause until shared spending lowers the reserve, then the same rule resumes to refill it.",
+      "current_balance": "0; Rena does not silently remove money from Arlequino's personal purse before an actual transfer/income event.",
+      "rena_personal_cash": "UNKNOWN to GM; do not invent an exact amount"
+    },
+    "rena_next_action": "After breakfast she independently continues the already-authorized task of sending the prepared Blumund and Dwargon letters and handling the 50s Blumund guild publicity reward from the 1g already allocated to Lissa.",
+    "borga": "Autonomous tournament lead; Arlequino is now going to find him. Exact instantaneous location before contact is not established in saved canon."
+  },
+  "hard_rules_reaffirmed": [
+    "User alone controls Arlequino's dialogue, feelings, decisions and significant actions.",
+    "Rena's decisions are autonomous and need not mirror Arlequino's preferences unless he explicitly sets a constraint.",
+    "Do not mix personal cash, family budget, or project/festival funds.",
+    "Wider world continues autonomously off-screen."
+  ]
+}
