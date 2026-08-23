@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - 'sim_engine/**'
+      - 'memory/money_reconciliation_v159.json'
       - '.github/workflows/sim-engine-v02.yml'
   pull_request:
     paths:
       - 'sim_engine/**'
+      - 'memory/money_reconciliation_v159.json'
       - '.github/workflows/sim-engine-v02.yml'
   workflow_dispatch:
 
@@ -59,3 +61,9 @@ jobs:
       - name: Rehearse source-grounded v0.7 baselines
         working-directory: sim_engine
         run: python v07_rehearsal.py --repo-root .. --out /tmp/v07_rehearsal.json
+      - name: Run v0.8 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v08.py
+      - name: Rehearse v0.8 money reconciliation
+        working-directory: sim_engine
+        run: python v08_rehearsal.py --repo-root .. --out /tmp/v08_rehearsal.json
