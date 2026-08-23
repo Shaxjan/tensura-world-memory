@@ -36,7 +36,15 @@ class SimulationV02Tests(unittest.TestCase):
         after = dict(self.sim.actor("char_arlequino"))
         self.assertEqual(before["location_id"], after["location_id"])
         self.assertEqual(before["cash_copper"], after["cash_copper"])
-        self.assertEqual(self.sim.autonomy_report()["player_autonomous_events"], 0)
+        report = self.sim.autonomy_report()
+        self.assertEqual(report["player_autonomous_events"], 0)
+
+    def test_needs_accumulate_across_small_ticks(self) -> None:
+        hunger0 = int(self.sim.needs("rena")["hunger"])
+        fatigue0 = int(self.sim.needs("rena")["fatigue"])
+        self.sim.advance(90, tick_minutes=15)
+        self.assertGreaterEqual(int(self.sim.needs("rena")["hunger"]), hunger0 + 2)
+        self.assertGreaterEqual(int(self.sim.needs("rena")["fatigue"]), fatigue0 + 1)
 
     def test_needs_override_goal_when_hungry(self) -> None:
         self.sim.db.execute("UPDATE needs SET hunger=95 WHERE actor_id='merchant'")
@@ -44,7 +52,8 @@ class SimulationV02Tests(unittest.TestCase):
         self.sim.db.commit()
         food_before = self.sim.resource_qty("market", "food")
         self.sim.advance(15)
-        self.assertLess(self.sim.resource_qty("market", "food"), food_before)
+        food_after = self.sim.resource_qty("market", "food")
+        self.assertLess(food_after, food_before)
         self.assertLess(int(self.sim.needs("merchant")["hunger"]), 95)
 
     def test_projects_consume_real_resources_and_progress(self) -> None:
@@ -113,7 +122,8 @@ class SimulationV02Tests(unittest.TestCase):
     def test_contextual_reactions_have_different_causes(self) -> None:
         results = [
             self.sim.resolve_reaction(
-                actor, source_actor_id="char_arlequino", tags=["music", "martial", "showmanship"],
+                actor, source_actor_id="char_arlequino",
+                tags=["music", "martial", "showmanship"],
                 intensity=70, novelty=65, disruption=35, local_norm=10, crowd_sentiment=20,
             )
             for actor in ["rena", "lissa", "oren", "merchant", "guard", "courier"]
