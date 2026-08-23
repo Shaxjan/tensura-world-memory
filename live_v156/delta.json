@@ -1,0 +1,26 @@
+{
+  "v": 156,
+  "time": "T+131 ~06:40",
+  "location": "lodging in Eurazania capital; exact inn name UNKNOWN",
+  "arlequino": {
+    "state": "asleep after going to bed very dissatisfied",
+    "last_user_action": "Сплю очень недовльный",
+    "personal_cash": "26g05s92c",
+    "family_budget": "0"
+  },
+  "rena": {
+    "state": "slept through the night beside Arlequino; morning autonomy resumes",
+    "standing_boundary": "previous night's sexual pause was maintained; no further escalation occurred",
+    "authorized_for_morning": "user explicitly allowed Rena to send the prepared letters tomorrow",
+    "mail_status": "three prepared letters and attachments remain ready for morning dispatch; no delivery completion or fee is invented until a causal dispatch method/price is established"
+  },
+  "world": {
+    "continuity": "night passed without forcing off-screen events to revolve around Arlequino; Eurazania capital resumes normal morning activity",
+    "festival": "Meira and Borga retain their independent festival responsibilities; no new exact report/result is invented here"
+  },
+  "canon_notes": [
+    "Arlequino controls his own waking and next action.",
+    "World and NPCs continue autonomously during sleep, but unknown outcomes remain UNKNOWN.",
+    "No new expenses since v155."
+  ]
+}
