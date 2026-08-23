@@ -1,0 +1,26 @@
+{
+  "v": 158,
+  "time": "T+131 ~07:13",
+  "location": "lodging in Eurazania capital; exact inn name UNKNOWN",
+  "personal_cash": "26g05s92c",
+  "family_budget": "0",
+  "scene": {
+    "arlequino_action": "User authorizes Rena to choose the guild-task reward herself, then grabs her butt while joking that he can now do what he wants.",
+    "rena_authority": "Rena is explicitly delegated full discretion to set the reward for the Blumund guild publicity task and handle the letter dispatch without re-asking Arlequino unless a genuinely new decision is needed.",
+    "guild_publicity_task": {
+      "location": "Blumund guild",
+      "through": "Lissa",
+      "purpose": "paid distribution of festival announcements through adventurer routes/venues",
+      "hook": "Кто сильнее — зверовоин или авантюрист?",
+      "rena_decision": "Set reward at 50s, to be paid from the 1g already enclosed with Lissa's letter; remaining 50s stays available to Lissa for printing/distribution/related practical costs unless actual guild procedure requires adjustment.",
+      "additional_personal_cash_change": "0; the 1g was already removed from personal cash in v151"
+    },
+    "mail_status": "letters still physically with Rena at this instant; user previously authorized Rena to send them today autonomously"
+  },
+  "relationship_continuity": "Physical teasing does not override Rena's autonomy or imply consent to further sexual activity; she decides her own response.",
+  "hard_rules_reaffirmed": [
+    "User alone controls Arlequino's dialogue, feelings, decisions and significant actions.",
+    "NPCs make choices for their own reasons; no automatic agreement/refusal.",
+    "World continues autonomously while Arlequino pursues personal activities."
+  ]
+}
