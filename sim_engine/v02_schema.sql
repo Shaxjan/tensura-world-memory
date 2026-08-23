@@ -46,6 +46,14 @@ CREATE TABLE IF NOT EXISTS needs (
   updated_at INTEGER NOT NULL DEFAULT 0
 );
 
+CREATE TABLE IF NOT EXISTS need_accumulators (
+  actor_id TEXT PRIMARY KEY REFERENCES actors(id) ON DELETE CASCADE,
+  hunger_minutes INTEGER NOT NULL DEFAULT 0 CHECK(hunger_minutes >= 0),
+  fatigue_minutes INTEGER NOT NULL DEFAULT 0 CHECK(fatigue_minutes >= 0),
+  loneliness_minutes INTEGER NOT NULL DEFAULT 0 CHECK(loneliness_minutes >= 0),
+  danger_minutes INTEGER NOT NULL DEFAULT 0 CHECK(danger_minutes >= 0)
+);
+
 CREATE TABLE IF NOT EXISTS preferences (
   actor_id TEXT NOT NULL REFERENCES actors(id) ON DELETE CASCADE,
   tag TEXT NOT NULL,
