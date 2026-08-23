@@ -152,15 +152,29 @@ class V06MigrationTests(unittest.TestCase):
             fam = w.db.execute("SELECT balance_copper FROM fund_accounts WHERE id='family_purse'").fetchone()
             self.assertEqual(int(fam[0]), 0)
 
-    def test_migration_disables_unmapped_combat_and_social_checks(self):
+    def test_migration_capability_locks_all_gameplay_until_live_baselines_exist(self):
         self.write_repo()
         p = collect_repo_campaign(self.root)
         db = Path(self.tmp.name) / "migration2.db"
         with seed_world_v06_migration(db) as w:
             apply_repo_campaign_rehearsal(w, p)
             caps = {r["command"]: bool(r["enabled"]) for r in w.db.execute("SELECT command,enabled FROM migration_capabilities")}
-            self.assertTrue(caps["travel"]); self.assertTrue(caps["buy"]); self.assertTrue(caps["wait"])
-            self.assertFalse(caps["strike"]); self.assertFalse(caps["attempt"]); self.assertFalse(caps["social"])
+            self.assertTrue(caps)
+            self.assertTrue(all(not enabled for enabled in caps.values()))
+            self.assertIn("live_market_baseline_not_imported", p.report["semantic_blockers"])
+            self.assertIn("live_route_time_model_not_imported", p.report["semantic_blockers"])
+            self.assertIn("autonomous_world_baseline_not_imported", p.report["semantic_blockers"])
+
+    def test_migration_packet_does_not_expose_synthetic_v03_world_data(self):
+        self.write_repo()
+        p = collect_repo_campaign(self.root)
+        db = Path(self.tmp.name) / "migration_packet.db"
+        with seed_world_v06_migration(db) as w:
+            apply_repo_campaign_rehearsal(w, p)
+            packet = w.build_gm_packet("player")
+            self.assertEqual(packet["perceivable"]["markets"], [])
+            self.assertEqual(packet["perceivable"]["events"], [])
+            self.assertEqual(set(packet["perceivable"]["region"]), {"id", "name", "kind"})
 
     def test_migrated_unknowns_are_archived_not_normalized(self):
         self.write_repo(extra={"rena": {"cash": "UNKNOWN"}})
@@ -171,6 +185,28 @@ class V06MigrationTests(unittest.TestCase):
             raw = w.db.execute("SELECT payload_text FROM campaign_archives WHERE source_path=?", (p.latest_delta.path,)).fetchone()[0]
             self.assertIn("UNKNOWN", raw)
             self.assertIsNone(w.db.execute("SELECT 1 FROM actors WHERE id='rena'").fetchone())
+
+    def test_malformed_old_delta_is_archived_but_does_not_block_core_rehearsal(self):
+        self.write_repo(version=7)
+        bad = self.root / "live_v6"; bad.mkdir()
+        (bad / "delta.json").write_text('{"v":6,"broken"', encoding="utf-8")
+        p = collect_repo_campaign(self.root)
+        self.assertTrue(p.report["rehearsal_ready"])
+        self.assertIn(6, p.report["malformed_historical_delta_versions"])
+        self.assertIn("malformed_historical_deltas_not_semantically_normalized", p.report["semantic_blockers"])
+        db = Path(self.tmp.name) / "malformed_old.db"
+        with seed_world_v06_migration(db) as w:
+            report = apply_repo_campaign_rehearsal(w, p)
+            self.assertTrue(report["source_archive_complete"])
+            raw = w.db.execute("SELECT payload_text FROM campaign_archives WHERE source_path='live_v6/delta.json'").fetchone()[0]
+            self.assertEqual(raw, '{"v":6,"broken"')
+
+    def test_malformed_pointed_delta_blocks_rehearsal(self):
+        self.write_repo(version=7)
+        (self.root / "live_v7" / "delta.json").write_text('{"v":7,"broken"', encoding="utf-8")
+        p = collect_repo_campaign(self.root)
+        self.assertFalse(p.report["rehearsal_ready"])
+        self.assertTrue(any("pointed delta is malformed" in x for x in p.report["errors"]))
 
 
 if __name__ == "__main__": unittest.main()
