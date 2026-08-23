@@ -26,11 +26,17 @@ class V06GMLoopMixin:
         return {"hp": int(row["hp"]), "max_hp": int(row["max_hp"]), "alive": bool(row["alive"])}
 
     def build_gm_packet(self, player_id: str = "player") -> dict[str, Any]:
-        # Call the v0.3 read model directly so a migration rehearsal can function
-        # before combat/skill profiles have been authoritatively mapped.
         base = WorldV03.build_context(self, player_id, max_events=6)
         player = self.actor(player_id)
         region = str(player["region_id"])
+        mode_row = self.db.execute(
+            "SELECT value_json FROM campaign_metadata WHERE key='runtime_mode'"
+        ).fetchone()
+        migration_rehearsal = bool(mode_row and loads(mode_row["value_json"], None) == "migration_rehearsal")
+        if migration_rehearsal:
+            base["region"] = {k: base["region"][k] for k in ("id", "name", "kind") if k in base["region"]}
+            base["markets"] = []
+            base["recent_relevant_events"] = []
         stats = self._optional_stats(player_id)
         if stats:
             base["player"].update(stats)
