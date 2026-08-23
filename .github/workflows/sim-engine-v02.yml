@@ -73,3 +73,9 @@ jobs:
       - name: Rehearse v0.9 portable runtime handoff
         working-directory: sim_engine
         run: python v09_rehearsal.py --repo-root .. --out /tmp/v09_rehearsal.json --checkpoint-out /tmp/v09_runtime_state.json
+      - name: Run v0.10 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v10.py
+      - name: Rehearse v0.10 scene bridge and autonomy cutover gate
+        working-directory: sim_engine
+        run: python v10_rehearsal.py --repo-root .. --out /tmp/v10_rehearsal.json
