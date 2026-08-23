@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -44,3 +44,12 @@ jobs:
       - name: Run v0.5 30-day grounded-world probe
         working-directory: sim_engine
         run: python v05_probe.py --days 30 > /tmp/v05_probe.json
+      - name: Run v0.6 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v06.py
+      - name: Run v0.6 100-turn GM loop probe
+        working-directory: sim_engine
+        run: python v06_probe.py --turns 100 > /tmp/v06_probe.json
+      - name: Rehearse current live campaign migration
+        working-directory: sim_engine
+        run: python v06_rehearsal.py --repo-root .. --out /tmp/v06_rehearsal.json
