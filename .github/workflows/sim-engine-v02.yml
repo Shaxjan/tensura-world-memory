@@ -1,4 +1,4 @@
-name: Simulation Engine v0.2 Tests
+name: Simulation Engine Tests
 
 on:
   push:
@@ -19,6 +19,12 @@ jobs:
       - name: Run v0.2 tests
         working-directory: sim_engine
         run: python -m unittest -v test_v02.py
-      - name: Run 1-day autonomy smoke test
+      - name: Run v0.2 autonomy smoke test
         working-directory: sim_engine
         run: python v02_probe.py --days 1 > /tmp/v02_probe.json
+      - name: Run v0.3 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v03.py
+      - name: Run v0.3 30-day regional probe
+        working-directory: sim_engine
+        run: python v03_probe.py --days 30 > /tmp/v03_probe.json
