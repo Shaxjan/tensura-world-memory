@@ -28,3 +28,9 @@ jobs:
       - name: Run v0.3 30-day regional probe
         working-directory: sim_engine
         run: python v03_probe.py --days 30 > /tmp/v03_probe.json
+      - name: Run v0.4 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v04.py
+      - name: Run v0.4 60-day rules probe
+        working-directory: sim_engine
+        run: python v04_probe.py --days 60 > /tmp/v04_probe.json
