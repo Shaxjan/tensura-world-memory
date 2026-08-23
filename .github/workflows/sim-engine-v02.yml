@@ -1,0 +1,24 @@
+name: Simulation Engine v0.2 Tests
+
+on:
+  push:
+    paths:
+      - 'sim_engine/**'
+      - '.github/workflows/sim-engine-v02.yml'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v0.2 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v02.py
+      - name: Run 1-day autonomy smoke test
+        working-directory: sim_engine
+        run: python v02_probe.py --days 1 > /tmp/v02_probe.json
