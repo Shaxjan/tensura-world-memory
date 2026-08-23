@@ -1,0 +1,48 @@
+{
+  "audit_version": 8,
+  "reconciled_through_live_version": 159,
+  "currency": {"system": "g/s/c", "conversion": "100c=1s;100s=1g"},
+  "source_baseline": {"path": "memory/money.json", "exact_as_of_version": 125},
+  "reviewed_mentions": {
+    "promo": [142,149,150,151,158,159],
+    "lissa_project": [144,145,146,147,148,149,150,151,152,153,155,158,159],
+    "oren_project": [159],
+    "vern_instrument_float": [126,130,131,132,133,134,135,136,137,140,142,143,144,159],
+    "meira_obligation": [139,140,145,156]
+  },
+  "accounts": {
+    "promo": {"account_type":"separate_fund","balance":"27s36c","known_principal":null,"certainty":"EXACT_CURRENT_AT_V159","holder":"project","status":"available","source_path":"memory/money.json","note":"All scanner hits through v159 were reviewed. Later festival-promotion planning either had no expense or explicitly used personal cash / the Lissa enclosure, not this promo fund."},
+    "lissa_project": {"account_type":"project_fund","balance":"4g","known_principal":null,"certainty":"EXACT_CURRENT_AT_V159","holder":"lissa_project","status":"separate_project_money","source_path":"memory/money.json","note":"v151 explicitly states the new 1g letter enclosure is separate from the pre-existing 4g project fund. No reviewed later delta debits this 4g."},
+    "oren_project": {"account_type":"project_fund","balance":"4g","known_principal":null,"certainty":"EXACT_CURRENT_AT_V159","holder":"oren_project","status":"separate_project_money","source_path":"memory/money.json","note":"The only later reviewed mention is v159, which keeps Lissa/Oren project money outside the family purse; no transaction is recorded."},
+    "vern_instrument_float": {"account_type":"entrusted_float","balance":"UNKNOWN","known_principal":"50s","certainty":"AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE","holder":"vern","status":"settlement_pending","source_path":"memory/money.json","note":"50s was entrusted to Vern. No later causal spending/return report exists through v159, so the unused current balance must remain UNKNOWN rather than be guessed as 0 or 50s."},
+    "meira_obligation": {"account_type":"payable","balance":"1g","known_principal":null,"certainty":"EXACT_OUTSTANDING_AT_V159","holder":"arlequino_obligation","status":"payable","source_path":"memory/money.json","note":"Reviewed later mentions concern Meira's festival role. No payment of the remaining 1g is recorded through v159."},
+    "family_purse": {"account_type":"family_fund","balance":"0","known_principal":null,"certainty":"EXACT_CURRENT_AT_V159","holder":"family","status":"created_not_funded","source_path":"live_v159/delta.json","note":"Rena created the framework at v159; current balance is explicitly zero and no silent transfer occurred."},
+    "lissa_outreach_enclosure": {"account_type":"earmarked_enclosure","balance":"1g","known_principal":null,"certainty":"EXACT_ALLOCATED_AT_V159","holder":"rena","status":"authorized_for_dispatch_not_confirmed_delivered","source_path":"live_v151/delta.json","note":"Removed from personal cash in v151. At v158, 50s is designated as the Blumund guild publicity reward and the other 50s remains available for printing/distribution/practical costs."},
+    "dwargon_outreach_enclosure": {"account_type":"earmarked_enclosure","balance":"1g","known_principal":null,"certainty":"EXACT_ALLOCATED_AT_V159","holder":"rena","status":"authorized_for_dispatch_not_confirmed_delivered","source_path":"live_v151/delta.json","note":"Removed from personal cash in v151 for the Dwargon organizer. It is committed/advanced money, but the organizer's final service price is still UNKNOWN."},
+    "queen_enclosure": {"account_type":"earmarked_enclosure","balance":"1c","known_principal":null,"certainty":"EXACT_ALLOCATED_AT_V159","holder":"rena","status":"authorized_for_dispatch_not_confirmed_delivered","source_path":"live_v151/delta.json","note":"Symbolic joke gift, removed from personal cash in v151; delivery not yet confirmed at the v159 checkpoint."}
+  },
+  "suballocations": [
+    {"parent":"lissa_outreach_enclosure","key":"blumund_guild_publicity_reward","amount":"50s","status":"designated_by_rena_v158"},
+    {"parent":"lissa_outreach_enclosure","key":"printing_distribution_reserve","amount":"50s","status":"available_for_lissa_related_practical_costs"}
+  ],
+  "evidence": [
+    {"account":"promo","versions":[142,149,150,151,158,159],"classification":"reviewed_no_effect_on_promo_fund","note":"Promotion/outreach language was contextual. v151's 1g Dwargon publicity allocation came from personal cash."},
+    {"account":"lissa_project","versions":[144,145,146,147,148,149,150,151,152,153,155,158,159],"classification":"reviewed_no_effect_on_preexisting_project_fund","note":"v151 explicitly separates the new 1g gift/support enclosure from the pre-existing 4g Lissa project fund."},
+    {"account":"oren_project","versions":[159],"classification":"reviewed_no_transaction","note":"v159 only states that Lissa/Oren project money remains outside the family purse."},
+    {"account":"vern_instrument_float","versions":[126,130,131,132,133,134,135,136,137,140,142,143,144,159],"classification":"current_balance_unresolved_by_design","note":"Most hits are generic instrument references. v142-v144 preserve Vern's unconfirmed trip status; no spend/return report is delivered."},
+    {"account":"meira_obligation","versions":[139,140,145,156],"classification":"reviewed_no_payment","note":"Meira is referenced as coordinator/local network. No remaining-fee payment is recorded."},
+    {"account":"lissa_outreach_enclosure","versions":[151,152,155,158,159],"classification":"personal_cash_allocation_and_suballocation","effect_copper":10000,"note":"1g removed from personal cash; later split 50s guild reward + 50s practical reserve."},
+    {"account":"dwargon_outreach_enclosure","versions":[151,152,159],"classification":"personal_cash_allocation","effect_copper":10000,"note":"1g removed from personal cash; final organizer price remains unknown."},
+    {"account":"queen_enclosure","versions":[151,152,159],"classification":"personal_cash_allocation","effect_copper":1,"note":"1c symbolic gift removed from personal cash."},
+    {"account":"family_purse","versions":[159],"classification":"new_zero_balance_account","effect_copper":0,"note":"Framework created; no transfer yet."}
+  ],
+  "verified_anchors": [
+    {"path":"memory/money.json","must_contain":["27s36c","4g","50s","1g"]},
+    {"path":"live_v142/delta.json","must_contain":["cost","UNKNOWN","Верн"]},
+    {"path":"live_v151/delta.json","must_contain":["cash_before","28g05s93c","cash_after","26g05s92c","separate from pre-existing 4g project fund"]},
+    {"path":"live_v156/delta.json","must_contain":["No new expenses since v155"]},
+    {"path":"live_v158/delta.json","must_contain":["Set reward at 50s","additional_personal_cash_change"]},
+    {"path":"live_v159/delta.json","must_contain":["current_balance","0; Rena does not silently remove money","Lissa/Oren project money"]}
+  ],
+  "conservation_check": {"path":"live_v151/delta.json","expected_cash_before":"28g05s93c","expected_cash_after":"26g05s92c","expected_allocated":"2g00s01c"}
+}
