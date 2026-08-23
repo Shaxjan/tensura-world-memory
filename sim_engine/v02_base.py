@@ -183,6 +183,10 @@ class BaseWorld:
                 "INSERT INTO needs(actor_id,hunger,fatigue,loneliness,danger,updated_at) VALUES(?,?,?,?,?,?)",
                 (actor_id, n["hunger"], n["fatigue"], n["loneliness"], n["danger"], self.now),
             )
+            self.db.execute(
+                "INSERT INTO need_accumulators(actor_id,hunger_minutes,fatigue_minutes,loneliness_minutes,danger_minutes) VALUES(?,0,0,0,0)",
+                (actor_id,),
+            )
             if cash_copper:
                 self.db.execute(
                     "INSERT INTO ledger(world_minute,actor_id,delta_copper,reason,balance_after) VALUES(?,?,?,?,?)",
@@ -211,17 +215,39 @@ class BaseWorld:
     def _age_needs(self, elapsed: int) -> None:
             if elapsed <= 0:
                 return
-            rows = self.db.execute("SELECT actor_id,hunger,fatigue,loneliness,danger FROM needs").fetchall()
+            rows = self.db.execute(
+                """SELECT n.actor_id,n.hunger,n.fatigue,n.loneliness,n.danger,
+                          a.hunger_minutes,a.fatigue_minutes,a.loneliness_minutes,a.danger_minutes
+                   FROM needs n JOIN need_accumulators a ON a.actor_id=n.actor_id"""
+            ).fetchall()
             for row in rows:
-                actor = self.actor(str(row["actor_id"]))
-                hunger = min(100, int(row["hunger"]) + elapsed // 45)
+                actor_id = str(row["actor_id"])
+                actor = self.actor(actor_id)
+                hunger_total = int(row["hunger_minutes"]) + elapsed
+                fatigue_total = int(row["fatigue_minutes"]) + elapsed
+                loneliness_total = int(row["loneliness_minutes"]) + elapsed
+                danger_total = int(row["danger_minutes"]) + elapsed
+
+                hunger_inc, hunger_rem = divmod(hunger_total, 45)
                 fatigue_rate = 35 if actor["status"] == "traveling" else 70
-                fatigue = min(100, int(row["fatigue"]) + elapsed // fatigue_rate)
-                loneliness = min(100, int(row["loneliness"]) + elapsed // 180)
-                danger = max(0, int(row["danger"]) - elapsed // 240)
+                fatigue_inc, fatigue_rem = divmod(fatigue_total, fatigue_rate)
+                loneliness_inc, loneliness_rem = divmod(loneliness_total, 180)
+                danger_dec, danger_rem = divmod(danger_total, 240)
+
+                hunger = min(100, int(row["hunger"]) + hunger_inc)
+                fatigue = min(100, int(row["fatigue"]) + fatigue_inc)
+                loneliness = min(100, int(row["loneliness"]) + loneliness_inc)
+                danger = max(0, int(row["danger"]) - danger_dec)
+
                 self.db.execute(
                     "UPDATE needs SET hunger=?,fatigue=?,loneliness=?,danger=?,updated_at=? WHERE actor_id=?",
-                    (hunger, fatigue, loneliness, danger, self.now, row["actor_id"]),
+                    (hunger, fatigue, loneliness, danger, self.now, actor_id),
+                )
+                self.db.execute(
+                    """UPDATE need_accumulators
+                       SET hunger_minutes=?,fatigue_minutes=?,loneliness_minutes=?,danger_minutes=?
+                       WHERE actor_id=?""",
+                    (hunger_rem, fatigue_rem, loneliness_rem, danger_rem, actor_id),
                 )
 
     def _change_cash(self, actor_id: str, delta: int, reason: str) -> int:
