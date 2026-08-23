@@ -1,0 +1,19 @@
+{
+  "version":153,
+  "time":"T+130 ~23:27",
+  "location":"lodging in Eurazania capital; exact inn name UNKNOWN",
+  "personal_cash":"26g05s92c",
+  "scene":"Letter-writing session complete; three prepared outbound directions remain physically unsent tonight.",
+  "mail_authorization":{
+    "user_instruction":"Завтра можешь отправлять",
+    "meaning":"Rena is authorized to handle routine dispatch of the prepared letters the next in-world day without asking Arlequino again. Actual delivery method, timing and any delivery fee must remain causally plausible and be recorded when they occur.",
+    "prepared_targets":["Lissa in Blumund","Queen in Blumund","Dwargon organizer / owner of Каменная арка"]
+  },
+  "npc_individuality_correction":{
+    "user_feedback":"У них есть индивидуальность? Не верится . слабо. Не обосновано.",
+    "audit_finding":"Repository memory had no dedicated character/personality layer; most recurring NPC entries stored roles, authority, money, relationship and knowledge rather than personal goals/temperament/habits/decision styles.",
+    "hard_rule_added":"rules/NPC_INDIVIDUALITY_AND_AUTONOMY_RULE.md",
+    "implementation":"Recurring NPCs must act from distinct motives, values, boundaries, habits, competences, knowledge and independent agendas. No retroactive fake biography; UNKNOWN remains UNKNOWN; missing original-NPC characterization emerges prospectively through consistent behavior and is then saved. Meaningful time passage advances relevant off-screen actors independently of Arlequino."
+  },
+  "control_rule":"Arlequino remains user-controlled only; no dialogue, feelings, decisions or significant actions may be invented for him."
+}
