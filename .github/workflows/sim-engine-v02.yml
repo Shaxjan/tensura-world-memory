@@ -67,3 +67,9 @@ jobs:
       - name: Rehearse v0.8 money reconciliation
         working-directory: sim_engine
         run: python v08_rehearsal.py --repo-root .. --out /tmp/v08_rehearsal.json
+      - name: Run v0.9 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v09.py
+      - name: Rehearse v0.9 portable runtime handoff
+        working-directory: sim_engine
+        run: python v09_rehearsal.py --repo-root .. --out /tmp/v09_rehearsal.json --checkpoint-out /tmp/v09_runtime_state.json
