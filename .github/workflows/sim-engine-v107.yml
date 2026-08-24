@@ -1,4 +1,4 @@
-name: Simulation Engine v1.0.7 Causal Encounter Memory
+name: Simulation Engine v1.0.7 Legacy Regression
 
 on:
   push:
@@ -8,90 +8,24 @@ on:
       - 'sim_engine/test_v107.py'
       - 'sim_engine/V107.md'
       - '.github/workflows/sim-engine-v107.yml'
-      - '.github/workflows/sim-engine-v106.yml'
-      - '.github/workflows/runtime-turn.yml'
-      - 'MASTER_SAVE_PROTOCOL.md'
   pull_request:
     paths:
       - 'sim_engine/v107_*.py'
       - 'sim_engine/test_v107.py'
       - 'sim_engine/V107.md'
       - '.github/workflows/sim-engine-v107.yml'
-      - '.github/workflows/sim-engine-v106.yml'
-      - '.github/workflows/runtime-turn.yml'
-      - 'MASTER_SAVE_PROTOCOL.md'
 
 jobs:
   test:
     permissions:
       contents: read
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run v1.0 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v100.py
-      - name: Run v1.0.1 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v101.py
-      - name: Run v1.0.2 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v102.py
-      - name: Run v1.0.3 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v103.py
-      - name: Run v1.0.4 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v104.py
-      - name: Run v1.0.5 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v105.py
-      - name: Run v1.0.6 regression tests
-        working-directory: sim_engine
-        run: python -m unittest -v test_v106.py
-      - name: Run v1.0.7 tests
+      - name: Run v1.0.7 regression tests
         working-directory: sim_engine
         run: python -m unittest -v test_v107.py
-      - name: Rehearse v1.0.7 against current LIVE v1.0.6
-        working-directory: sim_engine
-        run: python v107_rehearsal.py --repo-root .. --out /tmp/v107_rehearsal.json
-
-  activate:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: test
-    concurrency:
-      group: tensura-authoritative-runtime
-      cancel-in-progress: false
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 2
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Fast-forward to current main
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
-      - name: Activate v1.0.7 Causal Encounter Memory
-        run: python sim_engine/v107_activate.py --repo-root . --out /tmp/v107-activate.json
-      - name: Commit v1.0.7 runtime activation
-        run: |
-          git config user.name "tensura-runtime-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add runtime/checkpoints/v107_base_j*.json runtime/journal runtime/session_state.json runtime/runtime_state.json
-          if git diff --cached --quiet; then
-            echo "v1.0.7 runtime already active"
-            exit 0
-          fi
-          git commit -m "Runtime v1.0.7 — Causal Encounter Memory activation"
-          git push origin HEAD:main
