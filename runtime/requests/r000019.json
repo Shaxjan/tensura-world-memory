@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_TURN_REQUEST",
+  "schema_version": 1,
+  "seq": 19,
+  "event_key": "chat-20260824-player-turn-r000019",
+  "event_type": "player_turn",
+  "request": {
+    "raw_text": "Что делаешь?"
+  }
+}
