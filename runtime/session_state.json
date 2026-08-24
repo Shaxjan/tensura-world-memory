@@ -2,8 +2,8 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.10",
-  "journal_seq": 16,
-  "head_state_hash": "c13e950f9740beeff829078d8f52dec3da59b69a20234a3162eefa867990cd48",
+  "journal_seq": 17,
+  "head_state_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -45,11 +45,44 @@
     }
   },
   "last_turn": {
-    "seq": 13,
-    "event_key": "chat-20260824-greet-borga-r000013",
+    "seq": 17,
+    "event_key": "chat-20260824-repeat-greet-borga-r000017",
     "event_type": "player_turn",
     "status": "executed",
-    "action_result": null,
+    "action_result": {
+      "outcome": "npc_response_resolved",
+      "npc_response": {
+        "format": "TENSURA_NPC_RESPONSE",
+        "schema_version": 1,
+        "response_key": "v110:player_observed_response:borga:chat-20260824-repeat-greet-borga-r000017",
+        "actor_key": "borga",
+        "actor_name": "Борга",
+        "counterpart_key": "player",
+        "source_turn_key": "chat-20260824-repeat-greet-borga-r000017",
+        "world_minute": 189138,
+        "region_id": "eurazania",
+        "place_key": "eurazania_small_training_yard",
+        "place_text": "малый боевой/тренировочный двор",
+        "response_kind": "minimal_reciprocal_greeting",
+        "speech_act": "return_greeting",
+        "surface_text": "Доброе утро.",
+        "clock_minutes": 0,
+        "observation_basis": "direct_same_scene_npc_response",
+        "authority": "NON_CANON_MECHANICAL_PROSPECTIVE",
+        "emotion": null,
+        "relationship_delta": null,
+        "conversation_commitment": null,
+        "provenance": "engine:v110_causal_npc_response",
+        "does_not_assert": [
+          "Borga emotion or tone",
+          "approval or disapproval",
+          "relationship change",
+          "willingness to continue talking",
+          "hidden reason for responding",
+          "hidden Character Plan details"
+        ]
+      }
+    },
     "visible_actors": [],
     "pending_resolutions": [],
     "narration_contract": {
@@ -59,18 +92,24 @@
         "verbatim player action",
         "money/time/region from GM packet",
         "UNKNOWN values",
-        "historical repaired pending are not current pending"
+        "Borga returned the greeting with the engine-provided surface_text",
+        "world minute is unchanged because the exchange is sub-minute",
+        "no relationship or emotion was inferred"
       ],
       "may_add": [
-        "sensory description already supported by perceivable state",
-        "neutral acknowledgement of player speech/performance"
+        "quote the engine-provided Borga greeting verbatim",
+        "sensory description already supported by the current scene"
       ],
       "forbidden": [
         "resolve pending NPC/world response in narration",
         "invent movement success",
         "invent consent",
         "invent income/expense",
-        "new hidden state mutation"
+        "new hidden state mutation",
+        "invent Borga tone, emotion, approval or hostility",
+        "invent relationship change",
+        "claim Borga agreed to continue the conversation",
+        "expose hidden Character Plan or scheduler reasons"
       ]
     }
   },
