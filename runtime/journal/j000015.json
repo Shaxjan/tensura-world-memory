@@ -1,0 +1,31 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 15,
+  "event_key": "system-v109-session-readmodel-repair-j000015",
+  "event_type": "session_readmodel_repair_activation",
+  "world_minute": 189138,
+  "request": {
+    "reason": "project last_turn pending list from current authoritative pending rows; remove repaired stale snapshots",
+    "source_engine": "1.0.8",
+    "target_engine": "1.0.9"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "session_readmodel_repair_v109",
+    "world_minute": 189138,
+    "time_advanced": 0,
+    "player_choice": false,
+    "db_gameplay_mutation": false,
+    "does_not_assert": [
+      "new player action",
+      "new NPC action",
+      "movement",
+      "relationship change",
+      "memory change"
+    ]
+  },
+  "before_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
+  "after_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d"
+}

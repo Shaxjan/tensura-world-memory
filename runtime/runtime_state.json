@@ -1,14 +1,14 @@
 {
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
-  "engine_version": "1.0.8",
+  "engine_version": "1.0.9",
   "mode": "engine_authoritative",
   "source_live_version": 159,
-  "base_checkpoint": "runtime/checkpoints/v108_base_j000013.json",
-  "base_state_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
+  "base_checkpoint": "runtime/checkpoints/v109_base_j000014.json",
+  "base_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
   "journal_dir": "runtime/journal",
-  "journal_base_seq": 13,
-  "journal_seq": 14,
+  "journal_base_seq": 14,
+  "journal_seq": 15,
   "head_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
   "legacy_rollback": {
     "path": "live_state.json",
@@ -34,9 +34,10 @@
     "character_autonomy": true,
     "intent_grounding_repair": true,
     "causal_encounter_memory": true,
-    "visible_local_approach": true
+    "visible_local_approach": true,
+    "session_readmodel_authoritative_pending_projection": true
   },
-  "last_event": "runtime/journal/j000014.json",
+  "last_event": "runtime/journal/j000015.json",
   "last_request": "runtime/requests/r000013.json",
   "session_state": "runtime/session_state.json",
   "system_resume": {
@@ -45,8 +46,8 @@
     "reason": "completed already-authorized local search under v1.0.3"
   },
   "system_activation": {
-    "event": "runtime/journal/j000014.json",
-    "kind": "visible_local_approach_repair_v108",
+    "event": "runtime/journal/j000015.json",
+    "kind": "session_readmodel_repair_v109",
     "world_time_advanced": 0,
     "player_choice": false
   }

@@ -1,8 +1,8 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.8",
-  "journal_seq": 14,
+  "engine_version": "1.0.9",
+  "journal_seq": 15,
   "head_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
   "hud": {
     "time": {
@@ -51,28 +51,15 @@
     "status": "executed",
     "action_result": null,
     "visible_actors": [],
-    "pending_resolutions": [
-      {
-        "id": 3,
-        "kind": "local_navigation",
-        "target": "Борга",
-        "status": "pending"
-      },
-      {
-        "id": 4,
-        "kind": "local_navigation",
-        "target": "Подхожу",
-        "status": "pending"
-      }
-    ],
+    "pending_resolutions": [],
     "narration_contract": {
       "state_authority": "engine_scene_record_and_checkpoint_only",
       "player_text_verbatim": "«Обращаюсь к Борге: „Доброе утро“.»",
       "must_preserve": [
         "verbatim player action",
-        "pending outcomes remain pending",
         "money/time/region from GM packet",
-        "UNKNOWN values"
+        "UNKNOWN values",
+        "historical repaired pending are not current pending"
       ],
       "may_add": [
         "sensory description already supported by perceivable state",
@@ -179,5 +166,12 @@
     "emotion_inference": false,
     "relationship_mutation": false,
     "private_memory_not_narrator_knowledge": true
+  },
+  "readmodel_runtime": {
+    "version": "authoritative_pending_projection_v1",
+    "pending_source": "authoritative_scene_pending_resolution_status_pending",
+    "historical_repaired_pending_filtered": true,
+    "session_builder_read_only": true,
+    "gm_packet_fallback": "read_only_projection_no_telemetry"
   }
 }
