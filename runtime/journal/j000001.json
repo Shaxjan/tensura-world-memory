@@ -1,0 +1,346 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 1,
+  "event_key": "live-000001-recovered-training-yard",
+  "event_type": "player_turn",
+  "world_minute": 189114,
+  "request": {
+    "raw_text": "Иду к тренировочному двору.",
+    "recovery_note": "Recovered from the first two post-cutover live turns that were narrated but never journaled. User explicitly authorized the hotfix and recovery. Do not count the failed unsaved repetitions as elapsed game time."
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "turn_key": "live-000001-recovered-training-yard",
+    "scene_action_id": 1,
+    "result": {
+      "outcome": "arrived",
+      "origin_text": "Eurazania capital; Arlequino leaves lodging heading to Borga",
+      "destination_key": "eurazania_borga_big_training_yard",
+      "destination_text": "большой тренировочный двор Борги",
+      "travel_minutes": 12,
+      "started_at": 189102,
+      "arrived_at": 189114,
+      "place_source": "memory/places.json",
+      "time_basis": "prospective_local_city_default_v1.0.1",
+      "does_not_assert": [
+        "Borga presence",
+        "NPC encounter",
+        "exact street geometry"
+      ]
+    },
+    "gm_packet": {
+      "time": 189114,
+      "player": {
+        "id": "player",
+        "region": "eurazania",
+        "cash_copper": 260592,
+        "status": "scene_pending"
+      },
+      "perceivable": {
+        "region": {
+          "id": "eurazania",
+          "name": "Столица Эуразании",
+          "kind": "city",
+          "population": 52000,
+          "security": 72,
+          "prosperity": 68
+        },
+        "actors": [],
+        "markets": [],
+        "events": [],
+        "position_claims": [
+          {
+            "actor": "borga",
+            "name": "Борга",
+            "precision": "region_only",
+            "status": "target_in_current_capital_context"
+          },
+          {
+            "actor": "carrion",
+            "name": "Карион",
+            "precision": "named_place",
+            "status": "institutional_home"
+          },
+          {
+            "actor": "gareth",
+            "name": "Гарет",
+            "precision": "region_only",
+            "status": "active_capital_survey"
+          },
+          {
+            "actor": "meira",
+            "name": "Мэйра",
+            "precision": "region_only",
+            "status": "active_festival_coordinator"
+          },
+          {
+            "actor": "rena",
+            "name": "Рена",
+            "precision": "region_only",
+            "status": "known_region_exact_place_unknown"
+          }
+        ]
+      },
+      "known": {
+        "facts": [],
+        "memories": [],
+        "financial_boundaries": [
+          {
+            "account": "dwargon_outreach_enclosure",
+            "type": "earmarked_enclosure",
+            "balance_copper": 10000,
+            "known_principal_copper": null,
+            "certainty": "EXACT_ALLOCATED_AT_V159",
+            "status": "authorized_for_dispatch_not_confirmed_delivered"
+          },
+          {
+            "account": "family_purse",
+            "type": "family_fund",
+            "balance_copper": 0,
+            "known_principal_copper": null,
+            "certainty": "EXACT_CURRENT_AT_V159",
+            "status": "created_not_funded"
+          },
+          {
+            "account": "lissa_outreach_enclosure",
+            "type": "earmarked_enclosure",
+            "balance_copper": 10000,
+            "known_principal_copper": null,
+            "certainty": "EXACT_ALLOCATED_AT_V159",
+            "status": "authorized_for_dispatch_not_confirmed_delivered"
+          },
+          {
+            "account": "lissa_project",
+            "type": "project_fund",
+            "balance_copper": 40000,
+            "known_principal_copper": null,
+            "certainty": "EXACT_CURRENT_AT_V159",
+            "status": "separate_project_money"
+          },
+          {
+            "account": "meira_obligation",
+            "type": "payable",
+            "balance_copper": 10000,
+            "known_principal_copper": null,
+            "certainty": "EXACT_OUTSTANDING_AT_V159",
+            "status": "payable"
+          },
+          {
+            "account": "oren_project",
+            "type": "project_fund",
+            "balance_copper": 40000,
+            "known_principal_copper": null,
+            "certainty": "EXACT_CURRENT_AT_V159",
+            "status": "separate_project_money"
+          },
+          {
+            "account": "promo",
+            "type": "separate_fund",
+            "balance_copper": 2736,
+            "known_principal_copper": null,
+            "certainty": "EXACT_CURRENT_AT_V159",
+            "status": "available"
+          },
+          {
+            "account": "queen_enclosure",
+            "type": "earmarked_enclosure",
+            "balance_copper": 1,
+            "known_principal_copper": null,
+            "certainty": "EXACT_ALLOCATED_AT_V159",
+            "status": "authorized_for_dispatch_not_confirmed_delivered"
+          },
+          {
+            "account": "vern_instrument_float",
+            "type": "entrusted_float",
+            "balance_copper": "UNKNOWN",
+            "known_principal_copper": 5000,
+            "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
+            "status": "settlement_pending"
+          }
+        ]
+      },
+      "migration": {
+        "active_blockers": [
+          "historical_semantics_degraded"
+        ],
+        "capabilities": {
+          "attempt": {
+            "enabled": false,
+            "reason": "v09_guarded:relevant player skill requires explicit prospective calibration"
+          },
+          "attend": {
+            "enabled": false,
+            "reason": "v09_guarded:live appointments are not normalized into executable runtime appointments"
+          },
+          "buy": {
+            "enabled": false,
+            "reason": "v09_guarded:market observation/calibration required"
+          },
+          "scene": {
+            "enabled": true,
+            "reason": "v10_structured_scene_action_bridge"
+          },
+          "social": {
+            "enabled": false,
+            "reason": "v09_guarded:numeric relationship/skill mechanics are not initialized retrospectively"
+          },
+          "strike": {
+            "enabled": false,
+            "reason": "v09_guarded:player combat profile requires explicit prospective calibration"
+          },
+          "travel": {
+            "enabled": false,
+            "reason": "v09_guarded:route observation/calibration required"
+          },
+          "treat": {
+            "enabled": false,
+            "reason": "v09_guarded:relevant treatment skill/power requires explicit prospective calibration"
+          },
+          "wait": {
+            "enabled": true,
+            "reason": "v10_autonomy_scheduler_wired"
+          }
+        },
+        "mechanic_policy": [
+          {
+            "feature": "markets",
+            "mode": "observation_first",
+            "authority": "NON_CANON_MECHANICAL",
+            "status": "guarded_deferred",
+            "command": "buy"
+          },
+          {
+            "feature": "player_power",
+            "mode": "guarded_unknown",
+            "authority": "NON_CANON_MECHANICAL",
+            "status": "guarded_deferred",
+            "command": "strike"
+          },
+          {
+            "feature": "player_skills",
+            "mode": "guarded_unknown",
+            "authority": "NON_CANON_MECHANICAL",
+            "status": "guarded_deferred",
+            "command": "attempt"
+          },
+          {
+            "feature": "relationship_mechanics",
+            "mode": "qualitative_until_prospective_event",
+            "authority": "NON_CANON_MECHANICAL",
+            "status": "guarded_deferred",
+            "command": "social"
+          },
+          {
+            "feature": "routes",
+            "mode": "observation_first",
+            "authority": "NON_CANON_MECHANICAL",
+            "status": "guarded_deferred",
+            "command": "travel"
+          }
+        ],
+        "cutover_gates": [
+          {
+            "code": "append_only_runtime_journal",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "autonomy_commitment_execution_not_wired",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "legacy_v159_rollback_anchor",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "pending_resolution_executor",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "portable_runtime_bridge",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "scene_action_bridge_not_implemented",
+            "status": "resolved",
+            "class": "runtime"
+          },
+          {
+            "code": "shadow_scene_verification",
+            "status": "resolved",
+            "class": "runtime"
+          }
+        ],
+        "autonomy_runtime": {
+          "active": 9,
+          "executions": 5
+        }
+      },
+      "constraints": {
+        "unknown_policy": "UNKNOWN stays UNKNOWN; do not infer hidden state",
+        "player_control": "Narrator may not choose player dialogue, feelings, decisions or significant actions",
+        "state_authority": "Only engine command results may change authoritative world state",
+        "baseline_authority": "Imported history and prospective mechanics are separate; mechanical calibration is never retroactive canon.",
+        "money_authority": "Separate accounts never bleed into personal cash. UNKNOWN entrusted balances remain UNKNOWN until a causal report/settlement exists.",
+        "mechanic_authority": "NON_CANON_MECHANICAL values may govern future resolution but must never be narrated as historical canon. guarded_unknown features stay unavailable until a causal observation or explicit calibration exists.",
+        "pending_resolution": "A pending scene resolution is authoritative uncertainty. Narrator may describe the attempt but may not decide its success, NPC consent/response, navigation result, payment, or reward.",
+        "resolution_authority": "Pending scene outcomes may change only through the typed v1.0 resolution API. Narration itself is never a state mutation."
+      },
+      "packet_meta": {
+        "chars": 1577,
+        "hash": "a7648367a8a8ea46"
+      },
+      "scene_bridge": {
+        "recent_player_actions": [
+          {
+            "id": 1,
+            "kind": "local_travel",
+            "raw": "Иду к тренировочному двору.",
+            "status": "resolved",
+            "resolution": "engine_resolved_local_travel"
+          }
+        ],
+        "pending_resolutions": [],
+        "unresolved_resolutions": [],
+        "recent_resolutions": []
+      },
+      "runtime": {
+        "engine": "1.0",
+        "mode": "v100_engine_authoritative",
+        "journal_entries": 0
+      }
+    },
+    "narration_contract": {
+      "state_authority": "engine_v1.0.1_local_travel",
+      "player_text_verbatim": "Иду к тренировочному двору.",
+      "must_preserve": [
+        "arrival",
+        "engine travel time",
+        "money/region from GM packet",
+        "UNKNOWN NPC presence"
+      ],
+      "may_add": [
+        "sensory description consistent with destination and visible state"
+      ],
+      "forbidden": [
+        "invent Borga presence",
+        "invent payment",
+        "invent encounter",
+        "change player intent"
+      ]
+    },
+    "checkpoint": {
+      "checkpoint_id": 1,
+      "state_hash": "7ed386fc3302a242f55ed0ab9b65ab216fedd0f47774c95a479cc206f0f10571",
+      "world_minute": 189114
+    }
+  },
+  "before_hash": "d273179dd9c53eafe0fbab63d40e7f8e2ac7c491acb2c3a12fb738c3be0400f5",
+  "after_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792"
+}

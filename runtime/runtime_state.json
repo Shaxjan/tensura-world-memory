@@ -1,15 +1,15 @@
 {
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
-  "engine_version": "1.0",
+  "engine_version": "1.0.1",
   "mode": "engine_authoritative",
   "source_live_version": 159,
   "base_checkpoint": "runtime/checkpoints/cutover_v159.json",
   "base_state_hash": "d273179dd9c53eafe0fbab63d40e7f8e2ac7c491acb2c3a12fb738c3be0400f5",
   "journal_dir": "runtime/journal",
   "journal_base_seq": 0,
-  "journal_seq": 0,
-  "head_state_hash": "d273179dd9c53eafe0fbab63d40e7f8e2ac7c491acb2c3a12fb738c3be0400f5",
+  "journal_seq": 1,
+  "head_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
   "legacy_rollback": {
     "path": "live_state.json",
     "version": 159,
@@ -26,6 +26,9 @@
     "event_file_first": true,
     "pointer_second": true,
     "immutable_journal": true,
-    "checkpoint_every": 25
-  }
+    "checkpoint_every": 25,
+    "request_queue": true
+  },
+  "last_event": "runtime/journal/j000001.json",
+  "last_request": "runtime/requests/r000001.json"
 }
