@@ -1,9 +1,9 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.7",
-  "journal_seq": 13,
-  "head_state_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
+  "engine_version": "1.0.8",
+  "journal_seq": 14,
+  "head_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -147,20 +147,7 @@
         "place": "малый боевой/тренировочный двор"
       }
     ],
-    "pending_resolutions": [
-      {
-        "id": 3,
-        "kind": "local_navigation",
-        "target": "Борга",
-        "status": "pending"
-      },
-      {
-        "id": 4,
-        "kind": "local_navigation",
-        "target": "Подхожу",
-        "status": "pending"
-      }
-    ]
+    "pending_resolutions": []
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
@@ -175,7 +162,11 @@
     "version": "intent_grounding_v1",
     "safe_named_target_tokens": true,
     "known_local_typo_repair": true,
-    "false_pending_repair": true
+    "false_pending_repair": true,
+    "visible_local_approach": true,
+    "explicit_named_target_required": true,
+    "bare_approach_auto_binding": false,
+    "same_scene_clock_minutes": 0
   },
   "memory_runtime": {
     "version": "causal_encounter_memory_v1",

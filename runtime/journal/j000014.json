@@ -1,0 +1,54 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 14,
+  "event_key": "system-v108-visible-local-approach-repair-j000014",
+  "event_type": "visible_local_approach_repair_activation",
+  "world_minute": 189138,
+  "request": {
+    "reason": "cancel stale local_navigation pendings created for same-scene approach while Borga was already visible; enable finite explicit visible-NPC approach",
+    "source_engine": "1.0.7",
+    "target_engine": "1.0.8"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "visible_local_approach_repair_v108",
+    "world_minute": 189138,
+    "repair": {
+      "turns": [
+        {
+          "turn_key": "chat-20260824-approach-borga-r000011",
+          "status": "repaired",
+          "cancelled_pending_ids": [
+            3
+          ]
+        },
+        {
+          "turn_key": "chat-20260824-approach-r000012",
+          "status": "repaired",
+          "cancelled_pending_ids": [
+            4
+          ]
+        }
+      ],
+      "cancelled_pending_ids": [
+        3,
+        4
+      ],
+      "time_advanced": 0,
+      "player_choice": false,
+      "retroactive_movement_asserted": false
+    },
+    "time_advanced": 0,
+    "player_choice": false,
+    "does_not_assert": [
+      "retroactive approach success",
+      "Borga response or attention",
+      "new player action",
+      "relationship change"
+    ]
+  },
+  "before_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
+  "after_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d"
+}

@@ -1,15 +1,15 @@
 {
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
-  "engine_version": "1.0.7",
+  "engine_version": "1.0.8",
   "mode": "engine_authoritative",
   "source_live_version": 159,
-  "base_checkpoint": "runtime/checkpoints/v107_base_j000009.json",
-  "base_state_hash": "4c02070ce79abebe42734260ad5af12a95fd7f3f5ec376139feac631668bdcec",
+  "base_checkpoint": "runtime/checkpoints/v108_base_j000013.json",
+  "base_state_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
   "journal_dir": "runtime/journal",
-  "journal_base_seq": 9,
-  "journal_seq": 13,
-  "head_state_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
+  "journal_base_seq": 13,
+  "journal_seq": 14,
+  "head_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
   "legacy_rollback": {
     "path": "live_state.json",
     "version": 159,
@@ -33,9 +33,10 @@
     "character_core": true,
     "character_autonomy": true,
     "intent_grounding_repair": true,
-    "causal_encounter_memory": true
+    "causal_encounter_memory": true,
+    "visible_local_approach": true
   },
-  "last_event": "runtime/journal/j000013.json",
+  "last_event": "runtime/journal/j000014.json",
   "last_request": "runtime/requests/r000013.json",
   "session_state": "runtime/session_state.json",
   "system_resume": {
@@ -44,8 +45,8 @@
     "reason": "completed already-authorized local search under v1.0.3"
   },
   "system_activation": {
-    "event": "runtime/journal/j000010.json",
-    "kind": "causal_encounter_memory_v107",
+    "event": "runtime/journal/j000014.json",
+    "kind": "visible_local_approach_repair_v108",
     "world_time_advanced": 0,
     "player_choice": false
   }
