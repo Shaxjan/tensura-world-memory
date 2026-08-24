@@ -1,14 +1,14 @@
-# Tensura World Memory — Authoritative Runtime v1.0.7 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.9 Protocol
 
-Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.7 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy и safe intent grounding, а также добавляет первую причинную долговременную память именованного персонажа.
+Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.9 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy, safe intent grounding, causal named-character memory и finite visible local approach, а также требует, чтобы session read-model показывал только действительно текущие authoritative pending.
 
 ## 1. Источник истины
 
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.7:
-- `engine_version = 1.0.7`;
+Для v1.0.9:
+- `engine_version = 1.0.9`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
@@ -21,6 +21,8 @@
 Он содержит время, текущую локацию, деньги при Арлекино, личные деньги Арлекино вне кошелька, итог последнего **игрового** хода и текущую living scene.
 
 Технический system-event активации новой версии не должен подменять `last_turn` последнего игрового хода.
+
+`last_turn.pending_resolutions` в текущем session state является проекцией **текущих** authoritative rows со `status='pending'`, а не архивным снимком старых pending. Repaired/cancelled/resolved historical rows остаются в БД/journal для аудита, но не показываются как текущие pending.
 
 Если `session_state.journal_seq` совпадает с pointer, в уже синхронизированном чате мастер использует его напрямую. При новом чате, конфликте seq/hash или ошибке нужен full replay.
 
@@ -193,6 +195,18 @@ Activation v1.0.7:
 - не materializes Боргу как generic `actors` row;
 - только подключает memory model к существующему Character Core.
 
+Activation v1.0.8:
+- 0 игровых минут;
+- append-only отменяет только известные ложные `local_navigation` pending r11/r12;
+- не объявляет их движение успешным задним числом;
+- не меняет память/отношения/деньги/место.
+
+Activation v1.0.9:
+- 0 игровых минут;
+- не меняет gameplay DB state, память, отношения, деньги или место;
+- сохраняет последний игровой ход;
+- пересобирает session read-model так, чтобы `last_turn.pending_resolutions` содержал только реально текущие authoritative pending.
+
 ## 13. Именованные NPC и локальный поиск
 
 Именованный NPC не появляется потому, что так удобнее сцене.
@@ -209,6 +223,15 @@ Activation v1.0.7:
 
 Локальное перемещение не даёт скрытое знание Character Core/plan/memory.
 
+v1.0.8 отдельно разрешает **явный подход к прямо видимому именованному NPC в той же living scene** как конечное same-scene действие. Требуются explicit approach language + ровно один safe-grounded named target + текущий `visible` observation.
+
+Такой подход:
+- занимает 0 полных world minutes при текущей минутной гранулярности;
+- не выдумывает точную дистанцию/геометрию;
+- не означает NPC reply, attention, emotion, consent, relationship change или reciprocal memory.
+
+Bare `Подхожу` без явного target не привязывается к Борге автоматически.
+
 ## 15. Pending
 
 Pending нужен только там, где исход нельзя безопасно разрешить текущей механикой. Narration не превращает pending в факт.
@@ -216,6 +239,8 @@ Pending нужен только там, где исход нельзя безо�
 System resume допускается только для уже явно выбранного действия. Generic resolver нельзя использовать для обхода денег, боя, магии/лечения, рынка, силы или межрегионального travel.
 
 Факт того, что Борга услышал принятую явную реплику, не разрешает автоматически закрывать pending его ответом.
+
+Текущий session read-model обязан проверять authoritative `scene_pending_resolution.status`. Старый pending после `repaired/cancelled/resolved` не может оставаться в `last_turn.pending_resolutions` как будто он всё ещё активен.
 
 ## 16. Деньги
 
@@ -287,6 +312,8 @@ Emergency rollback: остановить runtime writes; проверить anch
 - создавать NPC memory только потому, что игрок увидел NPC;
 - превращать causal memory в эмоцию, consent, reply или relationship delta без отдельного основания;
 - materialize named character как generic actor с фиктивными обязательными полями ради удобства схемы;
+- auto-bind bare same-scene movement к видимому NPC без явного target;
+- показывать repaired/cancelled historical pending как текущий pending в session read-model;
 - превращать causal testimony в абсолютную истину;
 - показывать техничку вместо игровой сцены без необходимости;
 - пропускать обязательный HUD.
