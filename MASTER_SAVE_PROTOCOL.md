@@ -1,14 +1,14 @@
-# Tensura World Memory — Authoritative Runtime v1.0.4 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.5 Protocol
 
-Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.4 добавляет постоянный Character Core для первого калиброванного именованного NPC, не превращая скрытый план персонажа в знание игрока или рассказчика.
+Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.5 подключает первый постоянный Character Core к общей очереди автономности мира, не создавая второй NPC-clock и не превращая скрытые решения персонажа в знание игрока или рассказчика.
 
 ## 1. Источник истины
 
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.4:
-- `engine_version = 1.0.4`;
+Для v1.0.5:
+- `engine_version = 1.0.5`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
@@ -75,7 +75,7 @@
 
 ## 5. Чистая игровая наррация
 
-В нормальной игре не показывать `engine_authoritative`, `journal_seq`, hashes, migration diagnostics, скрытые Character Core/plan и внутренние resolver-данные.
+В нормальной игре не показывать `engine_authoritative`, `journal_seq`, hashes, migration diagnostics, скрытые Character Core/plan/autonomy decisions и внутренние resolver-данные.
 
 Сначала HUD, затем обычная сцена. Технические данные показывать только при ошибке, recovery или прямом запросе пользователя.
 
@@ -129,23 +129,50 @@ Character Core имеет authority `NON_CANON_MECHANICAL_PROSPECTIVE` и упр
 
 `hidden character plan -> observation/testimony/transmission -> player knowledge`
 
-## 9. v1.0.3 -> v1.0.4 continuity
+## 9. Character Autonomy v1
 
-Перед сменой semantics подтверждённый v1.0.3 head compact-ится неизменённым в новый v1.0.4 base checkpoint.
+v1.0.5 подключает первый Character Core к уже существующему `autonomy_runtime`.
 
-Activation оформляется новым append-only `character_core_activation` journal event.
+Главный принцип: **один персонаж — одна шкала времени — одна очередь автономности**.
+
+Для Борги не создаётся новый таймер и не дублируется поручение. Сохраняется уже авторитетный `task:borga`; меняется только его runtime-handler с generic `task_progress` на `character_task_v105`.
+
+При активации обязаны сохраниться без сброса:
+- `next_due_at`;
+- `cadence_minutes`;
+- `tick_count`;
+- `status`.
+
+Character Autonomy state извлекает рабочие направления только из уже сохранённого поручения Борги: combat rules, admissions, judges, testing, tournament operations. Новые обязанности из самой структуры не возникают.
+
+На каждом due tick движок сначала сверяет persistent Character Plan:
+- в `role_duty` block с точной grounded training-site допускается реальный hidden work tick по одной существующей обязанности;
+- в `local_travel`, `unresolved_personal_time` или `unresolved_region_activity` работа откладывается как `character_work_deferred`; точное место не выдумывается.
+
+Work tick означает подтверждённое усилие, но **не завершение** задачи. Автоматическое completion по количеству тиков запрещено до появления grounded completion condition/deliverable mechanic.
+
+Autonomy decision — скрытое состояние движка. Арлекино, рассказчик, ambient NPC и другие персонажи не узнают его автоматически. Нужен причинный канал: наблюдение, свидетельство, отчёт или иная передача.
+
+Все остальные commitments продолжают использовать существующие handlers общей очереди, если отдельная character-specific semantics для них ещё не калибрована.
+
+## 10. v1.0.4 -> v1.0.5 continuity
+
+Перед сменой semantics подтверждённый v1.0.4 head compact-ится неизменённым в новый v1.0.5 base checkpoint.
+
+Activation оформляется новым append-only `character_autonomy_activation` journal event.
 
 Activation:
 - не является новым действием Арлекино;
 - не двигает мировое время;
-- не меняет деньги игрока;
-- не меняет регион игрока;
+- не меняет деньги или регион игрока;
 - не редактирует старые события;
-- сохраняет последний игровой `last_turn` в session read-model.
+- сохраняет последний игровой `last_turn`;
+- не сбрасывает уже накопленный scheduler state Борги;
+- только materializes Character Autonomy state и переназначает handler существующего `task:borga`.
 
-Если в v1.0.3 уже существует valid Borga named-presence fact текущего дня, его training-site location используется как migration anchor первого рабочего блока дня. Это не новое свидетельство игроку, а защита причинной непрерывности движка.
+Предыдущая v1.0.3 -> v1.0.4 причинная непрерывность сохраняется: current-day Borga plan по-прежнему использует допустимый migration anchor, а hidden plan не является знанием игрока.
 
-## 10. Именованные NPC и локальный поиск
+## 11. Именованные NPC и локальный поиск
 
 Именованный NPC не появляется потому, что так удобнее сцене.
 
@@ -159,7 +186,7 @@ Activation:
 
 Для некалиброванного именованного NPC exact position остаётся guarded `UNKNOWN`.
 
-## 11. Локальное перемещение
+## 12. Локальное перемещение
 
 Известная точка текущего города — конечное действие.
 
@@ -167,7 +194,7 @@ Activation:
 
 Локальное перемещение игрока не даёт ему скрытое знание Character Core/plan.
 
-## 12. Pending
+## 13. Pending
 
 Pending нужен только там, где исход нельзя безопасно разрешить текущей механикой. Narration не превращает pending в факт.
 
@@ -175,7 +202,7 @@ System resume допускается только для уже явно выб�
 
 Generic resolver нельзя использовать для обхода денег, боя, магии/лечения, рынка, силы или межрегионального travel.
 
-## 13. Деньги
+## 14. Деньги
 
 - 100c = 1s; 100s = 1g.
 - Личная касса отдельно от family/project/promo.
@@ -183,15 +210,15 @@ Generic resolver нельзя использовать для обхода де�
 - Неизвестный entrusted float остаётся `UNKNOWN` до причинного отчёта/расхода/возврата.
 - У Верна переданный principal 50s не равен текущему остатку: текущий остаток `UNKNOWN`.
 - Не создавать деньги из реакции толпы.
-- Character Core materialization не меняет деньги.
+- Character Core/Autonomy activation не меняет деньги.
 
-## 14. Контроль Арлекино и знания
+## 15. Контроль Арлекино и знания
 
 - Арлекино/Маэстро полностью контролирует пользователь.
 - Не придумывать его реплики, чувства, решения и значимые действия.
 - NPC и мир автономны.
 - Знание NPC требует `SOURCE -> TRANSMISSION -> TIME -> RECIPIENT`.
-- Скрытый character plan не является знанием NPC вокруг него автоматически.
+- Скрытый character plan и hidden autonomy decisions не являются знанием NPC вокруг него автоматически.
 - Не передавать NPC приватные сведения без канала.
 - Только Рена говорит «павлин».
 - Jura — регион; JTF ещё нет.
@@ -199,11 +226,11 @@ Generic resolver нельзя использовать для обхода де�
 - Поручение Верна в Дваргон не связано с Ореном.
 - Гарет и Верн знают точную гостиницу в мире; GM не знает её названия и не придумывает его.
 
-## 15. Retcon / repair
+## 16. Retcon / repair
 
 Прямая коррекция пользователя отменяет противоречащую старую запись. После cutover repair оформляется новым runtime transition. Старый journal event не редактировать.
 
-## 16. Checkpoint / compaction
+## 17. Checkpoint / compaction
 
 При смене engine semantics или периодически:
 1. replay текущего base + journal до head;
@@ -213,9 +240,9 @@ Generic resolver нельзя использовать для обхода де�
 5. обновить pointer и `journal_base_seq`;
 6. старые checkpoint/journal не удалять.
 
-Новая версия engine не должна replay старые события под изменившейся семантикой, если это меняет их результат. Сначала compact старый подтверждённый head, затем новые события новой версии.
+Новая версия engine не должна replay старых событий под изменившейся семантикой, если это меняет их результат. Сначала compact старый подтверждённый head, затем новые события новой версии.
 
-## 17. Rollback
+## 18. Rollback
 
 `legacy_rollback` хранит точную pre-cutover v159 точку.
 
@@ -223,13 +250,13 @@ Emergency rollback: остановить runtime writes; проверить anch
 
 Каждая новая engine activation должна оставлять предыдущий checkpoint/journal доступными для аудита.
 
-## 18. Песни
+## 19. Песни
 
 - Одна песня = один полный UTF-8 файл, когда текст реально полный и проверен.
 - `FULL_CANONICAL` только после обратного чтения полного файла.
 - Потерянный/обрезанный текст не восстанавливать по оригиналу или памяти.
 
-## 19. Нельзя
+## 20. Нельзя
 
 - считать legacy `live_state.json` текущим SAVE;
 - редактировать подтверждённый journal event;
@@ -239,7 +266,8 @@ Emergency rollback: остановить runtime writes; проверить anch
 - смешивать личные, семейные и проектные деньги;
 - решать за Арлекино;
 - давать NPC невозможные знания;
-- раскрывать hidden Character Core/plan как будто игрок это знает;
+- раскрывать hidden Character Core/plan/autonomy decision как будто игрок это знает;
+- создавать для одного commitment второй автономный таймер/очередь;
 - заполнять новый Core выдуманными чертами, памятью, отношениями или имуществом;
 - превращать causal testimony в абсолютную истину;
 - показывать техничку вместо игровой сцены без необходимости;
