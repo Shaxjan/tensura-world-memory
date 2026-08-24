@@ -68,6 +68,9 @@ jobs:
       - name: Run v1.0.11 tests
         working-directory: sim_engine
         run: python -m unittest -v test_v111.py
+      - name: Check v1.0.11 MASTER protocol patch
+        working-directory: sim_engine
+        run: python v111_protocol_patch.py --repo-root .. --check
       - name: Rehearse v1.0.11 against current LIVE v1.0.10
         working-directory: sim_engine
         run: python v111_rehearsal.py --repo-root .. --out /tmp/v111-rehearsal.json
@@ -96,11 +99,13 @@ jobs:
           git reset --hard origin/main
       - name: Activate v1.0.11 Runtime Fast Path
         run: python sim_engine/v111_activate.py --repo-root . --out /tmp/v111-activate.json
+      - name: Apply v1.0.11 MASTER fast-path protocol
+        run: python sim_engine/v111_protocol_patch.py --repo-root .
       - name: Commit v1.0.11 runtime activation
         run: |
           git config user.name "tensura-runtime-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add runtime/checkpoints/v111_base_j*.json runtime/journal runtime/session_state.json runtime/runtime_state.json
+          git add runtime/checkpoints/v111_base_j*.json runtime/journal runtime/session_state.json runtime/runtime_state.json MASTER_SAVE_PROTOCOL.md
           if git diff --cached --quiet; then
             echo "v1.0.11 runtime already active"
             exit 0
