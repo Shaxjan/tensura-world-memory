@@ -2,7 +2,7 @@
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
   "engine_version": "1.0",
-  "mode": "prepared",
+  "mode": "engine_authoritative",
   "source_live_version": 159,
   "base_checkpoint": "runtime/checkpoints/cutover_v159.json",
   "base_state_hash": "d273179dd9c53eafe0fbab63d40e7f8e2ac7c491acb2c3a12fb738c3be0400f5",

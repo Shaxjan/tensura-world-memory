@@ -1,1 +1,1 @@
-{"v":159,"parent":"2888d4a7ded338acab261e3baa12001bb325045f","delta":"live_v159","economy":"ECONOMY_MODEL_v1"}
+{"v":159,"parent":"2888d4a7ded338acab261e3baa12001bb325045f","delta":"live_v159","economy":"ECONOMY_MODEL_v1","mode":"legacy_frozen","runtime":"runtime/runtime_state.json","cutover":"engine_v1.0","rollback_blob_sha":"e36c76592952a862839d020715e9185312a7afe4"}
