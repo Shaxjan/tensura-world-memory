@@ -2,18 +2,18 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.6",
-  "journal_seq": 7,
-  "head_state_hash": "de626d15ea346c9fc55b5be9a8763bcf1beac8e47556be375b1debc6ec884d3b",
+  "journal_seq": 8,
+  "head_state_hash": "49b13be7efcfce6228b5d7467242503e08e574ee9a1be6c9f118c8e9f4c25ff0",
   "hud": {
     "time": {
-      "world_minute": 189120,
-      "display": "T+131 ~08:00"
+      "world_minute": 189132,
+      "display": "T+131 ~08:12"
     },
     "location": {
       "region_id": "eurazania",
       "region": "Столица Эуразании",
-      "place": "большой тренировочный двор Борги",
-      "display": "большой тренировочный двор Борги",
+      "place": "малый боевой/тренировочный двор",
+      "display": "малый боевой/тренировочный двор",
       "certainty": "prospective_engine_arrival",
       "source": "memory/places.json"
     },
@@ -45,28 +45,46 @@
     }
   },
   "last_turn": {
-    "seq": 6,
-    "event_key": "chat-20260824-go-small-training-yard-r000006",
+    "seq": 8,
+    "event_key": "chat-20260824-go-small-training-yard-r000008",
     "event_type": "player_turn",
-    "status": "superseded_parser_repair",
+    "status": "executed",
     "action_result": {
-      "outcome": "no_effect_parser_repaired",
-      "time_advanced": 0,
-      "movement_executed": false,
-      "false_target_removed": "rena"
+      "outcome": "arrived",
+      "origin_text": "большой тренировочный двор Борги",
+      "destination_key": "eurazania_small_training_yard",
+      "destination_text": "малый боевой/тренировочный двор",
+      "travel_minutes": 12,
+      "started_at": 189120,
+      "arrived_at": 189132,
+      "place_source": "memory/places.json",
+      "time_basis": "prospective_local_city_default_v1.0.1",
+      "does_not_assert": [
+        "Borga presence",
+        "NPC encounter",
+        "exact street geometry"
+      ]
     },
     "visible_actors": [],
     "pending_resolutions": [],
     "narration_contract": {
-      "state_authority": "engine_v1.0.6_parser_repair",
-      "player_text_verbatim": "Илу в малый тренировочный лагерь.",
+      "state_authority": "engine_v1.0.1_local_travel",
+      "player_text_verbatim": "Илу в малый тренировочный двор",
       "must_preserve": [
-        "old malformed turn had no movement effect",
-        "false Rena pending is cancelled"
+        "arrival",
+        "engine travel time",
+        "money/region from GM packet",
+        "UNKNOWN NPC presence",
+        "visible ambient scene"
+      ],
+      "may_add": [
+        "sensory description consistent with destination and visible state"
       ],
       "forbidden": [
-        "pretend travel already happened",
-        "restore false Rena target"
+        "invent Borga presence",
+        "invent payment",
+        "invent encounter",
+        "change player intent"
       ]
     }
   },
@@ -84,50 +102,41 @@
   "scene": {
     "ambient": [
       {
-        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:1:44221",
-        "kind": "anonymous_local",
-        "descriptor": "трое бойцов",
-        "activity": "по очереди работают с учебным оружием",
-        "group_size": 3,
-        "knowledge_tags": [],
-        "identity_status": "not_materialized_named_npc"
-      },
-      {
-        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:2:37246",
-        "kind": "anonymous_local",
-        "descriptor": "помощник инструктора",
-        "activity": "проверяет тренировочные пары",
-        "group_size": 1,
-        "knowledge_tags": [
-          "borga_work_routine"
-        ],
-        "identity_status": "not_materialized_named_npc"
-      },
-      {
-        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:3:38228",
+        "entity_key": "eurazania_small_training_yard:ambient:189132:1:17081",
         "kind": "anonymous_local",
         "descriptor": "двое бойцов",
-        "activity": "отрабатывают связку ударов",
+        "activity": "спаррингуют без зрителей",
         "group_size": 2,
         "knowledge_tags": [],
         "identity_status": "not_materialized_named_npc"
       },
       {
-        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:4:19944",
+        "entity_key": "eurazania_small_training_yard:ambient:189132:2:40035",
         "kind": "anonymous_local",
-        "descriptor": "небольшая тренировочная группа",
-        "activity": "разминается у края площадки",
-        "group_size": 4,
+        "descriptor": "молодой боец",
+        "activity": "повторяет стойки",
+        "group_size": 1,
         "knowledge_tags": [],
         "identity_status": "not_materialized_named_npc"
       },
       {
-        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:5:24484",
+        "entity_key": "eurazania_small_training_yard:ambient:189132:3:18252",
         "kind": "anonymous_local",
-        "descriptor": "рабочий при дворе",
-        "activity": "переносит тренировочный инвентарь",
+        "descriptor": "рабочий",
+        "activity": "собирает инвентарь у стены",
         "group_size": 1,
         "knowledge_tags": [],
+        "identity_status": "not_materialized_named_npc"
+      },
+      {
+        "entity_key": "eurazania_small_training_yard:ambient:189132:4:91205",
+        "kind": "anonymous_local",
+        "descriptor": "помощник инструктора",
+        "activity": "наблюдает за коротким спаррингом",
+        "group_size": 1,
+        "knowledge_tags": [
+          "borga_work_routine"
+        ],
         "identity_status": "not_materialized_named_npc"
       }
     ],
