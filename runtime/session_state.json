@@ -2,8 +2,8 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.7",
-  "journal_seq": 10,
-  "head_state_hash": "2a01ef8f1dede9697946fbc552d9f0187b36f7c045ab440f790926b76263245f",
+  "journal_seq": 11,
+  "head_state_hash": "a4075578d8a6dadf2832e49a8e94fde3c8cf9aea552dfcb36263c05652d76229",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -45,46 +45,39 @@
     }
   },
   "last_turn": {
-    "seq": 9,
-    "event_key": "chat-20260824-search-borga-small-yard-r000009",
+    "seq": 11,
+    "event_key": "chat-20260824-approach-borga-r000011",
     "event_type": "player_turn",
-    "status": "executed",
-    "action_result": {
-      "outcome": "found",
-      "target_key": "borga",
-      "target_name": "Борга",
-      "place_key": "eurazania_small_training_yard",
-      "place_text": "малый боевой/тренировочный двор",
-      "observation": "direct_local_search",
-      "does_not_assert": [
-        "what Borga will say",
-        "Borga consent",
-        "Borga private knowledge"
-      ],
-      "search_started_at": 189132,
-      "search_finished_at": 189138,
-      "search_minutes": 6
-    },
+    "status": "scene_pending",
+    "action_result": null,
     "visible_actors": [],
-    "pending_resolutions": [],
+    "pending_resolutions": [
+      {
+        "id": 3,
+        "kind": "local_navigation",
+        "target": "Борга",
+        "status": "pending"
+      }
+    ],
     "narration_contract": {
-      "state_authority": "engine_v1.0.3_living_scene",
-      "player_text_verbatim": "«Осматриваюсь. Ищу Боргу.»",
+      "state_authority": "engine_scene_record_and_checkpoint_only",
+      "player_text_verbatim": "Подхожу к Борге.",
       "must_preserve": [
-        "visible ambient scene",
-        "causal named-NPC evidence",
-        "engine search time",
-        "HUD money/time/location"
+        "verbatim player action",
+        "pending outcomes remain pending",
+        "money/time/region from GM packet",
+        "UNKNOWN values"
       ],
       "may_add": [
-        "sensory description consistent with scene",
-        "natural wording of engine-provided testimony"
+        "sensory description already supported by perceivable state",
+        "neutral acknowledgement of player speech/performance"
       ],
       "forbidden": [
-        "invent extra named NPCs",
-        "upgrade testimony to certainty",
-        "invent Borga dialogue before interaction",
-        "change player intent"
+        "resolve pending NPC/world response in narration",
+        "invent movement success",
+        "invent consent",
+        "invent income/expense",
+        "new hidden state mutation"
       ]
     }
   },
@@ -148,7 +141,14 @@
         "place": "малый боевой/тренировочный двор"
       }
     ],
-    "pending_resolutions": []
+    "pending_resolutions": [
+      {
+        "id": 3,
+        "kind": "local_navigation",
+        "target": "Борга",
+        "status": "pending"
+      }
+    ]
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
