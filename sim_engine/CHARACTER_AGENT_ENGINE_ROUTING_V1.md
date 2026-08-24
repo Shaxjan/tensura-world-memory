@@ -20,15 +20,28 @@ Player visibility alone is deliberately insufficient. This preserves the v1.0.7 
 
 ## Knowledge boundary
 
-`collect_actor_causal_facts()` reads only:
+`collect_actor_causal_facts()` reads only an actor's own existing:
 
 ```text
-actor_knowledge(actor_id='rena') JOIN facts
+actor_knowledge(actor_id=<actor>) JOIN facts
 ```
 
 v1 exposes only confidence `100` facts to the language agent. Lower-confidence beliefs stay in authoritative engine state until an uncertainty-aware semantic claim verifier exists.
 
-The context contains the fact values Rena causally knows, not merely their identifiers. Facts known only by Borga/another actor are not included.
+### Rena identity migration boundary
+
+The current authoritative SQLite `actors` table contains only the player. Rena exists in the newer runtime as a region-level `actor_position_claim`, autonomous commitment owner and now a prospective Character Core, but **not yet as an `actors` row**.
+
+`actor_knowledge.actor_id` has a foreign key to `actors(id)`. Therefore this candidate does **not** invent a Rena actor row with `cash_copper=0` merely to satisfy that foreign key: doing so would create a false economic fact about Rena and could later leak into simulation logic.
+
+Until a proper actor-identity/economy migration exists, Rena's language-agent context gets:
+
+- her source-grounded Character Core as private self-state;
+- causal current reciprocal observations;
+- any future knowledge storage that is explicitly attached to her Character Core/private continuity;
+- zero facts from another actor's `actor_knowledge`.
+
+If/when Rena is honestly materialized into `actors`, `collect_actor_causal_facts()` can consume her confidence-100 `actor_knowledge` rows without changing the routing contract.
 
 ## Current activity
 
