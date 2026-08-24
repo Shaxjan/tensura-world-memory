@@ -1,8 +1,8 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.10",
-  "journal_seq": 17,
+  "engine_version": "1.0.11",
+  "journal_seq": 18,
   "head_state_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8",
   "hud": {
     "time": {
@@ -224,5 +224,15 @@
     "emotion_inference": false,
     "relationship_mutation": false,
     "hidden_decision_basis_not_narrator_knowledge": true
+  },
+  "transport_runtime": {
+    "version": "runtime_fast_path_v1",
+    "normal_request_format": "TENSURA_FAST_TURN_REQUEST",
+    "queue_sequence_allocation": "authoritative_processor_at_execution_time",
+    "optimistic_guard": "expected_last_gameplay_turn_key",
+    "normal_preflight_pointer_read_required": false,
+    "fallback_on_guard_conflict": "refresh authoritative session/pointer and retry explicitly",
+    "postflight_source": "runtime/session_state.json",
+    "github_actions_still_authoritative_transport": true
   }
 }

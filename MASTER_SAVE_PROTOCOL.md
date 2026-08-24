@@ -1,4 +1,4 @@
-# Tensura World Memory — Authoritative Runtime v1.0.10 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.11 Protocol
 
 Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.10 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy, safe intent grounding, causal named-character memory, finite visible local approach и чистый session read-model, а также вводит первый ограниченный authoritative NPC-response policy для простого прямого приветствия.
 
@@ -7,8 +7,8 @@
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.10:
-- `engine_version = 1.0.10`;
+Для v1.0.11:
+- `engine_version = 1.0.11`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
@@ -31,7 +31,8 @@
 ### Остальные файлы
 - `runtime/checkpoints/` — immutable portable snapshots;
 - `runtime/journal/jNNNNNN.json` — append-only авторитетные переходы;
-- `runtime/requests/rNNNNNN.json` — входящие пользовательские команды;
+- `runtime/requests/q-<request-id>.json` — нормальные v1.0.11 fast requests без client-allocated seq;
+- `runtime/requests/rNNNNNN.json` — legacy/recovery requests с явным seq;
 - `live_state.json` — замороженный legacy v159 / rollback-anchor;
 - `world_save.json`, `live_v*/`, `memory/` — история и аудит, они не перекрывают runtime.
 
@@ -49,17 +50,32 @@
 
 ## 3. Быстрый игровой ход
 
-Для каждого нового действия пользователя:
+### Нормальный synchronized fast path v1.0.11
 
-1. Проверить свежий `runtime/runtime_state.json`.
-2. Если pointer seq совпадает с локально известным — full replay не нужен.
-3. Создать ровно один `runtime/requests/rNNNNNN.json`, где `seq = journal_seq + 1`, а `raw_text` — дословный текст пользователя.
-4. Workflow `Tensura Runtime Turn` выбирает request processor по `engine_version`, восстанавливает state, выполняет engine, создаёт новый journal event, обновляет pointer и `runtime/session_state.json`.
-5. Дождаться подтверждённого нового session state.
-6. Для обычного ответа читать session state; journal нужен только для подробного результата/аудита.
-7. При stale seq/hash сначала синхронизироваться и не повторять эффект вслепую.
+Если игровой чат уже держит последний подтверждённый `runtime/session_state.json` в контексте, **предварительно перечитывать `runtime/runtime_state.json` для каждого обычного хода не требуется**.
 
-Нельзя выдавать игровой исход до подтверждённого runtime event.
+1. Взять `last_turn.event_key` из последнего подтверждённого session state как `expected_last_gameplay_turn_key`.
+2. Создать ровно один уникальный `runtime/requests/q-<request-id>.json` формата `TENSURA_FAST_TURN_REQUEST`.
+3. Fast request **не содержит `seq`**. Он содержит дословный `raw_text`, уникальный `event_key` и `expected_last_gameplay_turn_key`.
+4. Workflow `Tensura Runtime Turn` под authoritative concurrency lock читает свежий LIVE-pointer и сам назначает `seq = journal_seq + 1` непосредственно перед выполнением.
+5. Processor сравнивает `expected_last_gameplay_turn_key` с текущим `session_state.last_turn.event_key`. Zero-time technical activation не меняет `last_turn` и не ломает fast path.
+6. Если другой **игровой** ход уже произошёл, guard обязан завершить request ошибкой **до** engine mutation/journal write. Нельзя молча переигрывать действие на изменившемся gameplay-контексте.
+7. После подтверждённой обработки прочитать свежий `runtime/session_state.json` один раз и проверить, что `last_turn.event_key` равен отправленному `event_key`. Затем выдать обычную игровую сцену.
+
+### Recovery / новый чат
+
+Полный pointer/session preflight нужен, если:
+- это новый или несинхронизированный чат;
+- неизвестен последний подтверждённый `last_turn.event_key`;
+- fast guard вернул conflict;
+- workflow/commit завершился ошибкой;
+- seq/hash/session выглядят несогласованно.
+
+Тогда сначала перечитать `runtime/runtime_state.json` + `runtime/session_state.json`, при необходимости выполнить full replay, и только после синхронизации явно повторить действие. Старый эффект вслепую не повторять.
+
+Legacy `runtime/requests/rNNNNNN.json` с client-allocated `seq` сохраняется только для recovery/backward compatibility. Нормальный v1.0.11 ход использует `q-*` и server-side sequence allocation.
+
+Нельзя выдавать игровой исход до подтверждённого runtime event/session state.
 
 ## 4. Обязательный HUD в КАЖДОМ игровом ответе
 
@@ -206,6 +222,24 @@ Response policy внутри Character Core является скрытой pros
 
 Всё вне этой узкой калибровки остаётся unresolved до отдельной поддерживаемой response-механики.
 
+
+## 11B. Runtime Fast Path v1
+
+v1.0.11 меняет транспорт, а не gameplay semantics. Living Scene, Character Core, autonomy, memory и Causal NPC Response продолжают работать по правилам v1.0.10.
+
+Fast request имеет формат `TENSURA_FAST_TURN_REQUEST` и хранится как immutable `runtime/requests/q-<unique-id>.json`.
+
+Главные инварианты:
+- journal seq назначает только authoritative processor под общей runtime concurrency lock;
+- gameplay chat не резервирует seq заранее;
+- `expected_last_gameplay_turn_key` защищает от выполнения поверх другого уже совершённого player turn;
+- technical zero-time activation может безопасно оказаться между двумя ходами, если последний gameplay turn не изменился;
+- guard conflict не создаёт journal event и не меняет pointer/session/gameplay state;
+- fast path не ослабляет replay/hash/UNKNOWN/player-control/causal-knowledge правила;
+- GitHub Actions остаётся текущим authoritative transport и всё ещё имеет runner-startup floor; v1.0.11 сокращает лишние round-trip, но не обещает фиксированные 1–5 секунд на hosted Actions.
+
+Обычный synchronized путь после подтверждённого предыдущего хода: **enqueue q-request → authoritative processing → один postflight session read**.
+
 ## 12. Version continuity / activation
 
 Каждая смена semantics сначала compact-ит подтверждённый предыдущий LIVE head в новый immutable base checkpoint, затем добавляет новый activation journal event.
@@ -239,6 +273,16 @@ Activation v1.0.10:
 - не создаёт NPC-response задним числом;
 - прежнее приветствие `r000013` остаётся исторически без подтверждённой реакции;
 - первый authoritative NPC-response возможен только на новом player turn после activation.
+
+Activation v1.0.11:
+- transport-only, 0 игровых минут;
+- `before_hash == after_hash` для gameplay state;
+- не является действием Арлекино или NPC;
+- не меняет место, деньги, память, personality, relationships или уже записанные NPC-response;
+- сохраняет последний gameplay `last_turn`;
+- включает auto-sequenced `q-*` requests и `expected_last_gameplay_turn_key` guard;
+- legacy `rNNNNNN` остаётся recovery/backward-compatible путём.
+
 
 ## 13. Именованные NPC и локальный поиск
 
@@ -353,4 +397,7 @@ Emergency rollback: остановить runtime writes; проверить anch
 - ретроактивно разрешать старые NPC-response после установки новой response policy;
 - превращать causal testimony в абсолютную истину;
 - показывать техничку вместо игровой сцены без необходимости;
+- заранее назначать journal seq в нормальном v1.0.11 fast request;
+- выполнять fast request поверх другого gameplay turn при несовпадении `expected_last_gameplay_turn_key`;
+- считать отсутствие preflight pointer read разрешением обходить authoritative processor/replay/hash;
 - пропускать обязательный HUD.

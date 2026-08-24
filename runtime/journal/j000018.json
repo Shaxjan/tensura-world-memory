@@ -1,0 +1,33 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 18,
+  "event_key": "system-v111-runtime-fast-path-j000018",
+  "event_type": "runtime_fast_path_activation",
+  "world_minute": 189138,
+  "request": {
+    "reason": "enable auto-sequenced guarded turn queue and reduced-round-trip gameplay transport",
+    "source_engine": "1.0.10",
+    "target_engine": "1.0.11"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "runtime_fast_path_v111",
+    "world_minute": 189138,
+    "time_advanced": 0,
+    "player_choice": false,
+    "db_gameplay_mutation": false,
+    "transport_only": true,
+    "does_not_assert": [
+      "new player action",
+      "new NPC action",
+      "movement",
+      "memory change",
+      "relationship change",
+      "personality change"
+    ]
+  },
+  "before_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8",
+  "after_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8"
+}
