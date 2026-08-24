@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_TURN_REQUEST",
+  "schema_version": 1,
+  "seq": 6,
+  "event_key": "chat-20260824-go-small-training-yard-r000006",
+  "event_type": "player_turn",
+  "request": {
+    "raw_text": "Илу в малый тренировочный лагерь."
+  }
+}
