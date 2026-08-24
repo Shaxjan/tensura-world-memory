@@ -1,0 +1,34 @@
+name: Playable Alpha Character Agent v1
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sim_engine/character_agent_contract.py'
+      - 'sim_engine/test_character_agent_contract.py'
+      - 'sim_engine/CHARACTER_AGENT_V1.md'
+      - '.github/workflows/character-agent-v1.yml'
+  pull_request:
+    paths:
+      - 'sim_engine/character_agent_contract.py'
+      - 'sim_engine/test_character_agent_contract.py'
+      - 'sim_engine/CHARACTER_AGENT_V1.md'
+      - '.github/workflows/character-agent-v1.yml'
+
+jobs:
+  test:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Character Agent contract tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_character_agent_contract.py
+      - name: Compile safety kernel
+        working-directory: sim_engine
+        run: python -m py_compile character_agent_contract.py test_character_agent_contract.py
