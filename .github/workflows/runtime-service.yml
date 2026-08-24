@@ -26,7 +26,7 @@ jobs:
         working-directory: runtime_service
         run: python -m unittest -v test_app.py
       - name: Python compile check
-        run: python -m py_compile runtime_service/app.py runtime_service/activate_transport.py
+        run: python -m py_compile runtime_service/app.py runtime_service/server.py runtime_service/activate_transport.py
       - name: Shell syntax check
         run: sh -n runtime_service/entrypoint.sh
       - name: Build portable runtime image
