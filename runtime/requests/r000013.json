@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_TURN_REQUEST",
+  "schema_version": 1,
+  "seq": 13,
+  "event_key": "chat-20260824-greet-borga-r000013",
+  "event_type": "player_turn",
+  "request": {
+    "raw_text": "«Обращаюсь к Борге: „Доброе утро“.»"
+  }
+}
