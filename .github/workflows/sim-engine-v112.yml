@@ -1,0 +1,117 @@
+name: Simulation Engine v1.0.12 Runtime Fast Path Reliability
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sim_engine/v112_*.py'
+      - 'sim_engine/test_v112.py'
+      - 'sim_engine/V112.md'
+      - '.github/workflows/sim-engine-v112.yml'
+      - '.github/workflows/sim-engine-v111.yml'
+      - '.github/workflows/runtime-turn.yml'
+      - 'MASTER_SAVE_PROTOCOL.md'
+  pull_request:
+    paths:
+      - 'sim_engine/v112_*.py'
+      - 'sim_engine/test_v112.py'
+      - 'sim_engine/V112.md'
+      - '.github/workflows/sim-engine-v112.yml'
+      - '.github/workflows/sim-engine-v111.yml'
+      - '.github/workflows/runtime-turn.yml'
+      - 'MASTER_SAVE_PROTOCOL.md'
+
+jobs:
+  test:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v1.0 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v100.py
+      - name: Run v1.0.1 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v101.py
+      - name: Run v1.0.2 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v102.py
+      - name: Run v1.0.3 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v103.py
+      - name: Run v1.0.4 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v104.py
+      - name: Run v1.0.5 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v105.py
+      - name: Run v1.0.6 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v106.py
+      - name: Run v1.0.7 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v107.py
+      - name: Run v1.0.8 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v108.py
+      - name: Run v1.0.9 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v109.py
+      - name: Run v1.0.10 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v110.py
+      - name: Run v1.0.11 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v111.py
+      - name: Run v1.0.12 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v112.py
+      - name: Check v1.0.12 MASTER protocol patch
+        working-directory: sim_engine
+        run: python v112_protocol_patch.py --repo-root .. --check
+      - name: Rehearse v1.0.12 against current LIVE v1.0.11
+        working-directory: sim_engine
+        run: python v112_rehearsal.py --repo-root .. --out /tmp/v112-rehearsal.json
+
+  activate:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
+    concurrency:
+      group: tensura-authoritative-runtime
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fast-forward to current main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+      - name: Activate v1.0.12 Runtime Fast Path Reliability
+        run: python sim_engine/v112_activate.py --repo-root . --out /tmp/v112-activate.json
+      - name: Apply v1.0.12 MASTER protocol repair
+        run: python sim_engine/v112_protocol_patch.py --repo-root .
+      - name: Commit v1.0.12 runtime activation
+        run: |
+          git config user.name "tensura-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add runtime/checkpoints/v112_base_j*.json runtime/journal runtime/session_state.json runtime/runtime_state.json runtime/request_receipts MASTER_SAVE_PROTOCOL.md
+          if git diff --cached --quiet; then
+            echo "v1.0.12 runtime already active"
+            exit 0
+          fi
+          git commit -m "Runtime v1.0.12 — Fast Path Reliability Repair activation"
+          git push origin HEAD:main
