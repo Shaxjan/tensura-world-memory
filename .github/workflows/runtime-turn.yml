@@ -50,7 +50,33 @@ jobs:
           git reset --hard origin/main
           test -f "${{ steps.req.outputs.path }}"
 
+      - name: Check transport owner
+        id: transport
+        shell: bash
+        run: |
+          MODE=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('runtime/transport_mode.json')
+          if not p.exists():
+              print('github_actions')
+          else:
+              try:
+                  print(json.loads(p.read_text(encoding='utf-8')).get('mode') or 'invalid')
+              except Exception:
+                  print('invalid')
+          PY
+          )
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          if [ "$MODE" = "always_on_service" ]; then
+            echo "delegated=true" >> "$GITHUB_OUTPUT"
+            echo "Always-On Runtime owns this request; GitHub Actions will not execute it."
+          else
+            echo "delegated=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Execute authoritative turn
+        if: steps.transport.outputs.delegated != 'true'
         id: execute
         shell: bash
         run: |
@@ -86,7 +112,7 @@ jobs:
           echo "failed=false" >> "$GITHUB_OUTPUT"
 
       - name: Commit engine event, pointer, session and receipt
-        if: success()
+        if: steps.transport.outputs.delegated != 'true' && success()
         shell: bash
         run: |
           git config user.name "tensura-runtime-bot"
@@ -99,7 +125,7 @@ jobs:
           fi
 
       - name: Commit failure receipt
-        if: failure() && steps.execute.outputs.failed == 'true'
+        if: steps.transport.outputs.delegated != 'true' && failure() && steps.execute.outputs.failed == 'true'
         shell: bash
         run: |
           git config user.name "tensura-runtime-bot"
