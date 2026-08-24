@@ -1,0 +1,40 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 5,
+  "event_key": "system-v105-character-autonomy-j000005",
+  "event_type": "character_autonomy_activation",
+  "world_minute": 189120,
+  "request": {
+    "reason": "wire persistent Character Core to existing autonomy scheduler without choosing a player action",
+    "source_engine": "1.0.4",
+    "target_engine": "1.0.5"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "character_autonomy_v105",
+    "world_minute": 189120,
+    "actor_key": "borga",
+    "commitment_key": "task:borga",
+    "wiring": {
+      "commitment_key": "task:borga",
+      "old_handler": "task_progress",
+      "new_handler": "character_task_v105",
+      "next_due_at_preserved": 189134,
+      "cadence_minutes_preserved": 30,
+      "tick_count_preserved": 1,
+      "status_preserved": "active"
+    },
+    "time_advanced": 0,
+    "player_choice": false,
+    "does_not_assert": [
+      "new player action",
+      "task completion",
+      "unsupported Borga personality",
+      "unsupported private knowledge"
+    ]
+  },
+  "before_hash": "450d775e9ab0ffcb08ee349ad1a4d49aea1cddc20a8aecfc588dfaadfedeec51",
+  "after_hash": "96d7846542ac6c86bfee027b18ae209766ede1f341fd03f59a2b996bfacd162f"
+}
