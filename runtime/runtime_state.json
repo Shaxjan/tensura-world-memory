@@ -8,8 +8,8 @@
   "base_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
   "journal_dir": "runtime/journal",
   "journal_base_seq": 1,
-  "journal_seq": 1,
-  "head_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
+  "journal_seq": 2,
+  "head_state_hash": "57c6ce61a154b83c77115bec47ba095669700d2d3a55b766b722f9556da070e8",
   "legacy_rollback": {
     "path": "live_state.json",
     "version": 159,
@@ -30,7 +30,7 @@
     "request_queue": true,
     "session_fast_path": true
   },
-  "last_event": "runtime/journal/j000001.json",
-  "last_request": "runtime/requests/r000001.json",
+  "last_event": "runtime/journal/j000002.json",
+  "last_request": "runtime/requests/r000002.json",
   "session_state": "runtime/session_state.json"
 }

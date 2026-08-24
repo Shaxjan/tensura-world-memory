@@ -1,0 +1,183 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 2,
+  "event_key": "chat-20260824-search-borga-guitar-r000002",
+  "event_type": "player_turn",
+  "world_minute": 189114,
+  "request": {
+    "raw_text": "Осматриваюсь. Ищу Боргу. (Гитара у меня)"
+  },
+  "result": {
+    "status": "scene_pending",
+    "accepted": true,
+    "turn_key": "chat-20260824-search-borga-guitar-r000002",
+    "scene_action_id": 2,
+    "proposal": {
+      "status": "ready",
+      "action_kind": "local_search_or_move",
+      "components": [
+        {
+          "kind": "local_search_or_move",
+          "target": {
+            "id": "borga",
+            "name": "Борга"
+          },
+          "grounding": "verbatim_raw_text"
+        }
+      ],
+      "pending": [
+        {
+          "kind": "local_navigation",
+          "target_key": "borga",
+          "target_text": "Борга"
+        }
+      ],
+      "resolution_mode": "pending_resolution"
+    },
+    "gm_packet": {
+      "hud": {
+        "time": {
+          "world_minute": 189114,
+          "display": "T+131 ~07:54"
+        },
+        "location": {
+          "region_id": "eurazania",
+          "region": "Столица Эуразании",
+          "place": "большой тренировочный двор Борги",
+          "display": "большой тренировочный двор Борги",
+          "certainty": "prospective_engine_arrival",
+          "source": "memory/places.json"
+        },
+        "money": {
+          "on_person_copper": 260592,
+          "on_person_display": "26g 05s 92c",
+          "elsewhere": [
+            {
+              "account_id": "vern_instrument_float",
+              "where": "у Верна",
+              "description": "доверенные деньги на инструменты",
+              "balance_copper": null,
+              "balance_display": "UNKNOWN",
+              "known_principal_copper": 5000,
+              "known_principal_display": "50s 00c",
+              "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
+              "status": "settlement_pending",
+              "display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)"
+            }
+          ],
+          "elsewhere_display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)",
+          "excludes": [
+            "family funds",
+            "project funds",
+            "promo funds",
+            "earmarked gifts/expenses",
+            "payables"
+          ]
+        }
+      },
+      "scene": {
+        "visible_actors": [],
+        "visible_events": [],
+        "position_claims": [
+          {
+            "actor": "borga",
+            "name": "Борга",
+            "precision": "region_only",
+            "status": "target_in_current_capital_context"
+          },
+          {
+            "actor": "carrion",
+            "name": "Карион",
+            "precision": "named_place",
+            "status": "institutional_home"
+          },
+          {
+            "actor": "gareth",
+            "name": "Гарет",
+            "precision": "region_only",
+            "status": "active_capital_survey"
+          },
+          {
+            "actor": "meira",
+            "name": "Мэйра",
+            "precision": "region_only",
+            "status": "active_festival_coordinator"
+          },
+          {
+            "actor": "rena",
+            "name": "Рена",
+            "precision": "region_only",
+            "status": "known_region_exact_place_unknown"
+          }
+        ],
+        "recent_player_actions": [
+          {
+            "id": 2,
+            "kind": "local_search_or_move",
+            "raw": "Осматриваюсь. Ищу Боргу. (Гитара у меня)",
+            "status": "pending",
+            "resolution": "pending_resolution"
+          },
+          {
+            "id": 1,
+            "kind": "local_travel",
+            "raw": "Иду к тренировочному двору.",
+            "status": "resolved",
+            "resolution": "engine_resolved_local_travel"
+          }
+        ],
+        "pending_resolutions": [
+          {
+            "id": 1,
+            "kind": "local_navigation",
+            "target": "Борга",
+            "status": "pending"
+          }
+        ]
+      },
+      "player_known": {
+        "facts": [],
+        "memories": []
+      },
+      "constraints": {
+        "unknown_policy": "UNKNOWN stays UNKNOWN; do not infer hidden state.",
+        "player_control": "Narrator may not choose Arlequino dialogue, feelings, decisions or significant actions.",
+        "state_authority": "Only engine results may change authoritative world state.",
+        "hud_required": "Every ordinary game reply must visibly show time, current location, money on person, and personal money elsewhere. Never merge family/project funds into personal money.",
+        "technical_noise": "Do not show journal_seq, hashes, engine mode or migration diagnostics during normal play unless there is an error or the user asks."
+      },
+      "runtime": {
+        "engine": "1.0.2"
+      }
+    },
+    "narration_contract": {
+      "state_authority": "engine_scene_record_and_checkpoint_only",
+      "player_text_verbatim": "Осматриваюсь. Ищу Боргу. (Гитара у меня)",
+      "must_preserve": [
+        "verbatim player action",
+        "pending outcomes remain pending",
+        "money/time/region from GM packet",
+        "UNKNOWN values"
+      ],
+      "may_add": [
+        "sensory description already supported by perceivable state",
+        "neutral acknowledgement of player speech/performance"
+      ],
+      "forbidden": [
+        "resolve pending NPC/world response in narration",
+        "invent movement success",
+        "invent consent",
+        "invent income/expense",
+        "new hidden state mutation"
+      ]
+    },
+    "checkpoint": {
+      "checkpoint_id": 2,
+      "state_hash": "2e83dfe166542dd7e63a4f81ece05ba88aa4ff4bf31250cf444c4f28b60915f9",
+      "world_minute": 189114
+    }
+  },
+  "before_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
+  "after_hash": "57c6ce61a154b83c77115bec47ba095669700d2d3a55b766b722f9556da070e8"
+}
