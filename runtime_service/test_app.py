@@ -1,11 +1,13 @@
 import hashlib
 import hmac
 import json
+import queue
 import tempfile
 import unittest
 from pathlib import Path
 
 from app import request_paths_from_push, transport_mode, verify_github_signature
+from server import RuntimeService as ProductionRuntimeService
 
 
 class RuntimeServiceUnitTests(unittest.TestCase):
@@ -54,6 +56,20 @@ class RuntimeServiceUnitTests(unittest.TestCase):
             (root / "runtime").mkdir()
             (root / "runtime/transport_mode.json").write_text("not-json", encoding="utf-8")
             self.assertEqual(transport_mode(root), "invalid")
+
+    def test_production_enqueue_defers_mode_check_until_worker_sync(self):
+        service = object.__new__(ProductionRuntimeService)
+        service.queue = queue.Queue(maxsize=2)
+        result = service.enqueue("runtime/requests/q-first-after-activation.json", "delivery-1")
+        self.assertTrue(result["accepted"])
+        self.assertEqual(result["execution_guard"], "fresh_main_transport_mode_in_worker")
+        self.assertEqual(service.queue.get_nowait(), ("runtime/requests/q-first-after-activation.json", "delivery-1"))
+
+    def test_production_enqueue_rejects_non_request_path(self):
+        service = object.__new__(ProductionRuntimeService)
+        service.queue = queue.Queue(maxsize=2)
+        with self.assertRaises(ValueError):
+            service.enqueue("runtime/session_state.json")
 
 
 if __name__ == "__main__":
