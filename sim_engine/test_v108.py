@@ -57,13 +57,15 @@ class V108Tests(unittest.TestCase):
             self._install(old,True); old.activate_causal_encounter_memory_v107()
             self.assertEqual(old.process_player_turn(BAD_APPROACH_TURNS_V108[0],"Подхожу к Борге.")["status"],"scene_pending")
             self.assertEqual(old.process_player_turn(BAD_APPROACH_TURNS_V108[1],"Подхожу")["status"],"scene_pending")
+            expected_ids=[int(r[0]) for r in old.db.execute("SELECT p.id FROM scene_pending_resolution p JOIN scene_actions a ON a.id=p.scene_action_id WHERE a.turn_key IN (?,?) AND p.resolution_kind='local_navigation' AND p.status='pending' ORDER BY p.id",BAD_APPROACH_TURNS_V108).fetchall()]
+            self.assertEqual(len(expected_ids),2)
             old.process_player_turn("greet","Говорю: «Борга, доброе утро.»")
             memories0=list((old.character_core_v104("borga") or {}).get("memories") or [])
             self.assertEqual(len(memories0),1); snap=export_portable_checkpoint_v100(old,159)
         with seed_world_v108_lab(Path(self.tmp.name)/"repair.db") as w:
             self.assertTrue(import_portable_checkpoint_v100(w,snap)["ok"]); t0=w.now
             out=w.activate_visible_local_approach_repair_v108(); self.assertEqual(w.now,t0)
-            self.assertEqual(out["repair"]["cancelled_pending_ids"], [3,4])
+            self.assertEqual(out["repair"]["cancelled_pending_ids"], expected_ids)
             for key in BAD_APPROACH_TURNS_V108:
                 rows=w.db.execute("SELECT p.status FROM scene_pending_resolution p JOIN scene_actions a ON a.id=p.scene_action_id WHERE a.turn_key=? AND p.resolution_kind='local_navigation'",(key,)).fetchall()
                 self.assertTrue(rows); self.assertTrue(all(r["status"]!='pending' for r in rows))
