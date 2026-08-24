@@ -9,15 +9,27 @@ READMODEL_VERSION_V109 = "authoritative_pending_projection_v1"
 
 
 class V109RuntimeMixin:
-    """v1.0.9: session read-model must project current pending state, not stale turn snapshots."""
+    """v1.0.9: session read-model must be current and read-only."""
 
-    def _current_pending_ids_v109(self, player_id: str = "player") -> set[int]:
+    def _current_pending_rows_v109(self, player_id: str = "player") -> list[dict[str, Any]]:
         rows = self.db.execute(
-            "SELECT p.id FROM scene_pending_resolution p JOIN scene_actions a ON a.id=p.scene_action_id "
+            "SELECT p.id,p.resolution_kind,p.target_text,p.status "
+            "FROM scene_pending_resolution p JOIN scene_actions a ON a.id=p.scene_action_id "
             "WHERE a.actor_id=? AND p.status='pending' ORDER BY p.id",
             (player_id,),
         ).fetchall()
-        return {int(r[0]) for r in rows}
+        return [
+            {
+                "id": int(r["id"]),
+                "kind": str(r["resolution_kind"]),
+                "target": str(r["target_text"]) if r["target_text"] is not None else None,
+                "status": str(r["status"]),
+            }
+            for r in rows
+        ]
+
+    def _current_pending_ids_v109(self, player_id: str = "player") -> set[int]:
+        return {int(row["id"]) for row in self._current_pending_rows_v109(player_id)}
 
     def _sanitize_last_turn_v109(self, last_turn: dict[str, Any] | None, player_id: str = "player"):
         if not isinstance(last_turn, dict):
@@ -38,6 +50,50 @@ class V109RuntimeMixin:
             contract["must_preserve"] = must
             out["narration_contract"] = contract
         return out
+
+    def _session_readonly_packet_v109(self, player_id: str = "player") -> dict[str, Any]:
+        """Minimal current packet for session projection; performs reads only.
+
+        Historical build_gm_packet() intentionally records telemetry. Session-state
+        construction must not invoke it merely to refresh the read model.
+        """
+        living = self._scene103(player_id)
+        named = self._visible_named103(player_id)
+        pending = self._current_pending_rows_v109(player_id)
+        return {
+            "hud": self.build_hud_v102(player_id),
+            "scene": {
+                "visible_actors": [],
+                "visible_events": [],
+                "position_claims": [],
+                "recent_player_actions": [],
+                "pending_resolutions": pending,
+                "ambient": list((living or {}).get("population") or [])[:10],
+                "named_observations": named,
+            },
+            "player_known": {"facts": [], "memories": []},
+            "constraints": {
+                "session_readmodel": "Read-only current projection; not a gameplay GM-packet emission."
+            },
+            "runtime": {"engine": ENGINE_VERSION_V109, "packet_kind": "session_readonly_projection"},
+        }
+
+    def _event_with_session_packet_v109(self, last_event, journal_seq: int):
+        packet = self._session_readonly_packet_v109("player")
+        if isinstance(last_event, dict):
+            event = dict(last_event)
+            public = dict(event.get("result") or {}) if isinstance(event.get("result"), dict) else {}
+            stored = public.get("gm_packet")
+            if not isinstance(stored, dict) or "hud" not in stored:
+                public["gm_packet"] = packet
+            event["result"] = public
+            return event, False, packet
+        return {
+            "seq": int(journal_seq),
+            "event_key": "internal-v109-session-readonly-projection",
+            "event_type": "readmodel_projection",
+            "result": {"gm_packet": packet},
+        }, True, packet
 
     def activate_session_readmodel_repair_v109(self):
         return {
@@ -60,18 +116,29 @@ class V109RuntimeMixin:
         return base
 
     def build_session_state_v109(self, *, journal_seq: int, head_state_hash: str, last_event=None, preserved_last_turn=None):
+        event_for_super, synthetic_event, readonly_packet = self._event_with_session_packet_v109(last_event, journal_seq)
         state = super().build_session_state_v108(
             journal_seq=journal_seq,
             head_state_hash=head_state_hash,
-            last_event=None if (last_event or {}).get("event_type") == "session_readmodel_repair_activation" else last_event,
+            last_event=event_for_super,
             preserved_last_turn=preserved_last_turn,
         )
+        if synthetic_event and preserved_last_turn is None:
+            state["last_turn"] = None
         state["engine_version"] = ENGINE_VERSION_V109
         state["last_turn"] = self._sanitize_last_turn_v109(state.get("last_turn"), "player")
+        scene = dict(state.get("scene") or {})
+        current_scene = readonly_packet["scene"]
+        scene["ambient"] = list(current_scene.get("ambient") or [])
+        scene["named_observations"] = list(current_scene.get("named_observations") or [])
+        scene["pending_resolutions"] = list(current_scene.get("pending_resolutions") or [])
+        state["scene"] = scene
         state["readmodel_runtime"] = {
             "version": READMODEL_VERSION_V109,
             "pending_source": "authoritative_scene_pending_resolution_status_pending",
             "historical_repaired_pending_filtered": True,
+            "session_builder_read_only": True,
+            "gm_packet_fallback": "read_only_projection_no_telemetry",
         }
         return state
 
