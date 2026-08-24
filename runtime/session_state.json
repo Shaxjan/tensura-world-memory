@@ -1,9 +1,9 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.5",
-  "journal_seq": 6,
-  "head_state_hash": "938cd7112594773cdbffa6a6ecbdb3bbf4c6849ec53139fa443da0823fd18101",
+  "engine_version": "1.0.6",
+  "journal_seq": 7,
+  "head_state_hash": "de626d15ea346c9fc55b5be9a8763bcf1beac8e47556be375b1debc6ec884d3b",
   "hud": {
     "time": {
       "world_minute": 189120,
@@ -48,36 +48,25 @@
     "seq": 6,
     "event_key": "chat-20260824-go-small-training-yard-r000006",
     "event_type": "player_turn",
-    "status": "scene_pending",
-    "action_result": null,
+    "status": "superseded_parser_repair",
+    "action_result": {
+      "outcome": "no_effect_parser_repaired",
+      "time_advanced": 0,
+      "movement_executed": false,
+      "false_target_removed": "rena"
+    },
     "visible_actors": [],
-    "pending_resolutions": [
-      {
-        "id": 2,
-        "kind": "world_resolution_required",
-        "target": "Рена",
-        "status": "pending"
-      }
-    ],
+    "pending_resolutions": [],
     "narration_contract": {
-      "state_authority": "engine_scene_record_and_checkpoint_only",
+      "state_authority": "engine_v1.0.6_parser_repair",
       "player_text_verbatim": "Илу в малый тренировочный лагерь.",
       "must_preserve": [
-        "verbatim player action",
-        "pending outcomes remain pending",
-        "money/time/region from GM packet",
-        "UNKNOWN values"
-      ],
-      "may_add": [
-        "sensory description already supported by perceivable state",
-        "neutral acknowledgement of player speech/performance"
+        "old malformed turn had no movement effect",
+        "false Rena pending is cancelled"
       ],
       "forbidden": [
-        "resolve pending NPC/world response in narration",
-        "invent movement success",
-        "invent consent",
-        "invent income/expense",
-        "new hidden state mutation"
+        "pretend travel already happened",
+        "restore false Rena target"
       ]
     }
   },
@@ -143,14 +132,7 @@
       }
     ],
     "named_observations": [],
-    "pending_resolutions": [
-      {
-        "id": 2,
-        "kind": "world_resolution_required",
-        "target": "Рена",
-        "status": "pending"
-      }
-    ]
+    "pending_resolutions": []
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
@@ -160,5 +142,11 @@
     "shared_scheduler": true,
     "hidden_plans_not_narrator_knowledge": true,
     "hidden_autonomy_not_narrator_knowledge": true
+  },
+  "parser_runtime": {
+    "version": "intent_grounding_v1",
+    "safe_named_target_tokens": true,
+    "known_local_typo_repair": true,
+    "false_pending_repair": true
   }
 }

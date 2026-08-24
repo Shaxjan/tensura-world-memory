@@ -1,0 +1,38 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 7,
+  "event_key": "system-v106-intent-grounding-repair-j000007",
+  "event_type": "intent_grounding_repair_activation",
+  "world_minute": 189120,
+  "request": {
+    "reason": "repair false named-target grounding from r000006 without choosing or executing a new player action",
+    "source_engine": "1.0.5",
+    "target_engine": "1.0.6"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "intent_grounding_repair_v106",
+    "world_minute": 189120,
+    "repair": {
+      "status": "repaired",
+      "turn_key": "chat-20260824-go-small-training-yard-r000006",
+      "cancelled_pending_ids": [
+        2
+      ],
+      "time_advanced": 0,
+      "player_choice": false,
+      "original_action_executed": false
+    },
+    "time_advanced": 0,
+    "player_choice": false,
+    "does_not_assert": [
+      "movement success",
+      "new player action",
+      "Rena involvement"
+    ]
+  },
+  "before_hash": "938cd7112594773cdbffa6a6ecbdb3bbf4c6849ec53139fa443da0823fd18101",
+  "after_hash": "de626d15ea346c9fc55b5be9a8763bcf1beac8e47556be375b1debc6ec884d3b"
+}
