@@ -1,0 +1,98 @@
+name: Simulation Engine v1.0.8 Visible Local Approach Repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sim_engine/v108_*.py'
+      - 'sim_engine/test_v108.py'
+      - 'sim_engine/V108.md'
+      - '.github/workflows/sim-engine-v108.yml'
+      - '.github/workflows/sim-engine-v107.yml'
+      - '.github/workflows/runtime-turn.yml'
+  pull_request:
+    paths:
+      - 'sim_engine/v108_*.py'
+      - 'sim_engine/test_v108.py'
+      - 'sim_engine/V108.md'
+      - '.github/workflows/sim-engine-v108.yml'
+      - '.github/workflows/sim-engine-v107.yml'
+      - '.github/workflows/runtime-turn.yml'
+
+jobs:
+  test:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v1.0 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v100.py
+      - name: Run v1.0.1 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v101.py
+      - name: Run v1.0.2 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v102.py
+      - name: Run v1.0.3 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v103.py
+      - name: Run v1.0.4 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v104.py
+      - name: Run v1.0.5 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v105.py
+      - name: Run v1.0.6 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v106.py
+      - name: Run v1.0.7 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v107.py
+      - name: Run v1.0.8 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v108.py
+      - name: Rehearse v1.0.8 against current LIVE v1.0.7
+        working-directory: sim_engine
+        run: python v108_rehearsal.py --repo-root .. --out /tmp/v108_rehearsal.json
+
+  activate:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
+    concurrency:
+      group: tensura-authoritative-runtime
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fast-forward to current main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+      - name: Activate v1.0.8 Visible Local Approach Repair
+        run: python sim_engine/v108_activate.py --repo-root . --out /tmp/v108-activate.json
+      - name: Commit v1.0.8 runtime activation
+        run: |
+          git config user.name "tensura-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add runtime/checkpoints/v108_base_j*.json runtime/journal runtime/session_state.json runtime/runtime_state.json
+          if git diff --cached --quiet; then
+            echo "v1.0.8 runtime already active"
+            exit 0
+          fi
+          git commit -m "Runtime v1.0.8 — Visible Local Approach Repair activation"
+          git push origin HEAD:main
