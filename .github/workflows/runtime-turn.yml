@@ -44,7 +44,9 @@ jobs:
           print(json.load(open("runtime/runtime_state.json", encoding="utf-8"))["engine_version"])
           PY
           )
-          if [ "$ENGINE" = "1.0.5" ]; then
+          if [ "$ENGINE" = "1.0.6" ]; then
+            python sim_engine/v106_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+          elif [ "$ENGINE" = "1.0.5" ]; then
             python sim_engine/v105_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
           elif [ "$ENGINE" = "1.0.4" ]; then
             python sim_engine/v104_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
