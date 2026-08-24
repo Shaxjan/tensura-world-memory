@@ -22,7 +22,6 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
-          filter: blob:none
           sparse-checkout: |
             sim_engine
             runtime
