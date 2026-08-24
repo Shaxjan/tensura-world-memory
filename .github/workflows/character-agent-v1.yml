@@ -6,12 +6,16 @@ on:
     paths:
       - 'sim_engine/character_agent_contract.py'
       - 'sim_engine/test_character_agent_contract.py'
+      - 'sim_engine/rena_character_profile.py'
+      - 'sim_engine/test_rena_character_profile.py'
       - 'sim_engine/CHARACTER_AGENT_V1.md'
       - '.github/workflows/character-agent-v1.yml'
   pull_request:
     paths:
       - 'sim_engine/character_agent_contract.py'
       - 'sim_engine/test_character_agent_contract.py'
+      - 'sim_engine/rena_character_profile.py'
+      - 'sim_engine/test_rena_character_profile.py'
       - 'sim_engine/CHARACTER_AGENT_V1.md'
       - '.github/workflows/character-agent-v1.yml'
 
@@ -26,9 +30,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Character Agent contract tests
+      - name: Character Agent and Rena profile tests
         working-directory: sim_engine
-        run: python -m unittest -v test_character_agent_contract.py
+        run: python -m unittest -v test_character_agent_contract.py test_rena_character_profile.py
       - name: Compile safety kernel
         working-directory: sim_engine
-        run: python -m py_compile character_agent_contract.py test_character_agent_contract.py
+        run: python -m py_compile character_agent_contract.py test_character_agent_contract.py rena_character_profile.py test_rena_character_profile.py
