@@ -32,4 +32,4 @@ fi
 git -C "$REPO_PATH" config user.name "tensura-runtime-service"
 git -C "$REPO_PATH" config user.email "runtime-service@users.noreply.github.com"
 
-exec python3 /app/runtime_service/app.py
+exec python3 /app/runtime_service/server.py
