@@ -15,6 +15,8 @@ on:
 
 jobs:
   test:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -79,3 +81,43 @@ jobs:
       - name: Rehearse v0.10 scene bridge and autonomy cutover gate
         working-directory: sim_engine
         run: python v10_rehearsal.py --repo-root .. --out /tmp/v10_rehearsal.json
+      - name: Run v1.0 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v100.py
+      - name: Rehearse v1.0 authoritative runtime cutover
+        working-directory: sim_engine
+        run: python v100_rehearsal.py --repo-root .. --out /tmp/v100_rehearsal.json
+
+  cutover_bundle:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/sim-engine-v100'
+    needs: test
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sim-engine-v100
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate immutable v159 cutover checkpoint and prepared pointer
+        working-directory: sim_engine
+        run: >-
+          python v100_rehearsal.py --repo-root ..
+          --out /tmp/v100_rehearsal.json
+          --checkpoint-out ../runtime/checkpoints/cutover_v159.json
+          --manifest-out ../runtime/runtime_state.json
+      - name: Commit generated cutover bundle to candidate branch
+        run: |
+          git config user.name "tensura-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add runtime/checkpoints/cutover_v159.json runtime/runtime_state.json
+          if git diff --cached --quiet; then
+            echo "Cutover bundle already current"
+            exit 0
+          fi
+          git commit -m "v1.0 generated cutover bundle for LIVE v159"
+          git push origin HEAD:sim-engine-v100
