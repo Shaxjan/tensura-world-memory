@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_FAST_TURN_REQUEST",
+  "schema_version": 1,
+  "event_key": "chat-20260824-wait-borga-response-q001",
+  "event_type": "player_turn",
+  "expected_last_gameplay_turn_key": "chat-20260824-greet-borga-zdravstvuyte-q001",
+  "request": {
+    "raw_text": "Жду ответа"
+  }
+}
