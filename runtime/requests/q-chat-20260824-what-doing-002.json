@@ -1,0 +1,8 @@
+{
+  "format": "TENSURA_FAST_TURN_REQUEST",
+  "schema_version": 1,
+  "event_key": "chat-20260824-ask-borga-what-doing-q002",
+  "event_type": "player_turn",
+  "expected_last_gameplay_turn_key": "chat-20260824-repeat-greet-borga-r000017",
+  "raw_text": "Что делаешь?"
+}
