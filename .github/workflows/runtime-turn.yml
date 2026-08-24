@@ -38,7 +38,20 @@ jobs:
           fi
           echo "path=$REQUEST" >> "$GITHUB_OUTPUT"
       - name: Execute authoritative turn
-        run: python sim_engine/v102_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+        run: |
+          ENGINE=$(python - <<'PY'
+          import json
+          print(json.load(open("runtime/runtime_state.json", encoding="utf-8"))["engine_version"])
+          PY
+          )
+          if [ "$ENGINE" = "1.0.3" ]; then
+            python sim_engine/v103_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+          elif [ "$ENGINE" = "1.0.2" ]; then
+            python sim_engine/v102_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+          else
+            echo "Unsupported authoritative runtime engine: $ENGINE"
+            exit 1
+          fi
       - name: Commit engine event, pointer and session fast-path
         run: |
           git config user.name "tensura-runtime-bot"
