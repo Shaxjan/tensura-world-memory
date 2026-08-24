@@ -1,13 +1,13 @@
 {
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
-  "engine_version": "1.0.1",
+  "engine_version": "1.0.2",
   "mode": "engine_authoritative",
   "source_live_version": 159,
-  "base_checkpoint": "runtime/checkpoints/cutover_v159.json",
-  "base_state_hash": "d273179dd9c53eafe0fbab63d40e7f8e2ac7c491acb2c3a12fb738c3be0400f5",
+  "base_checkpoint": "runtime/checkpoints/v102_base_j000001.json",
+  "base_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
   "journal_dir": "runtime/journal",
-  "journal_base_seq": 0,
+  "journal_base_seq": 1,
   "journal_seq": 1,
   "head_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
   "legacy_rollback": {
@@ -27,8 +27,10 @@
     "pointer_second": true,
     "immutable_journal": true,
     "checkpoint_every": 25,
-    "request_queue": true
+    "request_queue": true,
+    "session_fast_path": true
   },
   "last_event": "runtime/journal/j000001.json",
-  "last_request": "runtime/requests/r000001.json"
+  "last_request": "runtime/requests/r000001.json",
+  "session_state": "runtime/session_state.json"
 }

@@ -1,0 +1,100 @@
+{
+  "format": "TENSURA_SESSION_STATE",
+  "schema_version": 1,
+  "engine_version": "1.0.2",
+  "journal_seq": 1,
+  "head_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
+  "hud": {
+    "time": {
+      "world_minute": 189114,
+      "display": "T+131 ~07:54"
+    },
+    "location": {
+      "region_id": "eurazania",
+      "region": "Столица Эуразании",
+      "place": "большой тренировочный двор Борги",
+      "display": "большой тренировочный двор Борги",
+      "certainty": "prospective_engine_arrival",
+      "source": "memory/places.json"
+    },
+    "money": {
+      "on_person_copper": 260592,
+      "on_person_display": "26g 05s 92c",
+      "elsewhere": [
+        {
+          "account_id": "vern_instrument_float",
+          "where": "у Верна",
+          "description": "доверенные деньги на инструменты",
+          "balance_copper": null,
+          "balance_display": "UNKNOWN",
+          "known_principal_copper": 5000,
+          "known_principal_display": "50s 00c",
+          "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
+          "status": "settlement_pending",
+          "display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)"
+        }
+      ],
+      "elsewhere_display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)",
+      "excludes": [
+        "family funds",
+        "project funds",
+        "promo funds",
+        "earmarked gifts/expenses",
+        "payables"
+      ]
+    }
+  },
+  "last_turn": {
+    "seq": 1,
+    "event_key": "live-000001-recovered-training-yard",
+    "event_type": "player_turn",
+    "status": "executed",
+    "action_result": {
+      "outcome": "arrived",
+      "origin_text": "Eurazania capital; Arlequino leaves lodging heading to Borga",
+      "destination_key": "eurazania_borga_big_training_yard",
+      "destination_text": "большой тренировочный двор Борги",
+      "travel_minutes": 12,
+      "started_at": 189102,
+      "arrived_at": 189114,
+      "place_source": "memory/places.json",
+      "time_basis": "prospective_local_city_default_v1.0.1",
+      "does_not_assert": [
+        "Borga presence",
+        "NPC encounter",
+        "exact street geometry"
+      ]
+    },
+    "visible_actors": [],
+    "pending_resolutions": [],
+    "narration_contract": {
+      "state_authority": "engine_v1.0.1_local_travel",
+      "player_text_verbatim": "Иду к тренировочному двору.",
+      "must_preserve": [
+        "arrival",
+        "engine travel time",
+        "money/region from GM packet",
+        "UNKNOWN NPC presence"
+      ],
+      "may_add": [
+        "sensory description consistent with destination and visible state"
+      ],
+      "forbidden": [
+        "invent Borga presence",
+        "invent payment",
+        "invent encounter",
+        "change player intent"
+      ]
+    }
+  },
+  "display_contract": {
+    "always_show": [
+      "hud.time.display",
+      "hud.location.display",
+      "hud.money.on_person_display",
+      "hud.money.elsewhere_display"
+    ],
+    "normal_play_technical_fields_hidden": true,
+    "recommended_header": "Время: {time} | Место: {location} | При мне: {on_person} | Мои деньги вне кошелька: {elsewhere}"
+  }
+}
