@@ -3,6 +3,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+OLD_HEADER = "# Tensura World Memory — Authoritative Runtime v1.0.11 Protocol"
+NEW_HEADER = "# Tensura World Memory — Authoritative Runtime v1.0.12 Protocol"
+OLD_ENGINE_LINE = "- `engine_version = 1.0.11`;"
+NEW_ENGINE_LINE = "- `engine_version = 1.0.12`;"
+
 
 def _once(text: str, old: str, new: str) -> str:
     count = text.count(old)
@@ -11,13 +16,34 @@ def _once(text: str, old: str, new: str) -> str:
     return text.replace(old, new, 1)
 
 
+def _repair_already_v112(text: str) -> str:
+    """Validate/idempotently repair an already-v1.0.12 MASTER document."""
+    if NEW_HEADER not in text:
+        raise RuntimeError("v1.0.12 protocol header missing")
+    marker = "Для v1.0.12:\n"
+    pos = text.find(marker)
+    if pos < 0:
+        raise RuntimeError("v1.0.12 source-of-truth section missing")
+    window = text[pos:pos + 500]
+    if NEW_ENGINE_LINE in window:
+        return text
+    if OLD_ENGINE_LINE in window:
+        return text[:pos] + window.replace(OLD_ENGINE_LINE, NEW_ENGINE_LINE, 1) + text[pos + len(window):]
+    raise RuntimeError("v1.0.12 source-of-truth engine_version line is missing or unexpected")
+
+
 def patched_protocol(text: str) -> str:
-    text = _once(
-        text,
-        "# Tensura World Memory — Authoritative Runtime v1.0.11 Protocol",
-        "# Tensura World Memory — Authoritative Runtime v1.0.12 Protocol",
-    )
+    # Idempotent path for post-activation reruns and the one observed v1.0.12
+    # document defect where the heading changed but the engine bullet did not.
+    if NEW_HEADER in text:
+        return _repair_already_v112(text)
+
+    if OLD_HEADER not in text:
+        raise RuntimeError("protocol is neither v1.0.11 source nor v1.0.12 target")
+
+    text = _once(text, OLD_HEADER, NEW_HEADER)
     text = _once(text, "Для v1.0.11:\n", "Для v1.0.12:\n")
+    text = _once(text, OLD_ENGINE_LINE, NEW_ENGINE_LINE)
     text = _once(
         text,
         "- `runtime/requests/q-<request-id>.json` — нормальные v1.0.11 fast requests без client-allocated seq;\n- `runtime/requests/rNNNNNN.json` — legacy/recovery requests с явным seq;",
@@ -67,7 +93,14 @@ def main():
     old = path.read_text(encoding="utf-8")
     new = patched_protocol(old)
     if args.check:
+        # Check means the current document is either already correct or can be
+        # deterministically repaired to a valid v1.0.12 target.
+        if NEW_HEADER not in new or NEW_ENGINE_LINE not in new:
+            raise RuntimeError("v1.0.12 protocol target validation failed")
         print("v1.0.12 protocol patch check: OK")
+        return
+    if new == old:
+        print("v1.0.12 protocol already correct")
         return
     path.write_text(new, encoding="utf-8")
     print("v1.0.12 protocol patch applied")
