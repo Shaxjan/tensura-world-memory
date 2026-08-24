@@ -1,0 +1,12 @@
+{
+  "format": "TENSURA_REQUEST_RECEIPT",
+  "schema_version": 1,
+  "request_path": "runtime/requests/r000019.json",
+  "request_format": "TENSURA_TURN_REQUEST",
+  "event_key": "chat-20260824-player-turn-r000019",
+  "status": "superseded",
+  "seq": null,
+  "request_mode": null,
+  "error": "unprocessed v1.0.11 transport attempt; never apply automatically",
+  "authoritative_gameplay_change": false
+}

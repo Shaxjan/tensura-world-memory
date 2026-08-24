@@ -1,0 +1,38 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 19,
+  "event_key": "system-v112-fast-path-reliability-j000019",
+  "event_type": "runtime_fast_path_reliability_activation",
+  "world_minute": 189138,
+  "request": {
+    "reason": "repair fast request schema contract and restore proven reliable GitHub Actions hot path",
+    "source_engine": "1.0.11",
+    "target_engine": "1.0.12",
+    "superseded_unprocessed_transport_requests": [
+      "runtime/requests/r000019.json",
+      "runtime/requests/q-chat-20260824-what-doing-001.json",
+      "runtime/requests/q-chat-20260824-what-doing-002.json"
+    ]
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "runtime_fast_path_reliability_v112",
+    "world_minute": 189138,
+    "time_advanced": 0,
+    "player_choice": false,
+    "db_gameplay_mutation": false,
+    "transport_only": true,
+    "does_not_assert": [
+      "new player action",
+      "new NPC action",
+      "movement",
+      "memory change",
+      "relationship change",
+      "personality change"
+    ]
+  },
+  "before_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8",
+  "after_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8"
+}

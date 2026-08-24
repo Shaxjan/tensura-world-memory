@@ -1,4 +1,4 @@
-# Tensura World Memory — Authoritative Runtime v1.0.11 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.12 Protocol
 
 Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.10 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy, safe intent grounding, causal named-character memory, finite visible local approach и чистый session read-model, а также вводит первый ограниченный authoritative NPC-response policy для простого прямого приветствия.
 
@@ -7,7 +7,7 @@
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.11:
+Для v1.0.12:
 - `engine_version = 1.0.11`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
@@ -31,8 +31,9 @@
 ### Остальные файлы
 - `runtime/checkpoints/` — immutable portable snapshots;
 - `runtime/journal/jNNNNNN.json` — append-only авторитетные переходы;
-- `runtime/requests/q-<request-id>.json` — нормальные v1.0.11 fast requests без client-allocated seq;
+- `runtime/requests/q-<request-id>.json` — нормальные fast requests без client-allocated seq; canonical payload: `request.raw_text`;
 - `runtime/requests/rNNNNNN.json` — legacy/recovery requests с явным seq;
+- `runtime/request_receipts/<request>.receipt.json` — неавторитетный transport receipt (`executed` / `failed` / `superseded`), не заменяющий journal/session;
 - `live_state.json` — замороженный legacy v159 / rollback-anchor;
 - `world_save.json`, `live_v*/`, `memory/` — история и аудит, они не перекрывают runtime.
 
@@ -50,17 +51,18 @@
 
 ## 3. Быстрый игровой ход
 
-### Нормальный synchronized fast path v1.0.11
+### Нормальный synchronized fast path v1.0.12
 
 Если игровой чат уже держит последний подтверждённый `runtime/session_state.json` в контексте, **предварительно перечитывать `runtime/runtime_state.json` для каждого обычного хода не требуется**.
 
 1. Взять `last_turn.event_key` из последнего подтверждённого session state как `expected_last_gameplay_turn_key`.
-2. Создать ровно один уникальный `runtime/requests/q-<request-id>.json` формата `TENSURA_FAST_TURN_REQUEST`.
-3. Fast request **не содержит `seq`**. Он содержит дословный `raw_text`, уникальный `event_key` и `expected_last_gameplay_turn_key`.
+2. Создать ровно один уникальный `runtime/requests/q-<request-id>.json` формата `TENSURA_FAST_TURN_REQUEST`. Повторно enqueue того же действия до transport result запрещён.
+3. Fast request **не содержит `seq`** и не требует отдельный `request_id`. Canonical shape: уникальный `event_key`, `event_type`, `expected_last_gameplay_turn_key` и объект `request` с дословным `request.raw_text`. Для recovery v1.0.12 допускает top-level `raw_text` только если `request` object отсутствует; конфликт двух форм reject'ится.
 4. Workflow `Tensura Runtime Turn` под authoritative concurrency lock читает свежий LIVE-pointer и сам назначает `seq = journal_seq + 1` непосредственно перед выполнением.
 5. Processor сравнивает `expected_last_gameplay_turn_key` с текущим `session_state.last_turn.event_key`. Zero-time technical activation не меняет `last_turn` и не ломает fast path.
 6. Если другой **игровой** ход уже произошёл, guard обязан завершить request ошибкой **до** engine mutation/journal write. Нельзя молча переигрывать действие на изменившемся gameplay-контексте.
-7. После подтверждённой обработки прочитать свежий `runtime/session_state.json` один раз и проверить, что `last_turn.event_key` равен отправленному `event_key`. Затем выдать обычную игровую сцену.
+7. После обработки сначала проверить `runtime/request_receipts/<request>.receipt.json`. `failed`/`superseded` означает: gameplay event не подтверждён и повтор автоматически запрещён. При `executed` прочитать свежий `runtime/session_state.json` и проверить, что `last_turn.event_key` равен отправленному `event_key`. Затем выдать обычную игровую сцену.
+8. Если receipt ещё отсутствует, не создавать второй request для того же пользовательского действия. Повтор допустим только после явного transport failure/recovery и синхронизации.
 
 ### Recovery / новый чат
 
@@ -73,7 +75,7 @@
 
 Тогда сначала перечитать `runtime/runtime_state.json` + `runtime/session_state.json`, при необходимости выполнить full replay, и только после синхронизации явно повторить действие. Старый эффект вслепую не повторять.
 
-Legacy `runtime/requests/rNNNNNN.json` с client-allocated `seq` сохраняется только для recovery/backward compatibility. Нормальный v1.0.11 ход использует `q-*` и server-side sequence allocation.
+Legacy `runtime/requests/rNNNNNN.json` с client-allocated `seq` сохраняется только для recovery/backward compatibility. Нормальный v1.0.12 ход использует один `q-*` и server-side sequence allocation. Три request-файла инцидента 24.08.2026 (`r000019`, `q-...001`, `q-...002`) являются unprocessed transport failures и после v1.0.12 помечаются `superseded`; их нельзя исполнять автоматически.
 
 Нельзя выдавать игровой исход до подтверждённого runtime event/session state.
 
@@ -240,6 +242,8 @@ Fast request имеет формат `TENSURA_FAST_TURN_REQUEST` и хранит
 
 Обычный synchronized путь после подтверждённого предыдущего хода: **enqueue q-request → authoritative processing → один postflight session read**.
 
+v1.0.12 Reliability Repair уточняет контракт: `request_id` не обязателен; canonical payload — `request.raw_text`; top-level `raw_text` принимается только как compatibility normalization; workflow сначала идентифицирует request на triggering SHA, затем синхронизируется со свежим `main`; каждый достигший processor request получает transport receipt. Gameplay semantics при этом не меняются.
+
 ## 12. Version continuity / activation
 
 Каждая смена semantics сначала compact-ит подтверждённый предыдущий LIVE head в новый immutable base checkpoint, затем добавляет новый activation journal event.
@@ -282,6 +286,13 @@ Activation v1.0.11:
 - сохраняет последний gameplay `last_turn`;
 - включает auto-sequenced `q-*` requests и `expected_last_gameplay_turn_key` guard;
 - legacy `rNNNNNN` остаётся recovery/backward-compatible путём.
+
+Activation v1.0.12:
+- transport-only, 0 игровых минут, `before_hash == after_hash`;
+- не исполняет задним числом `r000019`/два `q` инцидента и помечает их transport receipts как `superseded`;
+- не меняет последний gameplay `last_turn`, место, деньги, память, personality, relationships или NPC-response;
+- исправляет schema contract fast request и вводит receipts;
+- возвращает runtime-turn workflow к доказанному full-checkout/setup-python path, сохраняя auto-seq и stale gameplay guard.
 
 
 ## 13. Именованные NPC и локальный поиск

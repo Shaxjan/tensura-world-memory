@@ -1,0 +1,12 @@
+{
+  "format": "TENSURA_REQUEST_RECEIPT",
+  "schema_version": 1,
+  "request_path": "runtime/requests/q-chat-20260824-what-doing-002.json",
+  "request_format": "TENSURA_FAST_TURN_REQUEST",
+  "event_key": "chat-20260824-ask-borga-what-doing-q002",
+  "status": "superseded",
+  "seq": null,
+  "request_mode": null,
+  "error": "unprocessed v1.0.11 transport attempt; never apply automatically",
+  "authoritative_gameplay_change": false
+}
