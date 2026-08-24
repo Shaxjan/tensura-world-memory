@@ -7,6 +7,7 @@ from pathlib import Path
 from character_agent_engine_routing import (
     VISIBLE_RENA_KEY,
     build_engine_owned_rena_context_v113,
+    collect_actor_causal_facts,
     install_candidate_reciprocal_fixture,
     reciprocal_key,
 )
@@ -113,45 +114,53 @@ class CharacterAgentEngineRoutingTests(unittest.TestCase):
             finally:
                 world.close()
 
-    def test_engine_owned_context_exposes_only_rena_actor_knowledge(self):
+    def test_unmaterialized_rena_does_not_inherit_other_actor_knowledge(self):
         with tempfile.TemporaryDirectory() as td:
             world, _ = self.load_activated(td)
             try:
+                # Rena intentionally has a Character Core but no actors-row yet.
+                self.assertIsNotNone(world.character_core_v113("rena"))
+                self.assertIsNone(world.db.execute("SELECT id FROM actors WHERE id='rena'").fetchone())
+
                 turn = "routing-knowledge-005"
                 raw = "Спрашиваю Рену: что ты знаешь?"
                 install_candidate_reciprocal_fixture(world, source_turn_key=turn, raw_text=raw)
 
                 world._put_fact103(
-                    "test:rena:known-direct",
-                    {"kind": "test_fact", "text": "known directly by Rena"},
+                    "test:player:known-direct",
+                    {"kind": "test_fact", "text": "known directly by player"},
                     "candidate:test",
                     significance=5,
                 )
                 world._put_fact103(
-                    "test:rena:uncertain",
-                    {"kind": "test_fact", "text": "uncertain belief"},
+                    "test:player:uncertain",
+                    {"kind": "test_fact", "text": "uncertain player belief"},
                     "candidate:test",
                     significance=5,
                 )
                 world._put_fact103(
-                    "test:other:private",
-                    {"kind": "test_fact", "text": "belongs to another actor"},
+                    "test:global:unowned",
+                    {"kind": "test_fact", "text": "global fact with no Rena transmission"},
                     "candidate:test",
                     significance=5,
                 )
                 world.db.execute(
                     "INSERT OR REPLACE INTO actor_knowledge(actor_id,fact_key,confidence,learned_at,source) VALUES(?,?,?,?,?)",
-                    ("rena", "test:rena:known-direct", 100, int(world.now), "candidate:test_direct"),
+                    ("player", "test:player:known-direct", 100, int(world.now), "candidate:test_direct"),
                 )
                 world.db.execute(
                     "INSERT OR REPLACE INTO actor_knowledge(actor_id,fact_key,confidence,learned_at,source) VALUES(?,?,?,?,?)",
-                    ("rena", "test:rena:uncertain", 70, int(world.now), "candidate:test_uncertain"),
-                )
-                world.db.execute(
-                    "INSERT OR REPLACE INTO actor_knowledge(actor_id,fact_key,confidence,learned_at,source) VALUES(?,?,?,?,?)",
-                    ("borga", "test:other:private", 100, int(world.now), "candidate:test_other"),
+                    ("player", "test:player:uncertain", 70, int(world.now), "candidate:test_uncertain"),
                 )
                 world.db.commit()
+
+                player_known = collect_actor_causal_facts(world, "player")
+                player_keys = {row["fact_key"] for row in player_known}
+                self.assertIn("test:player:known-direct", player_keys)
+                self.assertNotIn("test:player:uncertain", player_keys)
+
+                # No actors-row means no actor_knowledge can be fabricated for Rena.
+                self.assertEqual(collect_actor_causal_facts(world, "rena"), [])
 
                 routed = build_engine_owned_rena_context_v113(
                     world,
@@ -163,12 +172,10 @@ class CharacterAgentEngineRoutingTests(unittest.TestCase):
                 context = routed.context
                 self.assertIsNotNone(context)
                 knowledge = context["knowledge"]
-                keys = knowledge["causal_fact_keys"]
-                self.assertIn("test:rena:known-direct", keys)
-                self.assertNotIn("test:rena:uncertain", keys)
-                self.assertNotIn("test:other:private", keys)
-                records = {row["fact_key"]: row for row in knowledge["causal_facts"]}
-                self.assertEqual(records["test:rena:known-direct"]["value"]["text"], "known directly by Rena")
+                self.assertEqual(knowledge["causal_fact_keys"], [])
+                self.assertEqual(knowledge["causal_facts"], [])
+                self.assertNotIn("test:player:known-direct", knowledge["causal_fact_keys"])
+                self.assertNotIn("test:global:unowned", knowledge["causal_fact_keys"])
                 self.assertEqual(knowledge["minimum_confidence_exposed"], 100)
                 self.assertTrue(context["routing"]["engine_owned"])
                 self.assertTrue(context["routing"]["player_visibility_does_not_imply_reciprocal_awareness"])
