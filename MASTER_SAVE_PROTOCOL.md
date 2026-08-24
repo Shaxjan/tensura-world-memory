@@ -1,14 +1,14 @@
-# Tensura World Memory — Authoritative Runtime v1.0.9 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.10 Protocol
 
-Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.9 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy, safe intent grounding, causal named-character memory и finite visible local approach, а также требует, чтобы session read-model показывал только действительно текущие authoritative pending.
+Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.10 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy, safe intent grounding, causal named-character memory, finite visible local approach и чистый session read-model, а также вводит первый ограниченный authoritative NPC-response policy для простого прямого приветствия.
 
 ## 1. Источник истины
 
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.9:
-- `engine_version = 1.0.9`;
+Для v1.0.10:
+- `engine_version = 1.0.10`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
@@ -23,6 +23,8 @@
 Технический system-event активации новой версии не должен подменять `last_turn` последнего игрового хода.
 
 `last_turn.pending_resolutions` в текущем session state является проекцией **текущих** authoritative rows со `status='pending'`, а не архивным снимком старых pending. Repaired/cancelled/resolved historical rows остаются в БД/journal для аудита, но не показываются как текущие pending.
+
+Построение session read-model является read-only. Оно не должно создавать GM telemetry, увеличивать metrics или менять authoritative hash только из-за чтения.
 
 Если `session_state.journal_seq` совпадает с pointer, в уже синхронизированном чате мастер использует его напрямую. При новом чате, конфликте seq/hash или ошибке нужен full replay.
 
@@ -80,6 +82,8 @@
 В нормальной игре не показывать `engine_authoritative`, `journal_seq`, hashes, migration diagnostics, скрытые Character Core/plan/autonomy/memory records и внутренние resolver-данные.
 
 Сначала HUD, затем обычная сцена. Технические данные показывать только при ошибке, recovery или прямом запросе пользователя.
+
+Если NPC-response уже разрешён движком, мастер может передать только engine-provided observable semantics/реплику. Скрытая причина решения, Character Plan, scheduler state и private memory не раскрываются.
 
 ## 6. Living Scene Runtime
 
@@ -182,6 +186,26 @@ Production `actors` пока содержит generic actor-state только �
 
 Memory fact приватен для character state и не становится знанием рассказчика/других NPC автоматически.
 
+## 11A. Causal NPC Response v1
+
+v1.0.10 добавляет первый bounded authoritative response resolver для persistent named character.
+
+Первая калибровка ограничена случаем **Борга + простое прямое приветствие**. Ответ разрешён только для нового хода после activation, если одновременно выполнены условия:
+- Борга прямо видим игроку в текущей living scene;
+- Борга явно назван через safe intent grounding;
+- ход содержит `speech_or_request`;
+- для этого же нового хода уже создана causal encounter memory Борги;
+- текущий Character Plan подтверждает точное присутствие Борги в том же месте в `role_duty` block;
+- фраза является только приветствием, а не вопросом, просьбой, предложением или иным содержательным social action.
+
+Разрешённый результат первой калибровки: `minimal_reciprocal_greeting` / `return_greeting`, 0 полных world minutes. Canonical surface может зеркально вернуть распознанное приветствие, например `Доброе утро.`.
+
+Response policy внутри Character Core является скрытой prospective механикой, а не чертой характера. Нельзя выводить из ответа эмоцию, tone, approval/disapproval, симпатию, доверие, consent, willingness to continue conversation или relationship delta.
+
+Наблюдаемый игроком ответ хранится отдельно как `v110:player_observed_response:borga:<turn_key>` и может стать player knowledge. Скрытый план/decision basis в этот observable fact не записывается.
+
+Всё вне этой узкой калибровки остаётся unresolved до отдельной поддерживаемой response-механики.
+
 ## 12. Version continuity / activation
 
 Каждая смена semantics сначала compact-ит подтверждённый предыдущий LIVE head в новый immutable base checkpoint, затем добавляет новый activation journal event.
@@ -206,6 +230,15 @@ Activation v1.0.9:
 - не меняет gameplay DB state, память, отношения, деньги или место;
 - сохраняет последний игровой ход;
 - пересобирает session read-model так, чтобы `last_turn.pending_resolutions` содержал только реально текущие authoritative pending.
+
+Activation v1.0.10:
+- 0 игровых минут;
+- не является действием Арлекино или Борги;
+- materializes только prospective response policy в Character Core;
+- не меняет personality, relationships, existing memories, деньги, регион или место;
+- не создаёт NPC-response задним числом;
+- прежнее приветствие `r000013` остаётся исторически без подтверждённой реакции;
+- первый authoritative NPC-response возможен только на новом player turn после activation.
 
 ## 13. Именованные NPC и локальный поиск
 
@@ -238,7 +271,7 @@ Pending нужен только там, где исход нельзя безо�
 
 System resume допускается только для уже явно выбранного действия. Generic resolver нельзя использовать для обхода денег, боя, магии/лечения, рынка, силы или межрегионального travel.
 
-Факт того, что Борга услышал принятую явную реплику, не разрешает автоматически закрывать pending его ответом.
+Факт того, что Борга услышал принятую явную реплику, сам по себе не разрешает произвольный ответ. v1.0.10 снимает неопределённость только в своей узкой simple-greeting калибровке; вопросы, просьбы, предложения и прочие содержательные реакции остаются pending/unresolved согласно поддерживаемой механике.
 
 Текущий session read-model обязан проверять authoritative `scene_pending_resolution.status`. Старый pending после `repaired/cancelled/resolved` не может оставаться в `last_turn.pending_resolutions` как будто он всё ещё активен.
 
@@ -314,6 +347,10 @@ Emergency rollback: остановить runtime writes; проверить anch
 - materialize named character как generic actor с фиктивными обязательными полями ради удобства схемы;
 - auto-bind bare same-scene movement к видимому NPC без явного target;
 - показывать repaired/cancelled historical pending как текущий pending в session read-model;
+- строить session read-model через side-effecting GM telemetry path;
+- генерировать произвольную NPC-реплику без authoritative response semantics;
+- трактовать minimal reciprocal greeting как эмоцию, отношение, согласие или готовность продолжать разговор;
+- ретроактивно разрешать старые NPC-response после установки новой response policy;
 - превращать causal testimony в абсолютную истину;
 - показывать техничку вместо игровой сцены без необходимости;
 - пропускать обязательный HUD.
