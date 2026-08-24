@@ -1,19 +1,16 @@
-name: Simulation Engine v1.0.2 Fast Path
+name: Simulation Engine v1.0.2 Legacy Regression
 
 on:
   push:
-    branches: [main]
     paths:
       - 'sim_engine/v102_*.py'
+      - 'sim_engine/test_v102.py'
       - '.github/workflows/sim-engine-v102.yml'
-      - '.github/workflows/runtime-turn.yml'
-      - 'MASTER_SAVE_PROTOCOL.md'
   pull_request:
     paths:
       - 'sim_engine/v102_*.py'
+      - 'sim_engine/test_v102.py'
       - '.github/workflows/sim-engine-v102.yml'
-      - '.github/workflows/runtime-turn.yml'
-      - 'MASTER_SAVE_PROTOCOL.md'
 
 jobs:
   test:
@@ -32,42 +29,8 @@ jobs:
       - name: Run v1.0.1 regression tests
         working-directory: sim_engine
         run: python -m unittest -v test_v101.py
-      - name: Run v1.0.2 tests
+      - name: Run v1.0.2 regression tests
         working-directory: sim_engine
         run: python -m unittest -v test_v102.py
-      - name: Rehearse current LIVE session fast-path
-        working-directory: sim_engine
-        run: python v102_rehearsal.py --repo-root .. --out /tmp/v102_rehearsal.json
-
-  activate:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: test
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 2
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Fast-forward to current main
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
-      - name: Activate v1.0.2 compact base and session state
-        run: python sim_engine/v102_activate.py --repo-root . --out /tmp/v102-activate.json
-      - name: Commit v1.0.2 runtime activation
-        run: |
-          git config user.name "tensura-runtime-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add runtime/checkpoints/v102_base_j*.json runtime/session_state.json runtime/runtime_state.json
-          if git diff --cached --quiet; then
-            echo "v1.0.2 runtime already active"
-            exit 0
-          fi
-          git commit -m "Runtime v1.0.2 — compact base and session fast-path"
-          git push origin HEAD:main
+      - name: Note
+        run: echo "v1.0.2 LIVE migration/activation retired after successful cutover; newer engine owns current LIVE rehearsal."
