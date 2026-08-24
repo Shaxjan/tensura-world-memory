@@ -1,0 +1,33 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 21,
+  "event_key": "chat-20260824-wait-borga-response-q001",
+  "event_type": "player_turn",
+  "world_minute": 189138,
+  "request": {
+    "raw_text": "Жду ответа"
+  },
+  "result": {
+    "status": "needs_clarification",
+    "accepted": false,
+    "proposal": {
+      "proposal_id": 1,
+      "status": "needs_clarification",
+      "command": "wait",
+      "params": {},
+      "missing": [
+        "minutes"
+      ],
+      "ambiguities": [],
+      "grounding": {}
+    },
+    "validation": {
+      "valid": true,
+      "reason": "deterministic_parser_only"
+    },
+    "turn_key": "chat-20260824-wait-borga-response-q001"
+  },
+  "before_hash": "97eb38c52eed4291ba971635f8545e9a05c0e94071499c6beb69db5fcb20e265",
+  "after_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e"
+}

@@ -2,8 +2,8 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.12",
-  "journal_seq": 20,
-  "head_state_hash": "97eb38c52eed4291ba971635f8545e9a05c0e94071499c6beb69db5fcb20e265",
+  "journal_seq": 21,
+  "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -45,33 +45,14 @@
     }
   },
   "last_turn": {
-    "seq": 20,
-    "event_key": "chat-20260824-greet-borga-zdravstvuyte-q001",
+    "seq": 21,
+    "event_key": "chat-20260824-wait-borga-response-q001",
     "event_type": "player_turn",
-    "status": "executed",
+    "status": "needs_clarification",
     "action_result": null,
     "visible_actors": [],
     "pending_resolutions": [],
-    "narration_contract": {
-      "state_authority": "engine_scene_record_and_checkpoint_only",
-      "player_text_verbatim": "Обращаюсь к Борге: «Здравствуйте».",
-      "must_preserve": [
-        "verbatim player action",
-        "money/time/region from GM packet",
-        "UNKNOWN values"
-      ],
-      "may_add": [
-        "sensory description already supported by perceivable state",
-        "neutral acknowledgement of player speech/performance"
-      ],
-      "forbidden": [
-        "resolve pending NPC/world response in narration",
-        "invent movement success",
-        "invent consent",
-        "invent income/expense",
-        "new hidden state mutation"
-      ]
-    }
+    "narration_contract": null
   },
   "display_contract": {
     "always_show": [

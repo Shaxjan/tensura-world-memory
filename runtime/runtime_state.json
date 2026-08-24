@@ -8,8 +8,8 @@
   "base_state_hash": "73ec1c4458a5d62c7a89558eac7c180965921d82f7d0af4e5aff1af3e79155c8",
   "journal_dir": "runtime/journal",
   "journal_base_seq": 18,
-  "journal_seq": 20,
-  "head_state_hash": "97eb38c52eed4291ba971635f8545e9a05c0e94071499c6beb69db5fcb20e265",
+  "journal_seq": 21,
+  "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
   "legacy_rollback": {
     "path": "live_state.json",
     "version": 159,
@@ -43,8 +43,8 @@
     "fast_request_schema_repair": true,
     "request_receipts": true
   },
-  "last_event": "runtime/journal/j000020.json",
-  "last_request": "runtime/requests/q-20260824-greet-borga-zdravstvuyte-001.json",
+  "last_event": "runtime/journal/j000021.json",
+  "last_request": "runtime/requests/q-20260824-wait-borga-response-001.json",
   "session_state": "runtime/session_state.json",
   "system_resume": {
     "event": "runtime/journal/j000003.json",
