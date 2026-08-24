@@ -1,0 +1,38 @@
+name: Simulation Engine v1.0.1 Hotfix
+
+on:
+  push:
+    paths:
+      - 'sim_engine/v101_*'
+      - 'sim_engine/test_v101.py'
+      - 'sim_engine/V101.md'
+      - '.github/workflows/sim-engine-v101-hotfix.yml'
+      - '.github/workflows/runtime-turn.yml'
+  pull_request:
+    paths:
+      - 'sim_engine/v101_*'
+      - 'sim_engine/test_v101.py'
+      - 'sim_engine/V101.md'
+      - '.github/workflows/sim-engine-v101-hotfix.yml'
+      - '.github/workflows/runtime-turn.yml'
+
+jobs:
+  test:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v1.0 regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v100.py
+      - name: Run v1.0.1 tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v101.py
+      - name: Rehearse current live known-local travel
+        working-directory: sim_engine
+        run: python v101_rehearsal.py --repo-root .. --out /tmp/v101_rehearsal.json

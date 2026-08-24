@@ -1,0 +1,48 @@
+name: Tensura Runtime Turn
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/requests/r*.json'
+
+concurrency:
+  group: tensura-authoritative-runtime
+  cancel-in-progress: false
+
+jobs:
+  process_turn:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fast-forward to current main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+      - name: Find request from triggering commit
+        id: req
+        run: |
+          REQUEST=$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -E '^runtime/requests/r[0-9]{6}\.json$' | sort | tail -1 || true)
+          if [ -z "$REQUEST" ]; then
+            echo "No runtime request in triggering commit"
+            exit 1
+          fi
+          echo "path=$REQUEST" >> "$GITHUB_OUTPUT"
+      - name: Execute authoritative turn
+        run: python sim_engine/v101_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+      - name: Commit engine event and pointer
+        run: |
+          git config user.name "tensura-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add runtime/journal runtime/runtime_state.json
+          git commit -m "Runtime event $(basename '${{ steps.req.outputs.path }}' .json)"
+          git push origin HEAD:main
