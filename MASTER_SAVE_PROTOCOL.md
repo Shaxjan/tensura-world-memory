@@ -8,7 +8,7 @@
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
 Для v1.0.12:
-- `engine_version = 1.0.11`;
+- `engine_version = 1.0.12`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
