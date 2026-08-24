@@ -15,17 +15,96 @@ def _load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def rehearse(repo_root: str | Path) -> dict:
-    root = Path(repo_root).resolve()
-    live_pointer = _load(root / "runtime/runtime_state.json")
-    live_session = _load(root / "runtime/session_state.json")
-    if live_pointer.get("engine_version") != "1.0.11":
-        raise RuntimeError("v1.0.12 LIVE rehearsal requires v1.0.11")
+def _verify_superseded_receipts(root: Path) -> None:
+    for rel in FAILED_TRANSPORT_REQUESTS:
+        receipt = root / "runtime/request_receipts" / f"{Path(rel).stem}.receipt.json"
+        if not receipt.exists():
+            raise RuntimeError(f"missing superseded receipt: {receipt}")
+        data = _load(receipt)
+        if data.get("status") != "superseded" or data.get("authoritative_gameplay_change"):
+            raise RuntimeError("failed transport request was not safely superseded")
+
+
+def _run_shadow_fast_smoke(shadow: Path, expected_last: str, start_seq: int, prefix: str) -> dict:
+    canonical_rel = f"runtime/requests/q-{prefix}-canonical.json"
+    canonical = shadow / canonical_rel
+    canonical.write_text(json.dumps({
+        "format": "TENSURA_FAST_TURN_REQUEST",
+        "schema_version": 1,
+        "event_key": f"{prefix}-canonical",
+        "event_type": "player_turn",
+        "expected_last_gameplay_turn_key": expected_last,
+        "request": {"raw_text": "Обращаюсь к Борге: «Доброе утро»."},
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    first = process_request(shadow, canonical_rel)
+    if int(first["seq"]) != start_seq + 1 or first["request_mode"] != "fast_auto_seq:nested_request":
+        raise RuntimeError("canonical fast request did not auto-sequence")
+    first_session = _load(shadow / "runtime/session_state.json")
+    result = (first_session.get("last_turn") or {}).get("action_result") or {}
+    if result.get("outcome") != "npc_response_resolved":
+        raise RuntimeError("v1.0.10 response semantics did not survive reliability transport")
+
+    compat_rel = f"runtime/requests/q-{prefix}-compat.json"
+    compat = shadow / compat_rel
+    compat.write_text(json.dumps({
+        "format": "TENSURA_FAST_TURN_REQUEST",
+        "schema_version": 1,
+        "event_key": f"{prefix}-compat",
+        "event_type": "player_turn",
+        "expected_last_gameplay_turn_key": f"{prefix}-canonical",
+        "raw_text": "Обращаюсь к Борге: «Доброе утро».",
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    second = process_request(shadow, compat_rel)
+    if int(second["seq"]) != start_seq + 2 or second["request_mode"] != "fast_auto_seq:compat_top_level_raw_text":
+        raise RuntimeError("compat fast request did not auto-sequence")
+
+    before_pointer = (shadow / "runtime/runtime_state.json").read_bytes()
+    before_session = (shadow / "runtime/session_state.json").read_bytes()
+    stale_seq = start_seq + 3
+    stale_rel = f"runtime/requests/q-{prefix}-stale.json"
+    stale = shadow / stale_rel
+    stale.write_text(json.dumps({
+        "format": "TENSURA_FAST_TURN_REQUEST",
+        "schema_version": 1,
+        "event_key": f"{prefix}-stale",
+        "event_type": "player_turn",
+        "expected_last_gameplay_turn_key": expected_last,
+        "request": {"raw_text": "test"},
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    try:
+        process_request(shadow, stale_rel)
+        raise RuntimeError("stale request unexpectedly executed")
+    except RuntimeError as exc:
+        if "fast_request_stale_gameplay_context" not in str(exc):
+            raise
+    if (shadow / "runtime/runtime_state.json").read_bytes() != before_pointer:
+        raise RuntimeError("stale request mutated pointer")
+    if (shadow / "runtime/session_state.json").read_bytes() != before_session:
+        raise RuntimeError("stale request mutated session")
+    if (shadow / f"runtime/journal/j{stale_seq:06d}.json").exists():
+        raise RuntimeError("stale request created journal event")
+
+    with tempfile.TemporaryDirectory() as dbtd:
+        world, loaded, meta = load_repository_runtime_v112(shadow, Path(dbtd) / "verify.db")
+        try:
+            if loaded["head_state_hash"] != _load(shadow / "runtime/runtime_state.json")["head_state_hash"]:
+                raise RuntimeError("final replay head mismatch")
+        finally:
+            world.close()
+    return {
+        "canonical_fast_seq": first["seq"],
+        "compat_fast_seq": second["seq"],
+        "stale_guard_no_mutation": True,
+        "replay_ok": bool(meta["replay"].get("ok")),
+    }
+
+
+def _rehearse_migration(root: Path, live_pointer: dict, live_session: dict) -> dict:
     if int(live_pointer.get("journal_seq", -1)) != 18:
-        raise RuntimeError(f"expected current LIVE seq18, got {live_pointer.get('journal_seq')}")
+        raise RuntimeError(f"expected pre-activation LIVE seq18, got {live_pointer.get('journal_seq')}")
     expected_last = (live_session.get("last_turn") or {}).get("event_key")
     if expected_last != "chat-20260824-repeat-greet-borga-r000017":
-        raise RuntimeError("unexpected current LIVE gameplay turn")
+        raise RuntimeError("unexpected pre-activation gameplay turn")
     missing = [p for p in FAILED_TRANSPORT_REQUESTS if not (root / p).exists()]
     if missing:
         raise RuntimeError("expected failed transport request files missing: " + ",".join(missing))
@@ -34,8 +113,7 @@ def rehearse(repo_root: str | Path) -> dict:
         shadow = Path(td) / "repo"
         shadow.mkdir()
         shutil.copytree(root / "runtime", shadow / "runtime")
-
-        activation = activate_v112(shadow)
+        activate_v112(shadow)
         pointer = _load(shadow / "runtime/runtime_state.json")
         session = _load(shadow / "runtime/session_state.json")
         if pointer["engine_version"] != "1.0.12" or int(pointer["journal_seq"]) != 19:
@@ -44,87 +122,55 @@ def rehearse(repo_root: str | Path) -> dict:
             raise RuntimeError("transport activation changed gameplay hash")
         if (session.get("last_turn") or {}).get("event_key") != expected_last:
             raise RuntimeError("transport activation replaced gameplay turn")
-        for rel in FAILED_TRANSPORT_REQUESTS:
-            receipt = shadow / "runtime/request_receipts" / f"{Path(rel).stem}.receipt.json"
-            data = _load(receipt)
-            if data.get("status") != "superseded" or data.get("authoritative_gameplay_change"):
-                raise RuntimeError("failed transport request was not safely superseded")
-
-        canonical_rel = "runtime/requests/q-v112-live-rehearsal-canonical.json"
-        canonical = shadow / canonical_rel
-        canonical.write_text(json.dumps({
-            "format": "TENSURA_FAST_TURN_REQUEST",
-            "schema_version": 1,
-            "event_key": "v112-live-rehearsal-canonical",
-            "event_type": "player_turn",
-            "expected_last_gameplay_turn_key": expected_last,
-            "request": {"raw_text": "Обращаюсь к Борге: «Доброе утро»."},
-        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        first = process_request(shadow, canonical_rel)
-        if int(first["seq"]) != 20 or first["request_mode"] != "fast_auto_seq:nested_request":
-            raise RuntimeError("canonical fast request did not auto-sequence at seq20")
-        first_session = _load(shadow / "runtime/session_state.json")
-        result = (first_session.get("last_turn") or {}).get("action_result") or {}
-        if result.get("outcome") != "npc_response_resolved":
-            raise RuntimeError("v1.0.10 response semantics did not survive reliability repair")
-
-        compat_rel = "runtime/requests/q-v112-live-rehearsal-compat.json"
-        compat = shadow / compat_rel
-        compat.write_text(json.dumps({
-            "format": "TENSURA_FAST_TURN_REQUEST",
-            "schema_version": 1,
-            "event_key": "v112-live-rehearsal-compat",
-            "event_type": "player_turn",
-            "expected_last_gameplay_turn_key": "v112-live-rehearsal-canonical",
-            "raw_text": "Обращаюсь к Борге: «Доброе утро».",
-        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        second = process_request(shadow, compat_rel)
-        if int(second["seq"]) != 21 or second["request_mode"] != "fast_auto_seq:compat_top_level_raw_text":
-            raise RuntimeError("compat fast request did not execute at seq21")
-
-        before_pointer = (shadow / "runtime/runtime_state.json").read_bytes()
-        before_session = (shadow / "runtime/session_state.json").read_bytes()
-        stale_rel = "runtime/requests/q-v112-live-rehearsal-stale.json"
-        stale = shadow / stale_rel
-        stale.write_text(json.dumps({
-            "format": "TENSURA_FAST_TURN_REQUEST",
-            "schema_version": 1,
-            "event_key": "v112-live-rehearsal-stale",
-            "event_type": "player_turn",
-            "expected_last_gameplay_turn_key": expected_last,
-            "request": {"raw_text": "test"},
-        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        try:
-            process_request(shadow, stale_rel)
-            raise RuntimeError("stale request unexpectedly executed")
-        except RuntimeError as exc:
-            if "fast_request_stale_gameplay_context" not in str(exc):
-                raise
-        if (shadow / "runtime/runtime_state.json").read_bytes() != before_pointer:
-            raise RuntimeError("stale request mutated pointer")
-        if (shadow / "runtime/session_state.json").read_bytes() != before_session:
-            raise RuntimeError("stale request mutated session")
-        if (shadow / "runtime/journal/j000022.json").exists():
-            raise RuntimeError("stale request created journal event")
-
-        with tempfile.TemporaryDirectory() as dbtd:
-            world, loaded, meta = load_repository_runtime_v112(shadow, Path(dbtd) / "verify.db")
-            try:
-                if loaded["head_state_hash"] != _load(shadow / "runtime/runtime_state.json")["head_state_hash"]:
-                    raise RuntimeError("final replay head mismatch")
-            finally:
-                world.close()
-
+        _verify_superseded_receipts(shadow)
+        smoke = _run_shadow_fast_smoke(shadow, expected_last, 19, "v112-migration-rehearsal")
         return {
             "ok": True,
+            "mode": "pre_activation_migration",
             "live_start_seq": 18,
             "activation_seq": 19,
-            "canonical_fast_seq": first["seq"],
-            "compat_fast_seq": second["seq"],
             "superseded_requests": FAILED_TRANSPORT_REQUESTS,
-            "stale_guard_no_mutation": True,
-            "replay_ok": bool(meta["replay"].get("ok")),
+            **smoke,
         }
+
+
+def _rehearse_active(root: Path, live_pointer: dict, live_session: dict) -> dict:
+    live_seq = int(live_pointer.get("journal_seq", -1))
+    if live_seq < 19:
+        raise RuntimeError("active v1.0.12 LIVE has impossible journal seq")
+    if int(live_session.get("journal_seq", -1)) != live_seq:
+        raise RuntimeError("active v1.0.12 session is stale")
+    if str(live_session.get("head_state_hash") or "") != str(live_pointer.get("head_state_hash") or ""):
+        raise RuntimeError("active v1.0.12 session/pointer head mismatch")
+    expected_last = (live_session.get("last_turn") or {}).get("event_key")
+    if not isinstance(expected_last, str) or not expected_last:
+        raise RuntimeError("active v1.0.12 has no confirmed gameplay last_turn")
+    _verify_superseded_receipts(root)
+
+    with tempfile.TemporaryDirectory() as td:
+        shadow = Path(td) / "repo"
+        shadow.mkdir()
+        shutil.copytree(root / "runtime", shadow / "runtime")
+        smoke = _run_shadow_fast_smoke(shadow, expected_last, live_seq, "v112-active-rehearsal")
+        return {
+            "ok": True,
+            "mode": "already_active_smoke",
+            "live_start_seq": live_seq,
+            "superseded_requests": FAILED_TRANSPORT_REQUESTS,
+            **smoke,
+        }
+
+
+def rehearse(repo_root: str | Path) -> dict:
+    root = Path(repo_root).resolve()
+    live_pointer = _load(root / "runtime/runtime_state.json")
+    live_session = _load(root / "runtime/session_state.json")
+    engine = live_pointer.get("engine_version")
+    if engine == "1.0.11":
+        return _rehearse_migration(root, live_pointer, live_session)
+    if engine == "1.0.12":
+        return _rehearse_active(root, live_pointer, live_session)
+    raise RuntimeError(f"v1.0.12 rehearsal does not support LIVE engine {engine!r}")
 
 
 def main():
