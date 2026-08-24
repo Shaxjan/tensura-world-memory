@@ -2,8 +2,8 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.7",
-  "journal_seq": 11,
-  "head_state_hash": "a4075578d8a6dadf2832e49a8e94fde3c8cf9aea552dfcb36263c05652d76229",
+  "journal_seq": 12,
+  "head_state_hash": "5449e606e69640c17bac560305511e05cffc42b4af300940a8e2426d6f715c5c",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -45,8 +45,8 @@
     }
   },
   "last_turn": {
-    "seq": 11,
-    "event_key": "chat-20260824-approach-borga-r000011",
+    "seq": 12,
+    "event_key": "chat-20260824-approach-r000012",
     "event_type": "player_turn",
     "status": "scene_pending",
     "action_result": null,
@@ -57,11 +57,17 @@
         "kind": "local_navigation",
         "target": "Борга",
         "status": "pending"
+      },
+      {
+        "id": 4,
+        "kind": "local_navigation",
+        "target": "Подхожу",
+        "status": "pending"
       }
     ],
     "narration_contract": {
       "state_authority": "engine_scene_record_and_checkpoint_only",
-      "player_text_verbatim": "Подхожу к Борге.",
+      "player_text_verbatim": "Подхожу",
       "must_preserve": [
         "verbatim player action",
         "pending outcomes remain pending",
@@ -146,6 +152,12 @@
         "id": 3,
         "kind": "local_navigation",
         "target": "Борга",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "kind": "local_navigation",
+        "target": "Подхожу",
         "status": "pending"
       }
     ]
