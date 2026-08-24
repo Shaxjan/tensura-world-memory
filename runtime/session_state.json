@@ -2,12 +2,12 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.6",
-  "journal_seq": 8,
-  "head_state_hash": "49b13be7efcfce6228b5d7467242503e08e574ee9a1be6c9f118c8e9f4c25ff0",
+  "journal_seq": 9,
+  "head_state_hash": "4c02070ce79abebe42734260ad5af12a95fd7f3f5ec376139feac631668bdcec",
   "hud": {
     "time": {
-      "world_minute": 189132,
-      "display": "T+131 ~08:12"
+      "world_minute": 189138,
+      "display": "T+131 ~08:18"
     },
     "location": {
       "region_id": "eurazania",
@@ -45,45 +45,45 @@
     }
   },
   "last_turn": {
-    "seq": 8,
-    "event_key": "chat-20260824-go-small-training-yard-r000008",
+    "seq": 9,
+    "event_key": "chat-20260824-search-borga-small-yard-r000009",
     "event_type": "player_turn",
     "status": "executed",
     "action_result": {
-      "outcome": "arrived",
-      "origin_text": "большой тренировочный двор Борги",
-      "destination_key": "eurazania_small_training_yard",
-      "destination_text": "малый боевой/тренировочный двор",
-      "travel_minutes": 12,
-      "started_at": 189120,
-      "arrived_at": 189132,
-      "place_source": "memory/places.json",
-      "time_basis": "prospective_local_city_default_v1.0.1",
+      "outcome": "found",
+      "target_key": "borga",
+      "target_name": "Борга",
+      "place_key": "eurazania_small_training_yard",
+      "place_text": "малый боевой/тренировочный двор",
+      "observation": "direct_local_search",
       "does_not_assert": [
-        "Borga presence",
-        "NPC encounter",
-        "exact street geometry"
-      ]
+        "what Borga will say",
+        "Borga consent",
+        "Borga private knowledge"
+      ],
+      "search_started_at": 189132,
+      "search_finished_at": 189138,
+      "search_minutes": 6
     },
     "visible_actors": [],
     "pending_resolutions": [],
     "narration_contract": {
-      "state_authority": "engine_v1.0.1_local_travel",
-      "player_text_verbatim": "Илу в малый тренировочный двор",
+      "state_authority": "engine_v1.0.3_living_scene",
+      "player_text_verbatim": "«Осматриваюсь. Ищу Боргу.»",
       "must_preserve": [
-        "arrival",
-        "engine travel time",
-        "money/region from GM packet",
-        "UNKNOWN NPC presence",
-        "visible ambient scene"
+        "visible ambient scene",
+        "causal named-NPC evidence",
+        "engine search time",
+        "HUD money/time/location"
       ],
       "may_add": [
-        "sensory description consistent with destination and visible state"
+        "sensory description consistent with scene",
+        "natural wording of engine-provided testimony"
       ],
       "forbidden": [
-        "invent Borga presence",
-        "invent payment",
-        "invent encounter",
+        "invent extra named NPCs",
+        "upgrade testimony to certainty",
+        "invent Borga dialogue before interaction",
         "change player intent"
       ]
     }
@@ -140,7 +140,14 @@
         "identity_status": "not_materialized_named_npc"
       }
     ],
-    "named_observations": [],
+    "named_observations": [
+      {
+        "actor": "borga",
+        "name": "Борга",
+        "status": "visible",
+        "place": "малый боевой/тренировочный двор"
+      }
+    ],
     "pending_resolutions": []
   },
   "character_runtime": {
