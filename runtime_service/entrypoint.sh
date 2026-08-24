@@ -7,13 +7,24 @@ set -eu
 
 REPO_PATH="${TENSURA_REPO_PATH:-/srv/tensura}"
 BRANCH="${TENSURA_BRANCH:-main}"
-AUTH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+REMOTE_URL="https://github.com/${GITHUB_REPOSITORY}.git"
+
+cat >/tmp/tensura-git-askpass.sh <<'EOF'
+#!/bin/sh
+case "$1" in
+  *Username*) printf '%s\n' 'x-access-token' ;;
+  *) printf '%s\n' "$GITHUB_TOKEN" ;;
+esac
+EOF
+chmod 700 /tmp/tensura-git-askpass.sh
+export GIT_ASKPASS=/tmp/tensura-git-askpass.sh
+export GIT_TERMINAL_PROMPT=0
 
 if [ ! -d "$REPO_PATH/.git" ]; then
   rm -rf "$REPO_PATH"
-  git clone --depth 50 --branch "$BRANCH" "$AUTH_URL" "$REPO_PATH"
+  git clone --depth 50 --branch "$BRANCH" "$REMOTE_URL" "$REPO_PATH"
 else
-  git -C "$REPO_PATH" remote set-url origin "$AUTH_URL"
+  git -C "$REPO_PATH" remote set-url origin "$REMOTE_URL"
   git -C "$REPO_PATH" fetch origin "$BRANCH"
   git -C "$REPO_PATH" reset --hard "origin/$BRANCH"
 fi
