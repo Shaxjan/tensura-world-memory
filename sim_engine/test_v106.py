@@ -2,7 +2,6 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from v03_engine import dumps
 from v100_handoff import export_portable_checkpoint_v100, import_portable_checkpoint_v100, runtime_state_hash_v100
 from v100_runtime import install_v100_runtime
 from v106_seed import seed_world_v106_lab
@@ -31,10 +30,9 @@ class V106Tests(unittest.TestCase):
                 "INSERT OR REPLACE INTO actor_position_claims(actor_key,display_name,region_id,location_text,precision,status,as_of_version,source_path,note) VALUES(?,?,?,?,?,?,?,?,?)",
                 (key,name,"eurazania",None,"region_only","known_region_exact_place_unknown",159,"test",""),
             )
-        fact_key = "v103:player_observation:test-small-yard-lead"
+        w.db.commit()
         lead = {"outcome":"lead","lead":{"destination_key":"eurazania_small_training_yard","destination_text":"малый боевой/тренировочный двор"}}
-        w.db.execute("INSERT OR REPLACE INTO facts(key,value_json,created_at,source) VALUES(?,?,?,?)", (fact_key,dumps(lead),w.now,"test"))
-        w.db.execute("INSERT OR REPLACE INTO knowledge(actor_id,fact_key,learned_at,source,confidence) VALUES(?,?,?,?,?)", ("player",fact_key,w.now,"test",90))
+        w._knowledge103("test-small-yard-lead", lead, 90)
         w.db.commit()
 
     @staticmethod
