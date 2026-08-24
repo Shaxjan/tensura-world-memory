@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_TURN_REQUEST",
+  "schema_version": 1,
+  "seq": 2,
+  "event_key": "chat-20260824-search-borga-guitar-r000002",
+  "event_type": "player_turn",
+  "request": {
+    "raw_text": "Осматриваюсь. Ищу Боргу. (Гитара у меня)"
+  }
+}
