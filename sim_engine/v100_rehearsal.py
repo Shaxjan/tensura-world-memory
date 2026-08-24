@@ -7,6 +7,7 @@ import tempfile
 from pathlib import Path
 
 from v06_migration import collect_repo_campaign
+from v09_runtime import mark_portable_bridge_verified
 from v10_runtime import apply_v10_shadow_cutover, mark_v10_shadow_verified
 from v100_handoff import export_portable_checkpoint_v100, import_portable_checkpoint_v100, runtime_state_hash_v100
 from v100_repository import build_runtime_pointer
@@ -63,6 +64,21 @@ def run(repo_root: str | Path, *, checkpoint_out: str | None = None, manifest_ou
             if not v10_shadow_ok:
                 return {"source_version": source_v, "actual_cutover_ready": False, "errors": ["v10_shadow_reproof_failed"]}
             mark_v10_shadow_verified(source, ["v1.0 isolated reproof", "pending local navigation", "autonomy advanced"])
+
+            # v0.9's portable bridge is an independent gate. Re-prove it on the untouched
+            # cutover base and only then mark it resolved on the source runtime.
+            bridge_candidate = export_portable_checkpoint_v100(source, source_v)
+            bridge_db = td / "portable_bridge.db"
+            with seed_world_v100_migration(bridge_db) as bridge_world:
+                bridge_import = import_portable_checkpoint_v100(bridge_world, bridge_candidate)
+                bridge_ok = bool(
+                    bridge_import.get("ok")
+                    and bridge_import.get("restored_hash") == bridge_candidate["state_hash"]
+                    and _core(bridge_world) == _core(source)
+                )
+            if not bridge_ok:
+                return {"source_version": source_v, "actual_cutover_ready": False, "errors": ["portable_runtime_bridge_reproof_failed"]}
+            mark_portable_bridge_verified(source, bridge_candidate["state_hash"])
 
             install_v100_runtime(source, source_v, package.pointer, pointer_sha)
             candidate = export_portable_checkpoint_v100(source, source_v)
