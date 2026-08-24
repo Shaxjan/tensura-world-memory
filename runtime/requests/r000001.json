@@ -1,0 +1,11 @@
+{
+  "format": "TENSURA_TURN_REQUEST",
+  "schema_version": 1,
+  "seq": 1,
+  "event_key": "live-000001-recovered-training-yard",
+  "event_type": "player_turn",
+  "request": {
+    "raw_text": "Иду к тренировочному двору.",
+    "recovery_note": "Recovered from the first two post-cutover live turns that were narrated but never journaled. User explicitly authorized the hotfix and recovery. Do not count the failed unsaved repetitions as elapsed game time."
+  }
+}
