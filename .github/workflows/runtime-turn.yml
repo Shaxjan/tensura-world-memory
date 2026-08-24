@@ -38,11 +38,11 @@ jobs:
           fi
           echo "path=$REQUEST" >> "$GITHUB_OUTPUT"
       - name: Execute authoritative turn
-        run: python sim_engine/v101_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-      - name: Commit engine event and pointer
+        run: python sim_engine/v102_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+      - name: Commit engine event, pointer and session fast-path
         run: |
           git config user.name "tensura-runtime-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add runtime/journal runtime/runtime_state.json
+          git add runtime/journal runtime/runtime_state.json runtime/session_state.json
           git commit -m "Runtime event $(basename '${{ steps.req.outputs.path }}' .json)"
           git push origin HEAD:main
