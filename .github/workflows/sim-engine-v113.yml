@@ -1,0 +1,57 @@
+name: Simulation Engine v1.0.13 Candidate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sim_engine/v113_*.py'
+      - 'sim_engine/test_v113*.py'
+      - 'sim_engine/V113.md'
+      - 'sim_engine/character_agent_*.py'
+      - 'sim_engine/rena_character_profile.py'
+      - '.github/workflows/sim-engine-v113.yml'
+  pull_request:
+    paths:
+      - 'sim_engine/v113_*.py'
+      - 'sim_engine/test_v113*.py'
+      - 'sim_engine/V113.md'
+      - 'sim_engine/character_agent_*.py'
+      - 'sim_engine/rena_character_profile.py'
+      - '.github/workflows/sim-engine-v113.yml'
+
+jobs:
+  candidate:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v1.0.13 candidate regression tests
+        working-directory: sim_engine
+        run: python -m unittest -v test_v113.py test_v113_compat.py
+      - name: Rehearse full v1.0.12 to v1.0.13 candidate journal replay
+        working-directory: sim_engine
+        run: python v113_rehearsal.py --repo-root .. --out /tmp/v113_rehearsal.json
+      - name: Re-run Character Agent safety regressions
+        working-directory: sim_engine
+        run: >-
+          python -m unittest -v
+          test_character_agent_contract.py
+          test_rena_character_profile.py
+          test_character_agent_shadow.py
+          test_character_agent_event.py
+      - name: Compile v1.0.13 candidate layer
+        working-directory: sim_engine
+        run: >-
+          python -m py_compile
+          v113_runtime.py
+          v113_engine.py
+          v113_seed.py
+          v113_repository.py
+          v113_rehearsal.py
+          test_v113.py
+          test_v113_compat.py
