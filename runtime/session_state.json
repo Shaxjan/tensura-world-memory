@@ -1,13 +1,13 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.2",
-  "journal_seq": 2,
-  "head_state_hash": "57c6ce61a154b83c77115bec47ba095669700d2d3a55b766b722f9556da070e8",
+  "engine_version": "1.0.3",
+  "journal_seq": 3,
+  "head_state_hash": "7e0ef12701d0bf0df64963ecb9e1d273d7fc57026a69e614349699481e9b943e",
   "hud": {
     "time": {
-      "world_minute": 189114,
-      "display": "T+131 ~07:54"
+      "world_minute": 189120,
+      "display": "T+131 ~08:00"
     },
     "location": {
       "region_id": "eurazania",
@@ -45,39 +45,54 @@
     }
   },
   "last_turn": {
-    "seq": 2,
-    "event_key": "chat-20260824-search-borga-guitar-r000002",
-    "event_type": "player_turn",
-    "status": "scene_pending",
-    "action_result": null,
+    "seq": 3,
+    "event_key": "system-v103-resume-chat-20260824-search-borga-guitar-r000002-j000003",
+    "event_type": "living_scene_resume",
+    "status": "executed",
+    "action_result": {
+      "outcome": "lead",
+      "target_key": "borga",
+      "target_name": "Борга",
+      "not_at_current_visible_area": true,
+      "informant": {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:2:37246",
+        "descriptor": "помощник инструктора",
+        "knowledge_basis": "works_at_training_site"
+      },
+      "lead": {
+        "kind": "recent_local_testimony",
+        "destination_key": "eurazania_small_training_yard",
+        "destination_text": "малый боевой/тренировочный двор",
+        "confidence": "credible_not_omniscient"
+      },
+      "does_not_assert": [
+        "Borga remains there until player arrives",
+        "exact route geometry"
+      ],
+      "search_started_at": 189114,
+      "search_finished_at": 189120,
+      "search_minutes": 6
+    },
     "visible_actors": [],
-    "pending_resolutions": [
-      {
-        "id": 1,
-        "kind": "local_navigation",
-        "target": "Борга",
-        "status": "pending"
-      }
-    ],
+    "pending_resolutions": [],
     "narration_contract": {
-      "state_authority": "engine_scene_record_and_checkpoint_only",
+      "state_authority": "engine_v1.0.3_living_scene",
       "player_text_verbatim": "Осматриваюсь. Ищу Боргу. (Гитара у меня)",
       "must_preserve": [
-        "verbatim player action",
-        "pending outcomes remain pending",
-        "money/time/region from GM packet",
-        "UNKNOWN values"
+        "visible ambient scene",
+        "causal named-NPC evidence",
+        "engine search time",
+        "HUD money/time/location"
       ],
       "may_add": [
-        "sensory description already supported by perceivable state",
-        "neutral acknowledgement of player speech/performance"
+        "sensory description consistent with scene",
+        "natural wording of engine-provided testimony"
       ],
       "forbidden": [
-        "resolve pending NPC/world response in narration",
-        "invent movement success",
-        "invent consent",
-        "invent income/expense",
-        "new hidden state mutation"
+        "invent extra named NPCs",
+        "upgrade testimony to certainty",
+        "invent Borga dialogue before interaction",
+        "change player intent"
       ]
     }
   },
@@ -89,6 +104,60 @@
       "hud.money.elsewhere_display"
     ],
     "normal_play_technical_fields_hidden": true,
-    "recommended_header": "Время: {time} | Место: {location} | При мне: {on_person} | Мои деньги вне кошелька: {elsewhere}"
+    "recommended_header": "Время: {time} | Место: {location} | При мне: {on_person} | Мои деньги вне кошелька: {elsewhere}",
+    "scene_rule": "If ambient is non-empty, describe the place as populated; do not answer 'nobody confirmed'."
+  },
+  "scene": {
+    "ambient": [
+      {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:1:44221",
+        "kind": "anonymous_local",
+        "descriptor": "трое бойцов",
+        "activity": "по очереди работают с учебным оружием",
+        "group_size": 3,
+        "knowledge_tags": [],
+        "identity_status": "not_materialized_named_npc"
+      },
+      {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:2:37246",
+        "kind": "anonymous_local",
+        "descriptor": "помощник инструктора",
+        "activity": "проверяет тренировочные пары",
+        "group_size": 1,
+        "knowledge_tags": [
+          "borga_work_routine"
+        ],
+        "identity_status": "not_materialized_named_npc"
+      },
+      {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:3:38228",
+        "kind": "anonymous_local",
+        "descriptor": "двое бойцов",
+        "activity": "отрабатывают связку ударов",
+        "group_size": 2,
+        "knowledge_tags": [],
+        "identity_status": "not_materialized_named_npc"
+      },
+      {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:4:19944",
+        "kind": "anonymous_local",
+        "descriptor": "небольшая тренировочная группа",
+        "activity": "разминается у края площадки",
+        "group_size": 4,
+        "knowledge_tags": [],
+        "identity_status": "not_materialized_named_npc"
+      },
+      {
+        "entity_key": "eurazania_borga_big_training_yard:ambient:189114:5:24484",
+        "kind": "anonymous_local",
+        "descriptor": "рабочий при дворе",
+        "activity": "переносит тренировочный инвентарь",
+        "group_size": 1,
+        "knowledge_tags": [],
+        "identity_status": "not_materialized_named_npc"
+      }
+    ],
+    "named_observations": [],
+    "pending_resolutions": []
   }
 }

@@ -1,15 +1,15 @@
 {
   "format": "TENSURA_RUNTIME_POINTER",
   "schema_version": 1,
-  "engine_version": "1.0.2",
+  "engine_version": "1.0.3",
   "mode": "engine_authoritative",
   "source_live_version": 159,
-  "base_checkpoint": "runtime/checkpoints/v102_base_j000001.json",
-  "base_state_hash": "be9a72331bb79cd6216c974bbdd98bb6fbd3654320e7a01308ef40ffe05ac792",
+  "base_checkpoint": "runtime/checkpoints/v103_base_j000002.json",
+  "base_state_hash": "57c6ce61a154b83c77115bec47ba095669700d2d3a55b766b722f9556da070e8",
   "journal_dir": "runtime/journal",
-  "journal_base_seq": 1,
-  "journal_seq": 2,
-  "head_state_hash": "57c6ce61a154b83c77115bec47ba095669700d2d3a55b766b722f9556da070e8",
+  "journal_base_seq": 2,
+  "journal_seq": 3,
+  "head_state_hash": "7e0ef12701d0bf0df64963ecb9e1d273d7fc57026a69e614349699481e9b943e",
   "legacy_rollback": {
     "path": "live_state.json",
     "version": 159,
@@ -28,9 +28,15 @@
     "immutable_journal": true,
     "checkpoint_every": 25,
     "request_queue": true,
-    "session_fast_path": true
+    "session_fast_path": true,
+    "living_scene": true
   },
-  "last_event": "runtime/journal/j000002.json",
+  "last_event": "runtime/journal/j000003.json",
   "last_request": "runtime/requests/r000002.json",
-  "session_state": "runtime/session_state.json"
+  "session_state": "runtime/session_state.json",
+  "system_resume": {
+    "event": "runtime/journal/j000003.json",
+    "source_pending_turn": "chat-20260824-search-borga-guitar-r000002",
+    "reason": "completed already-authorized local search under v1.0.3"
+  }
 }
