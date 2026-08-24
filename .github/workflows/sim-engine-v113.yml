@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'sim_engine/v113_*.py'
-      - 'sim_engine/test_v113.py'
+      - 'sim_engine/test_v113*.py'
       - 'sim_engine/V113.md'
       - 'sim_engine/character_agent_*.py'
       - 'sim_engine/rena_character_profile.py'
@@ -13,7 +13,7 @@ on:
   pull_request:
     paths:
       - 'sim_engine/v113_*.py'
-      - 'sim_engine/test_v113.py'
+      - 'sim_engine/test_v113*.py'
       - 'sim_engine/V113.md'
       - 'sim_engine/character_agent_*.py'
       - 'sim_engine/rena_character_profile.py'
@@ -32,7 +32,7 @@ jobs:
           python-version: '3.12'
       - name: Run v1.0.13 candidate regression tests
         working-directory: sim_engine
-        run: python -m unittest -v test_v113.py
+        run: python -m unittest -v test_v113.py test_v113_compat.py
       - name: Rehearse full v1.0.12 to v1.0.13 candidate journal replay
         working-directory: sim_engine
         run: python v113_rehearsal.py --repo-root .. --out /tmp/v113_rehearsal.json
@@ -54,3 +54,4 @@ jobs:
           v113_repository.py
           v113_rehearsal.py
           test_v113.py
+          test_v113_compat.py
