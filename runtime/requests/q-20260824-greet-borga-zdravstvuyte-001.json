@@ -1,0 +1,10 @@
+{
+  "format": "TENSURA_FAST_TURN_REQUEST",
+  "schema_version": 1,
+  "event_key": "chat-20260824-greet-borga-zdravstvuyte-q001",
+  "event_type": "player_turn",
+  "expected_last_gameplay_turn_key": "chat-20260824-repeat-greet-borga-r000017",
+  "request": {
+    "raw_text": "Обращаюсь к Борге: «Здравствуйте»."
+  }
+}
