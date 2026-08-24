@@ -2,8 +2,8 @@
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
   "engine_version": "1.0.7",
-  "journal_seq": 12,
-  "head_state_hash": "5449e606e69640c17bac560305511e05cffc42b4af300940a8e2426d6f715c5c",
+  "journal_seq": 13,
+  "head_state_hash": "3e5370e7f8dd860221cf1f79591cf52023a2abaffbe5ddf7968c1fdbe621de91",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -45,10 +45,10 @@
     }
   },
   "last_turn": {
-    "seq": 12,
-    "event_key": "chat-20260824-approach-r000012",
+    "seq": 13,
+    "event_key": "chat-20260824-greet-borga-r000013",
     "event_type": "player_turn",
-    "status": "scene_pending",
+    "status": "executed",
     "action_result": null,
     "visible_actors": [],
     "pending_resolutions": [
@@ -67,7 +67,7 @@
     ],
     "narration_contract": {
       "state_authority": "engine_scene_record_and_checkpoint_only",
-      "player_text_verbatim": "Подхожу",
+      "player_text_verbatim": "«Обращаюсь к Борге: „Доброе утро“.»",
       "must_preserve": [
         "verbatim player action",
         "pending outcomes remain pending",
