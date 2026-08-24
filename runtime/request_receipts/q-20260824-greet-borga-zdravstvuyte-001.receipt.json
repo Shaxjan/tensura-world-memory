@@ -1,0 +1,12 @@
+{
+  "format": "TENSURA_REQUEST_RECEIPT",
+  "schema_version": 1,
+  "request_path": "runtime/requests/q-20260824-greet-borga-zdravstvuyte-001.json",
+  "request_format": "TENSURA_FAST_TURN_REQUEST",
+  "event_key": "chat-20260824-greet-borga-zdravstvuyte-q001",
+  "status": "executed",
+  "seq": 20,
+  "request_mode": "fast_auto_seq:nested_request",
+  "error": null,
+  "authoritative_gameplay_change": true
+}
