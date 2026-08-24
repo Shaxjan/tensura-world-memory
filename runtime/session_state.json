@@ -1,9 +1,9 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.3",
-  "journal_seq": 3,
-  "head_state_hash": "7e0ef12701d0bf0df64963ecb9e1d273d7fc57026a69e614349699481e9b943e",
+  "engine_version": "1.0.4",
+  "journal_seq": 4,
+  "head_state_hash": "450d775e9ab0ffcb08ee349ad1a4d49aea1cddc20a8aecfc588dfaadfedeec51",
   "hud": {
     "time": {
       "world_minute": 189120,
@@ -159,5 +159,12 @@
     ],
     "named_observations": [],
     "pending_resolutions": []
+  },
+  "character_runtime": {
+    "version": "character_core_v1",
+    "calibrated_named_characters": [
+      "borga"
+    ],
+    "hidden_plans_not_narrator_knowledge": true
   }
 }

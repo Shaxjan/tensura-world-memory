@@ -1,0 +1,33 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 4,
+  "event_key": "system-v104-character-core-j000004",
+  "event_type": "character_core_activation",
+  "world_minute": 189120,
+  "request": {
+    "reason": "activate persistent Character Core without choosing a player action",
+    "source_engine": "1.0.3",
+    "target_engine": "1.0.4"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "character_core_v104",
+    "world_minute": 189120,
+    "actor_key": "borga",
+    "core_materialized": true,
+    "plan_materialized": true,
+    "presence_certainty": "prospective_hidden_character_plan_exact",
+    "time_advanced": 0,
+    "player_choice": false,
+    "does_not_assert": [
+      "new player action",
+      "unsupported Borga personality",
+      "unsupported Borga memories",
+      "unsupported Borga relationships"
+    ]
+  },
+  "before_hash": "7e0ef12701d0bf0df64963ecb9e1d273d7fc57026a69e614349699481e9b943e",
+  "after_hash": "450d775e9ab0ffcb08ee349ad1a4d49aea1cddc20a8aecfc588dfaadfedeec51"
+}
