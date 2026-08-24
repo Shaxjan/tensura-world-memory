@@ -1,9 +1,9 @@
 {
   "format": "TENSURA_SESSION_STATE",
   "schema_version": 1,
-  "engine_version": "1.0.9",
-  "journal_seq": 15,
-  "head_state_hash": "6e7895935313d5327cf95eef9d7b615b89fb8ba071ee257224bdb723346af06d",
+  "engine_version": "1.0.10",
+  "journal_seq": 16,
+  "head_state_hash": "c13e950f9740beeff829078d8f52dec3da59b69a20234a3162eefa867990cd48",
   "hud": {
     "time": {
       "world_minute": 189138,
@@ -173,5 +173,17 @@
     "historical_repaired_pending_filtered": true,
     "session_builder_read_only": true,
     "gm_packet_fallback": "read_only_projection_no_telemetry"
+  },
+  "response_runtime": {
+    "version": "causal_npc_response_v1",
+    "calibrated_named_characters": [
+      "borga"
+    ],
+    "supported_response": "simple_direct_greeting",
+    "retroactive_resolution": false,
+    "personality_inference": false,
+    "emotion_inference": false,
+    "relationship_mutation": false,
+    "hidden_decision_basis_not_narrator_knowledge": true
   }
 }
