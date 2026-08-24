@@ -18,79 +18,98 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout triggering request commit
+        uses: actions/checkout@v4
         with:
-          ref: main
-          fetch-depth: 1
-          sparse-checkout: |
-            sim_engine
-            runtime
-          sparse-checkout-cone-mode: true
+          ref: ${{ github.sha }}
+          fetch-depth: 2
 
-      - name: Find request from triggering push
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Identify exactly one request from triggering commit
         id: req
         shell: bash
         run: |
-          mapfile -t REQUESTS < <(
-            jq -r '[.commits[]? | (.added[]?, .modified[]?)][]' "$GITHUB_EVENT_PATH" \
-              | grep -E '^runtime/requests/(r[0-9]{6}|q-[^/]+)\.json$' \
-              | sort -u || true
-          )
-          if [ "${#REQUESTS[@]}" -ne 1 ]; then
-            echo "Expected exactly one runtime request in triggering push; found ${#REQUESTS[@]}"
-            printf '%s\n' "${REQUESTS[@]}"
-            exit 1
-          fi
-          REQUEST="${REQUESTS[0]}"
-          if [ ! -f "$REQUEST" ]; then
-            echo "Trigger request is not present on current main: $REQUEST"
+          REQUEST=$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" \
+            | grep -E '^runtime/requests/(r[0-9]{6}|q-[^/]+)\.json$' \
+            | sort -u || true)
+          COUNT=$(printf '%s\n' "$REQUEST" | sed '/^$/d' | wc -l)
+          if [ "$COUNT" -ne 1 ]; then
+            echo "Expected exactly one runtime request in triggering commit; found $COUNT"
+            printf '%s\n' "$REQUEST"
             exit 1
           fi
           echo "path=$REQUEST" >> "$GITHUB_OUTPUT"
 
-      - name: Execute authoritative turn
+      - name: Fast-forward to current authoritative main
         shell: bash
         run: |
-          python3 --version
-          ENGINE=$(python3 - <<'PY'
+          git fetch origin main
+          git reset --hard origin/main
+          test -f "${{ steps.req.outputs.path }}"
+
+      - name: Execute authoritative turn
+        id: execute
+        shell: bash
+        run: |
+          set +e
+          ENGINE=$(python - <<'PY'
           import json
           print(json.load(open("runtime/runtime_state.json", encoding="utf-8"))["engine_version"])
           PY
           )
-          if [ "$ENGINE" = "1.0.11" ]; then
-            python3 sim_engine/v111_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+          if [ "$ENGINE" = "1.0.12" ]; then
+            python sim_engine/v112_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json > /tmp/runtime-turn.stdout 2> /tmp/runtime-turn.stderr
+          elif [ "$ENGINE" = "1.0.11" ]; then
+            python sim_engine/v111_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json > /tmp/runtime-turn.stdout 2> /tmp/runtime-turn.stderr
           elif [ "$ENGINE" = "1.0.10" ]; then
-            python3 sim_engine/v110_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+            python sim_engine/v110_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json > /tmp/runtime-turn.stdout 2> /tmp/runtime-turn.stderr
           elif [ "$ENGINE" = "1.0.9" ]; then
-            python3 sim_engine/v109_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.8" ]; then
-            python3 sim_engine/v108_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.7" ]; then
-            python3 sim_engine/v107_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.6" ]; then
-            python3 sim_engine/v106_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.5" ]; then
-            python3 sim_engine/v105_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.4" ]; then
-            python3 sim_engine/v104_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.3" ]; then
-            python3 sim_engine/v103_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
-          elif [ "$ENGINE" = "1.0.2" ]; then
-            python3 sim_engine/v102_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json
+            python sim_engine/v109_request_processor.py --repo-root . --request "${{ steps.req.outputs.path }}" --out /tmp/runtime-turn.json > /tmp/runtime-turn.stdout 2> /tmp/runtime-turn.stderr
           else
-            echo "Unsupported authoritative runtime engine: $ENGINE"
-            exit 1
+            echo "Unsupported authoritative runtime engine: $ENGINE" > /tmp/runtime-turn.stderr
+            false
           fi
+          CODE=$?
+          set -e
+          cat /tmp/runtime-turn.stdout || true
+          if [ "$CODE" -ne 0 ]; then
+            cat /tmp/runtime-turn.stderr >&2 || true
+            if [ "$ENGINE" = "1.0.12" ]; then
+              python sim_engine/v112_receipt.py --repo-root . --request "${{ steps.req.outputs.path }}" --status failed --error-file /tmp/runtime-turn.stderr
+              echo "failed=true" >> "$GITHUB_OUTPUT"
+            fi
+            exit "$CODE"
+          fi
+          echo "failed=false" >> "$GITHUB_OUTPUT"
 
-      - name: Commit engine event, pointer and session fast-path
+      - name: Commit engine event, pointer, session and receipt
+        if: success()
         shell: bash
         run: |
           git config user.name "tensura-runtime-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add runtime/journal runtime/runtime_state.json runtime/session_state.json
+          git add runtime/journal runtime/runtime_state.json runtime/session_state.json runtime/request_receipts
           git commit -m "Runtime event $(basename '${{ steps.req.outputs.path }}' .json)"
           if ! git push origin HEAD:main; then
-            echo "main advanced during turn; rebasing non-conflicting runtime commit"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Commit failure receipt
+        if: failure() && steps.execute.outputs.failed == 'true'
+        shell: bash
+        run: |
+          git config user.name "tensura-runtime-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add runtime/request_receipts
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Runtime request failure receipt $(basename '${{ steps.req.outputs.path }}')"
+          if ! git push origin HEAD:main; then
             git pull --rebase origin main
             git push origin HEAD:main
           fi
