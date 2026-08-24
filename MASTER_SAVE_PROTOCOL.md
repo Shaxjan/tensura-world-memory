@@ -1,14 +1,14 @@
-# Tensura World Memory — Authoritative Runtime v1.0.5 Protocol
+# Tensura World Memory — Authoritative Runtime v1.0.7 Protocol
 
-Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.5 подключает первый постоянный Character Core к общей очереди автономности мира, не создавая второй NPC-clock и не превращая скрытые решения персонажа в знание игрока или рассказчика.
+Цель: живую симуляцию ведёт проверяемый движок; мастер описывает только причинно доступный результат. v1.0.7 сохраняет Living Scene, Character Core, shared-scheduler Character Autonomy и safe intent grounding, а также добавляет первую причинную долговременную память именованного персонажа.
 
 ## 1. Источник истины
 
 ### `runtime/runtime_state.json`
 Главный LIVE-pointer. Нормальный режим: `mode = engine_authoritative`.
 
-Для v1.0.5:
-- `engine_version = 1.0.5`;
+Для v1.0.7:
+- `engine_version = 1.0.7`;
 - `base_checkpoint` — текущий compact base;
 - `journal_base_seq` — уже включённый в base sequence;
 - `journal_seq` — последний подтверждённый event;
@@ -67,7 +67,7 @@
 
 Рекомендуемый формат:
 
-`Время: T+131 ~08:00 | Место: большой тренировочный двор Борги | При мне: 26g 05s 92c | Мои деньги вне кошелька: у Верна — остаток UNKNOWN (из переданных 50s)`
+`Время: T+131 ~08:18 | Место: малый боевой/тренировочный двор | При мне: 26g 05s 92c | Мои деньги вне кошелька: у Верна — остаток UNKNOWN (из переданных 50s)`
 
 Семейная касса, project funds, promo funds, earmarked gifts/expenses и payables не являются личными деньгами Арлекино.
 
@@ -75,7 +75,7 @@
 
 ## 5. Чистая игровая наррация
 
-В нормальной игре не показывать `engine_authoritative`, `journal_seq`, hashes, migration diagnostics, скрытые Character Core/plan/autonomy decisions и внутренние resolver-данные.
+В нормальной игре не показывать `engine_authoritative`, `journal_seq`, hashes, migration diagnostics, скрытые Character Core/plan/autonomy/memory records и внутренние resolver-данные.
 
 Сначала HUD, затем обычная сцена. Технические данные показывать только при ошибке, recovery или прямом запросе пользователя.
 
@@ -104,105 +104,120 @@ Core хранит:
 - placeholders для будущих needs/resources;
 - ссылку на текущий план.
 
-### Главное правило заполнения
-Новая структура не является разрешением выдумывать биографию.
-
-Если черта характера, страх, романтическое отношение, память, имущество или иная личная деталь не подтверждены источником/событием, поле остаётся пустым либо `not_yet_authored` / `not_yet_modeled`.
+Новая структура не является разрешением выдумывать биографию. Если черта характера, страх, романтическое отношение, память, имущество или иная личная деталь не подтверждены источником/событием, поле остаётся пустым либо `not_yet_authored` / `not_yet_modeled`.
 
 Character Core имеет authority `NON_CANON_MECHANICAL_PROSPECTIVE` и управляет будущей симуляцией от момента materialization; он не переписывает невидимое прошлое.
 
 ## 8. Persistent character plan
 
-Для Борги v1.0.4 заменяет независимый почасовой location roll одним persistent deterministic daily role plan.
+Для Борги v1.0.4 использует один persistent deterministic daily role plan.
 
-Пока модель намеренно ограничена:
-- `role_duty` — работа на одной из трёх уже калиброванных тренировочных площадок;
-- `local_travel` — конечное окно перехода между рабочими точками, но без выдуманной геометрии;
+Пока модель ограничена:
+- `role_duty` — работа на одной из трёх калиброванных тренировочных площадок;
+- `local_travel` — конечное окно перехода, без выдуманной геометрии;
 - `unresolved_personal_time` — точное место `UNKNOWN`;
 - `unresolved_region_activity` — точное место `UNKNOWN`.
 
-Точный hidden place разрешён только в grounded `role_duty` block.
-
-План является скрытым состоянием движка. Рассказчик и игрок не знают его автоматически.
-
-Правильная цепочка:
-
-`hidden character plan -> observation/testimony/transmission -> player knowledge`
+Точный hidden place разрешён только в grounded `role_duty` block. План скрыт от игрока/рассказчика до causal observation/testimony.
 
 ## 9. Character Autonomy v1
 
-v1.0.5 подключает первый Character Core к уже существующему `autonomy_runtime`.
+v1.0.5 подключает Character Core Борги к существующему `autonomy_runtime`.
 
 Главный принцип: **один персонаж — одна шкала времени — одна очередь автономности**.
 
-Для Борги не создаётся новый таймер и не дублируется поручение. Сохраняется уже авторитетный `task:borga`; меняется только его runtime-handler с generic `task_progress` на `character_task_v105`.
+Существующий `task:borga` сохраняет scheduler state; меняется только handler на `character_task_v105`. Work tick допускается только при grounded `role_duty`; иначе работа deferred. Work tick не означает completion.
 
-При активации обязаны сохраниться без сброса:
-- `next_due_at`;
-- `cadence_minutes`;
-- `tick_count`;
-- `status`.
+Autonomy decision скрыт и становится знанием только через наблюдение/свидетельство/отчёт.
 
-Character Autonomy state извлекает рабочие направления только из уже сохранённого поручения Борги: combat rules, admissions, judges, testing, tournament operations. Новые обязанности из самой структуры не возникают.
+## 10. Intent Grounding v1
 
-На каждом due tick движок сначала сверяет persistent Character Plan:
-- в `role_duty` block с точной grounded training-site допускается реальный hidden work tick по одной существующей обязанности;
-- в `local_travel`, `unresolved_personal_time` или `unresolved_region_activity` работа откладывается как `character_work_deferred`; точное место не выдумывается.
+v1.0.6 исправляет ложное связывание именованных NPC по подстрокам.
 
-Work tick означает подтверждённое усилие, но **не завершение** задачи. Автоматическое completion по количеству тиков запрещено до появления grounded completion condition/deliverable mechanic.
+Именованный target требует explicit token/допустимую форму имени. Случайная последовательность символов внутри другого слова не является упоминанием NPC.
 
-Autonomy decision — скрытое состояние движка. Арлекино, рассказчик, ambient NPC и другие персонажи не узнают его автоматически. Нужен причинный канал: наблюдение, свидетельство, отчёт или иная передача.
+Наблюдавшийся дефект `рен` внутри `тренировочный` закрыт append-only repair event; старый malformed journal не редактировался.
 
-Все остальные commitments продолжают использовать существующие handlers общей очереди, если отдельная character-specific semantics для них ещё не калибрована.
+Known-local travel допускает ограниченную typo repair только там, где destination уже grounded alias/causal lead. Typo tolerance не разрешает угадывать неизвестные места или NPC.
 
-## 10. v1.0.4 -> v1.0.5 continuity
+## 11. Causal Encounter Memory v1
 
-Перед сменой semantics подтверждённый v1.0.4 head compact-ится неизменённым в новый v1.0.5 base checkpoint.
+v1.0.7 добавляет первую долговременную память persistent named character, калиброванную на Борге.
 
-Activation оформляется новым append-only `character_autonomy_activation` journal event.
+### Reciprocal-awareness rule
 
-Activation:
-- не является новым действием Арлекино;
-- не двигает мировое время;
-- не меняет деньги или регион игрока;
-- не редактирует старые события;
-- сохраняет последний игровой `last_turn`;
-- не сбрасывает уже накопленный scheduler state Борги;
-- только materializes Character Autonomy state и переназначает handler существующего `task:borga`.
+`Арлекино увидел Боргу` **не означает** `Борга заметил/запомнил Арлекино`.
 
-Предыдущая v1.0.3 -> v1.0.4 причинная непрерывность сохраняется: current-day Borga plan по-прежнему использует допустимый migration anchor, а hidden plan не является знанием игрока.
+Память создаётся только для нового принятого хода, если:
+- Борга уже causally visible в той же локальной сцене;
+- Арлекино явно адресует/упоминает Боргу через safe intent grounding;
+- ход содержит реально наблюдаемое обращение/interaction/handoff/performance component.
 
-## 11. Именованные NPC и локальный поиск
+Простой поиск/обнаружение Борги память Борги не создаёт.
+
+### Storage rule
+
+Production `actors` пока содержит generic actor-state только там, где все обязательные поля grounded. Нельзя материализовать Боргу как generic actor с фиктивными `cash=0`, stats или status только ради старого FK `memories` table.
+
+Поэтому v1.0.7 хранит causal named-character memory в существующем authoritative `facts` store с ключом `v107:character_memory:borga:<turn_key>`, а `Character Core.memories` хранит ссылку на этот fact.
+
+### Memory content
+
+Можно сохранять:
+- кто наблюдал/кого;
+- время и место;
+- source turn;
+- дословно наблюдаемый player text;
+- тип наблюдаемого компонента;
+- causal basis/confidence.
+
+Нельзя автоматически выводить из memory:
+- эмоцию/approval/disapproval;
+- изменение отношений;
+- ответ Борги;
+- consent/acceptance;
+- истинность сказанного Арлекино.
+
+Memory fact приватен для character state и не становится знанием рассказчика/других NPC автоматически.
+
+## 12. Version continuity / activation
+
+Каждая смена semantics сначала compact-ит подтверждённый предыдущий LIVE head в новый immutable base checkpoint, затем добавляет новый activation journal event.
+
+Activation v1.0.7:
+- не является действием Арлекино;
+- 0 игровых минут;
+- не меняет деньги/регион/место;
+- сохраняет `last_turn`;
+- не импортирует память из предыдущего one-way поиска `r000009`;
+- не materializes Боргу как generic `actors` row;
+- только подключает memory model к существующему Character Core.
+
+## 13. Именованные NPC и локальный поиск
 
 Именованный NPC не появляется потому, что так удобнее сцене.
 
 Для позиции требуется сохранённая позиция, допустимый hidden prospective plan/routine, прямое наблюдение либо причинное свидетельство.
 
-Поиск Борги на известной площадке остаётся конечным действием: 6 игровых минут; за это время работает autonomy; результат — `found`, `lead` или `not_found_no_lead`.
+Поиск Борги на известной площадке — конечное действие: 6 игровых минут; за это время работает autonomy; результат — `found`, `lead` или `not_found_no_lead`.
 
-`lead` — свидетельство, а не всеведение. Оно не гарантирует, что Борга останется там до прихода игрока.
+`lead` — свидетельство, а не всеведение. Во время `local_travel` / unresolved block скрытая точная позиция Борги остаётся `UNKNOWN`.
 
-Во время `local_travel` / unresolved block скрытая точная позиция Борги остаётся `UNKNOWN`.
+## 14. Локальное перемещение
 
-Для некалиброванного именованного NPC exact position остаётся guarded `UNKNOWN`.
+Известная точка текущего города — конечное действие. Движок двигает clock, запускает autonomy, фиксирует прибытие и living scene. Повтор команды в уже достигнутую точку не списывает время повторно.
 
-## 12. Локальное перемещение
+Локальное перемещение не даёт скрытое знание Character Core/plan/memory.
 
-Известная точка текущего города — конечное действие.
-
-Движок двигает мировой clock, запускает автономность, фиксирует прибытие и living scene. Повтор команды в уже достигнутую точку не списывает время повторно.
-
-Локальное перемещение игрока не даёт ему скрытое знание Character Core/plan.
-
-## 13. Pending
+## 15. Pending
 
 Pending нужен только там, где исход нельзя безопасно разрешить текущей механикой. Narration не превращает pending в факт.
 
-System resume допускается только для уже явно выбранного пользователем действия.
+System resume допускается только для уже явно выбранного действия. Generic resolver нельзя использовать для обхода денег, боя, магии/лечения, рынка, силы или межрегионального travel.
 
-Generic resolver нельзя использовать для обхода денег, боя, магии/лечения, рынка, силы или межрегионального travel.
+Факт того, что Борга услышал принятую явную реплику, не разрешает автоматически закрывать pending его ответом.
 
-## 14. Деньги
+## 16. Деньги
 
 - 100c = 1s; 100s = 1g.
 - Личная касса отдельно от family/project/promo.
@@ -210,15 +225,15 @@ Generic resolver нельзя использовать для обхода де�
 - Неизвестный entrusted float остаётся `UNKNOWN` до причинного отчёта/расхода/возврата.
 - У Верна переданный principal 50s не равен текущему остатку: текущий остаток `UNKNOWN`.
 - Не создавать деньги из реакции толпы.
-- Character Core/Autonomy activation не меняет деньги.
+- Engine activation не меняет деньги.
 
-## 15. Контроль Арлекино и знания
+## 17. Контроль Арлекино и знания
 
 - Арлекино/Маэстро полностью контролирует пользователь.
 - Не придумывать его реплики, чувства, решения и значимые действия.
 - NPC и мир автономны.
 - Знание NPC требует `SOURCE -> TRANSMISSION -> TIME -> RECIPIENT`.
-- Скрытый character plan и hidden autonomy decisions не являются знанием NPC вокруг него автоматически.
+- Скрытый plan/autonomy/memory другого персонажа не является знанием автоматически.
 - Не передавать NPC приватные сведения без канала.
 - Только Рена говорит «павлин».
 - Jura — регион; JTF ещё нет.
@@ -226,11 +241,11 @@ Generic resolver нельзя использовать для обхода де�
 - Поручение Верна в Дваргон не связано с Ореном.
 - Гарет и Верн знают точную гостиницу в мире; GM не знает её названия и не придумывает его.
 
-## 16. Retcon / repair
+## 18. Retcon / repair
 
-Прямая коррекция пользователя отменяет противоречащую старую запись. После cutover repair оформляется новым runtime transition. Старый journal event не редактировать.
+Прямая коррекция пользователя отменяет противоречащую старую запись. Repair оформляется новым runtime transition. Старый journal event не редактировать.
 
-## 17. Checkpoint / compaction
+## 19. Checkpoint / compaction
 
 При смене engine semantics или периодически:
 1. replay текущего base + journal до head;
@@ -242,7 +257,7 @@ Generic resolver нельзя использовать для обхода де�
 
 Новая версия engine не должна replay старых событий под изменившейся семантикой, если это меняет их результат. Сначала compact старый подтверждённый head, затем новые события новой версии.
 
-## 18. Rollback
+## 20. Rollback
 
 `legacy_rollback` хранит точную pre-cutover v159 точку.
 
@@ -250,13 +265,13 @@ Emergency rollback: остановить runtime writes; проверить anch
 
 Каждая новая engine activation должна оставлять предыдущий checkpoint/journal доступными для аудита.
 
-## 19. Песни
+## 21. Песни
 
 - Одна песня = один полный UTF-8 файл, когда текст реально полный и проверен.
 - `FULL_CANONICAL` только после обратного чтения полного файла.
 - Потерянный/обрезанный текст не восстанавливать по оригиналу или памяти.
 
-## 20. Нельзя
+## 22. Нельзя
 
 - считать legacy `live_state.json` текущим SAVE;
 - редактировать подтверждённый journal event;
@@ -266,9 +281,12 @@ Emergency rollback: остановить runtime writes; проверить anch
 - смешивать личные, семейные и проектные деньги;
 - решать за Арлекино;
 - давать NPC невозможные знания;
-- раскрывать hidden Character Core/plan/autonomy decision как будто игрок это знает;
+- раскрывать hidden Character Core/plan/autonomy/private memory как будто игрок это знает;
 - создавать для одного commitment второй автономный таймер/очередь;
-- заполнять новый Core выдуманными чертами, памятью, отношениями или имуществом;
+- заполнять Core выдуманными чертами, памятью, отношениями или имуществом;
+- создавать NPC memory только потому, что игрок увидел NPC;
+- превращать causal memory в эмоцию, consent, reply или relationship delta без отдельного основания;
+- materialize named character как generic actor с фиктивными обязательными полями ради удобства схемы;
 - превращать causal testimony в абсолютную истину;
 - показывать техничку вместо игровой сцены без необходимости;
 - пропускать обязательный HUD.
