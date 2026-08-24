@@ -60,6 +60,7 @@ class V104RuntimeMixin:
             "autonomy_tier": "tier_1_prototype",
             "authority": CHARACTER_CORE_AUTHORITY,
             "historical_claim": False,
+            "provenance": "engine:v104_character_core",
             "materialized_at": int(self.now),
             "identity": {
                 "status": "persistent_named_character",
@@ -200,6 +201,7 @@ class V104RuntimeMixin:
             "day_start": day_start,
             "authority": CHARACTER_CORE_AUTHORITY,
             "historical_claim": False,
+            "provenance": "engine:v104_character_plan",
             "generated_at": int(self.now),
             "goal_key": "fulfill_training_duties",
             "blocks": blocks,
