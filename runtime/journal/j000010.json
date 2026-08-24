@@ -1,0 +1,32 @@
+{
+  "format": "TENSURA_RUNTIME_EVENT",
+  "schema_version": 1,
+  "seq": 10,
+  "event_key": "system-v107-causal-encounter-memory-j000010",
+  "event_type": "causal_encounter_memory_activation",
+  "world_minute": 189138,
+  "request": {
+    "reason": "enable causal named-character encounter memory without inventing reciprocal awareness from prior player observation",
+    "source_engine": "1.0.6",
+    "target_engine": "1.0.7"
+  },
+  "result": {
+    "status": "executed",
+    "accepted": true,
+    "activation": "causal_encounter_memory_v107",
+    "world_minute": 189138,
+    "actor_key": "borga",
+    "existing_memory_count_preserved": 0,
+    "time_advanced": 0,
+    "player_choice": false,
+    "retroactive_memory_created": false,
+    "does_not_assert": [
+      "Borga noticed the player during prior one-way search",
+      "Borga emotion",
+      "relationship change",
+      "new player action"
+    ]
+  },
+  "before_hash": "4c02070ce79abebe42734260ad5af12a95fd7f3f5ec376139feac631668bdcec",
+  "after_hash": "2a01ef8f1dede9697946fbc552d9f0187b36f7c045ab440f790926b76263245f"
+}
