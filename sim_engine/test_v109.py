@@ -29,6 +29,12 @@ class V109Tests(unittest.TestCase):
         p=w.db.execute("INSERT INTO scene_pending_resolution(scene_action_id,resolution_kind,target_key,target_text,state_json,status,created_at) VALUES(?,?,?,?,?,?,?)",(int(a.lastrowid),"local_navigation",None,target_text,"{}",status,w.now))
         w.db.commit(); return int(p.lastrowid)
 
+    @staticmethod
+    def _telemetry(w):
+        log_count=int(w.db.execute("SELECT COUNT(*) FROM gm_packet_log").fetchone()[0])
+        context_builds=int(w.db.execute("SELECT value FROM metrics WHERE key='context_builds'").fetchone()[0])
+        return log_count,context_builds
+
     def test_sanitizer_removes_repaired_pending_but_keeps_current_pending(self):
         with seed_world_v109_lab(Path(self.tmp.name)/"a.db") as w:
             self._install(w)
@@ -48,13 +54,34 @@ class V109Tests(unittest.TestCase):
             self.assertEqual((w.character_core_v104("borga") or {}).get("memories"),core0.get("memories"))
             self.assertFalse(out["journal"]["result"]["db_gameplay_mutation"])
 
-    def test_session_builder_projects_authoritative_pending(self):
+    def test_session_builder_projects_authoritative_pending_without_telemetry_writes(self):
         with seed_world_v109_lab(Path(self.tmp.name)/"c.db") as w:
             self._install(w); stale=self._make_pending(w,"old","old","cancelled_visible_approach_parser_repair")
             preserved={"seq":9,"event_key":"greet","pending_resolutions":[{"id":stale,"kind":"local_navigation","target":"old","status":"pending"}],"narration_contract":{"must_preserve":["pending outcomes remain pending"]}}
+            before=self._telemetry(w)
             state=w.build_session_state_v109(journal_seq=1,head_state_hash="hash",preserved_last_turn=preserved)
+            after=self._telemetry(w)
+            self.assertEqual(before,after)
             self.assertEqual(state["last_turn"]["event_key"],"greet"); self.assertEqual(state["last_turn"]["pending_resolutions"],[])
             self.assertEqual(state["readmodel_runtime"]["pending_source"],"authoritative_scene_pending_resolution_status_pending")
+            self.assertTrue(state["readmodel_runtime"]["session_builder_read_only"])
+
+    def test_session_builder_keeps_true_current_pending(self):
+        with seed_world_v109_lab(Path(self.tmp.name)/"d.db") as w:
+            self._install(w); active=self._make_pending(w,"active","Борга","pending")
+            preserved={"seq":9,"event_key":"active","pending_resolutions":[{"id":active,"kind":"local_navigation","target":"Борга","status":"pending"}]}
+            state=w.build_session_state_v109(journal_seq=1,head_state_hash="hash",preserved_last_turn=preserved)
+            self.assertEqual([r["id"] for r in state["last_turn"]["pending_resolutions"]],[active])
+            self.assertEqual([r["id"] for r in state["scene"]["pending_resolutions"]],[active])
+
+    def test_normal_gm_packet_still_records_legacy_telemetry(self):
+        with seed_world_v109_lab(Path(self.tmp.name)/"e.db") as w:
+            self._install(w); before=self._telemetry(w)
+            packet=w.build_gm_packet("player")
+            after=self._telemetry(w)
+            self.assertEqual(after[0],before[0]+1)
+            self.assertEqual(after[1],before[1]+1)
+            self.assertEqual(packet["runtime"]["engine"],"1.0.9")
 
     def test_activation_replay_deterministically(self):
         with seed_world_v109_lab(Path(self.tmp.name)/"base.db") as base:
