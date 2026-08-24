@@ -8,6 +8,7 @@ from pathlib import Path
 
 from app import request_paths_from_push, transport_mode, verify_github_signature
 from server import RuntimeService as ProductionRuntimeService
+from validate_runtime import validate_runtime
 
 
 class RuntimeServiceUnitTests(unittest.TestCase):
@@ -70,6 +71,14 @@ class RuntimeServiceUnitTests(unittest.TestCase):
         service.queue = queue.Queue(maxsize=2)
         with self.assertRaises(ValueError):
             service.enqueue("runtime/session_state.json")
+
+    def test_checked_out_authoritative_runtime_replays_cleanly(self):
+        root = Path(__file__).resolve().parents[1]
+        result = validate_runtime(root)
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["engine_version"], "1.0.12")
+        self.assertGreaterEqual(int(result["journal_seq"]), 21)
+        self.assertEqual(len(str(result["head_state_hash"])), 64)
 
 
 if __name__ == "__main__":
