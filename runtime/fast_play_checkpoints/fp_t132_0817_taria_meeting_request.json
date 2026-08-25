@@ -1,0 +1,17 @@
+{
+  "time": "T+132 ~08:17",
+  "place": "Arlequino and Rena's lodging, Eurazania capital",
+  "event": "Arlequino asked Meira to arrange a meeting with Taria, a beginning event organizer Meira knows.",
+  "taria": {
+    "status": "candidate organizer, not yet hired",
+    "known_via": "Meira",
+    "experience": "helps Meira on small events; handles participant lists, seating, announcements, paper, venue coordination, performer order",
+    "scope_fit": "potentially suitable for weekly poetry evenings; not yet trusted alone with large events"
+  },
+  "commitment": "Meira agreed to ask Taria whether she is interested and arrange a meeting. Exact time and Taria's acceptance are still UNKNOWN.",
+  "important_constraints": [
+    "Do not treat Taria as hired before she agrees and terms are negotiated.",
+    "Payment and exact duties remain undecided.",
+    "Meeting time is not yet fixed."
+  ]
+}
