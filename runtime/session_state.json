@@ -4,22 +4,29 @@
   "engine_version": "1.0.12",
   "journal_seq": 21,
   "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "fast_play_checkpoint": {
+    "path":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json",
+    "checkpoint_id":"fp_t131_1835_busking",
+    "world_minute":189755,
+    "display":"T+131 ~18:35",
+    "authority":"persisted_session_overlay_on_engine_baseline_j21"
+  },
   "hud": {
     "time": {
-      "world_minute": 189138,
-      "display": "T+131 ~08:18"
+      "world_minute": 189755,
+      "display": "T+131 ~18:35"
     },
     "location": {
       "region_id": "eurazania",
       "region": "Столица Эуразании",
-      "place": "малый боевой/тренировочный двор",
-      "display": "малый боевой/тренировочный двор",
-      "certainty": "prospective_engine_arrival",
-      "source": "memory/places.json"
+      "place": "центральная площадь",
+      "display": "центральная площадь столицы Эуразании",
+      "certainty": "confirmed_fast_play_checkpoint",
+      "source": "runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
     },
     "money": {
-      "on_person_copper": 260592,
-      "on_person_display": "26g 05s 92c",
+      "on_person_copper": 273030,
+      "on_person_display": "27g 30s 30c",
       "elsewhere": [
         {
           "account_id": "vern_instrument_float",
@@ -35,6 +42,11 @@
         }
       ],
       "elsewhere_display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)",
+      "family_purse": {
+        "balance_copper":1382,
+        "balance_display":"13s 82c",
+        "separate_from_personal":true
+      },
       "excludes": [
         "family funds",
         "project funds",
@@ -45,14 +57,19 @@
     }
   },
   "last_turn": {
-    "seq": 21,
-    "event_key": "chat-20260824-wait-borga-response-q001",
-    "event_type": "player_turn",
-    "status": "needs_clarification",
-    "action_result": null,
+    "seq": null,
+    "event_key": "chat-20260825-t131-evening-busking-festival-bundle",
+    "event_type": "fast_play_bundled_turn",
+    "status": "executed_and_checkpointed",
+    "action_result": {
+      "activity":"street performances and festival promotion through evening",
+      "gross_income_copper":13820,
+      "family_transfer_copper":1382,
+      "checkpoint":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+    },
     "visible_actors": [],
     "pending_resolutions": [],
-    "narration_contract": null
+    "narration_contract": "player next action remains USER_CONTROLLED"
   },
   "display_contract": {
     "always_show": [
@@ -68,59 +85,22 @@
   "scene": {
     "ambient": [
       {
-        "entity_key": "eurazania_small_training_yard:ambient:189132:1:17081",
-        "kind": "anonymous_local",
-        "descriptor": "двое бойцов",
-        "activity": "спаррингуют без зрителей",
-        "group_size": 2,
-        "knowledge_tags": [],
-        "identity_status": "not_materialized_named_npc"
-      },
-      {
-        "entity_key": "eurazania_small_training_yard:ambient:189132:2:40035",
-        "kind": "anonymous_local",
-        "descriptor": "молодой боец",
-        "activity": "повторяет стойки",
-        "group_size": 1,
-        "knowledge_tags": [],
-        "identity_status": "not_materialized_named_npc"
-      },
-      {
-        "entity_key": "eurazania_small_training_yard:ambient:189132:3:18252",
-        "kind": "anonymous_local",
-        "descriptor": "рабочий",
-        "activity": "собирает инвентарь у стены",
-        "group_size": 1,
-        "knowledge_tags": [],
-        "identity_status": "not_materialized_named_npc"
-      },
-      {
-        "entity_key": "eurazania_small_training_yard:ambient:189132:4:91205",
-        "kind": "anonymous_local",
-        "descriptor": "помощник инструктора",
-        "activity": "наблюдает за коротким спаррингом",
-        "group_size": 1,
-        "knowledge_tags": [
-          "borga_work_routine"
-        ],
-        "identity_status": "not_materialized_named_npc"
+        "entity_key":"eurazania_central_square:ambient:189755:1",
+        "kind":"anonymous_local",
+        "descriptor":"вечерние прохожие и торговцы",
+        "activity":"поток после рабочего дня постепенно редеет; часть людей ещё задерживается у лавок и уличных исполнителей",
+        "group_size":null,
+        "knowledge_tags":["arlequino_festival_publicity_today"],
+        "identity_status":"not_materialized_named_npc"
       }
     ],
-    "named_observations": [
-      {
-        "actor": "borga",
-        "name": "Борга",
-        "status": "visible",
-        "place": "малый боевой/тренировочный двор"
-      }
-    ],
-    "pending_resolutions": []
+    "named_observations": [],
+    "pending_resolutions": [],
+    "current_activity":"Arlequino has finished the last street performance block and is free to choose the next action"
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
-    "calibrated_named_characters": [
-      "borga"
-    ],
+    "calibrated_named_characters": ["borga"],
     "shared_scheduler": true,
     "hidden_plans_not_narrator_knowledge": true,
     "hidden_autonomy_not_narrator_knowledge": true
@@ -137,9 +117,7 @@
   },
   "memory_runtime": {
     "version": "causal_encounter_memory_v1",
-    "calibrated_named_characters": [
-      "borga"
-    ],
+    "calibrated_named_characters": ["borga"],
     "storage": "authoritative_facts_with_character_core_references",
     "reciprocal_awareness_required": true,
     "retroactive_inference": false,
@@ -156,9 +134,7 @@
   },
   "response_runtime": {
     "version": "causal_npc_response_v1",
-    "calibrated_named_characters": [
-      "borga"
-    ],
+    "calibrated_named_characters": ["borga"],
     "supported_response": "simple_direct_greeting",
     "retroactive_resolution": false,
     "personality_inference": false,
@@ -187,7 +163,8 @@
     "bootstrap_github_read_once": true,
     "session_local_overlay": true,
     "persist_only_on_trigger_or_checkpoint": true,
-    "bundled_persistence": true
+    "bundled_persistence": true,
+    "latest_persisted_checkpoint":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
   },
   "important_memory": {
     "enabled": true,
