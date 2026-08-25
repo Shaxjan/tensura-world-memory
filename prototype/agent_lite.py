@@ -73,7 +73,10 @@ def rena_agent_lite(context: dict[str, Any], *, memory_count: int = 0) -> dict[s
     low = _norm(raw)
     seed = f"{context.get('source_turn_key')}|{memory_count}|{low}"
 
-    if any(x in low for x in ("дай гитар", "отдай гитар", "можно твою гитар", "возьму твою гитар")):
+    guitar_request = "гитар" in low and any(
+        token in low for token in ("дай", "отдай", "дашь", "одолж", "можно взять", "возьму", "давай мне")
+    )
+    if guitar_request:
         return _decision(
             context,
             speech_act="refuse",
@@ -83,7 +86,7 @@ def rena_agent_lite(context: dict[str, Any], *, memory_count: int = 0) -> dict[s
                 "Нет. Ты можешь попросить — я могу отказать. Вот сейчас отказываю.",
             ]),
             emotion="amused" if memory_count % 2 == 0 else "guarded",
-            relationship_delta={"respect": 1},
+            relationship_delta={},
         )
 
     if any(x in low for x in ("привет", "здравств", "доброе утро", "добрый день", "добрый вечер")):
