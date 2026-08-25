@@ -3,7 +3,7 @@
   "schema_version": 1,
   "enabled": true,
   "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
-  "rules_version": "chat-important-memory-v1",
+  "rules_version": "chat-important-memory-v1.1-fast-play",
   "baseline": {
     "journal_seq": 21,
     "event_key": "chat-20260824-wait-borga-response-q001",
@@ -28,11 +28,19 @@
     "relative_floor_display": "10s"
   },
   "write_policy": {
-    "confirmed_gameplay_turn_only": true,
-    "max_events_per_source_turn": 1,
+    "fast_play": true,
+    "github_read_each_turn": false,
+    "github_write_each_turn": false,
+    "ordinary_turn_persistence": false,
+    "evaluate_from_in_chat_context": true,
+    "bootstrap_read_once_per_session": true,
+    "write_only_on_significance_trigger": true,
+    "explicit_save_allowed": true,
+    "intentional_session_checkpoint_allowed": true,
+    "max_events_per_gameplay_beat": 1,
     "append_only_events": true,
-    "dedupe_by_source_journal": true,
-    "canonical_authority": "runtime/journal",
-    "chat_postflight_required": true
+    "dedupe_before_triggered_write": true,
+    "chat_postflight_required": false,
+    "ordinary_response_must_not_wait_for_memory_io": true
   }
 }
