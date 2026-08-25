@@ -1,0 +1,16 @@
+{
+  "session": "T+132",
+  "time": "~16:19",
+  "location": "temporary lodging, Eurazania capital",
+  "event": "Arlequino transferred all currently held personal money to the family purse after marriage registration.",
+  "before": {
+    "arlequino_personal": "27g 47s 13c",
+    "family_purse": "15s 69c"
+  },
+  "after": {
+    "arlequino_personal": "0g 0s 0c",
+    "family_purse": "27g 62s 82c"
+  },
+  "scope": "Current funds only. This does not by itself redefine future income rules unless later agreed.",
+  "context": "Arlequino placed all his money in front of Rena and said: 'теперь это семьи.'"
+}
