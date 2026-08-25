@@ -1,0 +1,38 @@
+{
+  "format": "TENSURA_IMPORTANT_MEMORY_STATE",
+  "schema_version": 1,
+  "enabled": true,
+  "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
+  "rules_version": "chat-important-memory-v1",
+  "baseline": {
+    "journal_seq": 21,
+    "event_key": "chat-20260824-wait-borga-response-q001",
+    "retroactive_import": false,
+    "note": "Tracking starts after this confirmed gameplay baseline; baseline cash is not treated as tracked earnings."
+  },
+  "last_memory_seq": 0,
+  "last_memory_event": null,
+  "earnings_checkpoint": {
+    "scan_from_journal_seq": 22,
+    "carry_copper": 0,
+    "threshold_copper": 10000,
+    "threshold_display": "1g",
+    "crossed_gold_checkpoints": 0,
+    "count_only_realized_external_personal_income": true
+  },
+  "major_spend": {
+    "absolute_threshold_copper": 5000,
+    "absolute_threshold_display": "0.5g",
+    "relative_threshold_ratio": 0.2,
+    "relative_floor_copper": 1000,
+    "relative_floor_display": "10s"
+  },
+  "write_policy": {
+    "confirmed_gameplay_turn_only": true,
+    "max_events_per_source_turn": 1,
+    "append_only_events": true,
+    "dedupe_by_source_journal": true,
+    "canonical_authority": "runtime/journal",
+    "chat_postflight_required": true
+  }
+}
