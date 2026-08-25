@@ -178,5 +178,20 @@
     "request_receipts": true,
     "duplicate_enqueue_forbidden": true,
     "github_actions_still_authoritative_transport": true
+  },
+  "important_memory": {
+    "enabled": true,
+    "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
+    "state_path": "runtime/important_memory/state.json",
+    "events_dir": "runtime/important_memory",
+    "authority": "confirmed_runtime_journal_only",
+    "chat_postflight_required": true,
+    "max_events_per_source_turn": 1,
+    "economic_triggers": {
+      "cumulative_realized_earnings_copper": 10000,
+      "major_spend_absolute_copper": 5000,
+      "major_spend_relative_ratio": 0.2,
+      "major_spend_relative_floor_copper": 1000
+    }
   }
 }
