@@ -10,15 +10,18 @@
     "retroactive_import": false,
     "note": "Tracking starts after this confirmed gameplay baseline; baseline cash is not treated as tracked earnings."
   },
-  "last_memory_seq": 0,
-  "last_memory_event": null,
+  "last_memory_seq": 1,
+  "last_memory_event": "runtime/important_memory/m000001.json",
+  "last_session_checkpoint": "runtime/fast_play_checkpoints/fp_t131_1835_busking.json",
   "earnings_checkpoint": {
     "scan_from_journal_seq": 22,
-    "carry_copper": 0,
+    "carry_copper": 3820,
     "threshold_copper": 10000,
     "threshold_display": "1g",
-    "crossed_gold_checkpoints": 0,
-    "count_only_realized_external_personal_income": true
+    "crossed_gold_checkpoints": 1,
+    "count_only_realized_external_personal_income": true,
+    "last_crossing_world_minute": 189755,
+    "last_crossing_source": "runtime/important_memory/m000001.json"
   },
   "major_spend": {
     "absolute_threshold_copper": 5000,
