@@ -1,0 +1,14 @@
+{
+  "time": "T+132 ~09:01",
+  "place": "Eurazania capital, Carrion residence, reception hall",
+  "event_type": "long_term_goal_public_statement",
+  "speaker": "Arlequino",
+  "audience": ["Carrion", "Rena"],
+  "statement": "Arlequino said that since beginning his journey in Dwargon he had decided his goal was to spread the light of art in a world where, in his judgment as someone knowledgeable about art, art is in serious decline. He said the wealthy have little interest in it and governments have more urgent problems. Because he considers himself exceptionally capable in art, he wants to share art with the world. He added that as a human he expects to die in roughly 50–60 years, that travel may become difficult for him in around 30 years, and that in that limited time he wants to make sure the world gains other sources of creation besides himself.",
+  "epistemic_status": "Public in-world statement and personal mission expressed by Arlequino; claims about world art decline and his lifespan are his own statements, not objective narrator facts unless independently established.",
+  "related_context": {
+    "festival": "Arlequino personally committed 15g40s in Top-10 tournament prizes and accepts likely personal loss of about 10g.",
+    "poetry": "First Eurazania poetry evening succeeded; next one is intended for next week with comedy theme.",
+    "marriage": "Arlequino and Rena intend to register marriage today; not yet official at this checkpoint."
+  }
+}
