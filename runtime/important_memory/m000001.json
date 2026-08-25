@@ -1,0 +1,43 @@
+{
+  "format": "TENSURA_IMPORTANT_MEMORY_EVENT",
+  "schema_version": 1,
+  "memory_seq": 1,
+  "source": {
+    "journal_seq": null,
+    "event_key": "chat-20260825-t131-evening-busking-festival-bundle",
+    "session_checkpoint": "runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+  },
+  "world_minute": 189755,
+  "kinds": [
+    "earnings_checkpoint",
+    "festival_policy",
+    "mail_dispatch",
+    "family_budget_activation",
+    "publicity_campaign"
+  ],
+  "summary": "By T+131 ~18:35 Arlequino completed a day of street performances and festival promotion in Eurazania, earned 1g38s20c gross, transferred 13s82c to the family purse under the existing 10% rule, confirmed three outbound letters sent by Rena, and fixed key festival finance/public-access rules.",
+  "facts": [
+    "Festival visitor entry is free.",
+    "Spectator places/seating are free.",
+    "Festival commercial revenue is to come from rent/fees charged to traders and similar commercial participants, not visitors.",
+    "Meira may plan festival expenses up to 10g; this is a cap, not a spending target.",
+    "Meira and Borga are authorized to coordinate festival/tournament spatial logistics directly.",
+    "Meira is authorized to advertise in Eurazania and invite trusted organizer contacts.",
+    "A T+132 morning finance meeting is planned at Arlequino's lodging; exact lodging name is known in-world from direct speech but UNKNOWN to GM.",
+    "Rena confirmed dispatch of three letters: Lissa in Blumund, the Queen in Blumund, and Каменная арка in Dwargon. Delivery remains UNKNOWN.",
+    "Arlequino publicly promoted the festival across several Eurazania-capital districts while performing only songs whose exact archived text is fully recoverable in GitHub.",
+    "Rena's guitar remains Rena's property and was temporarily used/carried by Arlequino with permission during the performances."
+  ],
+  "economy": {
+    "realized_earned_copper": 13820,
+    "spent_copper": 0,
+    "family_transfer_copper": 1382,
+    "family_transfer_is_internal_separate_fund_transfer": true,
+    "earnings_checkpoint_gold_crossed": 1,
+    "earnings_carry_copper": 3820,
+    "opening_personal_copper": 260592,
+    "closing_personal_copper": 273030,
+    "family_purse_balance_copper": 1382
+  },
+  "dedupe_key": "t131-189755-busking-festival-mail-family-v1"
+}
