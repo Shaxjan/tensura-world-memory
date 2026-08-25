@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>Tensura Playable Alpha</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">SANDBOX · 0 ₽</div>
+        <h1>Tensura Playable Alpha</h1>
+      </div>
+      <button id="reset" class="ghost" type="button">Сбросить</button>
+    </header>
+
+    <section class="hud" aria-label="Состояние игрока">
+      <div><span>Время</span><strong id="hud-time">T+131 ~08:18</strong></div>
+      <div><span>Место</span><strong id="hud-place">малый боевой/тренировочный двор</strong></div>
+      <div><span>При мне</span><strong id="hud-money">26g 05s 92c</strong></div>
+      <div><span>Вне кошелька</span><strong id="hud-elsewhere">у Верна: остаток UNKNOWN</strong></div>
+    </section>
+
+    <section class="scene-card">
+      <div class="portrait">Р</div>
+      <div>
+        <div class="scene-title">Рена</div>
+        <div class="scene-subtitle">Прямой разговор · браузерный Character Agent Lite</div>
+      </div>
+    </section>
+
+    <section id="chat" class="chat" aria-live="polite"></section>
+
+    <form id="composer" class="composer">
+      <textarea id="input" rows="2" maxlength="800" placeholder="Скажи или сделай что-нибудь…" autocomplete="off"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+
+    <details class="debug">
+      <summary>Состояние sandbox</summary>
+      <div class="stats">
+        <div><span>Ходов</span><strong id="turns">0</strong></div>
+        <div><span>Память</span><strong id="memories">0</strong></div>
+        <div><span>Доверие</span><strong id="trust">0</strong></div>
+        <div><span>Уважение</span><strong id="respect">0</strong></div>
+        <div><span>Привязанность</span><strong id="affection">0</strong></div>
+        <div><span>Раздражение</span><strong id="irritation">0</strong></div>
+      </div>
+      <p>Это бесплатный локальный прототип. Он не пишет в LIVE runtime и не использует платные API.</p>
+    </details>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
