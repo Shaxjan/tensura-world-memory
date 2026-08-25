@@ -41,7 +41,16 @@
     "fast_request_auto_sequence": true,
     "fast_request_last_turn_guard": true,
     "fast_request_schema_repair": true,
-    "request_receipts": true
+    "request_receipts": true,
+    "important_memory_postflight": true
+  },
+  "important_memory": {
+    "enabled": true,
+    "protocol": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
+    "state": "runtime/important_memory/state.json",
+    "events_dir": "runtime/important_memory",
+    "authority": "confirmed_runtime_journal_only",
+    "chat_postflight_required": true
   },
   "last_event": "runtime/journal/j000021.json",
   "last_request": "runtime/requests/q-20260824-wait-borga-response-001.json",
