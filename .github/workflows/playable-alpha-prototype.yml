@@ -1,0 +1,34 @@
+name: Playable Alpha Fast Prototype
+
+on:
+  pull_request:
+    paths:
+      - 'prototype/**'
+      - 'sim_engine/character_agent_*.py'
+      - 'sim_engine/rena_character_profile.py'
+      - 'sim_engine/v113_*.py'
+      - '.github/workflows/playable-alpha-prototype.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'prototype/**'
+      - 'sim_engine/character_agent_*.py'
+      - 'sim_engine/rena_character_profile.py'
+      - 'sim_engine/v113_*.py'
+      - '.github/workflows/playable-alpha-prototype.yml'
+
+jobs:
+  prototype:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run playable vertical-slice tests
+        run: python -m unittest -v prototype/test_prototype.py
+      - name: Compile prototype
+        run: python -m py_compile prototype/app.py prototype/agent_lite.py prototype/test_prototype.py
