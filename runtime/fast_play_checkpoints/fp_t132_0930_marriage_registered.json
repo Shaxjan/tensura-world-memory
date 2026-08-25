@@ -1,0 +1,21 @@
+{
+  "session": "T+132",
+  "time": "~09:30",
+  "place": "Administrative house, Eurazania capital",
+  "event": "Marriage registered",
+  "canonical_facts": [
+    "Rena and Maestro Arlequino voluntarily registered their marriage in the administrative house.",
+    "Maestro is part of Arlequino's registered name as a family/lineage name according to Arlequino's declaration.",
+    "They have no permanent house yet and are recorded with temporary residence in the capital.",
+    "Property regime chosen: joint family property, while personal gifts and personal belongings may remain personal.",
+    "Their existing family purse remains a practical household-budget tool, not a separation of marital property.",
+    "Neither reported any prior registered spouse or active marital obligation.",
+    "Rena signed first; Arlequino signed as 'гениальный Маэстро Арлекино'.",
+    "After the official certifying entry, Rena and Maestro Arlequino are legally husband and wife."
+  ],
+  "money": {
+    "arlequino_personal": "27g 47s 13c",
+    "family_purse": "15s 69c"
+  },
+  "festival_days_remaining": 29
+}
