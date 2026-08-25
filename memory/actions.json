@@ -1,5 +1,5 @@
 {
-  "audit_version": 2,
+  "audit_version": 3,
   "festival": {
     "status": "SAVED_CANON",
     "official_name": "Фестиваль Эуразании: Неделя силы",
@@ -36,12 +36,18 @@
     {"person":"Мэйра","task":"lead general festival coordination and local functional team","status":"ACTIVE","remaining_fee":"1g"},
     {"person":"Борга","task":"combat rules, admissions, judges, testing and tournament operations","status":"ACTIVE"},
     {"person":"Гарет","task":"two-day full-capital survey of crowded places, venues, markets, lodging, fighting grounds, bathhouses, trading/guild/craft places and performance-permission practicality","started":"T+129 ~14:28","fee":"25s paid","status":"ACTIVE; report not yet causally delivered"},
-    {"person":"Верн","task":["travel to Dwargon","visit Arlequino's known instrument master","visit known shopkeeper; collect Arlequino's share and report if possible","deliver letter to Каменная арка","pass greetings to Arlequino's students","return instruments/money/letters/unused float"],"status":"ACTIVE; exact present progress/location UNKNOWN","instrument_continuity_correction":"v121 authoritative: Arlequino already has personal violin; Rena owns gifted old guitar; Vern's instruments are additional","oren_boundary":"Oren is unrelated"}
+    {"person":"Верн","task":["travel to Dwargon","visit Arlequino's known instrument master","visit known shopkeeper; collect Arlequino's share and report if possible","pass greetings to Arlequino's students","return instruments/money/letters/unused float"],"status":"ACTIVE; exact present progress/location UNKNOWN","instrument_continuity_correction":"v121 authoritative: Arlequino already has personal violin; Rena owns gifted old guitar; Vern's instruments are additional","oren_boundary":"Oren is unrelated to the corrected outbound mail set"}
   ],
   "mail": [
-    {"recipient":"Lissa","destination":"Free Guild, Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"},
-    {"recipient":"Oren","destination":"Free Guild, Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"}
+    {"recipient":"Lissa","destination":"Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"},
+    {"recipient":"Queen of Blumund","destination":"Blumund","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"},
+    {"recipient":"Каменная арка","destination":"Dwargon","service":"urgent","last_known_status":"accepted for dispatch","delivery":"UNKNOWN"}
   ],
+  "mail_correction": {
+    "status":"SAVED_CANON",
+    "correction":"The authoritative outbound set is three letters: two to Blumund (Lissa and the Queen) and one to Dwargon (Каменная арка). Older memory listing Oren as the second Blumund mail recipient is superseded.",
+    "source":"player correction during T+131 morning fast-play scene"
+  },
   "instrument_state": {
     "arlequino_personal_violin":"owned and available in Eurazania",
     "rena_guitar":"Arlequino's previous guitar, gifted to Rena; hers; currently temporarily with Arlequino during concert",
@@ -71,6 +77,7 @@
     {"state":"LIVE v101","invalid_fact":"three Eurazania beast-army warriors appeared in Arlequino's room","correction":"LIVE v102: entire external-warrior assertion NON-CANON; only Arlequino waking/getting up remains"},
     {"state":"older instrument statements","invalid_fact":"Arlequino lacked personal violin / depended on Vern for it","correction":"LIVE v121"},
     {"state":"older Meira knowledge","invalid_fact":"Meira knew tournament/site decisions without causal transmission","correction":"LIVE v116"},
-    {"state":"older guard dialogue","invalid_fact":"palace guards had impossible concert/logistics expertise","correction":"LIVE v107"}
+    {"state":"older guard dialogue","invalid_fact":"palace guards had impossible concert/logistics expertise","correction":"LIVE v107"},
+    {"state":"older mail memory","invalid_fact":"Oren was the second Blumund mail recipient and the Dwargon/Каменная арка letter was omitted from the outbound set","correction":"Authoritative set: Lissa + Queen in Blumund; Каменная арка in Dwargon"}
   ]
 }
