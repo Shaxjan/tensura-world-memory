@@ -1,13 +1,33 @@
 {
-  "audit_version": 2,
+  "audit_version": 3,
   "currency": {"system":"g/s/c","conversion":"100c=1s;100s=1g"},
   "current_saved_canon": {
-    "live_pointer_version": 125,
-    "time": "T+130 ~19:29",
-    "personal_cash": "26g21s67c",
-    "status": "SAVED_CANON"
+    "source":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json",
+    "time": "T+131 ~18:35",
+    "personal_cash": "27g30s30c",
+    "personal_cash_copper":273030,
+    "family_purse":"13s82c",
+    "family_purse_copper":1382,
+    "status": "SAVED_CANON_FAST_PLAY_CHECKPOINT"
   },
-  "since_v124": {
+  "t131_street_performance_day": {
+    "opening": {"time":"T+131 ~08:18","personal_cash":"26g05s92c","personal_cash_copper":260592},
+    "gross_realized_performance_income":{"amount":"1g38s20c","copper":13820},
+    "family_rule_transfer":{"amount":"13s82c","copper":1382,"rule":"10% of future personal income goes to separate family purse until reserve reaches 5g","classification":"internal separate-fund transfer; not personal spending"},
+    "net_personal_change":{"amount":"+1g24s38c","copper":12438},
+    "result":{"personal_cash":"27g30s30c","personal_cash_copper":273030,"family_purse":"13s82c","family_purse_copper":1382},
+    "performance_blocks":[
+      {"period":"~10:05-11:00","area":"рынок","income":"16s40c","copper":1640},
+      {"period":"~11:15-12:20","area":"район тренировочных площадок","income":"24s70c","copper":2470},
+      {"period":"~12:45-13:45","area":"улицы у таверн","income":"18s35c","copper":1835},
+      {"period":"~14:10-15:10","area":"ремесленный квартал","income":"17s95c","copper":1795},
+      {"period":"~15:35-16:45","area":"оживлённая площадь","income":"29s80c","copper":2980},
+      {"period":"~17:10-18:35","area":"центральная площадь, вечерний поток","income":"31s00c","copper":3100}
+    ],
+    "expenses":"0 confirmed personal expenses in this performance block",
+    "checkpoint":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+  },
+  "previous_concert_record": {
     "baseline": {"version":124,"time":"T+130 ~18:44","personal_cash":"24g86s53c"},
     "transactions": [
       {"performance":"Герои","income":"+64s12c","expenses":"0","net":"+64s12c"},
@@ -20,6 +40,7 @@
     "checkpoint":"live_v125/delta.json"
   },
   "separate_funds_last_explicit_record": {
+    "family_purse":{"amount":"13s82c","note":"separate from personal cash; first funded by T+131 10% income rule"},
     "promo_remaining":{"amount":"27s36c","note":"separate from personal cash; no later recorded spend found in audited chain"},
     "oren_project_fund":{"amount":"4g","note":"separate project fund"},
     "lissa_project_fund":{"amount":"4g","note":"separate project fund"}
@@ -30,7 +51,7 @@
     "meira":{"fee_total":"1g20s","advance_paid":"20s","remaining_obligation":"1g"}
   },
   "economy_rules": [
-    "Personal cash is separate from promo/project funds and held floats.",
+    "Personal cash is separate from family, promo/project funds and held floats.",
     "After public performance report income, expenses, net and resulting personal cash.",
     "Tips = audience size × paying share × local norm × reaction × situation.",
     "Reputation affects audience size more strongly than tips per person.",
