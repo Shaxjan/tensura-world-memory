@@ -1,0 +1,39 @@
+{
+  "time": "T+131 ~23:49",
+  "place": "small training arena, Eurazania capital",
+  "money": {
+    "personal": "27g47s13c",
+    "family_purse": "15s69c"
+  },
+  "event": "First poetry evening in Eurazania nearing close",
+  "durable_outcomes": [
+    "Arlequino announced intent to secure another poetry evening one week later at the same time; if there is sustained interest, he wants the event to become regular.",
+    "Theme expected from Arlequino and participating poets next week: comedy.",
+    "Collective poem praising Eurazania was completed by the evening's poets and publicly approved by the audience for performance at the festival.",
+    "Festival is 'Фестиваль Эуразании: Неделя силы'; user corrected countdown to 29 days at T+131 ~23:47.",
+    "Arlequino publicly said the festival name was придумал король; treat as his public statement unless independently confirmed elsewhere.",
+    "Publication names corrected by user: 'Под сенью пера' = daily publication; 'Муза' = weekly publication.",
+    "Leyla and the Madman was performed as a long adapted telling for Eurazania and dedicated by Arlequino to Eurazania and its people as a 'жемчужина моего творчества'.",
+    "Arlequino publicly framed the poem as an example of complete love and linked eternal love to loving the One who is eternal, gesturing upward; audience already had limited prior context that he calls the One God 'Аллах'.",
+    "Arlequino joked at the close that he needed to go to his Leyla and publicly claimed he had earlier told Rena he would go to a brothel if she did not come earlier; this is a public joke/claim, not confirmation of Rena's current location or reaction."
+  ],
+  "participants_present_or_established": [
+    "Elira",
+    "Marena",
+    "Tyren",
+    "Saila",
+    "Doren",
+    "Kern",
+    "Leyna",
+    "Reven",
+    "Mirael",
+    "Harn",
+    "Neira"
+  ],
+  "next_steps_not_yet_confirmed": [
+    "Venue for next week's poetry evening has not yet been secured.",
+    "Regular status is not yet formally established.",
+    "Festival-stage slot still needs operational coordination.",
+    "Current location/reaction of Rena remains UNKNOWN until causally encountered or learned."
+  ]
+}
