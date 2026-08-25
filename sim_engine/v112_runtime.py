@@ -33,6 +33,12 @@ class V112RuntimeMixin:
             "Transport receipts and request normalization do not change gameplay semantics. "
             "Only a committed runtime journal event changes authoritative gameplay state."
         )
+        packet["constraints"]["important_memory_postflight"] = (
+            "After each confirmed gameplay turn, evaluate runtime/IMPORTANT_MEMORY_PROTOCOL.md. "
+            "Write at most one append-only important-memory event for that source turn when a "
+            "significance rule triggers. Important memory is a durable index over the authoritative "
+            "journal, never a second gameplay authority; never claim persistence if the GitHub write fails."
+        )
         packet["runtime"] = {"engine": ENGINE_VERSION_V112}
         return packet
 
@@ -64,6 +70,21 @@ class V112RuntimeMixin:
             "request_receipts": True,
             "duplicate_enqueue_forbidden": True,
             "github_actions_still_authoritative_transport": True,
+        }
+        state["important_memory"] = {
+            "enabled": True,
+            "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
+            "state_path": "runtime/important_memory/state.json",
+            "events_dir": "runtime/important_memory",
+            "authority": "confirmed_runtime_journal_only",
+            "chat_postflight_required": True,
+            "max_events_per_source_turn": 1,
+            "economic_triggers": {
+                "cumulative_realized_earnings_copper": 10000,
+                "major_spend_absolute_copper": 5000,
+                "major_spend_relative_ratio": 0.20,
+                "major_spend_relative_floor_copper": 1000,
+            },
         }
         return state
 
