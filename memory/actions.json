@@ -1,5 +1,5 @@
 {
-  "audit_version": 4,
+  "audit_version": 5,
   "festival": {
     "status": "SAVED_CANON",
     "official_name": "Фестиваль Эуразании: Неделя силы",
@@ -18,6 +18,16 @@
       "meira": "authorized to advertise throughout Eurazania and invite trusted organizer contacts",
       "arlequino_t131": "personally promoted the festival across several populated capital districts while street-performing through T+131 evening",
       "blumund_dwargon": "outbound letters dispatched; delivery remains UNKNOWN"
+    },
+    "performer_recruitment": {
+      "status": "OPEN",
+      "announced_by": "Arlequino",
+      "announced_at": "T+131 ~18:36",
+      "eligible": ["musicians", "poets", "authors/performers of songs, poems and narrative verse deemed worthy of the festival"],
+      "application_contact": "Arlequino",
+      "performer_fee_to_participate": "none / free performance opportunity",
+      "selection": "Arlequino evaluates whether material is suitable for the festival",
+      "public_claim": "Arlequino advertised a chance to perform before hundreds of thousands of spectators; this is his promotional claim, not a guaranteed attendance fact"
     },
     "finance_followup": {
       "time": "T+132 morning",
