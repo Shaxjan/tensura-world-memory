@@ -42,15 +42,32 @@
     "fast_request_last_turn_guard": true,
     "fast_request_schema_repair": true,
     "request_receipts": true,
-    "important_memory_postflight": true
+    "important_memory_postflight": false,
+    "chat_local_fast_play": true,
+    "sparse_github_persistence": true
+  },
+  "fast_play": {
+    "enabled": true,
+    "protocol_path": "runtime/FAST_PLAY_PROTOCOL.md",
+    "priority": "overrides_per_turn_github_transport_for_active_synchronized_chat",
+    "bootstrap_github_read_once": true,
+    "ordinary_turn_github_io": false,
+    "session_local_overlay": true,
+    "bundled_persistence": true,
+    "persist_on": [
+      "important_significance_trigger",
+      "explicit_save",
+      "intentional_session_checkpoint",
+      "recovery_or_ambiguity"
+    ]
   },
   "important_memory": {
     "enabled": true,
     "protocol": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
     "state": "runtime/important_memory/state.json",
     "events_dir": "runtime/important_memory",
-    "authority": "confirmed_runtime_journal_only",
-    "chat_postflight_required": true
+    "authority": "persisted_checkpoint_plus_active_session_overlay",
+    "chat_postflight_required": false
   },
   "last_event": "runtime/journal/j000021.json",
   "last_request": "runtime/requests/q-20260824-wait-borga-response-001.json",
