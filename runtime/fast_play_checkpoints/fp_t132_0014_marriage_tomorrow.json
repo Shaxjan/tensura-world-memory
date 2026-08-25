@@ -1,0 +1,19 @@
+{
+  "time": "T+132 ~00:14",
+  "place": "shared lodging, Eurazania capital",
+  "event": "Arlequino proposes marrying Rena tomorrow; Rena accepts if serious.",
+  "marriage_plan": {
+    "target_day": "T+132 daytime",
+    "status": "mutually agreed intent, not yet officiated",
+    "next_step_discussed": "ask how marriage is officially recognized in Eurazania; Arlequino suggests going to King Carrion",
+    "authority_assumption": "not yet verified whether Carrion personally must officiate or merely authorize/recognize"
+  },
+  "relationship": {
+    "Rena": "fiancee; both now intend to become spouses tomorrow"
+  },
+  "festival_days_remaining": 29,
+  "money": {
+    "personal": "27g47s13c",
+    "family_purse": "15s69c"
+  }
+}
