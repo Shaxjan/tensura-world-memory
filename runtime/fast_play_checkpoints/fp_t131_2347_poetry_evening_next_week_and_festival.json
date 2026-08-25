@@ -1,0 +1,21 @@
+{
+  "t_day": 131,
+  "time_approx": "23:47",
+  "place": "small training arena, Eurazania capital",
+  "event": "Poetry evening public continuation plan and festival timing correction",
+  "facts": {
+    "festival_name": "Фестиваль Эуразании: Неделя силы",
+    "festival_starts_in_days": 29,
+    "next_poetry_evening": {
+      "proposed": true,
+      "timing": "next week, same time",
+      "venue": "to be arranged; Maestro Arlequino said he will talk to secure another evening",
+      "regularity_condition": "if there are willing participants, the evening will become regular"
+    },
+    "public_statement": "Maestro Arlequino said he is sure there are people who did not dare to come forward tonight."
+  },
+  "notes": [
+    "This is a public announcement, not yet a confirmed venue booking.",
+    "Do not treat the recurring poetry evening as formally institutionalized until venue/organizer details are confirmed."
+  ]
+}
