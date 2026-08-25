@@ -1,0 +1,24 @@
+{
+  "time": "T+132 ~08:11",
+  "event": "Tournament prize structure decided by Maestro Arlequino",
+  "festival": "Фестиваль Эуразании: Неделя силы",
+  "days_until_festival": 29,
+  "prizes": {
+    "1": "10g",
+    "2": "1g",
+    "3": "90s",
+    "4": "80s",
+    "5": "70s",
+    "6": "60s",
+    "7": "50s",
+    "8": "40s",
+    "9": "30s",
+    "10": "20s"
+  },
+  "total_prize_pool": "15g40s",
+  "notes": [
+    "Winner also retains the separately established right to challenge Carrion.",
+    "Crown reward remains separate and TBD.",
+    "This is a spending commitment/decision; actual disbursement has not yet occurred."
+  ]
+}
