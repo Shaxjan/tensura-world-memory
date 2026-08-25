@@ -1,0 +1,99 @@
+{
+  "format": "TENSURA_FAST_PLAY_CHECKPOINT",
+  "schema_version": 1,
+  "checkpoint_id": "fp_t131_1835_busking",
+  "base_engine_journal_seq": 21,
+  "base_engine_head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "source_window": {
+    "start_world_minute": 189138,
+    "end_world_minute": 189755,
+    "start_display": "T+131 ~08:18",
+    "end_display": "T+131 ~18:35"
+  },
+  "hud": {
+    "time": {"world_minute": 189755, "display": "T+131 ~18:35"},
+    "location": {
+      "region_id": "eurazania",
+      "region": "Столица Эуразании",
+      "place": "центральная площадь",
+      "display": "центральная площадь столицы Эуразании",
+      "certainty": "confirmed_fast_play_end_location"
+    },
+    "money": {
+      "on_person_copper": 273030,
+      "on_person_display": "27g 30s 30c",
+      "elsewhere_display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)",
+      "family_purse_copper": 1382,
+      "family_purse_display": "13s 82c",
+      "family_purse_separate_from_personal": true
+    }
+  },
+  "durable_facts": {
+    "festival": {
+      "visitor_entry": "free",
+      "spectator_seating": "free",
+      "commercial_revenue_rule": "charge rent/fees only to traders and similar commercial participants; no visitor admission or seat fees",
+      "expense_authorization_cap": "up to 10g",
+      "expense_cap_meaning": "maximum authorized budget, not a spending target",
+      "meira_next_finance_meeting": "T+132 morning at Arlequino's lodging; exact lodging name is known in-world from Arlequino's direct statement but is UNKNOWN to GM",
+      "meira_publicity": "authorized to advertise in Eurazania and invite trusted organizer contacts",
+      "borga_meira_coordination": "authorized to coordinate tournament footprint and general festival layout directly without requiring Arlequino as intermediary"
+    },
+    "mail": [
+      {"recipient": "Lissa", "destination": "Blumund", "dispatch": "confirmed sent by Rena", "delivery": "UNKNOWN"},
+      {"recipient": "Queen of Blumund", "destination": "Blumund", "dispatch": "confirmed sent by Rena", "delivery": "UNKNOWN"},
+      {"recipient": "Каменная арка", "destination": "Dwargon", "dispatch": "confirmed sent by Rena", "delivery": "UNKNOWN"}
+    ],
+    "public_performance_campaign": {
+      "status": "completed through evening",
+      "activity": "Arlequino moved through multiple Eurazania-capital districts, performed songs for street audiences, collected voluntary money and repeatedly publicized the festival",
+      "exact_text_policy": "Only songs with fully recoverable exact GitHub text were used; no PARTIAL_EXACT/TEXT_LOST/TITLE_ONLY lyrics were reconstructed.",
+      "songs_used": [
+        {"title": "Герои", "path": "song_archive/geroi.txt"},
+        {"title": "Оракул", "path": "song_archive/orakul_machete_tensura.txt"},
+        {"title": "Тьмы Князь", "path": "song_archive/tmy_knyaz.txt"}
+      ],
+      "gross_income_copper": 13820,
+      "gross_income_display": "1g 38s 20c",
+      "local_awareness_effect": "festival was publicly promoted across several populated districts; exact citywide awareness percentage UNKNOWN"
+    },
+    "family_budget": {
+      "existing_rule": "10% of each partner's future personal income goes to the separate family purse until it reaches 5g; contributions then pause until refill is needed",
+      "today_gross_income_copper": 13820,
+      "today_family_transfer_copper": 1382,
+      "today_family_transfer_display": "13s 82c",
+      "family_purse_balance_copper": 1382,
+      "family_purse_balance_display": "13s 82c",
+      "not_personal_spending": true
+    },
+    "instrument_continuity": {
+      "rena_guitar": "owned by Rena; temporarily carried/used by Arlequino with her permission during T+131 street performances"
+    }
+  },
+  "earnings_breakdown": [
+    {"period": "~10:05-11:00", "area": "рынок", "income_copper": 1640, "display": "16s 40c"},
+    {"period": "~11:15-12:20", "area": "район тренировочных площадок", "income_copper": 2470, "display": "24s 70c"},
+    {"period": "~12:45-13:45", "area": "улицы у таверн", "income_copper": 1835, "display": "18s 35c"},
+    {"period": "~14:10-15:10", "area": "ремесленный квартал", "income_copper": 1795, "display": "17s 95c"},
+    {"period": "~15:35-16:45", "area": "оживлённая площадь", "income_copper": 2980, "display": "29s 80c"},
+    {"period": "~17:10-18:35", "area": "центральная площадь, вечерний поток", "income_copper": 3100, "display": "31s 00c"}
+  ],
+  "money_reconciliation": {
+    "opening_personal_copper": 260592,
+    "opening_personal_display": "26g 05s 92c",
+    "gross_external_earnings_copper": 13820,
+    "gross_external_earnings_display": "1g 38s 20c",
+    "family_transfer_copper": 1382,
+    "family_transfer_display": "13s 82c",
+    "closing_personal_copper": 273030,
+    "closing_personal_display": "27g 30s 30c",
+    "arithmetic": "260592 + 13820 - 1382 = 273030"
+  },
+  "end_scene": {
+    "place": "центральная площадь столицы Эуразании",
+    "time": "T+131 ~18:35",
+    "state": "evening street performance block has ended; Arlequino is free to choose the next action",
+    "named_npcs_present": []
+  },
+  "player_control": "No next dialogue, destination, feeling or significant decision is assigned to Arlequino."
+}
