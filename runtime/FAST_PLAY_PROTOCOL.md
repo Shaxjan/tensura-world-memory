@@ -62,6 +62,16 @@ Important economic triggers are defined by `runtime/IMPORTANT_MEMORY_PROTOCOL.md
 
 Other major durable events such as a unique asset, title, binding contract, permanent capability/state change, or comparable long-lived consequence can also trigger persistence.
 
+### Mandatory durable creative/canonical content
+
+The following are significance triggers and must be persisted rather than left only in the chat-local overlay:
+
+- when the player performs or supplies the **full text of a song**, preserve that full supplied text in the appropriate durable song/canonical memory together with the in-world context needed to identify it;
+- other player-supplied creative works or exact canonical texts that would be costly or impossible to reconstruct later;
+- major relationship changes, promises, contracts, debts, ownership changes, unique purchases, titles, permissions, discoveries, permanent decisions, major project/festival decisions, and comparable facts whose loss would materially damage continuity.
+
+Do not reduce a supplied full song to a summary if the full text itself is the important memory. If a song persistence trigger fires, save it at that gameplay beat rather than waiting for many unrelated later turns.
+
 ## 5. Bundled persistence
 
 When a persistence trigger occurs, do not replay every ordinary chat line as a separate GitHub commit.
