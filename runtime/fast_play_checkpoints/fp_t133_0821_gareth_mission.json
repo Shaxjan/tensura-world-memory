@@ -1,0 +1,27 @@
+{
+  "time": "T+133 ~08:21",
+  "place": "temporary lodging, Eurazania capital",
+  "event": "Gareth assigned new courier/report mission",
+  "money": {
+    "personal": "0",
+    "family_purse_before": "27g62s82c",
+    "paid_now": "1g",
+    "breakdown": {
+      "Gareth_fee": "60s",
+      "travel_float": "40s"
+    },
+    "family_purse_after": "26g62s82c"
+  },
+  "route": ["Dwargon", "Blumund", "return to Eurazania"],
+  "tasks": {
+    "Dwargon": "Deliver Arlequino's letter to his students. Invitation includes festival in Eurazania and Arlequino/Rena wedding; expected letter arrival within about a week and hoped reunion about two weeks later.",
+    "Blumund_Lissa": "Deliver letter containing exact poem and request full report on poetry evenings and poetry project, including income, expenses, remaining funds, obligations and when salary is due; if developments are strong, Arlequino wants to connect Eurazania and Blumund branches.",
+    "Blumund_Oren": "Deliver letter requesting full report on musical instrument production: produced/sold/transferred/remaining inventory, income, expenses, project cash, obligations, orders, production capacity, bottlenecks, sales/prices, and funding needs if any."
+  },
+  "constraints": [
+    "Gareth must not make new promises on Arlequino's behalf",
+    "If recipients cannot provide written reports, Gareth may write down their words and have them confirm accuracy",
+    "Unused travel float to be returned",
+    "Departure requested as soon as possible"
+  ]
+}
