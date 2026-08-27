@@ -1,0 +1,17 @@
+{
+  "time": "T+138 ~20:27",
+  "location": "concert stage, Eurazania capital",
+  "event_type": "performance_retcon",
+  "song": "Любовь",
+  "retcon": {
+    "non_canon": "All previously narrated partial performance text/reactions for 'Любовь' after its introduction, including the cut-off at 'Руки в пеп...', are void.",
+    "resume_from": "Start of verse 1 before its first lyric line.",
+    "performance_rule": "Verse 1 is performed with the user's exact supplied text, not paraphrased. Reactions may be inserted between lyric blocks without mutating lyrics.",
+    "player_agency": "No additional Arlequino gesture, movement, feeling or speech beyond the supplied song performance is invented."
+  },
+  "hud": {
+    "personal_on_person": "0",
+    "verna_holdings": "remaining amount UNKNOWN from earlier 50s",
+    "family_money": "26g62s82c"
+  }
+}
