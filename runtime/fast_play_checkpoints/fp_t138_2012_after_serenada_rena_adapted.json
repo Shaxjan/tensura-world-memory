@@ -1,0 +1,42 @@
+{
+  "format": "TENSURA_FAST_PLAY_CHECKPOINT",
+  "schema_version": 1,
+  "checkpoint_id": "fp_t138_2012_after_serenada_rena_adapted",
+  "base_engine_journal_seq": 21,
+  "base_engine_head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "source_checkpoint": "runtime/fast_play_checkpoints/fp_t138_2005_after_sozvezdie_angela.json",
+  "source_window": {
+    "start_world_minute": 199925,
+    "start_display": "T+138 ~20:05",
+    "end_world_minute": 199932,
+    "end_display": "T+138 ~20:12"
+  },
+  "save_reason": "mandatory durable checkpoint for exact user-supplied/performed adapted song",
+  "hud": {
+    "time": {"world_minute": 199932, "display": "T+138 ~20:12"},
+    "location": {"region_id": "eurazania", "region": "Столица Эуразании", "place": "outdoor concert stage", "display": "сцена концертной площадки, столица Эуразании"},
+    "money": {"on_person_copper": 0, "on_person_display": "0", "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s", "family_money_display": "26g 62s 82c"}
+  },
+  "intervening_scene_bundle": {
+    "summary": "After 'Созвездие Ангела', Arlequino joked with the 17 women and Rena about broken hearts, briefly stood behind the women, returned forward, climbed onto the chair and sat on its back, then introduced a new song as dedicated to the 'бессердечным дамочкам'.",
+    "canon_boundary": "These jokes create no automatic relationship change, consent state, jealousy state or factual biography. NPC reactions remain autonomous and causally local."
+  },
+  "performed_song": {
+    "title": "Серенада, чтобы ты заплакала — адаптация для Рены",
+    "status": "performed_to_completion",
+    "exact_text_source": "song_archive/serenada_rena_adapted.txt",
+    "source_type": "exact user-supplied adapted lyrics",
+    "text_mutation": "none",
+    "delivery_rule": "during narration, reactions are inserted after each four lyric lines, short enough not to crowd out the song",
+    "final_performance_instruction": "at the final line Arlequino looks at Rena, per user's OOC instruction",
+    "semantic_canon_boundary": "Lyrics about school, age seventeen, twenty years ago, parents, exams, an old hall, romantic rivals, shared family name, or any other narrated backstory are artistic song content and do NOT establish those events as factual world history unless independently confirmed elsewhere."
+  },
+  "scene_continuity": {
+    "arlequino": {"position": "on/at the chair near center stage after the completed performance; no next voluntary action assigned"},
+    "women_on_stage": {"count": 17, "status": "present unless later autonomous movement occurs"},
+    "rena": {"present": true, "position": "stage side/edge", "relationship": "Arlequino's wife"},
+    "meira": {"present": true, "role": "concert organizer"},
+    "audience": "multi-thousand concert audience; reactions remain heterogeneous and physically delayed by sector"
+  },
+  "resume_instruction": "Resume immediately after the adapted Serenada for Rena has been performed in full at about T+138 20:12. Do not invent Arlequino's next speech, gesture, feeling, bow, song or movement."
+}
