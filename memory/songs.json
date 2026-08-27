@@ -15,7 +15,8 @@
     {"title":"Созвездие Ангела","status":"FULL_CANONICAL","path":"song_archive/sozvezdie_angela.txt","type":"exact user-supplied text","note":"Arlequino's song performed for Rena; not Rena's lost song for Arlequino."},
     {"title":"Мои враги","source_title":"Ichimdagi dushmanlarim","status":"FULL_CANONICAL","path":"song_archive/moji_vragi.txt","type":"full performed literal Russian text"},
     {"title":"Принцесса","status":"FULL_CANONICAL","path":"song_archive/princessa.txt","type":"user adaptation","source":"LIVE v82 verbatim retcon"},
-    {"title":"Музыка для секса","status":"FULL_CANONICAL","path":"song_archive/muzyka_dlya_seksa_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve literal wording, punctuation, emoji and the user-supplied final 'Эта музыка для екса,' line exactly; do not autocorrect."}
+    {"title":"Музыка для секса","status":"FULL_CANONICAL","path":"song_archive/muzyka_dlya_seksa_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve literal wording, punctuation, emoji and the user-supplied final 'Эта музыка для екса,' line exactly; do not autocorrect."},
+    {"title":"Конфета","status":"FULL_CANONICAL","path":"song_archive/konfeta_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve exact wording, capitalization and punctuation, including 'Десятки сотни , комплименты.', 'Но ты — мая зависимость, сладкая таблетка', and all repeated final lines; do not autocorrect."}
   ],
   "full_legacy_shards": [
     {"title":"Космос","status":"FULL_LEGACY_SHARDS","paths":"live_v84/kosmos/*","line_count":74,"note":"All exact text survives in numbered filename shards. Audit attempts to create a single new file were physically truncated, so the truncated top-level copies were deleted and are not canonical."},
