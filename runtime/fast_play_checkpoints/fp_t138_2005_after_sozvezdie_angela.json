@@ -1,0 +1,70 @@
+{
+  "format": "TENSURA_FAST_PLAY_CHECKPOINT",
+  "schema_version": 1,
+  "checkpoint_id": "fp_t138_2005_after_sozvezdie_angela",
+  "base_engine_journal_seq": 21,
+  "base_engine_head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "source_checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json",
+  "source_window": {
+    "start_world_minute": 199916,
+    "start_display": "T+138 ~19:56",
+    "end_world_minute": 199925,
+    "end_display": "T+138 ~20:05"
+  },
+  "save_reason": "bundled durable checkpoint for two full canonical song performances",
+  "hud": {
+    "time": {"world_minute": 199925, "display": "T+138 ~20:05"},
+    "location": {
+      "region_id": "eurazania",
+      "region": "Столица Эуразании",
+      "place": "outdoor concert stage",
+      "display": "сцена концертной площадки, столица Эуразании"
+    },
+    "money": {
+      "on_person_copper": 0,
+      "on_person_display": "0",
+      "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s",
+      "family_money_display": "26g 62s 82c"
+    }
+  },
+  "performed_songs": [
+    {
+      "title": "Та, что",
+      "status": "performed_to_completion",
+      "player_confirmation": "user confirmed he had sung it",
+      "exact_text_source": "song_archive/ta_chto/001.txt..046.txt"
+    },
+    {
+      "title": "Созвездие Ангела",
+      "status": "performed_to_completion",
+      "player_authorization": "user explicitly authorized singing the entire song",
+      "exact_text_source": "song_archive/sozvezdie_angela.txt",
+      "text_mutation": "none"
+    }
+  ],
+  "scene_continuity": {
+    "arlequino": {
+      "position": "seated near center stage after completing 'Созвездие Ангела'",
+      "equipment": ["guitar in hand", "violin available on/near stage", "closed water flask near chair"],
+      "player_control": "No post-song speech, gesture, bow, feeling, decision or next song is assigned. The next voluntary action belongs to the player."
+    },
+    "women_on_stage": {
+      "count": 17,
+      "status": "remain on stage through the completed romantic segment unless they autonomously move afterward"
+    },
+    "rena": {
+      "present": true,
+      "position": "stage side/edge",
+      "relationship": "Arlequino's wife",
+      "knowledge_relevant_now": "knows 'Созвездие Ангела' is Arlequino's song for her"
+    },
+    "meira": {"present": true, "role": "concert organizer"}
+  },
+  "reaction_continuity": {
+    "audience": "stronger recognition than for 'Та, что'; refrain recognition spreads unevenly from near sectors, with some singing along on repeated lines while others listen; no universal synchronized reaction",
+    "women_on_stage": "several recognize and follow the chorus, others listen; reactions remain individual rather than choreographed",
+    "rena": "hears a song she knows is for her; visible attention and personal relevance are allowed, but no private thought is asserted",
+    "meira": "continues balancing the performance with venue operations"
+  },
+  "resume_instruction": "Resume at T+138 ~20:05 immediately after 'Созвездие Ангела' has been sung to completion. The next voluntary action belongs to the player."
+}
