@@ -1,0 +1,12 @@
+{
+  "status": "canonical_user_exact_v2",
+  "base_file": "song_archive/palehche_user_exact.txt",
+  "supersedes_base_as_canonical": true,
+  "patch": {
+    "operation": "insert_before_line",
+    "line_number_in_base": 15,
+    "text": "Эй! Воу-воу-воу! Эй! Воу-воу-воу, Палехчэ."
+  },
+  "expected_result_line_count": 32,
+  "note": "User-confirmed exact version. Apply this patch to base_file before any performance or quotation."
+}
