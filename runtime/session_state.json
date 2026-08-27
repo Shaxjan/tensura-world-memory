@@ -5,16 +5,16 @@
   "journal_seq": 21,
   "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
   "fast_play_checkpoint": {
-    "path": "runtime/fast_play_checkpoints/fp_t138_2000_after_ta_chto.json",
-    "checkpoint_id": "fp_t138_2000_after_ta_chto",
-    "world_minute": 199920,
-    "display": "T+138 ~20:00",
+    "path": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json",
+    "checkpoint_id": "fp_t138_1956_before_ta_chto",
+    "world_minute": 199916,
+    "display": "T+138 ~19:56",
     "authority": "persisted_session_overlay_on_engine_baseline_j21"
   },
   "hud": {
     "time": {
-      "world_minute": 199920,
-      "display": "T+138 ~20:00"
+      "world_minute": 199916,
+      "display": "T+138 ~19:56"
     },
     "location": {
       "region_id": "eurazania",
@@ -22,7 +22,7 @@
       "place": "outdoor concert stage",
       "display": "сцена концертной площадки, столица Эуразании",
       "certainty": "confirmed_fast_play_checkpoint",
-      "source": "runtime/fast_play_checkpoints/fp_t138_2000_after_ta_chto.json"
+      "source": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
     },
     "money": {
       "on_person_copper": 0,
@@ -57,17 +57,16 @@
   },
   "last_turn": {
     "seq": null,
-    "event_key": "chat-t138-2000-full-ta-chto-performance",
-    "event_type": "fast_play_song_performance_checkpoint",
+    "event_key": "chat-t138-1956-explicit-save-before-ta-chto",
+    "event_type": "fast_play_explicit_checkpoint",
     "status": "executed_and_checkpointed",
     "action_result": {
-      "activity": "Arlequino sang the canonical full text of 'Та, что' from beginning to end",
-      "checkpoint": "runtime/fast_play_checkpoints/fp_t138_2000_after_ta_chto.json",
-      "text_source": "song_archive/ta_chto/001.txt..046.txt"
+      "activity": "saved active concert scene immediately before song 'Та, что' begins",
+      "checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
     },
     "visible_actors": ["Rena", "Meira", "17 adult female audience volunteers", "venue security/technical staff", "concert audience"],
     "pending_resolutions": [],
-    "narration_contract": "player next action remains USER_CONTROLLED; 'Созвездие Ангела' has not started; no post-song gesture or speech is assigned"
+    "narration_contract": "player next action remains USER_CONTROLLED; song 'Та, что' has not started"
   },
   "display_contract": {
     "always_show": [
@@ -83,36 +82,36 @@
   "scene": {
     "ambient": [
       {
-        "entity_key": "eurazania_concert:audience:t138_2000",
+        "entity_key": "eurazania_concert:audience:t138_1956",
         "kind": "large_public_event",
         "descriptor": "многотысячная публика на концертной площадке",
-        "activity": "неравномерная реакция после полного исполнения 'Та, что' ещё расходится от ближних секторов к дальним; официальное время начала концерта 20:00 наступило",
+        "activity": "ожидает продолжения предконцертного романтического сегмента; официальное начало назначено на 20:00",
         "group_size": null,
-        "knowledge_tags": ["arlequino_present", "romantic_segment", "ta_chto_completed", "scheduled_start_time_reached"],
+        "knowledge_tags": ["arlequino_present", "pre_show_interaction", "romantic_segment"],
         "identity_status": "mixed_named_and_anonymous_public"
       },
       {
-        "entity_key": "eurazania_concert:volunteers:t138_2000",
+        "entity_key": "eurazania_concert:volunteers:t138_1956",
         "kind": "audience_volunteers",
         "descriptor": "17 взрослых женщин-зрительниц на сцене",
-        "activity": "остаются вокруг сидящего Арлекино после завершения 'Та, что'; реакции индивидуальны и не синхронизированы",
+        "activity": "стоят вокруг сидящего с гитарой Арлекино; ожидают начала 'Та, что'",
         "group_size": 17,
-        "knowledge_tags": ["ta_chto_completed", "announced_next_sozvezdie_angela"],
+        "knowledge_tags": ["announced_ta_chto_then_sozvezdie_angela"],
         "identity_status": "anonymous_volunteers"
       }
     ],
     "named_observations": [
       {
         "name": "Rena",
-        "status": "present at stage side; Arlequino's wife; independent NPC; listened to completed 'Та, что' without any asserted private interpretation"
+        "status": "present at stage side; Arlequino's wife; independent NPC"
       },
       {
         "name": "Meira",
-        "status": "present at venue in organizer role; attention split across operations as scheduled start time arrives"
+        "status": "present at venue in organizer role; attention split across operations"
       }
     ],
     "pending_resolutions": [],
-    "current_activity": "'Та, что' has finished; audience response is still settling; Arlequino remains seated on stage with 17 adult women around him; Rena is at stage side; Meira manages venue operations; 'Созвездие Ангела' is announced next but has NOT started"
+    "current_activity": "Arlequino is seated with guitar, 17 adult women stand around him, announced order is 'Та, что' then 'Созвездие Ангела'; 'Та, что' has NOT started"
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
@@ -180,7 +179,7 @@
     "session_local_overlay": true,
     "persist_only_on_trigger_or_checkpoint": true,
     "bundled_persistence": true,
-    "latest_persisted_checkpoint": "runtime/fast_play_checkpoints/fp_t138_2000_after_ta_chto.json"
+    "latest_persisted_checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
   },
   "important_memory": {
     "enabled": true,
