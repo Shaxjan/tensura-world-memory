@@ -1,0 +1,10 @@
+{
+  "title": "Конфета",
+  "status": "FULL_CANONICAL",
+  "text_source": "song_archive/konfeta_user_exact.txt",
+  "source_type": "exact user-supplied text",
+  "stage_cue_exact": "- Конфета 😋💋🫦",
+  "stage_cue_is_lyric": false,
+  "performance_context": "Eurazania capital concert, T+138",
+  "preserve_exact_text": true
+}
