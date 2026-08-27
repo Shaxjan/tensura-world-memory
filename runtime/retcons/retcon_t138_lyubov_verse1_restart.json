@@ -4,9 +4,11 @@
   "event_type": "performance_retcon",
   "song": "Любовь",
   "retcon": {
-    "non_canon": "All previously narrated partial performance text/reactions for 'Любовь' after its introduction, including the cut-off at 'Руки в пеп...', are void.",
-    "resume_from": "Start of verse 1 before its first lyric line.",
-    "performance_rule": "Verse 1 is performed with the user's exact supplied text, not paraphrased. Reactions may be inserted between lyric blocks without mutating lyrics.",
+    "scope": "first_four_lines_only",
+    "non_canon": "Only the first four lyric lines of the previously narrated start of 'Любовь' are void and must be replayed exactly from the user's supplied text.",
+    "preserve_canon": "Everything from line 5 onward beginning with 'Руки в петли...' is not retconned by this correction and remains canon to the extent it was already narrated/performed.",
+    "resume_from": "Replay only lyric lines 1-4, then continue from line 5.",
+    "performance_rule": "Use the user's exact supplied lyrics; reactions may be inserted between lyric blocks without mutating lyrics.",
     "player_agency": "No additional Arlequino gesture, movement, feeling or speech beyond the supplied song performance is invented."
   },
   "hud": {
