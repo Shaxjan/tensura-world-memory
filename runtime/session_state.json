@@ -5,50 +5,49 @@
   "journal_seq": 21,
   "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
   "fast_play_checkpoint": {
-    "path":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json",
-    "checkpoint_id":"fp_t131_1835_busking",
-    "world_minute":189755,
-    "display":"T+131 ~18:35",
-    "authority":"persisted_session_overlay_on_engine_baseline_j21"
+    "path": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json",
+    "checkpoint_id": "fp_t138_1956_before_ta_chto",
+    "world_minute": 199916,
+    "display": "T+138 ~19:56",
+    "authority": "persisted_session_overlay_on_engine_baseline_j21"
   },
   "hud": {
     "time": {
-      "world_minute": 189755,
-      "display": "T+131 ~18:35"
+      "world_minute": 199916,
+      "display": "T+138 ~19:56"
     },
     "location": {
       "region_id": "eurazania",
       "region": "Столица Эуразании",
-      "place": "центральная площадь",
-      "display": "центральная площадь столицы Эуразании",
+      "place": "outdoor concert stage",
+      "display": "сцена концертной площадки, столица Эуразании",
       "certainty": "confirmed_fast_play_checkpoint",
-      "source": "runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+      "source": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
     },
     "money": {
-      "on_person_copper": 273030,
-      "on_person_display": "27g 30s 30c",
+      "on_person_copper": 0,
+      "on_person_display": "0",
       "elsewhere": [
         {
           "account_id": "vern_instrument_float",
           "where": "у Верна",
-          "description": "доверенные деньги на инструменты",
+          "description": "остаток из ранее переданных 50s",
           "balance_copper": null,
           "balance_display": "UNKNOWN",
           "known_principal_copper": 5000,
           "known_principal_display": "50s 00c",
           "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
           "status": "settlement_pending",
-          "display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)"
+          "display": "у Верна — остаток неизвестен, из ранее переданных 50s"
         }
       ],
-      "elsewhere_display": "у Верна: остаток UNKNOWN (из переданных 50s 00c)",
+      "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s",
       "family_purse": {
-        "balance_copper":1382,
-        "balance_display":"13s 82c",
-        "separate_from_personal":true
+        "balance_copper": 266282,
+        "balance_display": "26g 62s 82c",
+        "separate_from_personal": true
       },
       "excludes": [
-        "family funds",
         "project funds",
         "promo funds",
         "earmarked gifts/expenses",
@@ -58,18 +57,16 @@
   },
   "last_turn": {
     "seq": null,
-    "event_key": "chat-20260825-t131-evening-busking-festival-bundle",
-    "event_type": "fast_play_bundled_turn",
+    "event_key": "chat-t138-1956-explicit-save-before-ta-chto",
+    "event_type": "fast_play_explicit_checkpoint",
     "status": "executed_and_checkpointed",
     "action_result": {
-      "activity":"street performances and festival promotion through evening",
-      "gross_income_copper":13820,
-      "family_transfer_copper":1382,
-      "checkpoint":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+      "activity": "saved active concert scene immediately before song 'Та, что' begins",
+      "checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
     },
-    "visible_actors": [],
+    "visible_actors": ["Rena", "Meira", "17 adult female audience volunteers", "venue security/technical staff", "concert audience"],
     "pending_resolutions": [],
-    "narration_contract": "player next action remains USER_CONTROLLED"
+    "narration_contract": "player next action remains USER_CONTROLLED; song 'Та, что' has not started"
   },
   "display_contract": {
     "always_show": [
@@ -85,18 +82,36 @@
   "scene": {
     "ambient": [
       {
-        "entity_key":"eurazania_central_square:ambient:189755:1",
-        "kind":"anonymous_local",
-        "descriptor":"вечерние прохожие и торговцы",
-        "activity":"поток после рабочего дня постепенно редеет; часть людей ещё задерживается у лавок и уличных исполнителей",
-        "group_size":null,
-        "knowledge_tags":["arlequino_festival_publicity_today"],
-        "identity_status":"not_materialized_named_npc"
+        "entity_key": "eurazania_concert:audience:t138_1956",
+        "kind": "large_public_event",
+        "descriptor": "многотысячная публика на концертной площадке",
+        "activity": "ожидает продолжения предконцертного романтического сегмента; официальное начало назначено на 20:00",
+        "group_size": null,
+        "knowledge_tags": ["arlequino_present", "pre_show_interaction", "romantic_segment"],
+        "identity_status": "mixed_named_and_anonymous_public"
+      },
+      {
+        "entity_key": "eurazania_concert:volunteers:t138_1956",
+        "kind": "audience_volunteers",
+        "descriptor": "17 взрослых женщин-зрительниц на сцене",
+        "activity": "стоят вокруг сидящего с гитарой Арлекино; ожидают начала 'Та, что'",
+        "group_size": 17,
+        "knowledge_tags": ["announced_ta_chto_then_sozvezdie_angela"],
+        "identity_status": "anonymous_volunteers"
       }
     ],
-    "named_observations": [],
+    "named_observations": [
+      {
+        "name": "Rena",
+        "status": "present at stage side; Arlequino's wife; independent NPC"
+      },
+      {
+        "name": "Meira",
+        "status": "present at venue in organizer role; attention split across operations"
+      }
+    ],
     "pending_resolutions": [],
-    "current_activity":"Arlequino has finished the last street performance block and is free to choose the next action"
+    "current_activity": "Arlequino is seated with guitar, 17 adult women stand around him, announced order is 'Та, что' then 'Созвездие Ангела'; 'Та, что' has NOT started"
   },
   "character_runtime": {
     "version": "character_autonomy_v1",
@@ -164,7 +179,7 @@
     "session_local_overlay": true,
     "persist_only_on_trigger_or_checkpoint": true,
     "bundled_persistence": true,
-    "latest_persisted_checkpoint":"runtime/fast_play_checkpoints/fp_t131_1835_busking.json"
+    "latest_persisted_checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
   },
   "important_memory": {
     "enabled": true,
