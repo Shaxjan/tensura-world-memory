@@ -1,0 +1,43 @@
+{
+  "format": "TENSURA_FAST_PLAY_CHECKPOINT",
+  "schema_version": 1,
+  "checkpoint_id": "fp_t138_2021_after_palehche",
+  "base_engine_journal_seq": 21,
+  "base_engine_head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "source_checkpoint": "runtime/fast_play_checkpoints/fp_t138_2012_after_serenada_rena_adapted.json",
+  "source_window": {
+    "start_world_minute": 199933,
+    "start_display": "T+138 ~20:13",
+    "end_world_minute": 199941,
+    "end_display": "T+138 ~20:21"
+  },
+  "save_reason": "explicit user request to preserve the song/performance and mandatory fast-play song checkpoint",
+  "hud": {
+    "time": {"world_minute": 199941, "display": "T+138 ~20:21"},
+    "location": {"region_id": "eurazania", "region": "Столица Эуразании", "place": "outdoor concert stage", "display": "сцена концертной площадки, столица Эуразании"},
+    "money": {"on_person_copper": 0, "on_person_display": "0", "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s", "family_money_display": "26g 62s 82c"}
+  },
+  "intervening_scene_bundle": {
+    "summary": "After the Serenada, the volunteers began leaving the stage while venue staff resumed normal concert operations. Arlequino said he could compensate with kisses, then after a brief subdued exchange with Rena started a new hot, energetic song titled 'Полегче'.",
+    "canon_boundary": "The concert continues as an autonomous public event. Audience and NPC reactions are heterogeneous; no joke, lyric or public reaction automatically changes consent, relationships, jealousy, biography or private emotion."
+  },
+  "performed_song": {
+    "title": "Полегче",
+    "status": "performed_to_completion",
+    "source_type": "exact user-supplied lyrics in source chat turn",
+    "delivery": "hot and energetic",
+    "delivery_rule": "during narration, reactions are inserted after each four lyric lines and remain causally local rather than turning all NPCs into a synchronized chorus",
+    "repository_text_archive": "song_archive/palehche_user_exact.txt",
+    "repository_text_archive_status": "NON_AUTHORITATIVE_TRUNCATED_WRITE; exact source remains the source chat turn; do not reconstruct missing lyrics from memory",
+    "semantic_canon_boundary": "Lyrics are performance content and do not establish hotels, travel, sexual events, tattoos, dates, smoking, or any other narrated lyric material as factual world biography unless independently confirmed."
+  },
+  "scene_continuity": {
+    "arlequino": {"position": "on the concert stage after completing the song; no next voluntary action assigned"},
+    "rena": {"present": true, "position": "stage side/edge", "relationship": "Arlequino's wife"},
+    "meira": {"present": true, "role": "concert organizer"},
+    "audience": "multi-thousand concert audience; reactions are uneven by proximity and sector",
+    "volunteers": "the previous group of adult female audience volunteers was already dispersing/off-stage during the start of the song; they are not frozen on stage for the player's benefit",
+    "venue_staff": "technical and security staff continue operating the concert around the performance"
+  },
+  "resume_instruction": "Resume immediately after Arlequino completes 'Полегче' at about T+138 20:21. Do not invent Arlequino's next speech, gesture, feeling, bow, movement or next song."
+}
