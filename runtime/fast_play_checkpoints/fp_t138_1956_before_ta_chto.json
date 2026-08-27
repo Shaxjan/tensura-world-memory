@@ -1,0 +1,122 @@
+{
+  "format": "TENSURA_FAST_PLAY_CHECKPOINT",
+  "schema_version": 1,
+  "checkpoint_id": "fp_t138_1956_before_ta_chto",
+  "base_engine_journal_seq": 21,
+  "base_engine_head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
+  "source_window": {
+    "start_display": "after previous persisted fast-play checkpoint",
+    "end_world_minute": 199916,
+    "end_display": "T+138 ~19:56"
+  },
+  "save_reason": "explicit player checkpoint before starting song 'Та, что' and moving continuation to another chat",
+  "hud": {
+    "time": {"world_minute": 199916, "display": "T+138 ~19:56"},
+    "location": {
+      "region_id": "eurazania",
+      "region": "Столица Эуразании",
+      "place": "outdoor concert stage",
+      "display": "сцена концертной площадки, столица Эуразании",
+      "certainty": "confirmed_active_scene"
+    },
+    "money": {
+      "on_person_copper": 0,
+      "on_person_display": "0",
+      "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s",
+      "family_money_display": "26g 62s 82c"
+    },
+    "concert": {
+      "scheduled_start": "T+138 20:00",
+      "safe_capacity": 18000,
+      "official_current_attendance": "UNKNOWN",
+      "last_visual_estimate": "~12,000–14,000 at ~19:21, with arrivals continuing",
+      "status_at_checkpoint": "pre-show audience interaction still in progress; formal concert not yet explicitly started by Arlequino"
+    }
+  },
+  "scene_continuity": {
+    "arlequino": {
+      "position": "seated on a simple stage chair near center stage",
+      "equipment": ["guitar in hand", "violin available on/near stage", "closed water flask near chair"],
+      "player_control": "No next lyric, gesture, feeling, dialogue or decision is assigned. The next voluntary action belongs to the player."
+    },
+    "rena": {
+      "present": true,
+      "position": "at the side/edge of the stage",
+      "relationship": "Arlequino's wife",
+      "knowledge_relevant_now": "knows 'Созвездие Ангела' is Arlequino's song for her; she is observing the romantic pre-show segment",
+      "autonomy": "independent NPC; do not force jealousy, approval, dialogue or reactions"
+    },
+    "meira": {
+      "present": true,
+      "role": "concert organizer",
+      "current_priority": "venue operations, crowd, access and timing",
+      "autonomy": "independent NPC; does not become a full-time audience reaction generator"
+    },
+    "women_on_stage": {
+      "count": 17,
+      "status": "adult audience volunteers who chose to come onstage for the romantic segment",
+      "formation": "standing in a loose uneven semicircle/around Arlequino",
+      "continuity": "they are not a professional choir and do not all know every lyric equally",
+      "security": "side access is controlled by venue security"
+    }
+  },
+  "pre_checkpoint_performances": [
+    {
+      "title": "Головы с плеч",
+      "text_source": "song_archive/golovy_s_plech.txt",
+      "status": "performed to completion during pre-show interaction",
+      "staging": "audience volunteers staged a controlled mock battle in the background; security knew it was theatrical",
+      "reaction_rule": "mixed, line-specific audience reactions; no universal crowd mind"
+    },
+    {
+      "title": "Тьмы Князь",
+      "text_source": "song_archive/tmy_knyaz.txt",
+      "status": "performed to completion during pre-show interaction",
+      "staging_note": "a volunteer charioteer/mage mistakenly used the shadow/flashes effect here after misunderstanding instructions; Arlequino corrected him afterward"
+    },
+    {
+      "title": "Герои",
+      "text_source": "song_archive/geroi.txt",
+      "status": "performed to completion during pre-show interaction",
+      "staging": "during verses from the Dark Prince perspective, the mage used a dark silhouette with small flashes; during choruses he used a light halo around the group",
+      "notable_line_reaction": "the line naming Carrion caused a strong but non-uniform local response; it did not become a permanent crowd chant"
+    }
+  ],
+  "romantic_segment": {
+    "setup": [
+      "Arlequino praised Eurazania's women and asked whether the ladies wanted romance.",
+      "He challenged romantic volunteers to come onstage, contrasting them playfully with the earlier fighters.",
+      "17 adult women ultimately came onstage after controlled access; some prospective volunteers backed out and were not pressured.",
+      "Arlequino said it is easy to be a jester and make people laugh, but harder to sing of love so that hard hearts soften, cowardly hearts confess love, icy hearts melt, and broken hearts become whole and capable of loving and being loved.",
+      "The women discussed songs; 'Созвездие Ангела' had the strongest common recognition, while 'Та, что' was less universally known."
+    ],
+    "announced_order": ["Та, что", "Созвездие Ангела"],
+    "exact_checkpoint_boundary": "Arlequino has taken the guitar and sat down; the 17 women are standing around him; the order has been announced; 'Та, что' HAS NOT STARTED. Do not treat any lyric, chord, vocal entry or audience reaction to 'Та, что' as having occurred yet.",
+    "ta_chto_text_source": "song_archive/ta_chto/001.txt..046.txt",
+    "ta_chto_archive_status": "FULL_LEGACY_SHARDS exact text; do not reconstruct or normalize missing/odd wording from outside sources",
+    "sozvezdie_angela_text_source": "song_archive/sozvezdie_angela.txt",
+    "sozvezdie_angela_context": "full canonical exact text; Arlequino's song for Rena"
+  },
+  "concert_realism_contract": {
+    "level": "deep causal simulation",
+    "rules": [
+      "Reactions are to specific heard lines, delivery, timing, gestures and actions, not generic song-success summaries.",
+      "Different sectors and individuals react differently; silence can mean attention, uncertainty, discomfort or lack of response, not automatically awe.",
+      "Audience perception is limited by distance, sound, prior noise and propagation delay.",
+      "A single audience shout remains a one-off event unless a causal process visibly turns it into a broader chant or recurring motif.",
+      "Do not reuse one funny heckler or one-off comment as a concert character without a real cause.",
+      "NPC knowledge is causal and limited; no omniscience or automatic information sharing.",
+      "Rena, Meira, security, technicians, volunteers and audience have distinct roles, attention and incentives.",
+      "Do not narrate Arlequino's voluntary actions, thoughts, emotions, speech or song choices beyond what the player explicitly supplies or authorizes.",
+      "Time advances by plausible performance/action duration; do not handwave songs into seconds.",
+      "Official attendance/sales figures require a causal source such as Meira/gates; visual estimates remain estimates."
+    ]
+  },
+  "secret_continuity": {
+    "clan_name": "Барлас",
+    "confidentiality": "secret to outsiders; known to Rena and Meira only; neither reveals it without Arlequino's explicit permission",
+    "public_cover": "Arlequino is described as being from Dwargon; he does not claim to be a dwarf",
+    "krov_barlasa_public_performance": "forbidden to select autonomously because it would expose secret clan identity"
+  },
+  "resume_instruction": "Resume at T+138 ~19:56 on the concert stage immediately BEFORE 'Та, что' begins. Arlequino is seated with guitar, 17 adult women stand around him, Rena is at stage side, Meira is managing the venue, formal concert scheduled for 20:00. Wait for the player's next action; do not auto-start the song."
+}
