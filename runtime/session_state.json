@@ -5,76 +5,58 @@
   "journal_seq": 21,
   "head_state_hash": "82b2b5fc6cfa92be7658db1f92d25515c87ecb90544de5d0a12035923b6f2a5e",
   "fast_play_checkpoint": {
-    "path": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json",
-    "checkpoint_id": "fp_t138_1956_before_ta_chto",
-    "world_minute": 199916,
-    "display": "T+138 ~19:56",
+    "path": "runtime/fast_play_checkpoints/fp_t138_2005_after_sozvezdie_angela.json",
+    "checkpoint_id": "fp_t138_2005_after_sozvezdie_angela",
+    "world_minute": 199925,
+    "display": "T+138 ~20:05",
     "authority": "persisted_session_overlay_on_engine_baseline_j21"
   },
   "hud": {
-    "time": {
-      "world_minute": 199916,
-      "display": "T+138 ~19:56"
-    },
+    "time": {"world_minute": 199925, "display": "T+138 ~20:05"},
     "location": {
       "region_id": "eurazania",
       "region": "Столица Эуразании",
       "place": "outdoor concert stage",
       "display": "сцена концертной площадки, столица Эуразании",
       "certainty": "confirmed_fast_play_checkpoint",
-      "source": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
+      "source": "runtime/fast_play_checkpoints/fp_t138_2005_after_sozvezdie_angela.json"
     },
     "money": {
       "on_person_copper": 0,
       "on_person_display": "0",
-      "elsewhere": [
-        {
-          "account_id": "vern_instrument_float",
-          "where": "у Верна",
-          "description": "остаток из ранее переданных 50s",
-          "balance_copper": null,
-          "balance_display": "UNKNOWN",
-          "known_principal_copper": 5000,
-          "known_principal_display": "50s 00c",
-          "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
-          "status": "settlement_pending",
-          "display": "у Верна — остаток неизвестен, из ранее переданных 50s"
-        }
-      ],
+      "elsewhere": [{
+        "account_id": "vern_instrument_float",
+        "where": "у Верна",
+        "description": "остаток из ранее переданных 50s",
+        "balance_copper": null,
+        "balance_display": "UNKNOWN",
+        "known_principal_copper": 5000,
+        "known_principal_display": "50s 00c",
+        "certainty": "AUTHORITATIVE_UNKNOWN_CURRENT_BALANCE",
+        "status": "settlement_pending",
+        "display": "у Верна — остаток неизвестен, из ранее переданных 50s"
+      }],
       "elsewhere_display": "у Верна — остаток неизвестен, из ранее переданных 50s",
-      "family_purse": {
-        "balance_copper": 266282,
-        "balance_display": "26g 62s 82c",
-        "separate_from_personal": true
-      },
-      "excludes": [
-        "project funds",
-        "promo funds",
-        "earmarked gifts/expenses",
-        "payables"
-      ]
+      "family_purse": {"balance_copper": 266282, "balance_display": "26g 62s 82c", "separate_from_personal": true},
+      "excludes": ["project funds", "promo funds", "earmarked gifts/expenses", "payables"]
     }
   },
   "last_turn": {
     "seq": null,
-    "event_key": "chat-t138-1956-explicit-save-before-ta-chto",
-    "event_type": "fast_play_explicit_checkpoint",
+    "event_key": "chat-t138-2005-sozvezdie-angela-full-performance",
+    "event_type": "fast_play_song_performance_checkpoint",
     "status": "executed_and_checkpointed",
     "action_result": {
-      "activity": "saved active concert scene immediately before song 'Та, что' begins",
-      "checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
+      "activity": "Arlequino sang the canonical full text of 'Созвездие Ангела' from beginning to end after confirming 'Та, что' had been sung",
+      "checkpoint": "runtime/fast_play_checkpoints/fp_t138_2005_after_sozvezdie_angela.json",
+      "text_source": "song_archive/sozvezdie_angela.txt"
     },
     "visible_actors": ["Rena", "Meira", "17 adult female audience volunteers", "venue security/technical staff", "concert audience"],
     "pending_resolutions": [],
-    "narration_contract": "player next action remains USER_CONTROLLED; song 'Та, что' has not started"
+    "narration_contract": "player next action remains USER_CONTROLLED; no post-song gesture, speech or next song is assigned"
   },
   "display_contract": {
-    "always_show": [
-      "hud.time.display",
-      "hud.location.display",
-      "hud.money.on_person_display",
-      "hud.money.elsewhere_display"
-    ],
+    "always_show": ["hud.time.display", "hud.location.display", "hud.money.on_person_display", "hud.money.elsewhere_display"],
     "normal_play_technical_fields_hidden": true,
     "recommended_header": "Время: {time} | Место: {location} | При мне: {on_person} | Мои деньги вне кошелька: {elsewhere}",
     "scene_rule": "If ambient is non-empty, describe the place as populated; do not answer 'nobody confirmed'."
@@ -82,118 +64,37 @@
   "scene": {
     "ambient": [
       {
-        "entity_key": "eurazania_concert:audience:t138_1956",
+        "entity_key": "eurazania_concert:audience:t138_2005",
         "kind": "large_public_event",
         "descriptor": "многотысячная публика на концертной площадке",
-        "activity": "ожидает продолжения предконцертного романтического сегмента; официальное начало назначено на 20:00",
+        "activity": "реакция после полного исполнения 'Созвездие Ангела' ещё расходится по секторам",
         "group_size": null,
-        "knowledge_tags": ["arlequino_present", "pre_show_interaction", "romantic_segment"],
+        "knowledge_tags": ["arlequino_present", "ta_chto_completed", "sozvezdie_angela_completed"],
         "identity_status": "mixed_named_and_anonymous_public"
       },
       {
-        "entity_key": "eurazania_concert:volunteers:t138_1956",
+        "entity_key": "eurazania_concert:volunteers:t138_2005",
         "kind": "audience_volunteers",
         "descriptor": "17 взрослых женщин-зрительниц на сцене",
-        "activity": "стоят вокруг сидящего с гитарой Арлекино; ожидают начала 'Та, что'",
+        "activity": "остаются вокруг Арлекино после завершения романтической пары песен; реакции индивидуальны",
         "group_size": 17,
-        "knowledge_tags": ["announced_ta_chto_then_sozvezdie_angela"],
+        "knowledge_tags": ["ta_chto_completed", "sozvezdie_angela_completed"],
         "identity_status": "anonymous_volunteers"
       }
     ],
     "named_observations": [
-      {
-        "name": "Rena",
-        "status": "present at stage side; Arlequino's wife; independent NPC"
-      },
-      {
-        "name": "Meira",
-        "status": "present at venue in organizer role; attention split across operations"
-      }
+      {"name": "Rena", "status": "present at stage side; Arlequino's wife; knows 'Созвездие Ангела' is his song for her"},
+      {"name": "Meira", "status": "present at venue in organizer role; attention split across operations"}
     ],
     "pending_resolutions": [],
-    "current_activity": "Arlequino is seated with guitar, 17 adult women stand around him, announced order is 'Та, что' then 'Созвездие Ангела'; 'Та, что' has NOT started"
+    "current_activity": "'Созвездие Ангела' has finished; audience response is still settling; 17 adult women remain on stage; Rena is at stage side; Meira manages venue operations"
   },
-  "character_runtime": {
-    "version": "character_autonomy_v1",
-    "calibrated_named_characters": ["borga"],
-    "shared_scheduler": true,
-    "hidden_plans_not_narrator_knowledge": true,
-    "hidden_autonomy_not_narrator_knowledge": true
-  },
-  "parser_runtime": {
-    "version": "intent_grounding_v1",
-    "safe_named_target_tokens": true,
-    "known_local_typo_repair": true,
-    "false_pending_repair": true,
-    "visible_local_approach": true,
-    "explicit_named_target_required": true,
-    "bare_approach_auto_binding": false,
-    "same_scene_clock_minutes": 0
-  },
-  "memory_runtime": {
-    "version": "causal_encounter_memory_v1",
-    "calibrated_named_characters": ["borga"],
-    "storage": "authoritative_facts_with_character_core_references",
-    "reciprocal_awareness_required": true,
-    "retroactive_inference": false,
-    "emotion_inference": false,
-    "relationship_mutation": false,
-    "private_memory_not_narrator_knowledge": true
-  },
-  "readmodel_runtime": {
-    "version": "authoritative_pending_projection_v1",
-    "pending_source": "authoritative_scene_pending_resolution_status_pending",
-    "historical_repaired_pending_filtered": true,
-    "session_builder_read_only": true,
-    "gm_packet_fallback": "read_only_projection_no_telemetry"
-  },
-  "response_runtime": {
-    "version": "causal_npc_response_v1",
-    "calibrated_named_characters": ["borga"],
-    "supported_response": "simple_direct_greeting",
-    "retroactive_resolution": false,
-    "personality_inference": false,
-    "emotion_inference": false,
-    "relationship_mutation": false,
-    "hidden_decision_basis_not_narrator_knowledge": true
-  },
-  "transport_runtime": {
-    "version": "runtime_fast_path_reliability_v1",
-    "normal_request_format": "TENSURA_FAST_TURN_REQUEST",
-    "canonical_payload": "request.raw_text",
-    "compatibility_payload": "top_level_raw_text_if_request_object_absent",
-    "request_id_required": false,
-    "queue_sequence_allocation": "authoritative_processor_at_execution_time",
-    "optimistic_guard": "expected_last_gameplay_turn_key",
-    "normal_preflight_pointer_read_required": false,
-    "request_receipts": true,
-    "duplicate_enqueue_forbidden": true,
-    "github_actions_still_authoritative_transport": false,
-    "fast_play_overrides_per_turn_transport": true
-  },
-  "fast_play": {
-    "enabled": true,
-    "protocol_path": "runtime/FAST_PLAY_PROTOCOL.md",
-    "ordinary_turn_github_io": false,
-    "bootstrap_github_read_once": true,
-    "session_local_overlay": true,
-    "persist_only_on_trigger_or_checkpoint": true,
-    "bundled_persistence": true,
-    "latest_persisted_checkpoint": "runtime/fast_play_checkpoints/fp_t138_1956_before_ta_chto.json"
-  },
-  "important_memory": {
-    "enabled": true,
-    "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md",
-    "state_path": "runtime/important_memory/state.json",
-    "events_dir": "runtime/important_memory",
-    "authority": "persisted_checkpoint_plus_active_session_overlay",
-    "chat_postflight_required": false,
-    "max_events_per_source_turn": 1,
-    "economic_triggers": {
-      "cumulative_realized_earnings_copper": 10000,
-      "major_spend_absolute_copper": 5000,
-      "major_spend_relative_ratio": 0.2,
-      "major_spend_relative_floor_copper": 1000
-    }
-  }
+  "character_runtime": {"version": "character_autonomy_v1", "calibrated_named_characters": ["borga"], "shared_scheduler": true, "hidden_plans_not_narrator_knowledge": true, "hidden_autonomy_not_narrator_knowledge": true},
+  "parser_runtime": {"version": "intent_grounding_v1", "safe_named_target_tokens": true, "known_local_typo_repair": true, "false_pending_repair": true, "visible_local_approach": true, "explicit_named_target_required": true, "bare_approach_auto_binding": false, "same_scene_clock_minutes": 0},
+  "memory_runtime": {"version": "causal_encounter_memory_v1", "calibrated_named_characters": ["borga"], "storage": "authoritative_facts_with_character_core_references", "reciprocal_awareness_required": true, "retroactive_inference": false, "emotion_inference": false, "relationship_mutation": false, "private_memory_not_narrator_knowledge": true},
+  "readmodel_runtime": {"version": "authoritative_pending_projection_v1", "pending_source": "authoritative_scene_pending_resolution_status_pending", "historical_repaired_pending_filtered": true, "session_builder_read_only": true, "gm_packet_fallback": "read_only_projection_no_telemetry"},
+  "response_runtime": {"version": "causal_npc_response_v1", "calibrated_named_characters": ["borga"], "supported_response": "simple_direct_greeting", "retroactive_resolution": false, "personality_inference": false, "emotion_inference": false, "relationship_mutation": false, "hidden_decision_basis_not_narrator_knowledge": true},
+  "transport_runtime": {"version": "runtime_fast_path_reliability_v1", "normal_request_format": "TENSURA_FAST_TURN_REQUEST", "canonical_payload": "request.raw_text", "compatibility_payload": "top_level_raw_text_if_request_object_absent", "request_id_required": false, "queue_sequence_allocation": "authoritative_processor_at_execution_time", "optimistic_guard": "expected_last_gameplay_turn_key", "normal_preflight_pointer_read_required": false, "request_receipts": true, "duplicate_enqueue_forbidden": true, "github_actions_still_authoritative_transport": false, "fast_play_overrides_per_turn_transport": true},
+  "fast_play": {"enabled": true, "protocol_path": "runtime/FAST_PLAY_PROTOCOL.md", "ordinary_turn_github_io": false, "bootstrap_github_read_once": true, "session_local_overlay": true, "persist_only_on_trigger_or_checkpoint": true, "bundled_persistence": true, "latest_persisted_checkpoint": "runtime/fast_play_checkpoints/fp_t138_2005_after_sozvezdie_angela.json"},
+  "important_memory": {"enabled": true, "protocol_path": "runtime/IMPORTANT_MEMORY_PROTOCOL.md", "state_path": "runtime/important_memory/state.json", "events_dir": "runtime/important_memory", "authority": "persisted_checkpoint_plus_active_session_overlay", "chat_postflight_required": false, "max_events_per_source_turn": 1, "economic_triggers": {"cumulative_realized_earnings_copper": 10000, "major_spend_absolute_copper": 5000, "major_spend_relative_ratio": 0.2, "major_spend_relative_floor_copper": 1000}}
 }
