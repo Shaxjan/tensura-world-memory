@@ -1,0 +1,29 @@
+{
+  "format": "TENSURA_SCENE_RETCON",
+  "schema_version": 1,
+  "retcon_id": "retcon_t138_palehche_replay_v2",
+  "effective_from_checkpoint": "runtime/fast_play_checkpoints/fp_t138_2012_after_serenada_rena_adapted.json",
+  "effective_time": "T+138 ~20:12",
+  "scope": "Palehche performance only",
+  "canon_action": "rewind_to_pre_palehche",
+  "invalidates": "All prior assistant-generated Palehche performance attempts after the serenade in the current continuation, including completed, partial, stalled, and reformatted attempts.",
+  "preserves": [
+    "All canon through the completed adapted serenade for Rena",
+    "Rena present at stage side/edge as Arlequino's wife",
+    "Meira present as concert organizer",
+    "17 women remain on stage unless later autonomous movement occurs",
+    "multi-thousand Eurazania concert audience with heterogeneous reactions"
+  ],
+  "palehche_text_authority": {
+    "base": "song_archive/palehche_user_exact.txt",
+    "canonical_override": "song_archive/palehche_canonical_v2.json",
+    "expected_line_count": 32
+  },
+  "replay_presentation_rule": {
+    "verse": "Do not print verse lyrics verbatim. Describe the verse content, then narrate detailed heterogeneous NPC/audience reactions.",
+    "chorus": "Print the full exact user-supplied chorus text, then narrate detailed heterogeneous NPC/audience reactions.",
+    "earth_references": "NPCs do not know Earth-specific references unless context lets them infer meaning.",
+    "player_agency": "Do not invent Arlequino/Shax voluntary gestures, movement, extra speech, feelings, eye contact, or stage business beyond user-authorized song performance."
+  },
+  "resume_state": "Immediately before Palehche begins. The replay from the start is user-authorized. No post-song outcome is canon yet."
+}
