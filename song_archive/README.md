@@ -10,6 +10,7 @@ Current verified one-file canonical songs:
 - `moji_vragi.txt` — Мои враги
 - `princessa.txt` — Принцесса
 - `muzyka_dlya_seksa_user_exact.txt` — Музыка для секса
+- `konfeta_user_exact.txt` — Конфета
 
 Special canonical override:
 - `Полегче` — use `song_archive/palehche_user_exact.txt` only together with `song_archive/palehche_canonical_v2.json`. The v2 manifest supersedes the base text as canonical and restores the user-confirmed 32-line version.
