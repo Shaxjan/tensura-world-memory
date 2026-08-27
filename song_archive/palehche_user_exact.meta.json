@@ -1,0 +1,7 @@
+{
+  "status": "AUTHORITATIVE_COMPLETE",
+  "line_count": 32,
+  "sha256_utf8": "0eb37c11924b107dddcc42ca032c085b9df1f019b13c7920ee8699ae1f63b1fb",
+  "canonical_path": "song_archive/palehche_user_exact.txt",
+  "note": "Exact user-supplied lyrics re-saved after earlier truncated archive writes. Use canonical_path as authoritative source."
+}
