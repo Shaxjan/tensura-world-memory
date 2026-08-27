@@ -10,6 +10,9 @@ Current verified one-file canonical songs:
 - `moji_vragi.txt` — Мои враги
 - `princessa.txt` — Принцесса
 
+Special canonical override:
+- `Полегче` — use `song_archive/palehche_user_exact.txt` only together with `song_archive/palehche_canonical_v2.json`. The v2 manifest supersedes the base text as canonical and restores the user-confirmed 32-line version.
+
 Full exact text that still exists only in historical shards is listed in `memory/songs.json` as `FULL_LEGACY_SHARDS` and must not be confused with a verified one-file archive.
 
 Incomplete exact material lives under `song_fragments/`. Missing lines must never be reconstructed from source songs, web lyrics, summaries or guesses.
