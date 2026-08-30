@@ -1,1 +1,68 @@
-{"v":159,"parent":"2888d4a7ded338acab261e3baa12001bb325045f","delta":"live_v159","economy":"ECONOMY_MODEL_v1","mode":"legacy_frozen","runtime":"runtime/runtime_state.json","cutover":"engine_v1.0","rollback_blob_sha":"e36c76592952a862839d020715e9185312a7afe4"}
+{
+  "v": 114,
+  "time": "T+149 ~14:43",
+  "location": "temporary lodging, upstairs room, Eurazania capital",
+  "maestro": {
+    "name": "Arlequino/Shax",
+    "cash": "29s98c",
+    "state": "in room with Rena after prolonged relationship conflict and reconciliation attempts",
+    "nearby_items": ["guitar", "violin"],
+    "destroyed_manuscript": "Bambi manuscript torn into pieces on T+147"
+  },
+  "family": {
+    "family_money": "365g81s40c",
+    "rena": {
+      "relationship": "wife",
+      "current_state": "still loves Arlequino; angry/hurt by disappearance and conflict; refuses second wife/concubine arrangement; maintains sexual boundaries and stop means stop",
+      "recent_context": [
+        "Arlequino disappeared for about four days after conflict without telling Rena where he was",
+        "Rena sent messengers, later learned he was staying at the Broken Fang tavern",
+        "Rena called a doctor after prolonged sleeping, torn manuscript and songs about death; doctor found no serious physical illness",
+        "Arlequino later explained indirectly that Rena is the 'medicine' for his madness; they reconciled physically and slept together",
+        "T+149 morning/afternoon they had consensual sex for several hours; Rena later stopped and Arlequino argued about needing more",
+        "Arlequino suggested he may need a second wife due to his libido; Rena clearly rejected a second wife, her friends, Lissa, and concubines",
+        "Current exchange: Arlequino asked whether Rena fears he will stop loving her if he has a second wife; Rena said the issue is not loss of love but being replaced whenever she says no. Arlequino suggested Lissa, one of Rena's friends, or a concubine; Rena rejected all options."
+      ]
+    }
+  },
+  "vern": {
+    "status": "returned T+148",
+    "students": "22 of 26 are coming to the festival; 4 declined",
+    "money": "remaining amount from 50s delegated to him was handed/reported to Rena; exact remainder still not established in visible dialogue",
+    "instruments": "returned guitar and violin intact"
+  },
+  "festival": {
+    "status": "in preparation",
+    "students_expected": 22,
+    "rena_local_musicians": "reserve group exists; exact final lineup not fixed",
+    "theater": "small local troupe approached Arlequino; he told them to contact Rena; Rena is evaluating them for a possible play at the festival"
+  },
+  "publishing": {
+    "meira": "developing publishing system and coordinating with Eren Wald about printing press",
+    "eren_wald": "movable-type printing press demonstrated; no final costs/results yet presented to Arlequino"
+  },
+  "tavern": {
+    "name": "Broken Fang",
+    "room_2": "7 nights were paid from T+141 through morning T+148; stay ended when Arlequino returned to temporary lodging",
+    "lira": "adult tavern worker; prior flirtation but no sex; she set sexual boundaries and they were respected in final outcome"
+  },
+  "recent_art": {
+    "Little Prince": "finished earlier; Rena read and approved emotionally",
+    "Bambi": "finished in tavern, read by Lira, later torn up by Arlequino on T+147",
+    "Antimatter": "performed to Rena on T+148 with themes of creative exhaustion, tyranny, collapse and self-blame",
+    "Jump from the Cliff": "performed to Rena on T+148; death-themed song",
+    "poet_epitaph_song": "performed on violin on T+148; themes of artistic failure, death, epitaph and leaving"
+  },
+  "roleplay_rules": [
+    "User controls Arlequino/Shax voluntary actions, dialogue, movement, feelings, song choice and physical actions. Assistant controls NPCs/world only.",
+    "Do not invent Arlequino actions or extend them beyond what user states.",
+    "NPCs have realistic limited knowledge; no omniscience.",
+    "NPCs should behave like living people, not information dumps or repeating scripts.",
+    "Do not weaken emotional reactions unrealistically; strong events can create strong NPC reactions, but do not loop the same reaction repeatedly.",
+    "Consent boundaries are real. If an NPC says no/stop, sexual activity stops and cannot be bargained into consent.",
+    "Rena does not agree to a second wife or concubine arrangement.",
+    "Only Rena uses the nickname 'peacock/pavlin'.",
+    "Russian language. Include HUD on ordinary RP turns."
+  ],
+  "scene": "T+149 ~14:43. In the upstairs room after sex and an argument about libido and second wife. Arlequino suggested Lissa, one of Rena's friends, or a concubine. Rena answered that she does not want to share her husband with anyone and will not select friends for his bed. Awaiting Arlequino's next action/dialogue."
+}
