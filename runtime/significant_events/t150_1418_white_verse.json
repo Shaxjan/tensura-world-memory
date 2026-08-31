@@ -1,0 +1,12 @@
+{
+  "format": "TENSURA_SIGNIFICANT_EVENT",
+  "schema_version": 1,
+  "time": "T+150 ~14:18",
+  "kind": "durable_creative_canonical_content",
+  "actor": "Maestro Arlequino",
+  "context": "Arlequino recited a new untitled white verse in Meira's working premises while Rena and Meira were present, immediately after clarifying that the previous line 'весь в отца' had been from a song.",
+  "text_path": "writing_archive/belyi_stikh_t150_smysl.txt",
+  "title_status": "UNTITLED",
+  "user_label": "белый стих",
+  "canon_rule": "Preserve exact user wording; do not silently correct grammar, spelling or punctuation."
+}
