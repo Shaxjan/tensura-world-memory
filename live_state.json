@@ -1,68 +1,105 @@
 {
-  "v": 114,
-  "time": "T+149 ~14:43",
-  "location": "temporary lodging, upstairs room, Eurazania capital",
+  "v": 115,
+  "time": "T+150 ~13:47",
+  "location": "kitchen, home at 18 Old Garden Street, Eurazania capital",
   "maestro": {
     "name": "Arlequino/Shax",
-    "cash": "29s98c",
-    "state": "in room with Rena after prolonged relationship conflict and reconciliation attempts",
-    "nearby_items": ["guitar", "violin"],
-    "destroyed_manuscript": "Bambi manuscript torn into pieces on T+147"
+    "cash": "98s58c",
+    "state": "at lunch with Rena in their newly purchased permanent home; relaxed domestic mood after sleeping and a long consensual morning together",
+    "current_clothes": "new black/dark-green villain-like outfit with long black coat/cloak, high rigid collar and silver fastenings",
+    "instruments": ["2 guitars", "2 violins"],
+    "writing_items": ["manuscripts", "paper", "quill", "ink"],
+    "destroyed_manuscript": "Bambi manuscript was torn into pieces on T+147; pieces were left behind at the former temporary lodging; Arlequino said he may rewrite it later"
   },
   "family": {
-    "family_money": "365g81s40c",
+    "family_money": "351g04s78c",
     "rena": {
       "relationship": "wife",
-      "current_state": "still loves Arlequino; angry/hurt by disappearance and conflict; refuses second wife/concubine arrangement; maintains sexual boundaries and stop means stop",
-      "recent_context": [
-        "Arlequino disappeared for about four days after conflict without telling Rena where he was",
-        "Rena sent messengers, later learned he was staying at the Broken Fang tavern",
-        "Rena called a doctor after prolonged sleeping, torn manuscript and songs about death; doctor found no serious physical illness",
-        "Arlequino later explained indirectly that Rena is the 'medicine' for his madness; they reconciled physically and slept together",
-        "T+149 morning/afternoon they had consensual sex for several hours; Rena later stopped and Arlequino argued about needing more",
-        "Arlequino suggested he may need a second wife due to his libido; Rena clearly rejected a second wife, her friends, Lissa, and concubines",
-        "Current exchange: Arlequino asked whether Rena fears he will stop loving her if he has a second wife; Rena said the issue is not loss of love but being replaced whenever she says no. Arlequino suggested Lissa, one of Rena's friends, or a concubine; Rena rejected all options."
-      ]
+      "title": "Maestro Rena",
+      "current_state": "happy with Arlequino and with their first permanent home; relationship has recently improved; she still insists that stop/no in sex means stop, and Arlequino has recently respected that without turning it into a fight",
+      "initiative_insight": "Arlequino explained that he enjoys Rena's jealousy partly because only then he clearly feels she loves him, since he usually initiates kisses, sexual advances and affection. Rena understood that he needs more initiative from her and has begun initiating affection herself naturally.",
+      "second_wife_boundary": "Rena firmly refuses a second wife, concubine, friend or any other woman being added to their marriage. The underlying issue for her is not fear that Arlequino stops loving her, but refusal to live in a model where her no, illness, pregnancy or exhaustion becomes a reason for him to go to another woman.",
+      "pregnancy": "No pregnancy is established. Late T+149 Arlequino asked whether she had nausea because he was thinking about a possible child. Rena said she had noticed no unusual symptoms and there was no reason yet to assume pregnancy; she promised to tell him immediately if anything changes. Do not infer pregnancy without evidence."
     }
   },
-  "vern": {
-    "status": "returned T+148",
-    "students": "22 of 26 are coming to the festival; 4 declined",
-    "money": "remaining amount from 50s delegated to him was handed/reported to Rena; exact remainder still not established in visible dialogue",
-    "instruments": "returned guitar and violin intact"
+  "home": {
+    "status": "purchased and occupied T+149",
+    "legal_owner": "Maestro Rena",
+    "family_use": "Arlequino and Rena regard it as their shared home despite legal title being only Rena's",
+    "address": "18 Old Garden Street, residential quarter, Eurazania capital",
+    "price": "12g without furniture",
+    "registration_fee": "4s",
+    "seller": "elderly beastfolk-badger, short and stocky, grey-striped fur; wife died three years ago, children live in another city",
+    "layout": "two floors, 8 separate rooms: downstairs common hall with fireplace, kitchen, study, additional guest/dining room; upstairs 4 bedrooms (2 large, 2 smaller); also storage, bathroom, linen room, dry basement with 2 storage chambers plus empty room, dry strong-beamed attic, inner courtyard and narrow long garden with old fruit trees",
+    "furniture_left_free": "seller left kitchen table, cabinets and large upstairs bed without extra charge",
+    "keys": "seller provided 2 keys; Rena originally held both, then gave one to Arlequino on T+150 morning",
+    "city_registration": "permanent family address was added to their marriage/family record on T+149",
+    "future_plan": "Rena and Arlequino may inspect and possibly buy a second, larger property for the 22 pupils and later upgrade it as a guest/maestro residence. They are NOT committed to buying the second one until they see it."
+  },
+  "economy": {
+    "currency": "100c=1s, 100s=1g",
+    "important_retcon": "Broken Fang tavern room is 20c/night with breakfast, not 10s. Seven nights cost 1s40c; from the original 1g payment change should be 98s60c. After a 2c city sheet, personal cash is 98s58c. Ordinary housing is cheap relative to Arlequino's superstar concert earnings.",
+    "concert_settlement": "gross 347g18s; expenses 6g83s40c; net 340g34s60c; attendance about 17,500 total, peak over 16,000"
+  },
+  "recent_purchases": {
+    "clothing": "Arlequino bought current black/dark-green outfit and ordered several additional outfits plus a custom long black cloak based on his own drawings, with dark-green lining, restrained silver details and optional removable fur. Total for Arlequino 2g04s; Rena also bought a dark evening dress and a practical everyday outfit for 42s; total 2g46s. Ready altered clothes expected next evening; custom cloak expected in about 5-6 days.",
+    "home_textiles": "graphite bedding with subtle silver trim, 2 good pillows, towels; 18s60c",
+    "kitchenware": "4 plates, 4 cups, cutlery for 4, 1 pot, 1 pan, 2 teapots; with delivery 7s60c",
+    "food": "bread, eggs, cheese, meat, vegetables, butter, tea and pastries; 42c"
+  },
+  "publishing": {
+    "meira": "running the publishing-system build and coordinating with Eren Wald. She knows the new permanent address: 18 Old Garden Street.",
+    "eren_wald": "movable-type printing press works and trial pages are clean; bottleneck is now typesetting rather than the press",
+    "current_progress": "Meira has found two people who can be trained as typesetters and one binder; Eren is expanding the set of metal type. Once ready, they can run a small first batch and measure real speed/cost.",
+    "outside_authors": "Arlequino confirmed that other authors may submit books and sent interested people to Meira. Arlequino's own texts print without editorial interference; outside authors are screened by editors. Meira has started evaluating candidates for a permanent manager of the publishing operation.",
+    "recent_visitors": "Several prospective authors already approached Meira: one brought a completed manuscript, two asked about terms, another brought poetry and a very high opinion of himself."
+  },
+  "travel": {
+    "request": "Arlequino wants a fast way to travel to Blumund, Dwargon and other kingdoms rather than slow caravan travel.",
+    "status": "Rena has not yet found a concrete provider, rate or travel time. She intends to investigate legitimate spatial-magic transport or fast riding beasts. Do not invent an established teleport service until discovered in scene."
   },
   "festival": {
     "status": "in preparation",
     "students_expected": 22,
-    "rena_local_musicians": "reserve group exists; exact final lineup not fixed",
-    "theater": "small local troupe approached Arlequino; he told them to contact Rena; Rena is evaluating them for a possible play at the festival"
+    "vern": "returned T+148 with guitar and violin intact; 22 of 26 Dwargon students are coming, 4 declined; exact remaining delegated money after his return remains unknown unless later established",
+    "rena_local_musicians": "reserve/local candidate group exists; exact final lineup not fixed",
+    "poetry_evening": "Taisia runs a poetry evening every second Thursday at 19:00, alternating free/theme evenings. Exact next date in cycle has not been established and must be checked rather than invented."
   },
-  "publishing": {
-    "meira": "developing publishing system and coordinating with Eren Wald about printing press",
-    "eren_wald": "movable-type printing press demonstrated; no final costs/results yet presented to Arlequino"
+  "creative_context": {
+    "song_interpretation_rule_with_rena": "On T+150 morning Arlequino explained that Rena and listeners must not automatically treat his songs as autobiography. A quarrel in a song does not mean their quarrel; suicide/death does not automatically mean Arlequino wants to die. Rena agreed to identify the narrator/character first and ask if unsure.",
+    "Not_Need_Tears": "Example: the song 'Не надо слез' is from the POV of an ordinary musician who sees a gulf between himself and Maestro Arlequino; lines such as 'Маэстро - его песни - мой убийца / Он гениален , а я бездарным родился' make Arlequino a separate person inside the song. Rena now understands why her earlier assumption that it was Arlequino speaking about suicide shocked/angered him.",
+    "Jump_From_Cliff": "Arlequino explicitly said 'Прыгну со скалы' is him / his own voice. Rena should treat it as closer to him emotionally, but not automatically as a literal intent to self-harm unless he states that.",
+    "love_songs": "Arlequino told Rena that love is about them; Rena jokingly claimed all good romantic lines as hers.",
+    "Orren_clockmaker": "Arlequino showed Rena the poem 'Оррен-часовщик' written in response to a young female writer's short story; he never met the girl, only her father. He then improvised a dark jealous sequel 'Ревность автора, или Казнь Оррена'.",
+    "current_projects_considered": ["continue Cthulhu", "horror", "Графы мести"],
+    "teenage_demoness_story": "At lunch T+150 Arlequino told Rena that as a youth he and a male friend debated the ideal race for a wife and both chose a demoness who could take any form. They co-wrote a small story about a demoness, a prince, a battle, and the demoness taking roughly 10 racial forms for sex with the prince; there were illustrations. The story became known to a large share of men in their region. Remembered forms so far: dryad, orc woman, human, demoness herself; Arlequino suspects/earlier joked about goblin women but did not confirm the full list. He says goblin women are very cute. He no longer knows where that old friend is and then dismissed the topic with 'да черт с ним'.",
+    "pending_race_visual_research": "Immediately before saving, Arlequino remembered that the story definitely also had an orc woman and asked the assistant to study the appearance of races in the Tensura world. In the next chat, before describing those races visually, check canon/established appearance for relevant Tensura races instead of improvising. User also expressed playful/sexual interest with 😋🥵😈."
   },
-  "tavern": {
-    "name": "Broken Fang",
-    "room_2": "7 nights were paid from T+141 through morning T+148; stay ended when Arlequino returned to temporary lodging",
-    "lira": "adult tavern worker; prior flirtation but no sex; she set sexual boundaries and they were respected in final outcome"
+  "relationship_recent": {
+    "T149_first_night": "After moving in, Arlequino and Rena had consensual sex in the new home during the evening/night. Rena later said stop due to exhaustion; Arlequino accepted it and they slept.",
+    "T150_morning": "After waking, they talked about song narrators, then Rena explicitly said she wanted sex. They had a long consensual morning together in multiple parts of the house and garden. When Rena eventually said stop because she was exhausted, Arlequino respected it. They then cooked/eat breakfast and later lunch.",
+    "sexual_detail_rule": "Keep sexual intimacy non-graphic/fade-to-black. If user specifies duration, location or broad outcome, preserve that continuity. Do not decide the encounter ended merely because a few minutes passed; only close it when the user or NPC explicitly ends/stops it. If Rena says stop/no, activity stops."
   },
-  "recent_art": {
-    "Little Prince": "finished earlier; Rena read and approved emotionally",
-    "Bambi": "finished in tavern, read by Lira, later torn up by Arlequino on T+147",
-    "Antimatter": "performed to Rena on T+148 with themes of creative exhaustion, tyranny, collapse and self-blame",
-    "Jump from the Cliff": "performed to Rena on T+148; death-themed song",
-    "poet_epitaph_song": "performed on violin on T+148; themes of artistic failure, death, epitaph and leaving"
+  "social_titles": {
+    "important": "Address them as Maestro Arlequino and Maestro Rena. A city clerk once called her only 'Mrs. Rena'; Arlequino corrected him and was visibly displeased."
   },
   "roleplay_rules": [
     "User controls Arlequino/Shax voluntary actions, dialogue, movement, feelings, song choice and physical actions. Assistant controls NPCs/world only.",
     "Do not invent Arlequino actions or extend them beyond what user states.",
     "NPCs have realistic limited knowledge; no omniscience.",
     "NPCs should behave like living people, not information dumps or repeating scripts.",
-    "Do not weaken emotional reactions unrealistically; strong events can create strong NPC reactions, but do not loop the same reaction repeatedly.",
+    "Conversations should usually be 3-5 substantive short paragraphs where appropriate, but not rigidly; avoid both one-line emptiness and encyclopedia dumps.",
+    "Do not automatically append a business question to every NPC turn.",
+    "Preserve user's exact spelling/wording when quoting or echoing dialogue; do not silently correct typos or grammar.",
     "Consent boundaries are real. If an NPC says no/stop, sexual activity stops and cannot be bargained into consent.",
     "Rena does not agree to a second wife or concubine arrangement.",
     "Only Rena uses the nickname 'peacock/pavlin'.",
-    "Russian language. Include HUD on ordinary RP turns."
+    "Whenever a beastfolk NPC appears, specify what kind (wolf, cat, badger, fox, bear, etc.), not generic beastfolk.",
+    "Ordinary strangers generally know Arlequino as a famous, wealthy, genius-level artist/author/lovelace; reactions vary realistically: awe, nerves, attraction, admiration, envy, skepticism or respect. Do not make every stranger treat him as a clown or madman.",
+    "Text in parentheses from the user is OOC communication to the assistant, not dialogue to Rena/world. Reply as assistant and do not continue RP unless asked.",
+    "Russian language. Include HUD on ordinary RP turns.",
+    "No unnecessary time jumps. If user explicitly sleeps, next useful scene can be natural/external awakening.",
+    "For user-supplied full song lyrics performed in RP, narrate several lines -> NPC reaction -> several lines -> reaction through the song, rather than collapsing it into 'sang the whole song'."
   ],
-  "scene": "T+149 ~14:43. In the upstairs room after sex and an argument about libido and second wife. Arlequino suggested Lissa, one of Rena's friends, or a concubine. Rena answered that she does not want to share her husband with anyone and will not select friends for his bed. Awaiting Arlequino's next action/dialogue."
+  "scene": "T+150 ~13:47, kitchen of the new home at 18 Old Garden Street. Arlequino and Rena are eating lunch. The mood is relaxed and teasing. They have been talking about a teenage story Arlequino co-wrote with an old male friend: demoness + prince + battle + about 10 shapeshifted racial forms, with illustrations, very popular among men in their region. Arlequino most recently remembered an orc woman among the forms and asked the assistant to study how races look in Tensura before continuing this topic. He then asked to save state to GitHub and continue in another chat."
 }
