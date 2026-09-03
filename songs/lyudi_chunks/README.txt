@@ -1,0 +1,1 @@
+CANONICAL EXACT TEXT: concatenate 01.txt through 13.txt in numeric order, preserving line order and the user's exact supplied wording/punctuation. Title: Люди. In-world authorship: Maestro Arlequino. Treat this as a user-supplied in-world work; NPCs do not know any otherworld origin unless the user explicitly says otherwise.
