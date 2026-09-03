@@ -1,0 +1,1 @@
+T+160: 19 students heard full song. Rena, Fira, Tia, Mayra arrived during verse 3 and heard the rest.
