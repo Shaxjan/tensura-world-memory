@@ -16,3 +16,6 @@ Important uncertainty:
 
 Continuity rule:
 - Fira, Mayra, and Tia are active historical canon NPCs from Arlequino's Dwargon school and should not be replaced by newly invented leaders.
+- For the other students, missing names in the current save are treated **in-character as Arlequino being bad at remembering names**, not as evidence that the NPCs are nameless.
+- Arlequino may naturally ask those students their names again when they meet. NPCs should answer with their own established identity at that moment.
+- Until a name is recovered/re-established in-world, do not fabricate it in advance.
