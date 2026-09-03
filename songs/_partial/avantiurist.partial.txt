@@ -1,23 +1,12 @@
-STATUS: PARTIAL_EXACT — SAVE v38 says exact user-supplied lyrics were performed, but the durable save kept only fragments/reactions, not the full text.
+STATUS: SUPERSEDED — full canonical lyrics recovered directly from user on T+160.
 
-Exact surviving fragments:
+Authoritative full text:
+`songs/avantiurist.txt`
 
-Ветер шальной гонит туман...
-Он, как и я, – авантюрист
+Historical note:
+This file previously contained only surviving fragments from SAVE v38/v39. It must no longer be treated as the working source for lyrics.
 
-Вольному – воля
+Canonical place-name in the user-supplied full text:
+блюмундских раздолий
 
-Где-то, где-то любимая помнит и ждёт
-
-Кто же авантюристов умом понимает
-Душа её, сила её воспевает
-
-Ой дага-дагадай...
-
-Canonical place-name correction from SAVE v39:
-Блюмундских Раздолий
-
-Arlequino's exact spoken correction after the song:
-Блюмундских Раздолий - (поклон) моя ошибка 😁
-
-Полный текст сейчас не восстановлен; не дополнять по оригиналу/памяти.
+Do not use this partial record when the full song text is requested.
