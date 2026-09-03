@@ -1,12 +1,21 @@
-# T+160 — First telling of «Маска Ктулху» begins
+# T+160 — «Маска Ктулху» telling begins; Tensura adaptation rule
 
 In the Dwargon theater hall, Arlequino begins telling «Маска Ктулху» theatrically and ominously for the first time to this group.
 
 Knowledge boundary:
-- The currently gathered 22 students are present and hear the telling.
+- The currently gathered 22 students are present.
 - Rena is present, sitting on Arlequino's lap under his dark-green high-collared cloak.
-- Arlequino intermittently caresses Rena under the cloak while continuing the performance.
+- Arlequino may intermittently caress Rena under the cloak while continuing the performance, exactly as the player specified.
 
-The first substantial section told is «Возвращение Хастура»: Amos Tuttle's dying demand to destroy his house and forbidden books; the failure to fully obey that warning; Paul Tuttle inheriting the estate and delving into the forbidden lore; inhuman changes in Amos's corpse and sounds beneath the house; the idea of a promised 'haven' for Hastur; the disappearance and return of Amos's body; Paul's realization of the danger and instruction to destroy the house; his final desperate telephone call; and the destruction of the estate and subterranean passages amid manifestations tied to Hastur and Cthulhu.
+## Explicit retcon / correction
+The assistant's previous generated version of the first story, which used a modern-Earth setting and a telephone, is NON-CANON and must be ignored.
 
-Do not assume the remaining stories of the collection have been told until they are actually narrated in later turns.
+«Маска Ктулху» is to be adapted into the Tensura world in the same manner as «Зов Ктулху». Preserve the horror structure, characters/roles and important narrative beats where appropriate, but translate setting-dependent elements into Tensura-world equivalents.
+
+Hard constraints:
+- No modern-Earth technology such as telephones unless the player explicitly establishes an in-world equivalent.
+- No automatic use of modern Earth institutions, infrastructure or geography.
+- Use Tensura-world means of communication, travel, records, magic, organizations and locations where needed.
+- Do not invent a specific replacement if prior agreed canon cannot be retrieved; keep the adaptation internally consistent and ask/recover context rather than silently importing Earth technology.
+
+Because the prior detailed narration was invalidated, no specific first-story details from that erroneous narration are established as having been told yet beyond the fact that Arlequino started «Маска Ктулху» theatrically and ominously.
