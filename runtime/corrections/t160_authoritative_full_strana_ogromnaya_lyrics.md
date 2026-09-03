@@ -15,3 +15,4 @@ This exact user-supplied version supersedes earlier incomplete or conflicting T+
 Идет война народная,
 Священная война!
 Дадим отпор душителям
+Вс
