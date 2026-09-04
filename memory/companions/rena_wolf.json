@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "rena_wolf",
+  "owner_or_primary_bond": "Рена",
+  "species": "волчица",
+  "name": "Руна",
+  "name_source": "Рена выбрала имя в сцене T+162 ~10:08 после просьбы Арлекино наконец дать волчице имя",
+  "formal_magical_naming_status": "UNKNOWN",
+  "current_location": "UNKNOWN",
+  "current_status": "not physically present in the student-hall scene unless later established",
+  "notes": [
+    "Не выдумывать способности, уровень, происхождение или эффекты именования без установленного события.",
+    "Имя 'Руна' является устойчивым обращением к волчице после этой сцены."
+  ]
+}
