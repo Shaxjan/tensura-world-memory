@@ -1,0 +1,14 @@
+{
+  "schema_version":1,
+  "key":"fira",
+  "name":"Фира",
+  "depth":3,
+  "status":"established",
+  "role":"Dwargon student / theatrical participant",
+  "established_facts":["recovered name from durable memory","participated in theater discussions with Arlequino and the student group"],
+  "personality":{"stable_traits":"not_yet_authored","rule":"derive from repeated in-world behavior only"},
+  "knowledge_boundary":"No knowledge is inferred beyond what Fira causally observed or was told.",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["age","family","romance","skills","opinions not shown in scene"]
+}
