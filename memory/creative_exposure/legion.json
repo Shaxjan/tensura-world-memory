@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "work_id": "legion",
+  "title": "Легион",
+  "type": "song",
+  "canonical_content": "song_archive/legion_user_exact.txt",
+  "exposures": [
+    {
+      "event_id": "legion_rena_prior_exposure_unknown_time",
+      "time": "UNKNOWN_BEFORE_T162_0954",
+      "mode": "heard_live_performance_or_equivalent",
+      "source": "direct_player_correction_in_current_chat",
+      "recipients": {
+        "named_confirmed": ["rena"],
+        "group_confirmed": [],
+        "unknown_or_unresolved": []
+      },
+      "novelty_effect": {
+        "rena": "NOT_NEW"
+      },
+      "certainty": "CONFIRMED_PRIOR_EXPOSURE_TIME_UNKNOWN",
+      "note": "Player explicitly corrected that Rena had already heard 'Легион'. Exact earlier scene/time is not currently recovered; do not invent it."
+    },
+    {
+      "event_id": "legion_dwargon_hall_t162_repeat_for_rena",
+      "time": "T+162 ~09:54-09:58",
+      "location": "Дваргон, зал для занятий",
+      "mode": "heard_live_performance",
+      "performer": "arlequino",
+      "recipients": {
+        "named_confirmed": ["rena", "fira", "mayra", "bren"],
+        "group_confirmed": ["students actually present in the hall during the performance"],
+        "unknown_or_unresolved": ["exact full student roster present for the entire song"]
+      },
+      "novelty_effect": {
+        "rena": "REPEAT_EXPOSURE",
+        "fira": "UNKNOWN_IF_FIRST",
+        "mayra": "UNKNOWN_IF_FIRST",
+        "bren": "UNKNOWN_IF_FIRST",
+        "other_present_students": "UNKNOWN_IF_FIRST"
+      },
+      "certainty": "CURRENT_SCENE_CONFIRMED_WITH_PARTIAL_AUDIENCE_PRECISION",
+      "note": "Do not narrate Rena as discovering the song for the first time. Reactions should arise from context, familiarity, changed performance, or current circumstances."
+    }
+  ]
+}
