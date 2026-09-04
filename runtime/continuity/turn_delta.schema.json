@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "TENSURA_TURN_DELTA_v1",
+  "title": "Tensura scene turn delta",
+  "type": "object",
+  "required": ["format", "schema_version", "source_scene_id", "classification", "player_input", "elapsed_minutes", "changes"],
+  "properties": {
+    "format": {"const": "TENSURA_TURN_DELTA"},
+    "schema_version": {"const": 1},
+    "source_scene_id": {"type": "string", "minLength": 1},
+    "result_scene_id": {"type": ["string", "null"]},
+    "classification": {
+      "enum": [
+        "NORMAL_TURN",
+        "SLEEP_RESOLUTION",
+        "TRAVEL_OR_WAIT_TIMESKIP",
+        "STATE_RECONCILIATION",
+        "ASSISTANT_CONTINUITY_ERROR_REPAIR",
+        "PLAYER_RETCON",
+        "CLARIFICATION"
+      ]
+    },
+    "player_input": {
+      "type": "object",
+      "required": ["raw_text", "is_ooc"],
+      "properties": {
+        "raw_text": {"type": "string"},
+        "is_ooc": {"type": "boolean"},
+        "contains_voluntary_player_action": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "elapsed_minutes": {"type": "number", "minimum": 0},
+    "time_jump_reason": {"type": ["string", "null"]},
+    "changes": {
+      "type": "object",
+      "properties": {
+        "time": {"type": ["object", "null"]},
+        "location": {"type": ["object", "null"]},
+        "player": {"type": ["object", "null"]},
+        "money_events": {"type": "array", "items": {"type": "object"}},
+        "npc_transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["npc_key", "cause"],
+            "properties": {
+              "npc_key": {"type": "string"},
+              "cause": {"type": "string", "minLength": 1},
+              "from": {"type": ["object", "null"]},
+              "to": {"type": ["object", "null"]}
+            },
+            "additionalProperties": true
+          }
+        },
+        "world_events": {"type": "array", "items": {"type": "object"}},
+        "commitments": {"type": "array", "items": {"type": "object"}}
+      },
+      "additionalProperties": true
+    },
+    "invalidates_assistant_output": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"elapsed_minutes": {"exclusiveMinimum": 180}}},
+      "then": {"required": ["time_jump_reason"], "properties": {"time_jump_reason": {"type": "string", "minLength": 1}}}
+    }
+  ],
+  "additionalProperties": true
+}
