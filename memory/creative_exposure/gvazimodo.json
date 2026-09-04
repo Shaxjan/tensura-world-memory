@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "work_id": "gvazimodo",
+  "title": "Гвазимодо",
+  "type": "manuscript/novel-play source",
+  "canonical_work_record": "memory/gvazimodo.json",
+  "exposures": [
+    {
+      "event_id": "gvazimodo_rena_first_reader_blumund",
+      "time": "UNKNOWN_DURING_BLUMUND_PERIOD_BEFORE_T162",
+      "location": "Блюмунд",
+      "mode": "read_manuscript",
+      "source": "existing memory/gvazimodo.json plus direct player statement at T+162 ~10:06",
+      "recipients": {
+        "named_confirmed": ["rena"],
+        "group_confirmed": [],
+        "unknown_or_unresolved": []
+      },
+      "novelty_effect": {
+        "rena": "FIRST_CONFIRMED_READER"
+      },
+      "certainty": "CONFIRMED_FIRST_READER_EXACT_TIME_UNKNOWN",
+      "note": "Player explicitly stated Rena was the first person to read this manuscript. Do not narrate later readings as first exposure."
+    },
+    {
+      "event_id": "gvazimodo_dwargon_students_pre_t162_meeting",
+      "time": "T+161 night to T+162 morning",
+      "location": "Дваргон",
+      "mode": "received_and_read_for_casting_discussion",
+      "source": "current continuity: manuscript was given to one student and students were instructed to discuss casting before 10:00",
+      "recipients": {
+        "named_confirmed": [],
+        "group_confirmed": ["students who actually read/discussed the manuscript before the T+162 10:00 meeting"],
+        "unknown_or_unresolved": ["exact student-by-student readership"]
+      },
+      "novelty_effect": {
+        "group": "UNKNOWN_PER_PERSON"
+      },
+      "certainty": "GROUP_EVENT_CONFIRMED_MEMBERSHIP_PARTIAL"
+    }
+  ]
+}
