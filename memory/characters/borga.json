@@ -1,0 +1,17 @@
+{
+  "schema_version":1,
+  "key":"borga",
+  "name":"Борга",
+  "depth":4,
+  "status":"established_recurring",
+  "personality":{"stable_traits":["professional","duty_oriented"],"evidence":"persistent tournament/training responsibilities and Character Core calibration"},
+  "role":"professional ally/contact for training grounds and tournament operations",
+  "authority":["combat rules","admissions and selection","judges and testing","capacity/qualification operations"],
+  "limits":["not chief organizer of the whole festival"],
+  "current_grounded_duty":"combat rules, admissions, judges, testing and tournament operations; coordinate tournament footprint with Meira",
+  "autonomy":{"character_plan":"persistent daily role plan","initiative":"performs assigned duties without requiring player prompting"},
+  "knowledge_boundary":"Learns player-facing facts only through causal observation, interaction or testimony.",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["family","romantic history","private motives","exact hidden location outside grounded duty blocks"]
+}
