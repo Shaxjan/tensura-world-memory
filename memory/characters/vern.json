@@ -1,0 +1,17 @@
+{
+  "schema_version":1,
+  "key":"vern",
+  "name":"Верн",
+  "depth":3,
+  "status":"recurring",
+  "role":"trusted acquaintance / courier for Dwargon trip",
+  "compensation":{"work_travel_fee":"1g20s paid in full","instrument_float":"50s entrusted; current balance UNKNOWN"},
+  "current_assignment":["travel to Dwargon","visit Arlequino's known instrument master","visit known shopkeeper; collect Arlequino's share and report if possible","deliver/handle established greetings to Arlequino's students","return instruments, money, letters and unused float"],
+  "hard_boundaries":["not connected to Oren's corrected outbound mail set","Arlequino already owns a personal violin; Vern's instruments are additional"],
+  "personality":{"stable_traits":"not_yet_authored","rule":"derive from repeated actions"},
+  "knowledge_boundary":"Knows the lodging location of Arlequino in-world; exact lodging name is not recovered by the GM. Later knowledge arrives causally.",
+  "current_location":"UNKNOWN",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["current float balance","private motives","exact current location"]
+}
