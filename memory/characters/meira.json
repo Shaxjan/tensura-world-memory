@@ -1,0 +1,17 @@
+{
+  "schema_version":1,
+  "key":"meira",
+  "name":"Мэйра",
+  "depth":4,
+  "status":"established_recurring",
+  "personality":{"stable_traits":["organizationally capable","trusted coordinator"],"evidence":"appointed chief festival coordinator and ongoing coordination responsibilities"},
+  "role":"chief coordinator of Festival of Eurazania: Week of Strength",
+  "responsibilities":["general coordination","trade","guest camp","supplies","workers","water/sanitation","roads/cargo flows","festival publicity","trusted organizer contacts"],
+  "excluded_scope":["tournament belongs to Borga","stage/performers belong to Arlequino or a separately assigned responsible person"],
+  "compensation":{"total":"1g20s","advance":"20s","remaining":"1g"},
+  "knowledge_boundary":"Only knows what was transmitted to her through causal channels; exact lodging of Arlequino is known in-world from his direct statement though the GM may not know its name.",
+  "current_location":"UNKNOWN",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["private motives","exact current location","unspoken opinions"]
+}
