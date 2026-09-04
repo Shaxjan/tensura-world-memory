@@ -1,106 +1,124 @@
-# Tensura Fast Play Protocol v1
+# Tensura Fast Play Protocol v1.1
 
 ## Goal
 
-Normal gameplay must feel like a live conversation. GitHub is durable storage, not a per-message database call.
+Normal gameplay must feel like a live conversation. GitHub is durable storage, not a per-message database call. At the same time, one short dialogue turn must never cause the narrator to reconstruct and reset the scene.
 
-This protocol overrides the older per-turn GitHub transport requirement for an already-open synchronized game chat.
+This protocol overrides older per-turn GitHub transport requirements for an already-open synchronized game chat.
 
-## 1. Two-layer active state
+## 1. Three-layer effective state
 
 During an active game chat the effective state is:
 
-1. **persisted checkpoint** — the last state safely stored in GitHub;
-2. **session-local overlay** — confirmed ordinary gameplay that happened in the current chat after that checkpoint and has not yet been flushed.
+1. **persisted runtime baseline** — checkpoint/journal state safely stored in GitHub;
+2. **durable current-frame overlay** — `runtime/current_scene.json` when `status = ACTIVE`;
+3. **session-local turn deltas** — ordinary gameplay after that current-frame file which has not yet been flushed.
 
-The game uses the combined effective state for subsequent ordinary turns.
+The effective current scene is the combination in that order. Newer layers override stale older layers only for the facts they actually update.
 
-The local overlay is authoritative for the currently active chat until the next persistence checkpoint. It must not be silently discarded merely because GitHub still contains an older persisted checkpoint.
+The active/current overlay must never be silently discarded merely because `runtime/session_state.json` or an older checkpoint still contains a previous time, location, balance or NPC position.
 
-## 2. Bootstrap / recovery
+## 2. Current-scene continuity
 
-On a new game chat, explicit load, recovery, or when the active in-chat state is unavailable:
+Normal turns use:
 
-- read `runtime/runtime_state.json` and `runtime/session_state.json` once;
-- read important-memory state only if needed for the resumed counters;
-- establish that persisted state as the session baseline;
-- then continue normal play from in-chat state without rereading GitHub on every message.
+`NEXT_SCENE = CURRENT_SCENE + EXACT_PLAYER_INPUT + CAUSALLY_JUSTIFIED_AUTONOMOUS_WORLD_DELTA`
 
-A synchronized active chat must not perform a GitHub preflight merely because the player sent another ordinary line of dialogue or action.
+Unchanged scene fields are inherited, not regenerated.
 
-## 3. Ordinary turns — NO GitHub I/O
+Follow `runtime/continuity/SCENE_CONTINUITY_PROTOCOL_v1.md`.
 
-The following normally stay only in the active session overlay:
+In particular:
+- a short reply cannot change the T+ day;
+- NPC physical state cannot reset without an actual transition;
+- location cannot change without movement/timeskip;
+- money cannot change without a causal ledger event/reconciliation;
+- no voluntary Arlequino action can be added unless present in user input.
 
-- ordinary dialogue;
-- observation and questions to nearby characters;
-- local movement and routine travel beats;
-- small purchases and ordinary expenses below significance thresholds;
-- ordinary income below the cumulative durable checkpoint;
-- routine combat/training beats;
-- temporary scene details, mood and short-lived state;
-- other gameplay whose consequences do not require durable persistence yet.
+## 3. Bootstrap / recovery
+
+On a new game chat, explicit load, recovery, or when active in-chat state is unavailable:
+
+- read `runtime/current_scene.json` first if it exists and is ACTIVE;
+- read `runtime/runtime_state.json` and `runtime/session_state.json` for the persisted baseline/history;
+- if those are older than the active current-scene overlay, do not overwrite the overlay;
+- read important-memory state only if needed for resumed counters;
+- establish the effective scene once, then continue normal play from in-chat deltas without rereading GitHub on every message.
+
+## 4. Ordinary turns — NO GitHub I/O
+
+Ordinary dialogue, nearby observation, local micro-movement, routine NPC initiative, small routine economic changes and temporary scene details normally stay in the active session delta.
 
 For these turns:
-
 - do not create `runtime/requests/q-*.json` solely to process the turn;
 - do not wait for GitHub Actions;
-- do not read `runtime/runtime_state.json` or `runtime/session_state.json` again;
-- do not create a journal commit for each line;
-- answer from the current session state immediately.
+- do not reread runtime files on every line;
+- do not create a journal commit for every line;
+- resolve immediately from current scene + new delta.
 
-## 4. When GitHub persistence IS required
+The narrator must retain the current frame in context. A new prose response is not a new world initialization.
 
-Flush the active session to durable storage only when at least one of these occurs:
+## 5. Unresolved exact player input
 
-1. an important-memory significance trigger fires;
-2. the player explicitly asks to save/checkpoint;
-3. the chat intentionally closes/changes session and a checkpoint is appropriate;
-4. recovery or ambiguity makes durable synchronization necessary before safe continuation.
+If the player spoke/acted but the assistant response is invalidated before a valid world/NPC outcome is accepted, preserve that exact user input as unresolved.
 
-Important economic triggers are defined by `runtime/IMPORTANT_MEMORY_PROTOCOL.md`, including cumulative realized personal earnings of `1g` and major spending thresholds.
+Do not make the player repeat it. Do not execute it twice. Resume by resolving that one input from the last valid current scene.
 
-Other major durable events such as a unique asset, title, binding contract, permanent capability/state change, or comparable long-lived consequence can also trigger persistence.
+## 6. Sleep
+
+`Сплю` never produces a visible intermediate `you are sleeping` turn.
+
+Use `runtime/rules/SLEEP_SCENE_RESOLUTION_v1.md`: jump directly to natural wake, causal interruption, danger, or other meaningful sleep outcome. That result becomes the new current scene.
+
+After wake, the next ordinary line inherits the exact wake frame. Do not reroll room/NPC states.
+
+## 7. When GitHub persistence IS required
+
+Flush durable state when at least one occurs:
+
+1. important-memory significance trigger;
+2. player explicitly asks to save/checkpoint/reconcile repository;
+3. chat intentionally closes/changes session and continuity would otherwise be lost;
+4. recovery/ambiguity requires synchronization;
+5. a continuity repair/current-scene reconciliation must survive across chats.
+
+Important economic triggers are defined by `runtime/IMPORTANT_MEMORY_PROTOCOL.md`.
 
 ### Mandatory durable creative/canonical content
 
-The following are significance triggers and must be persisted rather than left only in the chat-local overlay:
+Persist supplied full songs/works, major relationship changes, promises, contracts, debts, ownership changes, unique purchases, titles, permissions, discoveries, permanent decisions, major project/festival decisions, and comparable hard-to-reconstruct facts.
 
-- when the player performs or supplies the **full text of a song**, preserve that full supplied text in the appropriate durable song/canonical memory together with the in-world context needed to identify it;
-- other player-supplied creative works or exact canonical texts that would be costly or impossible to reconstruct later;
-- major relationship changes, promises, contracts, debts, ownership changes, unique purchases, titles, permissions, discoveries, permanent decisions, major project/festival decisions, and comparable facts whose loss would materially damage continuity.
+Do not reduce a supplied full work to a summary when exact text is the durable content.
 
-Do not reduce a supplied full song to a summary if the full text itself is the important memory. If a song persistence trigger fires, save it at that gameplay beat rather than waiting for many unrelated later turns.
+## 8. Bundled persistence
 
-## 5. Bundled persistence
+When persistence triggers, do not replay each chat line as a commit. Store a bundled checkpoint/continuity update containing only the durable effects needed to reconstruct the effective state.
 
-When a persistence trigger occurs, do not replay every ordinary chat line as a separate GitHub commit.
+For scene continuity, a durable flush may update `runtime/current_scene.json` plus one meaningful turn-delta/repair file instead of producing dozens of journal entries for dialogue.
 
-Persist one bundled checkpoint/event containing the durable effects necessary to reconstruct the effective state since the previous checkpoint. Important-memory indexing should likewise produce at most one bundled memory event for the triggering gameplay beat.
+## 9. Corrections versus retcons
 
-After successful persistence:
+Use `runtime/corrections/CORRECTION_TAXONOMY_v1.md`.
 
-- the new persisted state becomes the baseline;
-- the flushed local overlay is cleared;
-- subsequent ordinary play again proceeds locally without GitHub I/O.
+- player intentionally rewrites accepted canon -> `PLAYER_RETCON`;
+- assistant contradicted the active scene -> `ASSISTANT_CONTINUITY_ERROR`, discard invalid output;
+- compatible detail becomes more precise -> `CLARIFICATION`;
+- technical files disagree about current state -> `STATE_RECONCILIATION`.
 
-## 6. Failure behavior
+Do not turn narrator mistakes into fictional events or NPC memories.
+
+## 10. Failure behavior
 
 If a required GitHub persistence attempt fails:
+- never claim it was saved;
+- report failure briefly;
+- keep safe in-chat current state;
+- retry only at a real checkpoint/reconciliation opportunity.
 
-- never claim that it was saved;
-- report the persistence failure separately and briefly;
-- keep the current in-chat state available for continued play when it is safe to do so;
-- retry only at a real save/checkpoint opportunity, not on every subsequent ordinary line.
+## 11. Intentional tradeoff
 
-## 7. Intentional tradeoff
+Fast play trades per-line durability for responsiveness, but not for continuity. Ordinary turns may be unflushed, yet the currently active chat must still preserve exact scene inheritance.
 
-Fast play deliberately trades per-line durability for responsiveness. Ordinary unflushed turns may be lost if the active chat/session context itself is lost before a checkpoint.
+## 12. Priority
 
-That risk is preferable to making every normal conversation wait on GitHub. Important durable milestones and explicit saves remain the persistence boundary.
-
-## 8. Priority
-
-For an active synchronized game chat, this FAST PLAY protocol has priority over older instructions that require GitHub request/journal/receipt round-trips for every normal gameplay turn.
-
-GitHub remains the durable source for persisted checkpoints. It is not consulted as a live database for every player message.
+For active synchronized play, this protocol and `SCENE_CONTINUITY_PROTOCOL_v1` have priority over older instructions that treat stale session/checkpoint files as the current frame or require GitHub round-trips for every ordinary message.
