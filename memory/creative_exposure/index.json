@@ -11,6 +11,16 @@
         "rena": "heard before current T+162 performance; exact first time UNKNOWN",
         "dwargon_students": "current hall performance heard by the students actually present; exact full roster unresolved"
       }
+    },
+    "gvazimodo": {
+      "title": "Гвазимодо",
+      "type": "manuscript/novel-play source",
+      "canonical_content": "memory/gvazimodo.json",
+      "exposure_file": "memory/creative_exposure/gvazimodo.json",
+      "known_recipients_summary": {
+        "rena": "first confirmed reader in Blumund; exact reading time UNKNOWN",
+        "dwargon_students": "some/all students involved in pre-10:00 casting discussion read or discussed it; exact per-person readership unresolved"
+      }
     }
   }
 }
