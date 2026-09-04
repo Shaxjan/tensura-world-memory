@@ -1,0 +1,90 @@
+{
+  "format": "TENSURA_CURRENT_SCENE",
+  "schema_version": 1,
+  "status": "ACTIVE",
+  "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
+  "scene_id": "t162_dwargon_morning_after_sleep",
+  "purpose": "Single source of truth for the current physical scene. This file overrides stale scene details in older session/checkpoint files while it is marked ACTIVE.",
+  "time": {
+    "display": "T+162 ~08:00",
+    "day": 162,
+    "clock": "~08:00",
+    "precision": "approximate",
+    "continuity_rule": "ordinary dialogue changes time by seconds/minutes only; a day jump requires an explicit causal timeskip"
+  },
+  "location": {
+    "region": "Дваргон",
+    "place": "временное жилище / дом",
+    "certainty": "current_scene_confirmed"
+  },
+  "player": {
+    "name": "Арлекино",
+    "state": "awake",
+    "voluntary_actions": "USER_CONTROLLED_ONLY",
+    "last_in_world_utterances": [
+      "- ммда",
+      "-ничего ммда"
+    ],
+    "last_utterance_resolution": "NPC/world response after '-ничего ммда' has not yet been validly resolved because the next assistant scene was challenged OOC"
+  },
+  "money": {
+    "on_person": {
+      "balance_copper": 8973,
+      "display": "89s 73c",
+      "certainty": "active_overlay"
+    },
+    "personal_elsewhere": {
+      "balance_copper": null,
+      "display": "UNKNOWN",
+      "certainty": "unknown_exact_current_balance"
+    },
+    "family": {
+      "balance_copper": null,
+      "display": "~358g",
+      "certainty": "latest_user_corrected_approximate",
+      "rule": "Do not replace this with old 26g-era checkpoint values. Do not invent an exact copper value until recovered or explicitly established."
+    }
+  },
+  "present_entities": {
+    "rena": {
+      "name": "Рена",
+      "presence": "present",
+      "awake": true,
+      "sleeping": false,
+      "clothing_state": "dressed",
+      "position": "sitting nearby in the room, not lying in bed",
+      "current_private_emotion": "UNKNOWN",
+      "last_valid_observable": "noticed Arlequino wake and addressed him",
+      "continuity_lock": [
+        "may move/speak/act autonomously from this state",
+        "must not reset to sleeping/lying beside Arlequino without an explicit transition"
+      ]
+    }
+  },
+  "upcoming_known_commitments": [
+    {
+      "time": "T+162 ~10:00",
+      "event": "meeting with the 22 Dwargon students",
+      "status": "scheduled",
+      "player_attendance": "UNRESOLVED",
+      "note": "Students/world continue autonomously even if Arlequino does not attend."
+    }
+  ],
+  "scene_inventory_constraints": [
+    "No physical 'Маска Ктулху' or 'Зов Ктулху' manuscript is established in this Dwargon room.",
+    "The 'Гвазимодо' manuscript was given to one student the previous night; exact holder remains unresolved unless causally recovered."
+  ],
+  "invalidated_immediate_assistant_variants": [
+    {
+      "classification": "ASSISTANT_CONTINUITY_ERROR",
+      "invalid": "Rena is suddenly lying beside Arlequino and sleepy immediately after being established awake, dressed and sitting nearby.",
+      "effect": "discarded; not an in-world event and not a retcon"
+    },
+    {
+      "classification": "ASSISTANT_CONTINUITY_ERROR",
+      "invalid": "A one-day T+161/T+162 jump caused only by the line 'ммда'.",
+      "effect": "discarded; current anchor is T+162 ~08:00"
+    }
+  ],
+  "next_transition_rule": "next_scene = this_current_scene + exact_player_input + causally justified autonomous_world_delta. Unchanged fields are inherited verbatim."
+}
