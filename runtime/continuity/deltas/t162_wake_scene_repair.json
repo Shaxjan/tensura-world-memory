@@ -1,0 +1,45 @@
+{
+  "format": "TENSURA_TURN_DELTA",
+  "schema_version": 1,
+  "source_scene_id": "pre_repair_t162_dwargon_morning",
+  "result_scene_id": "t162_dwargon_morning_after_sleep",
+  "classification": "ASSISTANT_CONTINUITY_ERROR_REPAIR",
+  "player_input": {
+    "raw_text": "OOC correction: the assistant contradicted the just-established wake scene",
+    "is_ooc": true,
+    "contains_voluntary_player_action": false
+  },
+  "elapsed_minutes": 0,
+  "time_jump_reason": null,
+  "invalidates_assistant_output": "Variant that put Rena back in bed/sleepy and allowed an unexplained T+ day discontinuity after a one-word reply.",
+  "changes": {
+    "time": {
+      "result": "T+162 ~08:00",
+      "reason": "restore active T+162 morning anchor; no in-world day transition occurred"
+    },
+    "money_events": [],
+    "npc_transitions": [],
+    "world_events": [],
+    "commitments": [
+      {
+        "time": "T+162 ~10:00",
+        "event": "meeting with 22 Dwargon students remains scheduled"
+      }
+    ]
+  },
+  "restored_scene_facts": {
+    "rena": {
+      "awake": true,
+      "sleeping": false,
+      "clothing_state": "dressed",
+      "position": "sitting nearby in the room, not lying in bed"
+    },
+    "money": {
+      "on_person": "89s 73c",
+      "personal_elsewhere": "UNKNOWN",
+      "family": "~358g"
+    },
+    "unresolved_player_utterance": "-ничего ммда"
+  },
+  "effect": "Repair only. No fictional event, no NPC memory of the invalid assistant variant, no player action added."
+}
