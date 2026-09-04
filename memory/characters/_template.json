@@ -1,0 +1,34 @@
+{
+  "schema_version":1,
+  "key":"<stable_key>",
+  "name":"<name>",
+  "depth":0,
+  "status":"placeholder",
+  "identity":{
+    "role":"not_yet_authored",
+    "stable_facts":[]
+  },
+  "personality":{
+    "stable_traits":[],
+    "values":[],
+    "preferences":[],
+    "boundaries":[],
+    "speech_tendencies":[],
+    "not_yet_authored":[]
+  },
+  "goals":[],
+  "autonomy":{
+    "can_initiate":true,
+    "current_actions":"UNKNOWN"
+  },
+  "relationships":[],
+  "memories":[],
+  "knowledge_boundary":[],
+  "private_state":{
+    "current_mood":"UNKNOWN",
+    "private_thoughts":"UNKNOWN"
+  },
+  "development_log":[],
+  "evidence":[],
+  "do_not_invent":[]
+}
