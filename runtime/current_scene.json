@@ -3,14 +3,17 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_after_legion",
+  "scene_id": "t162_dwargon_student_hall_rena_delegation",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~09:58",
+    "display": "T+162 ~10:07",
     "day": 162,
-    "clock": "~09:58",
+    "clock": "~10:07",
     "precision": "approximate",
-    "recent_elapsed_event": "Arlequino performed the full song 'Легион' in the student hall; performance consumed real scene time"
+    "recent_elapsed_events": [
+      "Arlequino performed the full song 'Легион' before the scheduled meeting time.",
+      "The student meeting began around 10:00 and continued through conversation with Rena and the students."
+    ]
   },
   "location": {
     "region": "Дваргон",
@@ -21,27 +24,14 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_utterance": "- доброе утро .",
-    "recent_action": "performed the full song 'Легион'",
-    "creative_content_path": "song_archive/legion_user_exact.txt"
+    "last_in_world_utterance": "-милая , сделай пожалуйста кое что.... Найди нам организатора, для концерта и не только , узнай куда отправились люди эурозании, куда их эвакуировали и начни поиски дома.... Как я скучаю по нашему дому в эурозании 💋",
+    "format_note": "The parenthetical '(обнимаю мягче )' was OOC under the established syntax rule and is not an in-world action.",
+    "recent_creative_action": "performed full 'Легион'; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
-    "on_person": {
-      "balance_copper": 8973,
-      "display": "89s 73c",
-      "certainty": "active_overlay"
-    },
-    "personal_elsewhere": {
-      "balance_copper": null,
-      "display": "UNKNOWN",
-      "certainty": "unknown_exact_current_balance"
-    },
-    "family": {
-      "balance_copper": null,
-      "display": "~358g",
-      "certainty": "latest_user_corrected_approximate",
-      "rule": "Do not replace this with old precise stale balances."
-    }
+    "on_person": {"balance_copper": 8973, "display": "89s 73c", "certainty": "active_overlay"},
+    "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN", "certainty": "unknown_exact_current_balance"},
+    "family": {"balance_copper": null, "display": "~358g", "certainty": "latest_user_corrected_approximate", "rule": "Do not replace this with old precise stale balances."}
   },
   "present_entities": {
     "rena": {
@@ -49,29 +39,40 @@
       "presence": "present",
       "awake": true,
       "sleeping": false,
-      "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar over her clothing",
-      "position": "in the student hall near Arlequino / group",
+      "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
+      "position": "standing close to Arlequino in the student hall",
       "creative_knowledge": {
-        "legion": "REPEAT_EXPOSURE; player explicitly confirmed she had heard the song before this scene",
-        "exposure_record": "memory/creative_exposure/legion.json"
+        "legion": "REPEAT_EXPOSURE",
+        "gvazimodo": "FIRST_CONFIRMED_READER; read in Blumund, exact time unknown"
       },
-      "current_private_emotion": "UNKNOWN"
+      "current_private_emotion": "UNKNOWN",
+      "new_autonomous_assignments": [
+        "find organizer/coordinator for concerts and broader operations",
+        "investigate where Eurazania evacuees were sent through causal in-world channels",
+        "begin gathering new-home options without committing to purchase until location/budget are established"
+      ]
     },
     "students": {
       "group": "Dwargon students present for the meeting",
       "exact_present_count": null,
       "presence_note": "Earlier scene established almost all 22 were already in the hall; do not silently upgrade that to all 22.",
-      "named_confirmed_in_recent_scene": ["Фира", "Майра", "Брен"],
-      "activity_before_song": "discussing casting for 'Гвазимодо'",
-      "creative_exposure": "students actually present during the full performance heard 'Легион'; exact full listener roster unresolved"
+      "named_confirmed_in_recent_scene": ["Фира", "Майра", "Брен", "Сели"],
+      "activity": "meeting/casting discussion for 'Гвазимодо' is in progress"
     }
   },
   "meeting": {
     "scheduled_time": "T+162 10:00",
-    "status": "EARLY_ARRIVAL_AND_DISCUSSION_IN_PROGRESS",
+    "status": "IN_PROGRESS",
     "subject": "casting/discussion for 'Гвазимодо'",
-    "manuscript": "present in the hall during discussion; exact student custodian remains unresolved"
+    "manuscript": "present in the hall; exact student custodian remains unresolved"
   },
-  "creative_exposure_rule": "Before narrating recognition/novelty reactions, consult memory/creative_exposure/. Rena must not react to 'Легион' as if hearing it for the first time.",
-  "next_transition_rule": "next_scene = this_current_scene + exact_player_input + causally justified autonomous_world_delta. Unchanged fields are inherited verbatim."
+  "family_home_context": {
+    "known_shared_home": "18 Old Garden Street, Eurazania capital",
+    "arlequino_statement": "misses their home in Eurazania",
+    "current_condition_known_to_player": "UNKNOWN",
+    "rule": "Do not reveal hidden world-state about the home/capital until causally learned."
+  },
+  "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
+  "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
+  "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Unchanged fields are inherited verbatim."
 }
