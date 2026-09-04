@@ -1,0 +1,15 @@
+{
+  "schema_version":1,
+  "key":"carrion",
+  "name":"Карион",
+  "depth":3,
+  "status":"established_recurring",
+  "role":"ruler of Eurazania",
+  "established_relationship":"Arlequino has had personal audiences with Carrion and obtained approval for the festival/tournament.",
+  "commitments":["Festival of Eurazania: Week of Strength approved","tournament approved","winner receives official right to challenge Carrion and Carrion must accept","challenge bout is separate, real, not staged and not an execution","Arlequino intends to perform Heroes directly before the bout"],
+  "personality":{"stable_traits":["politically responsible","accepts formal challenge under established rules"],"remaining":"not_yet_authored"},
+  "knowledge_boundary":"Carrion only knows information delivered to him through in-world channels or direct interaction.",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["private motives beyond established actions","unobserved emotions","future decisions"]
+}
