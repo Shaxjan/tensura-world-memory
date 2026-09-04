@@ -1,6 +1,6 @@
 # Tensura World Memory — Memory Map v1
 
-This repository contains four logically different layers. Keep them separate.
+This repository contains five logically different layers. Keep them separate.
 
 ## A. Current scene — what is physically true in this exact frame
 
@@ -42,7 +42,19 @@ These preserve history and persisted baselines. They do not license resetting a 
 
 Character profiles accumulate personality, values, habits, goals, boundaries and relationship tendencies from actual story exposure. They never define a character's current physical position or secretly invent current actions.
 
-## D. Historical/audit/correction memory — how we got here
+## D. Creative exposure memory — who has actually heard/read/watched what
+
+`memory/creative_exposure/CREATIVE_EXPOSURE_PROTOCOL_v1.md` defines exposure tracking.
+
+`memory/creative_exposure/index.json` is the quick registry.
+
+`memory/creative_exposure/<work_id>.json` stores chronological exposure events for one creative work.
+
+Use this layer before narrating novelty/recognition reactions to songs, books, scripts, stories, performances or other creative material. A repeat exposure must not be narrated as a first discovery. Unknown first-exposure time stays UNKNOWN instead of being invented.
+
+Audience precision matters: named confirmed listeners/readers are separate from a group whose exact membership is unresolved.
+
+## E. Historical/audit/correction memory — how we got here
 
 `memory/` category files, `live_v*/`, `world_save.json`, old checkpoints and Git history preserve evidence and old states.
 
@@ -76,6 +88,15 @@ For unresolved values, preserve `UNKNOWN` or an explicit approximation. Never re
 
 Frequent meaningful exposure increases character depth. Sparse characters stay sparse rather than receiving invented biography.
 
+## Source priority for creative familiarity
+
+1. newest direct player correction about who has heard/read/watched a work;
+2. matching `memory/creative_exposure/<work_id>.json` event;
+3. causally valid runtime scene/performance evidence;
+4. older historical mentions.
+
+Do not infer full-text recall, meaning, preference or authorship merely from exposure.
+
 ## Scene rules
 
 ### Player agency
@@ -86,6 +107,9 @@ NPCs are autonomous. They can initiate movement, conversation, work, refusal, pl
 
 ### Character growth
 After meaningful recurring scenes, persist only genuinely revealed stable traits, preferences, boundaries, goals, memories or changed relationships.
+
+### Creative familiarity
+Before reacting to a song/book/play/story, check whether the NPC has encountered it before. Familiar material may still affect them, but novelty is not reset between scenes.
 
 ### Group realism
 A group is not one voice. Individuals may speak, remain silent, disagree, leave, hesitate, or do something unrelated.
