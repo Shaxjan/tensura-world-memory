@@ -3,29 +3,27 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_morning_after_sleep",
-  "purpose": "Single source of truth for the current physical scene. This file overrides stale scene details in older session/checkpoint files while it is marked ACTIVE.",
+  "scene_id": "t162_dwargon_student_hall_after_legion",
+  "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~08:00",
+    "display": "T+162 ~09:58",
     "day": 162,
-    "clock": "~08:00",
+    "clock": "~09:58",
     "precision": "approximate",
-    "continuity_rule": "ordinary dialogue changes time by seconds/minutes only; a day jump requires an explicit causal timeskip"
+    "recent_elapsed_event": "Arlequino performed the full song 'Легион' in the student hall; performance consumed real scene time"
   },
   "location": {
     "region": "Дваргон",
-    "place": "временное жилище / дом",
+    "place": "зал для занятий / meeting hall with students",
     "certainty": "current_scene_confirmed"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_utterances": [
-      "- ммда",
-      "-ничего ммда"
-    ],
-    "last_utterance_resolution": "NPC/world response after '-ничего ммда' has not yet been validly resolved because the next assistant scene was challenged OOC"
+    "last_in_world_utterance": "- доброе утро .",
+    "recent_action": "performed the full song 'Легион'",
+    "creative_content_path": "song_archive/legion_user_exact.txt"
   },
   "money": {
     "on_person": {
@@ -42,7 +40,7 @@
       "balance_copper": null,
       "display": "~358g",
       "certainty": "latest_user_corrected_approximate",
-      "rule": "Do not replace this with old 26g-era checkpoint values. Do not invent an exact copper value until recovered or explicitly established."
+      "rule": "Do not replace this with old precise stale balances."
     }
   },
   "present_entities": {
@@ -51,40 +49,29 @@
       "presence": "present",
       "awake": true,
       "sleeping": false,
-      "clothing_state": "dressed",
-      "position": "sitting nearby in the room, not lying in bed",
-      "current_private_emotion": "UNKNOWN",
-      "last_valid_observable": "noticed Arlequino wake and addressed him",
-      "continuity_lock": [
-        "may move/speak/act autonomously from this state",
-        "must not reset to sleeping/lying beside Arlequino without an explicit transition"
-      ]
+      "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar over her clothing",
+      "position": "in the student hall near Arlequino / group",
+      "creative_knowledge": {
+        "legion": "REPEAT_EXPOSURE; player explicitly confirmed she had heard the song before this scene",
+        "exposure_record": "memory/creative_exposure/legion.json"
+      },
+      "current_private_emotion": "UNKNOWN"
+    },
+    "students": {
+      "group": "Dwargon students present for the meeting",
+      "exact_present_count": null,
+      "presence_note": "Earlier scene established almost all 22 were already in the hall; do not silently upgrade that to all 22.",
+      "named_confirmed_in_recent_scene": ["Фира", "Майра", "Брен"],
+      "activity_before_song": "discussing casting for 'Гвазимодо'",
+      "creative_exposure": "students actually present during the full performance heard 'Легион'; exact full listener roster unresolved"
     }
   },
-  "upcoming_known_commitments": [
-    {
-      "time": "T+162 ~10:00",
-      "event": "meeting with the 22 Dwargon students",
-      "status": "scheduled",
-      "player_attendance": "UNRESOLVED",
-      "note": "Students/world continue autonomously even if Arlequino does not attend."
-    }
-  ],
-  "scene_inventory_constraints": [
-    "No physical 'Маска Ктулху' or 'Зов Ктулху' manuscript is established in this Dwargon room.",
-    "The 'Гвазимодо' manuscript was given to one student the previous night; exact holder remains unresolved unless causally recovered."
-  ],
-  "invalidated_immediate_assistant_variants": [
-    {
-      "classification": "ASSISTANT_CONTINUITY_ERROR",
-      "invalid": "Rena is suddenly lying beside Arlequino and sleepy immediately after being established awake, dressed and sitting nearby.",
-      "effect": "discarded; not an in-world event and not a retcon"
-    },
-    {
-      "classification": "ASSISTANT_CONTINUITY_ERROR",
-      "invalid": "A one-day T+161/T+162 jump caused only by the line 'ммда'.",
-      "effect": "discarded; current anchor is T+162 ~08:00"
-    }
-  ],
+  "meeting": {
+    "scheduled_time": "T+162 10:00",
+    "status": "EARLY_ARRIVAL_AND_DISCUSSION_IN_PROGRESS",
+    "subject": "casting/discussion for 'Гвазимодо'",
+    "manuscript": "present in the hall during discussion; exact student custodian remains unresolved"
+  },
+  "creative_exposure_rule": "Before narrating recognition/novelty reactions, consult memory/creative_exposure/. Rena must not react to 'Легион' as if hearing it for the first time.",
   "next_transition_rule": "next_scene = this_current_scene + exact_player_input + causally justified autonomous_world_delta. Unchanged fields are inherited verbatim."
 }
