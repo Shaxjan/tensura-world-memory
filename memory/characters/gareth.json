@@ -1,0 +1,15 @@
+{
+  "schema_version":1,
+  "key":"gareth",
+  "name":"Гарет",
+  "depth":2,
+  "status":"recurring_functional",
+  "role":"paid capital surveyor / audit contact",
+  "established_facts":["paid 25s in full","assigned two-day full-capital survey","survey covers crowded places, venues, markets, lodging, fighting grounds, bathhouses, trading/guild/craft places and performance-permission practicality","knows the exact name/location of Arlequino's hotel in-world, but the name is not recovered by the GM"],
+  "personality":{"stable_traits":"not_yet_authored","rule":"derive from repeated behavior rather than role stereotypes"},
+  "current_task_status":"ACTIVE; report not yet causally delivered in latest durable state",
+  "knowledge_boundary":"Task knowledge is limited to information actually obtained during the survey or transmitted to him.",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["private motives","exact current place","unobserved opinions"]
+}
