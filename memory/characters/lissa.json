@@ -1,0 +1,16 @@
+{
+  "schema_version":1,
+  "key":"lissa",
+  "name":"Лисса",
+  "depth":3,
+  "status":"recurring",
+  "role":"autonomous publishing-project contact in Blumund",
+  "established_facts":["4g project fund is separate from Arlequino's personal cash","urgent letter to Lissa was dispatched; delivery status UNKNOWN"],
+  "personality":{"stable_traits":"not_yet_authored","rule":"derive from repeated scenes and choices only"},
+  "autonomy":"independent contact/project actor; no obedience assumption",
+  "knowledge_boundary":"Only learns facts through direct communication or other causal transmission.",
+  "current_location":"UNKNOWN",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["private motives","current activity","opinions not established in-world"]
+}
