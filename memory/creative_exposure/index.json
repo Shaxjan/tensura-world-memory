@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "protocol": "memory/creative_exposure/CREATIVE_EXPOSURE_PROTOCOL_v1.md",
+  "works": {
+    "legion": {
+      "title": "Легион",
+      "type": "song",
+      "canonical_content": "song_archive/legion_user_exact.txt",
+      "exposure_file": "memory/creative_exposure/legion.json",
+      "known_recipients_summary": {
+        "rena": "heard before current T+162 performance; exact first time UNKNOWN",
+        "dwargon_students": "current hall performance heard by the students actually present; exact full roster unresolved"
+      }
+    }
+  }
+}
