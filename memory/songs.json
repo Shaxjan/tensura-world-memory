@@ -1,5 +1,5 @@
 {
-  "audit_version": 2,
+  "audit_version": 3,
   "policy": {
     "FULL_CANONICAL": "Entire checked text exists in one UTF-8 file under song_archive/.",
     "FULL_LEGACY_SHARDS": "Entire exact text is recoverable in checked historical shards, but no physically verified one-file canonical copy exists.",
@@ -16,7 +16,8 @@
     {"title":"Мои враги","source_title":"Ichimdagi dushmanlarim","status":"FULL_CANONICAL","path":"song_archive/moji_vragi.txt","type":"full performed literal Russian text"},
     {"title":"Принцесса","status":"FULL_CANONICAL","path":"song_archive/princessa.txt","type":"user adaptation","source":"LIVE v82 verbatim retcon"},
     {"title":"Музыка для секса","status":"FULL_CANONICAL","path":"song_archive/muzyka_dlya_seksa_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve literal wording, punctuation, emoji and the user-supplied final 'Эта музыка для екса,' line exactly; do not autocorrect."},
-    {"title":"Конфета","status":"FULL_CANONICAL","path":"song_archive/konfeta_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve exact wording, capitalization and punctuation, including 'Десятки сотни , комплименты.', 'Но ты — мая зависимость, сладкая таблетка', and all repeated final lines; do not autocorrect."}
+    {"title":"Конфета","status":"FULL_CANONICAL","path":"song_archive/konfeta_user_exact.txt","type":"exact user-supplied text","note":"Physically fetched and checked after save. Preserve exact wording, capitalization and punctuation, including 'Десятки сотни , комплименты.', 'Но ты — мая зависимость, сладкая таблетка', and all repeated final lines; do not autocorrect."},
+    {"title":"Легион","status":"FULL_CANONICAL","path":"song_archive/legion_user_exact.txt","type":"exact user-supplied text","note":"Exact full text supplied in current chat at T+162 after a prior TITLE_ONLY record. Preserve wording and punctuation exactly; do not reconstruct from web or memory."}
   ],
   "full_legacy_shards": [
     {"title":"Космос","status":"FULL_LEGACY_SHARDS","paths":"live_v84/kosmos/*","line_count":74,"note":"All exact text survives in numbered filename shards. Audit attempts to create a single new file were physically truncated, so the truncated top-level copies were deleted and are not canonical."},
@@ -37,7 +38,6 @@
     {"title":"Самоэлегическая песня Арлекино при выезде из Блюмунда","status":"TEXT_LOST","scene":"SAVE v12, T+117 ~17:49"},
     {"title":"Принц Али","status":"TITLE_ONLY"},
     {"title":"Прыгну со скалы","status":"TITLE_ONLY"},
-    {"title":"Легион","status":"TITLE_ONLY"},
     {"title":"Темная ночь","status":"TITLE_ONLY"},
     {"title":"Штиль","status":"TITLE_ONLY"},
     {"title":"Танец лучника / Танец лучников","status":"TITLE_ONLY"},
@@ -68,6 +68,7 @@
     "Герои",
     "Головы с плеч",
     "От копья",
-    "Заклинатель и осёл"
+    "Заклинатель и осёл",
+    "Легион — exact full text recovered in current chat at T+162"
   ]
 }
