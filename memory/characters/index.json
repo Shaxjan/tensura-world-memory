@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "system": "CHARACTER_SYSTEM_v1",
+  "depth_rule": "character depth increases only from actual story exposure/evidence",
+  "characters": [
+    {"key":"rena","name":"Рена","depth":5,"status":"established_major","profile":"memory/characters/rena.json"},
+    {"key":"borga","name":"Борга","depth":4,"status":"established_recurring","profile":"memory/characters/borga.json"},
+    {"key":"meira","name":"Мэйра","depth":4,"status":"established_recurring","profile":"memory/characters/meira.json"},
+    {"key":"carrion","name":"Карион","depth":3,"status":"established_recurring","profile":"memory/characters/carrion.json"},
+    {"key":"fira","name":"Фира","depth":3,"status":"established","profile":"memory/characters/fira.json"},
+    {"key":"tia","name":"Тиа","depth":3,"status":"established","profile":"memory/characters/tia.json"},
+    {"key":"gareth","name":"Гарет","depth":2,"status":"recurring_functional","profile":"memory/characters/gareth.json"},
+    {"key":"vern","name":"Верн","depth":3,"status":"recurring","profile":"memory/characters/vern.json"},
+    {"key":"lissa","name":"Лисса","depth":3,"status":"recurring","profile":"memory/characters/lissa.json"},
+    {"key":"oren","name":"Орен","depth":3,"status":"recurring","profile":"memory/characters/oren.json"}
+  ],
+  "unnamed_current_groups": [
+    {"key":"dwargon_students","count":22,"name_state":"names_not_recovered","profile":"memory/characters/students/README.md"}
+  ],
+  "rules": {
+    "never_invent_unrecovered_names": true,
+    "never_invent_unproven_traits": true,
+    "relationship_is_not_obedience": true,
+    "npc_agency_is_independent": true,
+    "private_thoughts_are_hidden": true,
+    "unknown_stays_unknown": true
+  }
+}
