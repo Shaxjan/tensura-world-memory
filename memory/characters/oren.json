@@ -1,0 +1,16 @@
+{
+  "schema_version":1,
+  "key":"oren",
+  "name":"Орен",
+  "depth":3,
+  "status":"recurring",
+  "role":"autonomous instrumental / production-project contact in Blumund",
+  "established_facts":["4g project fund is separate from personal cash","current durable memory treats Oren as an independent project/contact","Oren is NOT part of Vern's Dwargon assignment"],
+  "personality":{"stable_traits":"not_yet_authored","rule":"derive from repeated scenes and choices only"},
+  "autonomy":"independent contact/project actor; do not make him answer to Vern or Arlequino without causal reason",
+  "knowledge_boundary":"Only learns facts through direct communication or explicit causal transmission.",
+  "current_location":"UNKNOWN",
+  "private_state":{"mood":"UNKNOWN","thoughts":"UNKNOWN"},
+  "development_log":[],
+  "do_not_invent":["private motives","current activity","unobserved opinions"]
+}
