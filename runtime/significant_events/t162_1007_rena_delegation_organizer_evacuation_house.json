@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "event_id": "t162_1007_rena_delegation_organizer_evacuation_house",
+  "time": "T+162 ~10:07",
+  "location": "Дваргон, зал для занятий",
+  "source": "direct player speech in current scene",
+  "participants": ["arlequino", "rena"],
+  "player_speech": "-милая , сделай пожалуйста кое что.... Найди нам организатора, для концерта и не только , узнай куда отправились люди эурозании, куда их эвакуировали и начни поиски дома.... Как я скучаю по нашему дому в эурозании 💋",
+  "delegations": [
+    {
+      "assignee": "rena",
+      "task": "find an organizer/coordinator for concerts and broader creative/operational work",
+      "status": "ASSIGNED",
+      "scope_note": "not limited to one concert; exact authority/compensation remains unresolved"
+    },
+    {
+      "assignee": "rena",
+      "task": "investigate where the people of Eurazania were evacuated and where they are currently located",
+      "status": "ASSIGNED",
+      "knowledge_rule": "results must come through causal in-world channels; hidden world-state is not automatic player knowledge"
+    },
+    {
+      "assignee": "rena",
+      "task": "begin searching for a new home",
+      "status": "ASSIGNED",
+      "constraints": "exact city, budget and final purchase decision are not yet established; gather options, do not invent a purchase"
+    }
+  ],
+  "durable_context": {
+    "former_shared_home": "18 Old Garden Street, Eurazania capital",
+    "player_statement": "Arlequino says he misses their home in Eurazania",
+    "current_knowledge_of_home_condition": "UNKNOWN_TO_PLAYER_UNLESS_CAUSALLY_LEARNED"
+  },
+  "format_note": "The parenthetical text '(обнимаю мягче )' in the player's message is OOC under the established syntax rule and is not stored as an in-world action."
+}
