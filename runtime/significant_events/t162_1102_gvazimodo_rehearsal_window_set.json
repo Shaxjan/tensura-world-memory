@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "event_id": "t162_1102_gvazimodo_rehearsal_window_set",
+  "time": "T+162 ~11:02",
+  "location": "Dwargon student meeting hall",
+  "actor": "Arlequino",
+  "event_type": "PLAYER_DIRECTIVE_CREATIVE_PROJECT",
+  "in_world_statement": "Это урок вам, репетируйте сколько влезет. Сегодня или завтра уточню дату концерта, у вас не более недели, может меньше.",
+  "effects": {
+    "casting": "ALREADY_COMPLETE",
+    "rehearsal_authority": "students may self-organize rehearsal within realistic personal schedules and material limits",
+    "concert_date": "NOT_YET_FIXED",
+    "date_clarification_window": "Arlequino said he expects to clarify the concert date today or tomorrow",
+    "maximum_preparation_window": "no more than about one week from T+162 ~11:02, possibly less",
+    "deadline_note": "This is a preparation ceiling, not a guarantee that all students are continuously available or that every production task can be completed instantly."
+  },
+  "syntax_note": "The parenthetical sexual aside in the same player message is OOC under the established parenthesis rule and is not an in-world action or utterance unless the player later explicitly re-establishes it in-world.",
+  "continuity_rule": "Do not reopen casting. Rehearsal, blocking, props, costumes, music, scheduling and staging now advance under the compressed preparation window and normal realism constraints."
+}
