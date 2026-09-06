@@ -3,22 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1223_rena_accepts_possessive_reassurance_naturally",
+  "scene_id": "t162_dwargon_hotel_room_1224_arlequino_returns_with_guitar",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:23",
+    "display": "T+162 ~12:24",
     "day": 162,
-    "clock": "~12:23",
+    "clock": "~12:24",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "Arlequino and Rena remain on the bed after a long emotionally difficult conversation about love and closeness.",
-      "Arlequino earlier told Rena she could leave now before they have children, then clarified he does not want her to leave and only wondered whether she herself might want to. Rena said she does not want to leave.",
-      "Arlequino now says: 'Если не сейчас, то никогда. Чёрта с два я тебя потом отпущу.'",
-      "A prior assistant response that turned this into a modern autonomy/boundary lecture was rejected and is discarded as ASSISTANT_CONTINUITY_ERROR.",
-      "Rena now takes the line in the immediate intimate context as intense possessive reassurance rather than as a literal imprisonment threat. She reacts personally, with a brief return of warmth and dry humor, and says she is not planning to go anywhere.",
-      "No meaningful time passes; both remain on the bed. No dressing, cleanup, door movement or departure has begun."
+      "Arlequino and Rena have just come through a long emotionally difficult conversation about closeness and whether she might ever leave; both have made clear they do not want separation now.",
+      "Rena answered Arlequino's possessive reassurance in a warmer, personal way: she is not planning to go anywhere.",
+      "Arlequino now gets the guitar, returns to Rena, embraces her, keeps the guitar with him and asks: 'хочешь послушать 🥲'.",
+      "Only about one minute passes. No dressing, cleanup, door movement or departure has begun."
     ]
   },
   "location": {
@@ -33,10 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remained on the bed beside Rena.",
-    "last_in_world_utterance_raw": "-если не сейчас то никогда\nЧёртов сдва я тебя потом отпущу.",
-    "last_in_world_utterance_interpretation": "Likely: 'Если не сейчас, то никогда. Чёрта с два я тебя потом отпущу.'",
-    "current_declared_emotional_state": "possessive, vulnerable and intense; exact private intent beyond the spoken words is not inferred",
+    "last_in_world_action": "Got the guitar, returned to Rena, embraced her, and held the guitar ready to play.",
+    "last_in_world_utterance": "- хочешь послушать 🥲",
+    "current_declared_emotional_state": "still vulnerable/sad but seeking closeness through music",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -49,23 +46,17 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still on the bed beside Arlequino, close and focused on him",
+      "position": "still on/at the bed beside Arlequino as he returns with the guitar and embraces her",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains independent and strong-willed but must respond in her established personal voice rather than modern ideological or therapy language. In this context she does not interpret Arlequino's possessive phrase as a literal confinement threat; she hears the emotional meaning and reacts to that.",
-      "observable_state": "Awake; seriousness easing slightly after Arlequino makes clear he does not want to lose her.",
+      "autonomy_state": "Rena remains independent and strong-willed but responds in her established personal voice. The immediate conflict has softened somewhat; she may accept the embrace and choose whether she wants to listen to him play.",
+      "observable_state": "Awake, close, emotionally softened somewhat after the prior exchange.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
-      "latest_response_content": [
-        "Rena's mouth twitches into a small smile after his 'чёрта с два' line.",
-        "She says: 'Вот теперь больше похоже на тебя.'",
-        "She adds with dry warmth: 'Сначала \"можешь уйти\", потом \"чёрта с два отпущу\". Определись уже, муж.'",
-        "Then quieter: 'Не собираюсь я никуда, дурак.'"
-      ],
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the hotel rest and unresolved relationship conversation"
+      "assignment_results": "NONE_YET; work remains deferred during the hotel rest and current private moment"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -76,7 +67,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Both have now explicitly indicated they do not want separation in this moment, despite the unresolved difference in how they experience closeness.",
+    "current_issue": "Immediate separation fear has eased; deeper differences in felt closeness remain unresolved, and Arlequino is now turning toward music rather than further argument.",
     "children_status": "Arlequino earlier states 'пока у нас нет детей'; no pregnancy outcome has been established from earlier intimacy."
   },
   "gvazimodo_cast": {
@@ -97,5 +88,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:23 with both still on the bed after Rena's warmer, natural response. Arlequino remains user-controlled. Do not skip to dressing or departure."
+  "next_transition_rule": "Continue from ~12:24 with Arlequino holding the guitar beside Rena after asking whether she wants to listen. Rena may answer and react locally. Do not advance through the performance until the player supplies/initiates it."
 }
