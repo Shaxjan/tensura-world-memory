@@ -3,20 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1158_replay_before_rena_gets_up",
+  "scene_id": "t162_dwargon_hotel_room_1159_rena_accepts_short_rest",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:58",
+    "display": "T+162 ~11:59",
     "day": 162,
-    "clock": "~11:58",
+    "clock": "~11:59",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "The second round has just ended around ~11:58. Both remain awake in the room in immediate aftermath.",
-      "A prior assistant branch automatically advanced Rena through getting up, dressing, refusing further delay, unlocking the door and leaving, which removed normal player intervention windows.",
-      "The user explicitly requested replay. That over-advanced post-11:58 branch is superseded as ASSISTANT_CONTINUITY_ERROR, not a player retcon.",
-      "Current frame is restored to before Rena has stood up, dressed, cleaned herself up, unlocked the door, or left."
+      "The scene was replayed to ~11:58 before Rena had stood up, dressed, cleaned up, unlocked the door, or left, because the prior assistant branch over-advanced and erased normal player intervention windows.",
+      "Arlequino now embraces Rena and tells her to rest, adding that they can go do the errands together afterward.",
+      "Rena does not need to choose between immediate departure and indefinite postponement; a short rest followed by jointly resuming errands is now the active conversational option."
     ]
   },
   "location": {
@@ -31,9 +30,8 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Completed the second prolonged consensual private intimacy round with Rena. Exact sexual mechanics remain offscreen.",
-    "last_in_world_utterance": "None at the restored branch point.",
-    "replay_note": "Player inputs made only in response to the invalid over-advanced post-11:58 branch are superseded and may be chosen differently.",
+    "last_in_world_action": "Embraced Rena while both remained at the bed in the immediate post-intimacy aftermath.",
+    "last_in_world_utterance": "- ладно милая . отдыхай. Потом сходим вместе.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -46,21 +44,21 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still on/at the bed with Arlequino in immediate post-intimacy aftermath; she has not yet stood up in the replayed branch",
-      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing in the replayed branch",
-      "autonomy_state": "Rena remains an autonomous adult. Her prior intention to resume the three errands later today remains causal pressure, but her next concrete action is unresolved and must be simulated from this restored moment.",
+      "position": "still on/at the bed with Arlequino, being held after the second intimacy round",
+      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
+      "autonomy_state": "Rena remains autonomous. Arlequino has stopped pressuring her to remain for more intimacy and instead offers rest plus accompanying her afterward. She may accept a short rest while still preserving her intention to resume the three errands later today.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the hotel stop"
+      "assignment_results": "NONE_YET; work remains deferred during the short hotel rest"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren has had additional time to collect availability and structure the practical schedule without Arlequino physically present"
+      "activity": "self-organizing rehearsal and production work; Bren continues collecting availability and structuring the practical schedule without Arlequino physically present"
     }
   },
   "gvazimodo_cast": {
@@ -79,7 +77,7 @@
     "current_dwargon_home_base": "hotel; exact name/address unresolved",
     "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
-  "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. If Rena begins to get up, dress, clean up, reach the door, or leave, expose the first meaningful step and allow Arlequino's player a chance to respond before automatically completing later steps, unless time is explicitly advanced or the player does not intervene.",
+  "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1158_replay_restore_player_intervention_window.md",
-  "next_transition_rule": "Continue from immediate post-second-round aftermath at ~11:58. Arlequino remains user-controlled; Rena remains autonomous."
+  "next_transition_rule": "Continue from ~11:59 with Arlequino holding Rena and offering her a short rest before they go together. Arlequino remains user-controlled; Rena remains autonomous."
 }
