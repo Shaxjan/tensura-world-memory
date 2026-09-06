@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1240_rena_refuses_one_minute_bargain",
+  "scene_id": "t162_dwargon_hotel_room_1241_rena_stops_genital_touching_after_refusal",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:40",
+    "display": "T+162 ~12:41",
     "day": 162,
-    "clock": "~12:40",
+    "clock": "~12:41",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
       "Rena explicitly said she wants a future child with Arlequino, but not to begin trying immediately this exact moment.",
       "Rena remains visibly aroused, strongly attracted and genuinely tempted, but has repeatedly refused further sexual activity before the errands.",
-      "Arlequino bargains again that oral sex would take only about a minute and then they could leave: 'это же очень быстро милая ... всего минута ... Можем идти'.",
-      "Rena remains physically affected and playful, but does not agree. She treats the 'only one minute' claim as bargaining rather than a new reason to reverse her answer.",
-      "No meaningful time passes. Both remain on/at the bed; Rena has not begun dressing, unlocking the door, or leaving yet."
+      "Arlequino now places a hand on Rena's genitals and begins to stroke while urging her to relax and enjoy their love instead of thinking about errands.",
+      "Because Rena's refusal of further sexual activity is current and explicit, she immediately stops this touching herself before it continues. Her existing arousal and attraction remain real, but they are not treated as agreement.",
+      "No meaningful time passes. Both remain on/at the bed; Rena does not begin dressing, unlock the door, or leave in this beat."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remains close beside Rena after his brief oral-sex proposal was refused.",
-    "last_in_world_utterance": "-это же очень быстро милая 🙂, всего минута и аххххх🫦. Можем идти🫦",
-    "current_declared_emotional_state": "intensely attracted, playful and bargaining that the requested sexual act would be very brief",
+    "last_in_world_action": "Placed a hand on Rena's genitals and began to stroke while remaining close beside her.",
+    "last_in_world_utterance": "- милая, зачем нас себя мучить 🥺, расслабься. Насладись моментом, насладись нашей любовью, собой, мной нашим счастьем. Дела никуда не уйдут и не закончатся.",
+    "current_declared_emotional_state": "intensely attracted and trying once more to persuade Rena to abandon the errands and continue sexual intimacy",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -47,10 +47,10 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still beside Arlequino on/at the bed, physically close and visibly aroused",
+      "position": "still beside Arlequino on/at the bed; she has physically removed/stopped his hand from sexual touching and remains nearby",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her current refusal of further sexual activity remains valid. She answers Arlequino's one-minute bargain in her established teasing/personal voice, without clinical language, and does not agree in this beat.",
-      "observable_state": "Still breathing somewhat harder and visibly affected by Arlequino; amused by the bargaining but deliberately holding to her decision for now.",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her current refusal of further sexual activity remains explicit. When Arlequino begins genital touching after that refusal, she immediately stops the touching herself. She can remain emotionally close and visibly aroused without allowing the sexual act to continue.",
+      "observable_state": "Still visibly affected and breathing somewhat harder from the prior closeness, but now serious and unmistakable about stopping this specific sexual touching.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,7 +70,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena is genuinely aroused and tempted but still refuses further sexual activity before the errands. Arlequino continues playful bargaining that the requested act would take only a minute; Rena does not agree in this beat.",
+    "current_issue": "Rena is genuinely aroused and attracted but has repeatedly refused further sexual activity before the errands. Arlequino begins genital touching anyway; Rena stops that touching immediately. Emotional closeness remains possible, but further sexual contact is not currently agreed.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -91,5 +91,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1238_rena_arousal_flattening_replay.md",
-  "next_transition_rule": "Continue from ~12:40 with both still on/at the bed. Rena remains visibly aroused and close but has not agreed to further sexual activity. Keep the next beat local; do not narrate dressing or departure without an intervening player-response window."
+  "next_transition_rule": "Continue from ~12:41 with both still on/at the bed. Rena has just stopped Arlequino's genital touching. Preserve her attraction and arousal without treating them as consent. Keep the next beat local; do not narrate dressing or departure without an intervening player-response window."
 }
