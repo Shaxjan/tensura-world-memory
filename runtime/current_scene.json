@@ -3,19 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1103_rehearsal_window_set_rena_departs",
+  "scene_id": "t162_dwargon_student_hall_1102_after_rehearsal_directive_and_restored_whisper",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:03",
+    "display": "T+162 ~11:02",
     "day": 162,
-    "clock": "~11:03",
+    "clock": "~11:02",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
       "Bren interrupted Arlequino and Rena to obtain a practical rehearsal decision.",
       "Arlequino told the students to rehearse as much as realistically possible and said he expects to clarify the concert date today or tomorrow.",
       "Arlequino set a maximum preparation window of about one week from now, possibly less.",
-      "Because the student production can now self-organize, Rena no longer needs to remain in the hall for that purpose and resumes her own delegated work."
+      "Immediately after the public rehearsal directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena.",
+      "A previous assistant turn incorrectly treated that whispered segment as OOC and narrated Rena leaving before reacting; that departure is rolled back as an assistant continuity error."
     ]
   },
   "location": {
@@ -27,9 +28,10 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Addressed the students after Bren's interruption.",
-    "last_in_world_utterance": "- это урок вам , репетируйте сколько влезет. Сегодня или завтра уточню дату концерта , у вас не более недели , может меньше",
-    "syntax_note": "The parenthetical sexual aside in the same player message is OOC under the established parenthesis rule and is not an in-world action or utterance unless later explicitly re-established in-world.",
+    "last_in_world_action": "After addressing the students, leaned close to Rena and whispered a sexually explicit proposition.",
+    "last_in_world_utterance_public": "- это урок вам , репетируйте сколько влезет. Сегодня или завтра уточню дату концерта , у вас не более недели , может меньше",
+    "last_in_world_utterance_private_to_rena": "sexually explicit proposition; exact wording supplied by player in current chat, not repeated here",
+    "syntax_correction": "The parenthetical segment in that specific player message was explicitly clarified by the player as in-world action/utterance, overriding the ordinary parenthesis-OOC convention for that segment.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -40,18 +42,20 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "departing_hall_for_own_assignments",
+      "presence": "present",
       "awake": true,
       "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "leaving the student hall and heading toward her first practical contact route in Dwargon",
+      "position": "close to Arlequino in the student hall immediately after his whispered proposition",
+      "observable_boundary": "Earlier in the same scene she allowed affectionate kissing but stopped explicit sexual escalation in front of the students and said privacy would be required.",
       "current_private_emotion": "UNKNOWN",
+      "next_response_rule": "Her response to the restored whisper must be autonomous and consistent with her established boundaries, personality, priorities and the public setting.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work is only now beginning causally"
+      "assignment_results": "NONE_YET; no valid independent work window has begun at this corrected frame"
     },
     "students": {
       "group": "Dwargon students in the current hall scene",
@@ -63,7 +67,7 @@
       "name": "Bren",
       "presence": "present",
       "current_action": "turning Arlequino's broad directive into a practical rehearsal-availability sheet and production schedule",
-      "knowledge_boundary": "He knows the cast, the compressed deadline, and what has been said in the hall; he does not know the final concert date because it has not been set."
+      "knowledge_boundary": "He knows the cast, the compressed deadline, and what has been said publicly in the hall; he does not automatically hear the private whisper to Rena."
     }
   },
   "gvazimodo_cast": {
@@ -89,6 +93,7 @@
   },
   "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
   "latest_project_directive_event": "runtime/significant_events/t162_1102_gvazimodo_rehearsal_window_set.json",
+  "continuity_correction": "runtime/corrections/t162_1102_omitted_whisper_and_rena_departure_rollback.md",
   "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Arlequino remains user-controlled; NPCs/world continue independently."
 }
