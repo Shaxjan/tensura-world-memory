@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1113_private_intimacy_fade",
+  "scene_id": "t162_dwargon_hotel_room_1113_private_intimacy_continues",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~11:13",
@@ -13,10 +13,10 @@
     "recent_elapsed_events": [
       "Gvazimodo casting is complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Rena agreed by her own choice to a brief return to the couple's current Dwargon hotel before resuming her three errands later today.",
-      "Arlequino and Rena reached their hotel room.",
-      "Arlequino entered with Rena, locked the door, kissed her, and initiated a strongly sexual escalation.",
-      "Exact explicit sexual mechanics are not narrated in the active continuity layer. Any intimacy remains consensual only insofar as Rena autonomously accepts/participates; marriage does not imply consent.",
-      "The scene is now private and may fade to black if intimacy continues. No post-intimacy elapsed time or outcome is established yet."
+      "Arlequino and Rena reached their hotel room and the door was locked.",
+      "Arlequino initiated private sexual intimacy and now continues it. The player explicitly indicates prolonged intimacy, changing positions, undressing, kissing, caressing, biting, arousal, and an internal climax.",
+      "Explicit sexual mechanics remain offscreen. Rena is an autonomous adult participant; continuation and any specific act only occur where she actively accepts/participates. Marriage and prior flirtation do not imply blanket consent.",
+      "No post-intimacy elapsed time, pregnancy outcome, sleep, departure, or aftermath is established yet."
     ]
   },
   "location": {
@@ -31,7 +31,7 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Entered the hotel room with Rena, locked the door, kissed her, and initiated explicit sexual intimacy.",
+    "last_in_world_action": "Continued private sexual intimacy with Rena; player specified prolonged intimacy and an internal climax. Exact sexual mechanics are kept offscreen.",
     "last_in_world_utterance": "None in the latest player input.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
@@ -53,7 +53,7 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; immediate work window remains deferred during the brief hotel return"
+      "assignment_results": "NONE_YET; immediate work window remains deferred during the hotel return"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -77,5 +77,5 @@
     "current_dwargon_home_base": "hotel; exact name/address unresolved",
     "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
-  "next_transition_rule": "If intimacy continues consensually, keep explicit sexual mechanics offscreen/fade-to-black. Do not invent duration, climax, sleep, or aftermath until the player establishes time/action. Arlequino remains user-controlled; NPCs/world continue independently."
+  "next_transition_rule": "If intimacy continues consensually, keep explicit sexual mechanics offscreen/fade-to-black. Do not invent duration, pregnancy outcome, sleep, departure, or aftermath until the player establishes time/action. Arlequino remains user-controlled; NPCs/world continue independently."
 }
