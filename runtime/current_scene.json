@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1220_rena_both_beaver_and_duck",
+  "scene_id": "t162_dwargon_hotel_room_1221_arlequino_offers_exit_before_children",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:20",
+    "display": "T+162 ~12:21",
     "day": 162,
-    "clock": "~12:20",
+    "clock": "~12:21",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "Arlequino and Rena remain lying together during a serious conversation about emotional distance, love, absence and closeness.",
-      "Arlequino used a beaver-and-duck metaphor and compared different ways of loving to different ways of breathing.",
-      "Rena objected lightly to being cast as the duck and said she would not tell him how to breathe, while rejecting the idea that her different way of loving makes her only half-present.",
-      "Arlequino now teases that in this metaphor Rena is both the beaver and the duck.",
-      "Only about one minute passes; both remain in bed. No dressing, cleanup, door movement or departure has begun."
+      "Arlequino and Rena remain in bed after a long, emotionally difficult conversation about how differently they experience closeness and love.",
+      "Arlequino kissed Rena twice, then said she can leave now, before they have children, framing the present moment as an available exit from the marriage/relationship.",
+      "While saying this he gently held/squeezed her by the neck and kissed her roughly. This does not establish Rena's consent to the neck hold or roughness beyond whatever she visibly accepts in the immediate scene.",
+      "Rena does not leave or begin dressing in this beat. Her first response is immediate and local: she interrupts the rough kiss, takes his wrist/hand away from her neck, and focuses on the meaning of what he just said.",
+      "Only about one minute passes; no door movement or departure has begun."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remained lying beside Rena during the conversation.",
-    "last_in_world_utterance": "- не переживай тут ты и бобер и утка .",
-    "current_declared_emotional_state": "subdued but teasing lightly after the heavier exchange",
+    "last_in_world_action": "Kissed Rena twice; then gently held/squeezed her by the neck and kissed her roughly while speaking.",
+    "last_in_world_utterance": "- ты можешь уйти сейчас, пока у нас нет детей.",
+    "current_declared_emotional_state": "not explicitly restated; prior subdued/resigned tone remains the latest established emotional context",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -47,23 +47,30 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "lying/resting beside Arlequino on the bed, remaining close after the serious conversation",
+      "position": "still on the bed beside Arlequino, now interrupted out of the rough kiss and focused on him",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She may react with dry humor or mild irritation to being called both beaver and duck, without reopening the whole philosophical argument unless she chooses to.",
-      "observable_state": "Awake, subdued, mildly exasperated but still physically close; no sleep is established.",
+      "autonomy_state": "Rena remains autonomous. Arlequino's offer that she can leave is not a command and does not determine her decision. She may reject, question, accept, become angry, or reassess the relationship. In this beat she does not leave; she first reacts to the seriousness of the statement and removes his hand from her neck rather than passively accepting the physical hold.",
+      "observable_state": "Awake, suddenly serious and alert; physically close but no longer passively resting through the exchange.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
+      "latest_response_intent": "Treat 'you can leave now, before we have children' as a serious relationship statement rather than flirtation; ask whether Arlequino is genuinely offering to end the marriage/relationship and refuse to let him hide the meaning inside a rough kiss.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the short hotel rest and unresolved conversation"
+      "assignment_results": "NONE_YET; work remains deferred during the hotel rest and unresolved relationship conversation"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
       "activity": "self-organizing rehearsal and production work; Bren continues collecting availability and structuring the practical schedule without Arlequino physically present"
     }
+  },
+  "relationship_state": {
+    "marriage": "ESTABLISHED",
+    "breakup_or_separation": "NOT_ESTABLISHED",
+    "current_issue": "Arlequino has explicitly offered Rena an exit before future children; Rena's decision is unresolved.",
+    "children_status": "Arlequino states 'пока у нас нет детей'; treat as his current in-world statement unless separately anchored as objective family-state canon. No pregnancy outcome has been established from the earlier intimacy."
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
@@ -83,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1216_rena_philosophical_answer_rejected.md",
-  "next_transition_rule": "Continue from ~12:20 with both still in bed. Rena may answer the tease naturally or let the conversation fall quiet, but do not skip to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:21 with both still on the bed. Rena has interrupted the rough kiss and removed Arlequino's hand from her neck; she may speak about whether he is genuinely offering to end the relationship. Do not make her stand, dress, unlock the door, or leave in the same beat unless the player explicitly advances time and she independently chooses that sequence."
 }
