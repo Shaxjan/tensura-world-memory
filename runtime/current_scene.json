@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1229_rena_answers_about_future_child",
+  "scene_id": "t162_dwargon_hotel_room_1230_rena_says_not_right_now",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:29",
+    "display": "T+162 ~12:30",
     "day": 162,
-    "clock": "~12:29",
+    "clock": "~12:30",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
-      "Rena listened through the full song and was visibly affected, especially by the abandonment theme and the line 'Подари сына или остынь'.",
-      "After the song, Arlequino asks: 'значит подаришь мне сына моя маленькая?'.",
-      "Rena answers warmly and personally rather than turning the moment into a boundary lecture. She says she can imagine and wants a future child with him, but does not promise the child's sex and does not treat this as an immediate pregnancy agreement.",
-      "Only about one minute passes. Both remain beside each other on/at the bed; Rena has not begun dressing or leaving."
+      "After the song, Rena explicitly said she does want a future child with Arlequino, while not promising a son or immediate timing.",
+      "Arlequino now says: 'так значит начнем', clearly proposing that they start trying now.",
+      "Rena responds personally and without ideological/therapy language. She does not reject the future-child idea, but she distinguishes 'I want a child with you' from 'right now'. She reminds him that they have already had two intimacy rounds and that she still has three errands to resume today.",
+      "No meaningful time passes. Both remain close on/at the bed; Rena has not begun dressing or leaving yet."
     ]
   },
   "location": {
@@ -32,8 +32,8 @@
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
     "last_in_world_action": "Remains beside Rena with the guitar after completing «Скажи».",
-    "last_in_world_utterance": "-значит подаришь мне сына моя маленькая?",
-    "current_declared_emotional_state": "tender, vulnerable and hopeful after the performance",
+    "last_in_world_utterance": "-так значит начнем",
+    "current_declared_emotional_state": "tender, hopeful and eager after Rena says she wants a future child with him",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -48,11 +48,11 @@
       "awake": true,
       "position": "still beside Arlequino on/at the bed after the song",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains strong-willed and autonomous but responds in her established personal voice. She can be tender about a future family without promising a specific child outcome or immediate conception.",
-      "observable_state": "Close, attentive, emotionally softened after the song.",
+      "autonomy_state": "Rena remains strong-willed and autonomous but speaks in her established personal voice. She wants a future child with Arlequino but does not interpret that as an automatic agreement to start trying immediately in this exact moment.",
+      "observable_state": "Close, attentive and emotionally softened, but amused/exasperated by how quickly Arlequino turns 'someday' into 'right now'.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
-      "future_children_position": "At T+162 ~12:29 Rena explicitly says she does want a future child with Arlequino. She does not promise a son specifically and no timing/pregnancy agreement is established.",
+      "future_children_position": "At T+162 ~12:29 Rena explicitly said she wants a future child with Arlequino. At ~12:30 she clarifies that this is not an immediate 'start trying right now' agreement.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -69,8 +69,8 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Immediate separation fear has eased. Rena has now explicitly said she wants a future child with Arlequino, while no immediate conception plan or promise of a son is established.",
-    "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is now explicit from Rena; exact timing and child's sex remain unresolved."
+    "current_issue": "Rena wants a future child with Arlequino, but immediate conception timing is not agreed. Arlequino has proposed starting now; Rena says not right now.",
+    "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
@@ -90,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:29 with both still close on/at the bed after Rena's answer about a future child. Keep the next beat local."
+  "next_transition_rule": "Continue from ~12:30 with both still close on/at the bed. Rena has said she wants a future child but not to start trying immediately in this moment. Keep the next beat local; do not jump to dressing or departure in the same beat."
 }
