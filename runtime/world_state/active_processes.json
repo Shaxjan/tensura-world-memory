@@ -2,50 +2,50 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "as_of": {
-    "world_time": "T+162 ~12:02",
+    "world_time": "T+162 ~11:58",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Rena has left the hotel room after explicitly refusing further delay. Her three errands resume now; no result has yet been obtained."
+    "initialization_note": "Replay restored the scene to immediately after the second consensual hotel intimacy round, before Rena gets up. The prior post-11:58 branch where she dressed and left is superseded as assistant over-advancement. Her three errands remain deferred but active; students and Bren continue independent Gvazimodo preparation."
   },
   "processes": [
     {
       "process_id": "rena_find_organizer_t162",
       "category": "NPC_ASSIGNMENT",
-      "status": "IN_PROGRESS",
+      "status": "DEFERRED_SHORT_TERM",
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Find an organizer/coordinator for concerts and broader creative/operational work.",
-      "current_state": "Rena has resumed the assignment after the hotel delay and is traveling toward practical contacts in Dwargon. No organizer has been contacted or secured yet.",
+      "current_state": "Rena remains in the couple's Dwargon hotel room with Arlequino at the restored ~11:58 branch point. No organizer has been contacted or secured. The task is postponed, not cancelled.",
       "location_context": "Dwargon",
-      "constraints": ["Scope is broader than one concert.","Rena chooses her own method consistent with character and knowledge.","No organizer acceptance may be fabricated before contacts and time exist."],
-      "advance_when": ["Rena reaches plausible venue/arts/guild/organizer contacts.","Enough time passes for conversations, referrals or refusals."],
-      "player_visibility": "PLAYER_KNOWS_TASK_RESUMED_NOT_RESULT"
+      "constraints": ["Scope is broader than one concert.","Rena chooses her own method consistent with character and knowledge.","No organizer acceptance may be fabricated before contacts and time exist.","The replay does not cancel her prior intention to resume work later today."],
+      "advance_when": ["Rena actually resumes errands after the replayed hotel scene.","She reaches plausible venue/arts/guild/organizer contacts."],
+      "player_visibility": "PLAYER_KNOWS_TASK_DEFERRED_NOT_CANCELLED"
     },
     {
       "process_id": "rena_investigate_eurazania_evacuees_t162",
       "category": "NPC_INVESTIGATION",
-      "status": "IN_PROGRESS",
+      "status": "DEFERRED_SHORT_TERM",
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Determine through causal in-world channels where Eurazania evacuees were sent and where they can currently be found.",
-      "current_state": "Rena has resumed the guild/caravan/merchant inquiry route after the hotel delay. No source has yet been reached and no result is established.",
+      "current_state": "No inquiry source has yet been reached. The guild/caravan/merchant route remains postponed while Rena is still at the hotel in the restored ~11:58 scene. No result is established.",
       "location_context": "Dwargon with inquiry targets potentially outside Dwargon",
-      "constraints": ["No omniscient access to evacuation records.","Results require plausible sources and delays.","Exact evacuee distribution remains unresolved until causally learned.","Partial, conflicting or outdated answers are possible."],
+      "constraints": ["No omniscient access to evacuation records.","Results require plausible sources and delays.","Exact evacuee distribution remains unresolved until causally learned.","Replay restores only the hotel interaction window; it does not erase the urgency of the investigation."],
       "dependencies": ["Access to people or institutions carrying post-Eurazania information.","Travel or message delay where sources are not local."],
-      "advance_when": ["Rena reaches a guild, merchant, caravan or other plausible source.","Relevant post-destruction information reaches an accessible contact."],
-      "player_visibility": "PLAYER_KNOWS_TASK_RESUMED_NOT_RESULT"
+      "advance_when": ["Rena actually resumes the inquiry route after the replayed hotel scene.","A causal source becomes available."],
+      "player_visibility": "PLAYER_KNOWS_TASK_DEFERRED_NOT_CANCELLED"
     },
     {
       "process_id": "rena_new_home_search_t162",
       "category": "NPC_ASSIGNMENT_FAMILY_LOGISTICS",
-      "status": "IN_PROGRESS_EARLY",
+      "status": "DEFERRED_SHORT_TERM",
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Begin gathering realistic new-home options for Rena and Arlequino.",
-      "current_state": "The assignment is active again after the hotel delay, but no property contact or option has yet been established. It is not necessarily her first immediate stop.",
+      "current_state": "No property contact or option has yet been established. The task remains active but postponed while Rena remains at the hotel in the restored scene.",
       "location_context": "Dwargon / destination not yet fixed",
       "constraints": ["Exact city is unresolved.","Exact budget is unresolved; family funds are approximately ~358g.","Final purchase decision is not delegated.","Property availability, price, ownership, access and transaction time must be respected."],
-      "advance_when": ["Rena encounters a plausible property-information channel or intentionally turns to housing contacts.","A meaningful work period passes."],
-      "player_visibility": "PLAYER_KNOWS_TASK_RESUMED_NOT_RESULT"
+      "advance_when": ["Rena actually resumes practical errands after the replayed hotel scene.","She encounters a plausible property-information channel."],
+      "player_visibility": "PLAYER_KNOWS_TASK_DEFERRED_NOT_CANCELLED"
     },
     {
       "process_id": "gvazimodo_dwargon_staging_t162",
@@ -54,7 +54,7 @@
       "responsible": ["arlequino", "dwargon_students"],
       "location_context": "Dwargon",
       "objective": "Develop and stage «Гвазимодо» with the Dwargon students.",
-      "current_state": "Casting is complete. While Arlequino remains away, students continue self-organized rehearsal and production work. Bren continues collecting availability and structuring the practical schedule; no final concert date has yet been supplied.",
+      "current_state": "Casting is complete. While Arlequino remains away, students continue self-organized rehearsal and production work. Bren has had roughly fifty additional minutes since Arlequino left to collect availability and structure the practical schedule. A near-complete availability picture is plausible, but no final schedule or new creative decision is established yet.",
       "constraints": ["Do not replay casting.","Use finalized cast authority.","Dain remains the tree as punishment unless changed.","Jobs, fatigue, venue access, meals, travel and other obligations limit rehearsal time.","Concert date is not yet fixed."],
       "dependencies": ["Student availability collection.","Practical rehearsal blocks.","Concert date clarification by Arlequino today or tomorrow.","Production logistics and materials."],
       "advance_when": ["Students continue self-organized rehearsal/preparation.","Bren materially advances or completes scheduling.","Arlequino provides the concert date.","Meaningful rehearsal time passes."],
@@ -69,7 +69,7 @@
       "responsible": ["eurazania_survivors", "officials", "regional_institutions", "travel_and_trade_networks"],
       "location_context": "Eurazania and connected regions",
       "objective": "Simulate continuing consequences of the capital's destruction.",
-      "current_state": "The T+161 destruction anchor remains in aftermath. Additional world time has passed, but exact refugee distribution, exact home-level damage and exact information reach into Dwargon remain unresolved unless separately established.",
+      "current_state": "The T+161 destruction anchor remains in aftermath. World-side consequences continue, but exact refugee distribution, exact home-level damage and exact information reach into Dwargon remain unresolved unless separately established.",
       "constraints": ["Do not reveal hidden world-side facts directly to Arlequino.","Do not invent exact casualty numbers or refugee destinations.","Carrion's true survival remains restricted until canonically revealed."],
       "advance_when": ["World time advances.","Refugees, officials, traders, guilds and messengers move.","Arlequino or Rena interacts with affected networks."],
       "player_visibility": "WORLD_SIDE_EVENT_NOT_YET_CAUSALLY_CONFIRMED_TO_PLAYER_IN_CURRENT_SCENE"
