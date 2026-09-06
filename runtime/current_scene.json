@@ -3,22 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1243_arlequino_says_he_is_offended",
+  "scene_id": "t162_dwargon_hotel_room_1244_arlequino_teases_rena_over_initiative_and_love",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:43",
+    "display": "T+162 ~12:44",
     "day": 162,
-    "clock": "~12:43",
+    "clock": "~12:44",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact mechanics remain offscreen.",
-      "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
-      "Rena remains visibly attracted and tempted but has repeatedly refused further partnered intimacy before the errands.",
-      "Arlequino and Rena briefly shifted the disagreement into playful bargaining over a simple game, but no game has started.",
-      "Arlequino said that if Rena will not agree to further intimacy, he may need to relieve the physical tension himself before going out because otherwise he expects to be visibly shaky again.",
-      "Rena took that seriously without reversing her refusal and said she could give him a couple of minutes to calm himself privately.",
-      "Arlequino now says: 'ладно. Но я обиделся 🙎‍♂️.'",
-      "Rena remains close and can respond with affection and mild teasing while recognizing that he is genuinely disappointed. Her earlier refusal remains unchanged. No meaningful time passes."
+      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
+      "Rena remains strongly attracted and visibly tempted but has repeatedly refused further partnered intimacy before the errands.",
+      "Arlequino joked that Rena is uninitiative and compared her behavior to that of a fifteen-year-old; Rena rejected the comparison, noted that two rounds already happened today, and said not wanting more right now does not make her cold or a bad wife.",
+      "Rena remarked that it had only been about an hour in exasperated shorthand. Arlequino now answers that the two earlier rounds were his initiative and melodramatically calls her a lying wife who does not love her husband.",
+      "No new physical escalation is declared. Both remain on/at the bed, physically close."
     ]
   },
   "location": {
@@ -34,8 +31,8 @@
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
     "last_in_world_action": "Remains beside Rena; no new physical action is declared in this beat.",
-    "last_in_world_utterance": "- ладно. Но я обиделся 🙎‍♂️.",
-    "current_declared_emotional_state": "still strongly aroused, disappointed and openly sulking/offended at Rena's refusal",
+    "last_in_world_utterance": "-час😭. И эти два раза это моя инициатива 😭лгунья нелюбящая мужа😓",
+    "current_declared_emotional_state": "strongly aroused, disappointed and melodramatically teasing/sulking about Rena's lack of initiative",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -50,8 +47,8 @@
       "awake": true,
       "position": "still beside Arlequino on/at the bed, physically close",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her refusal of further partnered sexual activity before the errands remains unchanged. She can respond tenderly and teasingly to Arlequino's open sulking without becoming clinical or retracting her decision.",
-      "observable_state": "Still somewhat flushed from the prior closeness; attentive to Arlequino's disappointment and emotionally engaged rather than cold.",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her refusal of more partnered sexual activity before the errands remains unchanged. She can push back sharply but personally when Arlequino equates his initiating the earlier rounds with her not wanting/loving him.",
+      "observable_state": "Still somewhat flushed from prior closeness; emotionally engaged, likely amused and mildly stung/annoyed by the claim that she does not love him.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -71,7 +68,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena still refuses further partnered sexual activity before the errands. Arlequino is openly disappointed and says he is offended; the current beat is emotionally close rather than escalating.",
+    "current_issue": "Arlequino is disappointed that he initiated both earlier rounds and teasingly interprets Rena's current refusal as lack of initiative/love. Rena's attraction and love remain established through her behavior and explicit statements, while her current refusal remains unchanged.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -92,5 +89,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1238_rena_arousal_flattening_replay.md",
-  "next_transition_rule": "Continue from ~12:43 with both still on/at the bed. Rena may answer Arlequino's sulking affectionately/teasingly while keeping her earlier decision unchanged. Do not narrate masturbation, dressing or departure unless the user advances those actions."
+  "next_transition_rule": "Continue from ~12:44 with both still on/at the bed. Rena should answer Arlequino's initiative/love accusation personally and naturally, without clinical rhetoric, while preserving both her attraction and her current refusal. Do not narrate dressing, masturbation, or departure unless the user advances those actions."
 }
