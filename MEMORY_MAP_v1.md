@@ -2,7 +2,7 @@
 
 New-chat entrypoint: **`START_HERE_TENSURA.md`**.
 
-This repository contains six logically different layers. Keep them separate.
+This repository contains seven logically different layers. Keep them separate.
 
 ## A. Current scene — what is physically true in this exact frame
 
@@ -97,17 +97,45 @@ Important recovery distinctions:
 - `live_v###` version numbers are not in-world T+ day numbers;
 - similarly named events are not automatically the same event.
 
+## G. Active world state — what keeps moving off-screen
+
+`runtime/world_state/WORLD_PROCESS_REGISTRY_v1.md` defines the active-process protocol.
+
+`runtime/world_state/active_processes.json` stores current cross-scene/off-screen processes such as:
+- NPC assignments;
+- investigations;
+- projects;
+- world/canon aftermaths;
+- dependencies, delays and deadlines;
+- unresolved outcomes that must survive scene changes.
+
+`runtime/world_state/information_frontier.json` stores the current information boundary:
+- objective world fact or claim;
+- source;
+- transmission channel;
+- propagation state by region/group;
+- individual recipient exposure/knowledge;
+- uncertainty/distortion.
+
+This layer exists to prevent the world from freezing between scenes.
+
+It is not permission to reveal hidden GM state. A fact can exist world-side while remaining unknown to Arlequino.
+
+It is also not permission to fabricate background outcomes. If the result is unresolved, keep it unresolved and advance it only when time, character, resources and circumstances justify progress.
+
 ## Source priority for current facts
 
 1. newest direct player correction that applies to the current fact;
-2. `runtime/current_scene.json` while ACTIVE;
+2. `runtime/current_scene.json` while ACTIVE for current physical scene facts;
 3. newer in-chat delta not yet flushed;
 4. latest matching runtime/session checkpoint/journal state;
 5. explicit correction/clarification files;
-6. specialized memory files;
+6. specialized active state (`runtime/world_state/`, character memory, creative exposure) for its own domain;
 7. older history.
 
 For unresolved values, preserve `UNKNOWN` or an explicit approximation. Never recover a current exact number by grabbing a precise but stale checkpoint value.
+
+`active_processes.json` does not override a newer current physical frame; it preserves work and consequences that continue across frames.
 
 ## Source priority for recovered historical facts
 
@@ -138,6 +166,24 @@ Frequent meaningful exposure increases character depth. Sparse characters stay s
 
 Do not infer full-text recall, meaning, preference or authorship merely from exposure.
 
+## Source priority for world processes and information
+
+For an active task/process:
+1. newest direct player instruction/correction;
+2. newest authoritative runtime/significant-event change;
+3. `runtime/world_state/active_processes.json`;
+4. responsible character's established memory/goals;
+5. older plan/history.
+
+For whether someone knows a world fact/rumor:
+1. direct player correction about that knowledge;
+2. explicit exposure/transmission event;
+3. `runtime/world_state/information_frontier.json`;
+4. causally valid scene evidence;
+5. older broad assumptions.
+
+Repository knowledge is not NPC knowledge.
+
 ## Scene rules
 
 ### Player agency
@@ -145,6 +191,12 @@ Arlequino's words, thoughts, feelings and deliberate actions are controlled by t
 
 ### NPC agency
 NPCs are autonomous. They can initiate movement, conversation, work, refusal, plans, conflict or other actions when causally justified. Autonomy creates transitions; it does not permit unexplained resets.
+
+### Active-process continuity
+Before a substantial time jump or scene transition, consult `runtime/world_state/active_processes.json`. A registered assignment/project must not silently freeze or disappear.
+
+### Information continuity
+Before asserting that an NPC knows a major external fact, consult `runtime/world_state/information_frontier.json` and the news/rumor propagation rule.
 
 ### Character growth
 After meaningful recurring scenes, persist only genuinely revealed stable traits, preferences, boundaries, goals, memories or changed relationships.
@@ -167,7 +219,11 @@ A new chat should not browse the repository at random. It should:
 1. read `START_HERE_TENSURA.md`;
 2. fetch `runtime/current_scene.json`;
 3. read this `MEMORY_MAP_v1.md`;
-4. use `recovery/RECOVERY_INDEX.md` for old-history questions;
-5. use the appropriate specialized memory/runtime layer for the task.
+4. read `runtime/rules/LIVING_WORLD_SIMULATION_v1.md`;
+5. fetch `runtime/world_state/active_processes.json`;
+6. fetch `runtime/world_state/information_frontier.json`;
+7. use `runtime/rules/CANON_TIMELINE_SYNC_v1.md` and `runtime/rules/NEWS_RUMOR_PROPAGATION_v1.md` during normal play;
+8. use `recovery/RECOVERY_INDEX.md` for old-history questions;
+9. use the appropriate specialized memory/runtime layer for the task.
 
 This bootstrap path is intentionally stable even as gameplay advances.
