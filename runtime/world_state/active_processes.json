@@ -2,9 +2,9 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "as_of": {
-    "world_time": "T+162 ~11:38",
+    "world_time": "T+162 ~11:58",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Approximately twenty-five minutes passed during the consensual private hotel interlude. Rena's three errands remain deferred but active; students and Bren continue independent Gvazimodo preparation."
+    "initialization_note": "Another approximately twenty minutes passed during a second consensual private hotel interlude. Rena's three errands remain deferred but active; students and Bren continue independent Gvazimodo preparation."
   },
   "processes": [
     {
@@ -14,7 +14,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Find an organizer/coordinator for concerts and broader creative/operational work.",
-      "current_state": "Rena is still at the couple's Dwargon hotel with Arlequino after the short private detour. No organizer has been contacted or secured. The task remains postponed, not cancelled.",
+      "current_state": "Rena remains at the couple's Dwargon hotel with Arlequino after a second private delay. No organizer has been contacted or secured. The task is postponed, not cancelled, but the deferral is now approaching an hour since she first left the student hall.",
       "location_context": "Dwargon",
       "constraints": ["Scope is broader than one concert.","Rena chooses her own method consistent with character and knowledge.","No organizer acceptance may be fabricated before contacts and time exist.","Current deferral should not silently become indefinite."],
       "advance_when": ["Rena resumes errands later today.","She reaches plausible venue/arts/guild/organizer contacts."],
@@ -27,7 +27,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Determine through causal in-world channels where Eurazania evacuees were sent and where they can currently be found.",
-      "current_state": "No inquiry source has yet been reached. The guild/caravan/merchant route remains briefly postponed while Rena is still at the hotel with Arlequino. No result is established.",
+      "current_state": "No inquiry source has yet been reached. The guild/caravan/merchant route remains postponed while Rena is still at the hotel. No result is established.",
       "location_context": "Dwargon with inquiry targets potentially outside Dwargon",
       "constraints": ["No omniscient access to evacuation records.","Results require plausible sources and delays.","Exact evacuee distribution remains unresolved until causally learned.","Current deferral should not erase urgency or become indefinite without a new choice."],
       "dependencies": ["Access to people or institutions carrying post-Eurazania information.","Travel or message delay where sources are not local."],
@@ -41,7 +41,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Begin gathering realistic new-home options for Rena and Arlequino.",
-      "current_state": "No property contact or option has yet been established. The task remains active but briefly postponed while Rena is at the current Dwargon hotel with Arlequino.",
+      "current_state": "No property contact or option has yet been established. The task remains active but postponed while Rena remains at the hotel.",
       "location_context": "Dwargon / destination not yet fixed",
       "constraints": ["Exact city is unresolved.","Exact budget is unresolved; family funds are approximately ~358g.","Final purchase decision is not delegated.","Property availability, price, ownership, access and transaction time must be respected."],
       "advance_when": ["Rena resumes practical errands later today.","She encounters a plausible property-information channel."],
@@ -54,7 +54,7 @@
       "responsible": ["arlequino", "dwargon_students"],
       "location_context": "Dwargon",
       "objective": "Develop and stage «Гвазимодо» with the Dwargon students.",
-      "current_state": "Casting is complete. While Arlequino is away, students continue self-organized rehearsal and production work. Bren has had roughly another half hour to collect availability and structure the practical schedule, but no completed schedule or new creative decision is established yet.",
+      "current_state": "Casting is complete. While Arlequino remains away, students continue self-organized rehearsal and production work. Bren has now had roughly fifty additional minutes since Arlequino left to collect availability and structure the practical schedule. A near-complete availability picture is plausible, but no final schedule or new creative decision is established yet.",
       "constraints": ["Do not replay casting.","Use finalized cast authority.","Dain remains the tree as punishment unless changed.","Jobs, fatigue, venue access, meals, travel and other obligations limit rehearsal time.","Concert date is not yet fixed."],
       "dependencies": ["Student availability collection.","Practical rehearsal blocks.","Concert date clarification by Arlequino today or tomorrow.","Production logistics and materials."],
       "advance_when": ["Students continue self-organized rehearsal/preparation.","Bren materially advances or completes scheduling.","Arlequino provides the concert date.","Meaningful rehearsal time passes."],
