@@ -3,19 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_route_to_hotel_1107_our_people_clarification",
+  "scene_id": "t162_dwargon_route_to_hotel_1108_jealousy_declaration",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:07",
+    "display": "T+162 ~11:08",
     "day": 162,
-    "clock": "~11:07",
+    "clock": "~11:08",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting is complete; students continue self-organized rehearsal/production under the compressed preparation window.",
-      "Rena agreed by her own choice to a brief return to the couple's current Dwargon lodging before resuming her three errands later today.",
-      "Arlequino takes Rena firmly by the hand and establishes that their current Dwargon lodging is a hotel; exact hotel name/address remains unresolved.",
-      "While walking toward the hotel, Arlequino asks whether Rena's earlier phrase 'our people' means she has become a subject of Eurazania.",
-      "Rena's earlier phrase 'our people' must not be treated as evidence of legal citizenship/subjection. It can be clarified in-world as relational/geographic shorthand tied to their shared life/home in Eurazania. Her exact formal legal status toward Eurazania remains UNKNOWN unless separately established."
+      "Rena agreed by her own choice to a brief return to the couple's current Dwargon hotel before resuming her three errands later today.",
+      "Arlequino and Rena are walking hand-in-hand toward the hotel.",
+      "Arlequino playfully slapped Rena on the butt and, in an excited/irritated tone, declared that he is jealous of everything around her.",
+      "Arlequino quoted an earlier romantic line: he is jealous even of her clothes and the air, forgiving the air because it keeps her alive and the clothes because they hide her from other eyes.",
+      "Rena's response must preserve both affection and autonomy: jealousy is not ownership or obedience."
     ]
   },
   "location": {
@@ -29,8 +30,8 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Took Rena firmly by the hand and continued with her toward their hotel.",
-    "last_in_world_utterance": "- что за наши люди? Ты стала подданной эурозании?",
+    "last_in_world_action": "Held Rena's hand while walking toward the hotel and playfully slapped her butt.",
+    "last_in_world_utterance": "Declared intense jealousy and repeated his earlier poetic line about being jealous of her clothes and the air, forgiving them because air keeps her alive and clothes shield her from other people's gaze.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -44,17 +45,16 @@
       "presence": "present",
       "awake": true,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "walking hand-in-hand with Arlequino toward their current hotel",
-      "autonomy_state": "She chose the brief hotel detour but still intends to resume her errands later today.",
+      "position": "walking hand-in-hand with Arlequino toward their hotel",
+      "autonomy_state": "She chose the brief hotel detour but still intends to resume her errands later today; affection does not imply obedience.",
       "formal_eurazania_legal_status": "UNKNOWN",
-      "phrase_our_people_interpretation_rule": "Do not infer citizenship/subjection from the phrase alone. In context it may mean people from the place where the couple lived and had a home.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; immediate work window deferred until after the brief hotel return"
+      "assignment_results": "NONE_YET; immediate work window remains deferred until after the brief hotel return"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
