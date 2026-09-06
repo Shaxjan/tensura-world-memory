@@ -3,32 +3,33 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_corridor_1105_arlequino_follows_rena_to_work",
+  "scene_id": "t162_dwargon_route_1106_rena_agrees_brief_home_detour",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:05",
+    "display": "T+162 ~11:06",
     "day": 162,
-    "clock": "~11:05",
+    "clock": "~11:06",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Gvazimodo casting is complete and the students are self-organizing rehearsal/production under a maximum window of about one week, possibly less.",
-      "Rena left the student hall to begin the organizer search, Eurazania evacuation inquiry, and housing-option search.",
-      "Arlequino chose to follow Rena rather than remain with the student rehearsal organization.",
-      "While following her, Arlequino said he was coming with her and made an explicit sexual complaint that her errands could wait.",
-      "Rena does not abandon the three assignments; if Arlequino accompanies her, she treats that as accompaniment to the work rather than cancellation of it."
+      "Gvazimodo casting is complete; students continue self-organized rehearsal/production under the compressed preparation window.",
+      "Rena had begun leaving toward guild/contact routes for organizer, Eurazania evacuation, and housing inquiries; Arlequino followed her.",
+      "Arlequino took Rena by the hand, kissed her in a romantic/sexual manner, told her to go home with him, explicitly said the tasks he assigned could wait, and said he missed her.",
+      "Rena independently changes her immediate plan in response to the emotional request: she agrees to a short return to their current Dwargon lodging/home base before resuming the errands later today.",
+      "The three assignments are deferred, not cancelled."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "corridor / route immediately outside the student hall, heading toward Rena's first guild/contact route",
-    "certainty": "current_scene_confirmed"
+    "place": "route outside the student hall; immediate direction changes from guild/contact route toward the couple's current Dwargon lodging/home base",
+    "certainty": "current_scene_confirmed",
+    "lodging_exact_address": "UNKNOWN"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Followed Rena out of the student hall.",
-    "last_in_world_utterance": "Said he was going with Rena and that her errands could wait, using an explicit sexual formulation.",
+    "last_in_world_action": "Took Rena by the hand and kissed her romantically/sexually.",
+    "last_in_world_utterance": "- идем домой.. Дела то ч тебе поручил , подождут... Я скучаю ...",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -42,21 +43,21 @@
       "presence": "present",
       "awake": true,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "walking away from the student hall toward her first practical contact route; Arlequino is following",
-      "autonomy_state": "She continues prioritizing the three tasks and does not treat Arlequino's sexual urgency as authority to cancel her plans.",
-      "observable_boundary": "Affection and flirtation are accepted contextually; she has already rejected public sexual escalation and retains full control over whether/when intimacy happens.",
+      "position": "with Arlequino on the route, now turning toward their current Dwargon lodging/home base",
+      "autonomy_state": "She changes plan by her own choice after Arlequino makes the request personal rather than merely sexual; she does not cancel the tasks, only postpones them briefly.",
+      "observable_boundary": "Affection and intimacy are accepted contextually; exact sexual escalation remains subject to her own consent and privacy.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; first work window is beginning now"
+      "assignment_results": "NONE_YET; immediate work window deferred until after the brief return home"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren continues scheduling without requiring Arlequino to remain physically present"
+      "activity": "self-organizing rehearsal and production work; Bren continues scheduling without Arlequino physically present"
     }
   },
   "gvazimodo_cast": {
@@ -72,7 +73,8 @@
   "family_home_context": {
     "known_shared_home": "18 Old Garden Street, Eurazania capital",
     "current_condition_known_to_player": "UNKNOWN",
-    "rule": "Do not reveal hidden world-state about the home/capital until causally learned."
+    "current_dwargon_home_base": "EXISTS_AS_CURRENT_LODGING_CONTEXT_BUT_EXACT_ADDRESS/FORM_UNRESOLVED",
+    "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Arlequino remains user-controlled; NPCs/world continue independently."
 }
