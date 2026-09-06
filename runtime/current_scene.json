@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1202_rena_leaves_for_errands",
+  "scene_id": "t162_dwargon_hotel_room_1158_replay_before_rena_gets_up",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:02",
+    "display": "T+162 ~11:58",
     "day": 162,
-    "clock": "~12:02",
+    "clock": "~11:58",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
-      "Two prolonged consensual private intimacy rounds between Arlequino and Rena already occurred in the Dwargon hotel room, ending around ~11:58; exact sexual mechanics remain offscreen.",
-      "At ~12:00 Rena explicitly stopped a third sexual escalation and began dressing to leave for the errands she had postponed for nearly an hour.",
-      "Arlequino then kissed Rena around the neck again while asking for another couple of hours and complimenting her repeatedly between kisses.",
-      "Rena does not treat the compliments as consent to continue. She physically creates distance, reiterates that she is leaving now, finishes dressing, unlocks the door and exits the room for her errands.",
-      "Arlequino remains in the hotel room unless the player explicitly chooses to follow."
+      "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
+      "The second round has just ended around ~11:58. Both remain awake in the room in immediate aftermath.",
+      "A prior assistant branch automatically advanced Rena through getting up, dressing, refusing further delay, unlocking the door and leaving, which removed normal player intervention windows.",
+      "The user explicitly requested replay. That over-advanced post-11:58 branch is superseded as ASSISTANT_CONTINUITY_ERROR, not a player retcon.",
+      "Current frame is restored to before Rena has stood up, dressed, cleaned herself up, unlocked the door, or left."
     ]
   },
   "location": {
@@ -25,14 +25,15 @@
     "certainty": "current_scene_confirmed",
     "lodging_type": "hotel",
     "lodging_exact_name_or_address": "UNKNOWN",
-    "door_state": "Rena unlocked it to leave; current exact lock state after her exit is unresolved"
+    "door_state": "locked by Arlequino"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Kissed Rena around the neck while she was dressing and tried verbally to persuade her to stay another couple of hours.",
-    "last_in_world_utterance": "Asked for another couple of hours while calling Rena beautiful, the sexiest woman in the world, and beloved, with kisses between the words.",
+    "last_in_world_action": "Completed the second prolonged consensual private intimacy round with Rena. Exact sexual mechanics remain offscreen.",
+    "last_in_world_utterance": "None at the restored branch point.",
+    "replay_note": "Player inputs made only in response to the invalid over-advanced post-11:58 branch are superseded and may be chosen differently.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -43,24 +44,23 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "left_hotel_room_for_errands",
+      "presence": "present",
       "awake": true,
-      "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "outside the room, resuming her practical route in Dwargon",
-      "autonomy_state": "Rena accepts affection contextually but has explicitly refused further sexual escalation now. She leaves despite Arlequino's request for another couple of hours and resumes the work she had postponed.",
-      "observable_boundary": "Compliments and kisses do not override an explicit refusal. Rena may accept affectionate contact at other times but is not consenting to further intimacy now.",
+      "position": "still on/at the bed with Arlequino in immediate post-intimacy aftermath; she has not yet stood up in the replayed branch",
+      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing in the replayed branch",
+      "autonomy_state": "Rena remains an autonomous adult. Her prior intention to resume the three errands later today remains causal pressure, but her next concrete action is unresolved and must be simulated from this restored moment.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; errands have now resumed causally after the hotel delay"
+      "assignment_results": "NONE_YET; work remains deferred during the hotel stop"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren continues collecting availability and structuring the practical schedule without Arlequino physically present"
+      "activity": "self-organizing rehearsal and production work; Bren has had additional time to collect availability and structure the practical schedule without Arlequino physically present"
     }
   },
   "gvazimodo_cast": {
@@ -79,5 +79,7 @@
     "current_dwargon_home_base": "hotel; exact name/address unresolved",
     "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
-  "next_transition_rule": "Continue from ~12:02 with Arlequino inside the hotel room and Rena already outside resuming her errands. Arlequino remains user-controlled. Rena's assignments now advance causally with travel/contact time; do not invent instant results."
+  "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. If Rena begins to get up, dress, clean up, reach the door, or leave, expose the first meaningful step and allow Arlequino's player a chance to respond before automatically completing later steps, unless time is explicitly advanced or the player does not intervene.",
+  "correction_ref": "runtime/corrections/t162_1158_replay_restore_player_intervention_window.md",
+  "next_transition_rule": "Continue from immediate post-second-round aftermath at ~11:58. Arlequino remains user-controlled; Rena remains autonomous."
 }
