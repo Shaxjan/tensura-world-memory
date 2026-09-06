@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1230_rena_says_not_right_now",
+  "scene_id": "t162_dwargon_hotel_room_1231_arlequino_tries_to_postpone_errands",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:30",
+    "display": "T+162 ~12:31",
     "day": 162,
-    "clock": "~12:30",
+    "clock": "~12:31",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
-      "After the song, Rena explicitly said she does want a future child with Arlequino, while not promising a son or immediate timing.",
-      "Arlequino now says: 'так значит начнем', clearly proposing that they start trying now.",
-      "Rena responds personally and without ideological/therapy language. She does not reject the future-child idea, but she distinguishes 'I want a child with you' from 'right now'. She reminds him that they have already had two intimacy rounds and that she still has three errands to resume today.",
-      "No meaningful time passes. Both remain close on/at the bed; Rena has not begun dressing or leaving yet."
+      "Rena explicitly said she wants a future child with Arlequino, but clarified that she does not mean they should start trying immediately this exact moment.",
+      "Arlequino kisses Rena on the neck and lips and says her errands can wait until tomorrow, trying to persuade her to stay in the room longer.",
+      "Rena may enjoy and return some affection, but she does not reverse her already-stated decision merely because of kissing. She reminds him that the Eurazania inquiry in particular was something he himself asked her to pursue today.",
+      "No meaningful time passes. Rena has not stood, dressed, unlocked the door, or left yet."
     ]
   },
   "location": {
@@ -31,9 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remains beside Rena with the guitar after completing «Скажи».",
-    "last_in_world_utterance": "-так значит начнем",
-    "current_declared_emotional_state": "tender, hopeful and eager after Rena says she wants a future child with him",
+    "last_in_world_action": "Kissed Rena on the neck and lips while remaining beside her.",
+    "last_in_world_utterance": "- дела могут подождать и до завтра 😉",
+    "current_declared_emotional_state": "tender, playful and trying to persuade Rena to postpone her errands",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -46,19 +46,19 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still beside Arlequino on/at the bed after the song",
+      "position": "still beside Arlequino on/at the bed after the song and current kisses",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains strong-willed and autonomous but speaks in her established personal voice. She wants a future child with Arlequino but does not interpret that as an automatic agreement to start trying immediately in this exact moment.",
-      "observable_state": "Close, attentive and emotionally softened, but amused/exasperated by how quickly Arlequino turns 'someday' into 'right now'.",
+      "autonomy_state": "Rena remains affectionate but keeps her own decision. She has already said 'not right now' about starting another intimacy round / trying for a child. Arlequino's kisses do not automatically change that. She also remembers that the Eurazania inquiry was something he himself asked her to pursue today and had earlier said she did not want to postpone until tomorrow.",
+      "observable_state": "Close and affectionate, but amused and unconvinced by Arlequino's attempt to postpone her work.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
-      "future_children_position": "At T+162 ~12:29 Rena explicitly said she wants a future child with Arlequino. At ~12:30 she clarifies that this is not an immediate 'start trying right now' agreement.",
+      "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the current private moment"
+      "assignment_results": "NONE_YET; work remains deferred only through the current private moment"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -69,7 +69,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena wants a future child with Arlequino, but immediate conception timing is not agreed. Arlequino has proposed starting now; Rena says not right now.",
+    "current_issue": "Rena wants a future child with Arlequino but has not agreed to start trying immediately. Arlequino is now trying to persuade her to postpone today's errands until tomorrow.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -90,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:30 with both still close on/at the bed. Rena has said she wants a future child but not to start trying immediately in this moment. Keep the next beat local; do not jump to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:31 with both still close on/at the bed. Rena may answer Arlequino's attempt to postpone the errands, but do not make her stand, dress, unlock the door or leave in the same beat."
 }
