@@ -3,33 +3,31 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_post_casting_after_rena_acknowledgement",
+  "scene_id": "t162_dwargon_student_hall_1100_post_casting",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~10:08",
+    "display": "T+162 ~11:00",
     "day": 162,
-    "clock": "~10:08",
-    "precision": "approximate",
+    "clock": "~11:00",
+    "precision": "player_corrected_approximate",
     "recent_elapsed_events": [
-      "The Gvazimodo casting/role-distribution stage had already been completed before this current frame; earlier text treating casting as still in progress was a continuity error.",
-      "Arlequino performed the full song 'Легион' before the scheduled meeting time.",
-      "The student meeting continued around 10:00 after the already-completed casting stage.",
-      "Arlequino delegated organizer search, Eurazania evacuation inquiry, and new-home option gathering to Rena.",
-      "Rena acknowledged all three tasks, chose guild/caravan networks as an initial evacuation-information route, limited housing work to option gathering without unilateral purchase, and stated that the current meeting should be finished first."
+      "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
+      "The player corrected the active world time: it is already about 11:00, not 10:08.",
+      "The exact minute-by-minute content of the interval between the older ~10:08 snapshot and ~11:00 is not reconstructed and must not be invented retroactively.",
+      "Arlequino had delegated organizer search, Eurazania evacuation inquiry, and new-home option gathering to Rena; no result is established yet in the active scene."
     ]
   },
   "location": {
     "region": "Дваргон",
     "place": "зал для занятий / meeting hall with students",
-    "certainty": "current_scene_confirmed"
+    "certainty": "inherited_current_scene_unless_player_changes_it"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_utterance": "-милая , сделай пожалуйста кое что.... Найди нам организатора, для концерта и не только , узнай куда отправились люди эурозании, куда их эвакуировали и начни поиски дома.... Как я скучаю по нашему дому в эурозании 💋",
-    "format_note": "The parenthetical '(обнимаю мягче )' was OOC under the established syntax rule and is not an in-world action.",
-    "recent_creative_action": "performed full 'Легион'; exact text archived at song_archive/legion_user_exact.txt"
+    "last_confirmed_in_world_utterance_before_time_correction": "-милая , сделай пожалуйста кое что.... Найди нам организатора, для концерта и не только , узнай куда отправились люди эурозании, куда их эвакуировали и начни поиски дома.... Как я скучаю по нашему дому в эурозании 💋",
+    "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c", "certainty": "active_overlay"},
@@ -39,36 +37,35 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "present",
+      "presence": "present_inherited_unless_player_changes_it",
       "awake": true,
       "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "still close to Arlequino in the student hall",
+      "position": "in the student hall / exact position at ~11:00 not re-described",
       "creative_knowledge": {
         "legion": "REPEAT_EXPOSURE",
         "gvazimodo": "FIRST_CONFIRMED_READER; read in Blumund, exact time unknown"
       },
       "current_private_emotion": "UNKNOWN",
-      "last_observable_response": "Acknowledged all three delegated tasks; said she would start the Eurazania inquiry with guilds and caravan networks, gather housing options without unilateral reservation/purchase, and finish the current meeting before beginning the off-screen work.",
-      "new_autonomous_assignments": [
+      "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
-      ]
+      ],
+      "assignment_results": "NOT_YET_ESTABLISHED"
     },
     "students": {
-      "group": "Dwargon students present for the meeting",
+      "group": "Dwargon students in the current hall scene",
       "exact_present_count": null,
-      "presence_note": "Earlier scene established almost all 22 were already in the hall; do not silently upgrade that to all 22.",
-      "named_confirmed_in_recent_scene": ["Фира", "Майра", "Брен", "Сели"],
-      "activity": "post-casting meeting / staging discussion; exact immediate next agenda after the Rena-Arlequino exchange is not fully reconstructed"
+      "presence_note": "Do not silently upgrade attendance to all 22 without confirmation.",
+      "activity": "casting is over; exact activity at ~11:00 is not reconstructed from the lost interval"
     }
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
     "cast_ref": "runtime/canon/works/gvazimodo_cast_dwargon_t162.md",
     "recovery_ref": "runtime/corrections/gvazimodo_casting_recovery_t162.md",
-    "provenance_rule": "Some roles were recovered from player memory; the remainder were assigned now under explicit player delegation. See cast_ref for per-role provenance.",
+    "provenance_rule": "Some roles were recovered from player memory; the remainder were assigned under explicit player delegation. See cast_ref for per-role provenance.",
     "assignments": [
       {"student":"Yora","role":"festival crowd leader / street ringleader"},
       {"student":"Seli","role":"church scribe / formal clerk"},
@@ -96,9 +93,11 @@
   },
   "meeting": {
     "scheduled_time": "T+162 10:00",
-    "status": "POST_CASTING_IN_PROGRESS",
-    "subject": "post-casting staging/rehearsal discussion for 'Гвазимодо'; exact immediate agenda partially unresolved",
-    "manuscript": "present in the hall; exact student custodian remains unresolved"
+    "casting_status": "COMPLETED",
+    "current_status": "ACTIVE_SCENE_AT_~11:00",
+    "current_subject": "UNKNOWN_EXACT_POST_CASTING_ACTIVITY",
+    "rule": "Do not force a return to casting or fabricate the missing ~10:08-11:00 sequence. Continue from ~11:00 using the player's next action and causally visible world state.",
+    "manuscript": "present in the hall in the prior valid state; exact custodian at ~11:00 remains unresolved"
   },
   "family_home_context": {
     "known_shared_home": "18 Old Garden Street, Eurazania capital",
@@ -107,8 +106,7 @@
     "rule": "Do not reveal hidden world-state about the home/capital until causally learned."
   },
   "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
-  "latest_autonomous_event": "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
-  "continuity_correction": "runtime/corrections/gvazimodo_casting_recovery_t162.md",
+  "continuity_correction_note": "Player correction: casting already passed; current time is ~11:00.",
   "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
-  "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Unchanged fields are inherited verbatim."
+  "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Unchanged fields are inherited; missing elapsed details remain UNKNOWN rather than invented."
 }
