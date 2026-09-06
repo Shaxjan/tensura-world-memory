@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1102_after_rehearsal_directive_and_restored_whisper",
+  "scene_id": "t162_dwargon_student_hall_1103_rena_responds_then_departs",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:02",
+    "display": "T+162 ~11:03",
     "day": 162,
-    "clock": "~11:02",
+    "clock": "~11:03",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
       "Bren interrupted Arlequino and Rena to obtain a practical rehearsal decision.",
-      "Arlequino told the students to rehearse as much as realistically possible and said he expects to clarify the concert date today or tomorrow.",
-      "Arlequino set a maximum preparation window of about one week from now, possibly less.",
-      "Immediately after the public rehearsal directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena.",
-      "A previous assistant turn incorrectly treated that whispered segment as OOC and narrated Rena leaving before reacting; that departure is rolled back as an assistant continuity error."
+      "Arlequino told the students to rehearse as much as realistically possible, said he expects to clarify the concert date today or tomorrow, and set a maximum preparation window of about one week, possibly less.",
+      "Immediately after that public directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena. A prior assistant turn had omitted this and was corrected.",
+      "Rena responded quietly that not here and not now; she noted she had already been delayed and had three tasks Arlequino himself gave her.",
+      "After giving that response, Rena resumed leaving the hall to begin her independent assignments."
     ]
   },
   "location": {
@@ -42,20 +42,20 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "present",
+      "presence": "departing_hall_for_own_assignments",
       "awake": true,
       "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "close to Arlequino in the student hall immediately after his whispered proposition",
-      "observable_boundary": "Earlier in the same scene she allowed affectionate kissing but stopped explicit sexual escalation in front of the students and said privacy would be required.",
+      "position": "moving toward/out through the hall exit after answering Arlequino",
+      "observable_boundary": "Affectionate play is allowed by her behavior, but she explicitly refuses sexual escalation in the public student hall.",
+      "last_observable_response": "Quietly told Arlequino not here and not now, pointed out she had already been delayed, and reminded him she has three tasks he himself assigned her.",
       "current_private_emotion": "UNKNOWN",
-      "next_response_rule": "Her response to the restored whisper must be autonomous and consistent with her established boundaries, personality, priorities and the public setting.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; no valid independent work window has begun at this corrected frame"
+      "assignment_results": "NONE_YET; independent work window is only now beginning causally"
     },
     "students": {
       "group": "Dwargon students in the current hall scene",
