@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1103_rena_responds_then_departs",
+  "scene_id": "t162_dwargon_student_hall_1103_rena_replay_response",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~11:03",
@@ -14,9 +14,9 @@
       "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
       "Bren interrupted Arlequino and Rena to obtain a practical rehearsal decision.",
       "Arlequino told the students to rehearse as much as realistically possible, said he expects to clarify the concert date today or tomorrow, and set a maximum preparation window of about one week, possibly less.",
-      "Immediately after that public directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena. A prior assistant turn had omitted this and was corrected.",
-      "Rena responded quietly that not here and not now; she noted she had already been delayed and had three tasks Arlequino himself gave her.",
-      "After giving that response, Rena resumed leaving the hall to begin her independent assignments."
+      "Immediately after that public directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena. The player later clarified that this parenthetical segment was in-world and then explicitly requested the assistant response be replayed.",
+      "The prior assistant portrayal of Rena's response is superseded by the replay in this scene state.",
+      "In the replay, Rena reacts with private flirtation and a firm public-place boundary, then resumes her intention to leave for her three assigned tasks."
     ]
   },
   "location": {
@@ -42,20 +42,20 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "departing_hall_for_own_assignments",
+      "presence": "present_then_departing_for_own_assignments",
       "awake": true,
       "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "moving toward/out through the hall exit after answering Arlequino",
-      "observable_boundary": "Affectionate play is allowed by her behavior, but she explicitly refuses sexual escalation in the public student hall.",
-      "last_observable_response": "Quietly told Arlequino not here and not now, pointed out she had already been delayed, and reminded him she has three tasks he himself assigned her.",
+      "position": "close to Arlequino for the private exchange, then stepping back toward the hall exit",
+      "observable_boundary": "She accepts the flirtation and answers in kind, but does not consent to public sexual escalation in the student hall.",
+      "last_observable_response": "After hearing the private proposition, Rena pauses, gives Arlequino a knowing look, briefly catches his collar and quietly tells him he is trying very hard to keep her from reaching her errands; she says she will remember his boldness and that they can revisit it later in private, then releases him and turns back toward her work.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; independent work window is only now beginning causally"
+      "assignment_results": "NONE_YET; independent work window begins once she leaves the hall"
     },
     "students": {
       "group": "Dwargon students in the current hall scene",
@@ -67,7 +67,7 @@
       "name": "Bren",
       "presence": "present",
       "current_action": "turning Arlequino's broad directive into a practical rehearsal-availability sheet and production schedule",
-      "knowledge_boundary": "He knows the cast, the compressed deadline, and what has been said publicly in the hall; he does not automatically hear the private whisper to Rena."
+      "knowledge_boundary": "He knows the cast, compressed deadline and public dialogue in the hall; he does not automatically hear the private whisper to Rena."
     }
   },
   "gvazimodo_cast": {
@@ -93,7 +93,7 @@
   },
   "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
   "latest_project_directive_event": "runtime/significant_events/t162_1102_gvazimodo_rehearsal_window_set.json",
-  "continuity_correction": "runtime/corrections/t162_1102_omitted_whisper_and_rena_departure_rollback.md",
+  "continuity_note": "Player-requested replay supersedes the immediately prior assistant portrayal of Rena's response; no in-world rollback beyond that response is implied.",
   "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Arlequino remains user-controlled; NPCs/world continue independently."
 }
