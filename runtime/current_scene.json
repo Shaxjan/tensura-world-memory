@@ -70,7 +70,9 @@
     "recovered_assignments": [
       {"student": "Orenk", "role": "Claude Frollo", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL"},
       {"student": "Kelm", "role": "Phoebus", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"},
-      {"student": "Holn", "role": "Gvazimodo", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"}
+      {"student": "Holn", "role": "Gvazimodo", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"},
+      {"student": "Arin", "role": "Esmeralda", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL"},
+      {"student": "Nemi", "role": "Fleur-de-Lys", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL_WITH_ROLE_NAME_NORMALIZATION"}
     ],
     "remaining_assignments": "UNKNOWN_NOT_RECOVERED"
   },
