@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "status": "ACTIVE",
+  "as_of": "T+162 ~10:07",
+  "purpose": "Track what world information exists, where it may be propagating, and whether Arlequino or important NPCs have causally received it.",
+  "items": [
+    {
+      "information_id": "eurazania_capital_destroyed_t161",
+      "subject": "Destruction of the Eurazania capital on T+161",
+      "information_class": "WORLD_FACT_WITH_PUBLIC_WITNESS_POTENTIAL",
+      "truth_status": "WORLD_SIDE_CONFIRMED_BY_LOCKED_CANON_ANCHOR",
+      "source_event": "runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json",
+      "origin_region": "Eurazania",
+      "origin_time": "T+161",
+      "natural_channels": [
+        "survivors/refugees",
+        "official or military messengers",
+        "guild and merchant networks",
+        "travelers and caravans",
+        "regional political contacts"
+      ],
+      "propagation": {
+        "eurazania_local": "MAJOR_DIRECT_PUBLIC_EVENT",
+        "dwargon": "ARRIVAL_STATUS_UNRESOLVED_AT_T162_1007",
+        "other_regions": "NOT_TRACKED_EXACTLY_YET"
+      },
+      "recipient_state": {
+        "arlequino": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
+        "rena": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
+        "dwargon_students_present": "UNKNOWN"
+      },
+      "exposure_rule": "Do not narrate recognition or knowledge until a causal source reaches the recipient. If a source arrives later, persist the exposure event and update this item.",
+      "distortion_risk": "LOW_FOR_CORE_EVENT_ONCE_MULTIPLE_SOURCES_ARRIVE; HIGHER_FOR_DETAILS_AND_NUMBERS"
+    },
+    {
+      "information_id": "carrion_publicly_presumed_defeated_after_t161",
+      "subject": "Carrion publicly presumed defeated/dead after the T+161 clash",
+      "information_class": "PUBLIC_POST_EVENT_BELIEF",
+      "truth_status": "PUBLIC_BELIEF_NOT_FULL_OBJECTIVE_TRUTH",
+      "source_event": "runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json",
+      "origin_region": "Eurazania",
+      "origin_time": "T+161",
+      "natural_channels": [
+        "survivors/refugees",
+        "official/public reaction",
+        "merchant and guild networks",
+        "travelers"
+      ],
+      "propagation": {
+        "eurazania_local": "PUBLIC_BELIEF_AFTER_EVENT",
+        "dwargon": "ARRIVAL_STATUS_UNRESOLVED_AT_T162_1007"
+      },
+      "recipient_state": {
+        "arlequino": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
+        "rena": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE"
+      },
+      "restricted_truth": "Carrion's true survival must not be exposed before canonical revelation.",
+      "distortion_risk": "MEDIUM"
+    },
+    {
+      "information_id": "eurazania_evacuee_destinations_current_distribution",
+      "subject": "Where Eurazania evacuees were sent and where they are currently located",
+      "information_class": "INVESTIGATION_TARGET",
+      "truth_status": "EXACT_CURRENT_DISTRIBUTION_UNRESOLVED_IN_ACTIVE_SOURCE_SET",
+      "origin_region": "Eurazania evacuation networks",
+      "relevant_source_types": [
+        "Eurazania officials",
+        "refugees",
+        "Free Guild / adventurer networks",
+        "merchants and caravan masters",
+        "host-region authorities",
+        "messengers and letters"
+      ],
+      "propagation": {
+        "dwargon": "UNKNOWN_WHICH_DETAILS_HAVE_ARRIVED",
+        "rena_inquiry": "ASSIGNED_AT_T162_1007_NOT_YET_RESOLVED"
+      },
+      "recipient_state": {
+        "arlequino": "UNKNOWN_RESULT",
+        "rena": "UNKNOWN_RESULT"
+      },
+      "linked_process": "rena_investigate_eurazania_evacuees_t162",
+      "anti_invention": "Do not choose a destination merely from general Tensura knowledge unless reconciled with this world's runtime and a causal transmission path."
+    },
+    {
+      "information_id": "old_garden_street_home_condition_after_t161",
+      "subject": "Condition of 18 Old Garden Street after the destruction of the Eurazania capital",
+      "information_class": "PRIVATE_MATERIAL_FACT_NOT_YET_OBSERVED",
+      "truth_status": "UNKNOWN_EXACT_CONDITION",
+      "origin_region": "Eurazania capital",
+      "relevant_source_types": [
+        "direct inspection",
+        "credible local witness",
+        "official damage information if such records exist",
+        "someone returning from the district"
+      ],
+      "propagation": {
+        "dwargon": "NO_CONFIRMED_SPECIFIC_REPORT"
+      },
+      "recipient_state": {
+        "arlequino": "UNKNOWN",
+        "rena": "UNKNOWN"
+      },
+      "anti_invention": "Capital destruction does not by itself establish the exact state of this specific address."
+    }
+  ],
+  "update_rules": {
+    "on_new_source": "Add source/channel/time/recipient and update confidence without erasing contradictory rumors.",
+    "on_player_exposure": "Persist the exact exposure; world truth and player belief remain separate fields.",
+    "on_official_correction": "Preserve earlier rumor history, mark it corrected/superseded rather than pretending it never circulated.",
+    "future_events": "Do not insert before they occur in world time."
+  }
+}
