@@ -3,21 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1222_rena_says_she_does_not_want_to_leave",
+  "scene_id": "t162_dwargon_hotel_room_1223_arlequino_says_later_he_would_not_let_her_go",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:22",
+    "display": "T+162 ~12:23",
     "day": 162,
-    "clock": "~12:22",
+    "clock": "~12:23",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "Arlequino and Rena remain on the bed after a long, emotionally difficult conversation about how differently they experience closeness and love.",
-      "Arlequino told Rena she can leave now, before they have children, while kissing her roughly and holding her neck. Rena interrupted the kiss and removed his hand from her neck, then asked whether he genuinely wanted her to leave.",
-      "Arlequino answers that he does not want her to leave and says he only meant that perhaps she herself might want to.",
-      "Rena answers directly that she does not want to leave. She says that if she ever does, she will say so herself, and asks him not to offer her the door on her behalf.",
-      "Only about one minute passes; neither has stood, dressed, cleaned up, unlocked the door, or left."
+      "Arlequino and Rena remain on the bed after a long emotionally difficult conversation about love, closeness and autonomy.",
+      "Arlequino earlier told Rena she could leave now, before they have children. He clarified that he does not want her to leave, only wondered whether she might want to. Rena said directly that she does not want to leave and that if she ever does, she will say so herself.",
+      "Arlequino now says: 'если не сейчас то никогда' and then a typo-heavy phrase whose clear intended sense is likely 'чёрта с два я тебя потом отпущу' — meaning that later he would not let her go. Treat the exact typo as player wording; do not overstate beyond the possessive meaning that he says he would not let her leave later.",
+      "Only about one minute passes. Both remain on the bed; no dressing, cleanup, door movement or departure has begun."
     ]
   },
   "location": {
@@ -32,9 +31,10 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remained on the bed beside Rena after she interrupted the rough kiss and removed his hand from her neck.",
-    "last_in_world_utterance": "- нет.... Вдруг сама хочешь.",
-    "current_declared_emotional_state": "not explicitly restated; prior subdued/resigned and vulnerable tone remains the latest established emotional context",
+    "last_in_world_action": "Remained on the bed beside Rena.",
+    "last_in_world_utterance_raw": "-если не сейчас то никогда \nЧёртов сдва я тебя потом отпущу.",
+    "last_in_world_utterance_interpretation": "Likely: 'Если не сейчас, то никогда. Чёрта с два я тебя потом отпущу' — saying that if she does not leave now, he would not willingly let her go later.",
+    "current_declared_emotional_state": "possessive, vulnerable and intense; exact private intent beyond the spoken words is not inferred",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -49,14 +49,9 @@
       "awake": true,
       "position": "still on the bed beside Arlequino, serious and focused on him",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She explicitly does not want to leave now. She says that if she ever wants to leave, she will say so herself and does not want Arlequino pre-emptively offering an exit on her behalf. This does not erase the unresolved emotional differences between them.",
-      "observable_state": "Awake, serious and direct; still physically near him but not passively accepting roughness after having interrupted the prior kiss.",
+      "autonomy_state": "Rena remains autonomous. She has explicitly said she does not want to leave now, but she will not accept Arlequino deciding that she can never leave later. She may react sharply to the phrase 'не отпущу' while remaining in the immediate scene. Her staying now is her own choice, not consent to permanent control.",
+      "observable_state": "Awake, serious and alert; still physically near him after having interrupted prior roughness.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
-      "latest_response_content": [
-        "Says: 'Нет. Не хочу.'",
-        "Says that if she ever wants to leave, she will say it herself.",
-        "Asks Arlequino not to decide for her or offer her the door on her behalf."
-      ],
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -73,8 +68,8 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Arlequino offered Rena an exit before future children; he has clarified that he does not want her to leave, and Rena has explicitly said she does not want to leave either.",
-    "children_status": "Arlequino states 'пока у нас нет детей'; treat as his current in-world statement unless separately anchored as objective family-state canon. No pregnancy outcome has been established from the earlier intimacy."
+    "current_issue": "Rena does not want to leave now. Arlequino says that if she does not leave now, later he would not let her go; Rena's reaction to that possessive statement is the immediate unresolved beat.",
+    "children_status": "Arlequino earlier states 'пока у нас нет детей'; no pregnancy outcome has been established from earlier intimacy."
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
@@ -94,5 +89,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1216_rena_philosophical_answer_rejected.md",
-  "next_transition_rule": "Continue from ~12:22 with both still on the bed. Rena has explicitly said she does not want to leave. Keep the next beat local; do not skip to dressing or departure."
+  "next_transition_rule": "Continue from ~12:23 with both still on the bed. Rena may respond sharply and personally to 'не отпущу', but do not make her stand, dress, unlock the door or leave in the same beat."
 }
