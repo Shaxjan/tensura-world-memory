@@ -29,11 +29,13 @@
     "former_engagement_time": "T+130 ~17:27",
     "marriage_time": "UNKNOWN_EXACT_CURRENTLY",
     "history": "long active romantic and sexual relationship before engagement and marriage",
-    "principle": "relationship does not imply obedience"
+    "principle": "relationship does not imply obedience",
+    "future_family": "At T+162 ~12:29 Rena explicitly said she wants a future child with Arlequino. She did not promise a son specifically; timing and pregnancy remain unresolved."
   },
   "preferences_and_boundaries": {
     "guitar": "owns the guitar previously belonging to Arlequino; temporary use by Arlequino during T+131 performances was permitted",
     "wedding_preference": "UNKNOWN",
+    "children": "Wants a future child with Arlequino as explicitly stated at T+162 ~12:29; no specific timing or sex preference established.",
     "other_preferences": "not_yet_authored"
   },
   "goals_and_autonomy": [
@@ -42,7 +44,8 @@
     "continue independent correspondence/publicity work when assigned or appropriate",
     "from T+162 ~10:07: find an organizer/coordinator for concerts and broader creative/operational work",
     "from T+162 ~10:07: investigate through causal in-world channels where Eurazania's evacuees were sent",
-    "from T+162 ~10:07: begin gathering options for a new home; exact city, budget and final purchase remain unresolved"
+    "from T+162 ~10:07: begin gathering options for a new home; exact city, budget and final purchase remain unresolved",
+    "future-family desire now explicit: wants a child with Arlequino, timing unresolved"
   ],
   "music": {
     "original_song": "worked for weeks on an original song for Arlequino and performed it evening T+129",
@@ -62,6 +65,11 @@
       "time": "T+162 ~10:07",
       "event": "Arlequino delegated three practical family/creative tasks: organizer search, Eurazania evacuation inquiry, and house search.",
       "evidence": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json"
+    },
+    {
+      "time": "T+162 ~12:29",
+      "event": "After Arlequino's song «Скажи» and his direct question about a son, Rena explicitly states that she wants a future child with him, while not promising a son or setting timing.",
+      "evidence": "runtime/current_scene.json"
     }
   ],
   "do_not_invent": [
@@ -72,6 +80,8 @@
     "automatic jealousy",
     "automatic tenderness",
     "evacuation results before causal investigation",
-    "a house purchase without an explicit decision"
+    "a house purchase without an explicit decision",
+    "pregnancy or conception outcome without explicit in-world establishment",
+    "a guaranteed son or any child's sex"
   ]
 }
