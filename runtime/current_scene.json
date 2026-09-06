@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1233_arlequino_kisses_rena_neck_and_chest",
+  "scene_id": "t162_dwargon_hotel_room_1234_rena_stops_further_escalation",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:33",
+    "display": "T+162 ~12:34",
     "day": 162,
-    "clock": "~12:33",
+    "clock": "~12:34",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
       "Rena explicitly said she wants a future child with Arlequino, but clarified that she does not mean they should start trying immediately this exact moment.",
-      "The scene has returned to strong flirtation and physical affection while Rena still intends to resume today's errands.",
-      "Arlequino now kisses Rena, then her neck, chest and nipples. The scene remains non-graphic in narration.",
-      "Rena visibly reacts to the affection and desire but does not automatically convert this into a third intimacy round. She remains beside him and locally checks the escalation before any new sexual sequence is established.",
-      "About one minute passes; no dressing, door movement or departure begins."
+      "The scene returned to strong flirtation and physical affection while Rena still intends to resume today's errands.",
+      "Arlequino now continues passionately kissing Rena's lips, neck, ears, chest and body and caressing her with his hands.",
+      "Because Rena had already said not to begin a third intimacy round right now, her prior limit remains meaningful. She responds to the kisses but stops the further escalation before a new sexual round is established.",
+      "No meaningful time passes; no dressing, door movement or departure begins."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Kissed Rena, then kissed her neck, chest and nipples while remaining close beside her.",
+    "last_in_world_action": "Continued passionately kissing Rena across lips, neck, ears, chest and body and caressing her with his hands.",
     "last_in_world_utterance": null,
-    "current_declared_emotional_state": "strongly attracted and reluctant to let the private moment end",
+    "current_declared_emotional_state": "strongly attracted and trying to continue the intimate escalation",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -49,8 +49,8 @@
       "awake": true,
       "position": "still beside Arlequino on/at the bed during the renewed physical affection",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate and sexually responsive when warranted, but her prior 'not right now' stance about a new intimacy round remains in force unless she independently changes it. She may visibly react to Arlequino's kisses and touch while stopping or slowing escalation before a third round is established.",
-      "observable_state": "Physically affected by the renewed kissing and close contact; still engaged with Arlequino; no sleep, dressing or departure is established.",
+      "autonomy_state": "Rena remains affectionate and sexually responsive when warranted, but her explicit earlier 'not right now' limit on a third intimacy round remains in force unless she independently changes it. In this beat she does not change it: she returns some kissing, then catches/holds one of Arlequino's hands and stops the escalation before it becomes another sexual round.",
+      "observable_state": "Physically affected by the kissing and close contact but deliberately slowing/stopping the escalation rather than allowing it to become another intimacy round.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,7 +70,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "The present beat is strongly flirtatious and physically affectionate. Rena still intends to resume today's errands, while Arlequino continues trying to extend the private moment.",
+    "current_issue": "The present beat is strongly flirtatious and physically affectionate, but Rena has not agreed to a third intimacy round and stops the escalation before it becomes one.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -91,5 +91,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:33 with both still close on/at the bed. Rena may react physically and verbally to the renewed kisses, but do not establish a third intimacy round unless a later beat clearly supports it. Do not jump to dressing or departure."
+  "next_transition_rule": "Continue from ~12:34 with both still close on/at the bed. Rena has stopped the escalation without leaving. Keep the next beat local; no dressing or departure unless later progressed."
 }
