@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1138_post_intimacy",
+  "scene_id": "t162_dwargon_hotel_room_1158_second_round_aftermath",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:38",
+    "display": "T+162 ~11:58",
     "day": 162,
-    "clock": "~11:38",
+    "clock": "~11:58",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Gvazimodo casting is complete; students continue self-organized rehearsal/production under the compressed preparation window.",
-      "Rena agreed by her own choice to a brief return to the couple's current Dwargon hotel before resuming her three errands later today.",
-      "Arlequino and Rena reached their locked hotel room and began consensual private sexual intimacy.",
-      "The player explicitly continued the intimacy for a prolonged period, including changing positions, undressing, kissing, caressing, biting, arousal and an internal climax. Exact sexual mechanics remain offscreen.",
-      "Approximately twenty-five minutes have now elapsed in private intimacy. The scene is at immediate post-intimacy aftermath; both remain in the room and awake unless changed by later player action.",
-      "Rena's three assignments remain deferred, not cancelled."
+      "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
+      "At ~11:38 Arlequino and Rena were in immediate post-intimacy aftermath in their locked Dwargon hotel room.",
+      "Arlequino initiated another prolonged round of private intimacy, again specifying undressing, kissing, caressing, biting, changing positions, arousal and another internal climax. Exact sexual mechanics remain offscreen.",
+      "Rena autonomously accepts and actively participates in this second round; marriage or prior consent is not treated as blanket consent.",
+      "About twenty additional minutes pass. The second round is complete by ~11:58.",
+      "Rena's three assignments are still not materially started and have now been delayed for close to an hour since she first left the student hall; she remains responsible for deciding when to resume them."
     ]
   },
   "location": {
@@ -31,7 +31,7 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Continued consensual private sexual intimacy with Rena for a prolonged period; player specified an internal climax. Exact sexual mechanics kept offscreen.",
+    "last_in_world_action": "Continued into a second prolonged round of consensual private sexual intimacy with Rena; player specified another internal climax. Exact sexual mechanics kept offscreen.",
     "last_in_world_utterance": "None in the latest player input.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
@@ -45,20 +45,20 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "inside the locked hotel room with Arlequino in immediate post-intimacy aftermath",
-      "autonomy_state": "Rena remains an autonomous adult participant. The intimacy continued because she actively participated; marriage and prior flirtation do not imply blanket consent to future acts.",
+      "position": "inside the locked hotel room with Arlequino in the aftermath of the second consensual intimacy round",
+      "autonomy_state": "Rena remains an autonomous adult participant. She accepted and actively participated in the second round, but retains control over whether to continue, rest, dress, speak, or leave for her assignments next.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the hotel stop but is expected to resume later today"
+      "assignment_results": "NONE_YET; work remains deferred during the hotel stop"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren continues collecting availability and building the practical schedule without Arlequino physically present"
+      "activity": "self-organizing rehearsal and production work; Bren has had additional time to collect availability and structure the practical schedule without Arlequino physically present"
     }
   },
   "gvazimodo_cast": {
@@ -77,5 +77,5 @@
     "current_dwargon_home_base": "hotel; exact name/address unresolved",
     "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
-  "next_transition_rule": "Continue from immediate post-intimacy aftermath. Keep future explicit sexual mechanics offscreen. Arlequino remains user-controlled; Rena may independently rest, speak, clean up, dress, resume errands, or make another choice causally."
+  "next_transition_rule": "Continue from the aftermath of the second consensual intimacy round. Keep future explicit sexual mechanics offscreen. Arlequino remains user-controlled; Rena may autonomously rest, speak, clean up, dress, resume errands, or make another choice causally."
 }
