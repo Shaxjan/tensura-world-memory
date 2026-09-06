@@ -8,7 +8,7 @@ from pathlib import Path
 
 FORMAT = "TENSURA_RUNTIME_TRANSPORT_MODE"
 SCHEMA_VERSION = 1
-SERVICE_VERSION = "0.1.0"
+SERVICE_VERSION = "0.2.0"
 
 
 def _load(path: Path):
@@ -16,7 +16,7 @@ def _load(path: Path):
 
 
 def fetch_health(url: str, timeout: float = 8.0) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "tensura-transport-activation/0.1"})
+    req = urllib.request.Request(url, headers={"User-Agent": "tensura-transport-activation/0.2"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         if resp.status != 200:
             raise RuntimeError(f"health returned HTTP {resp.status}")

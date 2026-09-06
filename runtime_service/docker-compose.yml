@@ -16,6 +16,16 @@ services:
       PORT: 8080
     volumes:
       - tensura_repo:/srv/tensura
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()"
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
 
 volumes:
   tensura_repo:
