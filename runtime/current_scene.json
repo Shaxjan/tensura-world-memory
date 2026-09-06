@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1216_before_rena_comparison_answer_replay",
+  "scene_id": "t162_dwargon_hotel_room_1216_rena_natural_comparison_answer",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:16",
@@ -14,9 +14,9 @@
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino and Rena remain lying together during a serious conversation about emotional distance, love, absence and closeness.",
-      "Arlequino said Rena can feel like a cloud in the sky while he is on the ground, with sex acting like temporary wings that let him reach her.",
-      "Arlequino then smiles sadly/laughs and says he does not believe an ordinary bridge between them will exist, then asks Rena to compare them honestly and say how different they are as people.",
-      "The assistant's prior over-philosophical Rena answer was rejected as an ASSISTANT_CONTINUITY_ERROR and is discarded. Rena has not yet answered in the replayed authoritative branch.",
+      "Arlequino asks Rena to compare them honestly and say how different they are as people.",
+      "A prior over-philosophical assistant answer was discarded as ASSISTANT_CONTINUITY_ERROR.",
+      "Rena now answers in a simpler, personal voice: they are very different. She says Arlequino turns feelings into extremes, loves by grabbing on with both hands, is jealous and intense; she can love him and still think about her own affairs and needs room to remain herself. She also notes that both of them are stubborn and capable of doing foolish things for people they consider their own, and says that if they were truly alien to each other she would not still be there trying to understand him.",
       "No meaningful time passes; both remain in bed. No dressing, cleanup, door movement or departure has begun."
     ]
   },
@@ -49,9 +49,16 @@
       "awake": true,
       "position": "lying/resting beside Arlequino on the bed, remaining close during the serious conversation",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She has been asked to compare herself and Arlequino honestly. Her replacement answer should be natural, concise and personal rather than analytical/philosophical.",
+      "autonomy_state": "Rena remains autonomous. She has acknowledged that they are very different without turning the answer into abstract philosophy or agreeing that closeness is impossible.",
       "observable_state": "Awake, serious, attentive and physically close; no sleep is established.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
+      "latest_response_content": [
+        "Says they are very different.",
+        "Says Arlequino tends to turn feelings into extremes and loves by holding on with both hands; he is jealous and intense.",
+        "Says she can love him and still think about her own affairs and needs room to remain herself.",
+        "Notes that both are stubborn and can do foolish things for people they consider their own.",
+        "Says that if they were truly alien to each other she would not still be there trying to understand him."
+      ],
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -83,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1216_rena_philosophical_answer_rejected.md",
-  "next_transition_rule": "Replay only Rena's answer to Arlequino's comparison question from ~12:16. Keep it natural and character-level. Do not advance to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:16 after Rena's natural comparison answer. Both remain in bed. Arlequino remains user-controlled; do not skip to dressing or departure in the same beat."
 }
