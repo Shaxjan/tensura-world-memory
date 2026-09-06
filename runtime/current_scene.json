@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1224_arlequino_returns_with_guitar",
+  "scene_id": "t162_dwargon_hotel_room_1228_skazhi_performance_for_rena",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:24",
+    "display": "T+162 ~12:28",
     "day": 162,
-    "clock": "~12:24",
+    "clock": "~12:28",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "Arlequino and Rena have just come through a long emotionally difficult conversation about closeness and whether she might ever leave; both have made clear they do not want separation now.",
-      "Rena answered Arlequino's possessive reassurance in a warmer, personal way: she is not planning to go anywhere.",
-      "Arlequino now gets the guitar, returns to Rena, embraces her, keeps the guitar with him and asks: 'хочешь послушать 🥲'.",
-      "Only about one minute passes. No dressing, cleanup, door movement or departure has begun."
+      "Arlequino and Rena came through a long emotionally difficult conversation about closeness, separation and how differently they love; both have made clear they do not want separation now.",
+      "Arlequino got the guitar, returned to Rena, embraced her and asked whether she wanted to listen. Rena answered that she did and asked him to play.",
+      "Arlequino now performs the full user-supplied song/text beginning with 'Скажи' for Rena. The exact words are archived at song_archive/skazhi_user_exact.txt.",
+      "The performance lasts roughly four minutes. Rena stays with him and listens without interrupting. Several lines clearly land on her, especially the repeated fear of being abandoned and the line about a son; she does not turn this into an argument during the song.",
+      "Students continue independent Gvazimodo preparation offscreen; Bren has had roughly an hour and a half since Arlequino left and is progressing first-pass availability/scheduling work, but no final concert schedule exists because the concert date is still unknown."
     ]
   },
   "location": {
@@ -31,10 +31,10 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Got the guitar, returned to Rena, embraced her, and held the guitar ready to play.",
-    "last_in_world_utterance": "- хочешь послушать 🥲",
-    "current_declared_emotional_state": "still vulnerable/sad but seeking closeness through music",
-    "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
+    "last_in_world_action": "Played guitar and performed the full song/text beginning with 'Скажи' for Rena while staying beside her.",
+    "last_in_world_utterance_or_performance": "Full exact text archived at song_archive/skazhi_user_exact.txt",
+    "current_declared_emotional_state": "vulnerable, sad and intensely attached; expressing the unresolved relationship fear through music",
+    "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c", "certainty": "active_overlay"},
@@ -46,29 +46,30 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still on/at the bed beside Arlequino as he returns with the guitar and embraces her",
+      "position": "still beside Arlequino on/at the bed while he finishes the guitar performance",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains independent and strong-willed but responds in her established personal voice. The immediate conflict has softened somewhat; she may accept the embrace and choose whether she wants to listen to him play.",
-      "observable_state": "Awake, close, emotionally softened somewhat after the prior exchange.",
-      "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
+      "autonomy_state": "Rena remains autonomous and emotionally engaged. She listens to the song as a personal confession rather than as an abstract argument. She may be moved, unsettled, tender or sharp about specific lines, especially the abandonment fear and 'Подари сына или остынь', but her exact private feelings are not pre-written beyond visible reaction and what she says next.",
+      "observable_state": "Quiet and attentive through the whole performance; visibly affected by parts of it; does not interrupt or get up.",
+      "current_private_emotion": "UNKNOWN beyond observable reaction and future speech",
+      "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred during the hotel rest and current private moment"
+      "assignment_results": "NONE_YET; work remains deferred during the current private moment"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren continues collecting availability and structuring the practical schedule without Arlequino physically present"
+      "activity": "self-organizing rehearsal and production work; Bren is largely through first-pass availability collection from reachable/present students and is grouping plausible rehearsal blocks, but the final schedule remains blocked by the unfixed concert date and any remaining confirmations"
     }
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Immediate separation fear has eased; deeper differences in felt closeness remain unresolved, and Arlequino is now turning toward music rather than further argument.",
-    "children_status": "Arlequino earlier states 'пока у нас нет детей'; no pregnancy outcome has been established from earlier intimacy."
+    "current_issue": "Immediate separation fear has eased, but the deeper mismatch in how they experience closeness remains unresolved. Arlequino has now expressed that fear through the song «Скажи» rather than further direct argument.",
+    "children_status": "Arlequino earlier said 'пока у нас нет детей'. The song includes 'Подари сына или остынь'; this is an in-song statement, not a newly established reproductive agreement or pregnancy outcome."
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
@@ -88,5 +89,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:24 with Arlequino holding the guitar beside Rena after asking whether she wants to listen. Rena may answer and react locally. Do not advance through the performance until the player supplies/initiates it."
+  "next_transition_rule": "Continue from ~12:28 immediately after the last chord/line of «Скажи». Rena may react locally and personally. Do not make her dress, leave, or launch a multi-step sequence in the same beat."
 }
