@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1239_arlequino_proposes_oral_sex_before_errands",
+  "scene_id": "t162_dwargon_hotel_room_1240_rena_refuses_one_minute_bargain",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:39",
+    "display": "T+162 ~12:40",
     "day": 162,
-    "clock": "~12:39",
+    "clock": "~12:40",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
       "Rena explicitly said she wants a future child with Arlequino, but not to begin trying immediately this exact moment.",
-      "Rena remains visibly aroused, strongly attracted and genuinely tempted, but has repeatedly refused a third intimacy round for now.",
-      "Arlequino now proposes a brief oral-sex act before they leave for the errands: 'ладно , минет и идем 👌'.",
-      "Because this is a new sexual proposal after a current refusal of further sexual activity, it requires Rena's own agreement. In this beat she does not agree and answers personally/teasingly rather than clinically. No explicit sexual mechanics are narrated.",
-      "No meaningful time passes. Both remain on/at the bed; no dressing, door movement or departure begins in this beat."
+      "Rena remains visibly aroused, strongly attracted and genuinely tempted, but has repeatedly refused further sexual activity before the errands.",
+      "Arlequino bargains again that oral sex would take only about a minute and then they could leave: 'это же очень быстро милая ... всего минута ... Можем идти'.",
+      "Rena remains physically affected and playful, but does not agree. She treats the 'only one minute' claim as bargaining rather than a new reason to reverse her answer.",
+      "No meaningful time passes. Both remain on/at the bed; Rena has not begun dressing, unlocking the door, or leaving yet."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remains close beside Rena after the repeated kissing sequence was stopped.",
-    "last_in_world_utterance": "-ладно , минет и идем 👌",
-    "current_declared_emotional_state": "intensely attracted, playful and bargaining for one brief sexual act before leaving",
+    "last_in_world_action": "Remains close beside Rena after his brief oral-sex proposal was refused.",
+    "last_in_world_utterance": "-это же очень быстро милая 🙂, всего минута и аххххх🫦. Можем идти🫦",
+    "current_declared_emotional_state": "intensely attracted, playful and bargaining that the requested sexual act would be very brief",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -49,8 +49,8 @@
       "awake": true,
       "position": "still beside Arlequino on/at the bed, physically close and visibly aroused",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her current refusal of further sexual activity remains valid. Arlequino's oral-sex proposal is treated as a new request, not as automatic permission; in this beat she does not agree. She responds in her established teasing/personal voice without modern therapy rhetoric.",
-      "observable_state": "Still breathing somewhat harder and visibly affected by Arlequino, but amused/exasperated by his bargaining and still deliberately refusing further sexual activity for now.",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her current refusal of further sexual activity remains valid. She answers Arlequino's one-minute bargain in her established teasing/personal voice, without clinical language, and does not agree in this beat.",
+      "observable_state": "Still breathing somewhat harder and visibly affected by Arlequino; amused by the bargaining but deliberately holding to her decision for now.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,7 +70,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena is genuinely aroused and tempted, but still refuses further sexual activity before the errands. Arlequino bargains for a brief oral-sex act; Rena does not agree in this beat.",
+    "current_issue": "Rena is genuinely aroused and tempted but still refuses further sexual activity before the errands. Arlequino continues playful bargaining that the requested act would take only a minute; Rena does not agree in this beat.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -91,5 +91,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1238_rena_arousal_flattening_replay.md",
-  "next_transition_rule": "Continue from ~12:39 with both still on/at the bed. Rena remains visibly aroused and close but has refused the oral-sex proposal. Keep the next beat local; do not narrate dressing or departure without an intervening player-response window."
+  "next_transition_rule": "Continue from ~12:40 with both still on/at the bed. Rena remains visibly aroused and close but has not agreed to further sexual activity. Keep the next beat local; do not narrate dressing or departure without an intervening player-response window."
 }
