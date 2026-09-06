@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1218_only_wings_claim",
+  "scene_id": "t162_dwargon_hotel_room_1219_beaver_duck_breathing_metaphor",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:18",
+    "display": "T+162 ~12:19",
     "day": 162,
-    "clock": "~12:18",
+    "clock": "~12:19",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino and Rena remain lying together during a serious conversation about emotional distance, love, absence and closeness.",
-      "Rena has said they are very different but not strangers, and that she is still there trying to understand him.",
-      "Arlequino now explains that this was exactly his point: he believes there will be no ordinary road between them, only the temporary 'wings' represented by sexual intimacy.",
-      "Rena does not answer with abstract philosophy. She accepts that she may now understand why he clings so strongly to sex as felt closeness, but says it hurts her to hear him treat everything outside it as if there were nothing between them.",
+      "Arlequino has said he believes there will be no ordinary road between them, only the temporary 'wings' represented by sexual intimacy.",
+      "Arlequino now tells Rena to drop the argument, calls it a 'conversation between a beaver and a duck', and compares their different ways of loving to different ways of breathing: mouth, nose, or with the whole body.",
+      "Rena answers personally rather than philosophically: she lightly objects to being cast as the duck, says she will not tell him how to 'breathe', but rejects the implication that her different way of loving means she is only half-present with him.",
       "Only about one minute passes; both remain in bed. No dressing, cleanup, door movement or departure has begun."
     ]
   },
@@ -33,8 +33,8 @@
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
     "last_in_world_action": "Remained lying beside Rena during the serious conversation.",
-    "last_in_world_utterance": "- я это веду к тому что ... Никакой дороги не будет . только крылья .",
-    "current_declared_emotional_state": "subdued, resigned and convinced that ordinary closeness cannot bridge the distance he feels",
+    "last_in_world_utterance": "-да забей , разговор бобра и утки не имеет смысла. Если тебе легче дышать ртом то дыши ртом, если носом то дыши носом , но знай что есть те кто дышат всем телом.",
+    "current_declared_emotional_state": "subdued, resigned, using humor/metaphor to close down the argument while insisting their ways of loving are fundamentally different",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -49,13 +49,13 @@
       "awake": true,
       "position": "lying/resting beside Arlequino on the bed, remaining close during the serious conversation",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She does not have to agree with Arlequino's fatalistic conclusion. She can acknowledge that she now understands his attachment to sexual intimacy as a bridge while also being personally hurt by the implication that the rest of their shared life does not count as real closeness.",
-      "observable_state": "Awake, attentive, subdued and physically close; no sleep is established.",
+      "autonomy_state": "Rena remains autonomous. She can let the argument rest without agreeing with Arlequino's conclusion. She speaks in a direct, personal voice and resists being told that her different way of loving makes her less present or less real in the relationship.",
+      "observable_state": "Awake, subdued, mildly exasperated but still physically close; no sleep is established.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
       "latest_response_content": [
-        "Says she may now understand why he clings so strongly to sex as the moment when he feels truly close to her.",
-        "Says she does not know whether an ordinary 'road' will ever exist.",
-        "Says it hurts her to hear him speak as if nothing exists between them outside those moments."
+        "Lightly objects to being cast as the duck in Arlequino's metaphor.",
+        "Says she will not tell him how to 'breathe' or insist he love exactly as she does.",
+        "Rejects the implication that because she loves differently she is only half-present with him."
       ],
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
@@ -88,5 +88,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1216_rena_philosophical_answer_rejected.md",
-  "next_transition_rule": "Continue from ~12:18 with both still in bed. Rena may respond personally and naturally to the 'only wings' claim, but do not skip to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:19 with both still in bed. Rena may let the conversation fall quiet or react further, but do not skip to dressing or departure in the same beat."
 }
