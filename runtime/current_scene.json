@@ -3,32 +3,32 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1104_rena_leaves_after_not_evening_exchange",
+  "scene_id": "t162_dwargon_corridor_1105_arlequino_follows_rena_to_work",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:04",
+    "display": "T+162 ~11:05",
     "day": 162,
-    "clock": "~11:04",
+    "clock": "~11:05",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
-      "Arlequino gave the students a compressed preparation window of no more than about one week, possibly less, and said he would clarify the concert date today or tomorrow.",
-      "The students continue self-organizing rehearsal and production work; Bren is building a practical schedule.",
-      "After the replayed private flirtation with Rena, Arlequino kissed her and told her quietly: 'милая .. Не вечером.'",
-      "Rena answers in character: she accepts the brief kiss, refuses to be kept from her three assigned tasks, and resumes leaving the hall now rather than postponing her work."
+      "Gvazimodo casting is complete and the students are self-organizing rehearsal/production under a maximum window of about one week, possibly less.",
+      "Rena left the student hall to begin the organizer search, Eurazania evacuation inquiry, and housing-option search.",
+      "Arlequino chose to follow Rena rather than remain with the student rehearsal organization.",
+      "While following her, Arlequino said he was coming with her and made an explicit sexual complaint that her errands could wait.",
+      "Rena does not abandon the three assignments; if Arlequino accompanies her, she treats that as accompaniment to the work rather than cancellation of it."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "зал для занятий / meeting hall with students",
+    "place": "corridor / route immediately outside the student hall, heading toward Rena's first guild/contact route",
     "certainty": "current_scene_confirmed"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Kissed Rena while she was about to leave for her assignments.",
-    "last_in_world_utterance": "- милая .. Не вечером.",
+    "last_in_world_action": "Followed Rena out of the student hall.",
+    "last_in_world_utterance": "Said he was going with Rena and that her errands could wait, using an explicit sexual formulation.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -39,58 +39,40 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "departing_now_for_own_assignments",
+      "presence": "present",
       "awake": true,
-      "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "at/near the hall exit after the brief kiss, then leaving to begin her work",
-      "observable_boundary": "She accepts affectionate kissing and private flirtation, but does not consent to public sexual escalation in the student hall and does not allow the flirtation to override her own plans.",
-      "last_observable_response": "Rena returns the brief kiss, gives Arlequino a level look, and quietly tells him that 'not evening' does not mean 'now'; if he wants to continue this, he can find her after she has actually done some of the work he gave her. She then turns and leaves for her assignments.",
+      "position": "walking away from the student hall toward her first practical contact route; Arlequino is following",
+      "autonomy_state": "She continues prioritizing the three tasks and does not treat Arlequino's sexual urgency as authority to cancel her plans.",
+      "observable_boundary": "Affection and flirtation are accepted contextually; she has already rejected public sexual escalation and retains full control over whether/when intimacy happens.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; independent work window begins now as she leaves the hall"
+      "assignment_results": "NONE_YET; first work window is beginning now"
     },
     "students": {
-      "group": "Dwargon students in the current hall scene",
+      "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "presence_note": "Do not silently upgrade attendance to all 22 without confirmation.",
-      "activity": "self-organizing post-casting rehearsal and production work under a compressed maximum preparation window of about one week, possibly less"
-    },
-    "bren": {
-      "name": "Bren",
-      "presence": "present",
-      "current_action": "turning Arlequino's broad directive into a practical rehearsal-availability sheet and production schedule",
-      "knowledge_boundary": "He knows the cast, compressed deadline and public dialogue in the hall; he does not automatically hear private exchanges between Arlequino and Rena."
+      "activity": "self-organizing rehearsal and production work; Bren continues scheduling without requiring Arlequino to remain physically present"
     }
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
-    "cast_ref": "runtime/canon/works/gvazimodo_cast_dwargon_t162.md",
-    "recovery_ref": "runtime/corrections/gvazimodo_casting_recovery_t162.md"
+    "cast_ref": "runtime/canon/works/gvazimodo_cast_dwargon_t162.md"
   },
   "meeting": {
-    "scheduled_time": "T+162 10:00",
-    "casting_status": "COMPLETED",
-    "current_status": "POST_CASTING_PRODUCTION_ORGANIZATION",
-    "current_subject": "rehearsal scheduling and practical staging organization under compressed deadline",
-    "rehearsal_directive": "Rehearse as much as realistically possible.",
+    "current_status": "ARLEQUINO_LEFT_STUDENT_HALL_WHILE_STUDENTS_CONTINUE_WORK",
     "concert_date": "NOT_YET_FIXED",
     "date_clarification_window": "Arlequino said today or tomorrow",
-    "maximum_preparation_window": "about one week from T+162 ~11:02, possibly less",
-    "manuscript": "present in the hall; exact custodian remains unresolved"
+    "maximum_preparation_window": "about one week from T+162 ~11:02, possibly less"
   },
   "family_home_context": {
     "known_shared_home": "18 Old Garden Street, Eurazania capital",
     "current_condition_known_to_player": "UNKNOWN",
     "rule": "Do not reveal hidden world-state about the home/capital until causally learned."
   },
-  "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
-  "latest_project_directive_event": "runtime/significant_events/t162_1102_gvazimodo_rehearsal_window_set.json",
-  "continuity_note": "The player-requested replay remains authoritative for the preceding Rena response. This scene advances from that replay with the player's exact new kiss and line.",
-  "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Arlequino remains user-controlled; NPCs/world continue independently."
 }
