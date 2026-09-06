@@ -3,20 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1103_rena_replay_response",
+  "scene_id": "t162_dwargon_student_hall_1104_rena_leaves_after_not_evening_exchange",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:03",
+    "display": "T+162 ~11:04",
     "day": 162,
-    "clock": "~11:03",
+    "clock": "~11:04",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "The Gvazimodo casting/role-distribution stage is already completed and must not be replayed.",
-      "Bren interrupted Arlequino and Rena to obtain a practical rehearsal decision.",
-      "Arlequino told the students to rehearse as much as realistically possible, said he expects to clarify the concert date today or tomorrow, and set a maximum preparation window of about one week, possibly less.",
-      "Immediately after that public directive, Arlequino leaned close and whispered a sexually explicit proposition to Rena. The player later clarified that this parenthetical segment was in-world and then explicitly requested the assistant response be replayed.",
-      "The prior assistant portrayal of Rena's response is superseded by the replay in this scene state.",
-      "In the replay, Rena reacts with private flirtation and a firm public-place boundary, then resumes her intention to leave for her three assigned tasks."
+      "Arlequino gave the students a compressed preparation window of no more than about one week, possibly less, and said he would clarify the concert date today or tomorrow.",
+      "The students continue self-organizing rehearsal and production work; Bren is building a practical schedule.",
+      "After the replayed private flirtation with Rena, Arlequino kissed her and told her quietly: 'милая .. Не вечером.'",
+      "Rena answers in character: she accepts the brief kiss, refuses to be kept from her three assigned tasks, and resumes leaving the hall now rather than postponing her work."
     ]
   },
   "location": {
@@ -28,10 +27,8 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "After addressing the students, leaned close to Rena and whispered a sexually explicit proposition.",
-    "last_in_world_utterance_public": "- это урок вам , репетируйте сколько влезет. Сегодня или завтра уточню дату концерта , у вас не более недели , может меньше",
-    "last_in_world_utterance_private_to_rena": "sexually explicit proposition; exact wording supplied by player in current chat, not repeated here",
-    "syntax_correction": "The parenthetical segment in that specific player message was explicitly clarified by the player as in-world action/utterance, overriding the ordinary parenthesis-OOC convention for that segment.",
+    "last_in_world_action": "Kissed Rena while she was about to leave for her assignments.",
+    "last_in_world_utterance": "- милая .. Не вечером.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -42,20 +39,20 @@
   "present_entities": {
     "rena": {
       "name": "Рена",
-      "presence": "present_then_departing_for_own_assignments",
+      "presence": "departing_now_for_own_assignments",
       "awake": true,
       "sleeping": false,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "close to Arlequino for the private exchange, then stepping back toward the hall exit",
-      "observable_boundary": "She accepts the flirtation and answers in kind, but does not consent to public sexual escalation in the student hall.",
-      "last_observable_response": "After hearing the private proposition, Rena pauses, gives Arlequino a knowing look, briefly catches his collar and quietly tells him he is trying very hard to keep her from reaching her errands; she says she will remember his boldness and that they can revisit it later in private, then releases him and turns back toward her work.",
+      "position": "at/near the hall exit after the brief kiss, then leaving to begin her work",
+      "observable_boundary": "She accepts affectionate kissing and private flirtation, but does not consent to public sexual escalation in the student hall and does not allow the flirtation to override her own plans.",
+      "last_observable_response": "Rena returns the brief kiss, gives Arlequino a level look, and quietly tells him that 'not evening' does not mean 'now'; if he wants to continue this, he can find her after she has actually done some of the work he gave her. She then turns and leaves for her assignments.",
       "current_private_emotion": "UNKNOWN",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; independent work window begins once she leaves the hall"
+      "assignment_results": "NONE_YET; independent work window begins now as she leaves the hall"
     },
     "students": {
       "group": "Dwargon students in the current hall scene",
@@ -67,7 +64,7 @@
       "name": "Bren",
       "presence": "present",
       "current_action": "turning Arlequino's broad directive into a practical rehearsal-availability sheet and production schedule",
-      "knowledge_boundary": "He knows the cast, compressed deadline and public dialogue in the hall; he does not automatically hear the private whisper to Rena."
+      "knowledge_boundary": "He knows the cast, compressed deadline and public dialogue in the hall; he does not automatically hear private exchanges between Arlequino and Rena."
     }
   },
   "gvazimodo_cast": {
@@ -93,7 +90,7 @@
   },
   "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
   "latest_project_directive_event": "runtime/significant_events/t162_1102_gvazimodo_rehearsal_window_set.json",
-  "continuity_note": "Player-requested replay supersedes the immediately prior assistant portrayal of Rena's response; no in-world rollback beyond that response is implied.",
+  "continuity_note": "The player-requested replay remains authoritative for the preceding Rena response. This scene advances from that replay with the player's exact new kiss and line.",
   "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Arlequino remains user-controlled; NPCs/world continue independently."
 }
