@@ -2,9 +2,9 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "as_of": {
-    "world_time": "T+162 ~10:07",
+    "world_time": "T+162 ~10:08",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Initialized from current scene, active canon rules, Rena character memory, and durable significant events."
+    "initialization_note": "Initialized from current scene, active canon rules, Rena character memory, durable significant events, and the casting-status continuity correction."
   },
   "processes": [
     {
@@ -14,7 +14,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Find an organizer/coordinator for concerts and broader creative/operational work.",
-      "current_state": "Just assigned while Rena is still physically present in the student-hall meeting; no off-screen work window has elapsed yet.",
+      "current_state": "Acknowledged at ~10:08 while Rena is still physically present in the student-hall meeting; no independent off-screen work window has elapsed yet.",
       "location_context": "Dwargon",
       "constraints": [
         "Scope is broader than one concert.",
@@ -30,6 +30,7 @@
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
       "source_refs": [
         "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
+        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
         "memory/characters/rena.json"
       ]
     },
@@ -40,7 +41,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Determine through causal in-world channels where Eurazania evacuees were sent and where they can currently be found.",
-      "current_state": "Just assigned; no investigation result is yet established.",
+      "current_state": "Acknowledged; Rena selected guilds and caravan/merchant networks as her initial route, but no investigation result is yet established.",
       "location_context": "Dwargon with inquiry targets potentially outside Dwargon",
       "constraints": [
         "No omniscient access to evacuation records.",
@@ -60,6 +61,7 @@
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
       "source_refs": [
         "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
+        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
         "memory/characters/rena.json",
         "runtime/world_state/information_frontier.json"
       ]
@@ -71,7 +73,7 @@
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Begin gathering realistic new-home options for Rena and Arlequino.",
-      "current_state": "Just assigned; no property has been selected, reserved or purchased.",
+      "current_state": "Acknowledged; Rena will gather options but explicitly will not reserve or purchase unilaterally under the current delegation.",
       "location_context": "Dwargon / destination not yet fixed",
       "constraints": [
         "Exact city is unresolved.",
@@ -91,35 +93,40 @@
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
       "source_refs": [
         "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
+        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
         "memory/characters/rena.json"
       ]
     },
     {
       "process_id": "gvazimodo_dwargon_staging_t162",
       "category": "CREATIVE_PROJECT",
-      "status": "IN_PROGRESS",
+      "status": "IN_PROGRESS_POST_CASTING",
       "responsible": ["arlequino", "dwargon_students"],
       "location_context": "Dwargon",
       "objective": "Develop and stage «Гвазимодо» with the Dwargon students.",
-      "current_state": "Casting/discussion meeting is in progress at T+162 ~10:07; manuscript is present; exact current custodian is unresolved.",
+      "current_state": "Role distribution/casting was already completed before the current frame. Partial recovered cast: Orenk→Frollo; Kelm→Phoebus; Holn→Gvazimodo. The rest of the exact mapping is not currently recovered. The project is now in post-casting staging/preparation/rehearsal territory, with the exact immediate next agenda partially unresolved.",
       "constraints": [
         "Arlequino's deliberate creative choices remain player-controlled.",
         "Students are individuals, not a single hive reaction.",
-        "Casting, rehearsals, preparation, props/costumes and staging require time and labor.",
+        "Do not replay casting as if it were unfinished.",
+        "Do not invent unrecovered student-role assignments.",
+        "Preparation, props/costumes, rehearsal, crowd/extras and staging require time and labor.",
         "Do not assume all 22 students are physically present unless confirmed."
       ],
       "dependencies": [
-        "Current meeting resolution.",
-        "Role/casting decisions and rehearsal organization."
+        "Post-casting rehearsal/staging organization.",
+        "Recovery or fresh confirmation of any missing exact role assignments only when actually needed."
       ],
       "advance_when": [
-        "The current meeting advances.",
+        "The current post-casting meeting advances.",
         "Time passes during which students have causally assigned rehearsal/preparation work."
       ],
       "next_review": "Every substantial transition related to the student project.",
       "player_visibility": "PLAYER_VISIBLE_PROJECT",
       "source_refs": [
-        "runtime/current_scene.json"
+        "runtime/current_scene.json",
+        "runtime/corrections/gvazimodo_casting_recovery_t162.md",
+        "runtime/significant_events/t160_nineteen_student_introductions.md"
       ]
     },
     {
