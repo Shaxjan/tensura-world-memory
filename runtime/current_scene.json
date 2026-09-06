@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_after_rena_acknowledgement",
+  "scene_id": "t162_dwargon_student_hall_post_casting_after_rena_acknowledgement",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~10:08",
@@ -11,8 +11,9 @@
     "clock": "~10:08",
     "precision": "approximate",
     "recent_elapsed_events": [
+      "The Gvazimodo casting/role-distribution stage had already been completed before this current frame; earlier text treating casting as still in progress was a continuity error.",
       "Arlequino performed the full song 'Легион' before the scheduled meeting time.",
-      "The student meeting began around 10:00 and continued through conversation with Rena and the students.",
+      "The student meeting continued around 10:00 after the already-completed casting stage.",
       "Arlequino delegated organizer search, Eurazania evacuation inquiry, and new-home option gathering to Rena.",
       "Rena acknowledged all three tasks, chose guild/caravan networks as an initial evacuation-information route, limited housing work to option gathering without unilateral purchase, and stated that the current meeting should be finished first."
     ]
@@ -60,13 +61,23 @@
       "exact_present_count": null,
       "presence_note": "Earlier scene established almost all 22 were already in the hall; do not silently upgrade that to all 22.",
       "named_confirmed_in_recent_scene": ["Фира", "Майра", "Брен", "Сели"],
-      "activity": "meeting/casting discussion for 'Гвазимодо' remains in progress; attention returns to the meeting after the brief Rena-Arlequino exchange"
+      "activity": "post-casting meeting / staging discussion; exact immediate next agenda after the Rena-Arlequino exchange is not fully reconstructed"
     }
+  },
+  "gvazimodo_cast": {
+    "casting_status": "COMPLETED_BEFORE_CURRENT_FRAME",
+    "recovery_ref": "runtime/corrections/gvazimodo_casting_recovery_t162.md",
+    "recovered_assignments": [
+      {"student": "Orenk", "role": "Claude Frollo", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL"},
+      {"student": "Kelm", "role": "Phoebus", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"},
+      {"student": "Holn", "role": "Gvazimodo", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"}
+    ],
+    "remaining_assignments": "UNKNOWN_NOT_RECOVERED"
   },
   "meeting": {
     "scheduled_time": "T+162 10:00",
-    "status": "IN_PROGRESS",
-    "subject": "casting/discussion for 'Гвазимодо'",
+    "status": "POST_CASTING_IN_PROGRESS",
+    "subject": "post-casting staging/rehearsal discussion for 'Гвазимодо'; exact immediate agenda partially unresolved",
     "manuscript": "present in the hall; exact student custodian remains unresolved"
   },
   "family_home_context": {
@@ -77,6 +88,7 @@
   },
   "durable_assignment_event": "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
   "latest_autonomous_event": "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
+  "continuity_correction": "runtime/corrections/gvazimodo_casting_recovery_t162.md",
   "creative_exposure_rule": "Consult memory/creative_exposure/ before novelty/recognition reactions.",
   "next_transition_rule": "next_scene = this_current_scene + exact player input + causally justified autonomous-world delta. Unchanged fields are inherited verbatim."
 }
