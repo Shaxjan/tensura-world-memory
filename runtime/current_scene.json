@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1214_sex_as_felt_closeness_confession",
+  "scene_id": "t162_dwargon_hotel_room_1215_cloud_and_wings_metaphor",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:14",
+    "display": "T+162 ~12:15",
     "day": 162,
-    "clock": "~12:14",
+    "clock": "~12:15",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "The scene was replayed to preserve normal player intervention windows after a prior assistant over-advance.",
-      "Arlequino and Rena remain lying together during a serious conversation about how differently they experience love, absence and closeness.",
-      "Rena has said she misses Arlequino when he is absent but does not lose the rest of her life or identity because of that.",
-      "Arlequino now smiles sadly and says he misses Rena even while she is in his arms, and explains that he loves sex partly because during it he can feel, for a moment, that she is truly with him.",
-      "Rena takes the confession seriously. She remains physically near him and responds that it hurts to hear that ordinary closeness can still feel like absence to him; she refuses to treat sex as the only proof of her presence and asks him to explain what 'being with him' means outside sex.",
+      "Arlequino and Rena remain lying together during a serious conversation about emotional distance, love, absence and closeness.",
+      "Rena asked what 'being with him' means outside sex after Arlequino said sex is one of the few times he fully feels her presence.",
+      "Arlequino says he does not yet know the answer and uses a metaphor: Rena feels like a cloud in the sky while he is on the ground, and sex is like temporary wings that lift him up to her.",
+      "Rena remains physically close and takes the metaphor seriously. She rejects being placed permanently above or beyond him, and frames the problem as something they should learn to bridge in ordinary shared life rather than relying on sex as the sole route to closeness.",
       "Only about one minute passes; neither has begun dressing, cleaning up, unlocking the door, or leaving."
     ]
   },
@@ -33,9 +33,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Smiled sadly while remaining beside Rena during the conversation.",
-    "last_in_world_utterance": "- в этом и дело... Я скучаю по тебе даже когда ты в моих объятиях любимая ... Почему я люблю секс? Потому что в это время я чувствую хоть на мгновение , что ты со мной .",
-    "current_declared_emotional_state": "sad; describing persistent emotional distance even during physical closeness",
+    "last_in_world_action": "Remained beside Rena during the relationship conversation.",
+    "last_in_world_utterance": "- пока не знаю ответа , милая, будто ты на небе как облако , а я на земле . а секс как крылья , взятые на время , поднимают меня к тебе .",
+    "current_declared_emotional_state": "sad, vulnerable, describing emotional distance through a sky/cloud and temporary wings metaphor",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -50,15 +50,10 @@
       "awake": true,
       "position": "lying/resting beside Arlequino on the bed, remaining close during the serious conversation",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She can be affected by Arlequino's confession, reassure him that she is present, and challenge the idea that sex is the only moment when her presence counts. She does not promise self-erasure or constant availability.",
+      "autonomy_state": "Rena remains autonomous. She can be moved by Arlequino's metaphor without agreeing that she is inherently unreachable or that sex must remain the only bridge. She may propose ordinary forms of closeness while preserving her independent life.",
       "observable_state": "Awake, serious, attentive and physically close; no sleep is established.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
-      "latest_response_content": [
-        "Says it hurts to hear that he can hold her and still feel that she is not truly with him.",
-        "States that she is with him now not merely bodily: she stayed, listened, chose him and is sharing the moment with him.",
-        "Rejects sex as the only reliable proof of closeness.",
-        "Asks what 'being with him' would mean outside sex so she can understand the gap rather than guess."
-      ],
+      "latest_response_intent": "Reject being idealized as a distant cloud; tell Arlequino she is here on the same ground with him, and suggest that if ordinary closeness feels insufficient they need to discover other ways to meet emotionally rather than making sex the sole bridge.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -90,5 +85,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1158_replay_restore_player_intervention_window.md",
-  "next_transition_rule": "Continue from ~12:14 with both still in bed during the unresolved relationship conversation. Arlequino remains user-controlled. Rena has asked what 'being with him' means outside sex; do not skip to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:15 with both still in bed during the unresolved relationship conversation. Arlequino remains user-controlled. Rena may answer the cloud/wings metaphor directly; do not skip to dressing or departure in the same beat."
 }
