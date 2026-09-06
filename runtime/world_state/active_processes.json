@@ -4,7 +4,7 @@
   "as_of": {
     "world_time": "T+162 ~10:08",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Initialized from current scene, active canon rules, Rena character memory, durable significant events, and the casting-status continuity correction."
+    "initialization_note": "Initialized from current scene, active canon rules, Rena character memory, durable significant events, casting-status correction, and finalized delegated cast."
   },
   "processes": [
     {
@@ -16,23 +16,11 @@
       "objective": "Find an organizer/coordinator for concerts and broader creative/operational work.",
       "current_state": "Acknowledged at ~10:08 while Rena is still physically present in the student-hall meeting; no independent off-screen work window has elapsed yet.",
       "location_context": "Dwargon",
-      "constraints": [
-        "Scope is broader than one concert.",
-        "Exact authority, compensation and contract terms are unresolved.",
-        "Rena chooses her own method consistent with her character and knowledge.",
-        "Do not fabricate an organizer acceptance before contacts and time exist."
-      ],
-      "advance_when": [
-        "Rena gets a plausible independent work window after the current meeting.",
-        "Enough time passes for contacts, venue/arts networks, guilds, former organizers or other plausible channels to be approached."
-      ],
+      "constraints": ["Scope is broader than one concert.","Exact authority, compensation and contract terms are unresolved.","Rena chooses her own method consistent with her character and knowledge.","Do not fabricate an organizer acceptance before contacts and time exist."],
+      "advance_when": ["Rena gets a plausible independent work window after the current meeting.","Enough time passes for contacts, venue/arts networks, guilds, former organizers or other plausible channels to be approached."],
       "next_review": "At the next substantial time jump or scene where Rena has had independent time to act.",
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
-      "source_refs": [
-        "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
-        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
-        "memory/characters/rena.json"
-      ]
+      "source_refs": ["runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json","runtime/significant_events/t162_1008_rena_acknowledges_delegations.json","memory/characters/rena.json"]
     },
     {
       "process_id": "rena_investigate_eurazania_evacuees_t162",
@@ -43,28 +31,12 @@
       "objective": "Determine through causal in-world channels where Eurazania evacuees were sent and where they can currently be found.",
       "current_state": "Acknowledged; Rena selected guilds and caravan/merchant networks as her initial route, but no investigation result is yet established.",
       "location_context": "Dwargon with inquiry targets potentially outside Dwargon",
-      "constraints": [
-        "No omniscient access to evacuation records.",
-        "Results require officials, guilds, refugees, travelers, messengers, letters, merchants or other plausible channels.",
-        "Exact evacuee distribution remains unresolved until causally learned.",
-        "Partial, conflicting or outdated answers are possible."
-      ],
-      "dependencies": [
-        "Access to people or institutions carrying post-Eurazania information.",
-        "Travel or message delay where sources are not local."
-      ],
-      "advance_when": [
-        "Rena has time to begin asking/dispatching inquiries.",
-        "Relevant post-destruction information reaches Dwargon or a contact she can access."
-      ],
+      "constraints": ["No omniscient access to evacuation records.","Results require officials, guilds, refugees, travelers, messengers, letters, merchants or other plausible channels.","Exact evacuee distribution remains unresolved until causally learned.","Partial, conflicting or outdated answers are possible."],
+      "dependencies": ["Access to people or institutions carrying post-Eurazania information.","Travel or message delay where sources are not local."],
+      "advance_when": ["Rena has time to begin asking/dispatching inquiries.","Relevant post-destruction information reaches Dwargon or a contact she can access."],
       "next_review": "After meaningful elapsed time and/or first causal contact with an information source.",
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
-      "source_refs": [
-        "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
-        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
-        "memory/characters/rena.json",
-        "runtime/world_state/information_frontier.json"
-      ]
+      "source_refs": ["runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json","runtime/significant_events/t162_1008_rena_acknowledges_delegations.json","memory/characters/rena.json","runtime/world_state/information_frontier.json"]
     },
     {
       "process_id": "rena_new_home_search_t162",
@@ -75,27 +47,12 @@
       "objective": "Begin gathering realistic new-home options for Rena and Arlequino.",
       "current_state": "Acknowledged; Rena will gather options but explicitly will not reserve or purchase unilaterally under the current delegation.",
       "location_context": "Dwargon / destination not yet fixed",
-      "constraints": [
-        "Exact city is unresolved.",
-        "Exact budget is unresolved; family funds are only approximately known in current overlay.",
-        "Final purchase decision is not delegated by the existing instruction.",
-        "Property availability, price, ownership, access and transaction time must be respected."
-      ],
-      "dependencies": [
-        "Clarify viable location(s) through circumstances and family needs.",
-        "Actual market/property contacts and sufficient elapsed time."
-      ],
-      "advance_when": [
-        "Rena has an independent work window.",
-        "She can plausibly contact landlords, sellers, brokers, guilds, officials or local acquaintances."
-      ],
+      "constraints": ["Exact city is unresolved.","Exact budget is unresolved; family funds are only approximately known in current overlay.","Final purchase decision is not delegated by the existing instruction.","Property availability, price, ownership, access and transaction time must be respected."],
+      "dependencies": ["Clarify viable location(s) through circumstances and family needs.","Actual market/property contacts and sufficient elapsed time."],
+      "advance_when": ["Rena has an independent work window.","She can plausibly contact landlords, sellers, brokers, guilds, officials or local acquaintances."],
       "next_review": "At next meaningful time jump with Rena free to act.",
       "player_visibility": "PLAYER_KNOWS_ASSIGNMENT_NOT_RESULT",
-      "source_refs": [
-        "runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json",
-        "runtime/significant_events/t162_1008_rena_acknowledges_delegations.json",
-        "memory/characters/rena.json"
-      ]
+      "source_refs": ["runtime/significant_events/t162_1007_rena_delegation_organizer_evacuation_house.json","runtime/significant_events/t162_1008_rena_acknowledges_delegations.json","memory/characters/rena.json"]
     },
     {
       "process_id": "gvazimodo_dwargon_staging_t162",
@@ -104,30 +61,13 @@
       "responsible": ["arlequino", "dwargon_students"],
       "location_context": "Dwargon",
       "objective": "Develop and stage «Гвазимодо» with the Dwargon students.",
-      "current_state": "Role distribution/casting was already completed before the current frame. Partial recovered cast: Orenk→Frollo; Kelm→Phoebus; Holn→Gvazimodo. The rest of the exact mapping is not currently recovered. The project is now in post-casting staging/preparation/rehearsal territory, with the exact immediate next agenda partially unresolved.",
-      "constraints": [
-        "Arlequino's deliberate creative choices remain player-controlled.",
-        "Students are individuals, not a single hive reaction.",
-        "Do not replay casting as if it were unfinished.",
-        "Do not invent unrecovered student-role assignments.",
-        "Preparation, props/costumes, rehearsal, crowd/extras and staging require time and labor.",
-        "Do not assume all 22 students are physically present unless confirmed."
-      ],
-      "dependencies": [
-        "Post-casting rehearsal/staging organization.",
-        "Recovery or fresh confirmation of any missing exact role assignments only when actually needed."
-      ],
-      "advance_when": [
-        "The current post-casting meeting advances.",
-        "Time passes during which students have causally assigned rehearsal/preparation work."
-      ],
+      "current_state": "Casting is finalized for continuity. Recovered player-memory roles: Orenk→Frollo, Kelm→Phoebus, Holn→Gvazimodo, Arin→Esmeralda, Nemi→Fleur-de-Lys, Dain→tree as punishment. All other student roles were finalized under explicit player delegation and are stored in runtime/canon/works/gvazimodo_cast_dwargon_t162.md. The project is now in post-casting staging/preparation/rehearsal territory.",
+      "constraints": ["Arlequino's deliberate creative choices remain player-controlled except where the player explicitly delegated the missing cast reconstruction.","Students are individuals, not a single hive reaction.","Do not replay casting as unfinished.","Use the finalized cast file as the role authority unless the player later changes a role.","Dain remains the tree as punishment unless explicitly changed.","Preparation, props/costumes, rehearsal, crowd/extras and staging require time and labor.","Do not assume all 22 students are physically present unless confirmed."],
+      "dependencies": ["Post-casting rehearsal/staging organization."],
+      "advance_when": ["The current post-casting meeting advances.","Time passes during which students have causally assigned rehearsal/preparation work."],
       "next_review": "Every substantial transition related to the student project.",
       "player_visibility": "PLAYER_VISIBLE_PROJECT",
-      "source_refs": [
-        "runtime/current_scene.json",
-        "runtime/corrections/gvazimodo_casting_recovery_t162.md",
-        "runtime/significant_events/t160_nineteen_student_introductions.md"
-      ]
+      "source_refs": ["runtime/current_scene.json","runtime/canon/works/gvazimodo_cast_dwargon_t162.md","runtime/corrections/gvazimodo_casting_recovery_t162.md","runtime/significant_events/t160_nineteen_student_introductions.md"]
     },
     {
       "process_id": "eurazania_post_destruction_aftermath_t162",
@@ -139,24 +79,11 @@
       "location_context": "Eurazania and connected regions",
       "objective": "Simulate the continuing material, social, political and informational consequences of the capital's destruction.",
       "current_state": "The T+161 destruction anchor has occurred world-side. Exact refugee distribution, exact home-level damage and exact information reach into Dwargon remain unresolved unless separately established.",
-      "constraints": [
-        "Do not reveal hidden world-side facts directly to Arlequino.",
-        "Do not invent exact casualty numbers or refugee destinations.",
-        "Travel, lodging, trade, administration and rumor systems may change before the player receives a full explanation.",
-        "Carrion's true survival remains restricted until canonically revealed."
-      ],
-      "advance_when": [
-        "World time advances.",
-        "Refugees, officials, traders, guilds and messengers move.",
-        "The player or Rena interacts with affected networks."
-      ],
+      "constraints": ["Do not reveal hidden world-side facts directly to Arlequino.","Do not invent exact casualty numbers or refugee destinations.","Travel, lodging, trade, administration and rumor systems may change before the player receives a full explanation.","Carrion's true survival remains restricted until canonically revealed."],
+      "advance_when": ["World time advances.","Refugees, officials, traders, guilds and messengers move.","The player or Rena interacts with affected networks."],
       "next_review": "Every substantial time jump while aftermath remains relevant, especially travel, housing, trade, refugee or political scenes.",
       "player_visibility": "WORLD_SIDE_EVENT_NOT_YET_CAUSALLY_CONFIRMED_TO_PLAYER_IN_CURRENT_SCENE",
-      "source_refs": [
-        "runtime/rules/CANON_TIMELINE_SYNC_v1.md",
-        "runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json",
-        "runtime/world_state/information_frontier.json"
-      ]
+      "source_refs": ["runtime/rules/CANON_TIMELINE_SYNC_v1.md","runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json","runtime/world_state/information_frontier.json"]
     }
   ],
   "maintenance": {
