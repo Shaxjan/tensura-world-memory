@@ -65,16 +65,34 @@
     }
   },
   "gvazimodo_cast": {
-    "casting_status": "COMPLETED_BEFORE_CURRENT_FRAME",
+    "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
+    "cast_ref": "runtime/canon/works/gvazimodo_cast_dwargon_t162.md",
     "recovery_ref": "runtime/corrections/gvazimodo_casting_recovery_t162.md",
-    "recovered_assignments": [
-      {"student": "Orenk", "role": "Claude Frollo", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL"},
-      {"student": "Kelm", "role": "Phoebus", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"},
-      {"student": "Holn", "role": "Gvazimodo", "certainty": "HIGH_CONFIDENCE_NAME_NORMALIZATION"},
-      {"student": "Arin", "role": "Esmeralda", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL"},
-      {"student": "Nemi", "role": "Fleur-de-Lys", "certainty": "CONFIRMED_BY_PLAYER_CURRENT_RECALL_WITH_ROLE_NAME_NORMALIZATION"}
-    ],
-    "remaining_assignments": "UNKNOWN_NOT_RECOVERED"
+    "provenance_rule": "Some roles were recovered from player memory; the remainder were assigned now under explicit player delegation. See cast_ref for per-role provenance.",
+    "assignments": [
+      {"student":"Yora","role":"festival crowd leader / street ringleader"},
+      {"student":"Seli","role":"church scribe / formal clerk"},
+      {"student":"Orn","role":"street musician / festival improviser"},
+      {"student":"Bren","role":"Gringoire"},
+      {"student":"Kera","role":"guard lieutenant"},
+      {"student":"Dain","role":"tree","note":"punishment role; keep unless player changes it"},
+      {"student":"Lessa","role":"church cantor / ceremonial singer"},
+      {"student":"Varr","role":"executioner"},
+      {"student":"Nemi","role":"Fleur-de-Lys"},
+      {"student":"Teren","role":"guard / tower patrol"},
+      {"student":"Rika","role":"court/church instructor-witness"},
+      {"student":"Holn","role":"Gvazimodo"},
+      {"student":"Vessa","role":"outcast-quarter folk singer"},
+      {"student":"Kelm","role":"Phoebus"},
+      {"student":"Arin","role":"Esmeralda"},
+      {"student":"Dorel","role":"bell-tower sound keeper / sacristan"},
+      {"student":"Mina","role":"Clopin"},
+      {"student":"Orenk","role":"Claude Frollo"},
+      {"student":"Jessa","role":"young outcast performer / Esmeralda's companion"},
+      {"student":"Fira","role":"church-ensemble lead"},
+      {"student":"Tia","role":"outcast-ensemble lead"},
+      {"student":"Mayra","role":"city/crowd-ensemble lead"}
+    ]
   },
   "meeting": {
     "scheduled_time": "T+162 10:00",
