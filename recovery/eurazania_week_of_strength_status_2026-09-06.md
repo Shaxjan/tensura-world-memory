@@ -19,6 +19,54 @@ Confirmed plan elements:
 - **Rena** and Borga both heard the public T+130 promotion;
 - the collective poem about Eurazania created at the first poetry evening on T+131 was approved by those present for future festival use.
 
+## T+131 — citywide promotion and operating policy
+
+A surviving fast-play checkpoint covers Arlequino's public campaign across several populated districts of the Eurazania capital through approximately **18:35**.
+
+Confirmed:
+- visitor entry to the planned festival: **free**;
+- spectator seating: **free**;
+- intended commercial revenue: rents/fees from traders and similar commercial participants, not admission tickets;
+- expense authorization cap: **up to 10g**, explicitly a maximum authorization and not a spending target;
+- **Meira** was authorized to publicize the festival and invite trusted organizer contacts;
+- **Borga** and Meira could coordinate tournament footprint/general festival layout directly;
+- Arlequino street-performed through multiple districts and repeatedly promoted the festival;
+- confirmed songs in that T+131 street campaign: **«Герои»**, **«Оракул»**, **«Тьмы Князь»**;
+- gross street-performance income in that campaign: **+1g38s20c**;
+- exact citywide awareness percentage remained **UNKNOWN**.
+
+Primary checkpoint:
+- `fd6fb55e70dcd0e902b6eca69075819571a97dc9` — `Save T+131 evening fast-play checkpoint`.
+
+This is public-promotion evidence, not proof that the later festival occurred.
+
+## T+131 ~18:36 — performer recruitment and the “hundreds of thousands” claim
+
+A direct saved T+131 recruitment checkpoint explains the later memory anchor about an enormous festival audience.
+
+Confirmed public recruitment:
+- announcement time: approximately **T+131 ~18:36**;
+- eligible performers: musicians, poets, and authors/performers of songs, poems, or narrative verse suitable for the festival;
+- participation fee for performers: **none / free performance opportunity**;
+- Arlequino would evaluate whether submitted material was suitable.
+
+Crucial crowd-size distinction:
+- Arlequino **advertised the opportunity to perform before “hundreds of thousands of spectators”**;
+- the durable checkpoint itself explicitly classifies this as **his promotional claim, not a guaranteed attendance fact**.
+
+Primary checkpoint:
+- `813b937e988da957d1f9b1805db5214c46c7f8a3` — `Save T+131 performer recruitment announcement`.
+
+Therefore:
+
+`HUNDREDS_OF_THOUSANDS = CONFIRMED PUBLIC PROMOTIONAL CLAIM`
+
+but
+
+`HUNDREDS_OF_THOUSANDS = NOT CONFIRMED ACTUAL ATTENDANCE`.
+
+This is currently the best source explanation for the remembered ~100,000 / “сотни тысяч” figure.
+
 ## T+153 — festival still future
 
 A T+153 checkpoint/commit describing the plan to travel to Tempest **after the festival** is not evidence that the festival had already occurred. Its chronology means the opposite: at T+153 Arlequino still intended to remain in Eurazania until the festival was over and only then leave with Rena.
@@ -97,21 +145,32 @@ Classification: `DERAILED_BY_WAR / COMPLETION_UNCONFIRMED`.
 
 ## Remembered audience figures: ~18,000 / ~100,000 / hundreds of thousands
 
-Status: `UNSUPPORTED FOR THIS FESTIVAL`.
+Status: `PROMOTIONAL_CLAIM_FOUND / ACTUAL_ATTENDANCE_UNCONFIRMED`.
 
-Repository/code/commit searches performed during recovery found no direct festival source containing:
-- `18,000` as a Week of Strength audience;
-- `100,000` as a Week of Strength audience;
-- a confirmed “hundreds of thousands” festival crowd.
+Recovery now distinguishes three different things:
 
-The strongest direct large-crowd Eurazania source currently recovered is the **T+154 refugee war-song response**, which says **thousands** and explicitly does not establish an exact population.
+1. **~18,000**
+   - not supported as the T+129 free-concert audience; that event is directly recovered at roughly 300–320 late in the concert and ~295 at end;
+   - not currently tied by direct source to the Week of Strength.
 
-Do not migrate any remembered larger number into festival canon unless a direct historical source is later recovered.
+2. **~100,000 / hundreds of thousands**
+   - a source origin **has now been found**: T+131 performer recruitment;
+   - Arlequino publicly advertised the chance to perform before **hundreds of thousands of spectators**;
+   - the same saved checkpoint explicitly labels this as a **promotional claim, not guaranteed attendance**;
+   - no completed festival audience count is recovered.
+
+3. **T+154 wartime refugee crowd**
+   - direct source says **thousands of refugees**;
+   - exact population/count remains unspecified;
+   - this is a separate wartime public event, not the festival.
+
+Do not migrate any promotional crowd claim into actual-attendance canon unless a direct completed-event source is later recovered.
 
 ## Canon-use rule
 
 For future simulation:
 - refer to the Week of Strength as a **planned/publicly promoted but unconfirmed/derailed event**;
 - characters who heard the promotions may remember the project and intended rules;
-- do not let NPCs remember a winner, completed tournament, Carrion title fight, festival crowd size, or closing ceremony unless another direct source is found;
+- characters who heard T+131 performer recruitment may remember Arlequino publicly promising/advertising a potential audience of **hundreds of thousands**, but this remains his promotional statement rather than observed attendance;
+- do not let NPCs remember a winner, completed tournament, Carrion title fight, actual festival crowd size, or closing ceremony unless another direct source is found;
 - the T+154 wartime gathering is a **separate public event** and must not be merged into the festival.
