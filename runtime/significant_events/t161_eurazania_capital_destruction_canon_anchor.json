@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "t161_eurazania_capital_destruction_canon_anchor",
+  "time": {
+    "display": "T+161",
+    "precision": "day_anchor_only"
+  },
+  "location": "Eurazania capital",
+  "event_class": "CANON_WORLD_EVENT",
+  "world_side_status": "OCCURRED",
+  "basis": {
+    "rule": "runtime/rules/CANON_TIMELINE_SYNC_v1.md",
+    "locked_anchor": "T+161 Day of Destruction: Carrion versus Milim; Drago Nova destroys the Eurazania capital",
+    "divergence_check": "No causally sufficient recorded divergence superseding this locked anchor was found at initialization of the world-process registry."
+  },
+  "world_effects_safe_to_assert": [
+    "Eurazania capital is destroyed by the T+161 canon anchor.",
+    "Carrion is publicly presumed defeated/dead afterward; his true survival remains restricted canon knowledge until revealed.",
+    "post-destruction refugee, transport, political, housing, trade and information consequences continue beyond the event."
+  ],
+  "not_resolved_here": [
+    "exact condition of 18 Old Garden Street",
+    "exact destinations and current distribution of all Eurazania evacuees",
+    "exact casualty totals",
+    "exact current public knowledge in Dwargon",
+    "Arlequino's personal knowledge of the destruction"
+  ],
+  "player_knowledge": {
+    "status": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
+    "rule": "Do not narrate this event as known to Arlequino until an exposure event occurs through a plausible information channel."
+  },
+  "propagation_ref": "runtime/world_state/information_frontier.json"
+}
