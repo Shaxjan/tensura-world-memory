@@ -3,25 +3,24 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_route_to_hotel_1108_jealousy_declaration",
+  "scene_id": "t162_dwargon_hotel_arrival_1112",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~11:08",
+    "display": "T+162 ~11:12",
     "day": 162,
-    "clock": "~11:08",
+    "clock": "~11:12",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting is complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Rena agreed by her own choice to a brief return to the couple's current Dwargon hotel before resuming her three errands later today.",
-      "Arlequino and Rena are walking hand-in-hand toward the hotel.",
-      "Arlequino playfully slapped Rena on the butt and, in an excited/irritated tone, declared that he is jealous of everything around her.",
-      "Arlequino quoted an earlier romantic line: he is jealous even of her clothes and the air, forgiving the air because it keeps her alive and the clothes because they hide her from other eyes.",
-      "Rena's response must preserve both affection and autonomy: jealousy is not ownership or obedience."
+      "Arlequino and Rena continued walking hand-in-hand toward the hotel after the jealousy exchange.",
+      "No new external information or assignment result was acquired during the short walk.",
+      "They have now reached the entrance/interior threshold of their current Dwargon hotel; exact hotel name/address remains unresolved."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "walking route toward the couple's current hotel lodging",
+    "place": "current hotel lodging; at/just inside the entrance, heading toward their room",
     "certainty": "current_scene_confirmed",
     "lodging_type": "hotel",
     "lodging_exact_name_or_address": "UNKNOWN"
@@ -30,8 +29,8 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Held Rena's hand while walking toward the hotel and playfully slapped her butt.",
-    "last_in_world_utterance": "Declared intense jealousy and repeated his earlier poetic line about being jealous of her clothes and the air, forgiving them because air keeps her alive and clothes shield her from other people's gaze.",
+    "last_in_world_action": "Continued walking with Rena toward the hotel.",
+    "last_in_world_utterance": "None after the jealousy declaration; latest player input simply continues the walk.",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -45,7 +44,7 @@
       "presence": "present",
       "awake": true,
       "clothing_state": "dressed; wearing Arlequino's dark-green cloak with long collar",
-      "position": "walking hand-in-hand with Arlequino toward their hotel",
+      "position": "with Arlequino at the hotel entrance/interior threshold, heading toward their room",
       "autonomy_state": "She chose the brief hotel detour but still intends to resume her errands later today; affection does not imply obedience.",
       "formal_eurazania_legal_status": "UNKNOWN",
       "current_private_emotion": "UNKNOWN",
