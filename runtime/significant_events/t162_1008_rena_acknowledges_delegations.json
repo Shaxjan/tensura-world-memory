@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "event_id": "t162_1008_rena_acknowledges_delegations",
+  "time": "T+162 ~10:08",
+  "location": "Дваргон, зал для занятий",
+  "event_class": "NPC_AUTONOMOUS_RESPONSE",
+  "participants": ["rena", "arlequino", "dwargon_students_present"],
+  "source_context": "Immediate continuation of runtime/current_scene.json after Arlequino delegated organizer search, Eurazania evacuation inquiry, and new-home search to Rena.",
+  "rena_response": "Организатора найду. По людям Эуразании начну с гильдий и караванщиков — там быстрее всего всплывут маршруты эвакуации. По дому посмотрю варианты, но ничего не буду бронировать или покупать без нас обоих. Сначала закончим здесь.",
+  "durable_effects": [
+    "Rena explicitly acknowledges all three delegated tasks.",
+    "For the evacuation inquiry, her initial chosen channels are guilds and caravan/merchant networks; this is a plan, not a completed investigation.",
+    "For housing, she will gather options but will not reserve or purchase property unilaterally under the current delegation.",
+    "She prioritizes finishing the current student-hall meeting before beginning off-screen work."
+  ],
+  "knowledge_boundary": "No new fact about Eurazania evacuee destinations, the destroyed capital, Carrion, or the Old Garden Street home is learned in this event.",
+  "player_agency": "No new deliberate action, thought, feeling, or speech is assigned to Arlequino."
+}
