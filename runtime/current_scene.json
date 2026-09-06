@@ -3,21 +3,22 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1210_tender_happiness_exchange",
+  "scene_id": "t162_dwargon_hotel_room_1211_sometimes_reassurance",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:10",
+    "display": "T+162 ~12:11",
     "day": 162,
-    "clock": "~12:10",
+    "clock": "~12:11",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "The scene was replayed to preserve normal player intervention windows after a prior assistant over-advance.",
-      "Arlequino embraced Rena and told her to rest, saying they would go do her errands together afterward.",
-      "Arlequino remained lying beside Rena, calmly playing with her hair, explicitly serene, and joked that apparently sex with her was all he needed to become peaceful.",
-      "Arlequino now leans down and kisses Rena softly twice, drawing back between the kisses, and tells her that for happiness this is enough for him: her.",
-      "Only about one additional minute passes; neither has yet begun getting up, dressing, cleaning up, unlocking the door, or leaving."
+      "Arlequino embraced Rena, told her to rest, and offered to go do her errands together afterward.",
+      "Arlequino remained lying beside Rena, playing with her hair, explicitly serene, and told her that for happiness he needs her.",
+      "Rena answered that this can be enough for her too sometimes. Arlequino reacts softly and plaintively to the word 'sometimes'.",
+      "Rena reassures him without abandoning her independent priorities or turning the exchange into a promise of constant availability.",
+      "Only about one minute passes; both remain in bed and no dressing, cleanup, door movement, or departure has begun."
     ]
   },
   "location": {
@@ -32,9 +33,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Leaned down and kissed Rena softly twice, drawing back between the kisses.",
-    "last_in_world_utterance": "- мне для счастья этого хватит... Тебя милая.",
-    "current_declared_emotional_state": "умиротворен",
+    "last_in_world_action": "Remained lying beside Rena during the quiet rest.",
+    "last_in_world_utterance": "- иногда 🥲",
+    "current_declared_emotional_state": "умиротворен; momentarily plaintive/teasing about Rena saying 'sometimes'",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -49,9 +50,9 @@
       "awake": true,
       "position": "lying/resting beside Arlequino on the bed during the quiet post-intimacy rest",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She has accepted a short rest and still intends to resume the three errands later today, with Arlequino having offered to accompany her. The tender exchange may affect her observable response but does not erase her independent plans.",
-      "observable_state": "Quiet, awake, and resting; no sleep is established.",
-      "current_private_emotion": "UNKNOWN",
+      "autonomy_state": "Rena remains autonomous. She reassures Arlequino emotionally but does not frame herself as constantly available or erase her own plans. She still intends to resume the three errands later today, with Arlequino having offered to accompany her.",
+      "observable_state": "Quiet, awake, resting, affectionate; no sleep is established.",
+      "current_private_emotion": "UNKNOWN beyond observable affection",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -83,5 +84,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1158_replay_restore_player_intervention_window.md",
-  "next_transition_rule": "Continue from ~12:10 with both still resting in bed. Arlequino remains user-controlled. Rena may respond verbally, continue resting, or begin the first step toward getting up, but do not skip intervening player windows."
+  "next_transition_rule": "Continue from ~12:11 with both still resting in bed. Arlequino remains user-controlled. Rena may respond verbally, continue resting, or begin the first step toward getting up, but do not skip intervening player windows."
 }
