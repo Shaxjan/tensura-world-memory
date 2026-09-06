@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1228_skazhi_performance_for_rena",
+  "scene_id": "t162_dwargon_hotel_room_1229_rena_answers_about_future_child",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:28",
+    "display": "T+162 ~12:29",
     "day": 162,
-    "clock": "~12:28",
+    "clock": "~12:29",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
-      "Arlequino and Rena came through a long emotionally difficult conversation about closeness, separation and how differently they love; both have made clear they do not want separation now.",
-      "Arlequino got the guitar, returned to Rena, embraced her and asked whether she wanted to listen. Rena answered that she did and asked him to play.",
-      "Arlequino now performs the full user-supplied song/text beginning with 'Скажи' for Rena. The exact words are archived at song_archive/skazhi_user_exact.txt.",
-      "The performance lasts roughly four minutes. Rena stays with him and listens without interrupting. Several lines clearly land on her, especially the repeated fear of being abandoned and the line about a son; she does not turn this into an argument during the song.",
-      "Students continue independent Gvazimodo preparation offscreen; Bren has had roughly an hour and a half since Arlequino left and is progressing first-pass availability/scheduling work, but no final concert schedule exists because the concert date is still unknown."
+      "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
+      "Rena listened through the full song and was visibly affected, especially by the abandonment theme and the line 'Подари сына или остынь'.",
+      "After the song, Arlequino asks: 'значит подаришь мне сына моя маленькая?'.",
+      "Rena answers warmly and personally rather than turning the moment into a boundary lecture. She says she can imagine and wants a future child with him, but does not promise the child's sex and does not treat this as an immediate pregnancy agreement.",
+      "Only about one minute passes. Both remain beside each other on/at the bed; Rena has not begun dressing or leaving."
     ]
   },
   "location": {
@@ -31,9 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Played guitar and performed the full song/text beginning with 'Скажи' for Rena while staying beside her.",
-    "last_in_world_utterance_or_performance": "Full exact text archived at song_archive/skazhi_user_exact.txt",
-    "current_declared_emotional_state": "vulnerable, sad and intensely attached; expressing the unresolved relationship fear through music",
+    "last_in_world_action": "Remains beside Rena with the guitar after completing «Скажи».",
+    "last_in_world_utterance": "-значит подаришь мне сына моя маленькая?",
+    "current_declared_emotional_state": "tender, vulnerable and hopeful after the performance",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -46,12 +46,13 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still beside Arlequino on/at the bed while he finishes the guitar performance",
+      "position": "still beside Arlequino on/at the bed after the song",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous and emotionally engaged. She listens to the song as a personal confession rather than as an abstract argument. She may be moved, unsettled, tender or sharp about specific lines, especially the abandonment fear and 'Подари сына или остынь', but her exact private feelings are not pre-written beyond visible reaction and what she says next.",
-      "observable_state": "Quiet and attentive through the whole performance; visibly affected by parts of it; does not interrupt or get up.",
-      "current_private_emotion": "UNKNOWN beyond observable reaction and future speech",
+      "autonomy_state": "Rena remains strong-willed and autonomous but responds in her established personal voice. She can be tender about a future family without promising a specific child outcome or immediate conception.",
+      "observable_state": "Close, attentive, emotionally softened after the song.",
+      "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
+      "future_children_position": "At T+162 ~12:29 Rena explicitly says she does want a future child with Arlequino. She does not promise a son specifically and no timing/pregnancy agreement is established.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -68,8 +69,8 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Immediate separation fear has eased, but the deeper mismatch in how they experience closeness remains unresolved. Arlequino has now expressed that fear through the song «Скажи» rather than further direct argument.",
-    "children_status": "Arlequino earlier said 'пока у нас нет детей'. The song includes 'Подари сына или остынь'; this is an in-song statement, not a newly established reproductive agreement or pregnancy outcome."
+    "current_issue": "Immediate separation fear has eased. Rena has now explicitly said she wants a future child with Arlequino, while no immediate conception plan or promise of a son is established.",
+    "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is now explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
     "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
@@ -89,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1223_rena_modern_autonomy_tone_overcorrection.md",
-  "next_transition_rule": "Continue from ~12:28 immediately after the last chord/line of «Скажи». Rena may react locally and personally. Do not make her dress, leave, or launch a multi-step sequence in the same beat."
+  "next_transition_rule": "Continue from ~12:29 with both still close on/at the bed after Rena's answer about a future child. Keep the next beat local."
 }
