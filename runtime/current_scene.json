@@ -3,21 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1241_arlequino_softly_calls_rena_darling",
+  "scene_id": "t162_dwargon_hotel_room_1242_rena_accepts_simple_game_with_limited_stakes",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:41",
+    "display": "T+162 ~12:42",
     "day": 162,
-    "clock": "~12:41",
+    "clock": "~12:42",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino performed the full user-supplied song «Скажи» for Rena; exact text is archived at song_archive/skazhi_user_exact.txt.",
-      "Rena explicitly said she wants a future child with Arlequino, but not to begin trying immediately this exact moment.",
       "Rena remains visibly aroused, strongly attracted and genuinely tempted, but has repeatedly refused further sexual activity before the errands.",
-      "Arlequino placed a hand on Rena's genitals and began to stroke despite the current refusal; Rena immediately stopped the sexual touching and kept his hand at a non-sexual place while remaining beside him.",
-      "Arlequino now simply says: 'милая.' No new physical escalation is stated.",
-      "Rena answers softly and locally, with the tension easing slightly but her prior decision unchanged. No meaningful time passes; no dressing, door movement or departure begins."
+      "After the tension softens, Arlequino proposes a simple game where the winner decides.",
+      "Rena is willing to play, but she does not put sexual consent itself up as a wager. In her own teasing voice she sets a narrower stake: if Arlequino wins, he gets another ten minutes of cuddling/kissing in bed before they go; if she wins, they start getting ready immediately. She proposes rock-paper-scissors as the simple game.",
+      "No meaningful time passes. Both remain on/at the bed. Rena has not begun dressing or leaving yet."
     ]
   },
   "location": {
@@ -32,9 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remains beside Rena after she stopped the sexual touching; no further action is declared in this beat.",
-    "last_in_world_utterance": "- милая.",
-    "current_declared_emotional_state": "tender and seeking Rena's attention after the repeated intimate tension",
+    "last_in_world_action": "Remains beside Rena after the tension softens; no new physical action is declared in this beat.",
+    "last_in_world_utterance": "- давай сыграем... В какую нибудь простую игру.. Кто выиграл .. Тот решает...",
+    "current_declared_emotional_state": "playful, bargaining and trying to turn the disagreement into a game",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -47,10 +46,10 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still beside Arlequino on/at the bed, physically close; she has stopped the sexual touching and remains nearby",
+      "position": "still beside Arlequino on/at the bed, physically close",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her current refusal of further sexual activity remains explicit, but she can respond tenderly to non-escalating affection or speech.",
-      "observable_state": "Still somewhat flushed and breathing not fully settled from prior closeness, but her expression softens slightly when Arlequino simply calls her 'милая'.",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. She is willing to make the dispute playful through a simple game, but she does not wager sexual consent. She personally proposes rock-paper-scissors with a limited practical stake: Arlequino win = ten more minutes of cuddling/kissing before errands; Rena win = start getting ready now.",
+      "observable_state": "Still flushed and amused, with the prior tension easing into playfulness; she remains close and engaged.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,7 +69,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena is genuinely aroused and attracted but has repeatedly refused further sexual activity before the errands. The current beat is tender rather than escalating after Arlequino simply calls her 'милая'.",
+    "current_issue": "The disagreement has shifted into playful bargaining. Rena agrees to a simple game with limited stakes, while further sexual activity remains not currently agreed.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -91,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1238_rena_arousal_flattening_replay.md",
-  "next_transition_rule": "Continue from ~12:41 with both still on/at the bed. Rena may answer Arlequino tenderly without changing her decision about further sexual activity. Keep the next beat local; do not narrate dressing or departure without an intervening player-response window."
+  "next_transition_rule": "Continue from ~12:42 with the proposed rock-paper-scissors game unresolved. Wait for Arlequino to accept/reject the terms and/or choose his throw. Do not resolve the game or advance to dressing/sex without his next action."
 }
