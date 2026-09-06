@@ -18,6 +18,7 @@ This rule works together with:
 - `runtime/world_state/information_frontier.json`
 - `runtime/rules/CANON_TIMELINE_SYNC_v1.md`
 - `runtime/rules/NEWS_RUMOR_PROPAGATION_v1.md`
+- `runtime/corrections/npc_world_autonomy_and_scene_tick_v1.md`
 - `memory/characters/CHARACTER_SYSTEM_v1.md`
 - `memory/creative_exposure/CREATIVE_EXPOSURE_PROTOCOL_v1.md`
 - `runtime/current_scene.json`
@@ -76,6 +77,7 @@ When the world advances, consider these layers in order:
    - Named persistent NPCs may work, travel, refuse, negotiate, investigate, spend resources, meet others, change plans, fail, succeed, misunderstand, or initiate contact when justified by their goals, duties, relationships, knowledge, resources, location, and time.
    - NPCs do not wait in suspended animation until the player asks what they did.
    - Off-screen action must remain consistent with the character record and causal constraints.
+   - A known goal/desire/obligation is an active causal pressure, not decorative biography: when enough time/opportunity passes, consider whether it changes what that NPC chooses, postpones, pursues, refuses, spends, investigates or communicates.
 
 4. **Institutions and material systems**
    - Governments, guilds, guards, shops, schools, organizers, roads, lodging, transport, prices, queues, military movement, evacuation, supply, and similar systems continue operating independently.
@@ -93,16 +95,19 @@ When the world advances, consider these layers in order:
 
 ## 4. NPC autonomy standard
 
-A recurring NPC must not behave as a player-serving utility.
+A recurring NPC must not behave as a player-serving utility, hollow prop, dialogue dispenser or puppet.
 
 Before giving an NPC a meaningful action, check:
 - What do they want right now?
+- What longer-term goal or desire is already active for them?
 - What obligations are competing for their time?
-- What do they actually know?
+- What do they actually know or wrongly believe?
 - Where are they physically?
 - What resources and authority do they have?
 - What would their established character make them likely to do?
+- What are they unwilling to do?
 - What can go wrong?
+- What might they choose even if Arlequino never speaks to them?
 
 Valid autonomous behavior includes:
 - initiating a conversation or task;
@@ -114,9 +119,13 @@ Valid autonomous behavior includes:
 - disagreeing with another NPC;
 - pursuing a personal objective while the player is elsewhere;
 - changing an opinion after new evidence;
-- contacting Arlequino because an event affects an existing agreement or relationship.
+- contacting Arlequino because an event affects an existing agreement or relationship;
+- being busy, unavailable, tired, distracted, committed elsewhere, or focused on something that matters more to them;
+- delegating work, abandoning an impractical plan, or partially succeeding instead of producing a convenient full success.
 
-Autonomy must not be random chaos. It must be explainable from character + knowledge + circumstances.
+Autonomy must not be random chaos. It must be explainable from character + goals/desires + knowledge + circumstances.
+
+A character's goals/desires must have consequences over time. If an established named NPC repeatedly has enough opportunity to pursue a known goal but the simulation never even evaluates it, that is a world-freeze/puppet failure.
 
 ## 5. Character realism
 
@@ -224,11 +233,13 @@ Do not convert the game into a detached simulation report unless the player expl
 The following are continuity errors:
 - canon waiting for the player to finish a personal project;
 - NPC assignments producing no movement simply because the player did not ask again;
+- a known NPC goal/desire remaining permanently inert despite repeated time/opportunity with no causal reason;
 - a registered active process vanishing between scenes without resolution;
 - a city remaining socially unchanged during a major local crisis;
 - rumors never moving unless Arlequino asks for news;
 - recurring NPCs forgetting established personality or prior interactions;
 - every NPC being available whenever the player wants them;
+- NPCs behaving as empty mirrors whose only function is to agree, react or wait for Arlequino;
 - instant travel, logistics, construction, investigation, or institutional action without sufficient time/resources;
 - hidden facts appearing in dialogue without a causal knowledge path.
 
@@ -252,7 +263,7 @@ Ask internally:
 1. How much world time passed?
 2. What entries in `active_processes.json` must be reviewed?
 3. Did any canon anchor become due?
-4. What important NPC plans could have advanced?
+4. What important NPC plans, goals, desires or obligations could have advanced?
 5. What institutions/material conditions could have changed?
 6. What items in `information_frontier.json` had enough time to travel?
 7. What can Arlequino actually perceive or know now?
