@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1219_beaver_duck_breathing_metaphor",
+  "scene_id": "t162_dwargon_hotel_room_1220_rena_both_beaver_and_duck",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:19",
+    "display": "T+162 ~12:20",
     "day": 162,
-    "clock": "~12:19",
+    "clock": "~12:20",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Gvazimodo casting remains complete; students continue self-organized rehearsal/production under the compressed preparation window.",
       "Two prolonged consensual private intimacy rounds between Arlequino and Rena occurred earlier in the locked Dwargon hotel room; exact sexual mechanics remain offscreen.",
       "Arlequino and Rena remain lying together during a serious conversation about emotional distance, love, absence and closeness.",
-      "Arlequino has said he believes there will be no ordinary road between them, only the temporary 'wings' represented by sexual intimacy.",
-      "Arlequino now tells Rena to drop the argument, calls it a 'conversation between a beaver and a duck', and compares their different ways of loving to different ways of breathing: mouth, nose, or with the whole body.",
-      "Rena answers personally rather than philosophically: she lightly objects to being cast as the duck, says she will not tell him how to 'breathe', but rejects the implication that her different way of loving means she is only half-present with him.",
+      "Arlequino used a beaver-and-duck metaphor and compared different ways of loving to different ways of breathing.",
+      "Rena objected lightly to being cast as the duck and said she would not tell him how to breathe, while rejecting the idea that her different way of loving makes her only half-present.",
+      "Arlequino now teases that in this metaphor Rena is both the beaver and the duck.",
       "Only about one minute passes; both remain in bed. No dressing, cleanup, door movement or departure has begun."
     ]
   },
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Remained lying beside Rena during the serious conversation.",
-    "last_in_world_utterance": "-да забей , разговор бобра и утки не имеет смысла. Если тебе легче дышать ртом то дыши ртом, если носом то дыши носом , но знай что есть те кто дышат всем телом.",
-    "current_declared_emotional_state": "subdued, resigned, using humor/metaphor to close down the argument while insisting their ways of loving are fundamentally different",
+    "last_in_world_action": "Remained lying beside Rena during the conversation.",
+    "last_in_world_utterance": "- не переживай тут ты и бобер и утка .",
+    "current_declared_emotional_state": "subdued but teasing lightly after the heavier exchange",
     "recent_creative_action": "performed full 'Легион' earlier; exact text archived at song_archive/legion_user_exact.txt"
   },
   "money": {
@@ -47,16 +47,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "lying/resting beside Arlequino on the bed, remaining close during the serious conversation",
+      "position": "lying/resting beside Arlequino on the bed, remaining close after the serious conversation",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains autonomous. She can let the argument rest without agreeing with Arlequino's conclusion. She speaks in a direct, personal voice and resists being told that her different way of loving makes her less present or less real in the relationship.",
+      "autonomy_state": "Rena remains autonomous. She may react with dry humor or mild irritation to being called both beaver and duck, without reopening the whole philosophical argument unless she chooses to.",
       "observable_state": "Awake, subdued, mildly exasperated but still physically close; no sleep is established.",
       "current_private_emotion": "UNKNOWN beyond what she explicitly says and visibly shows",
-      "latest_response_content": [
-        "Lightly objects to being cast as the duck in Arlequino's metaphor.",
-        "Says she will not tell him how to 'breathe' or insist he love exactly as she does.",
-        "Rejects the implication that because she loves differently she is only half-present with him."
-      ],
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
         "investigate where Eurazania evacuees were sent through causal in-world channels",
@@ -88,5 +83,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1216_rena_philosophical_answer_rejected.md",
-  "next_transition_rule": "Continue from ~12:19 with both still in bed. Rena may let the conversation fall quiet or react further, but do not skip to dressing or departure in the same beat."
+  "next_transition_rule": "Continue from ~12:20 with both still in bed. Rena may answer the tease naturally or let the conversation fall quiet, but do not skip to dressing or departure in the same beat."
 }
