@@ -3,25 +3,25 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1259_arlequino_regrets_silent_departure_from_ex",
+  "scene_id": "t162_dwargon_hotel_room_1300_rena_reacts_to_eurazania_comparison",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:59",
+    "display": "T+162 ~13:00",
     "day": 162,
-    "clock": "~12:59",
+    "clock": "~13:00",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
       "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
-      "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment remains in her hands.",
+      "Rena began dressing at granular pacing; the next garment remained in her hands through the ensuing banter.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
       "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, describing her initiative, saying she wanted to marry him, and adding that she cooked excellently and had long brown hair and brown eyes.",
-      "Arlequino is established as Rena's first man; no prior male romantic/sexual partner is established for her. This asymmetry materially sharpens her reaction to Arlequino's detailed stories about former partners without making her fragile or submissive.",
-      "Rena focused on the contrast between Arlequino rejecting family life with that former partner and later marrying Rena, and asked what Rena had that the others did not.",
-      "Arlequino answered that Rena irritates him more than all the others combined, then explicitly called that love.",
-      "Rena reacted with irritated reluctant amusement, called the answer recognizably awful but understandable, and warned that she had not forgiven the brown-eyed former partner topic.",
-      "Arlequino then stopped boasting and said he should at least have talked to the former partner instead of quietly running away, expressing present regret about how he ended that relationship.",
-      "No dressing advancement, door action, departure, or other voluntary Arlequino movement occurs in this beat."
+      "Arlequino is established as Rena's first man; no prior male romantic/sexual partner is established for her.",
+      "Arlequino later admitted he should have talked to that former partner instead of quietly disappearing.",
+      "Continuity correction: Rena already knows Arlequino has effectively run from her twice. At T+117 in Blumund he concealed his destination and they reached a mutual farewell before he later searched for her; at T+129 in Eurazania he quietly left while she slept.",
+      "The couple then bantered about Rena hypothetically finding him after such a disappearance. Arlequino joked she would have sex with him; Rena answered that, knowing them, killing him would have been postponed.",
+      "Arlequino complained that persuading Rena to perform oral sex can take an hour, then compared this with women in Eurazania who, according to his direct statement, approached him asking for sex.",
+      "No door action, departure, or voluntary Arlequino movement is added beyond his spoken words."
     ]
   },
   "location": {
@@ -36,9 +36,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he verbally reflects on how he ended the old relationship.",
-    "last_in_world_utterance": "- ммда.. Надо было хотя бы поговорить с ней а не сьебввать по тихому 😋😓",
-    "current_declared_emotional_state": "Reflective and regretful about having silently left the former partner; exact deeper private state is not inferred.",
+    "last_in_world_action": "No new movement is declared; he verbally compares the effort of persuading Rena to perform oral sex with women in Eurazania who he says approached him asking for sex.",
+    "last_in_world_utterance": "-ой мне что уговорить тебя на минет уходит час. Будто незнакомку на улице уламываю... Хотя в эурозании незнакомки сами ко мне лезли с просьбой о сексе",
+    "current_declared_emotional_state": "UNKNOWN beyond the teasing/complaining tone of his direct words.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -51,11 +51,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "seated/half-risen at the bed while dressing",
-      "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man, while he has disclosed many former partners. She remains personally jealous, but Arlequino's admission that quietly leaving the former partner was wrong shifts the immediate focus from competitive jealousy toward judging his past conduct. She can agree sharply that he owed the woman a conversation, condemn the silent departure, note that recognizing it now matters, or challenge whether he would ever disappear from Rena in the same way. Do not turn her into a therapist, moral lecturer, submissive partner, or melodramatic victim.",
-      "observable_state": "Still holding the next garment without putting it on; her expression is less competitive and more measuring after Arlequino admits he should have spoken to the former partner before leaving.",
-      "last_observable_utterance": "— Ты… невозможный человек. Я задала тебе один нормальный вопрос. Один. Почему из всех женщин ты выбрал меня. «Потому что ты бесишь меня больше всех вместе взятых». Какая, мать твою, романтика. И самое противное — я прекрасно поняла, что ты хотел сказать. Только не расслабляйся. Кареглазую повариху я ещё не простила.",
+      "position": "at the bed while dressing",
+      "clothing_state": "first garment completed; next garment has remained in her hands through the banter and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She can react sharply and personally when he compares her sexual availability with strangers or former partners, but she is not fragile, submissive, therapeutic, or melodramatic. She does not need to answer every provocation with another question.",
+      "observable_state": "She gives Arlequino a hard, incredulous look at the comparison with Eurazania strangers; her pride is visibly engaged more than insecurity.",
+      "last_observable_utterance": "— Незнакомки в Эуразании хотели Маэстро Арлекино на одну ночь. А я живу с тобой каждый день, павлин. Так что не путай лёгкую добычу с женой. И если тебе иногда приходится уговаривать меня час — переживёшь. Зато когда я сама хочу, ты почему-то ни разу не жалуешься.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -76,10 +76,11 @@
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners. This is established continuity and may materially affect jealousy and comparison scenes.",
-    "current_issue": "The ex-story remains emotionally live, but Arlequino has shifted from provocation to acknowledging that silently leaving the former partner without a conversation was wrong.",
+    "known_departure_history": "Rena has already personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
+    "current_issue": "Teasing sexual comparison: Arlequino complains Rena can take persuading and contrasts her with Eurazania women who he says directly propositioned him. Rena's response is proud and sharp rather than insecure or interrogative.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "correction_ref": "direct player continuity correction 2026-09-07: Arlequino is Rena's first man; prior too-light jealousy response replayed",
-  "next_transition_rule": "Resolve Rena's immediate observable response to Arlequino admitting he should have talked to the former partner rather than silently leaving. Keep the next garment in her hands and do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
+  "correction_ref": "direct player continuity correction 2026-09-07: Rena is not an endless interviewer; she remembers Arlequino's prior departures from her and should respond from lived relationship history.",
+  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action from ~13:00. Do not unlock the door, leave, or invent Arlequino's voluntary actions without a new causally justified delta."
 }
