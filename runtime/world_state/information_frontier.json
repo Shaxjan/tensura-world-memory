@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "ACTIVE",
-  "as_of": "T+162 ~10:07",
+  "as_of": "T+162 ~13:18",
   "purpose": "Track what world information exists, where it may be propagating, and whether Arlequino or important NPCs have causally received it.",
   "items": [
     {
@@ -12,24 +12,18 @@
       "source_event": "runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json",
       "origin_region": "Eurazania",
       "origin_time": "T+161",
-      "natural_channels": [
-        "survivors/refugees",
-        "official or military messengers",
-        "guild and merchant networks",
-        "travelers and caravans",
-        "regional political contacts"
-      ],
+      "natural_channels": ["survivors/refugees","official or military messengers","guild and merchant networks","travelers and caravans","regional political contacts"],
       "propagation": {
         "eurazania_local": "MAJOR_DIRECT_PUBLIC_EVENT",
-        "dwargon": "ARRIVAL_STATUS_UNRESOLVED_AT_T162_1007",
+        "dwargon": "CONFIRMED_ARRIVED_BY_T162_1318_VIA_CARAVAN_MERCHANT_NETWORK",
         "other_regions": "NOT_TRACKED_EXACTLY_YET"
       },
       "recipient_state": {
-        "arlequino": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
-        "rena": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
+        "arlequino": "CAUSALLY_EXPOSED_T162_1318",
+        "rena": "CAUSALLY_EXPOSED_T162_1318",
         "dwargon_students_present": "UNKNOWN"
       },
-      "exposure_rule": "Do not narrate recognition or knowledge until a causal source reaches the recipient. If a source arrives later, persist the exposure event and update this item.",
+      "exposure_event": "At a caravan-dispatch/merchant-information counter in Dwargon, a clerk/dispatcher reports to Rena and Arlequino that the Eurazania capital was destroyed on T+161 after Milim's attack.",
       "distortion_risk": "LOW_FOR_CORE_EVENT_ONCE_MULTIPLE_SOURCES_ARRIVE; HIGHER_FOR_DETAILS_AND_NUMBERS"
     },
     {
@@ -40,19 +34,14 @@
       "source_event": "runtime/significant_events/t161_eurazania_capital_destruction_canon_anchor.json",
       "origin_region": "Eurazania",
       "origin_time": "T+161",
-      "natural_channels": [
-        "survivors/refugees",
-        "official/public reaction",
-        "merchant and guild networks",
-        "travelers"
-      ],
+      "natural_channels": ["survivors/refugees","official/public reaction","merchant and guild networks","travelers"],
       "propagation": {
         "eurazania_local": "PUBLIC_BELIEF_AFTER_EVENT",
-        "dwargon": "ARRIVAL_STATUS_UNRESOLVED_AT_T162_1007"
+        "dwargon": "ARRIVAL_OF_THIS_SPECIFIC_BELIEF_NOT_YET_CONFIRMED_TO_COUPLE"
       },
       "recipient_state": {
-        "arlequino": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE",
-        "rena": "NOT_CAUSALLY_CONFIRMED_IN_CURRENT_SCENE"
+        "arlequino": "NOT_YET_CAUSALLY_CONFIRMED",
+        "rena": "NOT_YET_CAUSALLY_CONFIRMED"
       },
       "restricted_truth": "Carrion's true survival must not be exposed before canonical revelation.",
       "distortion_risk": "MEDIUM"
@@ -63,21 +52,14 @@
       "information_class": "INVESTIGATION_TARGET",
       "truth_status": "EXACT_CURRENT_DISTRIBUTION_UNRESOLVED_IN_ACTIVE_SOURCE_SET",
       "origin_region": "Eurazania evacuation networks",
-      "relevant_source_types": [
-        "Eurazania officials",
-        "refugees",
-        "Free Guild / adventurer networks",
-        "merchants and caravan masters",
-        "host-region authorities",
-        "messengers and letters"
-      ],
+      "relevant_source_types": ["Eurazania officials","refugees","Free Guild / adventurer networks","merchants and caravan masters","host-region authorities","messengers and letters"],
       "propagation": {
-        "dwargon": "UNKNOWN_WHICH_DETAILS_HAVE_ARRIVED",
-        "rena_inquiry": "ASSIGNED_AT_T162_1007_NOT_YET_RESOLVED"
+        "dwargon": "CORE_DESTRUCTION_NEWS_HAS_ARRIVED; EXACT_REFUGEE_DISTRIBUTION_STILL_UNKNOWN",
+        "rena_inquiry": "ACTIVE; FIRST_MAJOR_RESULT_T162_1318_IS_CAPITAL_DESTRUCTION_NEWS, NOT_DESTINATION_RESOLUTION"
       },
       "recipient_state": {
-        "arlequino": "UNKNOWN_RESULT",
-        "rena": "UNKNOWN_RESULT"
+        "arlequino": "KNOWS_CAPITAL_DESTROYED; EXACT_EVACUEE_DESTINATIONS_UNKNOWN",
+        "rena": "KNOWS_CAPITAL_DESTROYED; EXACT_EVACUEE_DESTINATIONS_UNKNOWN"
       },
       "linked_process": "rena_investigate_eurazania_evacuees_t162",
       "anti_invention": "Do not choose a destination merely from general Tensura knowledge unless reconciled with this world's runtime and a causal transmission path."
@@ -88,12 +70,7 @@
       "information_class": "PRIVATE_MATERIAL_FACT_NOT_YET_OBSERVED",
       "truth_status": "UNKNOWN_EXACT_CONDITION",
       "origin_region": "Eurazania capital",
-      "relevant_source_types": [
-        "direct inspection",
-        "credible local witness",
-        "official damage information if such records exist",
-        "someone returning from the district"
-      ],
+      "relevant_source_types": ["direct inspection","credible local witness","official damage information if such records exist","someone returning from the district"],
       "propagation": {
         "dwargon": "NO_CONFIRMED_SPECIFIC_REPORT"
       },
