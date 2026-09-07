@@ -3,25 +3,30 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1344_relief_and_concert_budget_estimate",
+  "scene_id": "t162_dwargon_organizer_office_1344_replayed_budget_estimate",
   "time": {"display": "T+162 ~13:44", "day": 162, "clock": "~13:44", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
+  "replay_status": {
+    "player_direct_correction": "User explicitly requested that the immediately previous budget scene be replayed because pacing was too extended.",
+    "supersedes": "Prior long-form narrated breakdown after Arlequino asked about caravan/concert costs and said he would ask King Gazel to open and authorize the concert.",
+    "rule": "Use this shorter replayed beat as current continuity. Do not preserve extra dialogue or downstream movement from the superseded narration."
+  },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He asks Raden for a first-pass cost estimate for the humanitarian caravan and for a charity concert using a venue of at least 18,000 safe capacity. He says he intends to ask King Gazel to open the concert and grant permission. No audience attendance, royal approval, spending, booking, or actual approach to Gazel is yet established.",
+    "last_in_world_action": "He asks for provisional caravan and concert costs, requests a venue capacity of at least 18,000, and states that he intends to ask King Gazel to open the concert and grant permission. He has not yet approached Gazel.",
     "last_in_world_utterance": "- какой будет расход на караван? .... В эурозании я поставил концерт на 18000 человек. Здесь хочу не меньше.... Какой будет расход на концерт?... Я попрошу короля Газеля открыть концерт  и дать разрешение на него.",
     "current_declared_emotional_state": "Task-focused and ambitious by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits use of shared family funds for Eurazania relief/charity work, with major expenses tracked and no blind treasury wipeout. No exact cap and no spending yet."}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits use of shared family funds for Eurazania relief/charity work, with major expenses tracked; no exact cap and no spending yet."}
   },
   "historical_guardrail": {
-    "eurazania_t138_formal_concert": "18,000 was the safe venue capacity, not confirmed final attendance; pre-show estimate was roughly 12–14k and final attendance/revenue remain unresolved.",
-    "current_planning_interpretation": "Arlequino's 'not less than 18,000 here' is treated as a requested venue-capacity target, not a guaranteed audience count."
+    "eurazania_t138_formal_concert": "18,000 was the safe venue capacity, not confirmed final attendance.",
+    "current_planning_interpretation": "Arlequino's 'not less than 18,000 here' is a minimum venue-capacity target."
   },
   "present_entities": {
     "rena": {
@@ -29,33 +34,37 @@
       "presence": "present",
       "position": "beside Arlequino in front of Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Serious and practical, listening to budget planning. She has already agreed to family-budget use for relief with accounting safeguards.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. She can support an ambitious relief concert while protecting shared finances."
+      "observable_state": "Listening and practical; she has already agreed to family-budget use with accounting safeguards.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate."
     },
     "raden": {
       "name": "Раден",
       "presence": "present",
       "role": "independent professional organizer/coordinator candidate",
       "status": "WILLING_IN_PRINCIPLE_NOT_YET_FORMALLY_HIRED",
-      "planning_task": "Provide a provisional cost range, separating caravan transport/security from aid cargo, and distinguish an 18–20k-capacity concert with versus without royal venue/security/permit support.",
+      "provisional_estimate": {
+        "humanitarian_caravan": "about 40-65g for a serious first relief caravan, pending confirmation of recipient count/needs",
+        "charity_concert_without_royal_support": "about 28-40g for an 18-20k-capacity event",
+        "charity_concert_with_meaningful_gazel_support": "about 12-20g if venue/permissions/security support materially reduces costs"
+      },
       "constraints": [
-        "Exact refugee needs and receiving point are still unresolved, so caravan cost can only be a range.",
-        "King Gazel has not yet been asked in-world and has not granted permission, venue, security, attendance, endorsement, or opening remarks.",
-        "No cost estimate is a payment or booking."
+        "These are provisional ranges, not invoices or spending.",
+        "King Gazel has not yet been asked in-world and has not approved anything.",
+        "No venue, caravan, or supplier is booked in this beat."
       ]
     }
   },
   "knowledge_state": {
     "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
-    "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino nevertheless mandates memorial wording as if fallen and takes responsibility for it",
+    "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
     "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Arlequino and Rena are jointly budgeting a large relief and charity project; Rena permits shared-budget use with accountability."
+    "current_issue": "Joint relief planning; Rena permits budget use with accountability."
   },
-  "pacing_rule": "Provide longer cohesive planning scenes but stop before actual major spending, a royal audience/request outcome, venue booking, or other irreversible commitment.",
-  "next_transition_rule": "Raden may give provisional budget ranges and explain how Gazel's potential support changes them. Do not invent Gazel's agreement or an audience. Await Arlequino's next decision on budget/scale or his explicit move to seek the king."
+  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats, not one gesture and not a long chain of dialogue. Stop at the next real player decision.",
+  "next_transition_rule": "Raden gives the concise estimate and notes Gazel's support could reduce concert costs. Stop there and await Arlequino's next move; do not auto-travel to Gazel or continue extended budgeting."
 }
