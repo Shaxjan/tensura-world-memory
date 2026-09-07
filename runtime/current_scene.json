@@ -3,25 +3,27 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1346_blumund_self_financing_model_explained",
-  "time": {"display": "T+162 ~13:46", "day": 162, "clock": "~13:46", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_organizer_office_1347_air_messengers_authorized_three_day_deadline",
+  "time": {"display": "T+162 ~13:47", "day": 162, "clock": "~13:47", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He corrects Raden's financial framing: he does not want royal financial support for the charity concert. He explains in-world how the Great Blumund concert was financed using tiered paid seating at different coin levels, a free-access section, and event trade/merchant activity. The exact historical seat-price figures are treated as explained by Arlequino in-world in this beat, but are not reconstructed independently by the GM from incomplete recovery records.",
-    "last_in_world_utterance": "- да мне не нужна финансовая помощь в концерте... (Объясняю как я делал концерт в блюмунде, за какие места сколько золотых, серебрянных, и медяков, сколько бесплатных мест, торговля )",
-    "current_declared_emotional_state": "Practical and confident in a proven concert-financing model by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He gives Raden explicit operational instructions: aim for a concert larger than the previous 18,000-capacity reference, immediately send messengers on flying beasts to determine where the Eurazania evacuees are and how many there are, contact him at the hotel or leave a message there, and work against a hard concert deadline within three days. He also directly provides Raden the exact hotel identification/address in-world; the GM/runtime does not invent or expose a name that was previously UNKNOWN.",
+    "last_in_world_utterance": "-старацся сделать концерт еще больше. А сейчас отправь гонцов , узнай где эвакуированные, сколько их . мы остановились в гостинице(говорю где)если что найдешь нас там или можешь оставить послание. Гонцы -с летающими зверьми. Времени мало, концерт в течении 3 дней , времени мало.",
+    "current_declared_emotional_state": "Urgent and decisive by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards; no spending occurs in this beat."}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. Arlequino's direct order to send flying couriers authorizes that specific inquiry expense, but no exact courier price or balance change is yet established in this beat."}
   },
-  "historical_context": {
-    "blumund_great_concert": "Confirmed historical event T+116->T+117. Paid rows were filled, beyond the 100th row there was a free standing area, net concert profit recorded as 26g55s50c, and Oren was separately paid 1g for organization. Exact seat-tier price figures are not independently recovered in the currently reconciled recovery files, so do not invent them; Arlequino has now directly re-explained them in-world to Raden.",
-    "current_financing_consequence": "The Dwargon charity concert should be treated as intended to be substantially self-financing through tiered paid seating, low-cost mass access, free access allocation, trade/merchant participation and donations, with surplus directed toward Eurazania relief rather than relying on royal subsidy."
+  "concert_directive": {
+    "deadline": "within three days from T+162 ~13:47; target no later than T+165 unless causally delayed or revised",
+    "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
+    "financing_model": "Blumund-style self-financing/fundraising structure through tiered seating, free access allocation, trade/merchant participation and donations",
+    "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
     "rena": {
@@ -29,33 +31,40 @@
       "presence": "present",
       "position": "beside Arlequino in front of Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Listening and practical; she approves of separating family-funded humanitarian spending from a concert model intended to pay for itself and raise additional relief money.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate."
+      "observable_state": "Serious, practical and attentive to the compressed deadline.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. She can support urgency without becoming an interviewer or servant."
     },
     "raden": {
       "name": "Раден",
       "presence": "present",
-      "role": "independent professional organizer/coordinator candidate",
-      "status": "WILLING_IN_PRINCIPLE_NOT_YET_FORMALLY_HIRED",
-      "updated_understanding": "Raden now understands that Arlequino is not asking Gazel to finance the concert. The requested royal role is permission, access/venue cooperation if granted, and ideally Gazel personally opening the event. Raden should design the event around Arlequino's proven Blumund-style self-financing model rather than assume the family treasury pays the full event cost upfront.",
+      "role": "independent professional organizer/coordinator",
+      "status": "SPECIFIC_OPERATIONAL_AUTHORITY_GRANTED; broader compensation/long-term terms still not fully settled",
+      "current_authority": [
+        "immediately dispatch multiple couriers using flying beasts through distinct Tempest/Free-Guild/trade-facing channels to locate Eurazania evacuees and obtain an approximate headcount",
+        "receive replies and deliver findings to the exact hotel location Arlequino just provided or leave a message there",
+        "begin planning a charity concert at greater than 18,000 safe capacity if feasible, with a deadline within three days",
+        "use the already explained Blumund-style self-financing model as the event's financial concept"
+      ],
       "constraints": [
-        "King Gazel has not yet been asked in-world and has not approved anything.",
-        "No venue, supplier, merchant contract, ticket plan, caravan or payment is booked in this beat.",
-        "Do not invent exact historical Blumund seat prices that are not recovered in reconciled sources; in-world Raden can act on the figures Arlequino just explained."
-      ]
+        "No refugee location or headcount is invented before replies arrive.",
+        "No royal approval, venue, attendance, or permit is assumed.",
+        "No exact courier cost or payment is invented until sourced/quoted.",
+        "The three-day deadline creates urgency but does not guarantee feasibility."
+      ],
+      "next_autonomous_step": "Raden can immediately call for air couriers and prepare several route-specific inquiry messages before the couple leaves his office."
     }
   },
   "knowledge_state": {
     "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
     "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
-    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN",
+    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; air-messenger inquiry now authorized",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Joint relief planning; Rena permits budget use with accountability while the concert itself is now framed as self-financing/fundraising."
+    "current_issue": "Joint relief planning under a hard three-day concert deadline; Rena supports budget use with accountability."
   },
-  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats, not one gesture and not a long chain of dialogue. Stop at the next real player decision.",
-  "next_transition_rule": "Raden may briefly acknowledge the corrected financing model and separate royal endorsement/permission from financial support. Stop before auto-traveling to Gazel, setting ticket prices independently, booking anything or spending money."
+  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Stop at the next real player decision rather than extending logistics into a long interview.",
+  "next_transition_rule": "Resolve Raden's immediate practical response and first dispatch-preparation step only. Do not auto-return messenger results, auto-visit Gazel, book a venue, or spend an invented amount."
 }
