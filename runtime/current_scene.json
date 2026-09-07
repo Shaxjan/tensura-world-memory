@@ -3,16 +3,16 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1430_arlequino_calls_rena_his_homemaker",
-  "time": {"display": "T+162 ~14:30", "day": 162, "clock": "~14:30", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, beside the student groups", "exact_street_or_hall_name": "UNKNOWN"},
+  "scene_id": "t162_dwargon_student_hall_1431_gvazimodo_paused_for_new_concert_piece",
+  "time": {"display": "T+162 ~14:31", "day": 162, "clock": "~14:31", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino affectionately bites Rena's neck, smiles at her, calls her 'моя хозяюшка', gives her a quick kiss and explicitly says he loves her.",
-    "last_in_world_utterance": "-моя хозяюшка 😊 люблю тебя.",
-    "current_declared_emotional_state": "Affectionate and openly loving by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "Arlequino turns serious and threatening in demeanor toward the students and explicitly tells them that «Гвазимодо» will wait because he is going to devise something else for the urgent charity concert.",
+    "last_in_world_utterance": "- и так . Гвазимодо , подождет - сейчас придумаю другое для концерта.",
+    "current_declared_emotional_state": "Serious and intimidating toward the students by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -24,19 +24,20 @@
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
+    "student_piece_state": "Arlequino has paused «Гвазимодо» and stated that he will devise a different piece for the concert. The new piece is not yet defined.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:30",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:31",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "Rena has just finished briefing the students about the urgent Eurazania charity concert.",
-    "Arlequino affectionately bites her neck, calls her 'моя хозяюшка', gives her a quick kiss and says he loves her.",
-    "Rena remains close and responds as a proud, strong-willed wife rather than as a submissive caretaker; she can tease or push back on the label while accepting the affection.",
-    "The students remain present and attentive; no specific new assignment or interruption is established in this beat."
+    "The students have just been briefed about the urgent Eurazania charity concert.",
+    "Arlequino's demeanor turns serious and threatening as he tells them that «Гвазимодо» is temporarily on hold.",
+    "He says he will devise something else specifically for the concert; no content, casting or exact student role for that new piece has yet been established.",
+    "The students understand that the priority has shifted from their existing production to the urgent charity event. Their prior «Гвазимодо» work remains preserved rather than erased or cancelled."
   ],
   "present_entities": {
     "rena": {
@@ -44,17 +45,17 @@
       "presence": "present",
       "position": "close at Arlequino's side in front of the students",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Affectionate, composed and proud. She accepts the kiss and closeness, but the 'хозяюшка' label is treated as playful spouse language, not a role submission."
+      "observable_state": "Composed and attentive as Arlequino shifts the students' priority toward the charity concert."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
-      "current_activity": "they have paused enough to listen and are now awaiting further direction",
-      "new_knowledge": "They know the urgent charity concert is being prepared, but they have not been assigned a role yet.",
-      "reaction": "They notice the couple's affection to varying degrees; exact individual reactions remain open."
+      "current_activity": "their «Гвазимодо» rehearsal is now paused by Arlequino's direct order",
+      "new_knowledge": "They know «Гвазимодо» will wait and that Arlequino intends to create a different piece for the Eurazania charity concert.",
+      "reaction": "They become noticeably more attentive and serious under Arlequino's stern address. No specific new part or assignment has yet been given."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
-      "ongoing_role": "availability/grouping work continues when present/available; no new completed schedule is established"
+      "ongoing_role": "No new schedule completion is established; «Гвазимодо» is now paused until Arlequino resumes it."
     }
   },
   "knowledge_state": {
@@ -66,8 +67,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Arlequino openly expresses affection and love toward Rena in front of the students; no conflict is established."
+    "current_issue": "Rena remains beside Arlequino while attention shifts fully to the urgent concert work."
   },
   "pacing_rule": "Medium scene length is the default: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
-  "next_transition_rule": "Resolve Rena's immediate spouse-like reaction and the students' natural presence only. Do not invent Arlequino's next concert assignment, royal approval, courier reply, or completed logistics."
+  "next_transition_rule": "Await Arlequino's definition of the new concert piece or next instruction. Do not invent the piece, cast, student role, royal approval, courier reply, or completed concert logistics without causal development."
 }
