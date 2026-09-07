@@ -3,38 +3,39 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_street_1310_couple_walks_toward_guild_caravan_contacts",
+  "scene_id": "t162_dwargon_caravan_office_1318_first_eurazania_news_exposure",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~13:10",
+    "display": "T+162 ~13:18",
     "day": 162,
-    "clock": "~13:10",
+    "clock": "~13:18",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Arlequino and Rena left their hotel room together after prolonged private time and jealous banter.",
-      "Arlequino's cloak remains wrapped around Rena.",
-      "Arlequino directly keeps Rena pressed into his embrace while walking, sometimes kissing, caressing and attempting more intimate touching.",
-      "Rena accepts close walking, embraces, ordinary affectionate caresses and occasional kisses, but repeatedly redirects any intimate public groping back to her waist/side in line with her already stated boundary.",
-      "The couple walks through the hotel corridor, descends to the lobby, passes through the public ground floor, and exits into the midday streets of Dwargon.",
-      "Rena autonomously resumes her deferred errands now that they are outside. She chooses to begin by heading toward a plausible guild/caravan/merchant information area where she may find both current travel/refugee information and contacts who know event organizers or coordinators.",
-      "No actual organizer, evacuee source, or property contact has yet been reached. No results are established.",
+      "Arlequino and Rena continue their public walk through Dwargon with Rena wrapped in Arlequino's cloak and held close against him.",
+      "Arlequino directly continues occasional kisses, caresses and attempts at more intimate touching under the cloak while walking.",
+      "Rena accepts embraces, kisses and ordinary affectionate touching but keeps enforcing her already stated public boundary: being under the cloak does not make intimate public groping acceptable to her. She catches and redirects Arlequino's hand back to her waist/side without ending the affectionate walk.",
+      "The couple walks several more minutes through increasingly commercial streets toward a plausible caravan/guild information area.",
+      "Rena chooses a busy caravan-dispatch/merchant information counter as the first causal inquiry point for Eurazania news and broader organizer contacts.",
+      "Rena asks the clerk/dispatcher whether any reliable arrivals or messages have come from Eurazania and where evacuees were sent.",
+      "The dispatcher gives the first causally transmitted core report to both Rena and Arlequino: news reached Dwargon that the Eurazania capital was destroyed on T+161 after Milim's attack. He does not know the exact current distribution of evacuees and does not know the condition of 18 Old Garden Street.",
+      "This is the first confirmed player/Rena exposure to the T+161 capital-destruction news in current runtime continuity.",
+      "The organizer inquiry has not yet materially advanced beyond arrival at this contact point; the evacuee investigation has now produced a major first result but remains unresolved on exact destinations.",
       "No money changes occur."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "city street en route toward a guild/caravan/merchant information area",
+    "place": "inside/at the front counter of a caravan-dispatch and merchant information office in a busy commercial area",
     "certainty": "current_scene_confirmed",
-    "exact_street_or_district_name": "UNKNOWN",
-    "hotel_room_status": "left behind; whether room door was finally locked after departure is not material to current scene and remains unconfirmed"
+    "exact_street_or_office_name": "UNKNOWN"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He continues walking with Rena held close, sometimes kissing, caressing and trying to touch her more intimately while moving through the hotel and into the city.",
-    "last_in_world_utterance": "Идём Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю идем.",
-    "current_declared_emotional_state": "Affectionate/playful and continuing the walk by direct action; deeper private state is not inferred.",
+    "last_in_world_action": "He continues walking with Rena pressed close, sometimes kissing and caressing her, including attempts at intimate touching under the cloak; no later voluntary reaction to the Eurazania news is invented.",
+    "last_in_world_utterance": "Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю ее уже под плащом идем.",
+    "current_declared_emotional_state": "Affectionate/playful during the walk; reaction to the newly delivered Eurazania destruction news is NOT YET DECLARED and must remain user-controlled.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -47,20 +48,28 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "walking immediately beside/against Arlequino on a Dwargon street",
+      "position": "beside Arlequino at the caravan/merchant information counter",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact unresolved under-cloak dressing details remain UNKNOWN and should not be invented",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts walking close, kisses and ordinary caresses, but her stated public boundary against intimate groping remains active and she enforces it by moving his hand back up rather than silently consenting. She has resumed her errands autonomously and is choosing the route consistent with her knowledge.",
-      "observable_state": "She stays tucked against Arlequino while they walk. She accepts kisses and closeness; when his hand drops too low in public, she catches or shifts it back to her waist without stopping the walk. Her mood is mostly warm with dry amusement rather than angry.",
-      "last_observable_utterance": "— Обнимать можешь сколько хочешь. Целовать — тоже, пока не идёшь в стену. А руку ниже талии ещё раз опустишь на людях — я сама её тебе наверх переставлю, павлин.",
-      "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts public embraces, kisses and ordinary caresses, but still rejects intimate public groping even when hidden under the cloak. She has autonomously resumed her errands and is now causally exposed to catastrophic news from Eurazania. Do not invent her full private emotional state; show only immediate observable reaction and allow the player intervention window.",
+      "observable_state": "At the dispatcher's words that the Eurazania capital was destroyed, Rena goes abruptly still beside Arlequino; her hand tightens on the edge of the cloak. No speech after the revelation is yet established.",
+      "last_observable_utterance": "— Из Эуразании что-нибудь пришло? Караваны, сообщения, люди? Мне нужно понять, куда увозили эвакуированных.",
+      "current_private_emotion": "UNKNOWN beyond the observable freeze/tightened grip after hearing the destruction report",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
       "open_assignments": [
         "find organizer/coordinator for concerts and broader operations",
-        "investigate where Eurazania evacuees were sent through causal in-world channels",
+        "investigate where Eurazania evacuees were sent through causal channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; organizer and evacuee inquiries are now actively being resumed through a guild/caravan/merchant information route; home search remains later in sequence"
+      "assignment_results": "Evacuee investigation first major result: reliable local caravan-network report says the Eurazania capital was destroyed on T+161 after Milim's attack. Exact evacuee destinations remain unresolved. Organizer and home-search results remain NONE_YET."
+    },
+    "dispatcher": {
+      "presence": "present",
+      "role": "caravan-dispatch / merchant-information clerk",
+      "name": "UNKNOWN",
+      "knowledge_basis": "recent caravan and messenger traffic reaching Dwargon",
+      "confirmed_report_to_couple": "Eurazania capital was destroyed on T+161 after Milim's attack; exact evacuee distribution not known to this clerk",
+      "limits": "does not establish exact casualties, Carrion's true fate, exact refugee destinations, or condition of 18 Old Garden Street"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -73,9 +82,9 @@
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino directly describes his broader past as many dozens, exact count UNKNOWN.",
     "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Affectionate public walk continues. Rena accepts closeness and kisses but actively enforces the public-touch boundary she already stated. Practical errands have resumed.",
+    "current_issue": "Affectionate public walk has been interrupted by the first causal revelation that the Eurazania capital was destroyed. Player reaction and Rena's next immediate response are now the intervention point.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
-  "pacing_rule": "Provide longer cohesive scene segments when the player is traveling or explicitly asks for less compressed sessions, while still stopping before a new major decision/result that deserves player intervention.",
-  "next_transition_rule": "Continue the walk until the couple reaches the first plausible information/contact point in the guild/caravan/merchant route, unless Arlequino interrupts or changes destination. Do not fabricate organizer acceptance, evacuee locations, or property offers before a causal contact occurs."
+  "pacing_rule": "Provide longer cohesive scene segments during travel and routine progression, but stop at major revelations, irreversible choices, or other points where Arlequino reasonably needs an intervention window.",
+  "next_transition_rule": "Await Arlequino's reaction to the newly delivered destruction news. Do not invent his feelings, speech, movement, or decision. Rena may only make one immediate observable reaction after his next input; do not auto-resolve refugee locations, home damage, Carrion's true fate, or organizer search."
 }
