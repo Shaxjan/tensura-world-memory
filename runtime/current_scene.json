@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1300_desire_vs_initiation_argument",
+  "scene_id": "t162_dwargon_hotel_room_1300_rena_reacts_to_teenager_jab",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:00",
@@ -21,7 +21,8 @@
       "Arlequino then claimed Rena never wants him and has initiated sex zero times. Saved continuity contradicts literal zero because on T+150 morning Rena explicitly said she wanted sex and the couple then had a long consensual morning together.",
       "Arlequino sarcastically reframed the remembered counterexample as only one time and expressed real irritation about the imbalance in sexual initiative.",
       "Rena directly acknowledged that her initiative has been rare while rejecting the conclusion that she does not desire him.",
-      "Arlequino now argues that desire and action are the same in practice: when a hungry person has food beside them, they eat.",
+      "Arlequino argued that real desire should naturally produce action, using a hungry-person-and-food analogy.",
+      "Arlequino now intensifies the point: he says saying 'I want it but do not do it often' is like only liking the smell of food without intending to eat, and adds that Rena is 'really like a 15-year-old' in this respect. This is his comparison/insult, not an established age fact.",
       "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his spoken words."
     ]
   },
@@ -37,9 +38,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he verbally argues that wanting sex should naturally produce initiative, using a hungry-person-and-food analogy.",
-    "last_in_world_utterance": "-это одно и тоже , когда у голодного человека рядом лежит еда - ОН ЕСТ ",
-    "current_declared_emotional_state": "Still irritated about the imbalance in sexual initiative; deeper private state is not inferred.",
+    "last_in_world_action": "No new movement is declared; he verbally equates low sexual initiative with low practical desire and compares Rena's behavior to that of a fifteen-year-old.",
+    "last_in_world_utterance": "- ОН ЕСТ  - а твое \"я хочу но не трахаюсь часто \" это блять значит что просто нравится запах еды , но есть не собираюсь... И вправду как 15 летняя 🙂.",
+    "current_declared_emotional_state": "Still irritated and contemptuously teasing about the imbalance in sexual initiative; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -54,9 +55,9 @@
       "awake": true,
       "position": "at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has acknowledged that her sexual initiation has been rare. She may disagree sharply with Arlequino's analogy while also conceding the practical point that if her desire matched his in frequency/intensity, she would probably initiate more often. Do not turn her into a therapist, moral lecturer, melodramatic victim, submissive partner, or endless interviewer.",
-      "observable_state": "The argument is now serious rather than playful. She holds his gaze; the garment remains in her hands.",
-      "last_observable_utterance": "— Ладно. Один раз, который мы оба точно помним, — это действительно мало. Тут спорить не буду. Но не переворачивай это в «я тебя не хочу». Я хочу тебя. Просто слишком редко сама делаю первый шаг. Это не одно и то же.",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has already acknowledged that her sexual initiation has been rare. The teenager comparison hits her pride and maturity directly. She may concede the practical mismatch in desire/initiative while sharply rejecting being infantilized. Do not make her fragile, submissive, therapeutic, melodramatic, or an endless interviewer.",
+      "observable_state": "Her expression hardens at the '15-year-old' comparison. She stops treating the exchange as playful and answers with controlled anger; the garment remains in her hands.",
+      "last_observable_utterance": "— Тогда скажу проще. Да: если бы мне хотелось так же часто, как тебе, я бы сама лезла к тебе чаще. Значит, у тебя желание сильнее и чаще. Это я уже признала. Но ещё раз назовёшь меня пятнадцатилетней только потому, что я устроена не как ты, — и разговор закончится совсем не так весело, как начался.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -79,9 +80,9 @@
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners.",
     "known_departure_history": "Rena has already personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "Literal zero is contradicted by saved T+150 morning continuity. One explicit remembered Rena-initiated encounter is confirmed; exact total remains UNKNOWN. Rena has openly conceded that her initiation has been rare.",
-    "current_issue": "Arlequino believes low initiation means low desire and argues that real desire naturally produces action. Rena must respond from her own character and lived relationship history rather than as a therapist or interviewer.",
+    "current_issue": "Arlequino argues that low initiation means low practical desire and has now insultingly compared Rena's sexual behavior to that of a fifteen-year-old. Rena concedes the mismatch in frequency/intensity but rejects infantilization.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Resolve one immediate Rena response to Arlequino's desire-equals-initiation analogy. Do not unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions in the same beat."
+  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena sharply rejects the teenager comparison. Do not unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions without a new causally justified delta."
 }
