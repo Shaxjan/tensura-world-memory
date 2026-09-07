@@ -3,71 +3,59 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1342_family_budget_permission_for_relief",
-  "time": {"display": "T+162 ~13:42", "day": 162, "clock": "~13:42", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_organizer_office_1344_relief_and_concert_budget_estimate",
+  "time": {"display": "T+162 ~13:44", "day": 162, "clock": "~13:44", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He explicitly assumes responsibility for presenting Carrion as dead in the charity concert, rejects softer rumor-level wording, and asks Rena whether she objects to him using their shared family budget for the relief project.",
-    "last_in_world_utterance": "- именно в память о погибшем Карионе, ответственность на мне. Плевать на слухи и на мораль. Цель собрать больше народу и денег , если Карион жив вряд ли он разозлится , на что я убил его в своем концерте во благо его народа , так что в память о погибшем Зверокороле Карионе.Милая , не против если я распоряжусь нашим бюджетом?",
-    "current_declared_emotional_state": "Decisive and pragmatic by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He asks Raden for a first-pass cost estimate for the humanitarian caravan and for a charity concert using a venue of at least 18,000 safe capacity. He says he intends to ask King Gazel to open the concert and grant permission. No audience attendance, royal approval, spending, booking, or actual approach to Gazel is yet established.",
+    "last_in_world_utterance": "- какой будет расход на караван? .... В эурозании я поставил концерт на 18000 человек. Здесь хочу не меньше.... Какой будет расход на концерт?... Я попрошу короля Газеля открыть концерт  и дать разрешение на него.",
+    "current_declared_emotional_state": "Task-focused and ambitious by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena grants Arlequino permission to use the shared family budget for the Eurazania relief/charity project, while insisting that large expenses be tracked and that the family treasury not be emptied blindly; no exact cap is established and no money is spent in this beat."}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits use of shared family funds for Eurazania relief/charity work, with major expenses tracked and no blind treasury wipeout. No exact cap and no spending yet."}
   },
-  "recent_elapsed_events": [
-    "Arlequino explicitly rejects cautious public wording about Carrion and instructs that the charity concert be framed 'in memory of the fallen Beast King Carrion,' taking responsibility for that claim.",
-    "Raden accepts this as Arlequino's mandated public wording and records it as such rather than treating Carrion's death as independently verified fact.",
-    "Arlequino asks Rena directly whether she objects to him using their shared family budget.",
-    "Rena answers as an equal spouse: she permits use of the family budget for helping Eurazania and the charity project, but requires transparent accounting for major expenditures and refuses a blank-check approach that could wipe out the family treasury without review.",
-    "No exact spending ceiling is established, no payment is made, Raden is not yet paid, and no supplies/venue/transport are booked in this beat."
-  ],
+  "historical_guardrail": {
+    "eurazania_t138_formal_concert": "18,000 was the safe venue capacity, not confirmed final attendance; pre-show estimate was roughly 12–14k and final attendance/revenue remain unresolved.",
+    "current_planning_interpretation": "Arlequino's 'not less than 18,000 here' is treated as a requested venue-capacity target, not a guaranteed audience count."
+  },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
       "position": "beside Arlequino in front of Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Serious and practical. She does not object to using shared funds for relief, but makes clear that shared money is not an unlimited blank check.",
-      "last_observable_utterance": "— Не против. На помощь Эуразании — распоряжайся. Но семейную казну в ноль не сливай и крупные траты проводи через смету. Я хочу видеть, куда уходят деньги.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. She treats the family budget as genuinely shared and may approve major purpose while still requiring accountability."
+      "observable_state": "Serious and practical, listening to budget planning. She has already agreed to family-budget use for relief with accounting safeguards.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. She can support an ambitious relief concert while protecting shared finances."
     },
     "raden": {
       "name": "Раден",
       "presence": "present",
       "role": "independent professional organizer/coordinator candidate",
       "status": "WILLING_IN_PRINCIPLE_NOT_YET_FORMALLY_HIRED",
-      "requested_scope": [
-        "confirm current Eurazania evacuee receiving locations and needs through causal channels",
-        "prepare and dispatch a humanitarian caravan once a receiving point/route is confirmed, while provisionally sourcing transport, guards and supplies",
-        "send a message toward Tempest/receiving networks that help is being prepared and request a confirmed receiving contact",
-        "organize a Dwargon charity concert for Eurazania victims and destruction relief",
-        "use the player-mandated public framing 'in memory of the fallen Beast King Carrion' with responsibility attributed to Arlequino's decision",
-        "handle venue, permits, staffing, suppliers, publicity, ticket/donation operations and transparent relief accounting"
-      ],
+      "planning_task": "Provide a provisional cost range, separating caravan transport/security from aid cargo, and distinguish an 18–20k-capacity concert with versus without royal venue/security/permit support.",
       "constraints": [
-        "Exact evacuee distribution remains unresolved; do not state all evacuees are in Tempest as fact.",
-        "Carrion's death remains objectively unconfirmed to the couple, despite Arlequino's chosen public wording.",
-        "No large expenditure, venue booking, caravan dispatch or payment occurs until Raden is formally authorized/hired and concrete expense authority is established."
-      ],
-      "observable_state": "Raden records Arlequino's exact memorial framing and waits for the remaining authority/terms decision after hearing Rena's family-budget permission."
+        "Exact refugee needs and receiving point are still unresolved, so caravan cost can only be a range.",
+        "King Gazel has not yet been asked in-world and has not granted permission, venue, security, attendance, endorsement, or opening remarks.",
+        "No cost estimate is a payment or booking."
+      ]
     }
   },
   "knowledge_state": {
     "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
-    "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED",
+    "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino nevertheless mandates memorial wording as if fallen and takes responsibility for it",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
     "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Rena has given purpose-level consent to use shared family funds for Eurazania relief while preserving joint-finance accountability."
+    "current_issue": "Arlequino and Rena are jointly budgeting a large relief and charity project; Rena permits shared-budget use with accountability."
   },
-  "pacing_rule": "Provide longer cohesive scene segments during routine planning and travel, but stop before irreversible spending, final hire terms, or another major player decision.",
-  "next_transition_rule": "Raden can now ask for formal hire/authority and expense-control terms or present a first-pass action plan. Do not spend money, book a venue, dispatch a caravan, or invent an exact spending cap without further causal agreement."
+  "pacing_rule": "Provide longer cohesive planning scenes but stop before actual major spending, a royal audience/request outcome, venue booking, or other irreversible commitment.",
+  "next_transition_rule": "Raden may give provisional budget ranges and explain how Gazel's potential support changes them. Do not invent Gazel's agreement or an audience. Await Arlequino's next decision on budget/scale or his explicit move to seek the king."
 }
