@@ -3,16 +3,16 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1437_arlequino_teases_rena_after_ashes_presentation",
-  "time": {"display": "T+162 ~14:37", "day": 162, "clock": "~14:37", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_student_hall_1438_students_react_to_ashes_of_eurazania",
+  "time": {"display": "T+162 ~14:38", "day": 162, "clock": "~14:38", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Immediately after delivering the substantive presentation of «Пепел Эурозании», Arlequino remains seated with Rena on his lap, kisses her neck softly and passionately, and jokes that he would rather be lying with her on a sofa than having to write masterpieces.",
-    "last_in_world_utterance": "- лучше лежал с тобой на диване, а то приходится писать шедевры",
-    "current_declared_emotional_state": "Affectionate and playfully self-satisfied by direct wording; no deeper private state inferred."
+    "last_in_world_action": "Still seated with Rena on his lap after presenting «Пепел Эурозании», Arlequino asks the gathered students and Rena for their reaction: 'и как вам?'.",
+    "last_in_world_utterance": "- и как вам?",
+    "current_declared_emotional_state": "Openly seeking reaction to the new piece; no deeper private state inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -24,33 +24,24 @@
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
-    "student_piece_state": "DEFINED_AND_VERBALLY_PRESENTED: «Пепел Эурозании», five-part original wartime stage piece. No individual student casting, exact staging, music cues or rehearsal schedule assigned yet.",
+    "student_piece_state": "DEFINED_AND_VERBALLY_PRESENTED: «Пепел Эурозании», five-part original wartime stage piece. Students have now been invited to react, but no casting, staging, music cues or rehearsal schedule is assigned yet.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:37",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:38",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "Arlequino has completed the spoken presentation of «Пепел Эурозании» to the silent students.",
-    "He immediately shifts into affectionate teasing with Rena while keeping her on his lap, kissing her neck and saying he would rather be lying with her on a sofa than writing masterpieces.",
-    "Rena remains physically close and may respond as a proud, dry, affectionate wife. No student interruption is forced and no casting or rehearsal automatically begins."
+    "Arlequino explicitly asks the room what they think of «Пепел Эурозании», ending the earlier instruction to remain silent for purposes of hearing the presentation.",
+    "Different students respond individually rather than as a single group voice: one is strongly impressed by the emotional weight; another points out that the piece will be difficult to perform convincingly and cannot be played theatrically or melodramatically.",
+    "Rena also gives a concise spouse-like judgment: the piece is strong because it makes Eurazania's destruction about ordinary people rather than spectacle, but she warns that weak acting will ruin it.",
+    "No casting or rehearsal automatically begins."
   ],
   "present_entities": {
-    "rena": {
-      "name": "Рена",
-      "presence": "present",
-      "position": "on Arlequino's lap after the presentation",
-      "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Quietly affected by the serious presentation but still affectionate; soft neck kissing is within established public-affection boundary."
-    },
-    "students": {
-      "presence": "group present in/around the hall; exact count UNKNOWN",
-      "current_activity": "remaining gathered after listening to «Пепел Эурозании»",
-      "reaction": "Serious and attentive; they were told to listen and stay silent, and no new permission to speak or assignment has yet been established."
-    },
+    "rena": {"name": "Рена", "presence": "present", "position": "on Arlequino's lap", "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN", "observable_state": "Affectionate, serious about the piece, willing to critique it directly."},
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "reacting to «Пепел Эурозании» after being invited to speak", "reaction": "Mixed but strongly engaged: emotional impact is recognized, along with concern that the material requires restrained, convincing acting."},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT", "ongoing_role": "No new schedule completion is established; «Гвазимодо» remains paused."}
   },
   "knowledge_state": {
@@ -60,7 +51,7 @@
     "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; Raden's air-messenger inquiry is active",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Affectionate spouse banter resumes immediately after the serious creative presentation."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena remains physically close while giving honest creative feedback."},
   "pacing_rule": "Medium scene length by default: about 2-3 meaningful beats, then stop at the next real player intervention point.",
-  "next_transition_rule": "Resolve Rena's immediate spouse-like response and preserve the students' silent attentive presence. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
+  "next_transition_rule": "Await Arlequino's response to the feedback or next instruction. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
 }
