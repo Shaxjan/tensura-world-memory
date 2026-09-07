@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1258_arlequino_adds_ex_domestic_and_appearance_details",
+  "scene_id": "t162_dwargon_hotel_room_1258_rena_catches_eye_contradiction",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:58",
@@ -17,9 +17,10 @@
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
       "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, describing her initiative, and saying she wanted to marry him.",
       "Rena's valid mode is proud, jealous, sarcastic and competitive rather than fragile or melodramatically wounded.",
-      "Arlequino now adds that the former partner cooked excellently and had long brown hair and brown eyes.",
-      "This partially conflicts with Arlequino's earlier statement that he did not remember the woman's eyes or face. Treat the newest direct player statement as a present recollection/clarification: he now says the eyes were brown. Rena can notice the contradiction because she heard both statements.",
-      "No dressing advancement, door action, or departure occurs in this beat."
+      "Arlequino added that the former partner cooked excellently and had long brown hair and brown eyes.",
+      "This partially conflicted with Arlequino's earlier statement that he did not remember the woman's eyes or face. The newest direct player statement is treated as a present recollection/clarification: the eyes were brown.",
+      "Rena immediately caught the contradiction about the eyes and teased Arlequino about the former partner's increasingly impressive list of qualities.",
+      "Rena did not advance dressing, unlock the door, or leave during this beat."
     ]
   },
   "location": {
@@ -51,8 +52,9 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. She is now openly jealous and competitive about the former partner but not insecure. She can sharply catch Arlequino on his earlier claim that he did not remember the woman's eyes, tease him about suddenly remembering them, and react to 'готовила отменно' as yet another item in the ex's absurdly impressive resume. Keep it personal and natural; no therapy language.",
-      "observable_state": "Holding the next garment, eyes narrowed at Arlequino with a sharp jealous half-smile; attentive enough to remember his earlier contradictory detail.",
+      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. She is openly jealous and competitive about the former partner but not insecure. She has now caught Arlequino on his earlier claim that he did not remember the woman's eyes and is teasing him about suddenly remembering brown eyes while reacting to 'готовила отменно' as another item in the ex's absurdly impressive resume. Keep it personal and natural; no therapy language.",
+      "observable_state": "Still holding the next garment without putting it on; eyes narrowed with a sharp jealous half-smile after catching Arlequino's contradiction.",
+      "last_observable_utterance": "— Подожди. Глаза ты, значит, не помнил. А теперь они внезапно карие. И готовила отменно… Длинные коричневые волосы, карие глаза, красавица, сама проявляла инициативу, замуж за тебя хотела… Продолжай. Мне уже любопытно, насколько идеальной ты успеешь её сделать, прежде чем снова запутаешься в показаниях.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -72,10 +74,10 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Playful ex-story provocation continues. Rena is in proud, jealous, sarcastic competitive mode and can now catch Arlequino on the contradiction about remembering the ex's eyes.",
+    "current_issue": "Playful ex-story provocation continues. Rena is in proud, jealous, sarcastic competitive mode and has caught Arlequino on the contradiction about remembering the ex's eyes.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1257_rena_jealousy_overdramatization_replay.md",
-  "next_transition_rule": "Continue from ~12:58 with Rena still holding the next garment. Let her react to the cooking/hair/eye details and plausibly catch the contradiction about the eyes. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
+  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action from ~12:58. Rena remains holding the next garment. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions without a new causally justified delta."
 }
