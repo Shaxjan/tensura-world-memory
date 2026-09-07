@@ -3,38 +3,38 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_corridor_1303_couple_exits_room_embraced",
+  "scene_id": "t162_dwargon_street_1310_couple_walks_toward_guild_caravan_contacts",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~13:03",
+    "display": "T+162 ~13:10",
     "day": 162,
-    "clock": "~13:03",
+    "clock": "~13:10",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "After prolonged private time and jealous banter, Arlequino and Rena repeatedly agreed to resume errands.",
-      "Arlequino placed his cloak around Rena; it remains on her.",
-      "Rena had explicitly allowed playful intimate contact in the room but set a public boundary against being continuously groped outside.",
-      "Arlequino now explicitly says they are going and walks with Rena pressed into his embrace, sometimes kissing and touching/caressing her as they move.",
-      "Rena reaches the room latch, unlocks and opens the door as the next causal departure step; this does not invent a voluntary Arlequino door action.",
-      "The couple crosses into the hotel corridor still close together. Once in the public corridor, Rena autonomously redirects any wandering hand from intimate groping back to a socially acceptable hold at her waist, consistent with her stated boundary.",
-      "No money changes occur and no errand destination has yet been chosen or reached."
+      "Arlequino and Rena left their hotel room together after prolonged private time and jealous banter.",
+      "Arlequino's cloak remains wrapped around Rena.",
+      "Arlequino directly keeps Rena pressed into his embrace while walking, sometimes kissing, caressing and attempting more intimate touching.",
+      "Rena accepts close walking, embraces, ordinary affectionate caresses and occasional kisses, but repeatedly redirects any intimate public groping back to her waist/side in line with her already stated boundary.",
+      "The couple walks through the hotel corridor, descends to the lobby, passes through the public ground floor, and exits into the midday streets of Dwargon.",
+      "Rena autonomously resumes her deferred errands now that they are outside. She chooses to begin by heading toward a plausible guild/caravan/merchant information area where she may find both current travel/refugee information and contacts who know event organizers or coordinators.",
+      "No actual organizer, evacuee source, or property contact has yet been reached. No results are established.",
+      "No money changes occur."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "hotel corridor immediately outside the couple's room",
+    "place": "city street en route toward a guild/caravan/merchant information area",
     "certainty": "current_scene_confirmed",
-    "lodging_type": "hotel",
-    "lodging_exact_name_or_address": "UNKNOWN",
-    "room_door_state": "opened for departure; whether it is subsequently closed/locked is not yet established"
+    "exact_street_or_district_name": "UNKNOWN",
+    "hotel_room_status": "left behind; whether room door was finally locked after departure is not material to current scene and remains unconfirmed"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He walks with Rena pressed against him in an embrace, sometimes kissing and touching/caressing her as they go; he explicitly says they are going.",
-    "last_in_world_utterance": "Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю идем.",
-    "current_declared_emotional_state": "Affectionate/playful and proceeding with departure by direct action; deeper private state is not inferred.",
+    "last_in_world_action": "He continues walking with Rena held close, sometimes kissing, caressing and trying to touch her more intimately while moving through the hotel and into the city.",
+    "last_in_world_utterance": "Идём Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю идем.",
+    "current_declared_emotional_state": "Affectionate/playful and continuing the walk by direct action; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -47,11 +47,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "walking immediately beside/against Arlequino in the hotel corridor",
+      "position": "walking immediately beside/against Arlequino on a Dwargon street",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact unresolved under-cloak dressing details remain UNKNOWN and should not be invented",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts walking close and occasional kisses, but her previously stated public-touch boundary remains active. In public she can move Arlequino's hand away from intimate groping without turning the interaction into conflict, therapy, melodrama, or an interview.",
-      "observable_state": "She stays tucked against Arlequino as they leave the room, accepts the closeness, and in the corridor calmly moves an overly wandering hand back to her waist.",
-      "last_observable_utterance": "— Обнимать можно. Целовать иногда — тоже. А лапы выше держи, павлин. Мы уже не в комнате.",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts walking close, kisses and ordinary caresses, but her stated public boundary against intimate groping remains active and she enforces it by moving his hand back up rather than silently consenting. She has resumed her errands autonomously and is choosing the route consistent with her knowledge.",
+      "observable_state": "She stays tucked against Arlequino while they walk. She accepts kisses and closeness; when his hand drops too low in public, she catches or shifts it back to her waist without stopping the walk. Her mood is mostly warm with dry amusement rather than angry.",
+      "last_observable_utterance": "— Обнимать можешь сколько хочешь. Целовать — тоже, пока не идёшь в стену. А руку ниже талии ещё раз опустишь на людях — я сама её тебе наверх переставлю, павлин.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -60,12 +60,12 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET"
+      "assignment_results": "NONE_YET; organizer and evacuee inquiries are now actively being resumed through a guild/caravan/merchant information route; home search remains later in sequence"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; final schedule remains blocked by the unfixed concert date and any remaining confirmations"
+      "activity": "self-organizing rehearsal and production work; Bren continues grouping plausible rehearsal blocks while final schedule remains blocked by the unfixed concert date and any remaining confirmations"
     }
   },
   "relationship_state": {
@@ -73,9 +73,9 @@
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino directly describes his broader past as many dozens, exact count UNKNOWN.",
     "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "The couple has physically left the room and is proceeding through the hotel together. Affection remains warm and playful; Rena enforces the public-contact boundary she already stated.",
+    "current_issue": "Affectionate public walk continues. Rena accepts closeness and kisses but actively enforces the public-touch boundary she already stated. Practical errands have resumed.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
-  "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words/action in the hotel corridor or his choice of destination. Do not jump straight to organizer/refugee/home-search results without a causal travel and contact step."
+  "pacing_rule": "Provide longer cohesive scene segments when the player is traveling or explicitly asks for less compressed sessions, while still stopping before a new major decision/result that deserves player intervention.",
+  "next_transition_rule": "Continue the walk until the couple reaches the first plausible information/contact point in the guild/caravan/merchant route, unless Arlequino interrupts or changes destination. Do not fabricate organizer acceptance, evacuee locations, or property offers before a causal contact occurs."
 }
