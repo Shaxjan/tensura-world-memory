@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1254_arlequino_mentions_13_hour_ex",
+  "scene_id": "t162_dwargon_hotel_room_1255_arlequino_teases_rena_with_ex_memory_and_two_times_limit",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:54",
+    "display": "T+162 ~12:55",
     "day": 162,
-    "clock": "~12:54",
+    "clock": "~12:55",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact sexual mechanics remain offscreen.",
       "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
       "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment is still in her hands.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
-      "Arlequino then used a boastful quiver/target metaphor focused on Rena as his single current target.",
-      "Arlequino now, slightly mock-indignant, adds that one former partner once 'не вылезала' for 13 hours and gives a drawn-out appreciative moan. Treat this as a claimed past prolonged sexual encounter; exact mechanics and exact truth beyond his statement remain unverified in-world. Rena hears this directly.",
-      "No dressing advancement, door action, or departure occurs in this beat."
+      "Arlequino then claimed one former partner once stayed sexually involved with him for 13 hours and gave a drawn-out appreciative moan; Rena reacted with genuine jealousy and told him she did not want to hear more about that woman today.",
+      "Arlequino now says that if he recalls that ex or her name he will definitely become aroused, then teases Rena that, as they supposedly established, she cannot manage more than two times.",
+      "This claim conflicts with the established scene state: Rena has refused a third full round today, but no hard physical limit of two times has been established. No dressing advancement, door action, or departure occurs in this beat."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Speaks with slight mock indignation and gives a drawn-out appreciative moan while recalling a claimed past 13-hour encounter.",
-    "last_in_world_utterance": "- хм у меня была одна , которая не вылезала , 13 часов ,, вот это было",
-    "current_declared_emotional_state": "playful, sexually boastful and nostalgic/teasing in presentation; exact private emotion otherwise not inferred",
+    "last_in_world_action": "No new movement is declared; he continues teasing Rena verbally while she holds the next garment.",
+    "last_in_world_utterance": "-если буду вспоминать ее и ее имя , однозначно возбужусь 😋, а тв как мы выяснили не можешь больше 2 раз .",
+    "current_declared_emotional_state": "playful, provocative, sexually teasing and deliberately pressing Rena's jealousy",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -49,8 +49,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close, but the new 13-hour ex comparison can trigger genuine jealousy, disbelief, competitiveness, annoyance, or a mix. Keep her reaction personal and natural, not therapeutic. She does not need to become insecure or obedient. Granular pacing remains binding.",
-      "observable_state": "Holding the next garment and hearing Arlequino vividly praise a past 13-hour encounter with an ex.",
+      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close, but now genuinely jealous and provoked by Arlequino saying he would get aroused by remembering the ex. She can sharply reject his claim that she 'cannot' more than two times, because she chose not to have a third full round today rather than establishing a physical maximum. Keep her reaction personal, proud and natural, not therapeutic. Do not let jealousy automatically override her earlier decision or force another sexual round.",
+      "observable_state": "Still holding the next garment, attention fully on Arlequino; jealousy and competitive irritation are plausible observable reactions.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,10 +70,10 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Affectionate banter has become teasing jealousy around Arlequino's former partners. He has now explicitly praised one claimed 13-hour past sexual encounter in front of Rena.",
+    "current_issue": "Affectionate banter is now openly jealous/competitive after Arlequino says remembering an ex would arouse him and falsely frames Rena's current refusal as a two-times physical limit.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:54 with Rena still holding the next garment. Let her react first to the 13-hour ex comparison and the appreciative moan. Do not advance dressing, unlock the door, or leave in the same beat. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:55 with Rena still holding the next garment. Let her react first to the ex-arousal provocation and the claim that she cannot more than two times. Do not advance dressing, unlock the door, leave, or make Rena start another sexual round automatically. Do not invent Arlequino's voluntary actions."
 }
