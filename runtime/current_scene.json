@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1258_rena_reacts_to_family_life_explanation",
+  "scene_id": "t162_dwargon_hotel_room_1258_arlequino_calls_rena_irritation_love",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:58",
@@ -18,8 +18,10 @@
       "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, describing her initiative, saying she wanted to marry him, and adding that she cooked excellently and had long brown hair and brown eyes.",
       "Arlequino is established as Rena's first man; no prior male romantic/sexual partner is established for her. This asymmetry materially sharpens her reaction to Arlequino's detailed stories about former partners without making her fragile or submissive.",
       "Rena's valid mode is proud, jealous, sharp, sarcastic and competitive rather than fragile or melodramatically wounded.",
-      "Arlequino now jokes that the former partner may only have wielded 'his sword' better, then recalls that he left her because he did not want family life at the time.",
-      "Rena reacts strongly to the contrast: this former partner wanted marriage, Arlequino left because he rejected family life then, yet he is now married to Rena. The contrast is personally salient to Rena because Arlequino is her first and only man.",
+      "Arlequino joked that the former partner may only have wielded 'his sword' better, then recalled that he left her because he did not want family life at the time.",
+      "Rena focused on the contrast between Arlequino rejecting family life with that former partner and later marrying Rena, and directly asked what Rena had that the others did not.",
+      "Arlequino answered that Rena irritates him more than all the others combined, then explicitly called that love.",
+      "Rena receives the answer as recognizably Arlequino-like rather than as a polished romantic declaration. Her reaction may visibly soften or crack into reluctant amusement while remaining proud and still somewhat jealous; do not erase the preceding jealousy or invent private thoughts.",
       "No dressing advancement, door action, departure, or other voluntary Arlequino action occurs in this beat."
     ]
   },
@@ -35,9 +37,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he continues the story about the former partner.",
-    "last_in_world_utterance": "- разве что моим мечом😋... Так так так.. А что случилось.... Ааааа я ушел да. Я же не хотел семейной жизниб",
-    "current_declared_emotional_state": "playful and provocative while casually recalling why he left the former partner",
+    "last_in_world_action": "No new movement is declared; he answers Rena's question verbally.",
+    "last_in_world_utterance": "- ты меня бесишь больше остальных всех вместе взятых 😡... Это любовь .",
+    "current_declared_emotional_state": "He explicitly frames Rena irritating him more than all former partners combined as love; no further private emotional state is inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -52,8 +54,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man, while he has disclosed many former partners. She is genuinely and personally jealous with a sharp competitive edge. The new family-life detail hits harder than the sexual joke: an impressive former partner wanted marriage, Arlequino left because he did not want family life then, but later chose marriage with Rena. Rena can seize on that contrast directly, challenge him, become cutting, or demand what changed without becoming insecure, melodramatic, therapeutic, submissive, or a sitcom caricature.",
-      "observable_state": "Still holding the next garment without putting it on; after the crude sword joke her stare hardens, then the family-life explanation makes her expression turn more intent and sharply personal.",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man, while he has disclosed many former partners. She remains genuinely and personally jealous with a sharp competitive edge, but Arlequino's deliberately unpolished answer lands as a distinctly personal answer to why he chose her. She may react with reluctant amusement, irritation, affection, sarcasm, or a mixture visible in speech/behavior, without becoming melodramatic, therapeutic, submissive, or a sitcom caricature.",
+      "observable_state": "Still holding the next garment without putting it on; she is watching Arlequino closely after his answer. Exact private emotion remains unstated until expressed.",
       "last_observable_utterance": "— Твой меч я сейчас вообще оставлю без комментариев. Но ты ушёл от неё потому, что не хотел семейной жизни? От той самой красавицы, которая тебя хотела, готовила тебе, хотела за тебя замуж? А потом встретил меня — и женился. Так что теперь мне уже не она интересна. Мне интересно другое: что во мне оказалось такого, чего не было во всех этих женщинах до меня?",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
@@ -75,10 +77,10 @@
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners. This is established continuity and may materially affect jealousy and comparison scenes.",
-    "current_issue": "The ex-story provocation remains sharply personal. Rena now focuses on the contrast between Arlequino previously rejecting family life with a woman who wanted marriage and later choosing marriage with Rena.",
+    "current_issue": "Rena's jealousy remains active, but Arlequino has answered her question about why she differs from his former partners by saying she irritates him more than all of them combined and calling that love.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "direct player continuity correction 2026-09-07: Arlequino is Rena's first man; prior too-light jealousy response replayed",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action from ~12:58. Rena remains holding the next garment. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions without a new causally justified delta."
+  "next_transition_rule": "Resolve Rena's immediate observable response to Arlequino's 'you irritate me most; that's love' answer at ~12:58. Keep the next garment in her hands and do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
 }
