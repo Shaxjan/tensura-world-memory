@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1251_arlequino_sulks_about_wife_expectations",
+  "scene_id": "t162_dwargon_hotel_room_1251_arlequino_finally_agrees_to_leave",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:51",
@@ -11,11 +11,12 @@
     "clock": "~12:51",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
-      "At ~12:45 Rena acknowledged Arlequino's complaint that he has been the one initiating intimacy and said she had grown too used to him always starting.",
+      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
       "At ~12:47-12:48 Rena autonomously accepted a brief one-minute manual compromise to help Arlequino calm the physical tension without turning it into a third full intimacy round; exact mechanics remain offscreen.",
-      "At ~12:50 Arlequino agreed they should leave, then made one more oral-sex request. Rena refused it personally and teasingly while preserving attraction.",
-      "Arlequino now sulks: 'ладно, конечно, а что я хотел ещё от жены'. Rena takes the implication personally enough to push back, but does not turn the moment into a lecture. She remains seated beside him and has not progressed dressing beyond the initial reach toward clothing."
+      "At ~12:50 Rena had begun the first get-ready transition by sitting up and reaching toward her clothing, while still remaining close and attracted.",
+      "Arlequino made one more request for oral sex; Rena refused it while remaining affectionate.",
+      "Arlequino now repeatedly pats/squeezes Rena's butt softly while seriously saying that the attempt did not work and that they should go.",
+      "This is the first unambiguous serious agreement to stop bargaining and resume errands. No door action or departure has happened yet."
     ]
   },
   "location": {
@@ -30,9 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new voluntary movement beyond speaking is declared in this beat.",
-    "last_in_world_utterance": "-😓ладно 😭конечно а что я хотел еще о жены 😭",
-    "current_declared_emotional_state": "disappointed and melodramatically sulking about what he can expect from his wife",
+    "last_in_world_action": "Repeatedly pats and softly squeezes Rena's butt while speaking seriously.",
+    "last_in_world_utterance": "- ладно не прокатило , значит идем.",
+    "current_declared_emotional_state": "still strongly attracted, but now serious about ending the bargaining and leaving for errands",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -45,10 +46,10 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "seated on the bed beside Arlequino, turned back toward him rather than continuing to dress",
-      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; dressing has not progressed beyond the initial reach toward clothing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive and strongly attracted. She still does not want another partnered sexual act before errands. She is mildly stung/annoyed by Arlequino implying he should expect little from his wife after today's closeness, and answers personally rather than clinically.",
-      "observable_state": "Still somewhat flushed and emotionally engaged; pauses the get-ready motion to answer him directly.",
+      "position": "seated on the bed beside Arlequino, at the beginning of getting ready",
+      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; dressing has only just begun and is not completed",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. She still does not want another sexual act before errands. Arlequino's repeated soft butt pats/squeezes can be treated as affectionate teasing in this beat, but she may stop his hand if it continues because they are now actually trying to leave.",
+      "observable_state": "Still somewhat flushed and emotionally engaged; likely relieved/amused that Arlequino has finally seriously agreed to go.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -57,7 +58,7 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred through the current private moment"
+      "assignment_results": "NONE_YET; work remains deferred only until they actually leave the room"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -68,7 +69,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena acknowledged Arlequino's complaint about her lack of initiation and accepted one brief compromise, but still does not want another partnered sexual act before errands. Arlequino now frames the refusal as disappointment in what he can expect from a wife, and Rena pushes back personally without withdrawing affection.",
+    "current_issue": "Arlequino has now seriously agreed to stop bargaining for more sexual activity and leave with Rena for the errands, while attraction and playful physical affection remain high.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -89,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:51 with Rena seated beside Arlequino and paused before dressing further. She can answer his sulking personally and affectionately while preserving her current refusal. Do not complete dressing, unlock the door, or leave until a later beat if the player does not intervene. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:51. Rena may react to the repeated soft butt pats/squeezes and Arlequino's serious agreement, then take only one meaningful get-ready step. Do not complete dressing, unlock the door, or leave in the same beat. Do not invent Arlequino's voluntary actions."
 }
