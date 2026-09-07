@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1352_four_blumund_relief_letters_prepared",
-  "time": {"display": "T+162 ~13:52", "day": 162, "clock": "~13:52", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
+  "scene_id": "t162_dwargon_student_hall_1405_return_after_relief_planning",
+  "time": {"display": "T+162 ~14:05", "day": 162, "clock": "~14:05", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He clarifies that the previously drafted Blumund relief letter is to exist in two copies: one addressed to Oren and one to Lissa via the Adventurers' Guild. He then takes two additional sheets and writes separate appeals to the King and Queen of Blumund, asking them to help and show mercy toward Eurazania refugees. He signs the royal appeals: 'ваш гениальный Маэстро Арлекино из Дваргона'.",
-    "last_in_world_utterance": "- это письмо в 2 экземплярах , Орену и Лиссе  в гильдию авантюристов. Беру еще 2 листа и пишу королю и короле Блюмунда прошу помочь и проявить милость, беженцам эурозании подпись - ваш гениальный Маэстро Арлекино из Дваргона.",
-    "current_declared_emotional_state": "Urgent and theatrically self-assured by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He kisses Rena and tells her they are going first to the hall 'к бездарям'. He then leaves Raden's office with Rena and proceeds to the student hall. No further voluntary speech or action is invented after arrival.",
+    "last_in_world_utterance": "Целую рену -идем , сначала в зал к бездарям .",
+    "current_declared_emotional_state": "Affectionate toward Rena and casually mocking/teasing toward the students by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No new exact expense is established in this beat."}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No new exact expense is established during the walk."}
   },
   "concert_directive": {
     "deadline": "within three days from T+162 ~13:47; target no later than T+165 unless causally delayed or revised",
@@ -26,51 +26,41 @@
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED and being prepared by Raden through multiple flying-beast courier routes to locate Eurazania evacuees and approximate their number",
-    "blumund_parallel_caravan": "REQUESTED through two duplicate operational letters: one to Oren and one to Lissa via the Adventurers' Guild, asking that Blumund begin assembling a second humanitarian caravan and hold it ready pending confirmed refugee location/receiving point",
-    "blumund_royal_appeals": "Two separate letters written to the King and Queen of Blumund asking them to help and show mercy toward Eurazania refugees; signed 'ваш гениальный Маэстро Арлекино из Дваргона'",
-    "dispatch_status": "All four Blumund-bound letters are prepared in Raden's office and can be placed on fast outbound courier routes; delivery and recipient reactions are not yet established."
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:05",
+    "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
+    "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
+    "dispatch_status": "Raden retains operational responsibility for putting the prepared letters and courier inquiries onto the fastest practical routes; no delivery/reply is yet established in the current scene"
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "beside Arlequino near Raden's desk",
+      "position": "beside Arlequino in the student hall",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Serious about the relief effort; she can react dryly to Arlequino's flamboyant royal-letter signature without derailing the task.",
+      "observable_state": "She accepts the kiss, leaves the organizer office with Arlequino and accompanies him back to the hall. She can react dryly to his 'бездарям' remark without becoming an interviewer.",
       "autonomy_state": "Proud, strong-willed, independent and affectionate."
     },
-    "raden": {
-      "name": "Раден",
-      "presence": "present",
-      "role": "independent professional organizer/coordinator",
-      "status": "SPECIFIC_OPERATIONAL_AUTHORITY_GRANTED",
-      "current_authority": [
-        "dispatch multiple flying-beast couriers to identify Eurazania evacuee locations and approximate headcount",
-        "deliver findings to the hotel Arlequino identified or leave a message there",
-        "begin planning a charity concert larger than 18,000 safe capacity if feasible within three days",
-        "use the Blumund-style self-financing model",
-        "dispatch the four prepared Blumund relief letters on the fastest practical outbound routes"
-      ],
-      "constraints": [
-        "No refugee location/headcount invented before replies arrive.",
-        "No royal approval or venue assumed.",
-        "No recipient reaction to the Blumund letters invented before delivery.",
-        "No exact courier cost invented without a quote."
-      ]
+    "students": {
+      "presence": "group present in/around the hall; exact count UNKNOWN",
+      "current_activity": "self-organized rehearsal and production work for «Гвазимодо» continues in loose groups; no major new result is established solely from the short elapsed interval",
+      "reaction_to_arrival": "They notice Arlequino and Rena entering; exact individual reactions remain open for the next beat"
+    },
+    "bren": {
+      "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
+      "ongoing_role": "continues availability/grouping work for rehearsals when present/available; no new completed schedule is established"
     }
   },
   "knowledge_state": {
     "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
     "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
-    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; air-messenger inquiry now authorized",
+    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; Raden's air-messenger inquiry is active",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Joint relief planning under a hard three-day concert deadline; parallel appeals now extend to private and royal contacts in Blumund."
+    "current_issue": "Rena and Arlequino have temporarily left crisis logistics with Raden and returned together to the student hall."
   },
-  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Stop at the next real player decision rather than extending logistics into a long interview.",
-  "next_transition_rule": "Raden may physically separate and seal the four letters for dispatch and confirm their routes. Do not auto-return answers, auto-visit Gazel, book a venue, or invent spending."
+  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Stop at the next real player decision rather than one gesture or a long chain of logistics.",
+  "next_transition_rule": "Resolve the immediate arrival in the hall and NPC reactions only. Do not invent Arlequino's next instruction to students, auto-advance the concert, auto-return courier results, or assume Bren's exact presence without causal support."
 }
