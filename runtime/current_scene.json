@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1302_departure_prompt_after_jealous_banter",
+  "scene_id": "t162_dwargon_hotel_room_1302_arlequino_cloaks_rena_before_departure",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:02",
@@ -13,14 +13,13 @@
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
       "Rena later accepted one brief compromise, then both agreed to resume errands.",
-      "Rena began dressing at granular pacing; first garment is complete and she has been holding the next garment through the ensuing banter.",
-      "Arlequino and Rena argued about sexual initiative. One explicit Rena initiation at T+150 is confirmed; exact total remains UNKNOWN. Rena conceded her initiative is rare and Arlequino's desire is stronger/more frequent.",
-      "Arlequino discussed past romantic attention, including one former adult partner who wanted to marry him and a past sixteen-year-old acquaintance whom he says he intended to wait for until she was older before marriage. No sexual conduct with the minor is stated or inferred.",
-      "Arlequino nostalgically remarked about the old days. Rena responded with dry jealousy.",
-      "Arlequino then said the two examples were only two among many dozens. This newest direct statement supersedes the earlier rough fifteen-partner estimate as a statement about the broader scale of his past, while the exact count remains UNKNOWN.",
-      "Arlequino followed with a theatrically reassuring 'все в прошлом'; Rena answered that this reassurance was not especially convincing after his nostalgic sigh.",
-      "Arlequino now makes a brief playful physical slap/tap between Rena's legs as directly stated, calls her 'ревнивица', and says 'идем', clearly signaling readiness to leave and resume errands.",
-      "No money changes occur."
+      "Rena has been dressing at granular pacing; she is not yet established as fully dressed for departure.",
+      "Arlequino and Rena argued about sexual initiative; one explicit Rena initiation at T+150 is confirmed, exact total remains UNKNOWN. Rena conceded her initiative is rare and Arlequino's desire is stronger/more frequent.",
+      "Arlequino discussed past romantic attention and said those examples were only two among many dozens; exact historical count remains UNKNOWN.",
+      "Jealous banter de-escalated when Arlequino said they should go resume errands.",
+      "Arlequino now directly places his own cloak over Rena and says: '-чтобы никто не любовался моей милашкой.' This establishes the cloak as physically available and now draped over Rena.",
+      "Rena accepts the cloak physically, catches its edges, and reacts with dry amusement rather than another interrogation.",
+      "No door unlock, room exit, money change, or additional voluntary Arlequino movement is established in this beat."
     ]
   },
   "location": {
@@ -35,9 +34,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Brief playful slap/tap between Rena's legs as directly stated, followed by an explicit prompt to go; no further movement or door action is invented.",
-    "last_in_world_utterance": "-ладно ревнивица , идем",
-    "current_declared_emotional_state": "Playful/de-escalating tone by direct wording; deeper private state is not inferred.",
+    "last_in_world_action": "He drapes his own cloak over Rena's shoulders/body as directly stated; no door action or further movement is inferred.",
+    "last_in_world_utterance": "-чтобы никто не любовался моей милашкой.",
+    "current_declared_emotional_state": "Possessive-affectionate/playful by direct wording; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -50,11 +49,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "at the bed while dressing",
-      "clothing_state": "first garment completed; next garment is now causally ready to be put on as they transition toward leaving; do not instantly skip all remaining dressing steps",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She is jealous but not fragile, therapeutic, melodramatic, submissive, or an interviewer. Arlequino is her first man while his past is much broader. She can react sharply to the playful slap/tap, then practically continue dressing because he has explicitly said they are going.",
-      "observable_state": "Jealous irritation has been partly de-escalated by Arlequino's 'ладно ревнивица, идем'; she is still at the bed and not yet confirmed fully dressed.",
-      "last_observable_utterance": "— Ещё немного так меня успокаивай, павлин, и я начну подозревать, что ты очень хочешь спать сегодня один.",
+      "position": "at the bed while preparing to leave",
+      "clothing_state": "not yet confirmed fully dressed for departure; Arlequino's cloak is now draped over her and she is holding/catching its edges; do not silently resolve all remaining dressing steps",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while his past is much broader. Jealous tension is de-escalating. She can enjoy his possessive affection while teasing him for wrapping her up after boasting about his own past. Do not make her fragile, submissive, therapeutic, melodramatic, or an endless interviewer.",
+      "observable_state": "She catches the cloak around herself and looks at Arlequino with dry amusement; no room exit yet.",
+      "last_observable_utterance": "— Сам десятки вспоминает, а жену завернул, чтобы никто не смотрел. Ладно, ревнивец. Твой плащ — твои правила. Пока он на мне.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -75,11 +74,11 @@
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino now directly describes his broader past as many dozens, exact count UNKNOWN.",
-    "known_departure_history": "Rena has personally experienced two Arlequino departure/disappearance patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
+    "known_departure_history": "Rena has personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Jealous banter is de-escalating. Arlequino has explicitly prompted them to go resume errands, so the next causal step is Rena's immediate reaction plus continued dressing, not another interrogation.",
+    "current_issue": "Jealous banter is now openly affectionate and possessive: Arlequino covers Rena with his cloak so others will not admire her. The couple still has not actually exited the locked room.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Resolve one immediate Rena response to Arlequino's playful slap/tap and 'идем'. She may put on the next garment as one small dressing step. Do not fully dress her instantly, unlock the door, leave the room, spend money, or invent further Arlequino movement in the same beat."
+  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena accepts his cloak. Do not unlock the door, leave the room, spend money, or invent further Arlequino movement without a new causally justified delta."
 }
