@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1253_arlequino_roughly_counts_many_exes",
+  "scene_id": "t162_dwargon_hotel_room_1254_rena_reacts_to_quiver_and_target_joke",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:53",
+    "display": "T+162 ~12:54",
     "day": 162,
-    "clock": "~12:53",
+    "clock": "~12:54",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
-      "At ~12:47-12:48 Rena autonomously accepted a brief one-minute manual compromise to help Arlequino calm the physical tension without turning it into a third full intimacy round; exact mechanics remain offscreen.",
-      "At ~12:50-12:51 Arlequino finally seriously agreed to stop bargaining and leave with Rena for the errands.",
-      "Rena began dressing at granular pacing and has completed only the first garment; no door action or departure has occurred.",
-      "Arlequino teased that his former girlfriends used to walk around home naked. Rena asked how many there had been.",
-      "Arlequino now thinks aloud and gives a stumbling rough count: one, then two, then three, then about five, then about four more, ending with 'В общем не помню.' The rough arithmetic suggests around fifteen, but the exact historical count remains UNKNOWN because he explicitly says he does not remember.",
-      "No additional time jump, completed dressing, door action, or departure occurs in this beat."
+      "At ~12:47-12:48 Rena autonomously accepted a brief one-minute manual compromise to help Arlequino calm physical tension without turning it into a third full intimacy round; exact mechanics remain offscreen.",
+      "At ~12:50-12:51 Arlequino seriously agreed to stop bargaining and leave with Rena for errands.",
+      "Rena began dressing at granular pacing and completed only the first garment; she still holds the next garment and has not put it on.",
+      "Arlequino said his former girlfriends used to walk around home naked. When Rena asked how many, he gave a rough stumbling count suggesting around fifteen but explicitly said he does not remember the exact number.",
+      "Arlequino now protests Rena calling him a former womanizer by saying 'почему это был?', jokes that his quiver still has plenty of arrows, then immediately frames Rena as his single delicate target who cannot take more than two arrows a day. The metaphor implies continued sexual capacity, not an explicit declaration that he intends other partners.",
+      "Rena pauses dressing to react; no additional dressing step, door action, or departure occurs in this beat."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Thinks for a moment while answering Rena's question about former girlfriends.",
-    "last_in_world_utterance": "- аа эмм одна.... Там две... А там три... Там вроде еще 5 .... Тут вроде 4 .... В общем не помню. 😅",
-    "current_declared_emotional_state": "playful and slightly sheepish/amused while trying to remember; exact private emotion otherwise not inferred",
+    "last_in_world_action": "No new movement is declared; he answers Rena with a sexual archery metaphor.",
+    "last_in_world_utterance": "-почему это был ? 😤у меня в колчане полно стрел... Просто моя мишень нежная девственница , в которую нельзя боль 2 стрел в день .",
+    "current_declared_emotional_state": "playful, mock-indignant, sexually boastful and focused on Rena as the metaphorical target",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -48,9 +48,9 @@
       "presence": "present",
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
-      "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled from the private rest/intimacy",
-      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close. She has just learned from Arlequino's own rough count that there may have been many former girlfriends, perhaps around fifteen, though the exact number is explicitly uncertain. She may react with genuine surprise, teasing jealousy, possessiveness, or curiosity in her own personal voice. Do not turn the reaction into a modern therapeutic lecture. Granular pacing remains binding.",
-      "observable_state": "Still somewhat flushed and disheveled, holding the next garment while listening to Arlequino stumble through the count.",
+      "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
+      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close. She has just heard Arlequino's rough many-exes count and now his 'why was?' plus quiver/target metaphor. She may show real jealousy at the 'why was?' phrasing, then recognize from the rest of the sentence that he is directing the metaphor toward her alone. She may tease him for calling his wife a 'virgin' after their established intimate history. Keep her voice personal, not therapeutic.",
+      "observable_state": "Still somewhat flushed and disheveled, holding the next garment while staring at Arlequino after the boastful metaphor.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,7 +70,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "The immediate beat is affectionate banter while Rena dresses, now complicated by her learning that Arlequino appears to have had many former girlfriends. Exact historical count remains unknown despite a rough count around fifteen.",
+    "current_issue": "Affectionate banter has shifted into teasing jealousy around Arlequino's many former girlfriends and his boastful 'why was?' wording. No actual present infidelity or intention toward other partners is established; his metaphor immediately identifies Rena as the target.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -91,5 +91,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:53 with Rena still holding the next garment. Let her react to the rough many-exes count before dressing continues. She may at most complete one additional dressing step in a later beat. Do not unlock the door or leave in the same beat. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:54 with Rena still holding the next garment. Let her react to 'почему это был?' and the quiver/target metaphor. Do not advance dressing, unlock the door, or leave in the same beat. Do not invent Arlequino's voluntary actions."
 }
