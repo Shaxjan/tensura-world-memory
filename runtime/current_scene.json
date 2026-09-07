@@ -3,9 +3,9 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1426_rena_blocks_butt_grab_keeps_affection_non_intimate",
-  "time": {"display": "T+162 ~14:26", "day": 162, "clock": "~14:26", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall", "exact_street_or_hall_name": "UNKNOWN"},
+  "scene_id": "t162_dwargon_student_hall_1427_waist_hold_approach_students",
+  "time": {"display": "T+162 ~14:27", "day": 162, "clock": "~14:27", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, moving toward the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "replay_status": {
     "player_direct_correction": "Meta stopping conditions are not commands to NPCs and do not compel interruption or refusal.",
     "rule": "NPC choices remain causal and autonomous; player meta jokes/conditions are not NPC knowledge."
@@ -14,9 +14,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Immediately after Rena blocked an intimate touch between her legs in the public student hall, Arlequino attempts to grab both of her buttocks, pull her tightly against himself, and begin a forceful prolonged passionate kiss.",
-    "last_in_world_utterance": "Двумя руками беру ее за ягодицы и так прижимаю к себе и целую долго и страстно, резко.",
-    "current_declared_emotional_state": "Still sexually aroused and physically insistent by direct action wording; deeper private state is not inferred."
+    "last_in_world_action": "After Rena firmly blocked repeated intimate public groping, Arlequino shifts to a permitted non-intimate hold: one arm around her waist, pulling her close. In an aroused, dissatisfied tone he asks to at least feel her warmth and then walks toward the students.",
+    "last_in_world_utterance": "- дай хотя бы так почувствовать твое тепло",
+    "current_declared_emotional_state": "Sexually aroused and somewhat dissatisfied by direct wording, while accepting the waist-only public boundary in this action; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -30,31 +30,31 @@
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:26",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:27",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "Rena had just blocked an intimate touch between her legs and clearly reiterated the private-vs-public boundary.",
-    "Arlequino immediately attempts a two-handed butt grab, tight pull-in and forceful prolonged kiss.",
-    "Rena does not consent to the butt grab in the public hall. She promptly removes/redirects his hands to a non-intimate area and prevents the grab from continuing.",
-    "She may remain affectionate and allow ordinary kissing, but she does not permit the user's requested intimate public hold to persist merely because he described it as prolonged or forceful.",
-    "No student interruption is forced in this beat."
+    "Rena has repeatedly enforced a no-intimate-public-groping boundary while remaining affectionate.",
+    "Arlequino now keeps one hand/arm at her waist, explicitly asking to at least feel her warmth.",
+    "This waist hold falls within Rena's established public-affection boundary.",
+    "Arlequino begins moving toward the students while keeping her close at the waist.",
+    "No student intervention or new rehearsal result is established yet."
   ],
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "close to Arlequino in the student hall",
+      "position": "at Arlequino's side as he starts toward the students",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Affectionate but firmer after the repeated public-boundary crossing. She blocks/removes his hands from her buttocks and keeps any continued affection non-intimate in the public hall.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. Public embraces, kisses and ordinary caresses are welcome; intimate public groping remains outside her consent even under the cloak."
+      "observable_state": "Still affectionate and firm about her boundary. A hand/arm at the waist is acceptable; she does not need to reject this non-intimate closeness. She remains autonomous in how she responds while they approach the students.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. Public embraces, kisses and ordinary caresses are welcome; intimate public groping remains outside her consent."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
       "current_activity": "self-organized rehearsal and production work for «Гвазимодо» continues",
-      "reaction": "No specific new student intervention is established in this beat."
+      "reaction": "They have not yet been directly addressed in this beat; exact individual reactions remain open."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
@@ -70,8 +70,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Rena remains affectionate but is now firmer because Arlequino immediately repeats an intimate public-touch attempt after she had already blocked and verbally limited that behavior."
+    "current_issue": "Arlequino has shifted from repeated disallowed intimate public touching to an allowed waist hold while moving back toward the students."
   },
   "pacing_rule": "Use medium-length scenes. Player wording does not override NPC consent or autonomy. Let NPC choices and interruptions arise causally.",
-  "next_transition_rule": "Resolve Rena's immediate firmer reaction to the renewed public intimate groping attempt. Do not invent student interruption, auto-advance rehearsals, or auto-return courier results."
+  "next_transition_rule": "Resolve the immediate approach to the students and Rena's natural reaction to the permitted waist hold. Do not invent Arlequino's next instruction, auto-advance rehearsals, or auto-return courier results."
 }
