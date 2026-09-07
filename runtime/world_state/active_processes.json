@@ -2,9 +2,9 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "as_of": {
-    "world_time": "T+162 ~13:47",
+    "world_time": "T+162 ~14:31",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Arlequino has now granted Raden specific operational authority: immediately send multiple couriers on flying beasts through Tempest/Free-Guild/trade-facing channels to locate Eurazania evacuees and estimate their numbers, report back to the exact hotel location Arlequino provided, and begin planning a charity concert larger than the earlier 18,000-capacity reference with a hard deadline within three days."
+    "initialization_note": "Arlequino has now granted Raden specific operational authority for the Eurazania relief effort and has temporarily paused the Dwargon students' «Гвазимодо» work so he can devise a different piece for the urgent charity concert."
   },
   "processes": [
     {
@@ -53,9 +53,9 @@
       "responsible": ["arlequino", "raden"],
       "location_context": "Dwargon",
       "objective": "Organize a charity concert for Eurazania victims and destruction relief, with proceeds handled transparently.",
-      "current_state": "Arlequino has authorized urgent planning and wants a safe-capacity target larger than the earlier 18,000-seat reference if feasible. Deadline: within three days from T+162 ~13:47, target no later than T+165 unless causally delayed or revised. Financing model follows Arlequino's Blumund-style self-financing/fundraising structure: tiered paid access, low-cost mass access, a free section, merchant trade and donations. Arlequino intends to ask King Gazel for permission and to open the event; no royal approval yet.",
-      "constraints": ["Three-day deadline is hard pressure, not guaranteed feasibility.","No royal permission/venue/attendance is assumed.","No exact historical Blumund seat-price numbers may be invented from incomplete recovery; Raden can use the figures Arlequino explained in-world.","Arlequino mandates memorial wording for Carrion as fallen and takes responsibility for that public framing."],
-      "advance_when": ["Raden identifies plausible venues larger than 18,000 capacity.","Arlequino approaches Gazel and receives or fails to receive permission/support.","Ticket/trade/operations plan becomes concrete."],
+      "current_state": "Arlequino has authorized urgent planning and wants a safe-capacity target larger than the earlier 18,000-seat reference if feasible. Deadline: within three days from T+162 ~13:47, target no later than T+165 unless causally delayed or revised. Financing model follows Arlequino's Blumund-style self-financing/fundraising structure: tiered paid access, low-cost mass access, a free section, merchant trade and donations. Arlequino intends to ask King Gazel for permission and to open the event; no royal approval yet. In the student hall, he has now suspended «Гвазимодо» and stated that he will devise a different piece specifically for the concert; no new piece has yet been defined.",
+      "constraints": ["Three-day deadline is hard pressure, not guaranteed feasibility.","No royal permission/venue/attendance is assumed.","No exact historical Blumund seat-price numbers may be invented from incomplete recovery; Raden can use the figures Arlequino explained in-world.","Arlequino mandates memorial wording for Carrion as fallen and takes responsibility for that public framing.","Do not invent the students' new concert piece before Arlequino defines it."],
+      "advance_when": ["Raden identifies plausible venues larger than 18,000 capacity.","Arlequino approaches Gazel and receives or fails to receive permission/support.","Ticket/trade/operations plan becomes concrete.","Arlequino defines the students' concert piece or role."],
       "player_visibility": "PLAYER_ORDERED_URGENT_PROJECT_ACTIVE"
     },
     {
@@ -74,14 +74,14 @@
     {
       "process_id": "gvazimodo_dwargon_staging_t162",
       "category": "CREATIVE_PROJECT",
-      "status": "IN_PROGRESS_REHEARSAL_PREPARATION",
+      "status": "PAUSED_FOR_URGENT_CHARITY_CONCERT",
       "responsible": ["arlequino", "dwargon_students"],
       "location_context": "Dwargon",
       "objective": "Develop and stage «Гвазимодо» with the Dwargon students.",
-      "current_state": "Casting is complete. Students continue self-organized rehearsal and production work. Bren continues refining availability and plausible rehearsal blocks; no final schedule is fixed because the concert date remains unknown.",
-      "constraints": ["Do not replay casting.","Use finalized cast authority.","Dain remains the tree as punishment unless changed."],
-      "advance_when": ["Students continue self-organized rehearsal/preparation.","Bren materially advances or completes scheduling.","Arlequino provides the concert date."],
-      "player_visibility": "PLAYER_VISIBLE_PROJECT"
+      "current_state": "Casting remains complete and all prior preparation is preserved, but at T+162 ~14:31 Arlequino explicitly tells the students that «Гвазимодо» will wait. The project is temporarily paused while he devises another piece for the urgent Eurazania charity concert. No cancellation or recasting is implied.",
+      "constraints": ["Do not replay casting.","Use finalized cast authority.","Dain remains the tree as punishment unless changed.","Do not discard completed rehearsal/preparation work during the pause."],
+      "advance_when": ["Arlequino explicitly resumes «Гвазимодо».","The urgent concert work stabilizes or concludes and the project is causally resumed."],
+      "player_visibility": "PLAYER_VISIBLE_PROJECT_PAUSED"
     },
     {
       "process_id": "eurazania_post_destruction_aftermath_t162",
