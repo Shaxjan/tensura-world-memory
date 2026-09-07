@@ -3,16 +3,16 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1349_blumund_relief_letter_written",
-  "time": {"display": "T+162 ~13:49", "day": 162, "clock": "~13:49", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_organizer_office_1352_four_blumund_relief_letters_prepared",
+  "time": {"display": "T+162 ~13:52", "day": 162, "clock": "~13:52", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He asks Raden for paper, pen and ink and writes an urgent letter to his contacts in Blumund. The letter requests that Blumund begin assembling a second humanitarian caravan for Eurazania evacuees and hold it ready until Arlequino's side confirms where the refugees are and where aid should be delivered. No exact named recipient is invented because the player did not specify one.",
-    "last_in_world_utterance": "-дайте мне лист , перо и чернила, напишу срочное письмо в Блюмунд, попрошу там тоже собрать караван и ждать когда мы узнаем где беженцы",
-    "current_declared_emotional_state": "Urgent and practical by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He clarifies that the previously drafted Blumund relief letter is to exist in two copies: one addressed to Oren and one to Lissa via the Adventurers' Guild. He then takes two additional sheets and writes separate appeals to the King and Queen of Blumund, asking them to help and show mercy toward Eurazania refugees. He signs the royal appeals: 'ваш гениальный Маэстро Арлекино из Дваргона'.",
+    "last_in_world_utterance": "- это письмо в 2 экземплярах , Орену и Лиссе  в гильдию авантюристов. Беру еще 2 листа и пишу королю и короле Блюмунда прошу помочь и проявить милость, беженцам эурозании подпись - ваш гениальный Маэстро Арлекино из Дваргона.",
+    "current_declared_emotional_state": "Urgent and theatrically self-assured by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -27,8 +27,9 @@
   },
   "relief_directives": {
     "dwargon_air_inquiry": "AUTHORIZED and being prepared by Raden through multiple flying-beast courier routes to locate Eurazania evacuees and approximate their number",
-    "blumund_parallel_caravan": "URGENT LETTER WRITTEN by Arlequino requesting Blumund contacts to begin assembling a second humanitarian caravan and keep it ready pending confirmed refugee location/receiving point",
-    "blumund_letter_dispatch_status": "ready for immediate courier dispatch from Raden's office once handed over; exact recipient identity remains unspecified by player and must not be invented"
+    "blumund_parallel_caravan": "REQUESTED through two duplicate operational letters: one to Oren and one to Lissa via the Adventurers' Guild, asking that Blumund begin assembling a second humanitarian caravan and hold it ready pending confirmed refugee location/receiving point",
+    "blumund_royal_appeals": "Two separate letters written to the King and Queen of Blumund asking them to help and show mercy toward Eurazania refugees; signed 'ваш гениальный Маэстро Арлекино из Дваргона'",
+    "dispatch_status": "All four Blumund-bound letters are prepared in Raden's office and can be placed on fast outbound courier routes; delivery and recipient reactions are not yet established."
   },
   "present_entities": {
     "rena": {
@@ -36,8 +37,8 @@
       "presence": "present",
       "position": "beside Arlequino near Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Serious and attentive as Arlequino expands the relief effort to Blumund.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. She supports relief urgency but remains an equal spouse, not an assistant-servant."
+      "observable_state": "Serious about the relief effort; she can react dryly to Arlequino's flamboyant royal-letter signature without derailing the task.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate."
     },
     "raden": {
       "name": "Раден",
@@ -49,13 +50,13 @@
         "deliver findings to the hotel Arlequino identified or leave a message there",
         "begin planning a charity concert larger than 18,000 safe capacity if feasible within three days",
         "use the Blumund-style self-financing model",
-        "place Arlequino's urgent Blumund relief letter on the next practical fast outbound courier route once handed over"
+        "dispatch the four prepared Blumund relief letters on the fastest practical outbound routes"
       ],
       "constraints": [
         "No refugee location/headcount invented before replies arrive.",
         "No royal approval or venue assumed.",
-        "No exact courier cost invented without a quote.",
-        "No exact Blumund recipient invented."
+        "No recipient reaction to the Blumund letters invented before delivery.",
+        "No exact courier cost invented without a quote."
       ]
     }
   },
@@ -68,8 +69,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Joint relief planning under a hard three-day concert deadline; the relief effort is now being expanded in parallel to Blumund."
+    "current_issue": "Joint relief planning under a hard three-day concert deadline; parallel appeals now extend to private and royal contacts in Blumund."
   },
   "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Stop at the next real player decision rather than extending logistics into a long interview.",
-  "next_transition_rule": "Raden may take the completed letter for dispatch and confirm it will go with the fastest practical courier. Do not auto-return messenger results, auto-visit Gazel, book a venue, or invent spending."
+  "next_transition_rule": "Raden may physically separate and seal the four letters for dispatch and confirm their routes. Do not auto-return answers, auto-visit Gazel, book a venue, or invent spending."
 }
