@@ -3,41 +3,38 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1302_rena_breaks_kiss_and_moves_to_door",
+  "scene_id": "t162_dwargon_hotel_corridor_1303_couple_exits_room_embraced",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~13:02",
+    "display": "T+162 ~13:03",
     "day": 162,
-    "clock": "~13:02",
+    "clock": "~13:03",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
-      "Rena later accepted one brief compromise, then both agreed to resume errands.",
-      "Rena has been dressing at granular pacing and is not yet established as fully dressed for departure.",
-      "Jealous banter de-escalated and Arlequino repeatedly signaled that they should go resume errands.",
-      "Arlequino draped his own cloak over Rena so others would not admire her; Rena accepted it with dry amusement.",
-      "Arlequino then playfully touched/grabbed Rena's butt; Rena stopped his hand and said that in the room it was still fine, but outside he should keep his hands to himself.",
-      "Arlequino now says '-конечно конечно 😐', then directly squeezes/caresses Rena's butt and gives her a hard kiss, followed by 'идем.'",
-      "Because Rena's previous boundary was specifically about public groping and she had explicitly allowed playful contact in the room, this new private-room contact is not treated as a boundary violation by itself. Rena responds autonomously to the kiss rather than being assumed passive.",
-      "Rena accepts the kiss only briefly, then breaks it and turns the moment back toward departure. She keeps Arlequino's cloak around herself and takes a first step toward the locked door; the door is not yet unlocked or opened.",
-      "No money change occurs."
+      "After prolonged private time and jealous banter, Arlequino and Rena repeatedly agreed to resume errands.",
+      "Arlequino placed his cloak around Rena; it remains on her.",
+      "Rena had explicitly allowed playful intimate contact in the room but set a public boundary against being continuously groped outside.",
+      "Arlequino now explicitly says they are going and walks with Rena pressed into his embrace, sometimes kissing and touching/caressing her as they move.",
+      "Rena reaches the room latch, unlocks and opens the door as the next causal departure step; this does not invent a voluntary Arlequino door action.",
+      "The couple crosses into the hotel corridor still close together. Once in the public corridor, Rena autonomously redirects any wandering hand from intimate groping back to a socially acceptable hold at her waist, consistent with her stated boundary.",
+      "No money changes occur and no errand destination has yet been chosen or reached."
     ]
   },
   "location": {
     "region": "Дваргон",
-    "place": "inside the couple's current hotel room",
+    "place": "hotel corridor immediately outside the couple's room",
     "certainty": "current_scene_confirmed",
     "lodging_type": "hotel",
     "lodging_exact_name_or_address": "UNKNOWN",
-    "door_state": "still locked; Rena has moved toward it but has not yet unlocked or opened it"
+    "room_door_state": "opened for departure; whether it is subsequently closed/locked is not yet established"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He directly squeezes/caresses Rena's butt and kisses her hard inside the room, then says they should go; no door action or further movement is inferred.",
-    "last_in_world_utterance": "-конечно конечно 😐 ... идем.",
-    "current_declared_emotional_state": "Playful/affectionate and ready to leave by direct wording; deeper private state is not inferred.",
+    "last_in_world_action": "He walks with Rena pressed against him in an embrace, sometimes kissing and touching/caressing her as they go; he explicitly says they are going.",
+    "last_in_world_utterance": "Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю идем.",
+    "current_declared_emotional_state": "Affectionate/playful and proceeding with departure by direct action; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -50,11 +47,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "one step away from the bed, moving toward the locked door after breaking the kiss",
-      "clothing_state": "Arlequino's cloak remains wrapped around her; exact status of any remaining under-cloak dressing step is still not fully resolved and should not be silently invented",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She can enjoy private marital contact and still decide when to stop and leave. She is not passive, submissive, therapeutic, melodramatic, or an interviewer. Her public-touch boundary remains active once they leave the room.",
-      "observable_state": "She briefly accepts the hard kiss, then breaks it with a look that is more amused than angry, keeps the cloak around herself, and turns toward the door.",
-      "last_observable_utterance": "— Ты неисправим. Всё, пошли, пока мы опять не застряли здесь ещё на час.",
+      "position": "walking immediately beside/against Arlequino in the hotel corridor",
+      "clothing_state": "Arlequino's cloak remains wrapped around her; exact unresolved under-cloak dressing details remain UNKNOWN and should not be invented",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts walking close and occasional kisses, but her previously stated public-touch boundary remains active. In public she can move Arlequino's hand away from intimate groping without turning the interaction into conflict, therapy, melodrama, or an interview.",
+      "observable_state": "She stays tucked against Arlequino as they leave the room, accepts the closeness, and in the corridor calmly moves an overly wandering hand back to her waist.",
+      "last_observable_utterance": "— Обнимать можно. Целовать иногда — тоже. А лапы выше держи, павлин. Мы уже не в комнате.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -63,7 +60,7 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; these tasks may resume after the couple actually exits the room"
+      "assignment_results": "NONE_YET"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -75,11 +72,10 @@
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino directly describes his broader past as many dozens, exact count UNKNOWN.",
-    "known_departure_history": "Rena has personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Affectionate possessive banter has shifted back to practical departure. Rena has broken the kiss and moved toward the door; the next causal beat can unlock/open the door or receive a player interruption.",
+    "current_issue": "The couple has physically left the room and is proceeding through the hotel together. Affection remains warm and playful; Rena enforces the public-contact boundary she already stated.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or action, or if he continues departure, resolve door unlock/open as the next step. Do not jump straight to errands or spend money without causal scene transition."
+  "next_transition_rule": "Await Arlequino's next player-controlled words/action in the hotel corridor or his choice of destination. Do not jump straight to organizer/refugee/home-search results without a causal travel and contact step."
 }
