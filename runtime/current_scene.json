@@ -3,88 +3,51 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_caravan_office_1318_first_eurazania_news_exposure",
-  "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
-  "time": {
-    "display": "T+162 ~13:18",
-    "day": 162,
-    "clock": "~13:18",
-    "precision": "approximate_scene_tick",
-    "recent_elapsed_events": [
-      "Arlequino and Rena continue their public walk through Dwargon with Rena wrapped in Arlequino's cloak and held close against him.",
-      "Arlequino directly continues occasional kisses, caresses and attempts at more intimate touching under the cloak while walking.",
-      "Rena accepts embraces, kisses and ordinary affectionate touching but keeps enforcing her already stated public boundary: being under the cloak does not make intimate public groping acceptable to her. She catches and redirects Arlequino's hand back to her waist/side without ending the affectionate walk.",
-      "The couple walks several more minutes through increasingly commercial streets toward a plausible caravan/guild information area.",
-      "Rena chooses a busy caravan-dispatch/merchant information counter as the first causal inquiry point for Eurazania news and broader organizer contacts.",
-      "Rena asks the clerk/dispatcher whether any reliable arrivals or messages have come from Eurazania and where evacuees were sent.",
-      "The dispatcher gives the first causally transmitted core report to both Rena and Arlequino: news reached Dwargon that the Eurazania capital was destroyed on T+161 after Milim's attack. He does not know the exact current distribution of evacuees and does not know the condition of 18 Old Garden Street.",
-      "This is the first confirmed player/Rena exposure to the T+161 capital-destruction news in current runtime continuity.",
-      "The organizer inquiry has not yet materially advanced beyond arrival at this contact point; the evacuee investigation has now produced a major first result but remains unresolved on exact destinations.",
-      "No money changes occur."
-    ]
-  },
-  "location": {
-    "region": "Дваргон",
-    "place": "inside/at the front counter of a caravan-dispatch and merchant information office in a busy commercial area",
-    "certainty": "current_scene_confirmed",
-    "exact_street_or_office_name": "UNKNOWN"
-  },
+  "scene_id": "t162_dwargon_caravan_office_1318_carrion_public_death_rumor_exposed",
+  "time": {"display": "T+162 ~13:18", "day": 162, "clock": "~13:18", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "at the front counter of a caravan-dispatch and merchant information office", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He continues walking with Rena pressed close, sometimes kissing and caressing her, including attempts at intimate touching under the cloak; no later voluntary reaction to the Eurazania news is invented.",
-    "last_in_world_utterance": "Идем, я прижимаю ее к себе в своих объятиях и так идем иногда целую иногда лапаю или ласкаю ее уже под плащом идем.",
-    "current_declared_emotional_state": "Affectionate/playful during the walk; reaction to the newly delivered Eurazania destruction news is NOT YET DECLARED and must remain user-controlled.",
-    "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
+    "last_in_world_action": "No movement is declared; after hearing that the Eurazania capital was destroyed, he asks whether the king is dead.",
+    "last_in_world_utterance": "- ммм понятно. Король мертв ?",
+    "current_declared_emotional_state": "UNKNOWN beyond the calm wording of the question; deeper reaction is not inferred."
   },
   "money": {
-    "on_person": {"balance_copper": 8973, "display": "89s 73c", "certainty": "active_overlay"},
-    "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN", "certainty": "unknown_exact_current_balance"},
-    "family": {"balance_copper": null, "display": "~358g", "certainty": "latest_user_corrected_approximate", "rule": "Do not replace this with old precise stale balances."}
+    "on_person": {"balance_copper": 8973, "display": "89s 73c"},
+    "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
+    "family": {"balance_copper": null, "display": "~358g"}
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "awake": true,
-      "position": "beside Arlequino at the caravan/merchant information counter",
-      "clothing_state": "Arlequino's cloak remains wrapped around her; exact unresolved under-cloak dressing details remain UNKNOWN and should not be invented",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She accepts public embraces, kisses and ordinary caresses, but still rejects intimate public groping even when hidden under the cloak. She has autonomously resumed her errands and is now causally exposed to catastrophic news from Eurazania. Do not invent her full private emotional state; show only immediate observable reaction and allow the player intervention window.",
-      "observable_state": "At the dispatcher's words that the Eurazania capital was destroyed, Rena goes abruptly still beside Arlequino; her hand tightens on the edge of the cloak. No speech after the revelation is yet established.",
-      "last_observable_utterance": "— Из Эуразании что-нибудь пришло? Караваны, сообщения, люди? Мне нужно понять, куда увозили эвакуированных.",
-      "current_private_emotion": "UNKNOWN beyond the observable freeze/tightened grip after hearing the destruction report",
-      "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
-      "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
-      "open_assignments": [
-        "find organizer/coordinator for concerts and broader operations",
-        "investigate where Eurazania evacuees were sent through causal channels",
-        "begin gathering new-home options without committing to purchase until location/budget are established"
-      ],
-      "assignment_results": "Evacuee investigation first major result: reliable local caravan-network report says the Eurazania capital was destroyed on T+161 after Milim's attack. Exact evacuee destinations remain unresolved. Organizer and home-search results remain NONE_YET."
+      "position": "beside Arlequino at the counter",
+      "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
+      "observable_state": "Still visibly affected by the capital-destruction report; she remains beside Arlequino and listens to the answer about Carrion.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. Do not invent her full private emotional state."
     },
     "dispatcher": {
       "presence": "present",
       "role": "caravan-dispatch / merchant-information clerk",
       "name": "UNKNOWN",
       "knowledge_basis": "recent caravan and messenger traffic reaching Dwargon",
-      "confirmed_report_to_couple": "Eurazania capital was destroyed on T+161 after Milim's attack; exact evacuee distribution not known to this clerk",
-      "limits": "does not establish exact casualties, Carrion's true fate, exact refugee destinations, or condition of 18 Old Garden Street"
-    },
-    "students": {
-      "group": "Dwargon students remaining in/around the student hall",
-      "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren continues grouping plausible rehearsal blocks while final schedule remains blocked by the unfixed concert date and any remaining confirmations"
+      "knowledge_limits": "He can relay public reports and rumors but cannot confirm Carrion's true fate, exact casualties, exact evacuee distribution, or the condition of 18 Old Garden Street.",
+      "next_answer": "Public reports say Carrion was defeated and is presumed dead after facing Milim, but the clerk has no body, direct witness, or official confirmation and will state that uncertainty clearly."
     }
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "breakup_or_separation": "NOT_ESTABLISHED",
-    "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino directly describes his broader past as many dozens, exact count UNKNOWN.",
-    "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Affectionate public walk has been interrupted by the first causal revelation that the Eurazania capital was destroyed. Player reaction and Rena's next immediate response are now the intervention point.",
-    "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
+    "current_issue": "The couple's errand has become an information-gathering scene after first causal exposure to Eurazania's destruction."
   },
-  "pacing_rule": "Provide longer cohesive scene segments during travel and routine progression, but stop at major revelations, irreversible choices, or other points where Arlequino reasonably needs an intervention window.",
-  "next_transition_rule": "Await Arlequino's reaction to the newly delivered destruction news. Do not invent his feelings, speech, movement, or decision. Rena may only make one immediate observable reaction after his next input; do not auto-resolve refugee locations, home damage, Carrion's true fate, or organizer search."
+  "knowledge_state": {
+    "capital_destroyed": "Arlequino and Rena causally know by T+162 ~13:18 that the Eurazania capital was destroyed on T+161 after Milim's attack.",
+    "carrion_public_belief": "They are now being causally exposed to the public belief that Carrion was defeated/presumed dead, not to objective proof of death.",
+    "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
+    "evacuee_distribution": "UNKNOWN_EXACT",
+    "old_garden_street_condition": "UNKNOWN_EXACT"
+  },
+  "pacing_rule": "Longer cohesive segments are preferred during routine travel, but stop at major revelations or questions that require Arlequino's intervention.",
+  "next_transition_rule": "Resolve the dispatcher's answer about Carrion as public belief with uncertainty. Do not reveal Carrion's restricted true fate or auto-resolve refugee destinations, house condition, organizer search, or Arlequino's reaction."
 }
