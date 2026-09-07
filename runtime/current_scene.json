@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1302_arlequino_playfully_grabs_rena_under_cloak",
+  "scene_id": "t162_dwargon_hotel_room_1302_rena_breaks_kiss_and_moves_to_door",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:02",
@@ -14,11 +14,13 @@
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
       "Rena later accepted one brief compromise, then both agreed to resume errands.",
       "Rena has been dressing at granular pacing and is not yet established as fully dressed for departure.",
-      "Jealous banter de-escalated when Arlequino said they should go resume errands.",
-      "Arlequino draped his own cloak over Rena and said it was so nobody would admire his 'милаzyшка'; Rena accepted the cloak with dry amusement.",
-      "Arlequino now directly grabs/touches Rena's butt through/under the cloak and says: '-хотя он не мешает тебя лапать мне 😋'.",
-      "Rena reacts autonomously by catching/stopping his hand after the playful grab, teasing that the cloak does not grant unlimited access and making clear that outside the room he should keep his hands to himself.",
-      "No door unlock, room exit, money change, or additional voluntary Arlequino movement is established in this beat."
+      "Jealous banter de-escalated and Arlequino repeatedly signaled that they should go resume errands.",
+      "Arlequino draped his own cloak over Rena so others would not admire her; Rena accepted it with dry amusement.",
+      "Arlequino then playfully touched/grabbed Rena's butt; Rena stopped his hand and said that in the room it was still fine, but outside he should keep his hands to himself.",
+      "Arlequino now says '-конечно конечно 😐', then directly squeezes/caresses Rena's butt and gives her a hard kiss, followed by 'идем.'",
+      "Because Rena's previous boundary was specifically about public groping and she had explicitly allowed playful contact in the room, this new private-room contact is not treated as a boundary violation by itself. Rena responds autonomously to the kiss rather than being assumed passive.",
+      "Rena accepts the kiss only briefly, then breaks it and turns the moment back toward departure. She keeps Arlequino's cloak around herself and takes a first step toward the locked door; the door is not yet unlocked or opened.",
+      "No money change occurs."
     ]
   },
   "location": {
@@ -27,15 +29,15 @@
     "certainty": "current_scene_confirmed",
     "lodging_type": "hotel",
     "lodging_exact_name_or_address": "UNKNOWN",
-    "door_state": "still locked; no unlock action yet"
+    "door_state": "still locked; Rena has moved toward it but has not yet unlocked or opened it"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He playfully grabs/touches Rena's butt through/under his cloak as directly stated; no door action or further movement is inferred.",
-    "last_in_world_utterance": "-хотя он не мешает тебя лапать мне 😋",
-    "current_declared_emotional_state": "Playful/possessive-affectionate by direct wording; deeper private state is not inferred.",
+    "last_in_world_action": "He directly squeezes/caresses Rena's butt and kisses her hard inside the room, then says they should go; no door action or further movement is inferred.",
+    "last_in_world_utterance": "-конечно конечно 😐 ... идем.",
+    "current_declared_emotional_state": "Playful/affectionate and ready to leave by direct wording; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -48,11 +50,11 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "at the bed while preparing to leave",
-      "clothing_state": "not yet confirmed fully dressed for departure; Arlequino's cloak remains draped over her; do not silently resolve all remaining dressing steps",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Jealous tension is de-escalated. She can enjoy playful marital contact while setting immediate practical boundaries without becoming therapeutic, melodramatic, submissive, or an interviewer. Consent boundaries remain real.",
-      "observable_state": "She reacts to the playful grab by catching/stopping Arlequino's hand with a dry amused look; the cloak remains around her and they are still inside the room.",
-      "last_observable_utterance": "— В комнате — ещё ладно, павлин. Но на улице руки при себе. Плащ — это не разрешение лапать меня без остановки.",
+      "position": "one step away from the bed, moving toward the locked door after breaking the kiss",
+      "clothing_state": "Arlequino's cloak remains wrapped around her; exact status of any remaining under-cloak dressing step is still not fully resolved and should not be silently invented",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She can enjoy private marital contact and still decide when to stop and leave. She is not passive, submissive, therapeutic, melodramatic, or an interviewer. Her public-touch boundary remains active once they leave the room.",
+      "observable_state": "She briefly accepts the hard kiss, then breaks it with a look that is more amused than angry, keeps the cloak around herself, and turns toward the door.",
+      "last_observable_utterance": "— Ты неисправим. Всё, пошли, пока мы опять не застряли здесь ещё на час.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -75,9 +77,9 @@
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino directly describes his broader past as many dozens, exact count UNKNOWN.",
     "known_departure_history": "Rena has personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Affectionate possessive banter continues as they prepare to leave. Rena allows playful closeness but directly limits public groping and does not treat the cloak as blanket consent.",
+    "current_issue": "Affectionate possessive banter has shifted back to practical departure. Rena has broken the kiss and moved toward the door; the next causal beat can unlock/open the door or receive a player interruption.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena stops his hand and sets a light boundary before departure. Do not unlock the door, leave the room, spend money, or invent further Arlequino movement without a new causally justified delta."
+  "next_transition_rule": "Await Arlequino's next player-controlled words or action, or if he continues departure, resolve door unlock/open as the next step. Do not jump straight to errands or spend money without causal scene transition."
 }
