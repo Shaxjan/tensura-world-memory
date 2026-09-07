@@ -3,21 +3,22 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1255_arlequino_calls_ex_beauty",
+  "scene_id": "t162_dwargon_hotel_room_1256_arlequino_lists_remembered_ex_body_details",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:55",
+    "display": "T+162 ~12:56",
     "day": 162,
-    "clock": "~12:55",
+    "clock": "~12:56",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact sexual mechanics remain offscreen.",
       "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
       "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment is still in her hands.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
-      "Arlequino claimed one former partner once stayed sexually involved with him for 13 hours and gave a drawn-out appreciative moan; Rena reacted with genuine jealousy and told him she did not want to hear more about that woman today.",
-      "Arlequino then said remembering that ex or her name would definitely arouse him and teased Rena with a false two-times physical limit; Rena rejected the implication that two is her maximum.",
-      "Arlequino now continues the provocation by calling the former partner a beauty and saying she was simply crazy. Rena hears this directly while still holding the next garment. No dressing advancement, door action, or departure occurs in this beat."
+      "Arlequino claimed one former partner once stayed sexually involved with him for 13 hours, called her a beauty, and repeatedly provoked Rena's jealousy.",
+      "Rena warned him not to start listing remembered physical details of that former partner.",
+      "Arlequino now says that if Rena is interested he can tell her, adding that he does not remember the woman's eyes or face but does remember her butt, breasts, genitals, and hair very well. This is direct in-world disclosure from Arlequino; do not elaborate explicit mechanics beyond the user's words.",
+      "No dressing advancement, door action, or departure occurs in this beat."
     ]
   },
   "location": {
@@ -33,8 +34,8 @@
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
     "last_in_world_action": "No new movement is declared; he continues verbally provoking Rena while she holds the next garment.",
-    "last_in_world_utterance": "-да эта красавица была просто безума,",
-    "current_declared_emotional_state": "playful, provocative and deliberately pressing Rena's jealousy",
+    "last_in_world_utterance": "- нет ну если тебе интересно могу рассказать. Глаза и лицо не помню , но жопу, грудь, влагалище и волосы помню очень хорошо.",
+    "current_declared_emotional_state": "playful, provocative, deliberately pressing Rena's jealousy",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -49,8 +50,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close, but is now genuinely jealous and increasingly irritated by Arlequino repeatedly praising a former partner directly in front of her. Calling the ex a 'beauty' after the 13-hour story is likely to sharpen the reaction. Keep it personal, proud and natural; no therapy language. Jealousy does not automatically override her earlier decision or force another sexual round.",
-      "observable_state": "Still holding the next garment with her attention fully on Arlequino; jealousy and irritation are now plainly visible.",
+      "autonomy_state": "Rena remains affectionate and strongly attracted, but is now genuinely jealous and irritated after Arlequino ignores her warning and explicitly lists remembered sexualized body details of a former partner. She may react sharply, incredulously, possessively, or offended in her own personal voice. Do not turn it into a modern therapeutic lecture. Jealousy does not automatically force another sexual round or erase her earlier decision to resume errands.",
+      "observable_state": "Still holding the next garment, attention fully on Arlequino; jealousy and irritation are plainly visible.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -70,10 +71,10 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Affectionate banter has become openly jealous and provocative after Arlequino repeatedly praises a former sexual partner in front of Rena, now explicitly calling her a beauty.",
+    "current_issue": "Affectionate banter has become openly jealous and provocative after Arlequino repeatedly praises and now explicitly lists remembered sexualized body details of a former partner in front of Rena.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:55 with Rena still holding the next garment. Let her react first to Arlequino calling the ex a beauty. Do not advance dressing, unlock the door, leave, or make Rena start another sexual round automatically. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:56 with Rena still holding the next garment. Let her react first to Arlequino explicitly listing remembered body details of the ex. Do not advance dressing, unlock the door, leave, or make Rena start another sexual round automatically. Do not invent Arlequino's voluntary actions."
 }
