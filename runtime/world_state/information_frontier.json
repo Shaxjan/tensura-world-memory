@@ -13,18 +13,10 @@
       "origin_region": "Eurazania",
       "origin_time": "T+161",
       "natural_channels": ["survivors/refugees","official or military messengers","guild and merchant networks","travelers and caravans","regional political contacts"],
-      "propagation": {
-        "eurazania_local": "MAJOR_DIRECT_PUBLIC_EVENT",
-        "dwargon": "CONFIRMED_ARRIVED_BY_T162_1318_VIA_CARAVAN_MERCHANT_NETWORK",
-        "other_regions": "NOT_TRACKED_EXACTLY_YET"
-      },
-      "recipient_state": {
-        "arlequino": "CAUSALLY_EXPOSED_T162_1318",
-        "rena": "CAUSALLY_EXPOSED_T162_1318",
-        "dwargon_students_present": "UNKNOWN"
-      },
-      "exposure_event": "At a caravan-dispatch/merchant-information counter in Dwargon, a clerk/dispatcher reports to Rena and Arlequino that the Eurazania capital was destroyed on T+161 after Milim's attack.",
-      "distortion_risk": "LOW_FOR_CORE_EVENT_ONCE_MULTIPLE_SOURCES_ARRIVE; HIGHER_FOR_DETAILS_AND_NUMBERS"
+      "propagation": {"eurazania_local": "MAJOR_DIRECT_PUBLIC_EVENT", "dwargon": "CONFIRMED_ARRIVED_BY_T162_1318_VIA_CARAVAN_MERCHANT_NETWORK"},
+      "recipient_state": {"arlequino": "CAUSALLY_EXPOSED_T162_1318", "rena": "CAUSALLY_EXPOSED_T162_1318"},
+      "exposure_event": "At a caravan-dispatch/merchant-information counter in Dwargon, a clerk reports that the Eurazania capital was destroyed on T+161 after Milim's attack.",
+      "distortion_risk": "LOW_FOR_CORE_EVENT; HIGHER_FOR_DETAILS_AND_NUMBERS"
     },
     {
       "information_id": "carrion_publicly_presumed_defeated_after_t161",
@@ -35,14 +27,9 @@
       "origin_region": "Eurazania",
       "origin_time": "T+161",
       "natural_channels": ["survivors/refugees","official/public reaction","merchant and guild networks","travelers"],
-      "propagation": {
-        "eurazania_local": "PUBLIC_BELIEF_AFTER_EVENT",
-        "dwargon": "ARRIVAL_OF_THIS_SPECIFIC_BELIEF_NOT_YET_CONFIRMED_TO_COUPLE"
-      },
-      "recipient_state": {
-        "arlequino": "NOT_YET_CAUSALLY_CONFIRMED",
-        "rena": "NOT_YET_CAUSALLY_CONFIRMED"
-      },
+      "propagation": {"eurazania_local": "PUBLIC_BELIEF_AFTER_EVENT", "dwargon": "CONFIRMED_ARRIVED_TO_COUPLE_T162_1318_VIA_CARAVAN_MERCHANT_NETWORK"},
+      "recipient_state": {"arlequino": "CAUSALLY_EXPOSED_TO_PRESUMED_DEAD_BELIEF_T162_1318", "rena": "CAUSALLY_EXPOSED_TO_PRESUMED_DEAD_BELIEF_T162_1318"},
+      "exposure_event": "After Arlequino asks whether the king is dead, the caravan clerk says reports claim Carrion was defeated and is presumed dead, while explicitly lacking official confirmation or proof.",
       "restricted_truth": "Carrion's true survival must not be exposed before canonical revelation.",
       "distortion_risk": "MEDIUM"
     },
@@ -51,33 +38,18 @@
       "subject": "Where Eurazania evacuees were sent and where they are currently located",
       "information_class": "INVESTIGATION_TARGET",
       "truth_status": "EXACT_CURRENT_DISTRIBUTION_UNRESOLVED_IN_ACTIVE_SOURCE_SET",
-      "origin_region": "Eurazania evacuation networks",
-      "relevant_source_types": ["Eurazania officials","refugees","Free Guild / adventurer networks","merchants and caravan masters","host-region authorities","messengers and letters"],
-      "propagation": {
-        "dwargon": "CORE_DESTRUCTION_NEWS_HAS_ARRIVED; EXACT_REFUGEE_DISTRIBUTION_STILL_UNKNOWN",
-        "rena_inquiry": "ACTIVE; FIRST_MAJOR_RESULT_T162_1318_IS_CAPITAL_DESTRUCTION_NEWS, NOT_DESTINATION_RESOLUTION"
-      },
-      "recipient_state": {
-        "arlequino": "KNOWS_CAPITAL_DESTROYED; EXACT_EVACUEE_DESTINATIONS_UNKNOWN",
-        "rena": "KNOWS_CAPITAL_DESTROYED; EXACT_EVACUEE_DESTINATIONS_UNKNOWN"
-      },
+      "propagation": {"dwargon": "CORE_DESTRUCTION_NEWS_HAS_ARRIVED; EXACT_REFUGEE_DISTRIBUTION_STILL_UNKNOWN", "rena_inquiry": "ACTIVE"},
+      "recipient_state": {"arlequino": "EXACT_EVACUEE_DESTINATIONS_UNKNOWN", "rena": "EXACT_EVACUEE_DESTINATIONS_UNKNOWN"},
       "linked_process": "rena_investigate_eurazania_evacuees_t162",
-      "anti_invention": "Do not choose a destination merely from general Tensura knowledge unless reconciled with this world's runtime and a causal transmission path."
+      "anti_invention": "Do not choose a destination without a causal source."
     },
     {
       "information_id": "old_garden_street_home_condition_after_t161",
       "subject": "Condition of 18 Old Garden Street after the destruction of the Eurazania capital",
       "information_class": "PRIVATE_MATERIAL_FACT_NOT_YET_OBSERVED",
       "truth_status": "UNKNOWN_EXACT_CONDITION",
-      "origin_region": "Eurazania capital",
-      "relevant_source_types": ["direct inspection","credible local witness","official damage information if such records exist","someone returning from the district"],
-      "propagation": {
-        "dwargon": "NO_CONFIRMED_SPECIFIC_REPORT"
-      },
-      "recipient_state": {
-        "arlequino": "UNKNOWN",
-        "rena": "UNKNOWN"
-      },
+      "propagation": {"dwargon": "NO_CONFIRMED_SPECIFIC_REPORT"},
+      "recipient_state": {"arlequino": "UNKNOWN", "rena": "UNKNOWN"},
       "anti_invention": "Capital destruction does not by itself establish the exact state of this specific address."
     }
   ],
