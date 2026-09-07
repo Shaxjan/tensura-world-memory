@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1301_arlequino_corrects_marriage_direction",
+  "scene_id": "t162_dwargon_hotel_room_1301_arlequino_nostalgic_about_old_days",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:01",
@@ -21,9 +21,11 @@
       "The couple argued about Rena's sexual initiative. Literal zero is contradicted by saved T+150 continuity, when Rena explicitly initiated once; exact total remains UNKNOWN. Rena conceded her initiative has been rare and Arlequino's desire is stronger/more frequent.",
       "Arlequino cited a past sixteen-year-old acquaintance who was in love with him and very proactive with nonsexual affection such as hugs. No sexual conduct with the minor is stated or inferred.",
       "Arlequino said he had intended to wait until that acquaintance was older and then marry her.",
-      "Rena mistakenly phrased the brown-eyed former adult partner as another woman Arlequino had planned to marry.",
-      "Arlequino immediately corrects her: the brown-eyed woman wanted to marry him; he did not say he wanted to marry her. His own past marriage intention applied to the sixteen-year-old acquaintance only after she became older.",
-      "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his spoken words."
+      "Rena briefly mixed up the marriage direction; Arlequino corrected her that the brown-eyed adult woman wanted to marry him, while his own past marriage intention concerned the younger acquaintance only after she became older.",
+      "Rena acknowledged the correction without another investigative question: the brown-eyed woman wanted him, while he himself had imagined marrying the other acquaintance later.",
+      "Arlequino now gives a moan/sigh and nostalgically says, 'да какие были дни 🫦'. This expresses fond nostalgia only; no new sexual conduct, especially involving the minor anecdote, is established or inferred.",
+      "Rena reacts with dry, personal jealousy at hearing her husband openly savor memories of his old romantic attention, without turning the exchange into an interrogation.",
+      "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his stated sigh/moan and words."
     ]
   },
   "location": {
@@ -38,9 +40,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he corrects Rena's factual mix-up about which past woman wanted marriage.",
-    "last_in_world_utterance": "- не путай . это кареглазая хотела за меня",
-    "current_declared_emotional_state": "UNKNOWN beyond corrective tone; deeper private state is not inferred.",
+    "last_in_world_action": "He gives a moan/sigh and verbally reminisces fondly about the old days; no movement is otherwise declared.",
+    "last_in_world_utterance": "Стон и вздох -да какие были дни 🫦",
+    "current_declared_emotional_state": "Fondly nostalgic about earlier days by direct tone; exact deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -55,9 +57,9 @@
       "awake": true,
       "position": "at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has conceded her sexual initiative is rare and his desire is stronger/more frequent. She can acknowledge a factual correction cleanly without turning it into another interview. The correct distinction is: brown-eyed former adult partner wanted to marry Arlequino; Arlequino himself once intended to wait until the teenage acquaintance was older and then marry her. Do not sexualize the minor. Do not make Rena fragile, submissive, therapeutic, melodramatic, or an endless interviewer.",
-      "observable_state": "She catches the distinction after Arlequino corrects her; jealousy remains, but the factual mix-up is resolved. The garment remains in her hands.",
-      "last_observable_utterance": "— Подожди. Ты ещё и жениться на ней собирался? Великолепно. Сегодня у меня уже была кареглазая повариха, которая хотела за тебя замуж. Теперь появилась ещё одна потенциальная жена из прошлого. Павлин, у тебя там вообще хоть одна женщина была, на которой ты не собирался когда-нибудь жениться?",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has conceded her sexual initiative is rare and his desire is stronger/more frequent. She can react dryly and personally to Arlequino savoring memories of old romantic attention without becoming fragile, submissive, therapeutic, melodramatic, or an endless interviewer. Do not sexualize the minor anecdote.",
+      "observable_state": "She gives Arlequino a long, unimpressed look at his nostalgic sigh; jealousy is visible but controlled. The garment remains in her hands.",
+      "last_observable_utterance": "— Я вижу. Какие были дни. Кареглазая хотела за тебя замуж, другая девчонка была в тебя влюблена, а теперь всё это слушает твоя жена. Наслаждайся воспоминаниями, павлин. Только лицо сделай чуть менее счастливым.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -81,9 +83,9 @@
     "known_departure_history": "Rena has personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "Literal zero is contradicted by saved T+150 morning continuity. One explicit remembered Rena-initiated encounter is confirmed; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
     "marriage_direction_correction": "Brown-eyed former adult partner wanted to marry Arlequino. Arlequino did not state he wanted to marry her. Separately, he says he once intended to wait until a sixteen-year-old acquaintance became older and then marry her.",
-    "current_issue": "Jealous banter has shifted into factual sorting of Arlequino's past relationship and marriage intentions. Rena should not conflate who wanted whom or turn every disclosure into an interview.",
+    "current_issue": "Arlequino is now openly nostalgic about the attention and possibilities of his past; Rena responds from personal jealousy and lived marriage rather than by interviewing him.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Resolve one immediate Rena response acknowledging Arlequino's correction: the brown-eyed woman wanted to marry him, while his own marriage intention concerned the younger acquaintance only after she became older. Do not ask another investigative question, sexualize the minor, unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions."
+  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena's dry jealous response to his nostalgia. Do not unlock the door, leave, advance dressing, sexualize the minor anecdote, or invent Arlequino's voluntary actions without a new causally justified delta."
 }
