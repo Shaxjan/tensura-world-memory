@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1300_rena_reacts_to_eurazania_comparison",
+  "scene_id": "t162_dwargon_hotel_room_1300_rena_rejects_zero_initiative_claim",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:00",
@@ -21,7 +21,10 @@
       "Continuity correction: Rena already knows Arlequino has effectively run from her twice. At T+117 in Blumund he concealed his destination and they reached a mutual farewell before he later searched for her; at T+129 in Eurazania he quietly left while she slept.",
       "The couple then bantered about Rena hypothetically finding him after such a disappearance. Arlequino joked she would have sex with him; Rena answered that, knowing them, killing him would have been postponed.",
       "Arlequino complained that persuading Rena to perform oral sex can take an hour, then compared this with women in Eurazania who, according to his direct statement, approached him asking for sex.",
-      "No door action, departure, or voluntary Arlequino movement is added beyond his spoken words."
+      "Rena replied that strangers wanted Maestro Arlequino for one night while she lives with him every day, and said that when she herself wants him he does not complain.",
+      "Arlequino then claimed Rena never wants him and has initiated sex exactly zero times.",
+      "Saved continuity contradicts the literal zero claim: on T+150 morning at their Eurazania home, after talking about song narrators, Rena explicitly said she wanted sex and the couple then had a long consensual morning together. This does not establish a complete count of all initiative events, only that zero is false.",
+      "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his spoken words."
     ]
   },
   "location": {
@@ -36,9 +39,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he verbally compares the effort of persuading Rena to perform oral sex with women in Eurazania who he says approached him asking for sex.",
-    "last_in_world_utterance": "-ой мне что уговорить тебя на минет уходит час. Будто незнакомку на улице уламываю... Хотя в эурозании незнакомки сами ко мне лезли с просьбой о сексе",
-    "current_declared_emotional_state": "UNKNOWN beyond the teasing/complaining tone of his direct words.",
+    "last_in_world_action": "No new movement is declared; he verbally claims that Rena has never herself initiated sex.",
+    "last_in_world_utterance": "-конечно не жалуюсь. Потому что никогда не хочешь... 👌0 раз сама начала секс 👌0",
+    "current_declared_emotional_state": "UNKNOWN beyond the teasing/accusatory tone of his direct words.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -52,9 +55,9 @@
       "presence": "present",
       "awake": true,
       "position": "at the bed while dressing",
-      "clothing_state": "first garment completed; next garment has remained in her hands through the banter and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She can react sharply and personally when he compares her sexual availability with strangers or former partners, but she is not fragile, submissive, therapeutic, or melodramatic. She does not need to answer every provocation with another question.",
-      "observable_state": "She gives Arlequino a hard, incredulous look at the comparison with Eurazania strangers; her pride is visibly engaged more than insecurity.",
+      "clothing_state": "first garment completed; next garment remains in her hands and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She can react sharply to him minimizing her initiative and can rely on her own remembered experience. Do not turn her into a therapist, moral lecturer, submissive partner, melodramatic victim, or endless interviewer.",
+      "observable_state": "She reacts to the literal zero claim with incredulous irritation rather than insecurity; she remembers a concrete counterexample from T+150 morning in their Eurazania home.",
       "last_observable_utterance": "— Незнакомки в Эуразании хотели Маэстро Арлекино на одну ночь. А я живу с тобой каждый день, павлин. Так что не путай лёгкую добычу с женой. И если тебе иногда приходится уговаривать меня час — переживёшь. Зато когда я сама хочу, ты почему-то ни разу не жалуешься.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
@@ -77,10 +80,11 @@
     "breakup_or_separation": "NOT_ESTABLISHED",
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners. This is established continuity and may materially affect jealousy and comparison scenes.",
     "known_departure_history": "Rena has already personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
-    "current_issue": "Teasing sexual comparison: Arlequino complains Rena can take persuading and contrasts her with Eurazania women who he says directly propositioned him. Rena's response is proud and sharp rather than insecure or interrogative.",
+    "initiative_continuity": "Literal zero is contradicted by saved T+150 morning continuity: Rena explicitly said she wanted sex and the couple proceeded consensually. Exact total number of Rena-initiated encounters remains UNKNOWN.",
+    "current_issue": "Arlequino is teasingly minimizing Rena's sexual initiative; Rena has a concrete remembered counterexample and can answer without turning the scene into an interview.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "correction_ref": "direct player continuity correction 2026-09-07: Rena is not an endless interviewer; she remembers Arlequino's prior departures from her and should respond from lived relationship history.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action from ~13:00. Do not unlock the door, leave, or invent Arlequino's voluntary actions without a new causally justified delta."
+  "correction_ref": "T+150 saved continuity used only to reject literal zero; do not invent a full count of Rena-initiated encounters.",
+  "next_transition_rule": "Resolve Rena's immediate observable response to Arlequino's zero-initiative claim. She may cite the T+150 morning counterexample in natural in-world terms. Do not unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions in the same beat."
 }
