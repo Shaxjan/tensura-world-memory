@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1258_rena_catches_eye_contradiction",
+  "scene_id": "t162_dwargon_hotel_room_1258_rena_first_man_jealousy_replay",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:58",
@@ -16,10 +16,11 @@
       "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment remains in her hands.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
       "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, describing her initiative, and saying she wanted to marry him.",
-      "Rena's valid mode is proud, jealous, sarcastic and competitive rather than fragile or melodramatically wounded.",
+      "Arlequino is established as Rena's first man; no prior male romantic/sexual partner is established for her. This asymmetry materially sharpens her reaction to Arlequino's detailed stories about former partners without making her fragile or submissive.",
+      "Rena's valid mode is proud, jealous, sharp, sarcastic and competitive rather than fragile or melodramatically wounded.",
       "Arlequino added that the former partner cooked excellently and had long brown hair and brown eyes.",
       "This partially conflicted with Arlequino's earlier statement that he did not remember the woman's eyes or face. The newest direct player statement is treated as a present recollection/clarification: the eyes were brown.",
-      "Rena immediately caught the contradiction about the eyes and teased Arlequino about the former partner's increasingly impressive list of qualities.",
+      "The previous too-light Rena reaction was invalidated and replayed. The valid response is more personally jealous and explicitly grounded in the asymmetry that Arlequino is Rena's first man while he has many former partners.",
       "Rena did not advance dressing, unlock the door, or leave during this beat."
     ]
   },
@@ -52,9 +53,9 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. She is openly jealous and competitive about the former partner but not insecure. She has now caught Arlequino on his earlier claim that he did not remember the woman's eyes and is teasing him about suddenly remembering brown eyes while reacting to 'готовила отменно' as another item in the ex's absurdly impressive resume. Keep it personal and natural; no therapy language.",
-      "observable_state": "Still holding the next garment without putting it on; eyes narrowed with a sharp jealous half-smile after catching Arlequino's contradiction.",
-      "last_observable_utterance": "— Подожди. Глаза ты, значит, не помнил. А теперь они внезапно карие. И готовила отменно… Длинные коричневые волосы, карие глаза, красавица, сама проявляла инициативу, замуж за тебя хотела… Продолжай. Мне уже любопытно, насколько идеальной ты успеешь её сделать, прежде чем снова запутаешься в показаниях.",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man, while he has disclosed many former partners. In this beat she is genuinely and personally jealous, with a sharp competitive edge rather than insecurity or melodrama. She can catch contradictions, compare herself to the ex, become cutting, demand details, or push back without becoming a therapist, servant, or sitcom caricature.",
+      "observable_state": "Still holding the next garment without putting it on; her expression hardens from a teasing jealous half-smile into a sharper, more personal stare, and her grip on the garment tightens slightly.",
+      "last_observable_utterance": "— Карие? Минуту назад ты не помнил её глаз. А теперь уже карие. Прекрасно. И готовила она отменно. И красавица. И сама тебя хотела. И замуж за тебя собиралась. Арлекино, у меня, между прочим, был только один мужчина. Ты. А я сейчас сижу и слушаю, как мой единственный мужчина по пунктам расписывает мне другую женщину, с которой у него было всё это до меня. Так что давай, продолжай. Мне уже правда интересно: она ещё и мечом владела лучше меня?",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -74,10 +75,11 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Playful ex-story provocation continues. Rena is in proud, jealous, sarcastic competitive mode and has caught Arlequino on the contradiction about remembering the ex's eyes.",
+    "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners. This is established continuity and may materially affect jealousy and comparison scenes.",
+    "current_issue": "Playful ex-story provocation has become sharply personal for Rena. She remains proud and competitive, but directly points out that Arlequino is her only/first man while he is describing an impressive former partner in detail.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "correction_ref": "runtime/corrections/t162_1257_rena_jealousy_overdramatization_replay.md",
+  "correction_ref": "direct player continuity correction 2026-09-07: Arlequino is Rena's first man; replay prior too-light jealousy response",
   "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action from ~12:58. Rena remains holding the next garment. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions without a new causally justified delta."
 }
