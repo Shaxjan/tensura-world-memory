@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1249_repeated_kisses_before_errands",
+  "scene_id": "t162_dwargon_hotel_room_1250_arlequino_agrees_to_leave",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:49",
+    "display": "T+162 ~12:50",
     "day": 162,
-    "clock": "~12:49",
+    "clock": "~12:50",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
       "At ~12:45 Rena acknowledged Arlequino's substantive complaint that he has been the one initiating intimacy and said she had grown too used to him always starting.",
       "At ~12:47-12:48 Rena autonomously accepted a brief one-minute manual compromise to help Arlequino calm the physical tension without turning it into a third full intimacy round; exact sexual mechanics remain offscreen.",
-      "Arlequino now kisses Rena repeatedly many times in succession. These are ordinary affectionate kisses rather than a declared renewed sexual escalation.",
-      "Rena remains close and can reciprocate several kisses, become amused/exasperated by the sheer number, and stop the sequence at a natural conversational beat without erasing her attraction. No dressing, door action, or departure has yet begun.",
-      "Approximately one minute passes."
+      "At ~12:49 Arlequino kissed Rena repeatedly many times; Rena reciprocated several kisses, laughed, then caught his face and stopped the sequence at a natural conversational beat while remaining affectionate.",
+      "Arlequino now says he agrees they should go, adding that otherwise he wants her too strongly and explicitly says he wants to have sex with her.",
+      "Rena can take this as both affection and practical agreement to resume the day. She may answer teasingly/affectionately and begin only the first meaningful get-ready transition; do not chain dressing, door unlocking, and departure in one beat."
     ]
   },
   "location": {
@@ -31,9 +31,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Kisses Rena repeatedly many times in succession.",
-    "last_in_world_utterance": null,
-    "current_declared_emotional_state": "not explicitly stated in this beat; behavior is affectionate and persistent",
+    "last_in_world_action": "No new voluntary movement beyond speaking is declared in this beat.",
+    "last_in_world_utterance": "- ладно ❤️идём ❤️иначе я слишком сильно хочу тебя 🫦выебать",
+    "current_declared_emotional_state": "affectionate, still strongly sexually attracted, but now explicitly agrees to leave for the errands",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -46,10 +46,10 @@
       "name": "Рена",
       "presence": "present",
       "awake": true,
-      "position": "still beside Arlequino on/at the bed, physically close",
-      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. She still does not want a third full intimacy round before errands. Ordinary kissing and affection are acceptable; she may reciprocate and tease, then interrupt the long kissing sequence when she wants to speak or resume the day.",
-      "observable_state": "Still somewhat flushed, emotionally engaged and affectionate after the brief compromise; repeated kisses can make her laugh or lose her intended sentence without implying renewed consent to a third full intimacy round.",
+      "position": "still beside Arlequino on/at the bed, physically close at the start of the beat",
+      "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not yet completed dressing",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. She still does not want a third full intimacy round before errands. Arlequino has now agreed to leave, so she may respond warmly and begin the first meaningful get-ready step without fast-forwarding the rest.",
+      "observable_state": "Still somewhat flushed, emotionally engaged and affectionate; likely amused by Arlequino's blunt wording while pleased that he finally agrees to go.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -69,7 +69,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Rena acknowledged Arlequino's complaint about her lack of initiation. She accepted one brief compromise but still does not want a third full intimacy round before errands. The immediate beat is affectionate repeated kissing, not a renewed sex negotiation.",
+    "current_issue": "Rena acknowledged Arlequino's complaint about her lack of initiation. She accepted one brief compromise but still does not want a third full intimacy round before errands. Arlequino now agrees to leave despite continuing strong attraction.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -90,5 +90,5 @@
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:49 with both still on/at the bed. Rena may end the long string of kisses by catching Arlequino's face, laughing, or speaking, while remaining affectionate. If she then resumes errands, expose only the first meaningful get-ready step. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:50. Rena may answer Arlequino's agreement and blunt sexual wording, then expose only the first meaningful get-ready step (for example, sitting up or reaching for clothing). Stop before completing dressing, unlocking the door, or leaving unless the player allows later transitions. Do not invent Arlequino's voluntary actions."
 }
