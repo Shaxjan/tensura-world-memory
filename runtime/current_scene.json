@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1301_rena_rejects_teen_crush_benchmark",
+  "scene_id": "t162_dwargon_hotel_room_1301_rena_reacts_to_old_marriage_intention",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~13:01",
@@ -23,7 +23,8 @@
       "Arlequino compared desire without frequent initiation to merely liking the smell of food without eating and insultingly compared Rena's behavior to that of a fifteen-year-old.",
       "Rena sharply rejected being infantilized.",
       "Arlequino then withdrew the fifteen-year-old comparison as inaccurate and cited a past sixteen-year-old acquaintance who was in love with him and was very proactive with nonsexual affection such as hugs despite them not being a couple. No sexual conduct with the minor is stated or inferred.",
-      "Rena responds that a teenage crush's impulsive affection is not a valid benchmark for an adult marriage, while still recognizing Arlequino's underlying complaint about lack of initiative.",
+      "Rena rejected a teenage crush's impulsive affection as a benchmark for an adult marriage but acknowledged Arlequino wants more visible spontaneous initiative from her.",
+      "Arlequino now says the sixteen-year-old acquaintance was sweet and that he intended to wait until she was older and then marry her. This is a past marriage intention only; no sexual conduct with a minor is established or inferred.",
       "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his spoken words."
     ]
   },
@@ -39,9 +40,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he corrects his teenager comparison and cites a highly affectionate sixteen-year-old acquaintance as an example of obvious romantic initiative.",
-    "last_in_world_utterance": "-да 15 летняя жто не то. У меня была знакомая , 16 летняя, которая в меня была влюблена, вот она была безумна инициативна, все лезла , ко мне , с обнимашками итд, хотя мы не были вместе ",
-    "current_declared_emotional_state": "Still arguing that visible initiative is evidence of desire; deeper private state is not inferred.",
+    "last_in_world_action": "No new movement is declared; he says he once intended to wait until the sixteen-year-old acquaintance became older and then marry her.",
+    "last_in_world_utterance": "-да милая такая была . я хотел подождать пока она повзрослеет и жениться на ней. 😋",
+    "current_declared_emotional_state": "Teasing/fond tone is directly expressed; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -56,8 +57,8 @@
       "awake": true,
       "position": "at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has already conceded that her sexual initiative is rare and that his desire is stronger/more frequent. She rejects using a teenager's infatuated hugging/affection as the standard for adult marital desire, but does not hide behind semantics: she can admit Arlequino wants more visible initiative from her. Do not sexualize the sixteen-year-old anecdote. Do not make Rena fragile, submissive, therapeutic, melodramatic, or an endless interviewer.",
-      "observable_state": "Her anger at the age insult eases slightly when Arlequino corrects himself, but she gives him a flat, unimpressed look at the comparison with a teenage crush; the garment remains in her hands.",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has already conceded that her sexual initiative is rare and that his desire is stronger/more frequent. The new disclosure is not about sexual conduct with a minor; it is about a past plan to wait until a teenage acquaintance was older and then marry her. Rena may react with personal jealousy and disbelief at discovering another near-future-wife from Arlequino's past, without sexualizing the minor or turning into an interrogator. Do not make Rena fragile, submissive, therapeutic, melodramatic, or an endless interviewer.",
+      "observable_state": "Her flat look sharpens into incredulous jealousy at the revelation that Arlequino had once imagined marrying the acquaintance later; the garment remains in her hands.",
       "last_observable_utterance": "— Шестнадцатилетняя влюблённая девчонка, которая постоянно лезла обниматься, — это теперь твой эталон взрослой жены? Нет, павлин. Это не аргумент. Но я уже поняла, чего ты от меня хочешь: чтобы мне не приходилось ждать, пока ты начнёшь всё первым. Вот с этим спорить не буду.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
@@ -81,9 +82,9 @@
     "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners.",
     "known_departure_history": "Rena has already personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
     "initiative_continuity": "Literal zero is contradicted by saved T+150 morning continuity. One explicit remembered Rena-initiated encounter is confirmed; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "current_issue": "Arlequino wants visible spontaneous initiative as evidence of desire. Rena now understands that specific complaint but rejects comparisons to a teenage crush as a benchmark for adult marital intimacy.",
+    "current_issue": "Arlequino wants visible spontaneous initiative as evidence of desire. He has now added that he once intended to wait until a sixteen-year-old acquaintance was older and then marry her, giving Rena another past near-marriage comparison to react to. No sexual conduct with the minor is established or inferred.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena rejects the teenage-crush benchmark but acknowledges his desire for more visible initiative. Do not unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions without a new causally justified delta."
+  "next_transition_rule": "Resolve one immediate Rena response to Arlequino revealing that he once intended to wait until the teenage acquaintance was older and marry her. Keep the focus on the past marriage intention and Rena's jealousy; do not sexualize the minor, unlock the door, leave, advance dressing, or invent Arlequino's voluntary actions."
 }
