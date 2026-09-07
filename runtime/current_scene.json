@@ -3,21 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1405_return_after_relief_planning",
-  "time": {"display": "T+162 ~14:05", "day": 162, "clock": "~14:05", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_student_hall_1409_public_affection_interrupted",
+  "time": {"display": "T+162 ~14:09", "day": 162, "clock": "~14:09", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He kisses Rena and tells her they are going first to the hall 'к бездарям'. He then leaves Raden's office with Rena and proceeds to the student hall. No further voluntary speech or action is invented after arrival.",
-    "last_in_world_utterance": "Целую рену -идем , сначала в зал к бездарям .",
-    "current_declared_emotional_state": "Affectionate toward Rena and casually mocking/teasing toward the students by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He explicitly begins kissing and caressing Rena for an extended time, declaring that he continues until someone interrupts, Rena stops him, or an absurd impossible extreme occurs. The action continues only within Rena's established public-affection boundary and ends when the situation is interrupted / Rena stops the continuation.",
+    "last_in_world_utterance": "Начинаю целовать и ласкать Рену долго пока нам не помешает или рена не остановит или не умрем и станем ангелами.",
+    "current_declared_emotional_state": "Affectionate and playfully excessive by direct action wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No new exact expense is established during the walk."}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No money changes in this beat."}
   },
   "concert_directive": {
     "deadline": "within three days from T+162 ~13:47; target no later than T+165 unless causally delayed or revised",
@@ -26,28 +26,34 @@
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:05",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:09",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
-    "dispatch_status": "Raden retains operational responsibility for putting the prepared letters and courier inquiries onto the fastest practical routes; no delivery/reply is yet established in the current scene"
+    "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
+  "recent_elapsed_events": [
+    "Arlequino begins a prolonged public kissing/caressing sequence with Rena in the student hall.",
+    "Rena reciprocates affection without leaving her established public boundary: embraces, kisses and ordinary caresses are acceptable; intimate public groping is not. When his touch approaches that boundary she catches/redirects his hand rather than allowing it to escalate.",
+    "Several students notice and awkwardly try to continue rehearsal while looking elsewhere.",
+    "After a few minutes, one nearby student finally interrupts with a dry practical question about whether rehearsal is continuing or whether the hall should be vacated. Rena uses the interruption to break the prolonged sequence and refocus the scene."
+  ],
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "beside Arlequino in the student hall",
+      "position": "close beside Arlequino in the student hall",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "She accepts the kiss, leaves the organizer office with Arlequino and accompanies him back to the hall. She can react dryly to his 'бездарям' remark without becoming an interviewer.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate."
+      "observable_state": "Affectionate and responsive, but still proud and self-possessed in public. She permits prolonged kissing/embracing and ordinary caresses, redirects any touch that becomes too intimate for the public hall, and ultimately stops the extended make-out once the students interrupt.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. Public affection is welcome; intimate public groping remains outside her consent."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
-      "current_activity": "self-organized rehearsal and production work for «Гвазимодо» continues in loose groups; no major new result is established solely from the short elapsed interval",
-      "reaction_to_arrival": "They notice Arlequino and Rena entering; exact individual reactions remain open for the next beat"
+      "current_activity": "self-organized rehearsal and production work for «Гвазимодо» is partially disrupted by Arlequino and Rena's prolonged public affection",
+      "reaction": "Most avoid staring and try to keep working; after several minutes one nearby student interrupts with a practical, slightly awkward request to know whether rehearsal should continue or the hall should be cleared."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
-      "ongoing_role": "continues availability/grouping work for rehearsals when present/available; no new completed schedule is established"
+      "ongoing_role": "availability/grouping work continues when present/available; no new schedule completion is established"
     }
   },
   "knowledge_state": {
@@ -59,8 +65,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Rena and Arlequino have temporarily left crisis logistics with Raden and returned together to the student hall."
+    "current_issue": "A playful public affection beat in front of the students ends through Rena's boundary enforcement and an awkward student interruption; no conflict or rejection is implied."
   },
-  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Stop at the next real player decision rather than one gesture or a long chain of logistics.",
-  "next_transition_rule": "Resolve the immediate arrival in the hall and NPC reactions only. Do not invent Arlequino's next instruction to students, auto-advance the concert, auto-return courier results, or assume Bren's exact presence without causal support."
+  "pacing_rule": "Use medium-length scenes: typically 2-3 meaningful beats. Do not turn ordinary interactions into endless dialogue or reduce them to one gesture.",
+  "next_transition_rule": "The prolonged affection is over at the interruption point. Await Arlequino's response to the student / next instruction. Do not invent his next teaching order, auto-advance rehearsals, auto-return courier results, or move him elsewhere without input."
 }
