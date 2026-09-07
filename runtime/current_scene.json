@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1257_pending_valid_rena_reaction_after_ex_story",
+  "scene_id": "t162_dwargon_hotel_room_1257_valid_rena_reaction_to_ex_story",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:57",
@@ -13,12 +13,12 @@
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
       "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
-      "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment is still in her hands.",
+      "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment remains in her hands.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
       "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, and listing remembered sexualized body details after Rena warned him not to.",
       "Arlequino's latest valid in-world line says that this former partner was fun, that they had wanted another encounter using magical potions so it would last longer than 13 hours, and that it is a pity their paths separated so quickly.",
-      "The assistant's subsequent solemn/wounded Rena reaction focusing on whether Arlequino regrets losing the woman is SUPERSEDED as an ASSISTANT_CONTINUITY/CHARACTERIZATION ERROR. Rena has not validly responded to the latest line yet.",
-      "No dressing advancement, door action, or departure occurs."
+      "The assistant's previous solemn/wounded interrogation about whether Arlequino regrets losing the woman is SUPERSEDED as an ASSISTANT_CONTINUITY/CHARACTERIZATION ERROR.",
+      "Valid Rena reaction: she takes the line as provocative bragging, reacts with proud jealous sarcasm and competitive irritation rather than fragile insecurity. She mocks the 'tragedy' of the missed potion rematch, calls Arlequino shameless, and says that if this legendary woman ever appears she wants to see her out of pure sporting interest. She does not start another sexual round and does not advance dressing beyond holding the next garment."
     ]
   },
   "location": {
@@ -50,8 +50,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. She can be genuinely jealous, possessive, sharp, competitive, irritated or amused by Arlequino's ex-story, but should not default into fragile insecurity or solemn relationship interrogation in this playful/provocative context. Keep her reaction personal and natural, not therapeutic. Jealousy does not automatically force another sexual round or erase her intention to resume errands.",
-      "observable_state": "Still holding the next garment with her attention fully on Arlequino; jealousy and irritation are plausible, but the exact valid reaction to his latest line is pending.",
+      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. Her valid reaction to the ex-story is jealous, sarcastic, possessive and competitive, not fragile or melodramatically wounded. She does not automatically turn jealousy into sex and still intends to resume errands.",
+      "observable_state": "Holding the next garment, staring at Arlequino with narrowed eyes and a sharp, jealous half-smile.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -71,10 +71,10 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Playful ex-story provocation is ongoing. Rena's valid reaction to Arlequino saying the former partner was fun, they planned a potion-assisted rematch, and it was a pity their paths separated quickly is pending after a characterization correction.",
+    "current_issue": "Playful ex-story provocation continues. Rena has reacted with proud jealous sarcasm and competitive curiosity rather than insecurity.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1257_rena_jealousy_overdramatization_replay.md",
-  "next_transition_rule": "Resume from ~12:57 with Rena still holding the next garment and Arlequino's latest valid ex-story line just spoken. Give Rena a proud, personal, plausibly jealous/competitive reaction consistent with her established character; do not make her fragile, therapist-like, or melodramatically wounded. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
+  "next_transition_rule": "Continue from ~12:57 after Rena's proud, sarcastic jealousy reaction. She is still holding the next garment and has not advanced dressing. Do not unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
 }
