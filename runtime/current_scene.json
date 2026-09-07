@@ -3,52 +3,61 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_caravan_office_1323_partial_eurazania_evacuation_routes",
-  "time": {"display": "T+162 ~13:23", "day": 162, "clock": "~13:23", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "at the front counter of a caravan-dispatch and merchant information office", "exact_street_or_office_name": "UNKNOWN"},
+  "scene_id": "t162_dwargon_organizer_office_1336_first_candidate_contact",
+  "time": {"display": "T+162 ~13:36", "day": 162, "clock": "~13:36", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "inside a small professional coordination/booking office in a commercial district", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No movement is declared. He agrees to continue the evacuee inquiry and playfully says that some evacuees were his admirers, explicitly trying to provoke Rena's jealousy.",
-    "last_in_world_utterance": "-да давайте узнаем куда эвакуировали ... Среди них были мои поклонницы😥😭",
-    "current_declared_emotional_state": "Playfully provoking Rena's jealousy while also requesting real evacuee information; deeper private state is not inferred."
+    "last_in_world_action": "He prioritizes finding an organizer and states that he has many tasks for that person. The scene then proceeds along the already active organizer-search errand to a referred professional contact; no additional private reaction or speech is invented.",
+    "last_in_world_utterance": "-отлично. Надо найти организатора. У меня к нему куча дел ....",
+    "current_declared_emotional_state": "Task-focused by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
     "family": {"balance_copper": null, "display": "~358g"}
   },
+  "recent_elapsed_events": [
+    "At the caravan/merchant office, Arlequino explicitly reprioritizes the active organizer search, saying he has many tasks for an organizer.",
+    "Rena immediately supports that priority and postpones the next Eurazania-refugee source until after the organizer contact rather than cancelling it.",
+    "Rena asks the current dispatcher for a broader event/operations coordinator rather than merely a one-concert booking clerk.",
+    "The dispatcher provides a practical referral to a local professional coordinator named Raden, known through commercial/event channels for handling venue coordination, schedules, staff, suppliers, permissions and public-event logistics. This is a referral, not a guarantee of hire or competence for every requested task.",
+    "The couple proceeds to the referred office over roughly a dozen minutes of ordinary city travel. No money is spent during this transition.",
+    "Raden is present and agrees to hear the scope before discussing whether he will take the work, his capacity, terms or price. No hiring agreement exists yet."
+  ],
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "beside Arlequino at the counter",
+      "position": "beside Arlequino in front of Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Rena gives Arlequino a sharp jealous side-look at the word 'поклонницы', but the catastrophe keeps her practical. She stays close and focuses on finding evacuees rather than turning the scene into an argument.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. Jealousy can be sharp and personal, but she prioritizes locating survivors in this crisis. Do not make her fragile, therapeutic, melodramatic or an endless interviewer."
+      "observable_state": "Practical and composed. She supports dealing with the organizer first and keeps the Eurazania inquiry queued for afterward.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. She is not an interviewer or assistant-servant; she can handle practical introductions and let Arlequino state his own requirements."
     },
-    "dispatcher": {
+    "raden": {
+      "name": "Раден",
       "presence": "present",
-      "role": "caravan-dispatch / merchant-information clerk",
-      "name": "UNKNOWN",
-      "knowledge_basis": "recent caravan and messenger traffic plus office route ledgers",
-      "new_partial_result": "After checking several recent route entries for a few minutes, he can confirm that evacuation traffic was split. Several large civilian groups were recorded moving northeast through trade routes toward the Jura/Tempest direction before the destruction; other groups were diverted to temporary road camps and secondary routes. He cannot prove where every group ultimately arrived and has no individual-name list at this desk.",
-      "next_leads": ["Free Guild / adventurer-network records may have escort or refugee intake information", "gate/route dispatch ledgers may contain more convoy identifiers and intermediate stops"],
-      "knowledge_limits": "No exact all-evacuee distribution, no complete individual list, no exact casualty count, no confirmed condition of 18 Old Garden Street, and no proof of Carrion's true fate."
+      "role": "independent professional organizer/coordinator candidate",
+      "status": "CANDIDATE_NOT_HIRED",
+      "knowledge_basis": "local Dwargon venue, commercial and public-event coordination networks",
+      "plausible_scope": ["venue coordination", "scheduling", "staffing", "supplier coordination", "permissions and local administrative routing", "ticketing/front-of-house logistics", "general public-event operations"],
+      "limits": "He has not agreed to take the work, price is UNKNOWN, availability is UNKNOWN, and suitability for every task must be established from the requested scope.",
+      "current_prompt_to_player": "Explain what needs to be taken off Arlequino's plate; Raden will assess scope before committing."
     }
   },
   "knowledge_state": {
     "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
     "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
-    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: evacuation was split; several large groups moved northeast toward the Jura/Tempest direction; other groups used temporary camps/secondary routes; exact current distribution remains UNKNOWN",
+    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; other groups used temporary camps/secondary routes; exact current distribution remains UNKNOWN",
     "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Arlequino is deliberately poking Rena's jealousy by mentioning evacuee admirers while they are dealing with real disaster news. Rena reacts but keeps the practical rescue-information priority."
+    "current_issue": "The couple has paused the next refugee-source step to assess a real organizer candidate because Arlequino says he has many tasks to delegate."
   },
-  "pacing_rule": "Provide longer cohesive scene segments during routine inquiry/travel. Stop at major new information, irreversible choice, or a point where Arlequino reasonably needs an intervention window.",
-  "next_transition_rule": "The couple now has a partial evacuation-route lead and two plausible next sources: Free Guild/adventurer records or gate/route dispatch records. Rena may prefer the source most likely to have people/intake information, but do not auto-resolve exact refugee locations or individual admirers without further causal contact."
+  "pacing_rule": "Provide longer cohesive scene segments during routine inquiry/travel, but stop when Arlequino must state requirements, make a hiring decision, spend money or react to major information.",
+  "next_transition_rule": "Await Arlequino's own list/scope for Raden. Do not invent his requirements, agree to hire Raden, set compensation, or auto-resolve organizer suitability. The Eurazania inquiry remains active and queued after this organizer conversation."
 }
