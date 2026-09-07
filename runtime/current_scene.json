@@ -3,30 +3,28 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_organizer_office_1341_eurazania_relief_scope_triage",
-  "time": {"display": "T+162 ~13:41", "day": 162, "clock": "~13:41", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_organizer_office_1342_family_budget_permission_for_relief",
+  "time": {"display": "T+162 ~13:42", "day": 162, "clock": "~13:42", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside Raden's small professional coordination/booking office", "exact_street_or_office_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He gives Raden three concrete requested workstreams: organize a humanitarian caravan for Eurazania civilians believed to be in/near Tempest; send them a message that help is coming; organize a charity concert dedicated to Eurazania's victims, destroyed capital, and the publicly presumed-dead Beast King Carrion.",
-    "last_in_world_utterance": "- нужно организовать караван с гуманитарной помощью жителям эурозании , которые находятся в темпесте , отправить им послание о том что скоро прибудет помощь.устроить благотворительный концерт посвящённый пострадавшей эурозании, их уничтоженной столице и героически погибшему Зверокоролю Кариону.",
-    "current_declared_emotional_state": "Task-focused and urgent by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "He explicitly assumes responsibility for presenting Carrion as dead in the charity concert, rejects softer rumor-level wording, and asks Rena whether she objects to him using their shared family budget for the relief project.",
+    "last_in_world_utterance": "- именно в память о погибшем Карионе, ответственность на мне. Плевать на слухи и на мораль. Цель собрать больше народу и денег , если Карион жив вряд ли он разозлится , на что я убил его в своем концерте во благо его народа , так что в память о погибшем Зверокороле Карионе.Милая , не против если я распоряжусь нашим бюджетом?",
+    "current_declared_emotional_state": "Decisive and pragmatic by direct wording; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
-    "family": {"balance_copper": null, "display": "~358g"}
+    "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena grants Arlequino permission to use the shared family budget for the Eurazania relief/charity project, while insisting that large expenses be tracked and that the family treasury not be emptied blindly; no exact cap is established and no money is spent in this beat."}
   },
   "recent_elapsed_events": [
-    "Raden writes down the three requested workstreams and treats them as a linked crisis-relief project rather than ordinary concert booking.",
-    "Raden identifies a factual dependency: current runtime knowledge only establishes that several large evacuation groups moved toward the Jura/Tempest direction, not that all intended recipients are confirmed inside Tempest. He refuses to dispatch a fully loaded caravan blindly and proposes immediate confirmation through Free Guild, courier, merchant and Tempest-facing channels while provisionally sourcing wagons, drivers, guards and relief goods.",
-    "Raden says a message can be dispatched immediately to Tempest authorities/Free Guild or other receiving contacts asking them to identify Eurazania evacuee locations, approximate needs and a receiving point; the promise of help should be conditional on locating the recipients rather than falsely claiming a confirmed destination.",
-    "Raden considers a charity concert operationally plausible in Dwargon: venue, permits, staff, suppliers, publicity, ticket/donation handling and transparent relief accounting can be organized. No venue or date is yet booked.",
-    "Raden flags that Carrion's death is currently public belief/presumption, not confirmed proof. He will not print 'heroically fallen' as an objective fact unless Arlequino explicitly chooses to use rumor-level wording or later obtains confirmation. Safer public wording would honor the victims, destroyed capital and 'presumed fallen/missing Beast King Carrion' or omit a definitive death claim.",
-    "Rena supports moving quickly but adds that a written estimate and separation of relief funds from family money are needed before substantial spending. No money has yet changed hands and Raden is still not formally hired.",
-    "Raden says he can take the coordination role in principle if Arlequino gives him authority to begin inquiries and provisional holds; final compensation, expense authority and public wording still require agreement."
+    "Arlequino explicitly rejects cautious public wording about Carrion and instructs that the charity concert be framed 'in memory of the fallen Beast King Carrion,' taking responsibility for that claim.",
+    "Raden accepts this as Arlequino's mandated public wording and records it as such rather than treating Carrion's death as independently verified fact.",
+    "Arlequino asks Rena directly whether she objects to him using their shared family budget.",
+    "Rena answers as an equal spouse: she permits use of the family budget for helping Eurazania and the charity project, but requires transparent accounting for major expenditures and refuses a blank-check approach that could wipe out the family treasury without review.",
+    "No exact spending ceiling is established, no payment is made, Raden is not yet paid, and no supplies/venue/transport are booked in this beat."
   ],
   "present_entities": {
     "rena": {
@@ -34,8 +32,9 @@
       "presence": "present",
       "position": "beside Arlequino in front of Raden's desk",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Serious and practical; she supports rapid relief work and insists on a written estimate before substantial spending.",
-      "autonomy_state": "Proud, strong-willed, independent and affectionate. She is not an assistant-servant; she can protect shared finances and push for practical safeguards without overriding Arlequino's decisions."
+      "observable_state": "Serious and practical. She does not object to using shared funds for relief, but makes clear that shared money is not an unlimited blank check.",
+      "last_observable_utterance": "— Не против. На помощь Эуразании — распоряжайся. Но семейную казну в ноль не сливай и крупные траты проводи через смету. Я хочу видеть, куда уходят деньги.",
+      "autonomy_state": "Proud, strong-willed, independent and affectionate. She treats the family budget as genuinely shared and may approve major purpose while still requiring accountability."
     },
     "raden": {
       "name": "Раден",
@@ -47,14 +46,15 @@
         "prepare and dispatch a humanitarian caravan once a receiving point/route is confirmed, while provisionally sourcing transport, guards and supplies",
         "send a message toward Tempest/receiving networks that help is being prepared and request a confirmed receiving contact",
         "organize a Dwargon charity concert for Eurazania victims and destruction relief",
+        "use the player-mandated public framing 'in memory of the fallen Beast King Carrion' with responsibility attributed to Arlequino's decision",
         "handle venue, permits, staffing, suppliers, publicity, ticket/donation operations and transparent relief accounting"
       ],
       "constraints": [
         "Exact evacuee distribution remains unresolved; do not state all evacuees are in Tempest as fact.",
-        "Carrion is publicly presumed dead, not objectively confirmed to the couple.",
-        "No large expenditure, venue booking, caravan dispatch or public death wording occurs without authority/terms."
+        "Carrion's death remains objectively unconfirmed to the couple, despite Arlequino's chosen public wording.",
+        "No large expenditure, venue booking, caravan dispatch or payment occurs until Raden is formally authorized/hired and concrete expense authority is established."
       ],
-      "current_prompt_to_player": "Authorize or reject immediate inquiries/provisional holds, set spending authority later or now, and decide how the charity concert should publicly refer to Carrion while his death remains unconfirmed."
+      "observable_state": "Raden records Arlequino's exact memorial framing and waits for the remaining authority/terms decision after hearing Rena's family-budget permission."
     }
   },
   "knowledge_state": {
@@ -66,8 +66,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Rena and Arlequino are jointly dealing with relief logistics after learning of Eurazania's destruction; Rena is serious and practical."
+    "current_issue": "Rena has given purpose-level consent to use shared family funds for Eurazania relief while preserving joint-finance accountability."
   },
-  "pacing_rule": "Provide longer cohesive scene segments during routine planning and travel, but stop before Arlequino spends money, grants authority, approves public wording, or makes another consequential decision.",
-  "next_transition_rule": "Await Arlequino's response to Raden's proposed crisis-project structure. Do not formally hire Raden, spend money, book a venue, dispatch a caravan, send a definitive-location message, or state Carrion's death as confirmed without player action and causal support."
+  "pacing_rule": "Provide longer cohesive scene segments during routine planning and travel, but stop before irreversible spending, final hire terms, or another major player decision.",
+  "next_transition_rule": "Raden can now ask for formal hire/authority and expense-control terms or present a first-pass action plan. Do not spend money, book a venue, dispatch a caravan, or invent an exact spending cap without further causal agreement."
 }
