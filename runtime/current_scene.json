@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1258_ex_initiative_comparison_hits_rena_pride",
+  "scene_id": "t162_dwargon_hotel_room_1258_arlequino_adds_ex_domestic_and_appearance_details",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:58",
@@ -15,9 +15,10 @@
       "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
       "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment remains in her hands.",
       "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
-      "One ex-story became the focus: Arlequino described a 13-hour sexual encounter, called the woman beautiful, said she had wanted another longer potion-assisted encounter, and said it was a pity their paths separated quickly. Rena's valid reaction is proud, jealous, sarcastic and competitive rather than fragile or melodramatically wounded.",
-      "Arlequino now adds that the woman had been in love with him and wanted to marry him, and emphasizes that she often initiated intimacy, including waking him with sexual attention and sometimes beginning while he was asleep. Exact sexual mechanics remain offscreen and are not elaborated beyond the user's statement.",
-      "This directly overlaps with the earlier same-day relationship issue where Arlequino complained that Rena rarely initiates and Rena acknowledged that she may have become too used to him starting. The comparison is therefore likely to hit Rena's pride more than the romance/marriage detail itself.",
+      "Arlequino repeatedly provoked Rena's jealousy by praising one former sexual partner, recalling a 13-hour encounter, calling her a beauty, describing her initiative, and saying she wanted to marry him.",
+      "Rena's valid mode is proud, jealous, sarcastic and competitive rather than fragile or melodramatically wounded.",
+      "Arlequino now adds that the former partner cooked excellently and had long brown hair and brown eyes.",
+      "This partially conflicts with Arlequino's earlier statement that he did not remember the woman's eyes or face. Treat the newest direct player statement as a present recollection/clarification: he now says the eyes were brown. Rena can notice the contradiction because she heard both statements.",
       "No dressing advancement, door action, or departure occurs in this beat."
     ]
   },
@@ -33,9 +34,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he continues the ex-story verbally.",
-    "last_in_world_utterance": "-да может и объявится , она то была в влюблена в меня. И хотела выйти за муж за меня.. Ну с ней было весело, будила минет и поцелуями, часто начинала секс даже когда я сплю , просто начинала минет а когда возбуждался залазила на меня.",
-    "current_declared_emotional_state": "playful, provocative and deliberately emphasizing the ex's initiative",
+    "last_in_world_action": "No new movement is declared; he continues describing the former partner.",
+    "last_in_world_utterance": "-готовила отменно, в нее были длинные, коричневые волосы, и карие глаза .",
+    "current_declared_emotional_state": "playful, provocative and casually nostalgic while feeding Rena more details about the former partner",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -50,8 +51,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. The ex's desire to marry Arlequino may provoke jealous sarcasm, but the especially relevant pressure point is Arlequino stressing that the ex frequently initiated intimacy after Rena acknowledged earlier today that she has become too used to him starting. Her reaction should be sharp, proud, competitive and personal, not fragile, therapeutic or ideological. She does not automatically turn jealousy into sex and still intends to resume errands.",
-      "observable_state": "Holding the next garment, attention fully on Arlequino; likely narrowed eyes, jealous half-smile and visibly hit pride at the initiative comparison.",
+      "autonomy_state": "Rena remains proud, strong-willed, affectionate, strongly attracted and emotionally close. She is now openly jealous and competitive about the former partner but not insecure. She can sharply catch Arlequino on his earlier claim that he did not remember the woman's eyes, tease him about suddenly remembering them, and react to 'готовила отменно' as yet another item in the ex's absurdly impressive resume. Keep it personal and natural; no therapy language.",
+      "observable_state": "Holding the next garment, eyes narrowed at Arlequino with a sharp jealous half-smile; attentive enough to remember his earlier contradictory detail.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -61,15 +62,20 @@
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
       "assignment_results": "NONE_YET; work remains deferred only until they actually leave the room"
+    },
+    "students": {
+      "group": "Dwargon students remaining in/around the student hall",
+      "exact_present_count": null,
+      "activity": "self-organizing rehearsal and production work; final schedule remains blocked by the unfixed concert date and any remaining confirmations"
     }
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Playful ex-story provocation now directly touches the already acknowledged issue that Rena rarely initiates intimacy, making this a pride/competition beat rather than a fragile relationship-threat beat.",
+    "current_issue": "Playful ex-story provocation continues. Rena is in proud, jealous, sarcastic competitive mode and can now catch Arlequino on the contradiction about remembering the ex's eyes.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "runtime/corrections/t162_1257_rena_jealousy_overdramatization_replay.md",
-  "next_transition_rule": "Continue from ~12:58 with Rena still holding the next garment. Let her react primarily to the ex's constant initiative and secondarily to the marriage detail. Keep the reaction proud, jealous, sarcastic and competitive; do not make her fragile or therapist-like, do not automatically start another sexual round, and do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
+  "next_transition_rule": "Continue from ~12:58 with Rena still holding the next garment. Let her react to the cooking/hair/eye details and plausibly catch the contradiction about the eyes. Do not advance dressing, unlock the door, leave, or invent Arlequino's voluntary actions in the same beat."
 }
