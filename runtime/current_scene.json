@@ -3,29 +3,24 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1301_arlequino_nostalgic_about_old_days",
+  "scene_id": "t162_dwargon_hotel_room_1302_departure_prompt_after_jealous_banter",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~13:01",
+    "display": "T+162 ~13:02",
     "day": 162,
-    "clock": "~13:01",
+    "clock": "~13:02",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact mechanics remain offscreen.",
-      "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
-      "Rena began dressing at granular pacing; first garment is complete and the next garment remains in her hands.",
-      "Arlequino disclosed roughly fifteen former partners, exact total UNKNOWN because he explicitly does not remember.",
-      "He described one former adult partner: 13-hour encounter, beautiful, long brown hair, brown eyes, excellent cook, and SHE wanted to marry HIM. Arlequino did not want family life then and later admitted he should have spoken to her instead of quietly disappearing.",
-      "Arlequino is established as Rena's first man; no prior male romantic/sexual partner is established for her.",
-      "Rena has already experienced two Arlequino departure/disappearance patterns: T+117 in Blumund and T+129 in Eurazania.",
-      "The couple argued about Rena's sexual initiative. Literal zero is contradicted by saved T+150 continuity, when Rena explicitly initiated once; exact total remains UNKNOWN. Rena conceded her initiative has been rare and Arlequino's desire is stronger/more frequent.",
-      "Arlequino cited a past sixteen-year-old acquaintance who was in love with him and very proactive with nonsexual affection such as hugs. No sexual conduct with the minor is stated or inferred.",
-      "Arlequino said he had intended to wait until that acquaintance was older and then marry her.",
-      "Rena briefly mixed up the marriage direction; Arlequino corrected her that the brown-eyed adult woman wanted to marry him, while his own past marriage intention concerned the younger acquaintance only after she became older.",
-      "Rena acknowledged the correction without another investigative question: the brown-eyed woman wanted him, while he himself had imagined marrying the other acquaintance later.",
-      "Arlequino now gives a moan/sigh and nostalgically says, 'да какие были дни 🫦'. This expresses fond nostalgia only; no new sexual conduct, especially involving the minor anecdote, is established or inferred.",
-      "Rena reacts with dry, personal jealousy at hearing her husband openly savor memories of his old romantic attention, without turning the exchange into an interrogation.",
-      "No door action, departure, dressing advancement, or voluntary Arlequino movement is added beyond his stated sigh/moan and words."
+      "Rena later accepted one brief compromise, then both agreed to resume errands.",
+      "Rena began dressing at granular pacing; first garment is complete and she has been holding the next garment through the ensuing banter.",
+      "Arlequino and Rena argued about sexual initiative. One explicit Rena initiation at T+150 is confirmed; exact total remains UNKNOWN. Rena conceded her initiative is rare and Arlequino's desire is stronger/more frequent.",
+      "Arlequino discussed past romantic attention, including one former adult partner who wanted to marry him and a past sixteen-year-old acquaintance whom he says he intended to wait for until she was older before marriage. No sexual conduct with the minor is stated or inferred.",
+      "Arlequino nostalgically remarked about the old days. Rena responded with dry jealousy.",
+      "Arlequino then said the two examples were only two among many dozens. This newest direct statement supersedes the earlier rough fifteen-partner estimate as a statement about the broader scale of his past, while the exact count remains UNKNOWN.",
+      "Arlequino followed with a theatrically reassuring 'все в прошлом'; Rena answered that this reassurance was not especially convincing after his nostalgic sigh.",
+      "Arlequino now makes a brief playful physical slap/tap between Rena's legs as directly stated, calls her 'ревнивица', and says 'идем', clearly signaling readiness to leave and resume errands.",
+      "No money changes occur."
     ]
   },
   "location": {
@@ -34,15 +29,15 @@
     "certainty": "current_scene_confirmed",
     "lodging_type": "hotel",
     "lodging_exact_name_or_address": "UNKNOWN",
-    "door_state": "locked by Arlequino"
+    "door_state": "still locked; no unlock action yet"
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "He gives a moan/sigh and verbally reminisces fondly about the old days; no movement is otherwise declared.",
-    "last_in_world_utterance": "Стон и вздох -да какие были дни 🫦",
-    "current_declared_emotional_state": "Fondly nostalgic about earlier days by direct tone; exact deeper private state is not inferred.",
+    "last_in_world_action": "Brief playful slap/tap between Rena's legs as directly stated, followed by an explicit prompt to go; no further movement or door action is invented.",
+    "last_in_world_utterance": "-ладно ревнивица , идем",
+    "current_declared_emotional_state": "Playful/de-escalating tone by direct wording; deeper private state is not inferred.",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -56,10 +51,10 @@
       "presence": "present",
       "awake": true,
       "position": "at the bed while dressing",
-      "clothing_state": "first garment completed; next garment remains in her hands and is not yet confirmed put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. Arlequino is her first man while he has many former partners. She has conceded her sexual initiative is rare and his desire is stronger/more frequent. She can react dryly and personally to Arlequino savoring memories of old romantic attention without becoming fragile, submissive, therapeutic, melodramatic, or an endless interviewer. Do not sexualize the minor anecdote.",
-      "observable_state": "She gives Arlequino a long, unimpressed look at his nostalgic sigh; jealousy is visible but controlled. The garment remains in her hands.",
-      "last_observable_utterance": "— Я вижу. Какие были дни. Кареглазая хотела за тебя замуж, другая девчонка была в тебя влюблена, а теперь всё это слушает твоя жена. Наслаждайся воспоминаниями, павлин. Только лицо сделай чуть менее счастливым.",
+      "clothing_state": "first garment completed; next garment is now causally ready to be put on as they transition toward leaving; do not instantly skip all remaining dressing steps",
+      "autonomy_state": "Rena remains proud, strong-willed, independent, affectionate and emotionally close. She is jealous but not fragile, therapeutic, melodramatic, submissive, or an interviewer. Arlequino is her first man while his past is much broader. She can react sharply to the playful slap/tap, then practically continue dressing because he has explicitly said they are going.",
+      "observable_state": "Jealous irritation has been partly de-escalated by Arlequino's 'ладно ревнивица, идем'; she is still at the bed and not yet confirmed fully dressed.",
+      "last_observable_utterance": "— Ещё немного так меня успокаивай, павлин, и я начну подозревать, что ты очень хочешь спать сегодня один.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -68,7 +63,7 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred only until they actually leave the room"
+      "assignment_results": "NONE_YET; these tasks may resume after the couple actually exits the room"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -79,13 +74,12 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino has many former partners.",
-    "known_departure_history": "Rena has personally experienced two Arlequino disappearance/departure patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
-    "initiative_continuity": "Literal zero is contradicted by saved T+150 morning continuity. One explicit remembered Rena-initiated encounter is confirmed; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
-    "marriage_direction_correction": "Brown-eyed former adult partner wanted to marry Arlequino. Arlequino did not state he wanted to marry her. Separately, he says he once intended to wait until a sixteen-year-old acquaintance became older and then marry her.",
-    "current_issue": "Arlequino is now openly nostalgic about the attention and possibilities of his past; Rena responds from personal jealousy and lived marriage rather than by interviewing him.",
+    "first_man_asymmetry": "Arlequino is Rena's first man; Arlequino now directly describes his broader past as many dozens, exact count UNKNOWN.",
+    "known_departure_history": "Rena has personally experienced two Arlequino departure/disappearance patterns: T+117 concealed-destination farewell in Blumund followed by his search for her, and T+129 quiet departure while she slept in Eurazania.",
+    "initiative_continuity": "One explicit Rena-initiated encounter is confirmed at T+150; exact total remains UNKNOWN. Rena has openly conceded that her initiative has been rare.",
+    "current_issue": "Jealous banter is de-escalating. Arlequino has explicitly prompted them to go resume errands, so the next causal step is Rena's immediate reaction plus continued dressing, not another interrogation.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "next_transition_rule": "Await Arlequino's next player-controlled words or deliberate action after Rena's dry jealous response to his nostalgia. Do not unlock the door, leave, advance dressing, sexualize the minor anecdote, or invent Arlequino's voluntary actions without a new causally justified delta."
+  "next_transition_rule": "Resolve one immediate Rena response to Arlequino's playful slap/tap and 'идем'. She may put on the next garment as one small dressing step. Do not fully dress her instantly, unlock the door, leave the room, spend money, or invent further Arlequino movement in the same beat."
 }
