@@ -3,14 +3,14 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1432_arlequino_thinks_with_rena_on_lap",
-  "time": {"display": "T+162 ~14:32", "day": 162, "clock": "~14:32", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_student_hall_1435_arlequino_continues_thinking_with_rena_on_lap",
+  "time": {"display": "T+162 ~14:35", "day": 162, "clock": "~14:35", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino takes a chair, sits, seats Rena on his lap, holds her close, rests his head on her shoulder with cheek against cheek, and silently thinks while staring into space. He occasionally bites her cheek or neck. If she starts protesting, he attempts to answer by kissing her, but this does not override Rena's autonomy or erase anything she chooses to say afterward.",
+    "last_in_world_action": "Arlequino continues sitting with Rena on his lap, holding her close, head on her shoulder and cheek against cheek, staring into space and thinking. He occasionally gives her light affectionate bites on the cheek or neck. No exact creative thought or decision is stated yet.",
     "last_in_world_utterance": null,
     "current_declared_emotional_state": "Serious and contemplative by direct description; exact thoughts remain UNKNOWN and must not be invented."
   },
@@ -24,20 +24,20 @@
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
-    "student_piece_state": "«Гвазимодо» is paused. Arlequino is actively thinking about a different piece for the concert, but no concept, cast or assignment is yet established.",
+    "student_piece_state": "«Гвазимодо» remains paused. Arlequino is still thinking about a different piece for the concert, but no concept, cast or assignment is yet established.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:32",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:35",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "Arlequino has paused «Гвазимодо» and told the students he will devise something else for the urgent charity concert.",
-    "He sits on a chair and brings Rena onto his lap while thinking in silence, keeping her close with his head on her shoulder and cheek against cheek.",
-    "His exact creative thoughts are not narrated because they remain player-controlled and unstated.",
-    "He occasionally nips Rena's cheek or neck. Rena remains autonomous: a kiss can interrupt a moment but cannot be used to erase or override any objection she chooses to make."
+    "Several more quiet minutes pass while Arlequino remains seated with Rena on his lap and continues thinking.",
+    "His exact thoughts remain unstated and are not invented by the GM.",
+    "Rena stays physically close and does not interrupt his concentration in this interval; she tolerates the occasional light affectionate bite without any established conflict.",
+    "The students remain mostly quiet and waiting. No one forces an interruption, and no new assignment or rehearsal milestone appears during this short interval."
   ],
   "present_entities": {
     "rena": {
@@ -45,12 +45,12 @@
       "presence": "present",
       "position": "on Arlequino's lap while he sits in front of the students",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Physically close and affectionate, while retaining full autonomy over whether she tolerates teasing bites or protests them."
+      "observable_state": "Quiet, physically close and composed while Arlequino thinks. No new objection or conflict is established in this interval."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
       "current_activity": "waiting while «Гвазимодо» remains paused and Arlequino thinks about a new concert piece",
-      "reaction": "They stay attentive and mostly quiet; no new assignment or interruption is established."
+      "reaction": "They remain attentive and mostly quiet, giving him space to think; no specific interruption is established."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
@@ -66,7 +66,7 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Arlequino is using quiet physical closeness with Rena while thinking; no conflict is established."
+    "current_issue": "Quiet physical closeness continues while Arlequino thinks; no conflict is established."
   },
   "pacing_rule": "Medium scene length is the default: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
   "next_transition_rule": "Hold the scene at the thinking point. Do not invent Arlequino's concept, thoughts, student roles, royal approval, courier reply, or completed logistics without new causal input."
