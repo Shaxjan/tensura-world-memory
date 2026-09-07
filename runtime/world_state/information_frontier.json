@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "ACTIVE",
-  "as_of": "T+162 ~13:18",
+  "as_of": "T+162 ~13:23",
   "purpose": "Track what world information exists, where it may be propagating, and whether Arlequino or important NPCs have causally received it.",
   "items": [
     {
@@ -29,7 +29,6 @@
       "natural_channels": ["survivors/refugees","official/public reaction","merchant and guild networks","travelers"],
       "propagation": {"eurazania_local": "PUBLIC_BELIEF_AFTER_EVENT", "dwargon": "CONFIRMED_ARRIVED_TO_COUPLE_T162_1318_VIA_CARAVAN_MERCHANT_NETWORK"},
       "recipient_state": {"arlequino": "CAUSALLY_EXPOSED_TO_PRESUMED_DEAD_BELIEF_T162_1318", "rena": "CAUSALLY_EXPOSED_TO_PRESUMED_DEAD_BELIEF_T162_1318"},
-      "exposure_event": "After Arlequino asks whether the king is dead, the caravan clerk says reports claim Carrion was defeated and is presumed dead, while explicitly lacking official confirmation or proof.",
       "restricted_truth": "Carrion's true survival must not be exposed before canonical revelation.",
       "distortion_risk": "MEDIUM"
     },
@@ -37,11 +36,16 @@
       "information_id": "eurazania_evacuee_destinations_current_distribution",
       "subject": "Where Eurazania evacuees were sent and where they are currently located",
       "information_class": "INVESTIGATION_TARGET",
-      "truth_status": "EXACT_CURRENT_DISTRIBUTION_UNRESOLVED_IN_ACTIVE_SOURCE_SET",
-      "propagation": {"dwargon": "CORE_DESTRUCTION_NEWS_HAS_ARRIVED; EXACT_REFUGEE_DISTRIBUTION_STILL_UNKNOWN", "rena_inquiry": "ACTIVE"},
-      "recipient_state": {"arlequino": "EXACT_EVACUEE_DESTINATIONS_UNKNOWN", "rena": "EXACT_EVACUEE_DESTINATIONS_UNKNOWN"},
+      "truth_status": "PARTIAL_CAUSAL_ROUTE_INFORMATION_ONLY; EXACT_CURRENT_DISTRIBUTION_UNRESOLVED",
+      "new_source_t162_1323": {
+        "source": "Dwargon caravan-dispatch / merchant-information clerk using recent route ledgers",
+        "report": "Evacuation traffic was split. Several large civilian groups were recorded moving northeast through trade routes toward the Jura/Tempest direction before the destruction. Other groups were diverted to temporary road camps and secondary routes. This source cannot prove final arrival points for all groups and has no complete individual-name list.",
+        "next_leads": ["Free Guild/adventurer-network escort or intake records", "gate/route dispatch ledgers with convoy identifiers and intermediate stops"]
+      },
+      "propagation": {"dwargon": "PARTIAL_ROUTE_INFO_AVAILABLE_THROUGH_CARAVAN_NETWORK", "rena_inquiry": "ACTIVE_WITH_PARTIAL_ROUTE_RESULT"},
+      "recipient_state": {"arlequino": "KNOWS_PARTIAL_ROUTE_PATTERN_T162_1323; EXACT_LOCATIONS_UNKNOWN", "rena": "KNOWS_PARTIAL_ROUTE_PATTERN_T162_1323; EXACT_LOCATIONS_UNKNOWN"},
       "linked_process": "rena_investigate_eurazania_evacuees_t162",
-      "anti_invention": "Do not choose a destination without a causal source."
+      "anti_invention": "Do not collapse the partial route pattern into a claim that all evacuees reached Tempest or any single destination."
     },
     {
       "information_id": "old_garden_street_home_condition_after_t161",
