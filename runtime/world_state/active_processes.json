@@ -2,37 +2,37 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "as_of": {
-    "world_time": "T+162 ~13:23",
+    "world_time": "T+162 ~13:36",
     "current_scene_ref": "runtime/current_scene.json",
-    "initialization_note": "Arlequino and Rena remain at a Dwargon caravan/merchant information counter. The Eurazania inquiry has advanced from destruction news to a partial route result: evacuation traffic was split, with several large groups recorded moving northeast toward the Jura/Tempest direction and other groups diverted through temporary camps/secondary routes. Exact current distribution and individual names remain unresolved."
+    "initialization_note": "Arlequino explicitly prioritized finding an organizer because he has many tasks to delegate. Rena used the current caravan/merchant contact to obtain a broader event-operations referral. The couple has reached independent coordinator candidate Raden in Dwargon; he is hearing scope but is not hired. The Eurazania refugee inquiry remains active and queued for continuation after this contact."
   },
   "processes": [
     {
       "process_id": "rena_find_organizer_t162",
       "category": "NPC_ASSIGNMENT",
-      "status": "IN_PROGRESS_CONTACT_SEARCH",
+      "status": "CANDIDATE_CONTACT_ESTABLISHED",
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Find an organizer/coordinator for concerts and broader creative/operational work.",
-      "current_state": "Rena and Arlequino are still using the current contact for Eurazania information. No organizer candidate has yet been identified or contacted.",
+      "current_state": "Rena obtained a causal referral from the caravan/merchant dispatcher to Raden, an independent Dwargon organizer/coordinator candidate with plausible experience in venue coordination, schedules, staff, suppliers, permissions, ticketing/front-of-house and public-event operations. Arlequino and Rena reached his office. Raden is willing to hear the scope before deciding whether he can take the work. He is NOT hired; availability, suitability, compensation and exact mandate remain unresolved.",
       "location_context": "Dwargon",
-      "constraints": ["Scope is broader than one concert.","Rena chooses her own method consistent with character and knowledge.","No organizer acceptance may be fabricated before contacts and time exist."],
-      "advance_when": ["Rena turns the current or next contact toward organizer referrals.","A real organizer candidate is identified or contacted."],
-      "player_visibility": "PLAYER_KNOWS_TASK_ACTIVE"
+      "constraints": ["Scope is broader than one concert.","Do not treat referral as successful hire.","Arlequino must define his own requirements; do not invent them.","Price, availability, authority and acceptance require explicit in-world agreement."],
+      "advance_when": ["Arlequino states the tasks/scope.","Raden assesses capacity and exclusions.","Terms are negotiated or the candidate declines."],
+      "player_visibility": "PLAYER_AT_CANDIDATE_MEETING"
     },
     {
       "process_id": "rena_investigate_eurazania_evacuees_t162",
       "category": "NPC_INVESTIGATION",
-      "status": "IN_PROGRESS_PARTIAL_ROUTE_RESULT",
+      "status": "IN_PROGRESS_PARTIAL_ROUTE_RESULT_PAUSED_FOR_ORGANIZER_CONTACT",
       "assigned_at": "T+162 ~10:07",
       "responsible": ["rena"],
       "objective": "Determine through causal in-world channels where Eurazania evacuees were sent and where they can currently be found.",
-      "current_state": "The current caravan/merchant clerk checked recent route entries. Partial result: evacuation traffic was split. Several large civilian groups were recorded moving northeast through trade routes toward the Jura/Tempest direction before the destruction; other groups were diverted to temporary road camps and secondary routes. The desk has no complete individual-name list and cannot prove final arrival points for all groups.",
+      "current_state": "Partial result remains: evacuation traffic was split; several large civilian groups moved northeast toward Jura/Tempest direction and others through temporary camps/secondary routes. Exact current distribution and individual names remain unresolved. The next likely source is the Free Guild/adventurer network, but the couple temporarily prioritizes the organizer meeting at Arlequino's request.",
       "location_context": "Dwargon with inquiry targets potentially outside Dwargon",
       "constraints": ["No omniscient access to evacuation records.","Exact current distribution remains unresolved.","Do not infer the condition of 18 Old Garden Street from city-wide destruction alone."],
-      "dependencies": ["Free Guild/adventurer-network records for escort or refugee intake information.","Gate/route dispatch ledgers for convoy identifiers and intermediate stops.","Further travel/message delay where needed."],
-      "advance_when": ["Rena or Arlequino reaches the Free Guild/adventurer network.","They inspect gate/route dispatch records.","A refugee, official, caravan master or escort provides more specific information."],
-      "player_visibility": "PLAYER_KNOWS_PARTIAL_ROUTE_RESULT"
+      "dependencies": ["Free Guild/adventurer-network records for escort or refugee intake information.","Gate/route dispatch ledgers for convoy identifiers and intermediate stops."],
+      "advance_when": ["Organizer meeting ends or is paused.","Rena or Arlequino resumes the Free Guild/gate route."],
+      "player_visibility": "PLAYER_KNOWS_PARTIAL_ROUTE_RESULT_AND_PAUSE"
     },
     {
       "process_id": "rena_new_home_search_t162",
@@ -44,7 +44,7 @@
       "current_state": "No property contact or option is established. The destruction news raises urgency but does not establish the old home's condition or the new-home city.",
       "location_context": "Dwargon / destination not yet fixed",
       "constraints": ["Exact city is unresolved.","Exact budget is unresolved; family funds are approximately ~358g.","Final purchase decision is not delegated.","Do not assume 18 Old Garden Street was destroyed without a specific source."],
-      "advance_when": ["Rena finishes or pauses the first inquiry route.","She encounters a plausible property-information channel."],
+      "advance_when": ["Rena finishes or pauses higher-priority organizer/refugee tasks.","She encounters a plausible property-information channel."],
       "player_visibility": "PLAYER_KNOWS_TASK_PENDING"
     },
     {
@@ -68,7 +68,7 @@
       "responsible": ["eurazania_survivors", "officials", "regional_institutions", "travel_and_trade_networks"],
       "location_context": "Eurazania and connected regions",
       "objective": "Simulate continuing consequences of the capital's destruction.",
-      "current_state": "By T+162 ~13:23, Arlequino and Rena know the capital was destroyed and know a partial evacuation pattern through a Dwargon caravan-network source. Exact current refugee distribution, exact home-level damage and Carrion's true fate remain unresolved/restricted.",
+      "current_state": "Arlequino and Rena know the capital was destroyed and know a partial evacuation pattern through a Dwargon caravan-network source. Exact current refugee distribution, exact home-level damage and Carrion's true fate remain unresolved/restricted.",
       "constraints": ["Do not invent exact casualty numbers or complete refugee destinations.","Do not infer the condition of 18 Old Garden Street from city-wide destruction alone.","Carrion's true survival remains restricted until canonically revealed."],
       "advance_when": ["World time advances.","Refugees, officials, traders, guilds and messengers move.","Arlequino or Rena interacts with affected networks."],
       "player_visibility": "CORE_EVENT_AND_PARTIAL_ROUTE_INFO_PLAYER_KNOWN"
