@@ -3,20 +3,21 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1247_rena_refuses_partnered_manual_release",
+  "scene_id": "t162_dwargon_hotel_room_1248_rena_accepts_brief_manual_compromise",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
-    "display": "T+162 ~12:47",
+    "display": "T+162 ~12:48",
     "day": 162,
-    "clock": "~12:47",
+    "clock": "~12:48",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
       "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
-      "Rena remains strongly attracted and visibly tempted but has repeatedly refused more partnered sexual activity before the errands.",
+      "Rena remains strongly attracted and visibly tempted but had repeatedly refused a third full intimacy round before the errands.",
       "At ~12:45 Rena acknowledged Arlequino's substantive complaint that he has been the one initiating intimacy and said she had grown too used to him always starting.",
-      "At ~12:46 Arlequino jokingly called Rena a sadist and falsely said she had forbidden even self-relief; Rena corrected that she had explicitly allowed him a couple of private minutes to calm himself.",
       "At ~12:47 Arlequino takes Rena's hand, places it against his groin, kisses her, and asks her to calm him with her hand so they can leave afterward.",
-      "Because Rena's refusal of further partnered sexual activity remains active, she immediately removes her hand and does not participate. She remains close, attracted and emotionally engaged rather than cold. No dressing or departure begins yet."
+      "The assistant's first reaction had Rena mechanically extend her earlier refusal to this request. That response was explicitly acknowledged as an assistant continuity/characterization error and is superseded.",
+      "Valid replay: Rena initially removes her hand because Arlequino placed it there for her, then autonomously decides the brief compromise is acceptable. She returns her hand herself and helps him calm the physical tension without turning it into a third full intimacy round. Exact sexual mechanics remain offscreen.",
+      "Approximately one minute passes. The brief compromise is complete. Both remain close on/at the bed; Rena has not yet begun dressing or leaving."
     ]
   },
   "location": {
@@ -31,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Takes Rena's hand, places it against his groin, and kisses her.",
-    "last_in_world_utterance": "- успокой руками и идем",
-    "current_declared_emotional_state": "extremely aroused and still trying to negotiate a brief partnered sexual release before leaving",
+    "last_in_world_action": "After asking Rena for the brief compromise, gives the in-world reaction '-🫦'. No further voluntary movement is invented.",
+    "last_in_world_utterance": "-🫦",
+    "current_declared_emotional_state": "relieved/pleased reaction implied only by the user's emoji; exact private emotion otherwise not inferred",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -48,8 +49,8 @@
       "awake": true,
       "position": "still beside Arlequino on/at the bed, physically close",
       "clothing_state": "post-intimacy; exact garment placement not mechanically tracked; she has not begun dressing",
-      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. Her refusal of more partnered sexual activity before the errands remains unchanged. She removes her hand from Arlequino's groin rather than participating in manual sexual stimulation. She may remain physically close and affectionate while telling him he can calm himself privately if needed.",
-      "observable_state": "Still somewhat flushed and emotionally engaged; not cold or detached, but firmer because Arlequino again tried to turn her refusal into a different form of partnered sexual activity.",
+      "autonomy_state": "Rena remains affectionate, sexually responsive, strongly attracted and genuinely tempted. She still does not want a third full intimacy round before the errands, but autonomously accepted this brief one-minute manual compromise after distinguishing it from the larger escalation she had been refusing. This choice is hers, not imposed by Arlequino placing her hand.",
+      "observable_state": "Still somewhat flushed and emotionally engaged; the brief compromise is completed and she remains close.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -58,7 +59,7 @@
         "investigate where Eurazania evacuees were sent through causal in-world channels",
         "begin gathering new-home options without committing to purchase until location/budget are established"
       ],
-      "assignment_results": "NONE_YET; work remains deferred only through the current private moment"
+      "assignment_results": "NONE_YET; work remains deferred through the current private moment"
     },
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
@@ -69,7 +70,7 @@
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Arlequino has a valid complaint about Rena rarely initiating intimacy, which she acknowledged. Separately, Rena still does not want more partnered sexual activity before the errands. Arlequino has now tried to substitute manual sexual stimulation; Rena refuses that too while remaining affectionate and attracted.",
+    "current_issue": "Rena acknowledged Arlequino's complaint about her lack of initiation. She still does not want a third full intimacy round before errands, but she has now independently accepted and completed a brief manual compromise to help him calm down before leaving.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
   },
   "gvazimodo_cast": {
@@ -89,6 +90,6 @@
     "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
-  "correction_ref": "runtime/corrections/t162_1238_rena_arousal_flattening_replay.md",
-  "next_transition_rule": "Continue from ~12:47 with both still on/at the bed. Rena has just removed her hand and refused partnered manual sexual stimulation. She may remain close and affectionate, and can remind Arlequino that he may calm himself privately if needed. Do not narrate masturbation, dressing, or departure unless the user advances those actions."
+  "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
+  "next_transition_rule": "Continue from ~12:48 with the brief compromise complete and both still on/at the bed. Rena may react to Arlequino's '-🫦' and then, if she chooses to resume errands, expose only the first meaningful get-ready step rather than chaining dressing/unlocking/leaving. Do not invent Arlequino's voluntary actions."
 }
