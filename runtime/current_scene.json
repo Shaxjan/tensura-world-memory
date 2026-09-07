@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_hotel_room_1254_rena_reacts_to_quiver_and_target_joke",
+  "scene_id": "t162_dwargon_hotel_room_1254_arlequino_mentions_13_hour_ex",
   "purpose": "Single source of truth for the current physical scene. Older runtime/session/checkpoint scene details must not reset this frame.",
   "time": {
     "display": "T+162 ~12:54",
@@ -11,13 +11,13 @@
     "clock": "~12:54",
     "precision": "approximate_scene_tick",
     "recent_elapsed_events": [
-      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; Arlequino initiated the approaches, while Rena autonomously accepted and actively participated. Exact sexual mechanics remain offscreen.",
-      "At ~12:47-12:48 Rena autonomously accepted a brief one-minute manual compromise to help Arlequino calm physical tension without turning it into a third full intimacy round; exact mechanics remain offscreen.",
-      "At ~12:50-12:51 Arlequino seriously agreed to stop bargaining and leave with Rena for errands.",
-      "Rena began dressing at granular pacing and completed only the first garment; she still holds the next garment and has not put it on.",
-      "Arlequino said his former girlfriends used to walk around home naked. When Rena asked how many, he gave a rough stumbling count suggesting around fifteen but explicitly said he does not remember the exact number.",
-      "Arlequino now protests Rena calling him a former womanizer by saying 'почему это был?', jokes that his quiver still has plenty of arrows, then immediately frames Rena as his single delicate target who cannot take more than two arrows a day. The metaphor implies continued sexual capacity, not an explicit declaration that he intends other partners.",
-      "Rena pauses dressing to react; no additional dressing step, door action, or departure occurs in this beat."
+      "Two prolonged consensual private intimacy rounds occurred earlier in the locked hotel room; exact sexual mechanics remain offscreen.",
+      "Rena later autonomously accepted one brief one-minute manual compromise, then both seriously agreed to resume errands.",
+      "Rena has begun dressing at granular pacing and has completed only the first garment; the next garment is still in her hands.",
+      "Arlequino disclosed a rough many-exes count suggesting around fifteen, exact total UNKNOWN because he explicitly does not remember.",
+      "Arlequino then used a boastful quiver/target metaphor focused on Rena as his single current target.",
+      "Arlequino now, slightly mock-indignant, adds that one former partner once 'не вылезала' for 13 hours and gives a drawn-out appreciative moan. Treat this as a claimed past prolonged sexual encounter; exact mechanics and exact truth beyond his statement remain unverified in-world. Rena hears this directly.",
+      "No dressing advancement, door action, or departure occurs in this beat."
     ]
   },
   "location": {
@@ -32,9 +32,9 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "No new movement is declared; he answers Rena with a sexual archery metaphor.",
-    "last_in_world_utterance": "-почему это был ? 😤у меня в колчане полно стрел... Просто моя мишень нежная девственница , в которую нельзя боль 2 стрел в день .",
-    "current_declared_emotional_state": "playful, mock-indignant, sexually boastful and focused on Rena as the metaphorical target",
+    "last_in_world_action": "Speaks with slight mock indignation and gives a drawn-out appreciative moan while recalling a claimed past 13-hour encounter.",
+    "last_in_world_utterance": "- хм у меня была одна , которая не вылезала , 13 часов ,, вот это было",
+    "current_declared_emotional_state": "playful, sexually boastful and nostalgic/teasing in presentation; exact private emotion otherwise not inferred",
     "recent_creative_action": "performed full «Скажи» for Rena; exact text archived at song_archive/skazhi_user_exact.txt"
   },
   "money": {
@@ -49,8 +49,8 @@
       "awake": true,
       "position": "seated/half-risen at the bed while dressing",
       "clothing_state": "first garment completed; next garment remains in her hands and is not yet put on; hair and overall appearance still visibly disheveled",
-      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close. She has just heard Arlequino's rough many-exes count and now his 'why was?' plus quiver/target metaphor. She may show real jealousy at the 'why was?' phrasing, then recognize from the rest of the sentence that he is directing the metaphor toward her alone. She may tease him for calling his wife a 'virgin' after their established intimate history. Keep her voice personal, not therapeutic.",
-      "observable_state": "Still somewhat flushed and disheveled, holding the next garment while staring at Arlequino after the boastful metaphor.",
+      "autonomy_state": "Rena remains affectionate, strongly attracted and emotionally close, but the new 13-hour ex comparison can trigger genuine jealousy, disbelief, competitiveness, annoyance, or a mix. Keep her reaction personal and natural, not therapeutic. She does not need to become insecure or obedient. Granular pacing remains binding.",
+      "observable_state": "Holding the next garment and hearing Arlequino vividly praise a past 13-hour encounter with an ex.",
       "current_private_emotion": "UNKNOWN beyond observable reaction and what she explicitly says",
       "creative_exposure": "CONFIRMED_DIRECT_EXPOSURE to full «Скажи» performance at T+162 ~12:24–12:28",
       "future_children_position": "Wants a future child with Arlequino; immediate timing remains not agreed.",
@@ -64,32 +64,16 @@
     "students": {
       "group": "Dwargon students remaining in/around the student hall",
       "exact_present_count": null,
-      "activity": "self-organizing rehearsal and production work; Bren is largely through first-pass availability collection from reachable/present students and is grouping plausible rehearsal blocks, but the final schedule remains blocked by the unfixed concert date and any remaining confirmations"
+      "activity": "self-organizing rehearsal and production work; final schedule remains blocked by the unfixed concert date and any remaining confirmations"
     }
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
     "breakup_or_separation": "NOT_ESTABLISHED",
-    "current_issue": "Affectionate banter has shifted into teasing jealousy around Arlequino's many former girlfriends and his boastful 'why was?' wording. No actual present infidelity or intention toward other partners is established; his metaphor immediately identifies Rena as the target.",
+    "current_issue": "Affectionate banter has become teasing jealousy around Arlequino's former partners. He has now explicitly praised one claimed 13-hour past sexual encounter in front of Rena.",
     "children_status": "No pregnancy outcome is established from earlier intimacy. Future child desire is explicit from Rena; exact timing and child's sex remain unresolved."
-  },
-  "gvazimodo_cast": {
-    "casting_status": "COMPLETED_FINALIZED_FOR_CONTINUITY",
-    "cast_ref": "runtime/canon/works/gvazimodo_cast_dwargon_t162.md"
-  },
-  "meeting": {
-    "current_status": "ARLEQUINO_LEFT_STUDENT_HALL_WHILE_STUDENTS_CONTINUE_WORK",
-    "concert_date": "NOT_YET_FIXED",
-    "date_clarification_window": "Arlequino said today or tomorrow",
-    "maximum_preparation_window": "about one week from T+162 ~11:02, possibly less"
-  },
-  "family_home_context": {
-    "known_shared_home": "18 Old Garden Street, Eurazania capital",
-    "current_condition_known_to_player": "UNKNOWN",
-    "current_dwargon_home_base": "hotel; exact name/address unresolved",
-    "rule": "Do not reveal hidden world-state about the Eurazania home/capital until causally learned."
   },
   "pacing_rule": "Do not chain multiple meaningful NPC transitions if that would erase a plausible player intervention window. Expose first meaningful steps and allow player response unless time is explicitly advanced.",
   "correction_ref": "assistant_acknowledged_replay_after_t162_1247_manual_refusal_overextension",
-  "next_transition_rule": "Continue from ~12:54 with Rena still holding the next garment. Let her react to 'почему это был?' and the quiver/target metaphor. Do not advance dressing, unlock the door, or leave in the same beat. Do not invent Arlequino's voluntary actions."
+  "next_transition_rule": "Continue from ~12:54 with Rena still holding the next garment. Let her react first to the 13-hour ex comparison and the appreciative moan. Do not advance dressing, unlock the door, or leave in the same beat. Do not invent Arlequino's voluntary actions."
 }
