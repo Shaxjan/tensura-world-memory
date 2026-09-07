@@ -3,16 +3,16 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1431_gvazimodo_paused_for_new_concert_piece",
-  "time": {"display": "T+162 ~14:31", "day": 162, "clock": "~14:31", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_student_hall_1432_arlequino_thinks_with_rena_on_lap",
+  "time": {"display": "T+162 ~14:32", "day": 162, "clock": "~14:32", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino turns serious and threatening in demeanor toward the students and explicitly tells them that «Гвазимодо» will wait because he is going to devise something else for the urgent charity concert.",
-    "last_in_world_utterance": "- и так . Гвазимодо , подождет - сейчас придумаю другое для концерта.",
-    "current_declared_emotional_state": "Serious and intimidating toward the students by direct wording; deeper private state is not inferred."
+    "last_in_world_action": "Arlequino takes a chair, sits, seats Rena on his lap, holds her close, rests his head on her shoulder with cheek against cheek, and silently thinks while staring into space. He occasionally bites her cheek or neck. If she starts protesting, he attempts to answer by kissing her, but this does not override Rena's autonomy or erase anything she chooses to say afterward.",
+    "last_in_world_utterance": null,
+    "current_declared_emotional_state": "Serious and contemplative by direct description; exact thoughts remain UNKNOWN and must not be invented."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -24,42 +24,41 @@
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
-    "student_piece_state": "Arlequino has paused «Гвазимодо» and stated that he will devise a different piece for the concert. The new piece is not yet defined.",
+    "student_piece_state": "«Гвазимодо» is paused. Arlequino is actively thinking about a different piece for the concert, but no concept, cast or assignment is yet established.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:31",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:32",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "The students have just been briefed about the urgent Eurazania charity concert.",
-    "Arlequino's demeanor turns serious and threatening as he tells them that «Гвазимодо» is temporarily on hold.",
-    "He says he will devise something else specifically for the concert; no content, casting or exact student role for that new piece has yet been established.",
-    "The students understand that the priority has shifted from their existing production to the urgent charity event. Their prior «Гвазимодо» work remains preserved rather than erased or cancelled."
+    "Arlequino has paused «Гвазимодо» and told the students he will devise something else for the urgent charity concert.",
+    "He sits on a chair and brings Rena onto his lap while thinking in silence, keeping her close with his head on her shoulder and cheek against cheek.",
+    "His exact creative thoughts are not narrated because they remain player-controlled and unstated.",
+    "He occasionally nips Rena's cheek or neck. Rena remains autonomous: a kiss can interrupt a moment but cannot be used to erase or override any objection she chooses to make."
   ],
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "close at Arlequino's side in front of the students",
+      "position": "on Arlequino's lap while he sits in front of the students",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Composed and attentive as Arlequino shifts the students' priority toward the charity concert."
+      "observable_state": "Physically close and affectionate, while retaining full autonomy over whether she tolerates teasing bites or protests them."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
-      "current_activity": "their «Гвазимодо» rehearsal is now paused by Arlequino's direct order",
-      "new_knowledge": "They know «Гвазимодо» will wait and that Arlequino intends to create a different piece for the Eurazania charity concert.",
-      "reaction": "They become noticeably more attentive and serious under Arlequino's stern address. No specific new part or assignment has yet been given."
+      "current_activity": "waiting while «Гвазимодо» remains paused and Arlequino thinks about a new concert piece",
+      "reaction": "They stay attentive and mostly quiet; no new assignment or interruption is established."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
-      "ongoing_role": "No new schedule completion is established; «Гвазимодо» is now paused until Arlequino resumes it."
+      "ongoing_role": "No new schedule completion is established; «Гвазимодо» remains paused."
     }
   },
   "knowledge_state": {
-    "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA_AND_NOW_BRIEFED_TO_STUDENTS_IN_GENERAL_TERMS",
+    "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA_AND_BRIEFED_TO_STUDENTS_IN_GENERAL_TERMS",
     "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
     "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; Raden's air-messenger inquiry is active",
@@ -67,8 +66,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Rena remains beside Arlequino while attention shifts fully to the urgent concert work."
+    "current_issue": "Arlequino is using quiet physical closeness with Rena while thinking; no conflict is established."
   },
   "pacing_rule": "Medium scene length is the default: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
-  "next_transition_rule": "Await Arlequino's definition of the new concert piece or next instruction. Do not invent the piece, cast, student role, royal approval, courier reply, or completed concert logistics without causal development."
+  "next_transition_rule": "Hold the scene at the thinking point. Do not invent Arlequino's concept, thoughts, student roles, royal approval, courier reply, or completed logistics without new causal input."
 }
