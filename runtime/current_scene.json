@@ -3,14 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1428_short_student_progress_report",
+  "scene_id": "t162_dwargon_student_hall_1428_medium_student_progress_report_replay",
   "time": {"display": "T+162 ~14:28", "day": 162, "clock": "~14:28", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, beside the student groups", "exact_street_or_hall_name": "UNKNOWN"},
+  "replay_status": {
+    "supersedes": "t162_dwargon_student_hall_1428_short_student_progress_report",
+    "player_direct_correction": "The previous reply was too short. User wants medium scene length, not one dry line and not an extended dialogue chain.",
+    "rule": "Typical reply should contain about 2-3 meaningful beats: NPC reaction, concrete result, and a small forward movement or hook, then stop at the next real player decision."
+  },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino pulls Rena a little closer by the waist, his fingers gently squeezing her waist, and asks the students for a very short report on what they accomplished while he was away.",
+    "last_in_world_action": "Arlequino pulls Rena a little closer by the waist, his fingers gently squeezing her waist, and asks the students for a concise report on what they accomplished while he was away.",
     "last_in_world_utterance": "- и что вы сделали за это время? Только короче.",
     "current_declared_emotional_state": "Still physically affectionate toward Rena; otherwise practical and concise by direct wording."
   },
@@ -33,8 +38,9 @@
   },
   "recent_elapsed_events": [
     "Arlequino keeps Rena close by the waist, within her established public-affection boundary.",
-    "He directly asks the students for a concise progress report.",
-    "A nearby student gives only a high-level report grounded in already established work: they continued rehearsing their assigned material in smaller groups and kept production preparation moving. No major new milestone or full-run completion is claimed."
+    "He asks the students for a concise progress report.",
+    "The students report that they split into smaller groups, continued rehearsing their assigned material, and kept the production-preparation work moving. No major milestone or full ensemble run has been completed during the short interval.",
+    "The answer is concise but not reduced to a single dry sentence; the group remains ready for Arlequino's next instruction."
   ],
   "present_entities": {
     "rena": {
@@ -42,12 +48,12 @@
       "presence": "present",
       "position": "close at Arlequino's side, held at the waist",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Affectionate and composed; the waist hold remains acceptable."
+      "observable_state": "Affectionate and composed; she remains close while Arlequino addresses the students."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
       "current_activity": "self-organized rehearsal and production work for «Гвазимодо» continues",
-      "report_to_arlequino": "They rehearsed assigned material in smaller groups and continued production preparation. No major new milestone or full run is established."
+      "report_to_arlequino": "They split into smaller groups, rehearsed assigned material, and continued production preparation. No full run or major new milestone is established."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
@@ -65,6 +71,6 @@
     "marriage": "ESTABLISHED",
     "current_issue": "Arlequino and Rena are back with the students; physical closeness remains non-intimate and within Rena's public boundary."
   },
-  "pacing_rule": "Use medium-length scenes, but honor direct requests for shorter replies. Player wording does not override NPC consent or autonomy.",
+  "pacing_rule": "Medium scene length is the default even when the player asks an NPC to answer briefly: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
   "next_transition_rule": "Await Arlequino's reaction or next instruction to the students. Do not invent a full rehearsal result, student schedule completion, courier reply, or move him elsewhere without input."
 }
