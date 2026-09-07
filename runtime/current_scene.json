@@ -3,21 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1428_medium_student_progress_report_replay",
-  "time": {"display": "T+162 ~14:28", "day": 162, "clock": "~14:28", "precision": "approximate_scene_tick"},
+  "scene_id": "t162_dwargon_student_hall_1429_rena_briefs_students_on_eurazania_charity_concert",
+  "time": {"display": "T+162 ~14:29", "day": 162, "clock": "~14:29", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, beside the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "replay_status": {
-    "supersedes": "t162_dwargon_student_hall_1428_short_student_progress_report",
-    "player_direct_correction": "The previous reply was too short. User wants medium scene length, not one dry line and not an extended dialogue chain.",
-    "rule": "Typical reply should contain about 2-3 meaningful beats: NPC reaction, concrete result, and a small forward movement or hook, then stop at the next real player decision."
+    "player_direct_correction": "Medium scene length remains the default: neither one-line microbeats nor long railroaded dialogue chains.",
+    "rule": "Typical reply should contain about 2-3 meaningful beats and stop at the next real player decision."
   },
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino pulls Rena a little closer by the waist, his fingers gently squeezing her waist, and asks the students for a concise report on what they accomplished while he was away.",
-    "last_in_world_utterance": "- и что вы сделали за это время? Только короче.",
-    "current_declared_emotional_state": "Still physically affectionate toward Rena; otherwise practical and concise by direct wording."
+    "last_in_world_action": "Arlequino keeps Rena close at the waist, gently lifts her chin with his free hand, kisses her softly, asks her to tell the students about the concert, and while she speaks he kisses her neck.",
+    "last_in_world_utterance": "-Расскажи им про концерт",
+    "current_declared_emotional_state": "Affectionate toward Rena while delegating the explanation to her; deeper private state is not inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -28,32 +27,35 @@
     "deadline": "within three days from T+162 ~13:47; target no later than T+165 unless causally delayed or revised",
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
+    "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "relief_directives": {
-    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:28",
+    "dwargon_air_inquiry": "AUTHORIZED under Raden; no messenger results have yet reached Arlequino/Rena by T+162 ~14:29",
     "blumund_parallel_caravan": "Two operational letters were prepared for Oren and Lissa via the Adventurers' Guild, requesting preparation of a second humanitarian caravan pending confirmed refugee destination",
     "blumund_royal_appeals": "Two separate appeals were prepared to the King and Queen of Blumund asking for help and mercy toward Eurazania refugees",
     "dispatch_status": "Raden retains operational responsibility for fast courier dispatch; no delivery/reply is yet established"
   },
   "recent_elapsed_events": [
-    "Arlequino keeps Rena close by the waist, within her established public-affection boundary.",
-    "He asks the students for a concise progress report.",
-    "The students report that they split into smaller groups, continued rehearsing their assigned material, and kept the production-preparation work moving. No major milestone or full ensemble run has been completed during the short interval.",
-    "The answer is concise but not reduced to a single dry sentence; the group remains ready for Arlequino's next instruction."
+    "Arlequino keeps Rena close at the waist, softly kisses her and asks her to explain the new concert to the students.",
+    "Rena gives the students a concise factual briefing: an urgent large charity concert is being prepared in Dwargon within three days for Eurazania victims and the destroyed capital, with proceeds directed toward relief; Arlequino has mandated memorial wording for Carrion as fallen.",
+    "Rena also makes clear that Raden is organizing logistics and that royal permission/opening by Gazel has not yet been secured.",
+    "While Rena speaks, Arlequino kisses her neck. She remains composed and continues the briefing without turning the moment into an interview or conflict.",
+    "The students' mood becomes more serious as they understand this is not an ordinary performance project. No new duty or performance slot is assigned to them yet."
   ],
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "close at Arlequino's side, held at the waist",
+      "position": "close at Arlequino's side, held at the waist while briefing the students",
       "clothing_state": "Arlequino's cloak remains wrapped around her; exact under-cloak dressing details remain UNKNOWN",
-      "observable_state": "Affectionate and composed; she remains close while Arlequino addresses the students."
+      "observable_state": "Composed, serious about Eurazania relief, and still physically affectionate. She continues speaking despite Arlequino kissing her neck."
     },
     "students": {
       "presence": "group present in/around the hall; exact count UNKNOWN",
-      "current_activity": "self-organized rehearsal and production work for «Гвазимодо» continues",
-      "report_to_arlequino": "They split into smaller groups, rehearsed assigned material, and continued production preparation. No full run or major new milestone is established."
+      "current_activity": "self-organized rehearsal and production work for «Гвазимодо» pauses enough for them to listen to Rena's briefing",
+      "new_knowledge": "They now know Arlequino is preparing an urgent large charity concert in Dwargon within three days for Eurazania relief, with the destroyed capital and Carrion memorial framing central to the event. They are not yet assigned a specific role.",
+      "reaction": "The atmosphere turns more serious; exact individual reactions remain open."
     },
     "bren": {
       "presence": "UNKNOWN_EXACT_AT_THIS_INSTANT",
@@ -61,7 +63,7 @@
     }
   },
   "knowledge_state": {
-    "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA",
+    "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA_AND_NOW_BRIEFED_TO_STUDENTS_IN_GENERAL_TERMS",
     "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
     "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
     "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; Raden's air-messenger inquiry is active",
@@ -69,8 +71,8 @@
   },
   "relationship_state": {
     "marriage": "ESTABLISHED",
-    "current_issue": "Arlequino and Rena are back with the students; physical closeness remains non-intimate and within Rena's public boundary."
+    "current_issue": "Arlequino and Rena remain physically close while shifting attention back to urgent concert and relief work."
   },
-  "pacing_rule": "Medium scene length is the default even when the player asks an NPC to answer briefly: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
-  "next_transition_rule": "Await Arlequino's reaction or next instruction to the students. Do not invent a full rehearsal result, student schedule completion, courier reply, or move him elsewhere without input."
+  "pacing_rule": "Medium scene length is the default even when an NPC is asked to answer briefly: usually 2-3 meaningful beats, not a one-line microbeat and not an extended chain of dialogue.",
+  "next_transition_rule": "The students have been briefed but not assigned a specific concert role. Await Arlequino's next instruction or reaction. Do not invent their participation, a royal approval, courier reply, or completed concert logistics without causal development."
 }
