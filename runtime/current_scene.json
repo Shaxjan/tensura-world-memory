@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1444_parallel_concert_play_directive",
+  "scene_id": "t162_dwargon_student_hall_1446_rena_ear_teasing",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~14:44", "day": 162, "clock": "~14:44", "precision": "approximate_scene_tick"},
+  "time": {"display": "T+162 ~14:46", "day": 162, "clock": "~14:46", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino continues gently stroking Rena's head while she remains on his lap with her face partly hidden against him by his collar.",
-    "last_in_world_utterance": "-у вас 3 дня, спектакль будет идти паралел но концерту. То есть я пою , 3-3000 песен, посмотрю по факту, между песнями вы выходите на сцену и ставите спектакль.",
-    "current_declared_emotional_state": "Focused back on production planning while remaining physically affectionate with Rena; no deeper private state inferred."
+    "last_in_world_action": "Arlequino kisses and licks Rena's ear while she remains on his lap in the student hall.",
+    "last_in_world_utterance": "NONE_IN_THIS_BEAT",
+    "current_declared_emotional_state": "No deeper private state inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -29,23 +29,24 @@
     "continuity": "Arlequino already read the full preserved song aloud in this hall. Dain said the refrain sticks in the head. No melody/arrangement/final concert placement is established yet."
   },
   "concert_directive": {
-    "deadline": "Students have three days from T+162 for the Eurazania stage piece; overall concert target remains no later than T+165 unless causally delayed or revised.",
+    "deadline": "Students have three days and three nights as the stated deadline period for the Eurazania stage piece; this is a deadline, not a command to remain awake. Overall concert target remains no later than T+165 unless causally delayed or revised.",
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
-    "performance_structure": "New direct instruction from Arlequino: the play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs (his spoken '3-3000' is not a fixed count; he will decide by circumstances). Between songs, students come onstage and perform the play. Exact segmentation, casting, scene assignments, rehearsal structure, music cues and detailed staging remain unassigned.",
+    "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students now own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "on Arlequino's lap, held close; face partly hidden against him by his collar",
-      "relationship_facts": "Arlequino is Rena's first and only established male romantic/sexual partner; no prior male romantic/sexual partner is established. They are married and have a long active adult romantic/sexual relationship.",
-      "observable_state": "Calmer after recent teasing; allowing the affectionate hold while the conversation returns to work. Autonomous and not required to comment on every beat."
+      "position": "on Arlequino's lap, held close in the student hall",
+      "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
+      "inexperience_rule": "Her lack of prior partners is not just trivia: it must materially affect some reactions, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase this by writing her as equally experienced to Arlequino. At the same time, do not caricature her as naive: she has an established long sexual relationship with him.",
+      "observable_state": "Arlequino's ear kiss/lick catches her off guard more strongly than she wants to show; public student-hall context increases embarrassment. She remains autonomous and may ask him not to continue that kind of teasing here."
     },
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "receiving concrete production structure for «Пепел Эурозании»; three-day deadline and interleaving with concert are now established"},
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "self-organizing the first raw staging plan for «Пепел Эурозании» under the three-day-and-three-night deadline; no first run yet"},
     "dain": {"presence": "present by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
   },
@@ -54,8 +55,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Recent jealousy/sexual teasing has cooled; focus has returned to production work while they remain affectionate."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Public sexual teasing continues; Rena's inexperience and stronger public embarrassment must remain active factors rather than being smoothed away."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should sound live and context-bound, not like a polished mini-essay.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve the students' immediate practical reaction to the three-day deadline and interleaved concert/play structure. Do not auto-cast or assign exact scene segmentation unless Arlequino authorizes it. Do not return courier results or grant royal approval without causal time/action."
+  "next_transition_rule": "Resolve only Rena's immediate reaction to Arlequino kissing/licking her ear in public. Do not auto-move them home, do not auto-start sex, do not return courier results or grant royal approval without causal time/action."
 }
