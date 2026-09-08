@@ -3,19 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_1614_gazel_audience_arlequino_intro",
+  "scene_id": "t162_dwargon_1617_gazel_hears_eurazania_relief_concert_plan",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~16:14", "day": 162, "clock": "~16:14", "precision": "approximate_immediate_audience_dialogue"},
+  "time": {"display": "T+162 ~16:17", "day": 162, "clock": "~16:17", "precision": "approximate_after_short_substantive_briefing"},
   "location": {"region": "Дваргон", "place": "royal palace audience area with King Gazel", "exact_room_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino remains in audience with Rena before King Gazel.",
-    "last_in_world_utterance": "Arlequino introduces himself as Maestro Arlequino and, by explicit player delegation, gives a self-aggrandizing summary of his genius, concerts, performances and artistic work across places already established in continuity, without adding new precise attendance/revenue claims.",
+    "last_in_world_action": "By explicit player delegation, Arlequino briefs King Gazel on the destruction in Eurazania, displaced civilians/refugees, his humanitarian-relief effort, and the planned charity concert.",
+    "last_in_world_utterance": "Delegated summary: Eurazania catastrophe, refugees, humanitarian aid, and planned charity concert for victims / destroyed capital / memorial framing for publicly presumed-fallen Carrion.",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
   "money": {
@@ -23,42 +23,36 @@
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
     "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No money changes in this beat."}
   },
-  "song_record": {
-    "status": "FULL_TEXT_PRESERVED",
-    "path": "runtime/repertoire/t162_druzya_odna_krasavitsa.md",
-    "continuity": "Arlequino already read the full preserved song aloud in the student hall. Dain said the refrain sticks in the head. No melody/arrangement/final concert placement is established yet."
-  },
   "concert_directive": {
     "deadline": "Students have three days and three nights as the stated deadline period for the Eurazania stage piece; this is a deadline, not a command to remain awake. Overall concert target remains no later than T+165 unless causally delayed or revised.",
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
-    "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
-    "royal_request_intent": "Audience with King Gazel is in progress. Arlequino has finished a boastful self-introduction but has not yet stated the actual charity-concert request. No royal approval has been granted."
+    "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
+    "royal_request_intent": "Arlequino has now explained the Eurazania relief situation and charity-concert plan to King Gazel. His previously established intent is to seek permission/venue/civic cooperation and have Gazel open the concert, not to seek royal financing. He has not yet, in this exact beat, enumerated those specific asks aloud unless the next player input does so."
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
       "position": "beside Arlequino in the audience area",
-      "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
-      "observable_state": "Physically tired from earlier events but composed for the audience; she listens without taking over the conversation."
+      "observable_state": "Composed, physically tired from earlier events, listening without taking over the conversation."
     },
     "gazel": {
       "name": "Газель",
       "presence": "present",
-      "state": "Has heard Arlequino's theatrical opening and boastful self-introduction. He is patient but expects the actual life-or-death matter to be stated next; no decision has been made."
+      "state": "Has heard the substantive briefing about Eurazania, refugees, relief, and the charity concert. He takes the subject seriously and is now asking what concrete support/permission Arlequino wants from Dwargon. No approval, venue assignment, funding, or opening commitment has yet been granted."
     }
   },
   "students": {"state": "remain back at the hall self-organizing «Пепел Эурозании»; no first run yet"},
   "active_background": {
     "raden": "continues authorized relief/concert logistics elsewhere; no courier result yet",
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
-    "gazel": "audience in progress; no royal approval or concert decision yet"
+    "gazel": "audience in progress; substantive need understood, concrete royal decision pending specific ask"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are in royal audience with Gazel."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are in royal audience with Gazel discussing Eurazania relief and the charity concert."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Let Gazel react to the introduction and leave room for Arlequino to state the actual request. Do not grant approval before the request is made."
+  "next_transition_rule": "Let Arlequino state the concrete ask to Gazel. Do not auto-grant venue, permissions, opening participation, funding, or logistics before Gazel receives and answers that ask."
 }
