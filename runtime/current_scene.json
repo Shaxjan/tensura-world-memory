@@ -3,19 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_1613_gazel_audience_opening",
+  "scene_id": "t162_dwargon_1614_gazel_audience_arlequino_intro",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~16:13", "day": 162, "clock": "~16:13", "precision": "approximate_immediate_audience_opening"},
+  "time": {"display": "T+162 ~16:14", "day": 162, "clock": "~16:14", "precision": "approximate_immediate_audience_dialogue"},
   "location": {"region": "Дваргон", "place": "royal palace audience area with King Gazel", "exact_room_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino enters the audience quietly with Rena after being escorted in.",
-    "last_in_world_utterance": "Главный герой «Газель и Эмилия».",
+    "last_in_world_action": "Arlequino remains in audience with Rena before King Gazel.",
+    "last_in_world_utterance": "Arlequino introduces himself as Maestro Arlequino and, by explicit player delegation, gives a self-aggrandizing summary of his genius, concerts, performances and artistic work across places already established in continuity, without adding new precise attendance/revenue claims.",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
   "money": {
@@ -35,7 +35,7 @@
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
     "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
-    "royal_request_intent": "Audience with King Gazel has begun. Arlequino still intends to request permission/support connected to the charity concert. No royal approval has yet been granted."
+    "royal_request_intent": "Audience with King Gazel is in progress. Arlequino has finished a boastful self-introduction but has not yet stated the actual charity-concert request. No royal approval has been granted."
   },
   "present_entities": {
     "rena": {
@@ -43,16 +43,12 @@
       "presence": "present",
       "position": "beside Arlequino in the audience area",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
-      "observable_state": "Still physically tired after the earlier corridor encounter, composed enough for the royal audience, and close beside Arlequino."
+      "observable_state": "Physically tired from earlier events but composed for the audience; she listens without taking over the conversation."
     },
     "gazel": {
       "name": "Газель",
       "presence": "present",
-      "state": "receiving Arlequino and Rena after granting the urgent audience; has heard Arlequino's audible opening remark about being the main character of «Газель и Эмилия». No substantive concert request has yet been made."
-    },
-    "palace_messenger": {
-      "presence": "nearby or withdrawing from the immediate audience space after conducting them inward",
-      "state": "escort function complete"
+      "state": "Has heard Arlequino's theatrical opening and boastful self-introduction. He is patient but expects the actual life-or-death matter to be stated next; no decision has been made."
     }
   },
   "students": {"state": "remain back at the hall self-organizing «Пепел Эурозании»; no first run yet"},
@@ -61,8 +57,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "audience in progress; no royal approval or concert decision yet"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are now in the royal audience with Gazel."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are in royal audience with Gazel."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve Gazel's immediate response to Arlequino's opening remark, then leave room for Arlequino to state the actual request. Do not grant royal approval before the request is made."
+  "next_transition_rule": "Let Gazel react to the introduction and leave room for Arlequino to state the actual request. Do not grant approval before the request is made."
 }
