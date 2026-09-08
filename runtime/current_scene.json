@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_1605_palace_audience_request",
+  "scene_id": "t162_dwargon_1606_palace_urgent_audience_forwarded",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~16:05", "day": 162, "clock": "~16:05", "precision": "approximate_scene_tick"},
+  "time": {"display": "T+162 ~16:06", "day": 162, "clock": "~16:06", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "outer checkpoint / entrance of the royal palace", "exact_gate_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino remains at the palace outer checkpoint with Rena.",
-    "last_in_world_utterance": "Добрый. К королю Газелю, знаменитый на 3 королевства и не только, гений Маэстро Арлекино просит аудиенции.",
-    "current_declared_emotional_state": "No deeper private state inferred."
+    "last_in_world_action": "Arlequino remains at the palace outer checkpoint with Rena while requesting an audience.",
+    "last_in_world_utterance": "Вопрос жизни и смерти. 😡",
+    "current_declared_emotional_state": "Explicitly irritated/angry delivery on the line; no deeper private state inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -35,7 +35,7 @@
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
     "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
-    "royal_request_intent": "Arlequino is at the palace seeking an audience with King Gazel to request permission/support connected to the charity concert. No audience or royal approval yet."
+    "royal_request_intent": "Arlequino is seeking King Gazel to request permission/support connected to the charity concert. The guard has now accepted the request as urgent enough to forward immediately after Arlequino calls it a matter of life and death. No audience or royal approval yet."
   },
   "present_entities": {
     "rena": {
@@ -43,23 +43,22 @@
       "presence": "present",
       "position": "beside Arlequino at the palace outer checkpoint, dressed with cloak on",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
-      "inexperience_rule": "Her lack of prior partners remains materially relevant, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase it, but do not caricature her as naive because their marriage has an established sexual history.",
-      "consent_state": "The earlier corridor sexual encounter is complete. No sexual activity is ongoing.",
-      "observable_state": "Still physically tired after the earlier encounter, affectionate, and beside Arlequino during palace access control."
+      "inexperience_rule": "Her lack of prior partners remains materially relevant in romantic/sexual contexts. Do not erase it, but do not caricature her as naive because their marriage has an established sexual history.",
+      "observable_state": "Still physically tired after the earlier encounter, but attentive at the palace checkpoint."
     },
     "palace_guard": {
       "presence": "present at outer checkpoint",
-      "state": "professional access control; recognizes the name Arlequino enough not to dismiss the request, but has not granted access. He asks what purpose should be given for the requested audience before forwarding it."
+      "state": "The guard takes the life-or-death claim seriously enough to stop pressing for details at the gate and dispatches the urgent audience request inward. He does not promise access or timing."
     }
   },
   "students": {"state": "remain back at the hall self-organizing «Пепел Эурозании»; no first run yet"},
   "active_background": {
     "raden": "continues authorized relief/concert logistics elsewhere; no courier result yet",
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
-    "gazel": "not yet approached directly; audience not yet granted"
+    "gazel": "not yet approached directly; urgent audience request is being forwarded inward"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are at the palace entrance seeking access to King Gazel."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are waiting at the palace entrance while the urgent request is carried inward."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve palace access causally. The guard needs the purpose/urgency for the audience request before forwarding it. Do not instantly grant the audience or royal approval."
+  "next_transition_rule": "Wait for causal palace response or further player action. Do not instantly grant the audience or royal approval; do not return courier results without elapsed causal time."
 }
