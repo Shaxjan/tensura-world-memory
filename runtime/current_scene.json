@@ -3,19 +3,19 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_corridor_1552_rena_brief_reconsent_aftercare",
+  "scene_id": "t162_dwargon_corridor_1553_dressed_aftermath",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~15:52", "day": 162, "clock": "~15:52", "precision": "approximate_immediate_aftermath"},
+  "time": {"display": "T+162 ~15:53", "day": 162, "clock": "~15:53", "precision": "approximate_immediate_aftermath"},
   "location": {"region": "Дваргон", "place": "quiet corridor near the student rehearsal / teaching hall", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino kisses Rena repeatedly in the immediate aftermath and asks her for a brief intimate cleanup with her mouth. The request is sexual and is not assumed from the user's parenthetical prediction.",
-    "last_in_world_utterance": "Почисти ротиком.",
+    "last_in_world_action": "Arlequino pulls Rena's trousers back up, then his own, puts her cloak back on her, kisses her, and teases her as a shy girl about how much fear was in her eyes.",
+    "last_in_world_utterance": "Стесняшка, сколько испуга было в этих глазах. 🫦",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
   "money": {
@@ -41,11 +41,11 @@
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "with Arlequino in the quiet corridor near the wall, still under his cloak in the immediate aftermath",
+      "position": "standing with Arlequino in the corridor, dressed again with her cloak back on",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
       "inexperience_rule": "Her lack of prior partners remains materially relevant, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase it, but do not caricature her as naive because their marriage has an established sexual history.",
-      "consent_state": "The corridor intercourse ended as agreed. Arlequino then asks for a separate brief sexual cleanup act. Rena autonomously gives fresh consent to that specific brief act, with no implication of restarting the longer encounter. The act is kept non-graphic in narration.",
-      "observable_state": "Very flushed and physically exhausted, but affectionate rather than angry. She is embarrassed by the blunt request, pauses, then agrees to the brief specific act while making clear that afterwards they are done."
+      "consent_state": "The long corridor encounter and the later brief separate cleanup act are both complete. No sexual activity is currently ongoing.",
+      "observable_state": "Very flushed, physically exhausted and embarrassed by how frightened and excited she was at first, but affectionate and not angry."
     },
     "students": {"presence": "group remains inside the nearby hall; exact count UNKNOWN", "current_activity": "self-organizing the first raw staging plan for «Пепел Эурозании» under the three-day-and-three-night deadline; no first run yet"},
     "dain": {"presence": "present in the hall by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
@@ -56,8 +56,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "The long corridor encounter is over. Rena freshly consents to one brief separate intimate cleanup request, which does not reopen the longer encounter."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Corridor intimacy is finished. Rena is dressed again, physically spent, affectionate, and processing how much she enjoyed a setting that initially scared her."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Adult sex may be acknowledged but not narrated graphically; use fade-to-black or non-graphic aftermath/reaction.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve only Rena's fresh consent and the brief non-graphic completion of the requested cleanup, then remain in corridor aftermath. Do not resume the longer sexual encounter, auto-move them home, return courier results, or grant royal approval without causal time/action."
+  "next_transition_rule": "Continue only from the dressed corridor aftermath. Do not resume sexual activity without new consent, auto-move them home, return courier results, or grant royal approval without causal time/action."
 }
