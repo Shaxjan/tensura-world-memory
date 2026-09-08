@@ -3,18 +3,18 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_1610_palace_audience_granted_after_wait",
+  "scene_id": "t162_dwargon_1612_palace_escort_inward",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~16:10", "day": 162, "clock": "~16:10", "precision": "approximate_after_several_minutes_waiting"},
-  "location": {"region": "Дваргон", "place": "outer checkpoint / entrance of the royal palace", "exact_gate_name": "UNKNOWN"},
+  "time": {"display": "T+162 ~16:12", "day": 162, "clock": "~16:12", "precision": "approximate_short_palace_transition"},
+  "location": {"region": "Дваргон", "place": "inside the royal palace, being escorted from the outer entrance toward the audience area", "exact_room_or_corridor_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "While waiting for the palace response, Arlequino continues kissing Rena passionately and for several minutes. He remains at the outer checkpoint with her.",
+    "last_in_world_action": "After the audience is granted, Arlequino walks inward with Rena. His hand is on her butt while she stays pressed close to him.",
     "last_in_world_utterance": "NONE_IN_THIS_BEAT",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
@@ -35,33 +35,29 @@
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
     "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
-    "royal_request_intent": "Arlequino is seeking King Gazel to request permission/support connected to the charity concert. After several minutes of waiting, the palace returns an acceptance: King Gazel will receive Arlequino and Rena. They have not yet entered the audience itself."
+    "royal_request_intent": "King Gazel has granted the audience. Arlequino and Rena are now being escorted inward to discuss permission/support connected to the charity concert. No substantive discussion or royal approval yet."
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "close with Arlequino at the palace outer checkpoint",
+      "position": "pressed close beside Arlequino while they walk inward under escort",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
-      "observable_state": "Still physically tired after the earlier corridor encounter, but willingly returns Arlequino's prolonged passionate kissing while they wait. Public embarrassment remains, but she is less panicked than earlier and does not pull away."
-    },
-    "palace_guard": {
-      "presence": "present at outer checkpoint",
-      "state": "Maintains professional composure while Arlequino and Rena wait."
+      "observable_state": "Still physically tired after the earlier corridor encounter, affectionate, and comfortable enough to remain pressed close to Arlequino while entering the palace. His hand-on-butt contact is ongoing casual marital affection, not consent to resume sex."
     },
     "palace_messenger": {
-      "presence": "returns from inside after several minutes",
-      "state": "Conveys that King Gazel will receive Arlequino and Rena and is ready to conduct them inward."
+      "presence": "present",
+      "state": "escorting Arlequino and Rena inward toward the audience area"
     }
   },
   "students": {"state": "remain back at the hall self-organizing «Пепел Эурозании»; no first run yet"},
   "active_background": {
     "raden": "continues authorized relief/concert logistics elsewhere; no courier result yet",
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
-    "gazel": "audience granted after the urgent request; no substantive discussion or royal approval yet"
+    "gazel": "audience granted; waiting ahead for the substantive meeting; no royal approval yet"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are waiting together at the palace entrance; after several minutes of affectionate kissing, the palace grants the requested audience."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino and Rena are entering the palace together for the granted audience."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "The messenger is ready to conduct Arlequino and Rena inward. Do not begin or resolve the audience until the player responds or moves. No royal approval has been granted yet."
+  "next_transition_rule": "Continue the short escorted approach to the audience. Do not resolve Gazel's response or grant royal approval before the player speaks in the audience."
 }
