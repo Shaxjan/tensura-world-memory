@@ -3,38 +3,49 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1439_arlequino_teases_rena_correct_action_order",
+  "scene_id": "t162_dwargon_student_hall_1441_song_preserved_and_rena_teased",
   "replay": {
-    "status": "PLAYER_REQUESTED_REPLAY_CORRECTED",
-    "rule": "Mixed player speech/actions must resolve strictly left-to-right. In this beat: Arlequino first kisses and bites Rena; then says «какая сквернословная у меня женушка»; then kisses and bites her again and sharply kisses the underside of her neck; then says «еще и в литературе разбирается 🫦». Do not reorder these elements."
+    "status": "LIVE_CONTINUITY",
+    "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~14:39", "day": 162, "clock": "~14:39", "precision": "approximate_scene_tick"},
+  "time": {"display": "T+162 ~14:41", "day": 162, "clock": "~14:41", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino kisses and lightly bites Rena, says she is a foul-mouthed wife, then kisses and bites her again, sharply kisses the underside of her neck, and remarks that she also understands literature.",
-    "last_in_world_utterance": "- еще и в литературе разбирается 🫦",
-    "current_declared_emotional_state": "Playfully affectionate by explicit action/wording; no deeper private state inferred."
+    "last_in_world_action": "After passionately kissing Rena and then reading the full song beginning «Друзья, одна красавица, душа моя, жизнь моя есть у меня» aloud to the hall, Arlequino bites Rena on the neck.",
+    "last_in_world_utterance": "- моя госпожа , которая не дает мне секса ..",
+    "current_declared_emotional_state": "Playfully affectionate/teasing by explicit action and wording; no deeper private state inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
     "personal_elsewhere": {"balance_copper": null, "display": "UNKNOWN"},
     "family": {"balance_copper": null, "display": "~358g", "spending_permission_state": "Rena permits shared-budget use for Eurazania relief with accounting safeguards. No money changes in this beat."}
   },
+  "song_record": {
+    "status": "FULL_TEXT_PRESERVED",
+    "path": "runtime/repertoire/t162_druzya_odna_krasavitsa.md",
+    "continuity": "Arlequino has already read the full preserved text aloud in this hall. Dain said the refrain immediately sticks in the head. Rena heard the full reading while seated on Arlequino's lap. No melody/arrangement/concert placement is established yet."
+  },
   "concert_directive": {
     "deadline": "within three days from T+162 ~13:47; target no later than T+165 unless causally delayed or revised",
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
-    "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Arlequino has already fully presented its five-part text/concept to the students and heard initial reactions. «Гвазимодо» is paused, not cancelled. Casting, exact scene assignments, rehearsal structure, music cues and detailed staging for «Пепел Эурозании» are not yet assigned.",
+    "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled. Casting, exact scene assignments, rehearsal structure, music cues and detailed staging are still not assigned.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
-    "rena": {"name": "Рена", "presence": "present", "position": "on Arlequino's lap", "observable_state": "Receives Arlequino's affectionate teasing while remaining close. Her response should use live, Eurazania-era speech: proud, natural, not a polished punchline machine. Public-affection boundary remains intact; these kisses/light bites/neck kiss are within the established allowed range."},
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "preparing to shift production work to «Пепел Эурозании»", "reaction": "They already know the piece and are waiting for concrete production assignments; they are not required to comment on the spouses' affectionate beat."},
-    "dain": {"presence": "present by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
+    "rena": {
+      "name": "Рена",
+      "presence": "present",
+      "position": "on Arlequino's lap",
+      "relationship_facts": "Arlequino is Rena's first and only established male romantic/sexual partner; no prior male romantic/sexual partner is established. They are married and have a long active adult romantic/sexual relationship. Rena's sexual initiative is historically rarer than Arlequino's and her desire is less frequent; this does not mean she never wants him or never initiates.",
+      "observable_state": "Close and affectionate, but autonomous and capable of sharp embarrassment/retort when Arlequino makes sexual complaints aloud in front of students. Use live Eurazania-era speech, not polished commentary."
+    },
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "waiting for concrete production decisions for «Пепел Эурозании»", "reaction": "They heard the full song too. They need not interrupt the spouses' exchange and may simply avoid looking directly at them."},
+    "dain": {"presence": "present by recent direct scene continuity", "song_reaction": "«Припев сразу в голову лезет.»", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
   },
   "active_background": {
@@ -42,8 +53,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Affectionate private-feeling exchange occurring in a public student hall; Rena stays close and autonomous."},
-  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should follow live-speech calibration, not polished literary mini-essays.",
-  "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written.",
-  "next_transition_rule": "Resolve Rena's immediate natural response to Arlequino's teasing and affection. Keep students present without forcing an interruption. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Playful sexual teasing in a public student hall; Rena's boundaries and autonomy remain intact."},
+  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should sound live and context-bound, not like a polished mini-essay.",
+  "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
+  "next_transition_rule": "Resolve Rena's immediate response to the neck bite and public teasing line. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
 }
