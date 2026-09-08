@@ -3,18 +3,18 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1446_rena_ear_teasing",
+  "scene_id": "t162_dwargon_corridor_1448_rena_first_public_risk_intimacy",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~14:46", "day": 162, "clock": "~14:46", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
+  "time": {"display": "T+162 ~14:48", "day": 162, "clock": "~14:48", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "quiet corridor near the student rehearsal / teaching hall", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino kisses and licks Rena's ear while she remains on his lap in the student hall.",
+    "last_in_world_action": "Arlequino removed Rena's cloak, pressed her back to the wall, kissed her, covered them with his cloak, lowered clothing, kissed her neck and initiated consensual sex with her in the quiet corridor. The explicit act is not narrated graphically.",
     "last_in_world_utterance": "NONE_IN_THIS_BEAT",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
@@ -26,7 +26,7 @@
   "song_record": {
     "status": "FULL_TEXT_PRESERVED",
     "path": "runtime/repertoire/t162_druzya_odna_krasavitsa.md",
-    "continuity": "Arlequino already read the full preserved song aloud in this hall. Dain said the refrain sticks in the head. No melody/arrangement/final concert placement is established yet."
+    "continuity": "Arlequino already read the full preserved song aloud in the student hall. Dain said the refrain sticks in the head. No melody/arrangement/final concert placement is established yet."
   },
   "concert_directive": {
     "deadline": "Students have three days and three nights as the stated deadline period for the Eurazania stage piece; this is a deadline, not a command to remain awake. Overall concert target remains no later than T+165 unless causally delayed or revised.",
@@ -34,20 +34,21 @@
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
     "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Full five-part piece already presented and initial reactions heard. «Гвазимодо» is paused, not cancelled.",
-    "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students now own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
+    "performance_structure": "The play runs in parallel with the concert. Arlequino sings an as-yet-undetermined number of songs; his spoken '3-3000' is not a fixed count. Between songs, students perform fragments of the play. Students own casting, segmentation and staging decisions unless Arlequino later intervenes or critiques. First run has not yet occurred.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "on Arlequino's lap, held close in the student hall",
+      "position": "with Arlequino in the quiet corridor, back near the wall, covered from view by his cloak",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
-      "inexperience_rule": "Her lack of prior partners is not just trivia: it must materially affect some reactions, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase this by writing her as equally experienced to Arlequino. At the same time, do not caricature her as naive: she has an established long sexual relationship with him.",
-      "observable_state": "Arlequino's ear kiss/lick catches her off guard more strongly than she wants to show; public student-hall context increases embarrassment. She remains autonomous and may ask him not to continue that kind of teasing here."
+      "inexperience_rule": "Her lack of prior partners remains materially relevant, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase it, but do not caricature her as naive because their marriage has an established sexual history.",
+      "consent_state": "Rena had already agreed to try sex in the corridor under Arlequino's cloak, with an explicit standing boundary that if she says stop or enough, he stops immediately. No fresh per-step permission was required before the consensual initiation. No stop has been given in this beat.",
+      "observable_state": "Very flustered and tense from the novelty/risk of sex outside home, but participating willingly. Public-discovery anxiety remains higher for her than for Arlequino."
     },
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "self-organizing the first raw staging plan for «Пепел Эурозании» under the three-day-and-three-night deadline; no first run yet"},
-    "dain": {"presence": "present by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
+    "students": {"presence": "group remains inside the nearby hall; exact count UNKNOWN", "current_activity": "self-organizing the first raw staging plan for «Пепел Эурозании» under the three-day-and-three-night deadline; no first run yet"},
+    "dain": {"presence": "present in the hall by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
   },
   "active_background": {
@@ -55,8 +56,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Public sexual teasing continues; Rena's inexperience and stronger public embarrassment must remain active factors rather than being smoothed away."},
-  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should sound live and context-bound, not like a polished mini-essay.",
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena is consensually trying a first intentionally risky semi-public sexual setting with Arlequino; consent is active but revocable immediately on her stop/no."},
+  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Adult sex may be acknowledged but not narrated graphically; use fade-to-black or non-graphic aftermath/reaction.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve only Rena's immediate reaction to Arlequino kissing/licking her ear in public. Do not auto-move them home, do not auto-start sex, do not return courier results or grant royal approval without causal time/action."
+  "next_transition_rule": "Continue only from the consensual corridor intimacy now in progress. Do not replay the false hand-interception correction. Do not auto-move them home, return courier results, or grant royal approval without causal time/action."
 }
