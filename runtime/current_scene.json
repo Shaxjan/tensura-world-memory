@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1441_song_preserved_and_rena_teased",
+  "scene_id": "t162_dwargon_student_hall_1442_arlequino_teases_second_woman",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
   },
-  "time": {"display": "T+162 ~14:41", "day": 162, "clock": "~14:41", "precision": "approximate_scene_tick"},
+  "time": {"display": "T+162 ~14:42", "day": 162, "clock": "~14:42", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "After passionately kissing Rena and then reading the full song beginning «Друзья, одна красавица, душа моя, жизнь моя есть у меня» aloud to the hall, Arlequino bites Rena on the neck.",
-    "last_in_world_utterance": "- моя госпожа , которая не дает мне секса ..",
-    "current_declared_emotional_state": "Playfully affectionate/teasing by explicit action and wording; no deeper private state inferred."
+    "last_in_world_action": "Arlequino previously held and kissed Rena with explicit irritated jealousy after misreading her statement about one man; Rena clarified that she meant one man is enough for her and that she was not asking for anyone else.",
+    "last_in_world_utterance": "-получается ты против еще 1 женщины не против 😋отлично прекрасно , сейчас же займусь .",
+    "current_declared_emotional_state": "Playfully provocative by explicit wording; no voluntary follow-through beyond the spoken line has occurred yet."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -41,10 +41,11 @@
       "name": "Рена",
       "presence": "present",
       "position": "on Arlequino's lap",
-      "relationship_facts": "Arlequino is Rena's first and only established male romantic/sexual partner; no prior male romantic/sexual partner is established. They are married and have a long active adult romantic/sexual relationship. Rena's sexual initiative is historically rarer than Arlequino's and her desire is less frequent; this does not mean she never wants him or never initiates.",
-      "observable_state": "Close and affectionate, but autonomous and capable of sharp embarrassment/retort when Arlequino makes sexual complaints aloud in front of students. Use live Eurazania-era speech, not polished commentary."
+      "relationship_facts": "Arlequino is Rena's first and only established male romantic/sexual partner; no prior male romantic/sexual partner is established. They are married and have a long active adult romantic/sexual relationship. Rena's sexual initiative is historically rarer than Arlequino's and her desire is less frequent; this does not mean she never wants him or never initiates. Rena has no established consent to adding another woman to the marriage/sexual relationship.",
+      "recent_live_dialogue": "After Arlequino reacted jealously to her saying one man is enough, Rena clarified: «Я про секс сказала. Не про мужчин.» and «Мне одного мужчины хватает. Более чем.» She kissed him and asked if it was clear. Arlequino then provocatively claimed this means she is not against one more woman and said he would deal with that immediately.",
+      "observable_state": "Close and affectionate, but this new provocation naturally touches an established jealousy-sensitive point because Arlequino has extensive past romantic/sexual history while she has only him. Respond proud, sharp and alive, not as a polished joke machine."
     },
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "waiting for concrete production decisions for «Пепел Эурозании»", "reaction": "They heard the full song too. They need not interrupt the spouses' exchange and may simply avoid looking directly at them."},
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "waiting for concrete production decisions for «Пепел Эурозании»", "reaction": "They need not interrupt the spouses' exchange and may avoid looking directly at them."},
     "dain": {"presence": "present by recent direct scene continuity", "song_reaction": "«Припев сразу в голову лезет.»", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
   },
@@ -53,8 +54,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Playful sexual teasing in a public student hall; Rena's boundaries and autonomy remain intact."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Arlequino is teasing Rena by pretending her clarification permits him another woman; no such permission exists. Rena's jealousy/autonomy should respond causally."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should sound live and context-bound, not like a polished mini-essay.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve Rena's immediate response to the neck bite and public teasing line. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
+  "next_transition_rule": "Resolve Rena's immediate response to Arlequino's provocative claim about adding another woman. Do not invent Arlequino actually leaving, choosing a woman, or taking any follow-through action unless the player explicitly does so. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
 }
