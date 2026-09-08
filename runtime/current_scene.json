@@ -3,7 +3,7 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_corridor_1550_rena_calls_stop",
+  "scene_id": "t162_dwargon_corridor_1550_rena_stop_reaffirmed",
   "replay": {
     "status": "LIVE_CONTINUITY",
     "rule": "Mixed player speech/actions resolve strictly left-to-right. OOC/meta parentheticals are not spoken and do not enter NPC knowledge."
@@ -14,8 +14,8 @@
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino continues the already-consensual corridor intimacy with Rena in the same sustained manner for several more minutes. The sexual activity remains non-graphic in narration. Rena then clearly says to stop from physical exhaustion.",
-    "last_in_world_utterance": "NONE_IN_THIS_BEAT",
+    "last_in_world_action": "No new voluntary physical action after Rena's stop is established in this beat.",
+    "last_in_world_utterance": "Ладно милая, дай только кончу и всё хватит, больше не лезу.",
     "current_declared_emotional_state": "No deeper private state inferred."
   },
   "money": {
@@ -41,11 +41,11 @@
     "rena": {
       "name": "Рена",
       "presence": "present",
-      "position": "with Arlequino in the quiet corridor near the wall, covered from view by his cloak",
+      "position": "with Arlequino in the quiet corridor near the wall, still under his cloak but actively ending the sexual encounter",
       "relationship_facts": "Arlequino is literally Rena's first and only male romantic/sexual partner; before him she had no other male romantic or sexual partner. They are married and have a long active adult romantic/sexual relationship.",
       "inexperience_rule": "Her lack of prior partners remains materially relevant, especially unfamiliar teasing, strong desire, sexual self-awareness, comparison, jealousy and public embarrassment. Do not erase it, but do not caricature her as naive because their marriage has an established sexual history.",
-      "consent_state": "Rena had agreed to the corridor sex with a standing boundary that stop/ enough means immediate stop. After the extended encounter, she now clearly says stop because she is physically spent. That stop is active and must be respected immediately.",
-      "observable_state": "Very flushed, physically exhausted, still emotionally affected by how much she enjoyed the risky semi-public setting, but she has reached her physical limit and explicitly stopped the encounter."
+      "consent_state": "Rena already clearly said stop/hvatit from physical exhaustion. Arlequino then verbally asked to continue only until he finishes. Rena does not consent to that extension; stop remains immediate and active. No further sexual continuation is permitted unless she later autonomously re-consents after this stop.",
+      "observable_state": "Very flushed and physically exhausted, but clear and firm about ending the encounter now."
     },
     "students": {"presence": "group remains inside the nearby hall; exact count UNKNOWN", "current_activity": "self-organizing the first raw staging plan for «Пепел Эурозании» under the three-day-and-three-night deadline; no first run yet"},
     "dain": {"presence": "present in the hall by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
@@ -56,8 +56,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena has completed her first intentionally risky semi-public sexual encounter with Arlequino and explicitly called stop from exhaustion. The encounter established that she can strongly enjoy this kind of setting, but her stop boundary is now active."},
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena has ended the corridor sexual encounter with an explicit stop from exhaustion. Arlequino asked for a brief extension; she refuses. Stop remains active."},
   "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Adult sex may be acknowledged but not narrated graphically; use fade-to-black or non-graphic aftermath/reaction.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written; parenthetical OOC reminders are not spoken.",
-  "next_transition_rule": "Resolve only the immediate aftermath of Rena's explicit stop. Do not continue sexual activity unless she later autonomously re-consents after the stop. Do not auto-move them home, return courier results, or grant royal approval without causal time/action."
+  "next_transition_rule": "Resolve the immediate nonsexual aftermath of Rena's explicit stop. Do not continue sexual activity unless Rena later autonomously re-consents. Do not auto-move them home, return courier results, or grant royal approval without causal time/action."
 }
