@@ -3,21 +3,18 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1431_gvazimodo_paused_eurazania_piece_prioritized_replay",
+  "scene_id": "t162_dwargon_student_hall_1438_ashes_of_eurazania_selected_for_staging_replay_corrected",
   "replay": {
-    "status": "PLAYER_REQUESTED_REPLAY",
-    "supersedes_later_scene_progress": [
-      "t162_dwargon_student_hall_1438_students_react_to_ashes_of_eurazania"
-    ],
-    "rule": "Later superseded runtime must not overwrite this replay unless causally re-established."
+    "status": "PLAYER_REQUESTED_REPLAY_CORRECTED",
+    "rule": "Direct player correction controls: Arlequino already fully presented «Пепел Эурозании», then asked for reactions, then explicitly prioritized it over «Гвазимодо». Do not revert to an undefined or unread piece."
   },
-  "time": {"display": "T+162 ~14:31", "day": 162, "clock": "~14:31", "precision": "approximate_scene_tick"},
-  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, beside the student groups", "exact_street_or_hall_name": "UNKNOWN"},
+  "time": {"display": "T+162 ~14:38", "day": 162, "clock": "~14:38", "precision": "approximate_scene_tick"},
+  "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "Arlequino tells the students to pause «Гвазимодо» and switch their immediate priority to the Eurazania piece.",
+    "last_in_world_action": "After fully presenting «Пепел Эурозании» and hearing student/Rena reactions, Arlequino tells the students to pause «Гвазимодо» and stage the Eurazania piece now.",
     "last_in_world_utterance": "-на гвазимодо подождёт, а сейчас ставим этот про Эурозанию .",
     "current_declared_emotional_state": "No private state inferred."
   },
@@ -31,28 +28,22 @@
     "scale_target": "larger than the earlier 18,000-safe-capacity reference if feasible",
     "financing_model": "Blumund-style self-financing/fundraising structure through tiered paid access, free access allocation, trade/merchant participation and donations",
     "public_purpose": "charity concert for Eurazania victims, the destroyed capital, and memorial framing for the publicly presumed-fallen Beast King Carrion",
-    "student_piece_state": "PRIORITIZED_FOR_IMMEDIATE_STAGING; «Гвазимодо» is paused. Exact title, script, cast, music cues and staging of the Eurazania piece remain unresolved at this replay point unless re-established by player input.",
+    "student_piece_state": "SELECTED_FOR_IMMEDIATE_STAGING: «Пепел Эурозании». Arlequino has already fully presented its five-part text/concept to the students and heard initial reactions. «Гвазимодо» is paused, not cancelled. Casting, exact scene assignments, rehearsal structure, music cues and detailed staging for «Пепел Эурозании» are not yet assigned.",
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
-    "rena": {"name": "Рена", "presence": "present", "position": "close beside Arlequino", "observable_state": "Affectionate, attentive, serious about the urgent Eurazania concert."},
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "their «Гвазимодо» work is being interrupted by Arlequino's new priority order", "reaction": "Immediate attention shifts toward the urgent Eurazania production; no casting or rehearsal has started yet."},
+    "rena": {"name": "Рена", "presence": "present", "position": "on Arlequino's lap unless a later direct player action changes it", "observable_state": "Close, attentive and serious; speech/behavior should follow Eurazania-era calibration: proud, autonomous, not a constant jokey commentator."},
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "shifting immediate creative priority from paused «Гвазимодо» to staging «Пепел Эурозании»", "reaction": "They already know the piece and understand its emotional tone; they now await concrete production decisions such as role/scene assignment and rehearsal structure."},
+    "dain": {"presence": "present by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
-  },
-  "knowledge_state": {
-    "capital_destroyed": "KNOWN_TO_ARLEQUINO_AND_RENA_AND_BRIEFED_TO_STUDENTS_IN_GENERAL_TERMS",
-    "carrion_public_belief": "KNOWN_AS_PRESUMED_DEAD_NOT_CONFIRMED; Arlequino mandates memorial wording as if fallen and takes responsibility",
-    "carrion_true_fate": "RESTRICTED_NOT_PLAYER_KNOWN",
-    "evacuee_distribution": "PARTIAL_CAUSAL_RESULT: several large groups moved northeast toward Jura/Tempest direction; exact current distribution remains UNKNOWN; Raden's air-messenger inquiry is active",
-    "old_garden_street_condition": "UNKNOWN_EXACT"
   },
   "active_background": {
     "raden": "continues authorized relief/concert logistics elsewhere; no courier result yet",
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
-    "gazel": "not yet approached in this replay point"
+    "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena remains close and attentive; no boundary conflict."},
-  "pacing_rule": "Medium scene length by default: about 2-3 meaningful beats, then stop at the next real player intervention point.",
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena remains close while treating the Eurazania production seriously."},
+  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Avoid both one-line dryness and sprawling dialogue chains.",
   "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events.",
-  "next_transition_rule": "Resolve only the immediate student/Rena reaction to the priority switch. Do not auto-define the full Eurazania play, auto-cast, auto-rehearse, return courier results, or grant royal approval."
+  "next_transition_rule": "Resolve immediate student/Rena response to selecting «Пепел Эурозании» for staging. Do not re-explain the piece, auto-cast everyone, auto-rehearse, return courier results, or grant royal approval."
 }
