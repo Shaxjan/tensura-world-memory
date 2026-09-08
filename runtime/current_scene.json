@@ -3,20 +3,20 @@
   "schema_version": 1,
   "status": "ACTIVE",
   "authority": "ACTIVE_CHAT_CONTINUITY_OVERLAY",
-  "scene_id": "t162_dwargon_student_hall_1438_ashes_of_eurazania_selected_for_staging_replay_corrected",
+  "scene_id": "t162_dwargon_student_hall_1439_arlequino_teases_rena_correct_action_order",
   "replay": {
     "status": "PLAYER_REQUESTED_REPLAY_CORRECTED",
-    "rule": "Direct player correction controls: Arlequino already fully presented «Пепел Эурозании», then asked for reactions, then explicitly prioritized it over «Гвазимодо». Do not revert to an undefined or unread piece."
+    "rule": "Mixed player speech/actions must resolve strictly left-to-right. In this beat: Arlequino first kisses and bites Rena; then says «какая сквернословная у меня женушка»; then kisses and bites her again and sharply kisses the underside of her neck; then says «еще и в литературе разбирается 🫦». Do not reorder these elements."
   },
-  "time": {"display": "T+162 ~14:38", "day": 162, "clock": "~14:38", "precision": "approximate_scene_tick"},
+  "time": {"display": "T+162 ~14:39", "day": 162, "clock": "~14:39", "precision": "approximate_scene_tick"},
   "location": {"region": "Дваргон", "place": "inside the student rehearsal / teaching hall, in front of the student groups", "exact_street_or_hall_name": "UNKNOWN"},
   "player": {
     "name": "Арлекино",
     "state": "awake",
     "voluntary_actions": "USER_CONTROLLED_ONLY",
-    "last_in_world_action": "After fully presenting «Пепел Эурозании» and hearing student/Rena reactions, Arlequino tells the students to pause «Гвазимодо» and stage the Eurazania piece now.",
-    "last_in_world_utterance": "-на гвазимодо подождёт, а сейчас ставим этот про Эурозанию .",
-    "current_declared_emotional_state": "No private state inferred."
+    "last_in_world_action": "Arlequino kisses and lightly bites Rena, says she is a foul-mouthed wife, then kisses and bites her again, sharply kisses the underside of her neck, and remarks that she also understands literature.",
+    "last_in_world_utterance": "- еще и в литературе разбирается 🫦",
+    "current_declared_emotional_state": "Playfully affectionate by explicit action/wording; no deeper private state inferred."
   },
   "money": {
     "on_person": {"balance_copper": 8973, "display": "89s 73c"},
@@ -32,8 +32,8 @@
     "royal_request_intent": "Arlequino still intends to ask King Gazel for permission and to open the concert; no royal approval yet"
   },
   "present_entities": {
-    "rena": {"name": "Рена", "presence": "present", "position": "on Arlequino's lap unless a later direct player action changes it", "observable_state": "Close, attentive and serious; speech/behavior should follow Eurazania-era calibration: proud, autonomous, not a constant jokey commentator."},
-    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "shifting immediate creative priority from paused «Гвазимодо» to staging «Пепел Эурозании»", "reaction": "They already know the piece and understand its emotional tone; they now await concrete production decisions such as role/scene assignment and rehearsal structure."},
+    "rena": {"name": "Рена", "presence": "present", "position": "on Arlequino's lap", "observable_state": "Receives Arlequino's affectionate teasing while remaining close. Her response should use live, Eurazania-era speech: proud, natural, not a polished punchline machine. Public-affection boundary remains intact; these kisses/light bites/neck kiss are within the established allowed range."},
+    "students": {"presence": "group present in/around the hall; exact count UNKNOWN", "current_activity": "preparing to shift production work to «Пепел Эурозании»", "reaction": "They already know the piece and are waiting for concrete production assignments; they are not required to comment on the spouses' affectionate beat."},
     "dain": {"presence": "present by recent direct scene continuity", "ongoing_role_in_gvazimodo": "tree as punishment unless changed; irrelevant while Gvazimodo is paused"},
     "bren": {"presence": "UNKNOWN_EXACT_AT_THIS_INSTANT"}
   },
@@ -42,8 +42,8 @@
     "blumund_letters": "prepared/under dispatch authority; no reply yet",
     "gazel": "not yet approached"
   },
-  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Rena remains close while treating the Eurazania production seriously."},
-  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Avoid both one-line dryness and sprawling dialogue chains.",
-  "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events.",
-  "next_transition_rule": "Resolve immediate student/Rena response to selecting «Пепел Эурозании» for staging. Do not re-explain the piece, auto-cast everyone, auto-rehearse, return courier results, or grant royal approval."
+  "relationship_state": {"marriage": "ESTABLISHED", "current_issue": "Affectionate private-feeling exchange occurring in a public student hall; Rena stays close and autonomous."},
+  "pacing_rule": "Medium scene length by default: 2-3 meaningful beats with concrete NPC reaction/result and a natural intervention point. Dialogue should follow live-speech calibration, not polished literary mini-essays.",
+  "meta_rule": "User OOC/meta conditions are not NPC knowledge and do not force events. Parenthetical actions after a phrase occur after that phrase exactly as written.",
+  "next_transition_rule": "Resolve Rena's immediate natural response to Arlequino's teasing and affection. Keep students present without forcing an interruption. Do not auto-cast, auto-rehearse, return courier results, or grant royal approval."
 }
