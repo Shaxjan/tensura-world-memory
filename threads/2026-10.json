@@ -2,7 +2,8 @@
   "account": "mirpottera",
   "source": "Windsor.ai Threads API",
   "month": "2026-10",
-  "count": 46,
+  "count": 48,
+  "metrics_snapshot_utc": "2026-10-10T15:52:41",
   "posts": [
     {
       "post_id": "17893733592655412",
@@ -10,14 +11,15 @@
       "post_text": "Локонс: \"Я ничего не присваивал. Люди просто забыли, что это сделали они.\"",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd8ADgBAlBL",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 75,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 4,
-      "post_views": 1216
+      "post_views": 1216,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18117537778851490",
@@ -25,14 +27,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd8PnBTiH5n",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18105518827983988",
@@ -40,14 +43,15 @@
       "post_text": "Психотерапия по-хогвартски выглядит примерно так.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd8bhEMj90K",
       "post_media_type": "CAROUSEL_ALBUM",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 8,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 2,
-      "post_views": 320
+      "post_views": 320,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17972797284134974",
@@ -55,14 +59,15 @@
       "post_text": "Беллатриса увидела Волдеморта после воскрешения:\nбез носа\nсерый\nзмееподобный\nабсолютно ебанутый\nБеллатриса:\nмой типаж вообще не изменился.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd8-vnOiPDQ",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 16,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 174
+      "post_views": 175,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18020859122723668",
@@ -70,14 +75,15 @@
       "post_text": "У обычного ребёнка: \"Пап, меня обидели.\"\nУ Драко: \"Пап, пиши заяву.\"",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd9Eti6Etrl",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 48,
       "post_replies": 3,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 1,
-      "post_views": 2402
+      "post_views": 2403,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17988990294049042",
@@ -85,14 +91,15 @@
       "post_text": "Взрослый поттероман уже не мечтает о маховике времени, чтобы изменить прошлое.\nОн хочет вернуться на восемь часов назад и лечь спать нормально.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd9balPiBV5",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 99,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 1,
-      "post_views": 2687
+      "post_views": 2687,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18131288923682054",
@@ -100,14 +107,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd9bd1aiCrP",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17976709959136167",
@@ -115,14 +123,15 @@
       "post_text": "Комикс \"Типичный Хагрид\" притащить к детям зубастую тварь, назвать её \"хорошим зверьком\", а потом искренне не понимать, чего все так нервничают.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd9nDCbCa6o",
       "post_media_type": "CAROUSEL_ALBUM",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 26,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 4,
-      "post_views": 773
+      "post_views": 773,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18391996561205200",
@@ -130,14 +139,15 @@
       "post_text": "Драко шесть лет ходил за Гарри, следил за ним, обсуждал его с друзьями, знал его расписание и замечал каждую мелочь.\nА потом фандом почему-то решил, что главная романтическая загадка тут — Гермиона.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd-k13AgU03",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 1447,
       "post_replies": 37,
       "post_reposts": 13,
       "post_quotes": 1,
       "post_shares": 52,
-      "post_views": 18030
+      "post_views": 18030,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17971225419149845",
@@ -145,14 +155,15 @@
       "post_text": "Прошли годы, а Гарри и Драко всё ещё могут за пару секунд снова стать теми самыми школьниками 😄\n\nПеревёл этот момент для вас.❤️",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd-3hpLCErH",
       "post_media_type": "VIDEO",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 725,
       "post_replies": 28,
       "post_reposts": 14,
       "post_quotes": 0,
       "post_shares": 108,
-      "post_views": 29074
+      "post_views": 29075,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17874166407586386",
@@ -160,14 +171,15 @@
       "post_text": "Не стоит забывать насколько решительной Гермиона была уже на первом курсе.\nВо время первого матча Гарри она замечает, что Снейп что-то шепчет и не отводит глаз от его метлы. Гермиона решает, что это он пытается сбросить Гарри.\nИ что она делает?\nПробирается к трибуне Слизерина и поджигает Снейпу мантию.\nНикаких \"надо позвать преподавателя\". Просто увидела угрозу и решила устранить его ..её 😅",
       "post_permalink": "https://www.threads.com/@mirpottera/post/Dd_v5vBiCYR",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 40,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 756
+      "post_views": 756,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18117698983982095",
@@ -175,14 +187,15 @@
       "post_text": "Слизерин forever 🐍\n\nНекоторые вещи вообще не меняются 😁\n\nРусскую магию навёл mirpottera ✨",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeAL12cDDNd",
       "post_media_type": "CAROUSEL_ALBUM",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 28,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 1,
-      "post_views": 439
+      "post_views": 439,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18228659107330017",
@@ -190,14 +203,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeBddVyCG16",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18086873147284924",
@@ -205,14 +219,15 @@
       "post_text": "Омут памяти — очень опасная вещь.\nТы заходишь посмотреть один милый момент из прошлого,\nа выходишь с новым списком людей, которых надо было послать ещё тогда.🤣",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeBdefmiBml",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 4,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 74
+      "post_views": 74,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17882191218525214",
@@ -220,14 +235,15 @@
       "post_text": "С кем из Поттерианы вы бы поехали на каникулы?\nМожно выбрать максимум 3 варианта\nФред и Джордж считаются за одного 😁\nГарри\nРон\nГермиона\nДжинни\nЛуна Лавгуд)\nНевилл\nФред и Джордж\nСириус\nЛюпин\nТонкс\nФлёр\nСедрик\nДрако\nХагрид\nМакгонагалл\nСнейп\nМолли\nАртур\nДобби\nКричер\nБилл\nЧарли\nПерси \n\nВаши варианты ?▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeCKg6EiIXg",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 4,
       "post_replies": 11,
       "post_reposts": 0,
       "post_quotes": 1,
       "post_shares": 0,
-      "post_views": 205
+      "post_views": 206,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17986810281114290",
@@ -235,14 +251,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeCpNB_jcHE",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18105703636952419",
@@ -250,14 +267,15 @@
       "post_text": "Начало \"Тайной комнаты\" вообще какое-то коллективное безумие.\nДурсли запирают Гарри в комнате. На окне решётка. Еду дают через кошачью дверцу. В туалет выпускают утром и вечером.\nРон узнаёт, что Гарри не отвечает на письма.\nИ вместо \"надо рассказать взрослым\" Рон, Фред и Джордж ночью берут машину Артура, прилетают к Дурслям, вырывают решётку из стены и крадут Гарри через окно.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeCwuTmkx7v",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 31,
       "post_replies": 5,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 2478
+      "post_views": 2478,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18112083713590782",
@@ -265,14 +283,15 @@
       "post_text": "Рассвет своего сорокового дня рождения Северус Снейп встречал у барной стойки в «Башке борова», пьяный и угрюмый. Аберфорт трижды пытался отправить бывшего шпиона-профессора домой, но в два часа ночи бросил это гиблое дело и ушел спать. Огневиски он милосердно оставил. Еще Аберфорт оставил незапертой входную дверь, но об этом Северус узнал, только когда услышал над ухом раздраженный девичий голос: — Опять! Расфокусированный взгляд выхватил из окружающего мира только длинную каштановую косу.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeDubvNkU3h",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 6,
       "post_replies": 6,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1093
+      "post_views": 1093,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18230124877324460",
@@ -280,14 +299,15 @@
       "post_text": "А вы бы прошли этот Quizzitch лучше Эммы? 😁\nСколько ответов угадали до неё? 👀\nРусскую магию навёл mirpottera ✨ ❤️",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeEGicEiBUi",
       "post_media_type": "VIDEO",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 4,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 906
+      "post_views": 906,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18102894938312328",
@@ -295,14 +315,15 @@
       "post_text": "Рону было три года, когда он сломал игрушечную метлу Фреда.Фред в ответ превратил его плюшевого медведя в огромного паука.\nРону было ТРИ.\nФреду - пять.\nИ потом все такие:\"Рон ужасно боится пауков\".\nДа с чего бы.😅",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeFVbaQAU1Z",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 27,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 711
+      "post_views": 711,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17891392605456714",
@@ -310,14 +331,15 @@
       "post_text": "Министерство магии после пятого происшествия в Хогвартсе за неделю:\n\"Оснований для закрытия школы нет.\"\nещё один ученик исчезает\n\"Ситуация находится под контролем министерства.\"",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeGLxrPiCTe",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 10,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 616
+      "post_views": 616,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18096548798545337",
@@ -325,14 +347,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeGdl2ODbai",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18000870713796258",
@@ -340,14 +363,15 @@
       "post_text": "Дэниел Рэдклифф выбирает между \"Узником Азкабана\" и \"Кубком Огня\".\nА вы что выберете: третью или четвёртую часть?\nРусскую магию навёл mirpottera ✨❤️",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeGuwgYgnvW",
       "post_media_type": "VIDEO",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 1,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 75
+      "post_views": 75,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18000118775814352",
@@ -355,14 +379,15 @@
       "post_text": "— Если я когда-нибудь сделаю тебе предложение, тайн не будет, — произнёс Драко с такой гипнотической серьёзностью, что у Гермионы перехватило дыхание. — Тайные помолвки подразумевают, что кому-то из двоих стыдно или что это какая-то грязная интрижка. А ты — не та женщина, которую прячут по углам. Если бы я надел на твой палец кольцо, об этом немедленно узнало бы всё Министерство.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeHGzA1CgI_",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 10,
       "post_replies": 7,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 448
+      "post_views": 448,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17927033823185279",
@@ -370,14 +395,15 @@
       "post_text": "В 11 лет я бы увидел в Зеркале Еиналеж себя великим волшебником.\nВ 28 - восемь часов сна, ноль непрочитанных и фразу \"завтра никуда не надо\".",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeHX6RzAK7B",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 17,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 322
+      "post_views": 322,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18148810261508602",
@@ -385,14 +411,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeHcGkHiI1P",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18073775114743970",
@@ -400,14 +427,15 @@
       "post_text": "Я уже писал об этом, но есть детали, к которым хочется возвращаться.\nВ комнате Луны на потолке были нарисованы Гарри, Рон, Гермиона, Джинни и Невилл.\nА вокруг их портретов шла золотая цепочка, составленная из одного слова:\nдрузья.\nСнова и снова. Тысячи раз.\nИ вот это меня каждый раз умиляет до слёз.\nЛуна вообще не была человеком, который много говорил о своих чувствах.\nОна просто взяла и написала слово \"друзья\"☺️ тысячи раз вокруг тех, кто стал ей близок.\nТут правда даже добавлять особо нечего.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeH6OZUieXa",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 43,
       "post_replies": 3,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 689
+      "post_views": 689,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18102128069564918",
@@ -415,14 +443,15 @@
       "post_text": "Снейп пытался заставить Карту Мародёров раскрыть свой секрет.\nВ ответ она просто начала его оскорблять.\nПредставьте: вводите адрес в Яндекс Картах, а вместо маршрута получаете:\n«Поверните налево. Нет, другое лево, долбоёб.»\nВот примерно такой навигатор Джеймс, Сириус, Римус и Питер оставили после себя в Хогвартсе.\nИ что особенно прекрасно — спустя годы он всё ещё исправно работал именно на Снейпе.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeI4Eh_Eyoh",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 26,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1007
+      "post_views": 1007,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17948465820318555",
@@ -430,14 +459,15 @@
       "post_text": "Мне кажется, одна из самых болезненных деталей в Поттериане это Невилл в Святом Мунго. Его мама даёт ему пустую обёртку от жвачки. Бабушка сразу говорит выбросить, потому что это мусор, но Невилл всё равно берёт её и прячет в карман.\nПотому что для всех это мусор, а для него это мамин подарок.\nПосле этого я вообще не могу воспринимать Невилла просто как милого неловкого мальчика. Истинный гриффиндорец.\nБерегите своих мам, друзья ❤️",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeJTmS5Cl7i",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 105,
       "post_replies": 5,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 994
+      "post_views": 994,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18156950746508248",
@@ -445,14 +475,15 @@
       "post_text": "Семь лет учёбы. Ноль техники безопасности. Зато приключений дo$@я.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeJ8sJCDp3X",
       "post_media_type": "CAROUSEL_ALBUM",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 6,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 517
+      "post_views": 517,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18008092971005913",
@@ -460,14 +491,15 @@
       "post_text": "Есть довольно дикая мысль про родителей Гермионы.\nПока она искала крестражи, в Австралии жили два человека, которые были уверены, что их зовут Уэнделл и Моника Уилкинс.\nОни строили планы, просыпались утром, занимались своими делами.\nИ понятия не имели, что где-то в Британии у них есть семнадцатилетняя дочь и что она воюет с Волан-де-Мортом.А если бы Гермиона не вернулась, так бы и не узнали.\nМеня особо удивляет то что некоторые не одобряют это действие Гермионы , но чтобы вы сделали на ее месте?",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeKlNd1iFNu",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 253,
       "post_replies": 61,
       "post_reposts": 2,
       "post_quotes": 0,
       "post_shares": 1,
-      "post_views": 24656
+      "post_views": 24657,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18090224465469058",
@@ -475,14 +507,15 @@
       "post_text": "Дамблдор: \"Прошу учеников не посещать коридор третьего этажа.\" Фред и Джордж: \"Создали мероприятие: коридор третьего этажа, сегодня 23:00.\"",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeLc0IBDOkt",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 92,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1901
+      "post_views": 1901,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18627904759007988",
@@ -490,14 +523,15 @@
       "post_text": "Иногда я представляю, какой парой были бы Гарри и Луна, если бы канон однажды свернул в другую сторону. Мне кажется, спокойной жизни у Гарри всё равно бы не получилось. Просто теперь причиной половины его нервных срывов был бы не Волан де Морт\n— Ты не полетишь одна искать существо, которое, по твоим словам, \"возможно, существует\". \n— Гарри, ты работаешь аврором. \n— Это другое. Луна немного подумала. \n— Конечно. Твои опасные существа носят мантии. \n— Я серьёзно. \n— Я тоже. \n— Я против. \n— Хорошо.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeL4SNPCCww",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 16,
       "post_replies": 5,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1130
+      "post_views": 1130,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18105757406528810",
@@ -505,14 +539,15 @@
       "post_text": "Эмма Уотсон проходит викторину по Поттериане, и тут у нас появляется вполне законный повод проверить, кто знает этот мир лучше 😏\nПравила простые: отвечайте на каждый вопрос раньше Эммы и считайте свои правильные ответы.\nВ конце пишите результат. Посмотрим, сколько здесь людей, которые способны обыграть саму Гермиону 😄",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeMhe7qjqcm",
       "post_media_type": "VIDEO",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 39,
       "post_replies": 5,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 35,
-      "post_views": 6531
+      "post_views": 6532,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17887478310684860",
@@ -520,14 +555,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeMlaHtjbbd",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18025515839912176",
@@ -535,14 +571,15 @@
       "post_text": null,
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeMl9r_iJuJ",
       "post_media_type": "REPOST_FACADE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 0,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 0
+      "post_views": 0,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17975931087131206",
@@ -550,14 +587,15 @@
       "post_text": "Любовные зелья в Поттериане почему-то воспринимаются почти как забавная часть волшебного мира. Вспомните магазин Фреда и Джорджа. Ярко-розовая полка с любовными зельями, Гермиона и Джинни рассматривают флаконы, Джинни спрашивает, работают ли они. Братья совершенно спокойно объясняют, что да, работают, сколько примерно длится эффект, а потом ещё шутят, что сестре зелье не продадут, потому что у неё и без него парней хватает 😁 По атмосфере это буквально какая-то магическая косметика для свиданий.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeNKrsqijVV",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 29,
       "post_replies": 4,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 2293
+      "post_views": 2293,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18121000303934597",
@@ -565,14 +603,15 @@
       "post_text": "Если бы будильники честно показывали, что они делают с человеком по утрам.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeOBnNSjs5j",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 3,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 113
+      "post_views": 113,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18130337728685596",
@@ -580,14 +619,15 @@
       "post_text": "Фильмы были несправедливы ко многим персонажам. Кому-то урезали характер, кого-то сделали проще, кому-то вообще приписали поступки, которых в книге не было. Один из самых неприятных примеров для меня — Чжоу Чанг. В книге Отряд Дамблдора сдаёт Мариэтта Эджком. Чжоу этого не делает. И тьем болеее того, потом именно Чжоу оказывается в дурацком положении, потому что пытается защищать подругу после её предательства. В фильме Мариэтту просто убрали, а её роль отдали Чжоу.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeOg_IMCOXe",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 51,
       "post_replies": 9,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 2540
+      "post_views": 2540,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17973068724157748",
@@ -595,14 +635,15 @@
       "post_text": "Кажется, лучше о любви к вымышленным мирам и не скажешь.▓▓▓❤️",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DePom5kgKun",
       "post_media_type": "VIDEO",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 2,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 27
+      "post_views": 27,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17964548369984005",
@@ -610,14 +651,15 @@
       "post_text": "В Хогвартсе есть лестницы, которые меняют направление, двери, которые не всегда являются дверями, привидения и полтергейст.\nИ первокурсникам просто говорят: \"Удачи, кабинет на пятом этаже.\"",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeQmZ5dDO99",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 30,
+      "post_likes": 32,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 968
+      "post_views": 979,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17969400099169195",
@@ -625,14 +667,15 @@
       "post_text": "Никто не знает, как на самом деле выглядит боггарт.\nОн принимает форму главного страха человека, который его видит.\nНо мне теперь интересно другое.\nЧто будет, если его сфотографировать?🤔\nПоставить камеру перед шкафом, открыть дверцу дистанционно и сделать снимок, пока рядом вообще никого нет.\nКамера ведь ничего не боится.🤖",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeRB4DpClWI",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 4,
+      "post_likes": 5,
       "post_replies": 3,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 498
+      "post_views": 504,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18135077470658354",
@@ -640,14 +683,15 @@
       "post_text": "Иногда кажется, что самое загадочное место в Хогвартсе — не Тайная комната, а отдел кадров. За несколько лет преподавателем ЗОТИ успели побывать человек с Волан-де-Мортом на затылке, знаменитость-мошенник, Пожиратель смерти под чужим лицом и Амбридж. В какой-то момент кажется, что на собеседование можно было прийти хоть в чёрном шлеме с тяжёлым дыханием, хоть с перчаткой, усыпанной разноцветными камнями, хоть с кольцом, которое почему-то все очень хотят уничтожить.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeRrETakSGQ",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 5,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 120
+      "post_views": 130,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18015539756984642",
@@ -655,14 +699,15 @@
       "post_text": "Есть одна вещь в Поттериане, которую Волан-де-Морт так и не научился понимать: что мать может сделать ради своего ребёнка. Лили Поттер встала между ним и Гарри и погибла. Именно её жертва оставила на Гарри защиту, о которую Волан-де-Морт и сломался в первый раз. Но мне особенно нравится, что Поттериана не делает из материнской любви какую-то исключительно светлую силу. Мать Барти Крауча-младшего тоже фактически отдала жизнь за сына.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeSNaISAvY7",
       "post_media_type": "TEXT_POST",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 134,
-      "post_replies": 21,
-      "post_reposts": 1,
+      "post_likes": 149,
+      "post_replies": 22,
+      "post_reposts": 2,
       "post_quotes": 0,
-      "post_shares": 2,
-      "post_views": 10169
+      "post_shares": 3,
+      "post_views": 11452,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "17960034600235921",
@@ -670,14 +715,15 @@
       "post_text": "Забавно, что одни из самых страшных существ Хогвартса видят только те, кто уже пережил что-то действительно страшное.",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeTLM6iE57C",
       "post_media_type": "IMAGE",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 13,
-      "post_replies": 2,
+      "post_likes": 15,
+      "post_replies": 3,
       "post_reposts": 1,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 399
+      "post_views": 438,
+      "data_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "post_id": "18101707271529280",
@@ -685,14 +731,47 @@
       "post_text": "Последняя цифра лайка определит твоего партнёра в Поттериане 😏\n\nСтавь лайк, смотри последнюю цифру и листай до своей карточки. Не жульничать 😈\n\nСПОЙЛЕР:\n0. Драко Малфой\n1. Люциус Малфой\n2. Гермиона Грейнджер\n3. Седрик Диггори\n4. Луна Лавгуд\n5. Волан-де-Морт\n6. Долорес Амбридж\n7. Фред и Джордж Уизли\n8. Беллатриса Лестрейндж\n9. Северус Снейп\n\nМне уже интересно, кому тут особенно \"повезёт\" с ..... 😅",
       "post_permalink": "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
       "post_media_type": "CAROUSEL_ALBUM",
-      "post_is_quote_post": "False",
+      "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 6,
+      "post_likes": 9,
       "post_replies": 0,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 66
+      "post_views": 89,
+      "data_fetched_at": "2026-10-10T15:49:16"
+    },
+    {
+      "post_id": "18151009951540960",
+      "post_timestamp": "2026-10-10T13:59:59+0000",
+      "post_text": "Представьте, что письмо всё-таки пришло.\nПросто лет на двадцать позже.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeUP3hkjLZ2",
+      "post_media_type": "IMAGE",
+      "post_is_quote_post": false,
+      "post_link_attachment_url": null,
+      "post_likes": 3,
+      "post_replies": 2,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "post_shares": 0,
+      "post_views": 85,
+      "data_fetched_at": "2026-10-10T15:49:16"
+    },
+    {
+      "post_id": "17907436584329491",
+      "post_timestamp": "2026-10-10T14:00:00+0000",
+      "post_text": "Рон Уизли наконец понял, зачем волшебникам метлы 😁",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeUP3qfjcph",
+      "post_media_type": "VIDEO",
+      "post_is_quote_post": false,
+      "post_link_attachment_url": null,
+      "post_likes": 100,
+      "post_replies": 2,
+      "post_reposts": 1,
+      "post_quotes": 1,
+      "post_shares": 17,
+      "post_views": 1470,
+      "data_fetched_at": "2026-10-10T15:49:16"
     }
   ]
 }
