@@ -412,5 +412,10 @@
       "metrics": null,
       "notes": "Финальная авторская версия сохранена без редакторской подмены."
     }
-  ]
+  ],
+  "source_profile": "https://www.threads.com/@mirpottera",
+  "sync": {
+    "threads_status": "pending_connector_read",
+    "note": "Windsor.ai is installed, but its callable actions are not exposed in the current chat tool surface yet. Do not treat this database as a complete profile import until a successful Threads read occurs."
+  }
 }
