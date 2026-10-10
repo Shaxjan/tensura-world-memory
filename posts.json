@@ -415,7 +415,27 @@
   ],
   "source_profile": "https://www.threads.com/@mirpottera",
   "sync": {
-    "threads_status": "pending_connector_read",
-    "note": "Windsor.ai is installed, but its callable actions are not exposed in the current chat tool surface yet. Do not treat this database as a complete profile import until a successful Threads read occurs."
+    "threads_status": "complete_api_import",
+    "connector": "Windsor.ai Threads",
+    "account": "mirpottera",
+    "account_id": "28902703019346338",
+    "imported_posts": 452,
+    "imported_range_utc": {
+      "from": "2026-06-28T05:53:46+0000",
+      "to": "2026-10-10T08:00:01+0000"
+    },
+    "checked_empty_ranges": [
+      "2024-04-14..2024-12-31",
+      "2025-01-01..2025-12-31",
+      "2026-01-01..2026-05-31"
+    ],
+    "api_limit_note": "Threads API rejected dates before 2024-04-13. No API-visible posts were found from 2024-04-14 through 2026-06-27, so 2026-06-28 is the first available post for this account in the connector.",
+    "archive_files": [
+      "threads/2026-06.json",
+      "threads/2026-07.json",
+      "threads/2026-08.json",
+      "threads/2026-09.json",
+      "threads/2026-10.json"
+    ]
   }
 }
