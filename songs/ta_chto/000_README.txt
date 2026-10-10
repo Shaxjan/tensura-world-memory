@@ -1,1 +1,0 @@
-CANONICAL. Join 001.txt..046.txt with \n. Empty files preserve blank lines.

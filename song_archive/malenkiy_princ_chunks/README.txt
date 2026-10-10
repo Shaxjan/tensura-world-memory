@@ -1,1 +1,0 @@
-CANONICAL EXACT TEXT: concatenate 01.txt through 12.txt in numeric order, preserving line order. The older file song_archive/malenkiy_princ_lsp_local.txt is incomplete and SUPERSEDED; do not use it as the song text.

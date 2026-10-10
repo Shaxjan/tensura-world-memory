@@ -1,1 +1,0 @@
-v84 delta. Kosmos: join numbered filename suffixes with newlines; BLANK=empty line; ␠=space.
