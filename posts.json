@@ -179,7 +179,19 @@
         "profile_visits": 1053,
         "follows": 1
       },
-      "notes": "Большой спор и комментарии; слабая follow-конверсия."
+      "notes": "Большой спор и комментарии; слабая follow-конверсия.",
+      "threads_post_id": "18008092971005913",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeKlNd1iFNu",
+      "published_at_utc": "2026-10-06T19:54:04+0000",
+      "metrics_api": {
+        "views": 24657,
+        "likes": 253,
+        "comments": 61,
+        "sends": 1,
+        "reposts": 2,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-10T15:49:16"
     },
     {
       "id": "fred-george-third-floor-event",
@@ -197,7 +209,19 @@
         "profile_visits": 218,
         "follows": 0
       },
-      "notes": null
+      "notes": null,
+      "threads_post_id": "18090224465469058",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeLc0IBDOkt",
+      "published_at_utc": "2026-10-07T03:59:57+0000",
+      "metrics_api": {
+        "views": 1922,
+        "likes": 92,
+        "comments": 2,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "id": "harry-luna-mini-ff",
@@ -216,7 +240,19 @@
         "profile_visits": 2,
         "follows": 1
       },
-      "notes": "Нишевая механика."
+      "notes": "Нишевая механика.",
+      "threads_post_id": "18627904759007988",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeL4SNPCCww",
+      "published_at_utc": "2026-10-07T07:59:59+0000",
+      "metrics_api": {
+        "views": 1162,
+        "likes": 16,
+        "comments": 5,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "id": "emma-watson-quiz-video",
@@ -233,7 +269,19 @@
         "likes": 39,
         "sends": 32
       },
-      "notes": "Share/forward сильнее лайков; не резать только ради краткости."
+      "notes": "Share/forward сильнее лайков; не резать только ради краткости.",
+      "threads_post_id": "18105757406528810",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeMhe7qjqcm",
+      "published_at_utc": "2026-10-07T13:59:59+0000",
+      "metrics_api": {
+        "views": 6577,
+        "likes": 40,
+        "comments": 5,
+        "sends": 35,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "id": "love-potions",
@@ -265,7 +313,19 @@
       "metrics": {
         "views": 98
       },
-      "notes": "Провал; не повторять механику без сильной переработки."
+      "notes": "Провал; не повторять механику без сильной переработки.",
+      "threads_post_id": "18121000303934597",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeOBnNSjs5j",
+      "published_at_utc": "2026-10-08T03:59:59+0000",
+      "metrics_api": {
+        "views": 146,
+        "likes": 3,
+        "comments": 1,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "id": "hogwarts-stairs-first-years",
@@ -298,7 +358,19 @@
         "likes": 3,
         "comments": 2
       },
-      "notes": "Интеллектуально любопытно, но мало эмоциональной награды."
+      "notes": "Интеллектуально любопытно, но мало эмоциональной награды.",
+      "threads_post_id": "17969400099169195",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeRB4DpClWI",
+      "published_at_utc": "2026-10-09T08:00:00+0000",
+      "metrics_api": {
+        "views": 570,
+        "likes": 5,
+        "comments": 3,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "id": "zoti-hr-cross-universe",
@@ -377,40 +449,97 @@
       "id": "last-digit-partner",
       "date": "2026-10-10",
       "slot": "15:00",
-      "status": "scheduled",
+      "status": "published",
       "format": "interactive carousel",
       "topic": "Последняя цифра лайка определит партнёра в Поттериане",
       "angle": "10 карточек, мужская/женская версия персонажа, ставка на желание/краш-механику.",
       "final_text": null,
       "visual": "10 вертикальных чёрных карточек: 0 Драко, 1 Люциус, 2 Гермиона, 3 Седрик, 4 Луна, 5 Волан-де-Морт, 6 Амбридж, 7 Фред и Джордж, 8 Беллатриса, 9 Снейп.",
-      "metrics": null,
-      "notes": "Сильная новая повторяемая интерактивная рубрика."
+      "metrics": {
+        "views": 192,
+        "likes": 23,
+        "comments": 6,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Сильная новая повторяемая интерактивная рубрика.",
+      "threads_post_id": "18101707271529280",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
+      "published_at_utc": "2026-10-10T08:00:01+0000",
+      "metrics_api": {
+        "views": 192,
+        "likes": 23,
+        "comments": 6,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "id": "late-hogwarts-letter",
       "date": "2026-10-10",
       "slot": "21:00",
-      "status": "planned",
+      "status": "published",
       "format": "image-first / adult nostalgia",
       "topic": "Письмо из Хогвартса пришло лет на двадцать позже",
       "angle": "Взрослая обычная жизнь сталкивается с детским чудом, которое всё-таки пришло слишком поздно.",
       "final_text": "Представьте, что письмо всё-таки пришло.\nПросто лет на двадцать позже.",
       "visual": "Самостоятельный живописный кадр: взрослый мужчина после работы сидит с письмом с сургучной печатью; лицо закрыто рукой.",
-      "metrics": null,
-      "notes": "Не мини-сценарий; самостоятельный полноценный кадр."
+      "metrics": {
+        "views": 219,
+        "likes": 8,
+        "comments": 3,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Не мини-сценарий; самостоятельный полноценный кадр.",
+      "threads_post_id": "18151009951540960",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeUP3hkjLZ2",
+      "published_at_utc": "2026-10-10T13:59:59+0000",
+      "metrics_api": {
+        "views": 219,
+        "likes": 8,
+        "comments": 3,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "id": "rita-skeeter-real-world",
       "date": "2026-10-11",
       "slot": "03:00",
-      "status": "scheduled",
+      "status": "published",
       "format": "authorial text / adult reevaluation",
       "topic": "Рита Скитер страшна тем, что ей почти не нужна магия",
       "angle": "Перо, газета, грязный заголовок и читательский интерес; Рита узнаваема в реальном мире.",
       "final_text": "В Поттериане полно людей, которых стоит бояться из-за заклинаний.\nА Рите Скитер палочка и заклинания почти не нужны. Ей хватает пера, газеты и уверенности, что читатели всё равно проглотят историю, если она достаточно грязная и мерзкая. Гарри после Турнира. Гермиона и Виктор Крам ,опасный полувеликан, которому почему-то доверили преподавать детям. Чужая травма, чужая личная жизнь, чужие слабости - всё можно превратить в кричащий заголовок. Ведь людям куда интереснее читать про опасного полувеликана в Хогвартсе. Про девушку, которая вертит Мальчиком который выжил и звездой квиддича из Дурмстранга. Наверное, поэтому Рита с возрастом раздражает меня даже сильнее некоторых отрицательных персонажей. Потому что Рита Скитер реальна. Она живёт в нашем мире среди нас. Икогда вы в очередной рас откроете новостную ленту то поймёте что половину из них опять написала она.",
       "visual": null,
-      "metrics": null,
-      "notes": "Финальная авторская версия сохранена без редакторской подмены."
+      "metrics": {
+        "views": 488,
+        "likes": 2,
+        "comments": 2,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Финальная авторская версия сохранена без редакторской подмены.",
+      "threads_post_id": "18225723613333202",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeU5ITjDpgw",
+      "published_at_utc": "2026-10-10T20:00:32+0000",
+      "metrics_api": {
+        "views": 488,
+        "likes": 2,
+        "comments": 2,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "id": "2026-10-13-0300-colin-creevey",
@@ -515,6 +644,262 @@
       "visual": "Короткий ролик с русским переводом и субтитрами пользователя",
       "metrics": null,
       "notes": "Точный выбранный текст: Джинни Уизли явно знала больше, чем мы. 🫦 Пользователь подтвердил: сделано."
+    },
+    {
+      "id": "2026-10-11-1100-mcgonagall-peeves",
+      "date": "2026-10-11",
+      "slot": "11:00",
+      "status": "published",
+      "format": "TEXT_POST",
+      "topic": "Макгонагалл и Пивз после ухода Фреда и Джорджа",
+      "angle": "Неожиданная поддержка шалостей Пивза со стороны Макгонагалл",
+      "final_text": "Есть одна сцена в \"Ордене Феникса\", после которой я обожаю Макгонагалл ещё больше.\nПосле ухода Фреда и Джорджа Пивз устроил в Хогвартсе настоящий хаос. В какой-то момент он пытался открутить огромную хрустальную люстру.\nМимо проходила Макгонагалл.\nЗаместитель директора. Строжайший преподаватель. Женщина, от одного взгляда которой ученики вспоминали все школьные правила.\nИ что она сделала?",
+      "visual": null,
+      "metrics": {
+        "views": 35880,
+        "likes": 774,
+        "comments": 39,
+        "sends": 2,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18097238897559352",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeVwQGBiIIn",
+      "published_at_utc": "2026-10-11T04:02:12+0000",
+      "metrics_api": {
+        "views": 35880,
+        "likes": 774,
+        "comments": 39,
+        "sends": 2,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-11-1500-arthur-lottery-sirius",
+      "date": "2026-10-11",
+      "slot": "15:00",
+      "status": "published",
+      "format": "TEXT_POST",
+      "topic": "Артур Уизли, 700 галлеонов и побег Сириуса",
+      "angle": "Семейная удача приводит к фотографии с Петтигрю и побегу Сириуса",
+      "final_text": "Артур Уизли выиграл в лотерею 700 галлеонов. И совершенно случайно запустил самый знаменитый побег в мире магии.\n\nНа выигранные деньги Уизли всей семьёй отправились в Египет. Их фотографию напечатали в \"Ежедневном пророке\". А на плече Рона, как обычно, сидела Короста.\n\nВо время посещения Азкабана Корнелиус Фадж дал Сириусу Блэку почитать газету.",
+      "visual": null,
+      "metrics": {
+        "views": 100855,
+        "likes": 912,
+        "comments": 44,
+        "sends": 39,
+        "reposts": 4,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18180277579449523",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeWLgtGj4uc",
+      "published_at_utc": "2026-10-11T08:00:24+0000",
+      "metrics_api": {
+        "views": 100855,
+        "likes": 912,
+        "comments": 44,
+        "sends": 39,
+        "reposts": 4,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-11-2100-tom-felton-guitar",
+      "date": "2026-10-11",
+      "slot": "21:00",
+      "status": "published",
+      "format": "VIDEO",
+      "topic": "Том Фелтон с гитарой",
+      "angle": "Короткое видео с игривой подписью",
+      "final_text": "Драко Малфой? Нет. Хуже. Том Фелтон с гитарой. 😏🎸",
+      "visual": "Видео",
+      "metrics": {
+        "views": 9783,
+        "likes": 616,
+        "comments": 25,
+        "sends": 56,
+        "reposts": 21,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18464746669136537",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeW0wvOk9Dx",
+      "published_at_utc": "2026-10-11T14:00:51+0000",
+      "metrics_api": {
+        "views": 9783,
+        "likes": 616,
+        "comments": 25,
+        "sends": 56,
+        "reposts": 21,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-12-0300-fleur-bill-scars",
+      "date": "2026-10-12",
+      "slot": "03:00",
+      "status": "published",
+      "format": "TEXT_POST",
+      "topic": "Флёр Делакур, Билл Уизли и шрамы",
+      "angle": "Любовь Флёр после нападения Грейбека",
+      "final_text": "У Флёр Делакур одна из самых трогательных историй любви в Поттериане. ❤️\nПосле нападения Грейбека лицо Билла было страшно изранено. Молли боялась, что Флёр теперь передумает выходить за него замуж, и к ранам сына добавится ещё и разбитое сердце. Ведь все привыкли видеть в ней ослепительную красавицу, слишком увлечённую собственной внешностью .Но Флёр искренне возмутилась самой мыслью, что какие-то шрамы могут помешать их свадьбе или изменить её чувства к Биллу.",
+      "visual": null,
+      "metrics": {
+        "views": 22733,
+        "likes": 343,
+        "comments": 13,
+        "sends": 3,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18207935788370776",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeXd4tZgX1O",
+      "published_at_utc": "2026-10-11T20:00:12+0000",
+      "metrics_api": {
+        "views": 22733,
+        "likes": 343,
+        "comments": 13,
+        "sends": 3,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-12-1100-dobby-born-free",
+      "date": "2026-10-12",
+      "slot": "10:00",
+      "status": "published",
+      "format": "IMAGE",
+      "topic": "Добби. Рождённый свободным",
+      "angle": "Альтернативная история освобождения домовых эльфов",
+      "final_text": "ДОББИ. РОЖДЁННЫЙ СВОБОДНЫМ \n\nА что, если бы Добби был одержим идеей освободить всех эльфов? Много веков назад волшебники поработили домовых эльфов. Шли годы, сменялись поколения, рушились великие династии, но рабство оставалось неизменным. Постепенно эльфы забыли, что когда-то были свободны. Они утратили гордость, чувство собственного достоинства и даже желание распоряжаться своей судьбой. Подчинение стало их долгом, а страх перед хозяевами превратился в привычку на уровне рефлексов.",
+      "visual": "Изображение",
+      "metrics": {
+        "views": 725,
+        "likes": 8,
+        "comments": 13,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18496829506101355",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+      "published_at_utc": "2026-10-12T03:59:58+0000",
+      "metrics_api": {
+        "views": 725,
+        "likes": 8,
+        "comments": 13,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-12-1500-golden-memes",
+      "date": "2026-10-12",
+      "slot": "15:00",
+      "status": "published",
+      "format": "CAROUSEL_ALBUM",
+      "topic": "Золотая коллекция мемов по Поттериане. Выпуск №1",
+      "angle": "Фандомная подборка мемов и приглашение делиться своими",
+      "final_text": "Золотая коллекция мемов по Поттериане. Выпуск №1. 😂\n\nСобрал классику, над которой мы ржали много лет назад. И, судя по всему, повзрослеть нам так и не удалось.\n\nА теперь ваша очередь. Тащите в комментарии самые смешные мемы по Гарри Поттеру, которые у вас есть. Самые убойные попадут в следующую часть «Золотой коллекции»!\nПосмотрим, кто сможет переплюнуть эту подборку. 😈",
+      "visual": "Карусель",
+      "metrics": {
+        "views": 260,
+        "likes": 14,
+        "comments": 2,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18285473392292597",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeYwUjYiDw3",
+      "published_at_utc": "2026-10-12T08:00:32+0000",
+      "metrics_api": {
+        "views": 260,
+        "likes": 14,
+        "comments": 2,
+        "sends": 0,
+        "reposts": 0,
+        "quotes": 0
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-12-2100-young-tom-felton-interview",
+      "date": "2026-10-12",
+      "slot": "21:00",
+      "status": "published",
+      "format": "VIDEO",
+      "topic": "Архивное интервью юного Тома Фелтона",
+      "angle": "Обаятельный актёрский момент с русским переводом",
+      "final_text": "Я нашёл старое интервью юного Тома Фелтона. Кажется, это самое обаятельное видео, которое я переводил. ❤️",
+      "visual": "Видео",
+      "metrics": {
+        "views": 7856,
+        "likes": 340,
+        "comments": 4,
+        "sends": 28,
+        "reposts": 5,
+        "quotes": 2
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "18128182021878650",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeZZdZTD5wb",
+      "published_at_utc": "2026-10-12T14:00:00+0000",
+      "metrics_api": {
+        "views": 7856,
+        "likes": 340,
+        "comments": 4,
+        "sends": 28,
+        "reposts": 5,
+        "quotes": 2
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "id": "2026-10-10-2100-ron-broom-video",
+      "date": "2026-10-10",
+      "slot": "21:00",
+      "status": "published",
+      "format": "VIDEO",
+      "topic": "Рон Уизли и метла",
+      "angle": "Короткое юмористическое видео",
+      "final_text": "Рон Уизли наконец понял, зачем волшебникам метлы 😁",
+      "visual": "Видео",
+      "metrics": {
+        "views": 54458,
+        "likes": 2153,
+        "comments": 25,
+        "sends": 571,
+        "reposts": 9,
+        "quotes": 2
+      },
+      "notes": "Подтверждено Threads API; время указано GMT+7.",
+      "threads_post_id": "17907436584329491",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeUP3qfjcph",
+      "published_at_utc": "2026-10-10T14:00:00+0000",
+      "metrics_api": {
+        "views": 54458,
+        "likes": 2153,
+        "comments": 25,
+        "sends": 571,
+        "reposts": 9,
+        "quotes": 2
+      },
+      "metrics_api_fetched_at": "2026-10-12T19:20:30"
     }
   ],
   "source_profile": "https://www.threads.com/@mirpottera",
@@ -523,10 +908,10 @@
     "connector": "Windsor.ai Threads",
     "account": "mirpottera",
     "account_id": "28902703019346338",
-    "imported_posts": 452,
+    "imported_posts": 465,
     "imported_range_utc": {
       "from": "2026-06-28T05:53:46+0000",
-      "to": "2026-10-10T08:00:01+0000"
+      "to": "2026-10-12T14:00:00+0000"
     },
     "checked_empty_ranges": [
       "2024-04-14..2024-12-31",
@@ -540,6 +925,9 @@
       "threads/2026-08.json",
       "threads/2026-09.json",
       "threads/2026-10.json"
-    ]
+    ],
+    "last_metrics_fetch_utc": "2026-10-12T19:20:55",
+    "new_posts_since_previous_archive": 11,
+    "metric_freshness_note": "Older post metrics may come from Windsor.ai cache (snapshot 2026-10-10); see each post's data_fetched_at / metrics_fetched_at."
   }
 }

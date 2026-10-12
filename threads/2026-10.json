@@ -2,8 +2,8 @@
   "account": "mirpottera",
   "source": "Windsor.ai Threads API",
   "month": "2026-10",
-  "count": 48,
-  "metrics_snapshot_utc": "2026-10-10T15:52:41",
+  "count": 59,
+  "metrics_snapshot_utc": "2026-10-12T19:20:55",
   "posts": [
     {
       "post_id": "17893733592655412",
@@ -514,8 +514,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1901,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 1922,
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "18627904759007988",
@@ -530,8 +530,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 1130,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 1162,
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "18105757406528810",
@@ -541,13 +541,13 @@
       "post_media_type": "VIDEO",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 39,
+      "post_likes": 40,
       "post_replies": 5,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 35,
-      "post_views": 6532,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 6577,
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "17887478310684860",
@@ -563,7 +563,7 @@
       "post_quotes": 0,
       "post_shares": 0,
       "post_views": 0,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "18025515839912176",
@@ -579,7 +579,7 @@
       "post_quotes": 0,
       "post_shares": 0,
       "post_views": 0,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "17975931087131206",
@@ -594,8 +594,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 2293,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 2336,
+      "data_fetched_at": "2026-10-12T19:20:55"
     },
     {
       "post_id": "18121000303934597",
@@ -610,8 +610,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 113,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 146,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "18130337728685596",
@@ -626,8 +626,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 2540,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 2580,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "17973068724157748",
@@ -638,12 +638,12 @@
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
       "post_likes": 2,
-      "post_replies": 0,
+      "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 27,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 29,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "17964548369984005",
@@ -653,13 +653,13 @@
       "post_media_type": "TEXT_POST",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 32,
+      "post_likes": 33,
       "post_replies": 1,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 979,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 1035,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "17969400099169195",
@@ -674,8 +674,8 @@
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 504,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 570,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "18135077470658354",
@@ -685,13 +685,13 @@
       "post_media_type": "TEXT_POST",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 5,
+      "post_likes": 6,
       "post_replies": 2,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 130,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 205,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "18015539756984642",
@@ -701,13 +701,13 @@
       "post_media_type": "TEXT_POST",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 149,
-      "post_replies": 22,
-      "post_reposts": 2,
+      "post_likes": 222,
+      "post_replies": 43,
+      "post_reposts": 3,
       "post_quotes": 0,
       "post_shares": 3,
-      "post_views": 11452,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 17275,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "17960034600235921",
@@ -717,13 +717,13 @@
       "post_media_type": "IMAGE",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 15,
+      "post_likes": 29,
       "post_replies": 3,
       "post_reposts": 1,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 438,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 598,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "18101707271529280",
@@ -733,13 +733,13 @@
       "post_media_type": "CAROUSEL_ALBUM",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 9,
-      "post_replies": 0,
+      "post_likes": 23,
+      "post_replies": 6,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 89,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 192,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "18151009951540960",
@@ -749,13 +749,13 @@
       "post_media_type": "IMAGE",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 3,
-      "post_replies": 2,
+      "post_likes": 8,
+      "post_replies": 3,
       "post_reposts": 0,
       "post_quotes": 0,
       "post_shares": 0,
-      "post_views": 85,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_views": 219,
+      "data_fetched_at": "2026-10-12T19:20:30"
     },
     {
       "post_id": "17907436584329491",
@@ -765,13 +765,175 @@
       "post_media_type": "VIDEO",
       "post_is_quote_post": false,
       "post_link_attachment_url": null,
-      "post_likes": 100,
+      "post_likes": 2153,
+      "post_replies": 25,
+      "post_reposts": 9,
+      "post_quotes": 2,
+      "post_shares": 571,
+      "post_views": 54458,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18180442540437133",
+      "post_timestamp": "2026-10-10T19:08:27+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeUzK3ICORI",
+      "post_media_type": "REPOST_FACADE",
+      "post_is_quote_post": false,
+      "post_views": 0,
+      "post_likes": 0,
+      "post_replies": 0,
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18225723613333202",
+      "post_timestamp": "2026-10-10T20:00:32+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeU5ITjDpgw",
+      "post_media_type": "TEXT_POST",
+      "post_text": "В Поттериане полно людей, которых стоит бояться из-за заклинаний.\nА Рите Скитер палочка и заклинания почти не нужны. Ей хватает пера, газеты и уверенности, что читатели всё равно проглотят историю, если она достаточно грязная и мерзкая.\nГарри после Турнира. Гермиона и Виктор Крам. Опасный полувеликан, которому почему-то доверили преподавать детям. Чужая травма, чужая личная жизнь, чужие слабости - всё можно превратить в кричащий заголовок.",
+      "post_is_quote_post": false,
+      "post_views": 488,
+      "post_likes": 2,
       "post_replies": 2,
-      "post_reposts": 1,
-      "post_quotes": 1,
-      "post_shares": 17,
-      "post_views": 1470,
-      "data_fetched_at": "2026-10-10T15:49:16"
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18097238897559352",
+      "post_timestamp": "2026-10-11T04:02:12+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeVwQGBiIIn",
+      "post_media_type": "TEXT_POST",
+      "post_text": "Есть одна сцена в \"Ордене Феникса\", после которой я обожаю Макгонагалл ещё больше.\nПосле ухода Фреда и Джорджа Пивз устроил в Хогвартсе настоящий хаос. В какой-то момент он пытался открутить огромную хрустальную люстру.\nМимо проходила Макгонагалл.\nЗаместитель директора. Строжайший преподаватель. Женщина, от одного взгляда которой ученики вспоминали все школьные правила.\nИ что она сделала?",
+      "post_is_quote_post": false,
+      "post_views": 35880,
+      "post_likes": 774,
+      "post_replies": 39,
+      "post_shares": 2,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18116379335516738",
+      "post_timestamp": "2026-10-11T07:32:25+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeWITyaiJHo",
+      "post_media_type": "REPOST_FACADE",
+      "post_is_quote_post": false,
+      "post_views": 0,
+      "post_likes": 0,
+      "post_replies": 0,
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18180277579449523",
+      "post_timestamp": "2026-10-11T08:00:24+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeWLgtGj4uc",
+      "post_media_type": "TEXT_POST",
+      "post_text": "Артур Уизли выиграл в лотерею 700 галлеонов. И совершенно случайно запустил самый знаменитый побег в мире магии.\n\nНа выигранные деньги Уизли всей семьёй отправились в Египет. Их фотографию напечатали в \"Ежедневном пророке\". А на плече Рона, как обычно, сидела Короста.\n\nВо время посещения Азкабана Корнелиус Фадж дал Сириусу Блэку почитать газету.",
+      "post_is_quote_post": false,
+      "post_views": 100855,
+      "post_likes": 912,
+      "post_replies": 44,
+      "post_shares": 39,
+      "post_reposts": 4,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18136072078649831",
+      "post_timestamp": "2026-10-11T08:13:21+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeWM_hnCCWC",
+      "post_media_type": "REPOST_FACADE",
+      "post_is_quote_post": false,
+      "post_views": 0,
+      "post_likes": 0,
+      "post_replies": 0,
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18464746669136537",
+      "post_timestamp": "2026-10-11T14:00:51+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeW0wvOk9Dx",
+      "post_media_type": "VIDEO",
+      "post_text": "Драко Малфой? Нет. Хуже. Том Фелтон с гитарой. 😏🎸",
+      "post_is_quote_post": false,
+      "post_views": 9783,
+      "post_likes": 616,
+      "post_replies": 25,
+      "post_shares": 56,
+      "post_reposts": 21,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18207935788370776",
+      "post_timestamp": "2026-10-11T20:00:12+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeXd4tZgX1O",
+      "post_media_type": "TEXT_POST",
+      "post_text": "У Флёр Делакур одна из самых трогательных историй любви в Поттериане. ❤️\nПосле нападения Грейбека лицо Билла было страшно изранено. Молли боялась, что Флёр теперь передумает выходить за него замуж, и к ранам сына добавится ещё и разбитое сердце. Ведь все привыкли видеть в ней ослепительную красавицу, слишком увлечённую собственной внешностью .Но Флёр искренне возмутилась самой мыслью, что какие-то шрамы могут помешать их свадьбе или изменить её чувства к Биллу.",
+      "post_is_quote_post": false,
+      "post_views": 22733,
+      "post_likes": 343,
+      "post_replies": 13,
+      "post_shares": 3,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18496829506101355",
+      "post_timestamp": "2026-10-12T03:59:58+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+      "post_media_type": "IMAGE",
+      "post_text": "ДОББИ. РОЖДЁННЫЙ СВОБОДНЫМ \n\nА что, если бы Добби был одержим идеей освободить всех эльфов? Много веков назад волшебники поработили домовых эльфов. Шли годы, сменялись поколения, рушились великие династии, но рабство оставалось неизменным. Постепенно эльфы забыли, что когда-то были свободны. Они утратили гордость, чувство собственного достоинства и даже желание распоряжаться своей судьбой. Подчинение стало их долгом, а страх перед хозяевами превратился в привычку на уровне рефлексов.",
+      "post_is_quote_post": false,
+      "post_views": 725,
+      "post_likes": 8,
+      "post_replies": 13,
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18285473392292597",
+      "post_timestamp": "2026-10-12T08:00:32+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeYwUjYiDw3",
+      "post_media_type": "CAROUSEL_ALBUM",
+      "post_text": "Золотая коллекция мемов по Поттериане. Выпуск №1. 😂\n\nСобрал классику, над которой мы ржали много лет назад. И, судя по всему, повзрослеть нам так и не удалось.\n\nА теперь ваша очередь. Тащите в комментарии самые смешные мемы по Гарри Поттеру, которые у вас есть. Самые убойные попадут в следующую часть «Золотой коллекции»!\nПосмотрим, кто сможет переплюнуть эту подборку. 😈",
+      "post_is_quote_post": false,
+      "post_views": 260,
+      "post_likes": 14,
+      "post_replies": 2,
+      "post_shares": 0,
+      "post_reposts": 0,
+      "post_quotes": 0,
+      "data_fetched_at": "2026-10-12T19:20:30"
+    },
+    {
+      "post_id": "18128182021878650",
+      "post_timestamp": "2026-10-12T14:00:00+0000",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeZZdZTD5wb",
+      "post_media_type": "VIDEO",
+      "post_text": "Я нашёл старое интервью юного Тома Фелтона. Кажется, это самое обаятельное видео, которое я переводил. ❤️",
+      "post_is_quote_post": false,
+      "post_views": 7856,
+      "post_likes": 340,
+      "post_replies": 4,
+      "post_shares": 28,
+      "post_reposts": 5,
+      "post_quotes": 2,
+      "data_fetched_at": "2026-10-12T19:20:30"
     }
   ]
 }
