@@ -1,0 +1,111 @@
+{
+  "batch": 5,
+  "group": "other_long_roots",
+  "posts": [
+    {
+      "post_id": "17859475398679058",
+      "url": "https://www.threads.com/@mirpottera/post/DbgdbFzCFR1",
+      "media_type": "IMAGE",
+      "text_length": 495,
+      "post_timestamp": "2026-08-01T18:15:08+0000",
+      "total": 1,
+      "parts": [
+        {
+          "index": 1,
+          "total": 1,
+          "text": "Иногда думаю, как вообще спали слизеринцы. Ты просыпаешься ночью и идёшь в гостиную за водой. Там темно. Только из окон идёт этот мутный зелёный свет. Потому что за стеклом не двор и не ночное небо. Там Чёрное озеро. И пока ты стоишь у окна, по воде проходит огромная тень. Настолько большая, что на секунду всё стекло становится чёрным. Ты убеждаешь себя, что это кальмар. Обычный гигантский кальмар. Очень успокаивает, конечно. А потом тень возвращается. И останавливается прямо напротив окна.",
+          "permalink": "https://www.threads.com/@mirpottera/post/DbgdbFzCFR1",
+          "media": [
+            "https://www.threads.com/@mirpottera/post/DbgdbFzCFR1/media"
+          ]
+        }
+      ],
+      "available": 11,
+      "verified_url": "https://www.threads.com/@mirpottera/post/DbgdbFzCFR1",
+      "success": true
+    },
+    {
+      "post_id": "17903883189550683",
+      "url": "https://www.threads.com/@mirpottera/post/DbuLx26iFCM",
+      "media_type": "IMAGE",
+      "text_length": 418,
+      "post_timestamp": "2026-08-07T02:10:20+0000",
+      "total": 2,
+      "parts": [
+        {
+          "index": 1,
+          "total": 2,
+          "text": "Представляю первое утро маглорождённого в Хогвартсе.\nПросыпаешься, несколько секунд смотришь на незнакомый потолок и не сразу понимаешь, где находишься. Потом замечаешь занавески вокруг кровати, мантию на стуле, палочку рядом , и вспоминаешь: всё это правда. Ты волшебник. Наверное, хотелось одновременно смеяться, плакать и спрятаться под одеяло. Потому что за дверью начинается жизнь, о которой ты ничего не знаешь.",
+          "permalink": "https://www.threads.com/@mirpottera/post/DbuLx26iFCM",
+          "media": [
+            "https://www.threads.com/@mirpottera/post/DbuLx26iFCM/media"
+          ]
+        },
+        {
+          "index": 2,
+          "total": 2,
+          "text": "Там говорящие портреты, призраки, движущиеся лестницы и дети, для которых магия всегда была обыденностью.",
+          "permalink": "https://www.threads.com/@mirpottera/post/DbuLxi2CCR1",
+          "media": []
+        }
+      ],
+      "available": 5,
+      "verified_url": "https://www.threads.com/@mirpottera/post/DbuLx26iFCM",
+      "success": true
+    },
+    {
+      "post_id": "18132334576654345",
+      "url": "https://www.threads.com/@mirpottera/post/Dcn_nK-DMoM",
+      "media_type": "CAROUSEL_ALBUM",
+      "text_length": 451,
+      "post_timestamp": "2026-08-29T12:59:58+0000",
+      "total": 2,
+      "parts": [
+        {
+          "index": 1,
+          "total": 2,
+          "text": "Интересно, как одна добавленная сцена смогла настолько сильно повлиять на восприятие их отношений.❤️",
+          "permalink": "https://www.threads.com/@mirpottera/post/Dcn_nK-DMoM",
+          "media": []
+        },
+        {
+          "index": 2,
+          "total": 2,
+          "text": "t.me/mir_p…",
+          "permalink": "https://www.threads.com/@mirpottera/post/DcqpjNwiAsf",
+          "media": []
+        }
+      ],
+      "available": 5,
+      "verified_url": "https://www.threads.com/@mirpottera/post/Dcn_nK-DMoM",
+      "success": true
+    },
+    {
+      "post_id": "18101707271529280",
+      "url": "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
+      "media_type": "CAROUSEL_ALBUM",
+      "text_length": 402,
+      "post_timestamp": "2026-10-10T08:00:01+0000",
+      "total": 2,
+      "parts": [
+        {
+          "index": 1,
+          "total": 2,
+          "text": "Мне уже интересно, кому тут особенно \"повезёт\" с ..... 😅",
+          "permalink": "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
+          "media": []
+        },
+        {
+          "index": 2,
+          "total": 2,
+          "text": "Представляю человека, которому выпала Амбридж: «А можно пересдать лайк? Я осознал ошибку» 😂 В моей викторине по Поттериане тоже случаются неожиданные варианты ответа, но хотя бы судьбу с Амбридж связывать не придётся.\nt.me/mir_p…",
+          "permalink": "https://www.threads.com/@mirpottera/post/DeUnYWtjYEg",
+          "media": []
+        }
+      ],
+      "available": 4,
+      "verified_url": "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
+      "success": true
+    }
+  ]
+}
