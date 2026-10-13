@@ -30,7 +30,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18098660969211214",
@@ -58,7 +60,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18124228531689248",
@@ -86,7 +90,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17938310502297695",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17949107832199114",
@@ -114,7 +121,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18128312317652103",
@@ -142,7 +151,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17965205451136687",
@@ -170,7 +181,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18098497835182446",
@@ -198,7 +211,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18084069107418457",
@@ -226,7 +241,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18601282774041347",
@@ -254,7 +271,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18114449845927606",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18135045418611118",
@@ -275,14 +295,17 @@
         "https://www.threads.com/@mirpottera/post/DbfbZyPiDdg",
         "https://www.threads.com/@mirpottera/post/Dbftcd1iODZ"
       ],
-      "full_text": "Фред и Джордж платили первокурсникам за то, чтобы те проверяли на себе экспериментальные сладости. Детям было по одиннадцать лет. Они ели конфету, начинали блевать, падали в обморок или истекали кровью, а близнецы стояли рядом и записывали результат. Но всё нормально. Первокурсники согласились сами. Им заплатили. Гермиона была почти единственным человеком в гостиной, которого смущало, что два старшекурсника проводят \"медицинские\" испытания на детях. Очень смешные близнецы,очень весёлый Хогвартс.\n\nСкоро вопросов станет ещё больше:\nt.me/mir_p…",
+      "full_text": "Фред и Джордж платили первокурсникам за то, чтобы те проверяли на себе экспериментальные сладости. Детям было по одиннадцать лет. Они ели конфету, начинали блевать, падали в обморок или истекали кровью, а близнецы стояли рядом и записывали результат. Но всё нормально. Первокурсники согласились сами. Им заплатили. Гермиона была почти единственным человеком в гостиной, которого смущало, что два старшекурсника проводят \"медицинские\" испытания на детях. Очень смешные близнецы,очень весёлый Хогвартс.\n\nНа первокурсниках ничего не испытываем 😏\n\nЗато можно проверить себя в бесплатной фан-викторине по Поттериане: марафон, разные темы и вызовы друзьям.\n\nСкоро вопросов станет ещё больше:\nhttps://t.me/mir_pottera_quiz_bot",
       "part_boundaries": [
         500,
-        45
+        218
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18128488246646775",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17976528630070263",
@@ -310,7 +333,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18063650183751675",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17895663393375974",
@@ -338,7 +364,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17884775919655303",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17907201705283058",
@@ -359,14 +388,17 @@
         "https://www.threads.com/@mirpottera/post/DboLbw6CEzd",
         "https://www.threads.com/@mirpottera/post/Dbo4z-LiK65"
       ],
-      "full_text": "О потолке в комнате Полумны.\nТам были нарисованы Гарри, Рон, Гермиона, Джинни и Невилл.\nИх изображения соединяла золотая цепочка из одного слова:\n\"Друзья\".\nДля остальных это могла быть просто шумная компания😅 из Хогвартса.\nА для Полумны люди, которых она наконец нашла.♥️\nДевочка, над которой смеялись, у которой прятали вещи и которую привыкли считать странной, нарисовала их у себя над головой.\nЧтобы каждый вечер перед сном видеть: теперь она не одна.🫶\n\nt.me/mir_p…",
+      "full_text": "О потолке в комнате Полумны.\nТам были нарисованы Гарри, Рон, Гермиона, Джинни и Невилл.\nИх изображения соединяла золотая цепочка из одного слова:\n\"Друзья\".\nДля остальных это могла быть просто шумная компания😅 из Хогвартса.\nА для Полумны люди, которых она наконец нашла.♥️\nДевочка, над которой смеялись, у которой прятали вещи и которую привыкли считать странной, нарисовала их у себя над головой.\nЧтобы каждый вечер перед сном видеть: теперь она не одна.🫶\n\nНаверное, настоящее счастье это однажды найти людей, рядом с которыми больше не чувствуешь себя странной ❤️\n\nВозвращаемся к любимым героям вместе в нашей викторине:\n\nhttps://t.me/mir_pottera_quiz_bot",
       "part_boundaries": [
         457,
-        11
+        199
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17866877190599802",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18320344144263646",
@@ -394,7 +426,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17889884388671268",
@@ -424,7 +458,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18613051222046039",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18074520194375953",
@@ -445,14 +482,17 @@
         "https://www.threads.com/@mirpottera/post/DbzULp8CTyR",
         "https://www.threads.com/@mirpottera/post/Db0hJ1YiIDS"
       ],
-      "full_text": "Вот чего я бы реально боялся в Хогвартсе — проспать завтрак. Ты открываешь глаза, смотришь на часы и понимаешь: всё. В Большом зале уже заканчивают есть. Плевать на причёску. Плевать на шарф факультета.Хватаешь мантию и несёшься через половину замка, молясь, чтобы лестницы сегодня не начали выпендриваться. Влетаешь в Большой зал, а там уже кто-то допивает чай, тарелки пустеют, ученики расходятся на уроки. И единственная мысль: \"Блядь, хоть хлеб оставьте\". Вот вам и волшебная школа.\n\nt.me/mir_p…",
+      "full_text": "Вот чего я бы реально боялся в Хогвартсе — проспать завтрак. Ты открываешь глаза, смотришь на часы и понимаешь: всё. В Большом зале уже заканчивают есть. Плевать на причёску. Плевать на шарф факультета.Хватаешь мантию и несёшься через половину замка, молясь, чтобы лестницы сегодня не начали выпендриваться. Влетаешь в Большой зал, а там уже кто-то допивает чай, тарелки пустеют, ученики расходятся на уроки. И единственная мысль: \"Блядь, хоть хлеб оставьте\". Вот вам и волшебная школа.\n\nЛадно, хлеб мы вам не обещаем 😅\n\nЗато в нашей бесплатной викторине можно снова вернуться в Хогвартс — и опаздывать туда разрешено:\n\nhttps://t.me/mir_pottera_quiz_bot",
       "part_boundaries": [
         486,
-        11
+        166
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18006025268956286",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18106297520131874",
@@ -480,7 +520,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18212731411352146",
@@ -508,7 +550,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18124078225767366",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18555618826073861",
@@ -536,7 +581,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18089910026170786",
@@ -564,7 +611,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18147339193545401",
@@ -585,14 +634,17 @@
         "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
         "https://www.threads.com/@mirpottera/post/DceNIwHiICY"
       ],
-      "full_text": "Медальон Слизерина неделями давил на Гарри, Рона и Гермиону.\nОни становились раздражительными, злыми, подозрительными. Рон под его влиянием в итоге вообще ушёл.\n\nА когда этот же крестраж на шее у Амбридж.\n\nОна спокойно носит его каждый день, допрашивает маглорождённых и выглядит абсолютно в своей стихии.\nНе знаю, что смешнее: что крестраж Волан-де-Морта каким-то образом оказался у Амбридж…\nили что на её характере его присутствие почти невозможно заметить.😅\n\nТакие детали — в викторине:\nt.me/mir_p…",
+      "full_text": "Медальон Слизерина неделями давил на Гарри, Рона и Гермиону.\nОни становились раздражительными, злыми, подозрительными. Рон под его влиянием в итоге вообще ушёл.\n\nА когда этот же крестраж на шее у Амбридж.\n\nОна спокойно носит его каждый день, допрашивает маглорождённых и выглядит абсолютно в своей стихии.\nНе знаю, что смешнее: что крестраж Волан-де-Морта каким-то образом оказался у Амбридж…\nили что на её характере его присутствие почти невозможно заметить.😅\n\nАмбридж настолько Амбридж, что даже крестраж ничего особо не изменил 😅\n\nТакие детали — в викторине:\nhttps://t.me/mir_pottera_quiz_bot",
       "part_boundaries": [
         461,
-        39
+        134
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17904777711533595",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17932249074366851",
@@ -620,7 +672,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18134750374627673",
@@ -648,7 +702,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17882286615501806",
@@ -676,7 +732,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17905551231544123",
@@ -730,7 +788,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17904365997502937",
@@ -758,7 +818,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18101751887459670",
@@ -786,7 +848,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17913115647264281",
@@ -814,7 +878,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18075609644399210",
@@ -842,7 +908,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18118223912473082",
@@ -870,7 +938,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18207102919366441",
@@ -898,7 +968,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17886356682615119",
@@ -926,7 +998,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18167210773409335",
@@ -947,14 +1021,17 @@
         "https://www.threads.com/@mirpottera/post/DdI7nQAEvqm",
         "https://www.threads.com/@mirpottera/post/DdJBRb3iJTN"
       ],
-      "full_text": "Я не могу перестать смеяться с юридической стороны истории с Сириусом.\n\nСириус Блэк :\nБЕГЛЫЙ  УБИЙЦА ПО ВЕРСИИ МИНИСТЕРСТВА.\nЕго ищут дементоры.\nЕго ищет Министерство.\nЕго боится половина страны.\n\nНо потом он пишет Гарри:\n\nда, как твой крёстный разрешаю тебе ходить в Хогсмид.\n\nИ Хогвартс такой:\nа, ну тогда нормально.\n\n😭\nТо есть посадить Сириуса без суда — пожалуйста.\n\nНо лишить его права подписывать школьные разрешения?\nЗа мелочные нарушение закона , например как убийство таких прав не лешаем🤨\n\nсбежал из Азкабана, скрывается от Министерства, официально опаснейший преступник страны — но разрешение в Хогсмид подписать может\nесли любите такие детали Поттерианы, у меня есть бот «Мир Поттера | Викторина»\nt.me/mir_p…⁠�",
+      "full_text": "Я не могу перестать смеяться с юридической стороны истории с Сириусом.\n\nСириус Блэк :\nБЕГЛЫЙ  УБИЙЦА ПО ВЕРСИИ МИНИСТЕРСТВА.\nЕго ищут дементоры.\nЕго ищет Министерство.\nЕго боится половина страны.\n\nНо потом он пишет Гарри:\n\nда, как твой крёстный разрешаю тебе ходить в Хогсмид.\n\nИ Хогвартс такой:\nа, ну тогда нормально.\n\n😭\nТо есть посадить Сириуса без суда — пожалуйста.\n\nНо лишить его права подписывать школьные разрешения?\nЗа мелочные нарушение закона , например как убийство таких прав не лешаем🤨\n\nсбежал из Азкабана, скрывается от Министерства, официально опаснейший преступник страны — но разрешение в Хогсмид подписать может\nесли любите такие детали Поттерианы, у меня есть бот «Мир Поттера | Викторина»\nhttps://t.me/mir_pottera_quiz_bot⁠�",
       "part_boundaries": [
         500,
-        222
+        244
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17965630716178947",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18083945171701095",
@@ -982,7 +1059,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17973228537137860",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18106675172614729",
@@ -1010,7 +1090,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18073775114743970",
@@ -1038,7 +1120,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18102128069564918",
@@ -1066,7 +1150,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17948465820318555",
@@ -1094,7 +1180,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18008092971005913",
@@ -1122,7 +1210,9 @@
       ],
       "contains_bot_link": true,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17859475398679058",
@@ -1176,7 +1266,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18438630922125898",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18132334576654345",
@@ -1197,14 +1290,17 @@
         "https://www.threads.com/@mirpottera/post/Dcn_nK-DMoM",
         "https://www.threads.com/@mirpottera/post/DcqpjNwiAsf"
       ],
-      "full_text": "Знаменитого танца Гарри и Гермионы в палатке в книге вообще нет.\n\nПосле ухода Рона в фильме Гарри включает музыку и приглашает Гермиону танцевать. На несколько минут они будто выныривают из всей этой войны — и сцена получается настолько близкой, что её до сих пор разбирают и как дружбу, и как намёк на Гармонию.\n\nА в книге этого эпизода нет совсем.\n\nИнтересно, как одна добавленная сцена смогла настолько сильно повлиять на восприятие их отношений.❤️\n\nt.me/mir_p…",
+      "full_text": "Знаменитого танца Гарри и Гермионы в палатке в книге вообще нет.\n\nПосле ухода Рона в фильме Гарри включает музыку и приглашает Гермиону танцевать. На несколько минут они будто выныривают из всей этой войны — и сцена получается настолько близкой, что её до сих пор разбирают и как дружбу, и как намёк на Гармонию.\n\nА в книге этого эпизода нет совсем.\n\nИнтересно, как одна добавленная сцена смогла настолько сильно повлиять на восприятие их отношений.❤️\n\nМне нравится эта сцена, хотя её и нет в книге. Она ничего не подтверждает — но ощущение от Гарри и Гермионы меняет сильно.\n\nhttps://t.me/mir_pottera_quiz_bot",
       "part_boundaries": [
         451,
-        11
+        157
       ],
       "contains_bot_link": true,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18587112598067365",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18101707271529280",
@@ -1225,15 +1321,18 @@
         "https://www.threads.com/@mirpottera/post/DeTmrAEElgK",
         "https://www.threads.com/@mirpottera/post/DeUnYWtjYEg"
       ],
-      "full_text": "Последняя цифра лайка определит твоего партнёра в Поттериане 😏\n\nСтавь лайк, смотри последнюю цифру и листай до своей карточки. Не жульничать 😈\n\nСПОЙЛЕР:\n0. Драко Малфой\n1. Люциус Малфой\n2. Гермиона Грейнджер\n3. Седрик Диггори\n4. Луна Лавгуд\n5. Волан-де-Морт\n6. Долорес Амбридж\n7. Фред и Джордж Уизли\n8. Беллатриса Лестрейндж\n9. Северус Снейп\n\nМне уже интересно, кому тут особенно \"повезёт\" с ..... 😅\n\nПредставляю человека, которому выпала Амбридж: «А можно пересдать лайк? Я осознал ошибку» 😂 В моей викторине по Поттериане тоже случаются неожиданные варианты ответа, но хотя бы судьбу с Амбридж связывать не придётся.\nt.me/mir_p…",
+      "full_text": "Последняя цифра лайка определит твоего партнёра в Поттериане 😏\n\nСтавь лайк, смотри последнюю цифру и листай до своей карточки. Не жульничать 😈\n\nСПОЙЛЕР:\n0. Драко Малфой\n1. Люциус Малфой\n2. Гермиона Грейнджер\n3. Седрик Диггори\n4. Луна Лавгуд\n5. Волан-де-Морт\n6. Долорес Амбридж\n7. Фред и Джордж Уизли\n8. Беллатриса Лестрейндж\n9. Северус Снейп\n\nМне уже интересно, кому тут особенно \"повезёт\" с ..... 😅\n\nПредставляю человека, которому выпала Амбридж: «А можно пересдать лайк? Я осознал ошибку» 😂 В моей викторине по Поттериане тоже случаются неожиданные варианты ответа, но хотя бы судьбу с Амбридж связывать не придётся.\nhttps://t.me/mir_pottera_quiz_bot/quiz",
       "part_boundaries": [
         402,
-        230
+        257
       ],
       "contains_bot_link": true,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18069062081782619",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     }
   ],
-  "quality_note": "Part 1 restored from exact original API post_text. Parts 2+ from initial browser extraction may omit preceding paragraphs; they require v2 verification before publication."
+  "quality_note": "Part 1 restored verbatim from original API. Part 2 updated from Windsor author reply where unambiguous; parts 3+ and unmatched replies may still require browser v2 validation. Full text includes all comments and promotional continuations."
 }
