@@ -30,7 +30,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18085561190315842",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18092802638545644",
@@ -58,7 +61,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18142994920503584",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17984202864061186",
@@ -86,7 +92,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18109973267326443",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18017558798715830",
@@ -114,7 +123,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17860736700675361",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17923251762180905",
@@ -142,7 +154,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18041513390814516",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18007264379766608",
@@ -170,7 +185,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18388365469202409",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18436930054132027",
@@ -200,7 +218,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18113730697985973",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18160861603470421",
@@ -228,7 +249,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18613441582032352",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18074029601395370",
@@ -258,7 +282,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18458168881140626",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17949706377033314",
@@ -288,7 +315,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18087268103262500",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17911327137265300",
@@ -316,7 +346,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17914788735244409",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18577130197066804",
@@ -344,7 +377,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18098133371622235",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18020716094910293",
@@ -372,7 +408,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17896213137604279",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18195944701381462",
@@ -402,7 +441,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17867613414639333",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18342117148253572",
@@ -430,7 +472,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18073247330420994",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17983645464051977",
@@ -460,7 +505,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18100321601261473",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18133401556714233",
@@ -490,7 +538,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18106030760152392",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17916390036432657",
@@ -520,7 +571,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18069282188553196",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18184452538404715",
@@ -550,7 +604,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17897276859377492",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18114493298102851",
@@ -580,7 +637,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18017699519869017",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18461718025184189",
@@ -610,7 +670,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18097690520366690",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18130269259644673",
@@ -638,7 +701,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18217113655318763",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17996995787796663",
@@ -668,7 +734,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18112139801051528",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18616302796042543",
@@ -698,7 +767,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18133836946627787",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18456651334143176",
@@ -728,7 +800,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17966884383070711",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18134297371621259",
@@ -756,7 +831,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18118446472917204",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18641246971032767",
@@ -784,7 +862,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18020123729863996",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18385798864204017",
@@ -812,7 +893,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18121055680893409",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18456307201142563",
@@ -840,7 +924,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18231377074320884",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17974428626919416",
@@ -868,7 +955,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18142753429560505",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17893873797668801",
@@ -896,7 +986,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18499382962102714",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18106998509146231",
@@ -930,7 +1023,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18015689798732061",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18015191846923889",
@@ -962,7 +1058,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18111360343825210",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17928083079403814",
@@ -990,7 +1089,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18105699884181681",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18611715310052116",
@@ -1018,7 +1120,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17917047804434846",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17942906205318484",
@@ -1046,7 +1151,9 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18407809276080562",
@@ -1074,7 +1181,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18109564397114928",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18113912383967391",
@@ -1102,7 +1212,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18155712508496110",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18151722070512356",
@@ -1123,14 +1236,17 @@
         "https://www.threads.com/@mirpottera/post/Dcla0LliQ7U",
         "https://www.threads.com/@mirpottera/post/Dcla1RJCff-"
       ],
-      "full_text": "Я долго пытался понять, почему именно Драмиона не умирает уже столько лет. В каноне ведь почти нет материала в духе \"смотрите, между ними что-то есть\". Скорее наоборот: Гермиона и Драко максимально неудобны друг для друга. И, похоже, в этом весь прикол. Фандому дают умную, сильную Гермиону, Драко с кучей отвратительных убеждений и огромную пропасть между ними — а дальше включается любимое: \"Так. А что должно произойти, чтобы эти двое всё-таки однажды оказались вместе?\"\n\nP.S: На 3 вещи можно смотреть бесконечно : на то как горит огонь, как течет вода ... И на арты по Драмионе 😍",
+      "full_text": "Я долго пытался понять, почему именно Драмиона не умирает уже столько лет. В каноне ведь почти нет материала в духе \"смотрите, между ними что-то есть\". Скорее наоборот: Гермиона и Драко максимально неудобны друг для друга. И, похоже, в этом весь прикол. Фандому дают умную, сильную Гермиону, Драко с кучей отвратительных убеждений и огромную пропасть между ними — а дальше включается любимое: \"Так. А что должно произойти, чтобы эти двое всё-таки однажды оказались вместе?\"\n\nИ вот на этот вопрос люди пишут фанфики уже десятилетиями 💔\n\nP.S: На 3 вещи можно смотреть бесконечно : на то как горит огонь, как течет вода ... И на арты по Драмионе 😍",
       "part_boundaries": [
         473,
-        109
+        171
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18124217050875572",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18121929191312637",
@@ -1158,7 +1274,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18387096685163882",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18085746779243637",
@@ -1186,7 +1305,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18622027645051048",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18082082264333406",
@@ -1214,7 +1336,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18146498719479984",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17905115691510735",
@@ -1242,7 +1367,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18019456088716432",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18131973913561242",
@@ -1270,7 +1398,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17877157236691812",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18135214393743087",
@@ -1298,7 +1429,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18332293897276740",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18141525967568841",
@@ -1326,7 +1460,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18335223109259533",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18120686972304815",
@@ -1354,7 +1491,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18138971683718894",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18091724405158007",
@@ -1382,7 +1522,9 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_confirmed": false,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18127695295756991",
@@ -1410,7 +1552,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18096794756417326",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18132964348629502",
@@ -1438,7 +1583,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17899428459377498",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18070777397534641",
@@ -1466,7 +1614,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18201389191373376",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18147610333553449",
@@ -1494,7 +1645,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18389791870166806",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18022069205873743",
@@ -1522,7 +1676,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18115962287071531",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18233596039321325",
@@ -1552,7 +1709,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17907887754306465",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18082177682325642",
@@ -1584,7 +1744,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18136502305617037",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18103660046524436",
@@ -1612,8 +1775,11 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18175638634439474",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     }
   ],
-  "quality_note": "First parts use the original API post_text verbatim. Subsequent parts from browser extraction version 1 may omit earlier paragraphs; do not use as publication-ready text until rescanned."
+  "quality_note": "Part 1 restored verbatim from original API. Part 2 updated from Windsor author reply where unambiguous; parts 3+ and unmatched replies may still require browser v2 validation. Full text includes all comments and promotional continuations."
 }
