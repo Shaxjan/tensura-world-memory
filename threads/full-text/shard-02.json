@@ -30,7 +30,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18112692977043039",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18022439273860519",
@@ -58,7 +61,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18190283383394437",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18028738250852928",
@@ -86,7 +92,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18099088382326823",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18107875034132797",
@@ -116,7 +125,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18113533213999339",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18149052565541285",
@@ -144,7 +156,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18078913979359665",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18128298898687975",
@@ -172,7 +187,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18243348787312115",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18019939106712062",
@@ -200,7 +218,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18142904737499479",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18164355946486842",
@@ -228,7 +249,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18100642766198200",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17908977951535788",
@@ -256,7 +280,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17915351076264493",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17983209807073213",
@@ -284,7 +311,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17872629792635117",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17962858053195651",
@@ -312,7 +342,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18124594216871050",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18123727057897215",
@@ -340,7 +373,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18124818565855416",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18032709794847139",
@@ -368,7 +404,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17971920321138613",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18206385616368241",
@@ -396,7 +435,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17991725646032202",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17981553084094260",
@@ -424,7 +466,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18144213505569037",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17928698976409376",
@@ -452,7 +497,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17934151659399156",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18009274034959612",
@@ -480,7 +528,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17980882130900927",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18094564298550359",
@@ -508,7 +559,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18123629215893846",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18136201123724380",
@@ -536,7 +590,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18025372535914425",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17914382610261269",
@@ -564,7 +621,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18169569940460926",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18103827052986354",
@@ -585,14 +645,17 @@
         "https://www.threads.com/@mirpottera/post/Ddk05SZk_rI",
         "https://www.threads.com/@mirpottera/post/Ddk07HQkzYv"
       ],
-      "full_text": "Гарри: \"Я стал хозяином Бузинной палочки.\" Вернон: \"Дадли был бы хозяином хозяина Бузинной палочки.\"\n\nГарри: \"Я разговариваю со змеями.\" \nВернон: \"Змеи бы с Дадли разговаривали по-английски.\" \n\nГарри: \"Дядя Вернон, Распределяющая шляпа отправила меня в Гриффиндор.\" \nВернон: \"Дадли бы распределил Распределяющую шляпу.\" \n\nГарри: \"У меня есть мантия-невидимка.\" Вернон: \"При Дадли она бы становилась видимой.\"\n\nГарри: \"Я открыл Тайную комнату.\"\nВернон: \"Тайная комната бы рассказала Дадли все свои тайны.\"",
+      "full_text": "Гарри: \"Я стал хозяином Бузинной палочки.\" Вернон: \"Дадли был бы хозяином хозяина Бузинной палочки.\"\n\nГарри: \"Я разговариваю со змеями.\" \nВернон: \"Змеи бы с Дадли разговаривали по-английски.\" \n\nГарри: \"Дядя Вернон, Распределяющая шляпа отправила меня в Гриффиндор.\" \nВернон: \"Дадли бы распределил Распределяющую шляпу.\" \n\nГарри: \"У меня есть мантия-невидимка.\" Вернон: \"При Дадли она бы становилась видимой.\"\n\nГарри: \"Меня выбрал Кубок Огня.\"\nВернон: \"Дадли бы выбирал участников Кубка Огня.\" \n\nГарри: \"Я открыл Тайную комнату.\" \nВернон: \"Тайная комната бы рассказала Дадли все свои тайны.\"",
       "part_boundaries": [
         408,
-        94
+        180
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18412636720082982",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17968031262150658",
@@ -620,7 +683,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18011406509960383",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18133826350656103",
@@ -648,7 +714,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18035408567814598",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18026922956899451",
@@ -676,7 +745,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18007661480779763",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18114440936044801",
@@ -706,7 +778,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17961813234209675",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18118210691066535",
@@ -734,7 +809,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18113121167045921",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "17921407899221787",
@@ -764,7 +842,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18392318233162045",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17894468142421022",
@@ -792,7 +873,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18136319569633811",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18112089176158273",
@@ -820,7 +904,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18010411751978484",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18627204766029160",
@@ -848,7 +935,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18165740659474431",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18438344818181346",
@@ -882,7 +972,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18231534544322023",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18144026989603455",
@@ -910,7 +1003,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18368887525240948",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18098158655234944",
@@ -938,7 +1034,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18111798860518709",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18076407374436050",
@@ -966,7 +1065,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17883432756688069",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18184846126419210",
@@ -996,7 +1098,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17902871127597835",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18074372663561040",
@@ -1024,7 +1129,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18381753121226832",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18129641668739821",
@@ -1052,7 +1160,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18074805395755818",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18105703636952419",
@@ -1080,7 +1191,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17952173706266833",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18112083713590782",
@@ -1112,7 +1226,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18077639921533795",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18000118775814352",
@@ -1136,17 +1253,20 @@
         "https://www.threads.com/@mirpottera/post/DeHG5hJinkM",
         "https://www.threads.com/@mirpottera/post/DeHG7ogCtYX"
       ],
-      "full_text": "— Если я когда-нибудь сделаю тебе предложение, тайн не будет, — произнёс Драко с такой гипнотической серьёзностью, что у Гермионы перехватило дыхание. — Тайные помолвки подразумевают, что кому-то из двоих стыдно или что это какая-то грязная интрижка. А ты — не та женщина, которую прячут по углам. Если бы я надел на твой палец кольцо, об этом немедленно узнало бы всё Министерство.\n\n— Вот видишь, Грейнджер. Поттеру пришлось завести троих детей только ради того, чтобы регулярно получать углеводы на рабочем месте, — он укоризненно покачал головой. — А я приношу тебе идеальный ассам просто так, по доброте душевной. Согласись, я обхожусь тебе гораздо дешевле. И заметь, никаких подгузников в моём кабинете.\n\nЯ просто подарок судьбы, а не коллега.\nГермиона возмущённо открыла рот, но Малфой опередил её гневную тираду. Он притворно вздохнул и с обречённым видом потянулся за чистым пергаментом и пером.\n— Но если ты настаиваешь, что для легальной доставки напитков в твой кабинет нам не хватает только штампа и троих детей... Мерлин с тобой, Грейнджер. Но с детьми придётся подождать хотя бы до выходных, а заявление в Департамент регистрации браков я могу отправить прямо сейчас.\n\n— А я разве хоть раз сказал, что хочу от неё избавиться?\nДрако поднялся из-за стола, одним плавным движением поправляя мантию. Никакого вызова или привычного сарказма. Он смотрел на неё с абсолютным спокойствием, ясно давая понять: ему наскучило ходить вокруг да около.\n— Очевидное заключается в том, что мне не нужна никакая магия, чтобы хотеть просыпаться рядом с тобой.\nОн не стал задерживаться для эффектной паузы.\n— До завтра, Грейнджер, — кивнул он у выхода. — С наступающим.\n\nДо завтра, Грейнджер\" — GlassFox",
+      "full_text": "— Если я когда-нибудь сделаю тебе предложение, тайн не будет, — произнёс Драко с такой гипнотической серьёзностью, что у Гермионы перехватило дыхание. — Тайные помолвки подразумевают, что кому-то из двоих стыдно или что это какая-то грязная интрижка. А ты — не та женщина, которую прячут по углам. Если бы я надел на твой палец кольцо, об этом немедленно узнало бы всё Министерство.\n\nХотя бы ради того, чтобы ни у одного кретина вроде Кормака больше не возникало желания подходить к тебе ближе, чем на пять ярдов.\n\n— Вот видишь, Грейнджер. Поттеру пришлось завести троих детей только ради того, чтобы регулярно получать углеводы на рабочем месте, — он укоризненно покачал головой. — А я приношу тебе идеальный ассам просто так, по доброте душевной. Согласись, я обхожусь тебе гораздо дешевле. И заметь, никаких подгузников в моём кабинете.\n\nЯ просто подарок судьбы, а не коллега.\nГермиона возмущённо открыла рот, но Малфой опередил её гневную тираду. Он притворно вздохнул и с обречённым видом потянулся за чистым пергаментом и пером.\n— Но если ты настаиваешь, что для легальной доставки напитков в твой кабинет нам не хватает только штампа и троих детей... Мерлин с тобой, Грейнджер. Но с детьми придётся подождать хотя бы до выходных, а заявление в Департамент регистрации браков я могу отправить прямо сейчас.\n\n— А я разве хоть раз сказал, что хочу от неё избавиться?\nДрако поднялся из-за стола, одним плавным движением поправляя мантию. Никакого вызова или привычного сарказма. Он смотрел на неё с абсолютным спокойствием, ясно давая понять: ему наскучило ходить вокруг да около.\n— Очевидное заключается в том, что мне не нужна никакая магия, чтобы хотеть просыпаться рядом с тобой.\nОн не стал задерживаться для эффектной паузы.\n— До завтра, Грейнджер, — кивнул он у выхода. — С наступающим.\n\nДо завтра, Грейнджер\" — GlassFox",
       "part_boundaries": [
         382,
-        324,
+        455,
         471,
         481,
         32
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18030818669684143",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18627904759007988",
@@ -1176,7 +1296,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17906970930578765",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "17975931087131206",
@@ -1206,7 +1329,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18100353659352614",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18130337728685596",
@@ -1234,7 +1360,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18123394927697462",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18135077470658354",
@@ -1262,7 +1391,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18433061449195783",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18015539756984642",
@@ -1296,7 +1428,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "17954980620255192",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18225723613333202",
@@ -1324,7 +1459,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18188572414406600",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18180277579449523",
@@ -1346,15 +1484,18 @@
         "https://www.threads.com/@mirpottera/post/DeWLh7ZD3Ov",
         "https://www.threads.com/@mirpottera/post/DeWLjL5DyVQ"
       ],
-      "full_text": "Артур Уизли выиграл в лотерею 700 галлеонов. И совершенно случайно запустил самый знаменитый побег в мире магии.\n\nНа выигранные деньги Уизли всей семьёй отправились в Египет. Их фотографию напечатали в \"Ежедневном пророке\". А на плече Рона, как обычно, сидела Короста.\n\nВо время посещения Азкабана Корнелиус Фадж дал Сириусу Блэку почитать газету.\n\nОсобенно прекрасен здесь Фадж. Сам принёс Сириусу газету с фотографией Петтигрю. Потом сам же занимался поисками сбежавшего Блэка. В Министерстве магии это, наверное, называется полным сопровождением клиента. 😂\n\nА всё началось с того, что Артур Уизли выиграл 700 галлеонов.",
+      "full_text": "Артур Уизли выиграл в лотерею 700 галлеонов. И совершенно случайно запустил самый знаменитый побег в мире магии.\n\nНа выигранные деньги Уизли всей семьёй отправились в Египет. Их фотографию напечатали в \"Ежедневном пророке\". А на плече Рона, как обычно, сидела Короста.\n\nВо время посещения Азкабана Корнелиус Фадж дал Сириусу Блэку почитать газету.\n\nСириус увидел фотографию и сразу узнал в Коросте Питера Петтигрю. Того самого человека, который предал Джеймса и Лили и двенадцать лет считался мёртвым.\n\nБлэк понял, что Петтигрю жив, скрывается у Уизли и находится совсем рядом с Гарри. После этого он решился на побег.\n\nОсобенно прекрасен здесь Фадж. Сам принёс Сириусу газету с фотографией Петтигрю. Потом сам же занимался поисками сбежавшего Блэка. В Министерстве магии это, наверное, называется полным сопровождением клиента. 😂\n\nА всё началось с того, что Артур Уизли выиграл 700 галлеонов.",
       "part_boundaries": [
         347,
-        211,
+        482,
         61
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18338796271250246",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18207935788370776",
@@ -1375,14 +1516,17 @@
         "https://www.threads.com/@mirpottera/post/DeXd4tZgX1O",
         "https://www.threads.com/@mirpottera/post/DeXd5uggfrE"
       ],
-      "full_text": "У Флёр Делакур одна из самых трогательных историй любви в Поттериане. ❤️\nПосле нападения Грейбека лицо Билла было страшно изранено. Молли боялась, что Флёр теперь передумает выходить за него замуж, и к ранам сына добавится ещё и разбитое сердце. Ведь все привыкли видеть в ней ослепительную красавицу, слишком увлечённую собственной внешностью .Но Флёр искренне возмутилась самой мыслью, что какие-то шрамы могут помешать их свадьбе или изменить её чувства к Биллу.\n\nИ Билл для неё всё тот же любимый Билл. ❤️",
+      "full_text": "У Флёр Делакур одна из самых трогательных историй любви в Поттериане. ❤️\nПосле нападения Грейбека лицо Билла было страшно изранено. Молли боялась, что Флёр теперь передумает выходить за него замуж, и к ранам сына добавится ещё и разбитое сердце. Ведь все привыкли видеть в ней ослепительную красавицу, слишком увлечённую собственной внешностью .Но Флёр искренне возмутилась самой мыслью, что какие-то шрамы могут помешать их свадьбе или изменить её чувства к Биллу.\n\nКакая разница, как он теперь выглядит?Красоты, как она заявила, у неё хватит на двоих! А его шрамы лишь доказывают, какой он храбрый.\nИ знаете, что мне особенно нравится? Пока Молли боялась, что Флёр передумает выходить за её сына, та уже забрала у неё мазь и сама принялась обрабатывать раны Билла.\n\nОна полюбила его красивым, смелым и обаятельным. А когда его лицо оказалось изранено, осталась рядом, заботясь о нём с той же любовью.\n\nИ Билл для неё всё тот же любимый Билл. ❤️",
       "part_boundaries": [
         465,
-        42
+        479
       ],
       "contains_bot_link": false,
       "needs_media": false,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18131853632505389",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     },
     {
       "post_id": "18496829506101355",
@@ -1434,7 +1578,10 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18096764333644999",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": true
     },
     {
       "post_id": "18285473392292597",
@@ -1462,8 +1609,11 @@
       ],
       "contains_bot_link": false,
       "needs_media": true,
-      "verified": true
+      "verified": true,
+      "second_part_api_reply_id": "18190560577365184",
+      "second_part_api_confirmed": true,
+      "needs_followup_browser_v2": false
     }
   ],
-  "quality_note": "Part 1 restored from exact original API post_text. Parts 2+ from initial browser extraction may omit preceding paragraphs; they require v2 verification before publication."
+  "quality_note": "Part 1 restored verbatim from original API. Part 2 updated from Windsor author reply where unambiguous; parts 3+ and unmatched replies may still require browser v2 validation. Full text includes all comments and promotional continuations."
 }
