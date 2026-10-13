@@ -1598,5 +1598,6 @@
       "needs_media": false,
       "verified": true
     }
-  ]
+  ],
+  "quality_note": "Part 1 restored from exact original API post_text. Parts 2+ from initial browser extraction may omit preceding paragraphs; they require v2 verification before publication."
 }
