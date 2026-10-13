@@ -1100,7 +1100,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DbZfHROiBg0",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DbnzDstCOOu",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1110,7 +1110,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18326386696277930",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DbnzDstCOOu",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Седрика обычно вспоминают из-за кладбища.\nА вы помните, каким он был до этого?\nВ нашей бесплатной викторине есть вопросы и про тех, кого Поттериана слишком быстро у нас забрала💔:\n"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18327320470275871",
@@ -1228,7 +1241,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DboLbw6CEzd",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dbo4z-LiK65",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1238,7 +1251,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "17907201705283058",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dbo4z-LiK65",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Наверное, настоящее счастье это однажды найти людей, рядом с которыми больше не чувствуешь себя странной ❤️\nВозвращаемся к любимым героям вместе в нашей викторине:\nt.me/mir_p… \n2\n/"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18320344144263646",
@@ -1279,7 +1305,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DbzULp8CTyR",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Db0hJ1YiIDS",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1289,7 +1315,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18074520194375953",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Db0hJ1YiIDS",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Ладно, хлеб мы вам не обещаем 😅\nЗато в нашей бесплатной викторине можно снова вернуться в Хогвартс — и опаздывать туда разрешено:\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18112139308787863",
@@ -1394,7 +1433,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DceNIwHiICY",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1404,7 +1443,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18147339193545401",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DceNIwHiICY",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Амбридж настолько Амбридж, что даже крестраж ничего особо не изменил 😅\nТакие детали — в викторине:\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "17932249074366851",
@@ -1445,7 +1497,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DckPSRWk2oR",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dckl81riEMZ",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1455,7 +1507,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18104930449930966",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dckl81riEMZ",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Вот за это я и люблю Макгонагалл. Она могла поддержать Гарри так, что со стороны это всё ещё выглядело как выговор.😋\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18134750374627673",
@@ -1479,7 +1544,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dcm0FOrkY7r",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DcqhAOmCC0H",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1489,7 +1554,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "17952530214250230",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DcqhAOmCC0H",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Гермиона буквально превратила проклятие Малфоя в бесплатную коррекцию прикуса 😅\nТакие детали хорошо проверяют память:\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "17882286615501806",
@@ -1513,7 +1591,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dcn_nK-DMoM",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DcqpjNwiAsf",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1523,7 +1601,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18132334576654345",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DcqpjNwiAsf",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Мне нравится эта сцена, хотя её и нет в книге. Она ничего не подтверждает — но ощущение от Гарри и Гермионы меняет сильно.\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18157202944500745",
@@ -1547,7 +1638,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DcrUeVTAT2n",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DcrwtP6CMUU",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1557,7 +1648,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "17966647431148724",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DcrwtP6CMUU",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Снейп полез в мысли Драко — а там уже стояла защита от тёти Беллатрисы 😅\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18024840989855614",
@@ -1709,7 +1813,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dc0VQOpEe7U",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dc0mXLEiKxa",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1719,7 +1823,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "17906934237310266",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dc0mXLEiKxa",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Макгонагалл в этой сцене просто королева. Одной фразой и Гарри поддержала, и Амбридж красиво поставила на место.\n«Мир Поттера | Викторина»:\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18101751887459670",
@@ -1743,7 +1860,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dc1nps0gDtD",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dc3hxcliHrV",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1753,7 +1870,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18083439596695314",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dc3hxcliHrV",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Все помнят, что было с Бузинной палочкой в фильме. А как Гарри поступил с ней в книге — уже не все 😁\nВикторина по миру Поттера:\nt.me/mir_p… \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "17905581432518677",
@@ -1828,7 +1958,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dc5e17okmlu",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dc5_5lGiPfh",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1838,14 +1968,27 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18333807931256440",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dc5_5lGiPfh",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Вот это и есть магия Поттерианы: в детстве Филч просто бесил, а потом внезапно начинаешь его немного понимать.\nЕсли тоже любишь такие детали — «Мир Поттера | Викторина»:\nt.me/mir_p"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18093895748428334",
       "url": "https://www.threads.com/@mirpottera/post/Dc6BLkDCbIr",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dc6Th7wCOST",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -1855,7 +1998,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18093895748428334",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dc6Th7wCOST",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Я тоже обожаю такие сцены: с одной стороны смешно, с другой — именно из таких мелочей Добби и запоминается как живой персонаж 🤗\nИз них часто и собирается «Мир Поттера | Викторина»"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18075609644399210",
@@ -2028,7 +2184,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DdDI0t7kWY0",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRyTBFiNtr",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2038,14 +2194,27 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18182364439421091",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRyTBFiNtr",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "У Маклаггена разминка перед сезоном была опаснее самого квиддича 😂\nТаких деталей в Поттериане полно, а память по ним можно проверить здесь:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18090048170169290",
       "url": "https://www.threads.com/@mirpottera/post/DdDkSfUDqr5",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRyBpliFk9",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2055,14 +2224,27 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18090048170169290",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRyBpliFk9",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Взрослая жизнь взрослой жизнью, а факультет определить надо 😌\nЗаодно можно проверить себя по Поттериане:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18051128981648640",
       "url": "https://www.threads.com/@mirpottera/post/DdD45WjAkzZ",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRxzL0CGBn",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2072,14 +2254,27 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18051128981648640",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRxzL0CGBn",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "В жизни: \"поговори со мной о чувствах\".\nВ Поттериане: \"Снейп, продолжай молчать и смотреть исподлобья\" 😌\nА проверить память по канону можно здесь:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18558909307076400",
       "url": "https://www.threads.com/@mirpottera/post/DdEQ7RXCFNu",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRxlFviKnL",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2089,7 +2284,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18558909307076400",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRxlFviKnL",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Чем сильнее они ругаются, тем толще потом получается фанфик 😂\nА если хочется ненадолго вернуться из фанона в канон и проверить, что там было на самом деле:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18139500148720193",
@@ -2278,7 +2486,7 @@
       "url": "https://www.threads.com/@mirpottera/post/DdVzlo7jgJ8",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRqXPNCBml",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2288,14 +2496,27 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18086954012250387",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRqXPNCBml",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Слизнорт очень старательно объясняет: \"это не любовь, это одержимость\". Половина Хогвартса в этот момент: \"так даже интереснее\". 😂\nПроверить свою память по Поттериане можно здесь:"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18114866077971085",
       "url": "https://www.threads.com/@mirpottera/post/DdYAWgGEoXI",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRpOiJCJ-c",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2305,7 +2526,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18114866077971085",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRpOiJCJ-c",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Вот после таких фактов особенно понимаешь, что Поттериана местами была намного мрачнее, чем мы замечали в детстве. 😅\nЕсли хочется проверить, сколько ещё подобных деталей осталось "
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18414025651158825",
@@ -2468,7 +2702,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Ddi5dToCKWC",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRU8lAiBxL",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2478,7 +2712,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18154377673513935",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRU8lAiBxL",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "\"Я его терпеть не могу\" в фанфиках иногда звучит как начало очень длинного романа 😄 Особенно если речь о Драко и Гермионе.\nПроверить, насколько хорошо помнишь уже канон:\nt.me/mir_"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "18114833819087752",
@@ -2498,7 +2745,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Ddl5jfcDBC0",
       "part_permalink": "https://www.threads.com/@mirpottera/post/DeRRcheCIHA",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2508,7 +2755,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "18149344099561347",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/DeRRcheCIHA",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "После такого хочется узнать не какую палочку выбрали бы вы, а какая палочка рискнула бы выбрать Амбридж 😂\nА заодно можно проверить себя по канону:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "17926292103180670",
@@ -2762,7 +3022,7 @@
       "url": "https://www.threads.com/@mirpottera/post/Dd-3hpLCErH",
       "part_permalink": "https://www.threads.com/@mirpottera/post/Dd_VT9LCONL",
       "index": 2,
-      "status": "ok",
+      "status": "direct_verified",
       "links": [
         {
           "display": "t.me/mir_p…",
@@ -2772,7 +3032,20 @@
           "display": "t.me/mir_p…",
           "target": "https://t.me/mir_pottera_quiz_bot/quiz"
         }
-      ]
+      ],
+      "reply_url_check": {
+        "root": "17971225419149845",
+        "index": 2,
+        "url": "https://www.threads.com/@mirpottera/post/Dd_VT9LCONL",
+        "status": "ok",
+        "anchors": [
+          {
+            "dest": "https://t.me/mir_pottera_quiz_bot",
+            "context": "Вот это возвращение я понимаю 😭 Том Фелтон снова Драко, только теперь на Бродвее.\nЗдесь можно проверить себя по старой Поттериане:\nt.me/mir_p…⁠� \n2\n/\n2"
+          }
+        ]
+      },
+      "verified_target": "https://t.me/mir_pottera_quiz_bot"
     },
     {
       "root": "17874166407586386",
