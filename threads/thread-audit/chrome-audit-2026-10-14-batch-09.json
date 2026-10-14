@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "account": "mirpottera",
+  "audit_date": "2026-10-14",
+  "repository": "Shaxjan/tensura-world-memory",
+  "branch": "main",
+  "batch_number": 9,
+  "source": "threads/full-posts-verified.json",
+  "master_blob_before": "389c9e14cba9e994597d73c652c517950068e974",
+  "master_blob_after": "a0b51ffba8302dcc417af597ef0ae387513f208c",
+  "master_update_commit": "27cc678829d7df89c447a6de8d62b4addba0f653",
+  "range_1_based": [
+    235,
+    254
+  ],
+  "range_0_based": [
+    234,
+    253
+  ],
+  "period_utc": [
+    "2026-09-02T19:59:59+0000",
+    "2026-09-07T12:59:59+0000"
+  ],
+  "method": "Opened all 20 original Threads root publications through connected authenticated Chrome. Enumerated every author-numbered 1/N part; checked total, each part permalink, and full author-created text against archival master. Inspected accessibility snapshots for ambiguous original text versus automatically embedded Telegram link preview. Restored missing commentary only; intentionally excluded link card title from authored text. Minor spacing / outbound shortened labels are not treated as missing text.",
+  "results": {
+    "root_posts_checked": 20,
+    "numbered_parts_checked": 40,
+    "original_thread_counts_matching_archive": 20,
+    "posts_complete_without_repairs": 16,
+    "posts_repaired": 4,
+    "parts_repaired": 4,
+    "missing_numbered_parts": 0,
+    "restored_characters": 459,
+    "unresolved_parts": 0
+  },
+  "records": [
+    {
+      "position": 235,
+      "post_id": "18061372625785532",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DczC3AWgnUL",
+      "published_at": "2026-09-02T19:59:59+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DczC3AWgnUL",
+        "https://www.threads.com/@mirpottera/post/DeUmFHaDXNq"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 236,
+      "post_id": "18101742425202406",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DczsDigky8U",
+      "published_at": "2026-09-03T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DczsDigky8U",
+        "https://www.threads.com/@mirpottera/post/DeUmHdgjfiL"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 237,
+      "post_id": "17906934237310266",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc0VQOpEe7U",
+      "published_at": "2026-09-03T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc0VQOpEe7U",
+        "https://www.threads.com/@mirpottera/post/Dc0mXLEiKxa"
+      ],
+      "status": "repaired",
+      "notes": "Restored author commentary missing at beginning of numbered second part; visible Telegram link preview card title excluded."
+    },
+    {
+      "position": 238,
+      "post_id": "18101751887459670",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc03l6oCoyL",
+      "published_at": "2026-09-03T13:00:01+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc03l6oCoyL",
+        "https://www.threads.com/@mirpottera/post/DeUmI93DdxO"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 239,
+      "post_id": "18083439596695314",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc1nps0gDtD",
+      "published_at": "2026-09-03T19:59:58+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc1nps0gDtD",
+        "https://www.threads.com/@mirpottera/post/Dc3hxcliHrV"
+      ],
+      "status": "repaired",
+      "notes": "Restored author commentary missing at beginning of numbered second part; visible Telegram link preview card title excluded."
+    },
+    {
+      "position": 240,
+      "post_id": "17905581432518677",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc2Q2WZgYHV",
+      "published_at": "2026-09-04T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc2Q2WZgYHV",
+        "https://www.threads.com/@mirpottera/post/DeUmNu7DfyM"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 241,
+      "post_id": "17913115647264281",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc26DDGAE9p",
+      "published_at": "2026-09-04T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc26DDGAE9p",
+        "https://www.threads.com/@mirpottera/post/DeUmP2XjZ0s"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 242,
+      "post_id": "18087299570232941",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc3cYVOCTu4",
+      "published_at": "2026-09-04T12:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc3cYVOCTu4",
+        "https://www.threads.com/@mirpottera/post/Dc6Be3CiPtM"
+      ],
+      "status": "complete",
+      "notes": "External link visually shortened and Telegram link card title is not authored text."
+    },
+    {
+      "position": 243,
+      "post_id": "18099053732569238",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc4MccnjRX7",
+      "published_at": "2026-09-04T19:59:56+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc4MccnjRX7",
+        "https://www.threads.com/@mirpottera/post/DeUmSWgjYJ3"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 244,
+      "post_id": "17902019613561331",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc41pSBE7dt",
+      "published_at": "2026-09-05T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc41pSBE7dt",
+        "https://www.threads.com/@mirpottera/post/DeUmUx8jbt0"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 245,
+      "post_id": "18333807931256440",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc5e17okmlu",
+      "published_at": "2026-09-05T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc5e17okmlu",
+        "https://www.threads.com/@mirpottera/post/Dc5_5lGiPfh"
+      ],
+      "status": "repaired",
+      "notes": "Restored author commentary missing at beginning of numbered second part; visible Telegram link preview card title excluded."
+    },
+    {
+      "position": 246,
+      "post_id": "18093895748428334",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc6BLkDCbIr",
+      "published_at": "2026-09-05T13:00:00+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc6BLkDCbIr",
+        "https://www.threads.com/@mirpottera/post/Dc6Th7wCOST"
+      ],
+      "status": "repaired",
+      "notes": "Restored author commentary missing at beginning of numbered second part; visible Telegram link preview card title excluded."
+    },
+    {
+      "position": 247,
+      "post_id": "18075609644399210",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc6xPcgEgN4",
+      "published_at": "2026-09-05T19:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc6xPcgEgN4",
+        "https://www.threads.com/@mirpottera/post/DeUmXlJjSKw"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 248,
+      "post_id": "18115547033280004",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc7aci2AET2",
+      "published_at": "2026-09-06T02:00:01+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc7aci2AET2",
+        "https://www.threads.com/@mirpottera/post/DeUmbsYjdKr"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 249,
+      "post_id": "18118223912473082",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc8DpJYAu18",
+      "published_at": "2026-09-06T08:00:00+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc8DpJYAu18",
+        "https://www.threads.com/@mirpottera/post/DeUmd6rjVzI"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 250,
+      "post_id": "17905115691510735",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc8l-KPkjAq",
+      "published_at": "2026-09-06T12:59:58+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc8l-KPkjAq",
+        "https://www.threads.com/@mirpottera/post/Dc8l_IQEk6L"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 251,
+      "post_id": "18207102919366441",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc9WCmIAhIp",
+      "published_at": "2026-09-06T20:00:00+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc9WCmIAhIp",
+        "https://www.threads.com/@mirpottera/post/DeUmgIrjTHm"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 252,
+      "post_id": "18076255223449995",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc9_PBfkj3j",
+      "published_at": "2026-09-07T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc9_PBfkj3j",
+        "https://www.threads.com/@mirpottera/post/DeUmiY_jX7l"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 253,
+      "post_id": "17978119422090876",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc-obuzjSML",
+      "published_at": "2026-09-07T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc-obuzjSML",
+        "https://www.threads.com/@mirpottera/post/DeUmkhgDWIT"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 254,
+      "post_id": "18225497419331831",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dc_KxLSAXj1",
+      "published_at": "2026-09-07T12:59:59+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dc_KxLSAXj1",
+        "https://www.threads.com/@mirpottera/post/DeUmowtjapR"
+      ],
+      "status": "complete",
+      "notes": null
+    }
+  ],
+  "repairs": [
+    {
+      "position": 237,
+      "prefix": "Макгонагалл в этой сцене просто королева. Одной фразой и Гарри поддержала, и Амбридж красиво поставила на место.",
+      "old_len": 38,
+      "new_len": 152,
+      "characters_added": 114,
+      "root_post_id": "17906934237310266",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dc0VQOpEe7U",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dc0mXLEiKxa",
+      "source": "Authenticated Chrome original, second part 2/2 and accessibility text; link preview excluded",
+      "fields_changed": [
+        "parts[1].text",
+        "parts[1].source",
+        "full_text_original"
+      ],
+      "full_text_editorial_changed": false,
+      "link_flags_preserved": true
+    },
+    {
+      "position": 239,
+      "prefix": "Все помнят, что было с Бузинной палочкой в фильме. А как Гарри поступил с ней в книге — уже не все 😁",
+      "old_len": 38,
+      "new_len": 141,
+      "characters_added": 103,
+      "root_post_id": "18083439596695314",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dc1nps0gDtD",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dc3hxcliHrV",
+      "source": "Authenticated Chrome original, second part 2/2 and accessibility text; link preview excluded",
+      "fields_changed": [
+        "parts[1].text",
+        "parts[1].source",
+        "full_text_original"
+      ],
+      "full_text_editorial_changed": false,
+      "link_flags_preserved": true
+    },
+    {
+      "position": 245,
+      "prefix": "Вот это и есть магия Поттерианы: в детстве Филч просто бесил, а потом внезапно начинаешь его немного понимать.",
+      "old_len": 70,
+      "new_len": 182,
+      "characters_added": 112,
+      "root_post_id": "18333807931256440",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dc5e17okmlu",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dc5_5lGiPfh",
+      "source": "Authenticated Chrome original, second part 2/2 and accessibility text; link preview excluded",
+      "fields_changed": [
+        "parts[1].text",
+        "parts[1].source",
+        "full_text_original"
+      ],
+      "full_text_editorial_changed": false,
+      "link_flags_preserved": true
+    },
+    {
+      "position": 246,
+      "prefix": "Я тоже обожаю такие сцены: с одной стороны смешно, с другой — именно из таких мелочей Добби и запоминается как живой персонаж 🤗",
+      "old_len": 64,
+      "new_len": 194,
+      "characters_added": 130,
+      "root_post_id": "18093895748428334",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dc6BLkDCbIr",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dc6Th7wCOST",
+      "source": "Authenticated Chrome original, second part 2/2 and accessibility text; link preview excluded",
+      "fields_changed": [
+        "parts[1].text",
+        "parts[1].source",
+        "full_text_original"
+      ],
+      "full_text_editorial_changed": false,
+      "link_flags_preserved": true
+    }
+  ],
+  "notes": [
+    "Post 242 displayed a Telegram preview card title in some browser extraction; this is not authored text, so no edit was made.",
+    "Preserved existing shortened outbound URLs as displayed, because true text label spelling is not available from user-visible source; did not replace with speculative strings.",
+    "No numbered part additions/deletions; 414 roots and 883 parts remain.",
+    "All four second parts are classified as promotion; original full archive was restored while editorial-only text remained intentionally unchanged.",
+    "Unnumbered author comments and third-party replies were not counted as numbered 1/N chain parts."
+  ],
+  "archive_modified": true,
+  "updated_files": [
+    "threads/full-posts-verified.json",
+    "threads/thread-audit/chrome-audit-2026-10-14-batch-09.json"
+  ],
+  "next_batch_1_based": [
+    215,
+    234
+  ]
+}
