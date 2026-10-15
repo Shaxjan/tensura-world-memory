@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0",
+  "account": "mirpottera",
+  "audit_date": "2026-10-15",
+  "repository": "Shaxjan/tensura-world-memory",
+  "branch": "main",
+  "batch_number": 11,
+  "source": "threads/full-posts-verified.json",
+  "master_blob_before": "88435864b1b1b544deb3b02cdddd57eebb686395",
+  "master_blob_after": "1a61745b774ce37f3fa388a41095dea04d1c27f8",
+  "master_update_commit": "5f94b178364ec7263f6b5a9575eff8a5e4f52df7",
+  "range_1_based": [
+    195,
+    214
+  ],
+  "range_0_based": [
+    194,
+    213
+  ],
+  "period_utc": [
+    "2026-08-23T12:59:58+0000",
+    "2026-08-28T12:59:57+0000"
+  ],
+  "method": "Opened all 20 original Threads root publications in authenticated connected Chrome. Compared every author-numbered 1/N part (45 parts), full rendered author text, part counts, and exact part permalinks with GitHub master. For long newspaper-style posts 202 (5 parts) and 203 (4 parts), checked every individual numbered continuation with the full rendered text. Ignored cosmetic spacing and automatically rendered external link preview titles. Preserved existing shortened link labels as seen.",
+  "results": {
+    "root_posts_checked": 20,
+    "numbered_parts_checked": 45,
+    "original_thread_counts_matching_archive": 20,
+    "posts_complete_without_repairs": 17,
+    "posts_repaired": 3,
+    "parts_repaired": 3,
+    "missing_numbered_parts": 0,
+    "restored_characters": 251,
+    "unresolved_parts": 0
+  },
+  "records": [
+    {
+      "position": 195,
+      "post_id": "18456307201142563",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcYi2BBgBiV",
+      "published_at": "2026-08-23T12:59:58+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcYi2BBgBiV",
+        "https://www.threads.com/@mirpottera/post/DcYi2_xgCgB"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 196,
+      "post_id": "17974428626919416",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcZS59zjhfb",
+      "published_at": "2026-08-23T19:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcZS59zjhfb",
+        "https://www.threads.com/@mirpottera/post/DcZS6pCjkcZ"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 197,
+      "post_id": "18119264185910669",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcZ8HFZgiXN",
+      "published_at": "2026-08-24T02:00:00+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcZ8HFZgiXN",
+        "https://www.threads.com/@mirpottera/post/DeUk7F9jQ_n"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 198,
+      "post_id": "18089910026170786",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcalTdlEaRI",
+      "published_at": "2026-08-24T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcalTdlEaRI",
+        "https://www.threads.com/@mirpottera/post/DeUk9SJjf7i"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 199,
+      "post_id": "18113948005994961",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcbHotikZ6U",
+      "published_at": "2026-08-24T12:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcbHotikZ6U",
+        "https://www.threads.com/@mirpottera/post/DeUlB1dDYOf"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 200,
+      "post_id": "17893873797668801",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dcb-kXsjAJI",
+      "published_at": "2026-08-24T20:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dcb-kXsjAJI",
+        "https://www.threads.com/@mirpottera/post/Dcb-k-TjK7h"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 201,
+      "post_id": "17917047240433642",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DccwlFWCLql",
+      "published_at": "2026-08-25T04:16:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DccwlFWCLql",
+        "https://www.threads.com/@mirpottera/post/DcdD5yxiDCX"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 202,
+      "post_id": "18106998509146231",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcdKGYDE2pf",
+      "published_at": "2026-08-25T07:59:57+0000",
+      "numbered_parts": 5,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcdKGYDE2pf",
+        "https://www.threads.com/@mirpottera/post/DcdKHXbE8f5",
+        "https://www.threads.com/@mirpottera/post/DcdKIwdk0yT",
+        "https://www.threads.com/@mirpottera/post/DcdKKGcEyPl",
+        "https://www.threads.com/@mirpottera/post/DcdKLZ7k0nT"
+      ],
+      "status": "complete",
+      "notes": "Verified each numbered part of extended newspaper-style thread."
+    },
+    {
+      "position": 203,
+      "post_id": "18015191846923889",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcdKGeKD74y",
+      "published_at": "2026-08-25T07:59:58+0000",
+      "numbered_parts": 4,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcdKGeKD74y",
+        "https://www.threads.com/@mirpottera/post/DcdKHp5D8eC",
+        "https://www.threads.com/@mirpottera/post/DcdKJCRD4v-",
+        "https://www.threads.com/@mirpottera/post/DcdKKVNj2jP"
+      ],
+      "status": "complete",
+      "notes": "Verified each numbered part of extended newspaper-style thread."
+    },
+    {
+      "position": 204,
+      "post_id": "18147339193545401",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
+      "published_at": "2026-08-25T14:23:21+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
+        "https://www.threads.com/@mirpottera/post/DceNIwHiICY"
+      ],
+      "status": "repaired",
+      "notes": "Restored missing author commentary at beginning of part 2; preserved existing text and numbering."
+    },
+    {
+      "position": 205,
+      "post_id": "17932249074366851",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dcecf3MkvQQ",
+      "published_at": "2026-08-25T19:59:58+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dcecf3MkvQQ",
+        "https://www.threads.com/@mirpottera/post/DeUlOttjdEj"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 206,
+      "post_id": "18113503363973898",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcfFsfoErJ7",
+      "published_at": "2026-08-26T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcfFsfoErJ7",
+        "https://www.threads.com/@mirpottera/post/DeUlQ6djXEr"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 207,
+      "post_id": "17928083079403814",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dcf9qjJiKnW",
+      "published_at": "2026-08-26T10:09:01+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dcf9qjJiKnW",
+        "https://www.threads.com/@mirpottera/post/Dcf9qg1iLeE"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 208,
+      "post_id": "18611715310052116",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcgkWFWCHin",
+      "published_at": "2026-08-26T15:47:01+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcgkWFWCHin",
+        "https://www.threads.com/@mirpottera/post/DcgkWF8iN5-"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 209,
+      "post_id": "17942906205318484",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dch9XZqiLKK",
+      "published_at": "2026-08-27T04:44:53+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dch9XZqiLKK",
+        "https://www.threads.com/@mirpottera/post/Dch9XbvCJgv"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 210,
+      "post_id": "18407809276080562",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcinJE5iEED",
+      "published_at": "2026-08-27T10:49:56+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcinJE5iEED",
+        "https://www.threads.com/@mirpottera/post/DcinJHLCEyS"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 211,
+      "post_id": "18113912383967391",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DcjmFqnD6o9",
+      "published_at": "2026-08-27T19:59:58+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DcjmFqnD6o9",
+        "https://www.threads.com/@mirpottera/post/DcjmGlqj3OR"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 212,
+      "post_id": "18104930449930966",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DckPSRWk2oR",
+      "published_at": "2026-08-28T01:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/DckPSRWk2oR",
+        "https://www.threads.com/@mirpottera/post/Dckl81riEMZ"
+      ],
+      "status": "repaired",
+      "notes": "Restored missing author commentary at beginning of part 2; preserved existing text and numbering."
+    },
+    {
+      "position": 213,
+      "post_id": "18134750374627673",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dck4e5ygEyk",
+      "published_at": "2026-08-28T07:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dck4e5ygEyk",
+        "https://www.threads.com/@mirpottera/post/DeUlUXKjcni"
+      ],
+      "status": "complete",
+      "notes": null
+    },
+    {
+      "position": 214,
+      "post_id": "18151722070512356",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dcla0LliQ7U",
+      "published_at": "2026-08-28T12:59:57+0000",
+      "numbered_parts": 2,
+      "part_permalinks": [
+        "https://www.threads.com/@mirpottera/post/Dcla0LliQ7U",
+        "https://www.threads.com/@mirpottera/post/Dcla1RJCff-"
+      ],
+      "status": "repaired",
+      "notes": "Restored missing author commentary at beginning of part 2; preserved existing text and numbering."
+    }
+  ],
+  "repairs": [
+    {
+      "position": 204,
+      "root_post_id": "18147339193545401",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/DceNIwHiICY",
+      "original_text_before": "Такие детали — в викторине:\nt.me/mir_p…",
+      "restored_text": "Амбридж настолько Амбридж, что даже крестраж ничего особо не изменил 😅\nТакие детали — в викторине:\nt.me/mir_p…",
+      "characters_added": 72,
+      "fields_changed": [
+        "parts[1].text",
+        "full_text_original"
+      ],
+      "editorial_content_unchanged": true
+    },
+    {
+      "position": 212,
+      "root_post_id": "18104930449930966",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/DckPSRWk2oR",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dckl81riEMZ",
+      "original_text_before": "t.me/mir_p…",
+      "restored_text": "Вот за это я и люблю Макгонагалл. Она могла поддержать Гарри так, что со стороны это всё ещё выглядело как выговор.😋\nt.me/mir_p…",
+      "characters_added": 118,
+      "fields_changed": [
+        "parts[1].text",
+        "full_text_original"
+      ],
+      "editorial_content_unchanged": true
+    },
+    {
+      "position": 214,
+      "root_post_id": "18151722070512356",
+      "root_permalink": "https://www.threads.com/@mirpottera/post/Dcla0LliQ7U",
+      "part_number": 2,
+      "part_permalink": "https://www.threads.com/@mirpottera/post/Dcla1RJCff-",
+      "original_text_before": "P.S: На 3 вещи можно смотреть бесконечно : на то как горит огонь, как течет вода ... И на арты по Драмионе 😍",
+      "restored_text": "И вот на этот вопрос люди пишут фанфики уже десятилетиями 💔\nP.S: На 3 вещи можно смотреть бесконечно : на то как горит огонь, как течет вода ... И на арты по Драмионе 😍",
+      "characters_added": 61,
+      "fields_changed": [
+        "parts[1].text",
+        "full_text_original"
+      ],
+      "editorial_content_unchanged": true
+    }
+  ],
+  "notes": [
+    "Post 202 contained 5 complete numbered parts; post 203 contained 4 complete numbered parts.",
+    "No added or deleted numbered parts; entire archive remains 414 root posts and 883 parts.",
+    "All three confirmed omissions were at the beginning of the second part.",
+    "Only three source posts were modified; original text of other posts and editorial-only compilation left unchanged.",
+    "Summarized success from live Threads UI comparison; visually shortened outbound URLs intentionally preserved."
+  ],
+  "archive_modified": true,
+  "updated_files": [
+    "threads/full-posts-verified.json",
+    "threads/thread-audit/chrome-audit-2026-10-15-batch-11.json"
+  ],
+  "next_batch_1_based": [
+    175,
+    194
+  ]
+}
