@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "audit": "Threads @mirpottera - Chrome audit complete",
+  "date": "2026-10-15",
+  "archive": "threads/full-posts-verified.json",
+  "archive_blob_sha": "ce1189744057e6bf1141e881d4212785e2a12150",
+  "result": "COMPLETED",
+  "batch_reports": 21,
+  "posts_checked": 414,
+  "parts_checked": 883,
+  "unique_post_ids": 414,
+  "unique_part_urls": 883,
+  "missing_or_duplicate_positions": 0,
+  "links_or_part_counts_mismatched": 0,
+  "posts_with_missing_author_text_repaired": 26,
+  "parts_with_missing_author_text_repaired": 27,
+  "extra_ui_artifacts_corrected": 1,
+  "open_original_text_discrepancies": 0,
+  "media_only_parts": [
+    {
+      "post": 29,
+      "part": 1
+    },
+    {
+      "post": 44,
+      "part": 2
+    }
+  ],
+  "remaining_editorial_note": "The separately maintained full_text_editorial field of post 44 still ends with an erroneously extracted username; left unchanged as editorial text was outside audit scope.",
+  "scope": "Audited 414 archived original posts and their 883 numbered parts against Threads in authenticated Chrome; excludes unnumbered comments and any new posts outside the snapshot.",
+  "reports": "threads/thread-audit/chrome-audit-2026-10-14-batch-01.json through chrome-audit-2026-10-15-batch-21.json"
+}
