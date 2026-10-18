@@ -456,10 +456,15 @@
       "vk_publication_status": "not_confirmed_from_public_wall",
       "vk_publication_url": null,
       "vk_scheduled_status": "not_found_in_full_current_scheduled_queue",
-      "duplicate_guard": "check_against_vk_before_proposing",
-      "in_chat": null,
+      "duplicate_guard": "block_approved_in_chat",
+      "in_chat": {
+        "date": "2026-11-19",
+        "decision": "approved_by_following_next_request",
+        "note": "User saying 'следующее' approved preceding post #24; no external publication or VK scheduling occurred"
+      },
       "original_full_text": "Один из самых страшных поступков Гарри случился не под влиянием Волан-де-Морта и не из-за тёмного артефакта. Он просто увидел в старом учебнике неизвестное заклинание с пометкой \"для врагов\". И запомнил его. Во время драки в туалете Малфой попытался применить \"Круцио\". Гарри испугался и выкрикнул \"Сектумсемпру\", хотя вообще не знал, что она делает. Через секунду Драко лежал на полу, а из ран хлестала кровь. Гарри не хотел такого результата. Он сам пришёл в ужас от увиденного.\n\nНо меня каждый раз поражает другое: до этого момента ему хватило двух слов на полях чужой книги. \"Для врагов\". .",
-      "vk_scheduled_datetimes": []
+      "vk_scheduled_datetimes": [],
+      "editorial_target_date": "2026-11-19"
     },
     {
       "shortlist_order": 25,
@@ -484,10 +489,15 @@
       "vk_publication_status": "not_confirmed_from_public_wall",
       "vk_publication_url": null,
       "vk_scheduled_status": "not_found_in_full_current_scheduled_queue",
-      "duplicate_guard": "check_against_vk_before_proposing",
-      "in_chat": null,
+      "duplicate_guard": "block_approved_in_chat",
+      "in_chat": {
+        "date": "2026-11-20",
+        "decision": "approved_by_following_next_request",
+        "note": "User saying 'следующее' approved preceding post #26; no external publication or VK scheduling occurred"
+      },
       "original_full_text": "Я раньше смотрел на сцену с Круциатусом и в основном жалел Невилла. Он сидит на уроке и смотрит, как Грюм пытает паука тем самым заклинанием, которым когда-то пытали его маму и папу. Уже тяжело. А потом вспоминаешь одну маленькую деталь. Это не Грюм. Это Барти Крауч-младший. Один из людей, которых осудили именно за пытки Фрэнка и Алисы Долгопупсов. И меня после этого сцена вообще перестаёт отпускать. Представьте Невилла. Перед тобой взрослый преподаватель показывает Круциатус.\n\nТебе становится плохо, но ты понятия не имеешь, что человек с палочкой в руке имеет прямое отношение к тому, почему твои родители сейчас лежат в лечебнице и почти тебя не узнают. А Барти знает. Он прекрасно знает, кто такой Невилл. После урока ещё зовёт его к себе и разговаривает с ним почти по-доброму. И Невилл уходит, думая, что строгий профессор просто заметил, как тяжело ему было.",
-      "vk_scheduled_datetimes": []
+      "vk_scheduled_datetimes": [],
+      "editorial_target_date": "2026-11-20"
     },
     {
       "shortlist_order": 27,
@@ -497,10 +507,15 @@
       "vk_publication_status": "not_confirmed_from_public_wall",
       "vk_publication_url": null,
       "vk_scheduled_status": "not_found_in_full_current_scheduled_queue",
-      "duplicate_guard": "check_against_vk_before_proposing",
-      "in_chat": null,
+      "duplicate_guard": "hold_proposed_pending_user_approval",
+      "in_chat": {
+        "date": "2026-11-21",
+        "decision": "proposed_pending_user_approval",
+        "note": "Proposed as next item; no publication scheduled"
+      },
       "original_full_text": "Седрик поймал снитч, Пуффендуй победил Гриффиндор — всё, матч закончен.\n\nА потом он узнаёт, что Гарри свалился с метлы не потому, что плохо сыграл, а из-за дементоров.\n\nИ Седрик такой: давайте переиграем.\n\nЕму уже засчитали победу. Он вообще ничего не был обязан предлагать.\n\nВот примерно в одной сцене и объясняется, почему Седрика так любили.",
-      "vk_scheduled_datetimes": []
+      "vk_scheduled_datetimes": [],
+      "editorial_target_date": "2026-11-21"
     },
     {
       "shortlist_order": 28,
@@ -928,5 +943,6 @@
         "2026-11-18T15:18"
       ]
     }
-  ]
+  ],
+  "workflow_rule_next": "When the user says 'следующее', the previously proposed post is approved for its editorial target date (no publishing or VK scheduling implied), and a different unqueued original post should be proposed for the next calendar day."
 }
