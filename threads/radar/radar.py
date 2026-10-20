@@ -195,7 +195,7 @@ def search(root: Path, query: str, limit: int = 8) -> list[dict]:
     post_by_id = {p["post_id"]: p for p in posts}
     journal_by_id = {p["journal_id"]: p for p in journal}
     entries = [
-        ("published", p["post_id"], p["search_text"] or p["original_text"])
+        ("published", p["post_id"], (p["search_text"] or "") + "\n" + (p["original_text"] or ""))
         for p in posts
     ] + [
         ("editorial", p["journal_id"], " ".join([p["topic"], p["angle"], p["text"]]))
@@ -215,11 +215,11 @@ def search(root: Path, query: str, limit: int = 8) -> list[dict]:
     scored = []
     for kind, entity_id in matches:
         entry = post_by_id[entity_id] if kind == "published" else journal_by_id[entity_id]
-        body = (entry["search_text"] or entry["original_text"]) if kind == "published" else " ".join([entry["topic"], entry["angle"], entry["text"]])
+        body = ((entry["search_text"] or "") + "\n" + (entry["original_text"] or "")) if kind == "published" else " ".join([entry["topic"], entry["angle"], entry["text"]])
         text_tokens = keywords(body)
         coverage = sum(any(w.startswith(prefix(t)) for w in text_tokens) for t in terms) / len(terms)
         if kind == "published":
-            scored.append({"kind": kind, "post_id": entity_id, "state": entry["state"], "url": entry["url"], "date": entry["published_at"], "coverage": round(coverage, 3), "excerpt": body[:360]})
+            scored.append({"kind": kind, "post_id": entity_id, "state": entry["state"], "url": entry["url"], "date": entry["published_at"], "coverage": round(coverage, 3), "excerpt": (entry["search_text"] or entry["original_text"])[:360], "matched_in_original_only": not all(any(w.startswith(prefix(t)) for w in keywords(entry["search_text"])) for t in terms)})
         else:
             scored.append({"kind": kind, "journal_id": entity_id, "state": entry["state"], "url": entry["url"], "date": entry["date"], "coverage": round(coverage, 3), "excerpt": (entry["topic"] + ": " + entry["angle"])[:360], "link_status": entry["link_status"]})
     return sorted(scored, key=lambda row: (-row["coverage"], row["kind"] != "editorial", str(row["date"] or ""), row.get("post_id", row.get("journal_id", ""))))[:limit]
