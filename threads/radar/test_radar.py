@@ -87,6 +87,14 @@ class RadarStageBTests(unittest.TestCase):
         self.assertTrue(any(m.get("post_id") == "111" for m in matches))
         self.assertTrue(any(m.get("journal_id") == "scheduled-watch" and m["state"] == "scheduled" for m in matches))
 
+    def test_original_only_detail_remains_discoverable(self):
+        build(self.root)
+        matches = search(self.root, "Молли реклама", limit=10)
+        matched = [m for m in matches if m.get("post_id") == "111"]
+        self.assertTrue(matched, "Full source must be searched to avoid missing a continuation")
+        self.assertTrue(matched[0]["matched_in_original_only"])
+        self.assertNotIn("Реклама", matched[0]["excerpt"])
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
