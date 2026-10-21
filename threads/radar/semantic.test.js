@@ -9,12 +9,12 @@ const INDEX = path.join(__dirname, "index");
 function readJSONL(name) { return fs.readFileSync(path.join(INDEX, name), "utf8").trim().split(/\r?\n/).map(line=>JSON.parse(line)); }
 const posts = readJSONL("posts.jsonl");
 const journal = readJSONL("editorial.jsonl");
-const CURRENT={as_of:"2026-10-20",last_synced_at:"2026-10-20",max_age_days:1};
+const CURRENT={as_of:"2026-10-21",last_synced_at:"2026-10-21",max_age_days:1};
 function verdict(c, options=CURRENT, j=journal, p=posts){return radar.compare(c,p,j,options);}
 
-test("index covers 445 unique published author roots",()=>{
- assert.equal(posts.length,445);
- assert.equal(new Set(posts.map(p=>p.post_id)).size,445);
+test("index covers 447 unique published author roots",()=>{
+ assert.equal(posts.length,447);
+ assert.equal(new Set(posts.map(p=>p.post_id)).size,447);
  assert.equal(posts.filter(p=>p.state!=="published").length,0);
  assert.equal(posts.filter(p=>p.media_type==="REPOST_FACADE").length,0);
 });
@@ -81,7 +81,7 @@ test("canceled draft ignored; schedule retains separate state",()=>{
 test("stale snapshot never proves NEW_STORY",()=>{
  const r=verdict({text:"Молли требует у садовых гномов вернуть яблочный пирог",
   event:"кража пирога",conflict:"попытка вернуть пирог",characters:["Молли","гномы"]},
-  {as_of:"2026-10-21",last_synced_at:"2026-10-20",max_age_days:1});
+  {as_of:"2026-10-22",last_synced_at:"2026-10-21",max_age_days:1});
  assert.equal(r.verdict,"REVIEW_REQUIRED");
  assert.equal(r.archive_fresh,false);
 });
