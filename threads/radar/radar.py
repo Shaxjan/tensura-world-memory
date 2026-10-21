@@ -45,13 +45,17 @@ def ensure_unique(rows: list[dict], field: str) -> None:
 def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     base = root / "threads"
     radar = base / "radar"
-    if snapshot_path is None:
-        snapshot_path = radar / "snapshots" / "windsor-2026-10-13_to_2026-10-20.json"
+    snapshots = [snapshot_path] if snapshot_path else sorted((radar / "snapshots").glob("windsor-*.json"))
+    if not snapshots:
+        raise ValueError("No saved Windsor snapshots; refusing to build an incomplete index")
+    for snapshot_file in snapshots:
+        if not snapshot_file.exists():
+            raise ValueError(f"Missing source snapshot: {snapshot_file}")
+    snapshot_documents = [load_json(source) for source in snapshots]
 
     full = load_json(base / "full-posts-verified.json")
     formats = load_json(base / "posts-by-format.json")
     editor = load_json(root / "posts.json")
-    snapshot = load_json(snapshot_path)
 
     historical = full["posts"]
     ensure_unique(historical, "post_id")
@@ -67,10 +71,16 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     if set(p["post_id"] for p in format_rows) != historical_ids:
         raise ValueError("Verified roots and old Windsor roots differ: reconcile sources first")
 
-    fresh_rows = snapshot["posts"]
-    ensure_unique(fresh_rows, "post_id")
-    if snapshot.get("count") != len(fresh_rows):
-        raise ValueError("New snapshot is incomplete")
+    # Keep the newest snapshot value for a post ID while retaining earlier rows.
+    fresh_by_id = {}
+    for snapshot in snapshot_documents:
+        rows = snapshot["posts"]
+        ensure_unique(rows, "post_id")
+        if snapshot.get("count") != len(rows):
+            raise ValueError("New snapshot is incomplete")
+        for row in rows:
+            fresh_by_id[row["post_id"]] = row
+    fresh_rows = list(fresh_by_id.values())
     new_rows = [p for p in fresh_rows if p["post_id"] not in historical_ids]
     new_author = [p for p in new_rows if p["post_media_type"] != "REPOST_FACADE"]
 
@@ -88,7 +98,7 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     for p in new_author:
         posts.append({
             "schema_version": 1, "post_id": p["post_id"], "state": "published",
-            "source": "windsor_root_2026-10-20", "url": p["post_permalink"],
+            "source": "windsor_root_snapshot", "url": p["post_permalink"],
             "published_at": p["post_timestamp"], "media_type": p["post_media_type"],
             "original_text": p.get("post_text") or "", "search_text": p.get("post_text") or "",
             "parts_count": 1, "chain_complete": False,
@@ -136,9 +146,12 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         "source_commit": old_manifest.get("source_commit"),
         "full_archive_blob_sha": old_manifest.get("full_archive_blob_sha"),
         "posts_journal_blob_sha": old_manifest.get("posts_journal_blob_sha"),
-        "source_snapshot": str(snapshot_path.relative_to(root)).replace("\\", "/") if snapshot_path.is_relative_to(root) else str(snapshot_path),
+        "source_snapshot": [
+            str(p.relative_to(root)).replace("\\", "/") if p.is_relative_to(root) else str(p)
+            for p in snapshots
+        ],
         "source_types": ["verified_full_chain", "Windsor.ai Threads", "editorial posts.json"],
-        "generated_date_utc": snapshot.get("retrieval_date_utc"),
+        "generated_date_utc": max((doc.get("retrieval_date_utc", "") for doc in snapshot_documents), default=""),
         "counts": counts,
         "limitations": [
             "New roots only: replies after 12 October not reconciled",
