@@ -4,19 +4,22 @@
   "source_commit": "310ee3ad7d020f411b024027a3f5cb9b764053eb",
   "full_archive_blob_sha": "ce1189744057e6bf1141e881d4212785e2a12150",
   "posts_journal_blob_sha": "b6485bd5d1175f77b785b22cb0f002de445a565c",
-  "source_snapshot": "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+  "source_snapshot": [
+    "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+    "threads/radar/snapshots/windsor-2026-10-21.json"
+  ],
   "source_types": [
     "verified_full_chain",
     "Windsor.ai Threads",
     "editorial posts.json"
   ],
-  "generated_date_utc": "2026-10-20",
+  "generated_date_utc": "2026-10-21",
   "counts": {
-    "snapshot_records": 34,
-    "snapshot_reposts": 3,
+    "snapshot_records": 37,
+    "snapshot_reposts": 4,
     "historic_posts": 414,
-    "new_author_roots": 31,
-    "total_author_roots": 445,
+    "new_author_roots": 33,
+    "total_author_roots": 447,
     "journal_cards": 40,
     "journal_state_counts": {
       "published": 32,
@@ -28,7 +31,7 @@
   "limitations": [
     "New roots only: replies after 12 October not reconciled",
     "Journal records without matching URL remain independent; historical scheduled status is preserved",
-    "Semantic story-angle metadata and full-corpus meaning scores are not yet verified",
-    "Live Windsor.ai snapshot values may be cached"
+    "Live Windsor.ai snapshot values may be cached",
+    "Stage C semantic-candidate comparator is heuristic and covers a limited curated event ontology; human editorial review remains required"
   ]
 }
