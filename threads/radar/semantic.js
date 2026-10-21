@@ -92,7 +92,7 @@ function compare(c, posts=[], journal=[], options={}){
   const cview=fold(c.viewpoint),oldView=fold(profile?.viewpoint);
   const newConflict=fold(c.conflict),oldConflict=fold(profile?.conflict);
   const explicitOtherView=!!(cview&&oldView&&!cview.includes(oldView)&&!oldView.includes(cview));
-  const explicitOtherConflict=!!(newConflict&&oldConflict&&conflictSimilarity(newConflict,oldConflict)<0.21);
+  const explicitOtherConflict=!!(newConflict&&oldConflict&&conflictSimilarity(newConflict,oldConflict)<0.40);
   if(explicitOtherView&&explicitOtherConflict){
    verdict="NEW_ANGLE";confidence="medium";
    reasons.push("Событие уже встречалось, но предложены иная точка зрения и отдельный конфликт.");
