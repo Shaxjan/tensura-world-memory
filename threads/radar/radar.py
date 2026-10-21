@@ -79,6 +79,16 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         if snapshot.get("count") != len(rows):
             raise ValueError("New snapshot is incomplete")
         for row in rows:
+            previous = fresh_by_id.get(row["post_id"])
+            if previous is not None:
+                stable_fields = ("post_timestamp", "post_text", "post_permalink", "post_media_type")
+                changed = [field for field in stable_fields if (previous.get(field) or "") != (row.get(field) or "")]
+                if changed:
+                    raise ValueError(
+                        f"Conflicting snapshots for {row['post_id']}: {', '.join(changed)}. "
+                        "Do not silently replace previously published content."
+                    )
+            # Updated views are allowed; text, link, media type and timestamp are immutable here.
             fresh_by_id[row["post_id"]] = row
     fresh_rows = list(fresh_by_id.values())
     new_rows = [p for p in fresh_rows if p["post_id"] not in historical_ids]
