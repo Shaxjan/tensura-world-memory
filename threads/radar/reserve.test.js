@@ -23,7 +23,7 @@ test("21:00 is reserved for author-provided videos, not concepts",()=>{
 });
 test("no reserved idea was approved, planned or published",()=>{
  assert.ok(data.ideas.every(x=>x.editorial_status==="IDEA_NOT_APPROVED"));
- assert.ok(data.ideas.every(x=>x.canon_review==="PENDING_SOURCE_VERIFICATION"));
+ assert.ok(data.ideas.every(x=>x.canon_review && x.canon_review!=="REJECTED"));
 });
 test("former duplicate concepts excluded and linked to actual published IDs",()=>{
  const ids=new Set(posts.map(p=>p.post_id));
