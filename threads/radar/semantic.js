@@ -24,7 +24,11 @@ function vocabulary(v){return new Set(words(v).map(root));}
 const NAMES = new Set("гарри молли рон уизли хагрид сириус джеймс лили гермиона драко фабиан".split(" "));
 function conflictSimilarity(a,b){
  const strip=v=>words(v).filter(t=>!NAMES.has(t)).join(" ");
- return similarity(strip(a),strip(b));
+ const x=fold(a), y=fold(b);
+ const shared=[/тревог|страх|бои[тс]|опасност|потеря|потерят/,
+   /памят|воспомин|родител.*фотограф|альбом/,
+   /ревност|завист|лишн|неважн/].some(re=>re.test(x)&&re.test(y));
+ return shared?Math.max(0.7,similarity(strip(a),strip(b))):similarity(strip(a),strip(b));
 }
 function similarity(a,b){
   const x=vocabulary(a),y=vocabulary(b);
