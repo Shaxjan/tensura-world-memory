@@ -6,7 +6,8 @@
   "posts_journal_blob_sha": "b6485bd5d1175f77b785b22cb0f002de445a565c",
   "source_snapshot": [
     "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
-    "threads/radar/snapshots/windsor-2026-10-21.json"
+    "threads/radar/snapshots/windsor-2026-10-21.json",
+    "threads/radar/snapshots/windsor-2026-10-21_rev2.json"
   ],
   "source_types": [
     "verified_full_chain",
@@ -15,11 +16,11 @@
   ],
   "generated_date_utc": "2026-10-21",
   "counts": {
-    "snapshot_records": 37,
-    "snapshot_reposts": 4,
+    "snapshot_records": 40,
+    "snapshot_reposts": 6,
     "historic_posts": 414,
-    "new_author_roots": 33,
-    "total_author_roots": 447,
+    "new_author_roots": 34,
+    "total_author_roots": 448,
     "journal_cards": 40,
     "journal_state_counts": {
       "published": 32,
