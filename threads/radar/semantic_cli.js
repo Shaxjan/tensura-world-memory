@@ -8,7 +8,7 @@
  */
 const fs = require("node:fs");
 const path = require("node:path");
-const {compare} = require("./semantic.js");
+const {compare,krasnoyarskToday} = require("./semantic.js");
 
 function lines(p) {
   return fs.readFileSync(p, "utf8").trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
@@ -31,7 +31,7 @@ function main(argv=process.argv.slice(2)) {
   const dir=path.join(__dirname,"index");
   const manifest=JSON.parse(fs.readFileSync(path.join(dir,"manifest.json"),"utf8"));
   const posts=lines(path.join(dir,"posts.jsonl")),journal=lines(path.join(dir,"editorial.jsonl"));
-  const day=flags(argv,"--as-of",new Date().toISOString().slice(0,10));
+  const day=flags(argv,"--as-of",krasnoyarskToday());
   const sync=flags(argv,"--last-synced",manifest.generated_date_utc || null);
   const out=compare(input,posts,journal,{as_of:day,last_synced_at:sync,max_age_days:1});
   console.log(JSON.stringify({idea:input,checked_posts:posts.length,checked_editorial_cards:journal.length,...out},null,2));
