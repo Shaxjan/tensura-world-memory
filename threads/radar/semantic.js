@@ -21,6 +21,11 @@ function fold(v){return String(v == null ? "" : v).toLowerCase().replace(/ё/g,"
 function words(v){return fold(v).split(/\s+/).filter(x=>x.length>1&&!STOP.has(x));}
 function root(t){return t.length>6?t.slice(0,-2):t.length>4?t.slice(0,-1):t;}
 function vocabulary(v){return new Set(words(v).map(root));}
+const NAMES = new Set("гарри молли рон уизли хагрид сириус джеймс лили гермиона драко фабиан".split(" "));
+function conflictSimilarity(a,b){
+ const strip=v=>words(v).filter(t=>!NAMES.has(t)).join(" ");
+ return similarity(strip(a),strip(b));
+}
 function similarity(a,b){
   const x=vocabulary(a),y=vocabulary(b);
   if(!x.size||!y.size)return 0;
@@ -87,7 +92,7 @@ function compare(c, posts=[], journal=[], options={}){
   const cview=fold(c.viewpoint),oldView=fold(profile?.viewpoint);
   const newConflict=fold(c.conflict),oldConflict=fold(profile?.conflict);
   const explicitOtherView=!!(cview&&oldView&&!cview.includes(oldView)&&!oldView.includes(cview));
-  const explicitOtherConflict=!!(newConflict&&oldConflict&&similarity(newConflict,oldConflict)<0.21);
+  const explicitOtherConflict=!!(newConflict&&oldConflict&&conflictSimilarity(newConflict,oldConflict)<0.21);
   if(explicitOtherView&&explicitOtherConflict){
    verdict="NEW_ANGLE";confidence="medium";
    reasons.push("Событие уже встречалось, но предложены иная точка зрения и отдельный конфликт.");
@@ -101,7 +106,7 @@ function compare(c, posts=[], journal=[], options={}){
  }else if(first && first.score>=0.74 && words(c.text||c.title||"").length>=9){
   verdict="SAME_STORY";confidence="medium";
   reasons.push("Высокое лексическое сходство с ранее использованным материалом; требуется смысловая проверка.");
- }else if(!stale&&ready(c)&&(!first||first.score<0.18)){
+ }else if(!stale&&ready(c)&&(!first||first.score<=0.18)){
   verdict="NEW_STORY";confidence="low";
   reasons.push("Конкретное событие и конфликт заданы, близких совпадений в доступном индексе не обнаружено.");
   reasons.push("Это предварительная оценка, а не доказательство уникальности.");
