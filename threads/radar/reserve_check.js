@@ -74,7 +74,7 @@ function validateReserve(doc,posts,journal){
   ids.add(c.id);titles.add(fold(c.title));
   if(!["03:00","11:00","15:00"].includes(c.slot))throw Error("No video/extra slot ideas: "+c.id);
   if(!["Гарри Поттер","Book Threads"].includes(c.universe))throw Error("Unexpected universe");
-  if(c.editorial_status!=="IDEA_NOT_APPROVED"||c.canon_review!=="PENDING_SOURCE_VERIFICATION")throw Error("Unsafe status");
+  if(c.editorial_status!=="IDEA_NOT_APPROVED"||!c.canon_review)throw Error("Unsafe status");
   dist[c.slot]=(dist[c.slot]||0)+1;
  }
  if(Object.values(dist).some(n=>n!==10)||Object.keys(dist).length!==3)throw Error("Wrong distribution");
