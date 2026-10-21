@@ -76,7 +76,7 @@ function compare(c, posts=[], journal=[], options={}){
  const stale=days===null||days>=(options.max_age_days??1)||days<0;
  const matches=matchArchive(c,posts,journal);
  const first=matches[0]||null, eventMatches=matches.filter(m=>m.event_ids.length);
- const scheduled=matches.filter(m=>m.kind==="journal"&&["scheduled","approved","planned"].includes(m.status));
+ const scheduled=matches.filter(m=>m.kind==="journal"&&["scheduled","approved","planned"].includes(m.status)&&(m.event_ids.length>0||m.score>=0.45));
  const duplicate=matches.find(m=>m.same_wording && m.kind==="post");
  const reasons=[];let verdict="REVIEW_REQUIRED",confidence="low";
  if(duplicate){
@@ -98,7 +98,7 @@ function compare(c, posts=[], journal=[], options={}){
   }else{
    reasons.push("Событие совпадает, но подтверждения самостоятельной драматургии недостаточно.");
   }
- }else if(first && first.score>=0.74){
+ }else if(first && first.score>=0.74 && words(c.text||c.title||"").length>=9){
   verdict="SAME_STORY";confidence="medium";
   reasons.push("Высокое лексическое сходство с ранее использованным материалом; требуется смысловая проверка.");
  }else if(!stale&&ready(c)&&(!first||first.score<0.18)){
