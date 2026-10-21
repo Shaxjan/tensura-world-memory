@@ -51,6 +51,11 @@ function detectEvents(v){
 }
 function candidateText(c){return [c.title,c.text,c.event,c.conflict,c.viewpoint,c.conclusion,(c.characters||[]).join(" ")].filter(Boolean).join(" "); }
 function archiveText(p){return [p.search_text,p.original_text,p.topic,p.angle,p.text].filter(Boolean).join(" ");}
+function krasnoyarskToday() {
+ const parts=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Krasnoyarsk",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+ const dates=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+ return dates.year+"-"+dates.month+"-"+dates.day;
+}
 function parseISODate(v){return /^\d{4}-\d\d-\d\d$/.test(v||"")?new Date(v+"T00:00:00Z"):null;}
 function ready(c){return !!(String(c.event||"").trim()&&String(c.conflict||"").trim()&&Array.isArray(c.characters)&&c.characters.length);}
 function matchArchive(c, posts, journal=[]){
@@ -78,7 +83,7 @@ function matchArchive(c, posts, journal=[]){
  return found.slice(0,15);
 }
 function compare(c, posts=[], journal=[], options={}){
- const today=options.as_of||new Date().toISOString().slice(0,10);
+ const today=options.as_of||krasnoyarskToday();
  const lastSync=options.last_synced_at||null;
  const days=lastSync&&parseISODate(today)&&parseISODate(lastSync)?
     Math.floor((parseISODate(today)-parseISODate(lastSync))/86400000):null;
@@ -125,4 +130,4 @@ function compare(c, posts=[], journal=[], options={}){
  if(!posts.length){verdict="REVIEW_REQUIRED";confidence="low";reasons.push("Архив пуст.");}
  return {verdict,confidence,provisional:verdict!=="DUPLICATE",archive_fresh:!stale,latest_checked_date:lastSync,reason:reasons.join(" "),matches};
 }
-module.exports={STATES,EVENTS,fold,words,similarity,isLiteralDuplicate,detectEvents,matchArchive,compare};
+module.exports={STATES,EVENTS,fold,words,similarity,isLiteralDuplicate,detectEvents,matchArchive,compare,krasnoyarskToday};
