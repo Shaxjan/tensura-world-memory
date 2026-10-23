@@ -1,0 +1,1250 @@
+{
+  "schema_version": 2,
+  "account": "mirpottera",
+  "checked_at": "2026-10-23",
+  "reserve_revision": 4,
+  "stage": "2_of_4_semantic_rescreen",
+  "source_reserve": "ideas-2026-10-23-r4.json",
+  "source_index": "threads/radar/index/posts.jsonl",
+  "compared_author_posts": 454,
+  "compared_editorial_cards": 40,
+  "probable_continuation_roots": 16,
+  "ideas_count": 30,
+  "slot_counts": {
+    "03:00": 10,
+    "11:00": 10,
+    "15:00": 10
+  },
+  "summary": {
+    "PRECHECKED_LOW_SIMILARITY": 15,
+    "REVIEW_REQUIRED": 15
+  },
+  "method": [
+    "Reviewed all 30 narrative event/viewpoint/conflict/thesis/turn dimensions individually",
+    "Compared keyword and narrative anchors to all 454 full search_text entries (16 include probable continuation) and 40 editorial journal entries",
+    "Kept user-approved and scheduled editorial decisions separate; no candidate is approved",
+    "Heuristic lexical neighbor scores are leads, not evidence of originality",
+    "Very short posts and incomplete chains may conceal overlaps; later literary source checks required"
+  ],
+  "important_correction": {
+    "id": "G21",
+    "retired_title": "Автор заклинания лечит его жертву",
+    "missed_post_id": "18057792662603776",
+    "missed_post_url": "https://www.threads.com/@mirpottera/post/DbiJjTQCMhX",
+    "reason": "Prior scan missed the actual Draco bathroom Sectumsempra scene. Even with Snape POV, it has a high same-event repetition risk.",
+    "replacement_title": "Министр, который не выдал Гарри"
+  },
+  "source_count_audit": {
+    "historic_roots": 414,
+    "additional_roots": 40,
+    "all_roots": 454,
+    "probable_continuations": 16,
+    "journal_cards": 40
+  },
+  "unresolved": [
+    "16 potential continuation parts remain probable, not complete chains",
+    "Canon and Rosman/Russian edition primary-source verification pending for all 30",
+    "Semantic judgments remain editorially provisional",
+    "Daily sync beyond 23 October not confirmed",
+    "Existing regression suite to be run directly during stage 3"
+  ],
+  "ideas": [
+    {
+      "id": "G01",
+      "title": "Патронус, который выдал Тонкс",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Изменившийся Патронус Тонкс становится видим другим людям",
+        "characters": [
+          "Тонкс",
+          "Ремус Люпин",
+          "Северус Снегг"
+        ],
+        "viewpoint": "Тонкс",
+        "conflict": "Она хочет скрыть любовь и боль, но магия делает чувство публичным",
+        "key_detail": "патронус волк",
+        "central_thesis": "Патронус оказывается слишком честным посредником",
+        "emotional_outcome": "Любовь и уязвимость без универсальной сентиментальности"
+      },
+      "editorial_difference_and_risk": "Патронус Тонкс, меняющий форму, не обнаружен как отдельная опубликованная сцена; избегать повтора общего сожаления о Люпине.",
+      "similar_refs": [
+        {
+          "id": "18233596039321325",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdJd8hNjZ6v",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "В «Дарах Смерти» есть сцена, после которой я намного хуже стал относиться к Люпину. Тонкс беременна. А Римус приходит к Гарри, Рону и Гермионе и предлагает уйти вместе с ними. Фактически оставить беременную жен"
+        },
+        {
+          "id": "18099053732569238",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc4MccnjRX7",
+          "status": "published",
+          "score": 0.341,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": false,
+          "excerpt": "В «Дарах Смерти» война окончательно врывается в жизнь героев прямо посреди свадьбы.\n\nПатронус Кингсли появляется среди гостей с двумя новостями: Министерство пало. Скримджер погиб.\n\nПосле этого праздник фактиче"
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G02",
+      "title": "Полумна, которая делала подвал менее страшным",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Разговор Гарри с Олливандером о Полумне после освобождения из подвала Малфоев",
+        "characters": [
+          "Гаррик Олливандер",
+          "Полумна Лавгуд",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Гаррик Олливандер",
+        "conflict": "Старый мастер потерял веру в освобождение, но девочка в той же камере помогла ему не опустить руки",
+        "key_detail": "камера подвала и слова благодарности",
+        "central_thesis": "Человек, у которого отняли магические палочки, рассказывает о силе, для которой палочка не нужна",
+        "emotional_outcome": "Второстепенная связь двух пленников вместо повторения известного сюжета о битве"
+      },
+      "editorial_difference_and_risk": "Полумна уже раскрывалась через принятие друзей и похищение. В резерве иной эпизод: её забота об Олливандере в плену, рассказчик — Олливандер.",
+      "similar_refs": [
+        {
+          "id": "18118536869070394",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Decncp_jNmL",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Довольно глубокая сцена в Поттериане для меня - это когда отец Полумны однажды попытался выдать Гарри Пожирателям смерти. И самое трогательное, что в этот момент Гарри вспомнил собственную мать. Ксенофилиус Лав"
+        },
+        {
+          "id": "18108890942350335",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DezypopiPlO",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Когда Гарри пригласил Полумну на рождественскую вечеринку Слизнорта, он смущённо уточнил, что зовёт её просто как друга. А Полумна вдруг просияла. Никто прежде не приглашал её на вечеринку именно как друга. Дев"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G03",
+      "title": "Пустая койка после третьего испытания",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Возвращение Гарри и тела Седрика после третьего испытания",
+        "characters": [
+          "Поппи Помфри",
+          "Седрик Диггори",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Поппи Помфри",
+        "conflict": "Профессиональная привычка лечить сталкивается с тем, что помощь опоздала",
+        "key_detail": "незастеленная койка",
+        "central_thesis": "Пустое место становится признаком необратимой потери",
+        "emotional_outcome": "Эмоция без прямого повторения гибели героя"
+      },
+      "editorial_difference_and_risk": "Смерть Седрика встречалась в архиве. Придуманная пустая койка и действия Помфри — исключительно авторская сцена, не свидетельство канона.",
+      "similar_refs": [
+        {
+          "id": "17900136351510191",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbhuFMUjml_",
+          "status": "published",
+          "score": 0.24,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Больше всего в истории с Ритой Скитер мне нравится то, как Гермиона её вычислила. Рита постоянно знала содержание разговоров, при которых её не было. Она узнала, что Хагрид рассказал мадам Максим о своей матери"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G04",
+      "title": "Пострадавшая, которую никто не собирался убивать",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Последствия прикосновения Кэти Белл к проклятому ожерелью и её лечение",
+        "characters": [
+          "Кэти Белл",
+          "Драко Малфой",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Кэти Белл",
+        "conflict": "Она пострадала из-за попытки убить совершенно другого человека и не может понять, почему опасность вообще коснулась её",
+        "key_detail": "проклятое ожерелье",
+        "central_thesis": "Героиня едва не погибла не из-за собственной ошибки или войны, а потому что оказалась посредником в чужом преступлении",
+        "emotional_outcome": "Цена чужого тайного плана глазами пострадавшей ученицы, без пересказа обвинений Дамблдору"
+      },
+      "editorial_difference_and_risk": "Кэти Белл упоминалась как пострадавшая при выборе Дамблдора защитить Драко. Здесь сама Кэти говорит о цене чужого плана; не повторять обвинения Дамблдору.",
+      "similar_refs": [
+        {
+          "id": "18434719531134355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dbkwg4ziNAg",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Дамблдор знал, что Волан-де-Морт приказал Драко убить его. Он понимал, что мальчик напуган, что задание почти невыполнимое и что в случае отказа пострадает вся семья Малфоев. Поэтому Дамблдор решил спасти Драко"
+        },
+        {
+          "id": "18496829506101355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+          "status": "published",
+          "score": 0.233,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "ДОББИ. РОЖДЁННЫЙ СВОБОДНЫМ \n\nА что, если бы Добби был одержим идеей освободить всех эльфов? Много веков назад волшебники поработили домовых эльфов. Шли годы, сменялись поколения, рушились великие династии, но р"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G05",
+      "title": "Десять галлеонов за прошлую жизнь",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Продажа медальона Салазара Слизерина в лавку Боргина и Берка",
+        "characters": [
+          "Меропа Мракс",
+          "Карактакус Берк",
+          "Том Реддл"
+        ],
+        "viewpoint": "Меропа Мракс",
+        "conflict": "Нужда и одиночество заставляют отказаться от последней семейной вещи",
+        "key_detail": "медальон",
+        "central_thesis": "Реликвия проходит через чужие руки прежде, чем станет крестражем",
+        "emotional_outcome": "Личный мотив вместо привычной истории предмета"
+      },
+      "editorial_difference_and_risk": "Продвижение медальона через Кикимера, Флетчера и Амбридж уже описано в восстановленном продолжении 13 октября и журнале. Оставить только отдельную продажу Меропы в бедности, без хронологии крестража.",
+      "similar_refs": [
+        {
+          "id": "18103660046524436",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdLgaNFAWiY",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "У Амбридж есть одна деталь, которая почти идеально описывает её целиком. Медальон Слизерина она получила не по наследству. Не нашла в семейной шкатулке. Она забрала его у Мундунгуса, когда поймала того на незак"
+        },
+        {
+          "id": "18119550259962793",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DebVDb6iNxM",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Когда делаете генеральную уборку, всегда дважды, а лучше трижды подумайте, прежде чем что-нибудь выбрасывать! Эх, а ведь старшее поколение было право, когда годами собирало всякий мусор... Ой, простите, \"вещи, "
+        },
+        {
+          "id": "2026-10-13-1500-locket-fletcher-umbridge",
+          "kind": "editorial",
+          "url": null,
+          "status": "scheduled",
+          "score": null,
+          "source_part": "editorial_journal",
+          "manual_reviewed": true,
+          "excerpt": "Медальон Слизерина: выбросили, спас Кикимер, украл Наземникус, взяла Амбридж"
+        },
+        {
+          "id": "18147339193545401",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
+          "status": "published",
+          "score": 0.357,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": false,
+          "excerpt": "Медальон Слизерина неделями давил на Гарри, Рона и Гермиону.\nОни становились раздражительными, злыми, подозрительными. Рон под его влиянием в итоге вообще ушёл.\n\nА когда этот же крестраж на шее у Амбридж.\n\nОна "
+        },
+        {
+          "id": "18224801689323097",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Da-zAw5iCfy",
+          "status": "published",
+          "score": 0.315,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": false,
+          "excerpt": "В \"Принце-полукровке\" Гарри и Дамблдор находят медальон в пещере.\nНо это подделка. Настоящий медальон уже кто-то забрал.\nЧьи инициалы были в записке?\nА) С. С.\nБ) Р. А. Б.\nВ) Б. К. М.\nГ) Л. М.\nОтвет:\nР. А. Б. Эт"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G06",
+      "title": "Брат палочки, которая уже убивала",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Выбор первой палочки Гарри в магазине Олливандера",
+        "characters": [
+          "Гаррик Олливандер",
+          "Гарри Поттер",
+          "Волан-де-Морт"
+        ],
+        "viewpoint": "Гаррик Олливандер",
+        "conflict": "Мастер должен честно назвать странную связь, не перекладывая чужие преступления на мальчика",
+        "key_detail": "две родственные палочки",
+        "central_thesis": "Происхождение инструмента не определяет судьбу владельца",
+        "emotional_outcome": "Моральный выбор через ремесло"
+      },
+      "editorial_difference_and_risk": "В архиве обсуждались связь волшебных палочек и Бузинная палочка; первая покупка Гарри глазами Олливандера — другое событие. Мотив мастера не выдавать за фактический монолог.",
+      "similar_refs": [
+        {
+          "id": "18129935927499453",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Ded52aHApiA",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Волан-де-Морт годами искал способ победить смерть. А в итоге проиграл из-за одной палочки, которую Гарри Поттер отобрал у Драко Малфоя голыми руками. Причём сам Гарри тогда даже не подозревал, что только что ст"
+        },
+        {
+          "id": "18492572491104208",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DekPD9-jQ8L",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "В фильме Грин-де-Вальд сам рассказывает Волан-де-Морту, где искать Бузинную палочку. В книге он лжёт, что никогда ею не владел. И Волан-де-Морт убивает его.\n\nК тому моменту Геллерт больше полувека провёл в Нурм"
+        },
+        {
+          "id": "17943551229093594",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DezJgPcDUWn",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Олливандер бы заплакал, узнав, что творилось на съёмках."
+        },
+        {
+          "id": "18496829506101355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+          "status": "published",
+          "score": 0.276,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "ДОББИ. РОЖДЁННЫЙ СВОБОДНЫМ \n\nА что, если бы Добби был одержим идеей освободить всех эльфов? Много веков назад волшебники поработили домовых эльфов. Шли годы, сменялись поколения, рушились великие династии, но р"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G07",
+      "title": "Боггарт учителя защиты",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Урок с боггартом на третьем курсе",
+        "characters": [
+          "Ремус Люпин",
+          "Ученики Хогвартса",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Ремус Люпин",
+        "conflict": "Учитель должен научить смеяться над страхом, которого сам никогда полностью не преодолеет",
+        "key_detail": "полная луна",
+        "central_thesis": "Самая страшная вещь в кабинете для него кажется детям безобидной",
+        "emotional_outcome": "Личный конфликт за знакомым уроком"
+      },
+      "editorial_difference_and_risk": "Общее устройство боггарта уже обсуждалось. Этот сюжет — страх Люпина перед собственной болезнью и парадокс его урока, не ещё одна загадка о внешности боггарта.",
+      "similar_refs": [
+        {
+          "id": "17969400099169195",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeRB4DpClWI",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Никто не знает, как на самом деле выглядит боггарт.\nОн принимает форму главного страха человека, который его видит.\nНо мне теперь интересно другое.\nЧто будет, если его сфотографировать?🤔\nПоставить камеру перед"
+        },
+        {
+          "id": "18083945171701095",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dde0xcSiDbA",
+          "status": "published",
+          "score": 0.328,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Есть момент в финальной битве за Хогвартс, после которого Рон у меня выглядит довольно бездушно. Лаванда лежит после нападения Грейбека. Та самая Лаванда, с которой он совсем недавно встречался. Которая его цел"
+        },
+        {
+          "id": "18180277579449523",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeWLgtGj4uc",
+          "status": "published",
+          "score": 0.327,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Артур Уизли выиграл в лотерею 700 галлеонов. И совершенно случайно запустил самый знаменитый побег в мире магии.\n\nНа выигранные деньги Уизли всей семьёй отправились в Египет. Их фотографию напечатали в \"Ежеднев"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G08",
+      "title": "Когда слова снова стали простыми",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Поздние отчёты о прогрессе после операции",
+        "characters": [
+          "Чарли Гордон",
+          "Элджернон"
+        ],
+        "viewpoint": "Чарли Гордон",
+        "conflict": "Он знает, что теряет способность понимать собственную потерю",
+        "key_detail": "записная тетрадь",
+        "central_thesis": "Сам отчёт становится беспощадным свидетельством",
+        "emotional_outcome": "Трагедия не проговаривается за читателя"
+      },
+      "editorial_difference_and_risk": "В доступном архиве не обнаружена та же сцена «Цветов для Элджернона»; сверить текст поздних отчётов и не копировать язык перевода.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G09",
+      "title": "Уйти от человека, которого любишь",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Уход Джейн из Торнфилда после раскрытия существующего брака Рочестера",
+        "characters": [
+          "Джейн Эйр",
+          "Эдвард Рочестер"
+        ],
+        "viewpoint": "Джейн Эйр",
+        "conflict": "Любовь требует остаться, личное достоинство требует уйти",
+        "key_detail": "дверь Торнфилда",
+        "central_thesis": "Победа героини не выглядит счастливой в момент выбора",
+        "emotional_outcome": "Цена верности себе"
+      },
+      "editorial_difference_and_risk": "Тема ухода Джейн Эйр после раскрытия брака не обнаружена; драматургический выбор — уважение к себе вопреки любви.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G10",
+      "title": "На похоронах не оказалось гостей",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Похороны Джея Гэтсби",
+        "characters": [
+          "Ник Каррауэй",
+          "Джей Гэтсби",
+          "его знакомые"
+        ],
+        "viewpoint": "Ник Каррауэй",
+        "conflict": "Толпа праздновала рядом с богатством, но никто не берёт на себя ответственность",
+        "key_detail": "пустые приглашения",
+        "central_thesis": "Чем громче были праздники, тем тише оказалась финальная сцена",
+        "emotional_outcome": "Тема отношений без морализаторства"
+      },
+      "editorial_difference_and_risk": "Похороны Гэтсби не обнаружены как опубликованная сцена; не смешивать отсутствие гостей с абсолютным «никого»: присутствовали несколько человек.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G11",
+      "title": "Больница, где маггловские швы признали опасной магией",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Лечение Артура Уизли в больнице Святого Мунго после нападения Нагайны",
+        "characters": [
+          "Артур Уизли",
+          "Молли Уизли",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Артур Уизли",
+        "conflict": "Артур восхищается маггловским методом, пока его жена видит опасный и бессмысленный эксперимент",
+        "key_detail": "маггловские хирургические швы",
+        "central_thesis": "Для Артура медицинская катастрофа звучит как очередное технологическое открытие",
+        "emotional_outcome": "Столкновение магического и маггловского миров на конкретной больничной сцене"
+      },
+      "editorial_difference_and_risk": "Свежий материал об Артуре и коврах/«Форде» содержит другой комический парадокс. Здесь маггловские швы и провал лечения; опасно повторять схему «Артур восхищается магглами» без новой сцены.",
+      "similar_refs": [
+        {
+          "id": "18104629274128714",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeyEy24DfT5",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "В Британии волшебникам запретили летать на коврах. Почему? Потому что ковёр считается магловским предметом, а заколдовывать такие вещи нельзя. Торговец Али Башир пытался объяснить Артуру Уизли, что это прекрасн"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G12",
+      "title": "Вечеринка, на которой еда должна протухнуть",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Праздник дня смерти Ника в подземельях Хогвартса",
+        "characters": [
+          "Почти Безголовый Ник",
+          "Гарри Поттер",
+          "Гермиона Грейнджер",
+          "Рон Уизли"
+        ],
+        "viewpoint": "Почти Безголовый Ник",
+        "conflict": "Гости из живых стараются быть вежливыми, а весь банкет рассчитан на другие носы",
+        "key_detail": "протухшая еда",
+        "central_thesis": "Для привидения лучший кейтеринг - пища, которую живые есть не способны",
+        "emotional_outcome": "Юмор на конкретной книжной детали"
+      },
+      "editorial_difference_and_risk": "Почти Безголовый Ник раньше помогал Гарри понять судьбу призраков. В резерве комический банкет на день смерти с несъедобной едой.",
+      "similar_refs": [
+        {
+          "id": "17932249074366851",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcecf3MkvQQ",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "После смерти Сириуса Гарри идёт искать Почти Безголового Ника.\nНе потому что ему нужен совет.\nОн надеется на одну очень простую вещь: вдруг Сириус вернётся призраком.\nИ именно тогда Ник объясняет, что призракам"
+        },
+        {
+          "id": "18100322857965622",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DblzArJCAYu",
+          "status": "published",
+          "score": 0.269,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Призраки Хогвартса со временем перестают казаться страшными. Они просто летают по коридорам, разговаривают с учениками, приходят на праздники. Но за каждым из них стоит человек, который однажды испугался смерти"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G13",
+      "title": "В теплицах Хогвартса снова танцы",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Созревание мандрагор перед приготовлением зелья от оцепенения",
+        "characters": [
+          "Помона Стебль",
+          "Школьные мандрагоры"
+        ],
+        "viewpoint": "Помона Стебль",
+        "conflict": "Растения торопятся на праздник, а учителя ждут их, чтобы спасти учеников",
+        "key_detail": "танцы мандрагор",
+        "central_thesis": "Лучшая школьная новость приходит не из больничного крыла, а с вечеринки в горшках",
+        "emotional_outcome": "Комедия на причинно-следственной связи канона"
+      },
+      "editorial_difference_and_risk": "Мандрагоры упоминались на уроке по пересадке; будущая «вечеринка» взрослых растений и ожидание лекарства — другой этап, но предмет уже использован.",
+      "similar_refs": [
+        {
+          "id": "18385798864204017",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcWF_IdiDLG",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Представьте первый урок травологии на втором курсе. Профессор Стебль: \"Сегодня пересаживаем мандрагоры. Всем надеть наушники.\" Дети: зачем? \"Потому что их крик может убить человека.\" ... \"Но не переживайте, эти"
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G14",
+      "title": "Приз за лучший рецепт достался шпаргалке",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Первый урок зельеварения у Слизнорта",
+        "characters": [
+          "Гарри Поттер",
+          "Гермиона Грейнджер",
+          "Гораций Слизнорт"
+        ],
+        "viewpoint": "Гарри Поттер",
+        "conflict": "Формально лучший ученик побеждает благодаря чужим тайным заметкам",
+        "key_detail": "потрёпанный учебник",
+        "central_thesis": "В конкурсе аккуратного соблюдения инструкций выигрывает тот, кто их нарушил",
+        "emotional_outcome": "Школьная сатира без пересказа урока"
+      },
+      "editorial_difference_and_risk": "В архиве обсуждались старый учебник Снегга и другие уроки Слизнорта. В резерве конкурс Напитка живой смерти и выигрыш «Феликс Фелицис», не общая тема хитрого Гарри.",
+      "similar_refs": [
+        {
+          "id": "18173648203382335",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbV5OIDiIhE",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Если подумать, лучший преподаватель зельеварения для Гарри был не Слагхорн.\nИ даже не Снейп .\nА старый учебник Снейпа.\nПотому что там были знания Снейпа, но без самого Снейпа.\nБез давления и сравнивания его с е"
+        },
+        {
+          "id": "18496829506101355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+          "status": "published",
+          "score": 0.24,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "ДОББИ. РОЖДЁННЫЙ СВОБОДНЫМ \n\nА что, если бы Добби был одержим идеей освободить всех эльфов? Много веков назад волшебники поработили домовых эльфов. Шли годы, сменялись поколения, рушились великие династии, но р"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G15",
+      "title": "Собака, у которой хозяйка превратилась в воздушный шар",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Раздувание тётушки Мардж магией Гарри",
+        "characters": [
+          "Потрошитель",
+          "Мардж Дурсль",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Потрошитель",
+        "conflict": "Верный пёс должен защищать хозяйку, но не знает, на кого лаять, когда она летает",
+        "key_detail": "поводок",
+        "central_thesis": "Первый случай, когда собака не смогла последовать за хозяйкой",
+        "emotional_outcome": "Узнаваемая физическая комедия"
+      },
+      "editorial_difference_and_risk": "Раздутая тётушка Мардж не обнаружена с рассказчиком-псом; мысли Потрошителя вымышлены, физическое присутствие собаки проверить.",
+      "similar_refs": [
+        {
+          "id": "18133401556714233",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcPNdtuiMEh",
+          "status": "published",
+          "score": 0.31,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Мне кажется, мы немного недооцениваем, насколько ужасно Сириусу было сидеть на площади Гриммо. Человек двенадцать лет провёл в Азкабане. Двенадцать. Потом сбежал, несколько лет скрывался — и наконец оказался ср"
+        },
+        {
+          "id": "18184452538404715",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcPvy6yknHp",
+          "status": "published",
+          "score": 0.31,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "В Поттериане удивительно мало взрослых мужчин, рядом с которыми Гарри может просто быть подростком. Не Избранным, не оружием против Волдеморта и не сыном Джеймса и Лили. \nИ на этом фоне Билл Уизли выглядит почт"
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G16",
+      "title": "Подпольное радио с паролем и юмором",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Подпольные радиопередачи во время власти Волан-де-Морта",
+        "characters": [
+          "Ли Джордан",
+          "Фред Уизли",
+          "Джордж Уизли",
+          "Римус Люпин"
+        ],
+        "viewpoint": "Ли Джордан",
+        "conflict": "Чтобы говорить правду, приходится прятать частоту, имя и лицо",
+        "key_detail": "радиоприёмник и пароль",
+        "central_thesis": "Шутка превращается не в развлечение, а в способ сказать, что сопротивление живо",
+        "emotional_outcome": "Сатира о медиа и цензуре"
+      },
+      "editorial_difference_and_risk": "Материал 23 октября и более ранний рассказ раскрывают тайную связь через монеты Отряда Дамблдора. Радио «Поттеров дозор» отличается эпохой, персонажами и риском вещания; не сводить к «Гермиона придумала тайную связь».",
+      "similar_refs": [
+        {
+          "id": "18109268174261128",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/De1uOOfikHf",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Гермиона придумала зачарованные галлеоны для Отряда Дамблдора не с нуля. Идею тайной связи она подсмотрела у Волан-де-Морта: тот созывал Пожирателей смерти через Чёрные метки. Через год Драко Малфой скопировал "
+        },
+        {
+          "id": "18094564298550359",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdirkATDQBo",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "Гермиона придумала систему связи Отряда Дамблдора, подсмотрев идею у Пожирателей смерти. И это одна из тех деталей, которые очень хорошо показывают, насколько она опасно умная. У Пожирателей была Чёрная метка: "
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G17",
+      "title": "Самая опасная профессия на квиддиче: комментатор",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Комментарий Ли на школьном матче по квиддичу",
+        "characters": [
+          "Ли Джордан",
+          "Минерва Макгонагалл"
+        ],
+        "viewpoint": "Ли Джордан",
+        "conflict": "Комментатор хочет болеть, а преподаватель требует нейтральности",
+        "key_detail": "комментаторский микрофон",
+        "central_thesis": "Магический спорт получил человека, которому нужны не правила, а свобода слова",
+        "emotional_outcome": "Острый комический диалог на каноне"
+      },
+      "editorial_difference_and_risk": "В архиве была Полумна-комментатор. Ли Джордан, его пристрастность и контроль Макгонагалл — иная ситуация, но аналогичный формат квиддичного юмора.",
+      "similar_refs": [
+        {
+          "id": "17902019613561331",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc41pSBE7dt",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Из всех возможных людей микрофон на матче Гриффиндора и Пуффендуя однажды дали Луне Лавгуд.\n\nИ это было прекрасно именно потому, что Луна даже не пыталась изображать обычного ярого спортивного комментатора.\n\nОн"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G18",
+      "title": "Все болезни, кроме одной",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Эпизод с медицинским справочником до путешествия по Темзе",
+        "characters": [
+          "Джей",
+          "Джордж",
+          "Гаррис"
+        ],
+        "viewpoint": "Джей",
+        "conflict": "Чем больше герой знает симптомов, тем хуже чувствует себя",
+        "key_detail": "медицинская энциклопедия",
+        "central_thesis": "Единственная не найденная болезнь кажется личным оскорблением",
+        "emotional_outcome": "Самостоятельная литературная сатира на самодиагностику"
+      },
+      "editorial_difference_and_risk": "Медицинский справочник Джея из «Троих в лодке» не найден в архиве; проверить комический порядок эпизода в русском издании.",
+      "similar_refs": [
+        {
+          "id": "18135045418611118",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbfbZyPiDdg",
+          "status": "published",
+          "score": 0.275,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": false,
+          "excerpt": "Фред и Джордж платили первокурсникам за то, чтобы те проверяли на себе экспериментальные сладости. Детям было по одиннадцать лет. Они ели конфету, начинали блевать, падали в обморок или истекали кровью, а близн"
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G19",
+      "title": "Приговоры Королевы, которые король тихо отменял",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Сцены правления Королевы Червей в Стране чудес",
+        "characters": [
+          "Король Червей",
+          "Алиса",
+          "Королева Червей"
+        ],
+        "viewpoint": "Король Червей",
+        "conflict": "Королеве необходим ужас, а королю - чтобы после заседания кто-то остался жив",
+        "key_detail": "королевский приказ",
+        "central_thesis": "Самый рациональный служащий абсурдного суда занят тайной отменой начальственных решений",
+        "emotional_outcome": "Бюрократическая сатира"
+      },
+      "editorial_difference_and_risk": "Сцены Королевы и Короля Червей не обнаружены; сохранить собственную логику абсурдной сатиры, сверить полномочия короля.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G20",
+      "title": "Кот с билетом всё равно не пассажир",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Попытка Бегемота проехать на трамвае",
+        "characters": [
+          "Кот Бегемот",
+          "Кондуктор",
+          "Коровьев"
+        ],
+        "viewpoint": "Кот Бегемот",
+        "conflict": "Сверхъестественный персонаж добровольно выполняет мелкое правило, а система отказывается принять его как пассажира",
+        "key_detail": "билет на трамвай",
+        "central_thesis": "Кот оказывается законопослушнее людей",
+        "emotional_outcome": "Литературный абсурд через бытовую деталь"
+      },
+      "editorial_difference_and_risk": "Сцена с котом Бегемотом, трамваем и оплатой не обнаружена; книжные детали требуют проверки по первоисточнику.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G21",
+      "title": "Министр, который не выдал Гарри",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Гибель Руфуса Скримджера при захвате Министерства и его отказ раскрыть местонахождение Гарри",
+        "characters": [
+          "Руфус Скримджер",
+          "Гарри Поттер",
+          "Пожиратели смерти"
+        ],
+        "viewpoint": "Гарри Поттер",
+        "conflict": "Гарри не доверял человеку, который пытался сделать его символом Министерства, но этот человек в конце не предал его даже под пытками",
+        "key_detail": "новость о гибели министра на свадьбе Билла и Флёр",
+        "central_thesis": "Министр, которому Гарри отказывал в публичной поддержке, молча защитил Гарри ценой жизни",
+        "emotional_outcome": "Переоценка сложного персонажа без оправдания его прошлых решений"
+      },
+      "editorial_difference_and_risk": "Скримджер уже упоминался только в новости о падении Министерства и гибели. Здесь конфликт между его политическим использованием Гарри и отказом выдать Гарри под пытками. Прежняя G21 отменена как опасный повтор сцены с Драко.",
+      "similar_refs": [
+        {
+          "id": "18099053732569238",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc4MccnjRX7",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "В «Дарах Смерти» война окончательно врывается в жизнь героев прямо посреди свадьбы.\n\nПатронус Кингсли появляется среди гостей с двумя новостями: Министерство пало. Скримджер погиб.\n\nПосле этого праздник фактиче"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G22",
+      "title": "Подсвечники, которых вор не украл",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Епископ Мириэль защищает Жана Вальжана от задержания за серебро",
+        "characters": [
+          "Жан Вальжан",
+          "епископ Мириэль",
+          "жандармы"
+        ],
+        "viewpoint": "Жан Вальжан",
+        "conflict": "Вместо ожидаемого наказания потерпевший неожиданно защищает человека, который его обокрал",
+        "key_detail": "серебряные подсвечники",
+        "central_thesis": "Тот, кто действительно потерял своё серебро, становится единственным свидетелем в защиту обвиняемого",
+        "emotional_outcome": "Нравственный выбор раскрывается через драматическую сцену, а не морализаторство"
+      },
+      "editorial_difference_and_risk": "Сцена епископа Мириэля и Жана Вальжана не обнаружена; это не прежняя отброшенная тезисная идея о любви Волан-де-Морта. Русский перевод проверить.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G23",
+      "title": "Снитч открылся только перед смертью",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Открытие первого пойманного снитча по пути в Запретный лес",
+        "characters": [
+          "Гарри Поттер",
+          "Альбус Дамблдор"
+        ],
+        "viewpoint": "Гарри Поттер",
+        "conflict": "Игра и смертельное решение оказываются соединены одной вещью",
+        "key_detail": "золотой снитч",
+        "central_thesis": "Победный спортивный трофей становится способом попрощаться",
+        "emotional_outcome": "Переосмысление предмета через финал серии"
+      },
+      "editorial_difference_and_risk": "Снитчи и квиддич описывались неоднократно, включая восстановленное продолжение 13 октября. Открытие завещанного снитча перед лесом — иная сцена, необходима проверка ключевого финального смысла.",
+      "similar_refs": [
+        {
+          "id": "17919660228445413",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dea5lfrDYma",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Люциус Малфой снарядил всю команду Слизерина новыми \"Нимбусами-2001\". Драко получил место ловца, а его команда получила самые быстрые мётлы в мире. Победа в кармане! Наверняка так думали слизеринцы, ведь подгот"
+        },
+        {
+          "id": "18101751887459670",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc03l6oCoyL",
+          "status": "published",
+          "score": 0.27,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": false,
+          "excerpt": "Фред и Джордж сделали почти безумную ставку на финал Кубка мира по квиддичу — и угадали всё.\n\nОни поставили, что Ирландия выиграет матч, но снитч поймает Виктор Крам. Так и произошло: Крам поймал снитч, а Болга"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G24",
+      "title": "Снегг привёл Гарри к мечу, но спас его Рон",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Меч Гриффиндора в пруду и возвращение Рона",
+        "characters": [
+          "Рон Уизли",
+          "Северус Снегг",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Рон Уизли",
+        "conflict": "Один союзник не может раскрыться, другой должен вернуться после предательства",
+        "key_detail": "лань, лёд и меч",
+        "central_thesis": "Скрытая помощь срабатывает только благодаря открытому решению друга",
+        "emotional_outcome": "Распределённый героизм вместо легенды об одном спасителе"
+      },
+      "editorial_difference_and_risk": "Возвращение Рона к замёрзшему пруду с мечом не обнаружено как самостоятельная сцена; не спутать тайную помощь Снегга с поступком Рона.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G25",
+      "title": "Баллы за то, что не бросил чужую сестру",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Второе испытание Турнира Трёх Волшебников у Чёрного озера",
+        "characters": [
+          "Гарри Поттер",
+          "Флёр Делакур",
+          "Габриэль Делакур",
+          "Рон Уизли"
+        ],
+        "viewpoint": "Гарри Поттер",
+        "conflict": "Система оценивает скорость, а герой отказывается бросить ребёнка",
+        "key_detail": "подводные заложники",
+        "central_thesis": "Его ошибочное понимание опасности выявляет настоящую ценность поступка",
+        "emotional_outcome": "Интеллектуальный спор о правилах и человечности"
+      },
+      "editorial_difference_and_risk": "В опубликованной викторине было второе испытание и жабросли. Здесь моральное решение Гарри не бросать Габриэль; не повторять сведения о жаброслях.",
+      "similar_refs": [
+        {
+          "id": "18088445684561400",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Da9gWUfiITi",
+          "status": "published",
+          "score": null,
+          "source_part": "root_plus_probable_continuation",
+          "manual_reviewed": true,
+          "excerpt": "Тест по Поттериане #1\nВо втором испытании Турнира Трёх Волшебников Гарри должен был дышать под водой.\nВ фильме ему помогает Невилл.\nА кто дал ему жабросли в книге?\nВарианты:\nА)Невилл\nБ)Добби\nВ)Гермиона\nГ)Снейп\n"
+        }
+      ],
+      "prior_screen_status": "REVIEW_REQUIRED",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G26",
+      "title": "Что Слизнорт пытался стереть из собственной памяти",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Поддельное воспоминание о разговоре с Томом Реддлом",
+        "characters": [
+          "Гораций Слизнорт",
+          "Том Реддл",
+          "Гарри Поттер"
+        ],
+        "viewpoint": "Гораций Слизнорт",
+        "conflict": "Учитель боится признать, что заметил опасность слишком поздно",
+        "key_detail": "подделанное воспоминание",
+        "central_thesis": "Попытка спрятать ошибку делает её самым важным свидетельством",
+        "emotional_outcome": "Моральная ответственность вместо обвинения без причин"
+      },
+      "editorial_difference_and_risk": "Подделанное воспоминание Слизнорта не обнаружено как основной сюжет. Проверить, чего именно он стыдился и что говорил Реддлу.",
+      "similar_refs": [
+        {
+          "id": "18121526620878716",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db6gO73E57s",
+          "status": "published",
+          "score": 0.239,
+          "source_part": "original_root",
+          "manual_reviewed": false,
+          "excerpt": "Гарри слишком поздно узнал, что его первую метлу подарил Сириус. Не \"Молнию\". Вообще первую в его жизни. На площади Гриммо Гарри находит письмо Лили к Сириусу. Она пишет, как годовалый Гарри носится по дому на "
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G27",
+      "title": "Бильбо отдал самое ценное врагам друга",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Передача Аркенстона представителям осаждающих",
+        "characters": [
+          "Бильбо Бэггинс",
+          "Торин Дубощит",
+          "Бард"
+        ],
+        "viewpoint": "Бильбо Бэггинс",
+        "conflict": "Верность другу против попытки предотвратить войну",
+        "key_detail": "Аркенстон",
+        "central_thesis": "Поступок «предателя» оказывается наиболее мирным решением",
+        "emotional_outcome": "Неоднозначность благородного выбора"
+      },
+      "editorial_difference_and_risk": "Аркенстон и переговоры Бильбо не обнаружены; отдельно проверять детали в «Хоббите».",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G28",
+      "title": "Дом, который сгорел вместе с хозяйкой книг",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Пожар у женщины, отказавшейся покинуть библиотеку",
+        "characters": [
+          "Гай Монтэг",
+          "Пожарные",
+          "женщина"
+        ],
+        "viewpoint": "Гай Монтэг",
+        "conflict": "Приказ уничтожить книги сталкивается с человеком, готовым погибнуть вместе с ними",
+        "key_detail": "спичка и книги",
+        "central_thesis": "Разрушение превращает надёжного исполнителя приказов в сомневающегося",
+        "emotional_outcome": "Рождение убеждения из одной сцены"
+      },
+      "editorial_difference_and_risk": "Женщина, погибающая с книгами в «451° по Фаренгейту», не обнаружена; проверить способ смерти и мотивацию в романе.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G29",
+      "title": "Добрый поступок, который не спас портрет",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Решение не соблазнять Хетти и последующий осмотр портрета",
+        "characters": [
+          "Дориан Грей",
+          "Хетти Мертон"
+        ],
+        "viewpoint": "Дориан Грей",
+        "conflict": "Герой хочет стать лучше, но одновременно стремится получить награду за добродетель",
+        "key_detail": "портрет",
+        "central_thesis": "Попытка исправления оказывается продолжением самообмана",
+        "emotional_outcome": "Тонкая этическая ловушка вместо пересказа сюжета"
+      },
+      "editorial_difference_and_risk": "Архив знает портрет Снегга, но портрет Дориана Грея принадлежит иному произведению, драматургия самообмана не совпадает.",
+      "similar_refs": [
+        {
+          "id": "17958487599194205",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcBXsM2k4jR",
+          "status": "published",
+          "score": null,
+          "source_part": "original_root",
+          "manual_reviewed": true,
+          "excerpt": "После войны Гарри сделал для Снейпа одну вещь, о которой в книгах уже не рассказали. Он добился, чтобы портрет Снейпа появился в кабинете директоров Хогвартса. В конце \"Даров Смерти\" его там нет. И это было не "
+        }
+      ],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G30",
+      "title": "Франкенштейн уничтожил обещанную подругу",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "originality_certified": false,
+      "author_approved": false,
+      "semantic_dimensions": {
+        "event": "Разрушение второй искусственно создаваемой жизни",
+        "characters": [
+          "Виктор Франкенштейн",
+          "Создание Франкенштейна",
+          "Элизабет"
+        ],
+        "viewpoint": "Виктор Франкенштейн",
+        "conflict": "Сдержать обещание одинокому созданию или рискнуть судьбами людей",
+        "key_detail": "незавершённое создание",
+        "central_thesis": "Поступок, призванный предотвратить трагедию, ускоряет её",
+        "emotional_outcome": "Конфликт ответственности и сострадания"
+      },
+      "editorial_difference_and_risk": "Разрушение Виктором Франкенштейном второго создания не обнаружено; возможные последствия для других — дилемма, не доказанная неизбежность.",
+      "similar_refs": [],
+      "prior_screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    }
+  ]
+}
