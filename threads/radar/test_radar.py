@@ -190,6 +190,76 @@ class RadarStageBTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "falsely marked complete"):
             verify(self.root)
 
+    def test_full_size_454_root_40_journal_16_continuation_fixture(self):
+        self.full["posts"] = []
+        for i in range(414):
+            doc = dict(self.full["posts"][0]) if self.full["posts"] else {
+                "media_type": "TEXT_POST", "parts_count": 1,
+                "metrics": {"views": 100}, "completeness": {"review_reasons": []},
+            }
+            post_id = str(17000000000000000 + i)
+            doc.update({"post_id": post_id,
+                        "url": "https://www.threads.com/post/" + post_id,
+                        "published_at": "2026-10-12T08:00:00+0000",
+                        "full_text_original": "Исторический пост " + str(i),
+                        "full_text_editorial": "Исторический пост " + str(i),
+                        "original_first_text": "Исторический пост " + str(i)})
+            self.full["posts"].append(doc)
+        self.full["total_posts"] = 414
+        self.formats["formats"]["TEXT_POST"] = [
+            {"post_id": p["post_id"]} for p in self.full["posts"]
+        ]
+        self.new["posts"] = []
+        for i in range(40):
+            post_id = str(18000000000000000 + i)
+            self.new["posts"].append({
+                "post_id": post_id, "post_timestamp": f"2026-10-23T12:{i:02d}:00+0000",
+                "post_permalink": "https://www.threads.com/post/" + post_id,
+                "post_media_type": "TEXT_POST", "post_text": "Новый пост " + str(i),
+                "post_views": i,
+            })
+        for i in range(10):
+            post_id = str(19000000000000000 + i)
+            self.new["posts"].append({
+                "post_id": post_id, "post_timestamp": f"2026-10-23T13:{i:02d}:00+0000",
+                "post_permalink": "https://www.threads.com/post/" + post_id,
+                "post_media_type": "REPOST_FACADE", "post_text": None,
+                "post_views": 0,
+            })
+        self.new["count"] = 50
+        self.new["retrieval_date_utc"] = "2026-10-23"
+        self.editor["posts"] = [
+            {"id": f"e{i}", "status": "scheduled" if i % 3 == 0 else "published",
+             "topic": f"Тема {i}", "date": "2026-10-23", "slot": "15:00"}
+            for i in range(40)
+        ]
+        self.save()
+        continuations = []
+        for i in range(16):
+            continuations.append({
+                "reply_id": str(20000000000000000 + i),
+                "root_post_id": self.new["posts"][i]["post_id"],
+                "reply_to_id": self.new["posts"][i]["post_id"],
+                "published_at": f"2026-10-23T12:{i:02d}:20+0000",
+                "original_text": f"Продолжение {i}",
+                "classification": "PROBABLE_CONTINUATION",
+            })
+        dump(self.snap.parent / "author-continuations-2026-10-23.json", {
+            "continuation_count": len(continuations), "continuations": continuations,
+        })
+        first = build(self.root)
+        self.assertEqual(first["total_author_roots"], 454)
+        self.assertEqual(first["author_continuation_parts"], 16)
+        self.assertEqual(first["journal_cards"], 40)
+        self.assertEqual(first["snapshot_reposts"], 10)
+        self.assertEqual(verify(self.root)["posts"], 454)
+        idx = self.base / "radar" / "index"
+        before = [(p.name, p.read_bytes()) for p in sorted(idx.glob("*"))]
+        second = build(self.root)
+        after = [(p.name, p.read_bytes()) for p in sorted(idx.glob("*"))]
+        self.assertEqual(first, second)
+        self.assertEqual(before, after)
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
