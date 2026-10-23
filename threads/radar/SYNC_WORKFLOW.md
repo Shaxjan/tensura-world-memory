@@ -37,7 +37,7 @@ node threads/radar/snapshot_intake.js /path/to/windsor-export.json --write-local
 \`\`\`bash
 python threads/radar/radar.py build
 python threads/radar/radar.py verify
-node --test threads/radar/semantic.test.js threads/radar/reserve.test.js threads/radar/snapshot_intake.test.js threads/radar/reserve-current.test.js
+node --test threads/radar/semantic.test.js threads/radar/reserve.test.js threads/radar/snapshot_intake.test.js threads/radar/reserve-current.test.js threads/radar/semantic-safety.test.js threads/radar/snapshot-safety.test.js
 python -m unittest discover -s threads/radar -p 'test_*.py'
 node threads/radar/reserve_check.js 2026-10-23
 \`\`\`
@@ -54,6 +54,14 @@ Python использует все \`windsor-*.json\` в порядке имён
 - Следить за `git diff` после `radar.py build`: разрешены только ожидаемые изменения производного индекса. Не изменять `full-posts-verified.json`, архивные файлы, исходные публикации и игровые репозитории.
 - Не повышать степень подтверждения 16 продолжений на основании одного временного интервала; не смешивать их с обычными комментариями.
 - На текущей ветке независимая реконструкция 454/454 корней и 40/40 редакционных карточек дала ноль расхождений. Нативная пересборка остаётся открытым контрольным пунктом.
+
+## Этап 5: проверка качества входных данных и даты
+
+Импорт в отдельной `radar-*` ветке проверяет не только исходный текст и ссылку старого `post_id`, но и неизменяемые время публикации и тип медиа. Некорректная календарная дата, дата получения раньше любого поста и некорректная дата скрининга — причины **остановиться**, а не переходить к `NEW_STORY`.
+
+При одновременном наличии старых файлов `windsor-import-*` и новых `windsor-YYYY-*` порядок берётся из `retrieval_date_utc`, а не из названия файла. Просмотры могут обновляться, авторский текст — нет.
+
+Проверки, выполненные без Work: **23/23 Python** и **17/17 Node.js** нативно на отдельных фикстурах. Прямой полный Node-прогон на 454-публикационном индексе и непосредственная Python-пересборка основного архива ещё не завершены. См. [протокол этапа 5](./validation-stage-5-2026-10-23.json).
 
 ## Ограничения
 
