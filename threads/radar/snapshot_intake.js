@@ -15,8 +15,11 @@ const FIELDS=["post_id","post_timestamp","post_text","post_permalink","post_medi
 function lines(p){return fs.readFileSync(p,"utf8").trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);}
 function utcDate(ts){
  if(typeof ts!=="string"||!/^20\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(?:\+0000|Z)$/.test(ts))throw Error("Bad UTC post_timestamp");
- const date=new Date(ts.replace(/\+0000$/,"Z"));
- if(Number.isNaN(date.getTime()))throw Error("Invalid UTC post_timestamp");
+ const iso=ts.replace(/\+0000$/,"Z");
+ const date=new Date(iso);
+ // Date silently normalizes impossible calendar dates such as February 30.
+ if(Number.isNaN(date.getTime())||date.toISOString().slice(0,19)!==iso.slice(0,19))
+  throw Error("Invalid UTC post_timestamp");
  return date.toISOString().slice(0,10);
 }
 function validateInput(obj,account="mirpottera"){
@@ -56,7 +59,8 @@ function diff(added, indexed){
   if(p.post_media_type==="REPOST_FACADE"){reposts.push(p.post_id);continue;}
   const old=ids.get(p.post_id);
   if(!old){unique.push(p.post_id);continue;}
-  if((old.original_text||"")!==(p.post_text||"")||(old.url||"")!==p.post_permalink){changed.push(p.post_id);}
+  if((old.original_text||"")!==(p.post_text||"")||(old.url||"")!==p.post_permalink||
+    (old.published_at||"")!==p.post_timestamp||(old.media_type||"")!==p.post_media_type){changed.push(p.post_id);}
   else identical.push(p.post_id);
  }
  return {new_author_ids:unique,identical_ids:identical,changed_existing_ids:changed,repost_ids:reposts,needs_manual_review:changed.length>0};
@@ -64,7 +68,8 @@ function diff(added, indexed){
 function envelope(rows,meta={}) {
  const dates=rows.map(p=>utcDate(p.post_timestamp)).sort();
  const latest=meta.retrieval_date_utc||new Date().toISOString().slice(0,10);
- if(!/^\d{4}-\d\d-\d\d$/.test(latest))throw Error("Bad retrieval date");
+ if(!/^\d{4}-\d\d-\d\d$/.test(latest)||new Date(latest+"T00:00:00Z").toISOString().slice(0,10)!==latest)throw Error("Bad retrieval date");
+ if(dates[dates.length-1]>latest)throw Error("Snapshot retrieval predates a post");
  return {schema_version:1,account:"mirpottera",source:"Windsor.ai Threads",retrieval_date_utc:latest,period_utc:[dates[0],dates[dates.length-1]],read_fields:FIELDS,count:rows.length,posts:rows};
 }
 function plan(incoming,indexed,opts={}){
