@@ -7,10 +7,12 @@ Requires Python 3.10+; no third-party packages, credentials or browser processes
 from __future__ import annotations
 
 import argparse
+import os
 import json
 import re
 import sqlite3
 from collections import Counter
+from contextlib import contextmanager
 from datetime import date, datetime, timezone
 from urllib.parse import urlsplit
 from pathlib import Path
@@ -45,7 +47,30 @@ def ensure_unique(rows: list[dict], field: str) -> None:
         raise ValueError(f"Missing or duplicate {field}")
 
 
+@contextmanager
+def exclusive_build(root: Path):
+    """Avoid concurrent writers; never steal a potentially active or stale lock."""
+    radar_dir = root / "threads" / "radar"
+    radar_dir.mkdir(parents=True, exist_ok=True)
+    lock_path = radar_dir / ".build.lock"
+    try:
+        descriptor = os.open(lock_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    except FileExistsError as exc:
+        raise RuntimeError("Radar index build is locked; inspect .build.lock manually") from exc
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as lock:
+            lock.write(str(os.getpid()) + "\n")
+        yield
+    finally:
+        lock_path.unlink(missing_ok=True)
+
+
 def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
+    with exclusive_build(root):
+        return _build_unlocked(root, snapshot_path)
+
+
+def _build_unlocked(root: Path, snapshot_path: Path | None) -> dict:
     base = root / "threads"
     radar = base / "radar"
     snapshots = [snapshot_path] if snapshot_path else sorted((radar / "snapshots").glob("windsor-*.json"))
