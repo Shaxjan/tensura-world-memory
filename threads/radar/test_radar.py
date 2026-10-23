@@ -271,6 +271,39 @@ class RadarStageBTests(unittest.TestCase):
         self.save()
         self.assertEqual(build(self.root)["total_author_roots"], 2)
 
+    def test_rebuild_refuses_missing_continuation_snapshot(self):
+        source = self.snap.parent / "author-continuations-2026-10-23.json"
+        put = {"continuation_count": 1, "continuations": [{
+            "reply_id": "456", "root_post_id": "222", "reply_to_id": "222",
+            "published_at": "2026-10-19T14:00:18+0000",
+            "original_text": "Продолжение сюжета", "classification": "PROBABLE_CONTINUATION",
+        }]}
+        dump(source, put)
+        build(self.root)
+        posts_path = self.base / "radar" / "index" / "posts.jsonl"
+        before = posts_path.read_bytes()
+        source.unlink()
+        with self.assertRaisesRegex(ValueError, "lose or alter continuation"):
+            build(self.root)
+        self.assertEqual(before, posts_path.read_bytes())
+
+    def test_rebuild_refuses_discarding_editorial_card(self):
+        build(self.root)
+        posts_path = self.base / "radar" / "index" / "posts.jsonl"
+        before = posts_path.read_bytes()
+        self.editor["posts"] = [self.editor["posts"][0]]
+        self.save()
+        with self.assertRaisesRegex(ValueError, "discard editorial journal cards"):
+            build(self.root)
+        self.assertEqual(before, posts_path.read_bytes())
+
+    def test_rebuild_refuses_silent_editorial_status_change(self):
+        build(self.root)
+        self.editor["posts"][0]["status"] = "published"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "changed editorial state"):
+            build(self.root)
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
