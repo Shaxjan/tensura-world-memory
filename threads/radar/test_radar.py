@@ -260,6 +260,17 @@ class RadarStageBTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(before, after)
 
+    def test_snapshot_rejects_spoofed_threads_host(self):
+        self.new["posts"][0]["post_permalink"] = "https://www.threads.com.evil.org/post/222"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "Unexpected snapshot post permalink"):
+            build(self.root)
+
+    def test_snapshot_accepts_bare_threads_domain(self):
+        self.new["posts"][0]["post_permalink"] = "https://threads.com/@mirpottera/post/abc"
+        self.save()
+        self.assertEqual(build(self.root)["total_author_roots"], 2)
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
