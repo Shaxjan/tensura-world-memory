@@ -320,6 +320,27 @@ class RadarStageBTests(unittest.TestCase):
             build(self.root)
         self.assertFalse(journal.exists())
 
+    def test_concurrent_build_lock_fails_closed(self):
+        build(self.root)
+        index = self.base / "radar" / "index" / "posts.jsonl"
+        original = index.read_bytes()
+        lock = self.base / "radar" / ".build.lock"
+        self.assertFalse(lock.exists())
+        lock.write_text("other process", encoding="utf-8")
+        with self.assertRaisesRegex(RuntimeError, "build is locked"):
+            build(self.root)
+        self.assertEqual(index.read_bytes(), original)
+        self.assertTrue(lock.exists())
+        lock.unlink()
+        self.assertEqual(build(self.root)["total_author_roots"], 2)
+
+    def test_failed_build_releases_exclusive_lock(self):
+        self.new["count"] = 999
+        self.save()
+        with self.assertRaises(ValueError):
+            build(self.root)
+        self.assertFalse((self.base / "radar" / ".build.lock").exists())
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
