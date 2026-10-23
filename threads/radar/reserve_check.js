@@ -68,6 +68,17 @@ function bestOverlap(idea,posts,journal){
 function validateReserve(doc,posts,journal){
  if(doc.count!==30||doc.ideas.length!==30)throw Error("Reserve must contain 30 cards");
  if(doc.source_index_posts!==posts.length)throw Error("Source index size differs from recorded reserve snapshot; refresh and recheck");
+ if(doc.revision>=4){
+  if(!Array.isArray(doc.source_index_post_ids)||!Array.isArray(doc.source_editorial_journal_ids))
+   throw Error("Current reserve has no complete source-ID checkpoint");
+  const exact=(expected,observed)=>expected.length===observed.length
+   && expected.every((id,i)=>id===observed[i]);
+  const published=posts.map(x=>String(x.post_id)).sort();
+  const editorial=journal.map(x=>String(x.journal_id)).sort();
+  if(!exact(doc.source_index_post_ids,published)||!exact(doc.source_editorial_journal_ids,editorial))
+   throw Error("Source IDs changed without re-screening; reserve stale");
+ }
+
  const ids=new Set(), titles=new Set(), dist={};
  for(const c of doc.ideas){
   for(const field of REQUIRED){const val=c[field];if(!val || (Array.isArray(val)&&!val.length))throw Error(c.id+": missing "+field);}
