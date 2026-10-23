@@ -156,6 +156,22 @@ class RadarStageBTests(unittest.TestCase):
         renewed = json.loads(manifest.read_text(encoding="utf-8"))
         self.assertEqual(renewed["limitations"], ["Reviewed editorial provenance must remain intact"])
 
+    def test_mixed_snapshot_filenames_use_retrieval_date_order(self):
+        # A late-named import contains an older view count; it must not win.
+        earlier = dict(self.new["posts"][0], post_views=10)
+        dump(self.snap.parent / "windsor-import-2026-10-19-old.json", {
+            "count": 1, "retrieval_date_utc": "2026-10-19", "posts": [earlier],
+        })
+        self.new["posts"][0]["post_views"] = 600
+        self.new["retrieval_date_utc"] = "2026-10-23"
+        self.save()
+        build(self.root)
+        indexed = read_jsonl(self.base / "radar" / "index" / "posts.jsonl")
+        target = next(row for row in indexed if row["post_id"] == "222")
+        self.assertEqual(target["metrics"]["views"], 600)
+        manifest = json.loads((self.base / "radar" / "index" / "manifest.json").read_text(encoding="utf-8"))
+        self.assertTrue(manifest["source_snapshot"][0].endswith("windsor-import-2026-10-19-old.json"))
+
     def test_manifest_limits_are_regenerated_for_new_snapshot_date(self):
         build(self.root)
         manifest = self.base / "radar" / "index" / "manifest.json"
