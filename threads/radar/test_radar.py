@@ -95,6 +95,33 @@ class RadarStageBTests(unittest.TestCase):
         self.assertTrue(matched[0]["matched_in_original_only"])
         self.assertNotIn("Реклама", matched[0]["excerpt"])
 
+    def test_large_fts_candidate_set_does_not_hide_strong_match(self):
+        original = self.full["posts"][0]
+        self.full["posts"] = []
+        for idx in range(360):
+            row = dict(original)
+            row["post_id"] = str(2000 + idx)
+            row["url"] = "https://www.threads.com/post/" + row["post_id"]
+            row["full_text_original"] = "Кит просто плавает."
+            row["full_text_editorial"] = "Кит просто плавает."
+            row["original_first_text"] = "Кит просто плавает."
+            self.full["posts"].append(row)
+        target = self.full["posts"][-1]
+        target["full_text_original"] = "Кит и слон спорят о значении рассказа."
+        target["full_text_editorial"] = target["full_text_original"]
+        target["original_first_text"] = target["full_text_original"]
+        self.full["total_posts"] = len(self.full["posts"])
+        self.formats["formats"]["TEXT_POST"] = [
+            {"post_id": row["post_id"]} for row in self.full["posts"]
+        ]
+        self.save()
+        build(self.root)
+        matches = search(self.root, "кит слон", limit=5)
+        self.assertTrue(
+            any(m.get("post_id") == target["post_id"] for m in matches),
+            "FTS candidate cutoff omitted the strongest late-indexed story",
+        )
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
