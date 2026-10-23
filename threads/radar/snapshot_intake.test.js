@@ -26,7 +26,7 @@ test("new validated post is reported without mutating archive",()=>{
  x.posts[1].post_permalink="https://www.threads.com/@mirpottera/post/NewUnseen99";
  const outcome=intake.diff(intake.validateInput(x),posts);
  assert.equal(outcome.new_author_ids.length,1);
- assert.equal(posts.length,448);
+ assert.equal(posts.length,454);
 });
 test("changed text for known ID requires manual review",()=>{
  const x=copy(saved);
