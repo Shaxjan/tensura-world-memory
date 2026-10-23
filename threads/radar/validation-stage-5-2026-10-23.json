@@ -6,18 +6,18 @@
   "branch": "radar-stage-b-index-20261020",
   "pr_number": 33,
   "status": "PARTIAL_PASS__FULL_CORPUS_INTEGRATION_PENDING",
-  "description": "Native Python suite expanded to 34/34 with destructive rebuild protection and 454-record synthetic reproducibility; exact source SHA matched. Actual 454-post full-corpus Python build and native Node on full actual indexed corpus still open.",
+  "description": "Stage 5 resilience advanced: 39/39 Python native unit tests; 17/17 Node native synthetic; 17/17 current R4 real-index JavaScript in V8 harness. Complete real-corpus Node/Python integrated runs remain blocked.",
   "runtime": {
     "python": "Python 3.13.5",
     "node": "Node.js 22.16.0",
     "native_python": {
-      "passed": 34,
+      "passed": 39,
       "failed": 0,
-      "command": "python -m unittest discover -p 'test_*.py' (34/34 on isolated synthetic fixtures, Python 3.13.5)",
+      "command": "python -m unittest discover -p 'test_*.py' (39/39 synthetic fixtures)",
       "environment": "isolated local copy, synthetic fixtures",
       "source_files_verified": {
-        "threads/radar/radar.py": "67bfaf5918c996972b123d184fd63d8dc641e228",
-        "threads/radar/test_radar.py": "d15528a032991e97dde93e24bc8dfcf40cc4ef97",
+        "threads/radar/radar.py": "6b2a7011da7dd312a69f99323235fca0cfd19fa1",
+        "threads/radar/test_radar.py": "4818ed826f0dae0a79bf3ea6a03238c6724e4f65",
         "threads/radar/continuations.py": "46567e0dc6cce4277d668bf0291a0a620338ae75",
         "threads/radar/test_continuations.py": "01403a96b74271a332cc507d2e6bbb0637cbff0c",
         "threads/radar/test_snapshot_consistency.py": "bcaea8dcba6dc4adbfb295f15c6120241ee7d3f1"
@@ -39,6 +39,12 @@
       "passed": 49,
       "failed": 0,
       "description": "Historical suites with actual 454 index: 35, R4 checks: 14; emulated Node, not native full suite"
+    },
+    "current_r4_isolated_v8": {
+      "passed": 17,
+      "failed": 0,
+      "mode": "isolate JavaScript with real GitHub source, all 454 true archived roots, 40 journal records and mock builtins; not native Node.js",
+      "includes": "post/journal ID checkpoints disallow same-count replacements"
     }
   },
   "changes": [
@@ -68,7 +74,10 @@
     "probable_continuations": 16,
     "editorial_cards": 40,
     "ideas": 30,
-    "last_snapshot_date": "2026-10-23"
+    "last_snapshot_date": "2026-10-23",
+    "source_ID_checkpoints_added": true,
+    "source_ID_checkpoint_posts": 454,
+    "source_ID_checkpoint_journal": 40
   },
   "safety": {
     "main_edited": false,
@@ -80,7 +89,7 @@
   "blockers": [
     "Full repository clone unavailable from this runtime: github.com DNS cannot resolve and no public download was authorized.",
     "Native full Node test suite on actual 454 published post index has NOT run in this turn.",
-    "Native Python full-corpus rebuild from actual 414 verified texts and 5 Windsor snapshots has NOT run in this isolated environment; 454-record native synthetic integration passed.",
+    "Native Python full-corpus rebuild of actual 414 verified texts + 40 new posts still NOT run; synthetic 454-root two-build integration PASS and read-only full corpus cross-check PASS.",
     "Automated periodic Threads sync NOT implemented, belongs to later stage."
   ],
   "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS.",
@@ -91,7 +100,9 @@
     "Index verify rejects falsely marked complete chains for newer Windsor roots.",
     "Source validation rejects wrong account, invalid date, retrieval predating publication, negative metrics, and forged Threads hostnames.",
     "Source validation accepts both threads.com and www.threads.com.",
-    "Native Python fixture exercises 414 historical roots + 40 new roots + 10 excluded reposts + 40 editorial records + 16 continuations and confirms byte-identical no-op rebuild."
+    "Native Python fixture exercises 414 historical roots + 40 new roots + 10 excluded reposts + 40 editorial records + 16 continuations and confirms byte-identical no-op rebuild.",
+    "Existing continuation snapshots and editorial journal ID/status are protected from silent loss during rebuild.",
+    "An existing manifest requires both posts.jsonl and editorial.jsonl to exist before rebuild."
   ],
   "source_fixture_reconstruction": {
     "kind": "SYNTHETIC_454_ROOT_NATIVE_INTEGRATION",
@@ -114,5 +125,10 @@
     "modified_historical_source_texts": 0,
     "result": "PASS",
     "qualification": "Read-only cross-check in V8, not a native 454-root Python rebuild"
-  }
+  },
+  "date_krasnoyarsk_last_checked": "2026-10-24",
+  "additional_v8_checks": [
+    "R4's 454 root IDs and 40 journal IDs are recorded and verified even if total counts do not change.",
+    "17/17 current R4 checks passed with real GitHub data; direct Node.js runtime still unverified for full corpus."
+  ]
 }
