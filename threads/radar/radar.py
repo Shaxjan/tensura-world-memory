@@ -12,6 +12,7 @@ import re
 import sqlite3
 from collections import Counter
 from pathlib import Path
+from continuations import attach_author_continuations
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
@@ -116,6 +117,8 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
             "quality_flags": ["author_replies_not_yet_reconciled"],
         })
     ensure_unique(posts, "post_id")
+    continuation_path = radar / "snapshots" / "author-continuations-2026-10-23.json"
+    attachment = attach_author_continuations(posts, continuation_path)
     posts.sort(key=lambda p: (p["published_at"], p["post_id"]))
 
     url_to_id = {p["url"]: p["post_id"] for p in posts}
