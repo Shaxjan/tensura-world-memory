@@ -170,6 +170,26 @@ class RadarStageBTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Invalid snapshot views"):
             build(self.root)
 
+    def test_verify_rejects_tampered_historical_original(self):
+        build(self.root)
+        index = self.base / "radar" / "index" / "posts.jsonl"
+        rows = read_jsonl(index)
+        rows[0]["original_text"] = "Подмена в индексе"
+        index.write_text("\n".join(json.dumps(x, ensure_ascii=False) for x in rows) + "\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "Historical post differs from verified source"):
+            verify(self.root)
+
+    def test_verify_does_not_accept_unverified_completed_chain(self):
+        build(self.root)
+        index = self.base / "radar" / "index" / "posts.jsonl"
+        rows = read_jsonl(index)
+        for row in rows:
+            if row["source"] == "windsor_root_snapshot":
+                row["chain_complete"] = True
+        index.write_text("\n".join(json.dumps(x, ensure_ascii=False) for x in rows) + "\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "falsely marked complete"):
+            verify(self.root)
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
