@@ -119,5 +119,29 @@ class RadarStageBTests(unittest.TestCase):
             build(self.root)
 
 
+    def test_reviewed_manifest_survives_noop_rebuild(self):
+        build(self.root)
+        manifest = self.base / "radar" / "index" / "manifest.json"
+        doc = json.loads(manifest.read_text(encoding="utf-8"))
+        doc["limitations"] = ["Reviewed editorial provenance must remain intact"]
+        manifest.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        build(self.root)
+        renewed = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(renewed["limitations"], ["Reviewed editorial provenance must remain intact"])
+
+    def test_manifest_limits_are_regenerated_for_new_snapshot_date(self):
+        build(self.root)
+        manifest = self.base / "radar" / "index" / "manifest.json"
+        doc = json.loads(manifest.read_text(encoding="utf-8"))
+        doc["limitations"] = ["Old text describing obsolete snapshot"]
+        manifest.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        self.new["retrieval_date_utc"] = "2026-10-22"
+        self.save()
+        build(self.root)
+        renewed = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(renewed["generated_date_utc"], "2026-10-22")
+        self.assertNotIn("Old text describing obsolete snapshot", renewed["limitations"])
+        self.assertTrue(any("2026-10-22" in s for s in renewed["limitations"]))
+
 if __name__ == "__main__":
     unittest.main()
