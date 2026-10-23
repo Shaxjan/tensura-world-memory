@@ -6,7 +6,7 @@
   "branch": "radar-stage-b-index-20261020",
   "pr_number": 33,
   "status": "PARTIAL_PASS__FULL_CORPUS_INTEGRATION_PENDING",
-  "description": "41 native Python tests and 17 native Node tests on synthetic fixtures; three new V8 regressions for default Krasnoyarsk date. Full real-data native Node and Python integration remains open.",
+  "description": "Stage 5 not finished: release gate prepared, exact gate file Python-compiles and basic input cloning tested natively. Actual 454-root native rebuild and full Node test suite remain open. New staging code and new tests require native execution.",
   "runtime": {
     "python": "Python 3.13.5",
     "node": "Node.js 22.16.0",
@@ -97,7 +97,8 @@
     "Full repository clone unavailable from this runtime: github.com DNS cannot resolve and no public download was authorized.",
     "Native full Node test suite on actual 454 published post index has NOT run in this turn.",
     "Native Python full-corpus rebuild of actual 414 verified texts + 40 new posts still NOT run; synthetic 454-root two-build integration PASS and read-only full corpus cross-check PASS.",
-    "Automated periodic Threads sync NOT implemented, belongs to later stage."
+    "Automated periodic Threads sync NOT implemented, belongs to later stage.",
+    "New staged index output and regression tests have not been executed in the native complete source context; previous 41 Python successes predate these changes."
   ],
   "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS.",
   "additional_native_checks": [
@@ -139,5 +140,39 @@
     "R4's 454 root IDs and 40 journal IDs are recorded and verified even if total counts do not change.",
     "17/17 current R4 checks passed with real GitHub data; direct Node.js runtime still unverified for full corpus.",
     "Default reserve screening now uses current date in Asia/Krasnoyarsk; 2026-10-23 snapshot is stale on 2026-10-24 unless a new snapshot is retrieved."
-  ]
+  ],
+  "stage5_addendum_2026_10_24": {
+    "status": "INTEGRATION_GATE_PREPARED_BUT_NOT_COMPLETE",
+    "new_prewrite_safety": {
+      "details": "Load old manifest and prepare three index files in a staging directory before committing; on ordinary os.replace OSError restore previous bytes. Hard-process crash between multiple renames is not an atomic three-file transaction.",
+      "code_sha": "9e3a0df226dd0bb2e8fd93f69f838f886dd96fb6",
+      "tests_added": 2,
+      "native_tests_executed": false
+    },
+    "native_offline_release_gate": {
+      "path": "threads/radar/integration_gate.py",
+      "code_git_blob_sha": "1f3026e15763c2076569c43c1afa2991bc7cc023",
+      "tested_exact_file": true,
+      "native_python_version": "3.13.5",
+      "native_syntax_compilation": "PASS",
+      "native_copy_input_smoke": "PASS (eight synthetic input files, including one Windsor snapshot and one continuation source)",
+      "native_missing_snapshot_refusal": "PASS",
+      "real_full_corpus_rebuild": "NOT_RUN",
+      "native_full_node_suite": "NOT_RUN",
+      "usage": "python -B threads/radar/integration_gate.py --repo-root .",
+      "mode": "Read-only full-corpus rebuild into scratch temp dir, 2 reproductions and compare three artifacts byte for byte; followed by native Python and Node test suites"
+    },
+    "new_gate_unit_tests": {
+      "path": "threads/radar/test_integration_gate.py",
+      "added": 3,
+      "native_executed": false
+    },
+    "previously_verified_tests_only": {
+      "python_native": 41,
+      "node_native": 17,
+      "last_verified_python_code_sha": "6dffbb08379b02886eb83b8a69dc5c7b0d2ee026",
+      "note": "Later code edits and newly added tests require full native suite rerun. Do not report 41 as newly confirmed on this newer code."
+    },
+    "confirmed_constraint": "Container GitHub DNS unavailable and full archive not mounted. GitHub connector can inspect and edit exact files but cannot transfer raw repository into native test container via the available file interface."
+  }
 }
