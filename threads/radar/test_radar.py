@@ -341,6 +341,46 @@ class RadarStageBTests(unittest.TestCase):
             build(self.root)
         self.assertFalse((self.base / "radar" / ".build.lock").exists())
 
+    def test_invalid_existing_manifest_does_not_touch_posts_or_journal(self):
+        build(self.root)
+        directory = self.base / "radar" / "index"
+        old_posts = (directory / "posts.jsonl").read_bytes()
+        old_journal = (directory / "editorial.jsonl").read_bytes()
+        (directory / "manifest.json").write_text("{invalid-json", encoding="utf-8")
+        self.new["posts"][0]["post_views"] = 900
+        self.save()
+        with self.assertRaises(json.JSONDecodeError):
+            build(self.root)
+        self.assertEqual((directory / "posts.jsonl").read_bytes(), old_posts)
+        self.assertEqual((directory / "editorial.jsonl").read_bytes(), old_journal)
+
+    def test_second_replace_failure_rolls_back_both_index_files(self):
+        from unittest.mock import patch
+        import os
+        build(self.root)
+        directory = self.base / "radar" / "index"
+        old_data = {name: (directory / name).read_bytes()
+                    for name in ("posts.jsonl", "editorial.jsonl", "manifest.json")}
+        self.new["posts"][0]["post_views"] = 700
+        self.save()
+        actual_replace = os.replace
+        failure_fired = False
+
+        def fail_once(source, destination):
+            nonlocal failure_fired
+            if str(destination).endswith("editorial.jsonl") and not failure_fired:
+                failure_fired = True
+                raise OSError("synthetic atomic install failure")
+            return actual_replace(source, destination)
+
+        with patch("radar.os.replace", side_effect=fail_once):
+            with self.assertRaisesRegex(OSError, "synthetic atomic install failure"):
+                build(self.root)
+        self.assertTrue(failure_fired)
+        for name, expected in old_data.items():
+            self.assertEqual((directory / name).read_bytes(), expected)
+        self.assertFalse(list(directory.glob(".radar-stage-*")))
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
