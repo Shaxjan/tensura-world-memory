@@ -122,6 +122,54 @@ class RadarStageBTests(unittest.TestCase):
             "FTS candidate cutoff omitted the strongest late-indexed story",
         )
 
+    def test_rebuild_refuses_missing_previously_indexed_snapshot(self):
+        build(self.root)
+        posts_path = self.base / "radar" / "index" / "posts.jsonl"
+        before = posts_path.read_bytes()
+        self.snap.unlink()
+        dump(self.snap.parent / "windsor-2026-10-21.json", {
+            "count": 1, "retrieval_date_utc": "2026-10-21", "posts": [dict(
+                self.new["posts"][1], post_id="333", post_media_type="TEXT_POST",
+                post_text="Новый текст", post_views=7)],
+        })
+        with self.assertRaisesRegex(ValueError, "discard published post IDs"):
+            build(self.root)
+        self.assertEqual(before, posts_path.read_bytes())
+
+    def test_rebuild_refuses_historical_text_replacement(self):
+        build(self.root)
+        posts_path = self.base / "radar" / "index" / "posts.jsonl"
+        before = posts_path.read_bytes()
+        self.full["posts"][0]["full_text_original"] = "Подменённый исходный текст"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "immutable original_text"):
+            build(self.root)
+        self.assertEqual(before, posts_path.read_bytes())
+
+    def test_snapshot_rejects_foreign_account(self):
+        self.new["account"] = "another_account"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "unexpected Threads account"):
+            build(self.root)
+
+    def test_snapshot_rejects_invalid_calendar_date(self):
+        self.new["retrieval_date_utc"] = "2026-02-30"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "Invalid snapshot retrieval date"):
+            build(self.root)
+
+    def test_snapshot_rejects_invalid_earlier_retrieval(self):
+        self.new["retrieval_date_utc"] = "2026-10-18"
+        self.save()
+        with self.assertRaisesRegex(ValueError, "predates published post"):
+            build(self.root)
+
+    def test_snapshot_rejects_invalid_views(self):
+        self.new["posts"][0]["post_views"] = -1
+        self.save()
+        with self.assertRaisesRegex(ValueError, "Invalid snapshot views"):
+            build(self.root)
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
