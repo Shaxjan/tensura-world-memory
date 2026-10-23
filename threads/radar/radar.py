@@ -11,6 +11,7 @@ import os
 import json
 import re
 import sqlite3
+import tempfile
 from collections import Counter
 from contextlib import contextmanager
 from datetime import date, datetime, timezone
@@ -236,8 +237,7 @@ def _build_unlocked(root: Path, snapshot_path: Path | None) -> dict:
             for field in ("state", "date", "slot", "topic", "angle", "text", "format", "url"):
                 if old.get(field) != now.get(field):
                     raise ValueError(f"Rebuild changed editorial {field} for {old['journal_id']}")
-    write_jsonl(out / "posts.jsonl", posts)
-    write_jsonl(out / "editorial.jsonl", journal)
+    # Read and validate the old manifest before touching either index file.
     old_manifest = load_json(out / "manifest.json") if (out / "manifest.json").exists() else {}
     counts = {
         "snapshot_records": len(fresh_rows),
@@ -293,7 +293,35 @@ def _build_unlocked(root: Path, snapshot_path: Path | None) -> dict:
         "limitations": limitations,
         "source_author_continuations": continuation_source,
     }
-    (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Stage all three artifacts before replacing any destination. If an ordinary
+    # OS write/replace error occurs, restore old bytes; a hard crash between
+    # replacements still needs manual validation/recovery.
+    out.mkdir(parents=True, exist_ok=True)
+    names = ("posts.jsonl", "editorial.jsonl", "manifest.json")
+    old_bytes = {name: (out / name).read_bytes() if (out / name).exists() else None
+                 for name in names}
+    with tempfile.TemporaryDirectory(prefix=".radar-stage-", dir=out) as folder:
+        stage = Path(folder)
+        write_jsonl(stage / "posts.jsonl", posts)
+        write_jsonl(stage / "editorial.jsonl", journal)
+        (stage / "manifest.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+        installed = []
+        try:
+            for name in names:
+                os.replace(stage / name, out / name)
+                installed.append(name)
+        except OSError:
+            for name in reversed(installed):
+                previous = old_bytes[name]
+                if previous is None:
+                    (out / name).unlink(missing_ok=True)
+                else:
+                    restoration = stage / (name + ".restore")
+                    restoration.write_bytes(previous)
+                    os.replace(restoration, out / name)
+            raise
     return counts
 
 
