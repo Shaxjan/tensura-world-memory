@@ -182,6 +182,10 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     # Fail closed: a missing snapshot or a replaced source must never silently
     # remove previously published IDs or change their immutable content.
     old_index_file = out / "posts.jsonl"
+    old_journal_file = out / "editorial.jsonl"
+    old_manifest_file = out / "manifest.json"
+    if old_manifest_file.exists() and (not old_index_file.exists() or not old_journal_file.exists()):
+        raise ValueError("Previously indexed files missing: manual recovery required")
     if old_index_file.exists():
         previous = read_jsonl(old_index_file)
         new_posts_by_id = {p["post_id"]: p for p in posts}
@@ -197,7 +201,6 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
             for reply_id, old_part in old_parts.items():
                 if new_parts.get(reply_id) != old_part:
                     raise ValueError(f"Rebuild would lose or alter continuation {reply_id}")
-    old_journal_file = out / "editorial.jsonl"
     if old_journal_file.exists():
         previous_journal = read_jsonl(old_journal_file)
         new_journal_by_id = {p["journal_id"]: p for p in journal}
