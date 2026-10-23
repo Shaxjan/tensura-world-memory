@@ -12,9 +12,9 @@ const journal = readJSONL("editorial.jsonl");
 const CURRENT={as_of:"2026-10-21",last_synced_at:"2026-10-21",max_age_days:1};
 function verdict(c, options=CURRENT, j=journal, p=posts){return radar.compare(c,p,j,options);}
 
-test("index covers 448 unique published author roots",()=>{
- assert.equal(posts.length,448);
- assert.equal(new Set(posts.map(p=>p.post_id)).size,448);
+test("index covers 454 unique published author roots",()=>{
+ assert.equal(posts.length,454);
+ assert.equal(new Set(posts.map(p=>p.post_id)).size,454);
  assert.equal(posts.filter(p=>p.state!=="published").length,0);
  assert.equal(posts.filter(p=>p.media_type==="REPOST_FACADE").length,0);
 });
