@@ -11,6 +11,7 @@ import json
 import re
 import sqlite3
 from collections import Counter
+from datetime import date, datetime, timezone
 from pathlib import Path
 from continuations import attach_author_continuations
 
@@ -84,11 +85,37 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     # Keep the newest snapshot value for a post ID while retaining earlier rows.
     fresh_by_id = {}
     for snapshot in snapshot_documents:
+        if snapshot.get("account") not in (None, "mirpottera"):
+            raise ValueError("Snapshot belongs to an unexpected Threads account")
+        retrieval_day = snapshot.get("retrieval_date_utc")
+        try:
+            day = date.fromisoformat(retrieval_day)
+            if day.isoformat() != retrieval_day:
+                raise ValueError("Invalid snapshot retrieval date")
+        except (TypeError, ValueError) as exc:
+            raise ValueError("Invalid snapshot retrieval date") from exc
         rows = snapshot["posts"]
         ensure_unique(rows, "post_id")
         if snapshot.get("count") != len(rows):
             raise ValueError("New snapshot is incomplete")
         for row in rows:
+            media = row.get("post_media_type")
+            if media not in {"TEXT_POST", "IMAGE", "VIDEO", "CAROUSEL_ALBUM", "REPOST_FACADE"}:
+                raise ValueError("Unexpected snapshot media type")
+            try:
+                post_day = datetime.strptime(row["post_timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(timezone.utc).date()
+            except (KeyError, TypeError, ValueError) as exc:
+                raise ValueError("Invalid snapshot post timestamp") from exc
+            if post_day > day:
+                raise ValueError("Snapshot retrieval predates published post")
+            permalink = row.get("post_permalink")
+            if not isinstance(permalink, str) or not permalink.startswith("https://www.threads.com/"):
+                raise ValueError("Unexpected snapshot post permalink")
+            if media != "REPOST_FACADE" and not (row.get("post_text") or "").strip():
+                raise ValueError("Author root has no text")
+            views = row.get("post_views")
+            if views is not None and (isinstance(views, bool) or not isinstance(views, (int, float)) or views < 0):
+                raise ValueError("Invalid snapshot views")
             previous = fresh_by_id.get(row["post_id"])
             if previous is not None:
                 stable_fields = ("post_timestamp", "post_text", "post_permalink", "post_media_type")
@@ -149,6 +176,19 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
     journal.sort(key=lambda p: (str(p["date"] or ""), p["journal_id"]))
 
     out = radar / "index"
+    # Fail closed: a missing snapshot or a replaced source must never silently
+    # remove previously published IDs or change their immutable content.
+    old_index_file = out / "posts.jsonl"
+    if old_index_file.exists():
+        previous = read_jsonl(old_index_file)
+        new_posts_by_id = {p["post_id"]: p for p in posts}
+        for old in previous:
+            now = new_posts_by_id.get(old["post_id"])
+            if now is None:
+                raise ValueError("Rebuild would discard published post IDs")
+            for field in ("original_text", "url", "published_at", "media_type", "source"):
+                if old.get(field) != now.get(field):
+                    raise ValueError(f"Rebuild changed immutable {field} for {old['post_id']}")
     write_jsonl(out / "posts.jsonl", posts)
     write_jsonl(out / "editorial.jsonl", journal)
     old_manifest = load_json(out / "manifest.json") if (out / "manifest.json").exists() else {}
