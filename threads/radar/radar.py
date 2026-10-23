@@ -156,25 +156,46 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         "author_continuation_parts": attachment["parts"],
         "author_continuation_roots": attachment["roots"],
     }
+    snapshot_paths = [
+        str(p.relative_to(root)).replace("\\", "/") if p.is_relative_to(root) else str(p)
+        for p in snapshots
+    ]
+    snapshot_date = max(
+        (doc.get("retrieval_date_utc", "") for doc in snapshot_documents), default=""
+    )
+    continuation_source = (
+        str(continuation_path.relative_to(root)).replace("\\", "/")
+        if continuation_path.exists() else None
+    )
+    # Preserve reviewed provenance notes verbatim when all source identity fields
+    # and recorded counts are identical. Otherwise generate fresh limitations.
+    # This prevents a no-op rebuild from erasing the reviewed manifest.
+    same_sources = (
+        old_manifest.get("counts") == counts
+        and old_manifest.get("source_snapshot") == snapshot_paths
+        and old_manifest.get("generated_date_utc") == snapshot_date
+        and old_manifest.get("source_author_continuations") == continuation_source
+        and isinstance(old_manifest.get("limitations"), list)
+    )
+    limitations = old_manifest["limitations"] if same_sources else [
+        f"{attachment['parts']} probable author continuations may be searched but are not fully verified",
+        "Later self-replies and conversational comments must not be appended to root post text",
+        "New root chains remain chain_complete=false until independently verified",
+        "Unlinked journal cards remain independent, and scheduled is not proof of publication",
+        f"Publication data after {snapshot_date} is not indexed; sync remains manual",
+        "Semantic comparison is heuristic; literary canon and narrative originality need editor approval",
+    ]
     manifest = {
         "schema_version": 1, "account": "mirpottera",
         "source_commit": old_manifest.get("source_commit"),
         "full_archive_blob_sha": old_manifest.get("full_archive_blob_sha"),
         "posts_journal_blob_sha": old_manifest.get("posts_journal_blob_sha"),
-        "source_snapshot": [
-            str(p.relative_to(root)).replace("\\", "/") if p.is_relative_to(root) else str(p)
-            for p in snapshots
-        ],
+        "source_snapshot": snapshot_paths,
         "source_types": ["verified_full_chain", "Windsor.ai Threads", "editorial posts.json"],
-        "generated_date_utc": max((doc.get("retrieval_date_utc", "") for doc in snapshot_documents), default=""),
-        "source_author_continuations": str(continuation_path.relative_to(root)).replace("\\", "/") if continuation_path.exists() else None,
+        "generated_date_utc": snapshot_date,
         "counts": counts,
-        "limitations": [
-            "16 probable direct-root author continuations indexed for search; complete reply chains not verified",
-            "Journal records without matching URL remain independent; historical scheduled status is preserved",
-            "Semantic story-angle metadata and full-corpus meaning scores are not yet verified",
-            "Live Windsor.ai snapshot values may be cached",
-        ],
+        "limitations": limitations,
+        "source_author_continuations": continuation_source,
     }
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return counts
