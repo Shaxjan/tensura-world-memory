@@ -12,6 +12,7 @@ import re
 import sqlite3
 from collections import Counter
 from datetime import date, datetime, timezone
+from urllib.parse import urlsplit
 from pathlib import Path
 from continuations import attach_author_continuations
 
@@ -109,7 +110,9 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
             if post_day > day:
                 raise ValueError("Snapshot retrieval predates published post")
             permalink = row.get("post_permalink")
-            if not isinstance(permalink, str) or not permalink.startswith("https://www.threads.com/"):
+            url = urlsplit(permalink) if isinstance(permalink, str) else None
+            if (not url or url.scheme != "https" or url.hostname not in ("threads.com", "www.threads.com")
+                    or not url.path.startswith(("/post/", "/@mirpottera/post/"))):
                 raise ValueError("Unexpected snapshot post permalink")
             if media != "REPOST_FACADE" and not (row.get("post_text") or "").strip():
                 raise ValueError("Author root has no text")
