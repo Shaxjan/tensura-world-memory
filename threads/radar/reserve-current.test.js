@@ -157,3 +157,22 @@ test("all stored new-root metrics use the latest immutable Windsor snapshot",()=
   assert.equal(row.metrics.views,p.post_views);
  }
 });
+
+test("same-sized substituted published root cannot bypass R4 staleness",()=>{
+ const mutated=posts.map(x=>({...x}));
+ mutated[0].post_id="19999999999999999";
+ assert.equal(mutated.length,posts.length);
+ assert.throws(()=>validateReserve(reserve,mutated,journal),/Source IDs changed/);
+});
+test("same-sized substituted editorial card cannot bypass R4 staleness",()=>{
+ const mutated=journal.map(x=>({...x}));
+ mutated[0].journal_id="unexpected-journal-id";
+ assert.equal(mutated.length,journal.length);
+ assert.throws(()=>validateReserve(reserve,posts,mutated),/Source IDs changed/);
+});
+test("R4 source-ID checkpoints cannot be absent or truncated",()=>{
+ const incomplete={...reserve,source_index_post_ids:reserve.source_index_post_ids.slice(1)};
+ assert.throws(()=>validateReserve(incomplete,posts,journal));
+ const missing={...reserve};delete missing.source_editorial_journal_ids;
+ assert.throws(()=>validateReserve(missing,posts,journal));
+});
