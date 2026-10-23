@@ -6,18 +6,18 @@
   "branch": "radar-stage-b-index-20261020",
   "pr_number": 33,
   "status": "PARTIAL_PASS__FULL_CORPUS_INTEGRATION_PENDING",
-  "description": "Native execution without Work; exact GitHub blobs transferred to isolated local test workspace and sha1 git blobs checked against PR branch.",
+  "description": "Native Python suite expanded to 34/34 with destructive rebuild protection and 454-record synthetic reproducibility; exact source SHA matched. Actual 454-post full-corpus Python build and native Node on full actual indexed corpus still open.",
   "runtime": {
     "python": "Python 3.13.5",
     "node": "Node.js 22.16.0",
     "native_python": {
-      "passed": 23,
+      "passed": 34,
       "failed": 0,
-      "command": "python -m unittest discover -p 'test_*.py'",
+      "command": "python -m unittest discover -p 'test_*.py' (34/34 on isolated synthetic fixtures, Python 3.13.5)",
       "environment": "isolated local copy, synthetic fixtures",
       "source_files_verified": {
-        "threads/radar/radar.py": "6d699e2fcff9f343c7c1cef14f7cf4981b9c8010",
-        "threads/radar/test_radar.py": "b59b2bb8f9aae94c14cb56ac086d14b03760ab86",
+        "threads/radar/radar.py": "67bfaf5918c996972b123d184fd63d8dc641e228",
+        "threads/radar/test_radar.py": "d15528a032991e97dde93e24bc8dfcf40cc4ef97",
         "threads/radar/continuations.py": "46567e0dc6cce4277d668bf0291a0a620338ae75",
         "threads/radar/test_continuations.py": "01403a96b74271a332cc507d2e6bbb0637cbff0c",
         "threads/radar/test_snapshot_consistency.py": "bcaea8dcba6dc4adbfb295f15c6120241ee7d3f1"
@@ -80,8 +80,39 @@
   "blockers": [
     "Full repository clone unavailable from this runtime: github.com DNS cannot resolve and no public download was authorized.",
     "Native full Node test suite on actual 454 published post index has NOT run in this turn.",
-    "Native Python full-corpus rebuild from 414-post primary verified archive + 5 real snapshots has NOT run in this turn.",
+    "Native Python full-corpus rebuild from actual 414 verified texts and 5 Windsor snapshots has NOT run in this isolated environment; 454-record native synthetic integration passed.",
     "Automated periodic Threads sync NOT implemented, belongs to later stage."
   ],
-  "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS."
+  "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS.",
+  "additional_native_checks": [
+    "Rebuild refuses dropping previously indexed author root IDs when a source snapshot disappears.",
+    "Rebuild refuses modifying immutable text, date, URL, media type or provenance of indexed roots.",
+    "Index verify cross-checks all historical original/search text, URLs, part counts and chain_complete flags against original archive.",
+    "Index verify rejects falsely marked complete chains for newer Windsor roots.",
+    "Source validation rejects wrong account, invalid date, retrieval predating publication, negative metrics, and forged Threads hostnames.",
+    "Source validation accepts both threads.com and www.threads.com.",
+    "Native Python fixture exercises 414 historical roots + 40 new roots + 10 excluded reposts + 40 editorial records + 16 continuations and confirms byte-identical no-op rebuild."
+  ],
+  "source_fixture_reconstruction": {
+    "kind": "SYNTHETIC_454_ROOT_NATIVE_INTEGRATION",
+    "historical": 414,
+    "new_roots": 40,
+    "excluded_reposts": 10,
+    "editorial_journal_cards": 40,
+    "probable_continuations": 16,
+    "rebuilds": 2,
+    "identical_outputs": true,
+    "result": "PASS",
+    "qualification": "Artificial root texts and URLs, not the real published user corpus"
+  },
+  "actual_repository_source_crosscheck": {
+    "kind": "EXACT_GITHUB_READ_ONLY_BLOB_COMPARISON",
+    "historical_verified": 414,
+    "new_roots_chain_complete_false": 40,
+    "snapshot_rows": 53,
+    "invalid_snapshots_under_new_validation": 0,
+    "modified_historical_source_texts": 0,
+    "result": "PASS",
+    "qualification": "Read-only cross-check in V8, not a native 454-root Python rebuild"
+  }
 }
