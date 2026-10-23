@@ -262,7 +262,7 @@ def search(root: Path, query: str, limit: int = 8) -> list[dict]:
             conn.execute('CREATE VIRTUAL TABLE docs USING fts5(kind UNINDEXED, entity_id UNINDEXED, body, tokenize="unicode61")')
             conn.executemany("INSERT INTO docs(kind,entity_id,body) VALUES (?,?,?)", entries)
             expression = " OR ".join(prefix(t) + "*" for t in terms)
-            matches = conn.execute("SELECT kind,entity_id FROM docs WHERE docs MATCH ? LIMIT 350", (expression,)).fetchall()
+            matches = conn.execute("SELECT kind,entity_id FROM docs WHERE docs MATCH ?", (expression,)).fetchall()
     except sqlite3.OperationalError:
         matches = [(kind, entity_id) for kind, entity_id, body in entries if any(prefix(t) in body.lower().replace("ё", "е") for t in terms)]
 
