@@ -109,3 +109,51 @@ test("former reserve R3 remains invalid against the refreshed index",()=>{
  assert.equal(old.source_index_posts,448);
  assert.throws(()=>validateReserve(old,posts,journal));
 });
+
+test("all 414 historical roots retain the original verified full-chain texts",()=>{
+ const original=JSON.parse(fs.readFileSync(path.join(root,"..","full-posts-verified.json"),"utf8"));
+ assert.equal(original.posts.length,414);
+ for(const p of original.posts){
+  const index=byPost.get(p.post_id);
+  assert.ok(index, "missing historical post: "+p.post_id);
+  assert.equal(index.source,"verified_full_chain");
+  assert.equal(index.original_text,p.full_text_original||p.original_first_text||"");
+  assert.equal(index.search_text,p.full_text_editorial||p.original_first_text||"");
+  assert.equal(index.url,p.url);
+  assert.equal(index.parts_count,p.parts_count);
+ }
+});
+test("all stored new-root metrics use the latest immutable Windsor snapshot",()=>{
+ const snapshots=[
+  "windsor-2026-10-13_to_2026-10-20.json",
+  "windsor-2026-10-21.json",
+  "windsor-2026-10-21_rev2.json",
+  "windsor-2026-10-22.json",
+  "windsor-2026-10-23.json"
+ ];
+ const latest=new Map();
+ const stable=new Map();
+ for(const filename of snapshots){
+  const snapshot=load("snapshots/"+filename);
+  assert.equal(snapshot.count,snapshot.posts.length);
+  for(const p of snapshot.posts){
+   if(stable.has(p.post_id)){
+    const old=stable.get(p.post_id);
+    for(const field of ["post_timestamp","post_text","post_permalink","post_media_type"])
+     assert.equal(p[field],old[field], "Conflicting immutable field "+field+" on "+p.post_id);
+   }else stable.set(p.post_id,p);
+   latest.set(p.post_id,p);
+  }
+ }
+ assert.equal(latest.size,50);
+ assert.equal([...latest.values()].filter(p=>p.post_media_type==="REPOST_FACADE").length,10);
+ for(const p of latest.values()){
+  if(p.post_media_type==="REPOST_FACADE")continue;
+  const row=byPost.get(p.post_id);
+  assert.ok(row);
+  assert.equal(row.original_text,p.post_text);
+  assert.equal(row.url,p.post_permalink);
+  assert.equal(row.published_at,p.post_timestamp);
+  assert.equal(row.metrics.views,p.post_views);
+ }
+});
