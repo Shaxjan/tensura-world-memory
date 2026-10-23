@@ -269,9 +269,25 @@ def verify(root: Path = REPO) -> dict:
     if counts.get("author_continuation_roots", 0) != sum(bool(p.get("author_continuation_parts")) for p in posts):
         raise ValueError("Continuation roots mismatch")
     ids = {p["post_id"] for p in posts}
+    historic = load_json(root / "threads" / "full-posts-verified.json")
+    original_by_id = {p["post_id"]: p for p in historic["posts"]}
+    if {p["post_id"] for p in posts if p["source"] == "verified_full_chain"} != set(original_by_id):
+        raise ValueError("Verified historical root ID set differs from source")
     for p in posts:
         if not p.get("url") or not p.get("published_at") or p["state"] != "published":
             raise ValueError(f"Malformed published post {p.get('post_id')}")
+        if p.get("source") == "verified_full_chain":
+            original = original_by_id[p["post_id"]]
+            if (p["original_text"] != (original.get("full_text_original") or original.get("original_first_text") or "")
+                    or p["search_text"] != (original.get("full_text_editorial") or original.get("original_first_text") or "")
+                    or p["url"] != original["url"] or p["parts_count"] != original["parts_count"]
+                    or p.get("chain_complete") is not True):
+                raise ValueError(f"Historical post differs from verified source {p['post_id']}")
+        elif p.get("source") == "windsor_root_snapshot":
+            if p.get("chain_complete") is not False:
+                raise ValueError(f"Unverified new chain falsely marked complete {p['post_id']}")
+        else:
+            raise ValueError(f"Unexpected indexed source {p['post_id']}")
     for p in journal:
         if p["linked_post_id"] and p["linked_post_id"] not in ids:
             raise ValueError(f"Broken journal link {p['journal_id']}")
