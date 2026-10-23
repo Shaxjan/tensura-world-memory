@@ -304,6 +304,22 @@ class RadarStageBTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "changed editorial state"):
             build(self.root)
 
+    def test_manifest_refuses_rebuild_without_original_post_index(self):
+        build(self.root)
+        idx = self.base / "radar" / "index" / "posts.jsonl"
+        idx.unlink()
+        with self.assertRaisesRegex(ValueError, "Previously indexed files missing"):
+            build(self.root)
+        self.assertFalse(idx.exists())
+
+    def test_manifest_refuses_rebuild_without_original_journal(self):
+        build(self.root)
+        journal = self.base / "radar" / "index" / "editorial.jsonl"
+        journal.unlink()
+        with self.assertRaisesRegex(ValueError, "Previously indexed files missing"):
+            build(self.root)
+        self.assertFalse(journal.exists())
+
     def test_rebuild_is_idempotent(self):
         a = build(self.root)
         folder = self.base / "radar" / "index"
