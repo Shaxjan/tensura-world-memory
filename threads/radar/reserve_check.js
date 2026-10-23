@@ -9,7 +9,7 @@
  */
 const fs=require("node:fs");
 const path=require("node:path");
-const {compare,fold,words}=require("./semantic.js");
+const {compare,fold,words,krasnoyarskToday}=require("./semantic.js");
 const ROOT=__dirname;
 const REQUIRED=["id","slot","universe","format","title","premise","event","characters","key_detail","viewpoint","conflict","dramatic_turn","reader_value","canon_or_source_basis","canon_review","editorial_status"];
 const ANCHORS={
@@ -97,7 +97,7 @@ function validateReserve(doc,posts,journal){
 }
 function evaluate(data, posts, journal, opts={}){
  const dist=validateReserve(data,posts,journal);
- const asOf=opts.as_of||data.source_index_date;
+ const asOf=opts.as_of||krasnoyarskToday();
  const out=[];
  for(const c of data.ideas){
   const idea={title:c.title,text:c.premise,event:c.event,characters:c.characters,viewpoint:c.viewpoint,conflict:c.conflict,conclusion:c.dramatic_turn};
@@ -127,7 +127,7 @@ if(require.main===module){
  const doc=readJSON(path.join(ROOT,"reserve","ideas-2026-10-23-r4.json"));
  const posts=readJSONL(path.join(ROOT,"index","posts.jsonl"));
  const journal=readJSONL(path.join(ROOT,"index","editorial.jsonl"));
- const report=evaluate(doc,posts,journal,{as_of:process.argv[2]||doc.source_index_date});
+ const report=evaluate(doc,posts,journal,{as_of:process.argv[2]||krasnoyarskToday()});
  console.log(JSON.stringify(report,null,2));
 }
 module.exports={evaluate,validateReserve,bestOverlap,EXCLUDED,ANCHORS};
