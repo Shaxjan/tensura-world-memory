@@ -189,9 +189,25 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
             now = new_posts_by_id.get(old["post_id"])
             if now is None:
                 raise ValueError("Rebuild would discard published post IDs")
-            for field in ("original_text", "url", "published_at", "media_type", "source"):
+            for field in ("original_text", "url", "published_at", "media_type", "source", "chain_complete"):
                 if old.get(field) != now.get(field):
                     raise ValueError(f"Rebuild changed immutable {field} for {old['post_id']}")
+            old_parts = {part["reply_id"]: part for part in old.get("author_continuation_parts", [])}
+            new_parts = {part["reply_id"]: part for part in now.get("author_continuation_parts", [])}
+            for reply_id, old_part in old_parts.items():
+                if new_parts.get(reply_id) != old_part:
+                    raise ValueError(f"Rebuild would lose or alter continuation {reply_id}")
+    old_journal_file = out / "editorial.jsonl"
+    if old_journal_file.exists():
+        previous_journal = read_jsonl(old_journal_file)
+        new_journal_by_id = {p["journal_id"]: p for p in journal}
+        for old in previous_journal:
+            now = new_journal_by_id.get(old["journal_id"])
+            if now is None:
+                raise ValueError("Rebuild would discard editorial journal cards")
+            for field in ("state", "date", "slot", "topic", "angle", "text", "format", "url"):
+                if old.get(field) != now.get(field):
+                    raise ValueError(f"Rebuild changed editorial {field} for {old['journal_id']}")
     write_jsonl(out / "posts.jsonl", posts)
     write_jsonl(out / "editorial.jsonl", journal)
     old_manifest = load_json(out / "manifest.json") if (out / "manifest.json").exists() else {}
