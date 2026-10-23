@@ -153,6 +153,8 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         "journal_state_counts": dict(Counter(p["state"] for p in journal)),
         "duplicate_ids": 0,
         "unresolved_journal_links": sum(not p["linked_post_id"] for p in journal),
+        "author_continuation_parts": attachment["parts"],
+        "author_continuation_roots": attachment["roots"],
     }
     manifest = {
         "schema_version": 1, "account": "mirpottera",
@@ -165,9 +167,10 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         ],
         "source_types": ["verified_full_chain", "Windsor.ai Threads", "editorial posts.json"],
         "generated_date_utc": max((doc.get("retrieval_date_utc", "") for doc in snapshot_documents), default=""),
+        "source_author_continuations": str(continuation_path.relative_to(root)).replace("\\", "/") if continuation_path.exists() else None,
         "counts": counts,
         "limitations": [
-            "New roots only: replies after 12 October not reconciled",
+            "16 probable direct-root author continuations indexed for search; complete reply chains not verified",
             "Journal records without matching URL remain independent; historical scheduled status is preserved",
             "Semantic story-angle metadata and full-corpus meaning scores are not yet verified",
             "Live Windsor.ai snapshot values may be cached",
@@ -191,6 +194,10 @@ def verify(root: Path = REPO) -> dict:
         raise ValueError("Editorial status mismatch")
     if counts["unresolved_journal_links"] != sum(not p["linked_post_id"] for p in journal):
         raise ValueError("Unresolved editorial link mismatch")
+    if counts.get("author_continuation_parts", 0) != sum(len(p.get("author_continuation_parts", [])) for p in posts):
+        raise ValueError("Continuation parts mismatch")
+    if counts.get("author_continuation_roots", 0) != sum(bool(p.get("author_continuation_parts")) for p in posts):
+        raise ValueError("Continuation roots mismatch")
     ids = {p["post_id"] for p in posts}
     for p in posts:
         if not p.get("url") or not p.get("published_at") or p["state"] != "published":
