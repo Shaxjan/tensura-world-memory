@@ -7,32 +7,39 @@
   "source_snapshot": [
     "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
     "threads/radar/snapshots/windsor-2026-10-21.json",
-    "threads/radar/snapshots/windsor-2026-10-21_rev2.json"
+    "threads/radar/snapshots/windsor-2026-10-21_rev2.json",
+    "threads/radar/snapshots/windsor-2026-10-22.json",
+    "threads/radar/snapshots/windsor-2026-10-23.json"
   ],
   "source_types": [
     "verified_full_chain",
     "Windsor.ai Threads",
     "editorial posts.json"
   ],
-  "generated_date_utc": "2026-10-21",
+  "generated_date_utc": "2026-10-23",
   "counts": {
-    "snapshot_records": 40,
-    "snapshot_reposts": 6,
+    "snapshot_records": 50,
+    "snapshot_reposts": 10,
     "historic_posts": 414,
-    "new_author_roots": 34,
-    "total_author_roots": 448,
+    "new_author_roots": 40,
+    "total_author_roots": 454,
     "journal_cards": 40,
     "journal_state_counts": {
       "published": 32,
       "scheduled": 8
     },
     "duplicate_ids": 0,
-    "unresolved_journal_links": 23
+    "unresolved_journal_links": 23,
+    "author_continuation_parts": 16,
+    "author_continuation_roots": 16
   },
   "limitations": [
-    "New roots only: replies after 12 October not reconciled",
-    "Journal records without matching URL remain independent; historical scheduled status is preserved",
-    "Live Windsor.ai snapshot values may be cached",
-    "Stage C semantic-candidate comparator is heuristic and covers a limited curated event ontology; human editorial review remains required"
-  ]
+    "16 direct-root author replies appearing 0–90 seconds after the root are searchable, but remain PROBABLE continuations",
+    "Later self-replies and replies in conversations are not appended to published post text",
+    "All newer root chains remain chain_complete=false until independently verified",
+    "Journal cards without exact permalink remain independent; historical scheduled statuses are preserved",
+    "Publication data after 2026-10-23 is not yet included; periodic sync remains manual",
+    "Semantic event coverage is heuristic; editorial primary-source and originality checks remain required"
+  ],
+  "source_author_continuations": "threads/radar/snapshots/author-continuations-2026-10-23.json"
 }
