@@ -921,19 +921,19 @@
       "originality_certified": false,
       "author_approved": false,
       "semantic_dimensions": {
-        "event": "Гибель Руфуса Скримджера при захвате Министерства и его отказ раскрыть местонахождение Гарри",
+        "event": "Слух о том, что погибший Скримджер под пытками отказался сообщить, где находится Гарри",
         "characters": [
           "Руфус Скримджер",
           "Гарри Поттер",
           "Пожиратели смерти"
         ],
         "viewpoint": "Гарри Поттер",
-        "conflict": "Гарри не доверял человеку, который пытался сделать его символом Министерства, но этот человек в конце не предал его даже под пытками",
-        "key_detail": "новость о гибели министра на свадьбе Билла и Флёр",
-        "central_thesis": "Министр, которому Гарри отказывал в публичной поддержке, молча защитил Гарри ценой жизни",
+        "conflict": "Гарри не доверял министру, который хотел использовать его популярность; теперь он слышит, что тот, возможно, защитил его ценой собственной жизни",
+        "key_detail": "рассказ Люпина после нападения на свадьбу Билла и Флёр",
+        "central_thesis": "Человек, у которого Гарри отказывался быть политическим символом, возможно, защитил его, не получив ничего взамен",
         "emotional_outcome": "Переоценка сложного персонажа без оправдания его прошлых решений"
       },
-      "editorial_difference_and_risk": "Скримджер уже упоминался только в новости о падении Министерства и гибели. Здесь конфликт между его политическим использованием Гарри и отказом выдать Гарри под пытками. Прежняя G21 отменена как опасный повтор сцены с Драко.",
+      "editorial_difference_and_risk": "Ранний пост лишь сообщает о гибели министра при падении Министерства. Позднее Люпин пересказывает слух, что Скримджер не выдал Гарри под пытками. Не выдавать слух за доказанный факт или внутренние мысли Гарри за цитату.",
       "similar_refs": [
         {
           "id": "18099053732569238",
@@ -947,7 +947,7 @@
         }
       ],
       "prior_screen_status": "REVIEW_REQUIRED",
-      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "canon_review": "SECONDARY_SOURCE_CHECKED_ROSMAN_PENDING",
       "requires_human_approval": true
     },
     {
@@ -1246,5 +1246,21 @@
       "canon_review": "PENDING_SOURCE_VERIFICATION",
       "requires_human_approval": true
     }
-  ]
+  ],
+  "additional_findings": [
+    {
+      "kind": "EXISTING_ARCHIVE_NEAR_REPEAT",
+      "first_post_id": "18094564298550359",
+      "later_post_id": "18109268174261128",
+      "first_url": "https://www.threads.com/@mirpottera/post/DdirkATDQBo",
+      "later_url": "https://www.threads.com/@mirpottera/post/De1uOOfikHf",
+      "assessment": "Оба поста начинают с тезиса о том, что Гермиона позаимствовала принцип зачарованных галлеонов у Чёрной метки. Версия 23 октября добавляет новый поворот: Драко повторяет механизм для связи с Розмертой. Повтор фактической завязки не тождественен полному повтору финальной мысли; использовать как предупреждение для новых сюжетов о тайной связи."
+    }
+  ],
+  "source_canon_check": {
+    "concept_id": "G21",
+    "secondary_link": "https://www.hp-lexicon.org/event/minister-for-magic-rufus-scrimgeour-is-murdered-by-voldemort/",
+    "chapter": "Deathly Hallows, chapter 11",
+    "note": "Lupin reports Arthur heard a rumor, not independently confirmed. Primary Rosman translation pending."
+  }
 }
