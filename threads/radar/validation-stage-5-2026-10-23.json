@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "project": "Threads / Мир Поттера / Редакционный радар",
+  "stage": 5,
+  "date_krasnoyarsk": "2026-10-23",
+  "branch": "radar-stage-b-index-20261020",
+  "pr_number": 33,
+  "status": "PARTIAL_PASS__FULL_CORPUS_INTEGRATION_PENDING",
+  "description": "Native execution without Work; exact GitHub blobs transferred to isolated local test workspace and sha1 git blobs checked against PR branch.",
+  "runtime": {
+    "python": "Python 3.13.5",
+    "node": "Node.js 22.16.0",
+    "native_python": {
+      "passed": 23,
+      "failed": 0,
+      "command": "python -m unittest discover -p 'test_*.py'",
+      "environment": "isolated local copy, synthetic fixtures",
+      "source_files_verified": {
+        "threads/radar/radar.py": "6d699e2fcff9f343c7c1cef14f7cf4981b9c8010",
+        "threads/radar/test_radar.py": "b59b2bb8f9aae94c14cb56ac086d14b03760ab86",
+        "threads/radar/continuations.py": "46567e0dc6cce4277d668bf0291a0a620338ae75",
+        "threads/radar/test_continuations.py": "01403a96b74271a332cc507d2e6bbb0637cbff0c",
+        "threads/radar/test_snapshot_consistency.py": "bcaea8dcba6dc4adbfb295f15c6120241ee7d3f1"
+      }
+    },
+    "native_node": {
+      "passed": 17,
+      "failed": 0,
+      "command": "node --test snapshot-safety.test.js semantic-safety.test.js",
+      "environment": "isolated local copy, standalone synthetic fixtures",
+      "source_files_verified": {
+        "threads/radar/snapshot_intake.js": "d876cffab11417366b8ba02cd82f638fdcf43e28",
+        "threads/radar/semantic.js": "55e054ae69e952a632df0f2265f3ec5664c83596",
+        "threads/radar/snapshot-safety.test.js": "e2acc92bde55442679d478e1a7e4ad5db1e920a6",
+        "threads/radar/semantic-safety.test.js": "7e99486db6259b484c57d2b49ea2b4dfa556961b"
+      }
+    },
+    "previous_isolated_V8": {
+      "passed": 49,
+      "failed": 0,
+      "description": "Historical suites with actual 454 index: 35, R4 checks: 14; emulated Node, not native full suite"
+    }
+  },
+  "changes": [
+    {
+      "path": "threads/radar/radar.py",
+      "risk": "filename-sorted imports can overwrite newer metrics with older ones",
+      "fix": "sort all Windsor snapshots by retrieval_date_utc then name",
+      "native_test": "test_mixed_snapshot_filenames_use_retrieval_date_order"
+    },
+    {
+      "path": "threads/radar/snapshot_intake.js",
+      "risk": "JS Date rollover and preview under-detection of immutable timestamp/media changes",
+      "fix": "strict calendar round-trip; compare immutable date and media as well as text/URL; reject retrieval before publication",
+      "native_test": "snapshot-safety.test.js (9 tests)"
+    },
+    {
+      "path": "threads/radar/semantic.js",
+      "risk": "invalid date normalized to another day or NaN could mark stale archive fresh",
+      "fix": "invalid ISO dates parse to null and force REVIEW_REQUIRED",
+      "native_test": "semantic-safety.test.js (8 tests)"
+    }
+  ],
+  "known_repository_index": {
+    "published_roots": 454,
+    "historical": 414,
+    "new_roots": 40,
+    "probable_continuations": 16,
+    "editorial_cards": 40,
+    "ideas": 30,
+    "last_snapshot_date": "2026-10-23"
+  },
+  "safety": {
+    "main_edited": false,
+    "merged": false,
+    "threads_published": false,
+    "game_repo_edited": false,
+    "changed_paths_scope": "threads/radar/ only"
+  },
+  "blockers": [
+    "Full repository clone unavailable from this runtime: github.com DNS cannot resolve and no public download was authorized.",
+    "Native full Node test suite on actual 454 published post index has NOT run in this turn.",
+    "Native Python full-corpus rebuild from 414-post primary verified archive + 5 real snapshots has NOT run in this turn.",
+    "Automated periodic Threads sync NOT implemented, belongs to later stage."
+  ],
+  "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS."
+}
