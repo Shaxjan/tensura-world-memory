@@ -53,6 +53,15 @@ def build(root: Path = REPO, snapshot_path: Path | None = None) -> dict:
         if not snapshot_file.exists():
             raise ValueError(f"Missing source snapshot: {snapshot_file}")
     snapshot_documents = [load_json(source) for source in snapshots]
+    if snapshot_path is None:
+        # Filename ordering is not chronology: ``windsor-import-...`` sorts after
+        # ``windsor-2026-...``, potentially overwriting newer metrics with old.
+        paired = sorted(
+            zip(snapshots, snapshot_documents),
+            key=lambda pair: (pair[1].get("retrieval_date_utc", ""), pair[0].name),
+        )
+        snapshots = [source for source, _ in paired]
+        snapshot_documents = [doc for _, doc in paired]
 
     full = load_json(base / "full-posts-verified.json")
     formats = load_json(base / "posts-by-format.json")
