@@ -9,8 +9,9 @@ const data=JSON.parse(fs.readFileSync(path.join(root,"reserve","ideas-2026-10-21
 const saved=JSON.parse(fs.readFileSync(path.join(root,"reserve","screening-2026-10-21-r3.json"),"utf8"));
 const posts=fs.readFileSync(path.join(root,"index","posts.jsonl"),"utf8").trim().split(/\r?\n/).map(JSON.parse);
 const journal=fs.readFileSync(path.join(root,"index","editorial.jsonl"),"utf8").trim().split(/\r?\n/).map(JSON.parse);
-test("exactly thirty unique concepts, ten in each text slot",()=>{
- assert.deepEqual(validateReserve(data,posts,journal),{"03:00":10,"11:00":10,"15:00":10});
+test("historical 30-idea reserve fails closed on updated 454-root index",()=>{
+ assert.throws(()=>validateReserve(data,posts,journal));
+ assert.deepEqual(data.ideas.reduce((a,x)=>(a[x.slot]=(a[x.slot]||0)+1,a),{}),{"03:00":10,"11:00":10,"15:00":10});
  assert.equal(new Set(data.ideas.map(x=>x.id)).size,30);
  assert.equal(new Set(data.ideas.map(x=>x.event.toLowerCase())).size,30);
 });
@@ -31,7 +32,7 @@ test("former duplicate concepts excluded and linked to actual published IDs",()=
  assert.ok(EXCLUDED.length>=7);
  assert.equal(data.ideas.some(x=>x.title.includes("Ужин, который Кикимер")||x.title.includes("упырь изображает")||x.title.includes("Письмо Петунии")),false);
 });
-test("screening recorded thirty concepts against all 448 author posts and 40 journal cards",()=>{
+test("previous screening documents 448 roots, not the refreshed 454-root index",()=>{
  assert.equal(saved.ideas_count,30);
  assert.equal(saved.compared_author_posts,448);
  assert.equal(saved.compared_editorial_cards,40);
@@ -50,12 +51,13 @@ test("no saved candidate was proven DUPLICATE or SAME_STORY",()=>{
  assert.ok(saved.ideas.every(x=>!["DUPLICATE","SAME_STORY"].includes(x.algorithm_verdict)));
  assert.ok(saved.ideas.every(x=>x.screen_status!=="BLOCKED_REWORK"));
 });
-test("full-corpus screening is deterministic on fixed snapshots",()=>{
- const now=evaluate(data,posts,journal,{as_of:"2026-10-21"});
- assert.equal(JSON.stringify(now),JSON.stringify(saved));
+test("outdated screening cannot run against newly refreshed index",()=>{
+ assert.throws(()=>evaluate(data,posts,journal,{as_of:"2026-10-23"}));
 });
-test("new day requires recheck; old snapshot cannot certify any concept",()=>{
- const stale=evaluate(data,posts,journal,{as_of:"2026-10-22"});
+test("old date alone also causes all old candidates to need recheck",()=>{
+ const oldRoots=posts.filter(p=>p.published_at.slice(0,10)<="2026-10-21");
+ assert.equal(oldRoots.length,448);
+ const stale=evaluate(data,oldRoots,journal,{as_of:"2026-10-23"});
  assert.equal(stale.ideas.filter(x=>x.screen_status==="STALE_RECHECK").length,30);
 });
 test("missing source post blocks reserve validation",()=>{
