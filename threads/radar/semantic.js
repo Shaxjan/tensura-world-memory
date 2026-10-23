@@ -56,7 +56,11 @@ function krasnoyarskToday() {
  const dates=Object.fromEntries(parts.map(p=>[p.type,p.value]));
  return dates.year+"-"+dates.month+"-"+dates.day;
 }
-function parseISODate(v){return /^\d{4}-\d\d-\d\d$/.test(v||"")?new Date(v+"T00:00:00Z"):null;}
+function parseISODate(v){
+ if(!/^\d{4}-\d\d-\d\d$/.test(v||""))return null;
+ const d=new Date(v+"T00:00:00Z");
+ return Number.isNaN(d.getTime())||d.toISOString().slice(0,10)!==v?null:d;
+}
 function ready(c){return !!(String(c.event||"").trim()&&String(c.conflict||"").trim()&&Array.isArray(c.characters)&&c.characters.length);}
 function matchArchive(c, posts, journal=[]){
  const q=candidateText(c), cEvents=new Set(detectEvents(q));
