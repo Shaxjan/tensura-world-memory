@@ -31,6 +31,7 @@ NODE_TESTS = (
     "reserve-freshness.test.js",
     "inbox_check.test.js",
     "watch_check.test.js",
+    "inbox_delivery.test.js",
 )
 
 
