@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "stage": "6_of_8_source_discovery_and_safe_inbox",
+  "date_krasnoyarsk": "2026-10-24",
+  "status": "IN_PROGRESS_READ_ONLY_CONNECTOR_VALIDATED",
+  "source": {
+    "provider": "Windsor.ai",
+    "connector": "threads",
+    "connected": true,
+    "read_access_tested": true,
+    "fields": [
+      "post_id",
+      "post_timestamp",
+      "post_text",
+      "post_permalink",
+      "post_media_type",
+      "post_views",
+      "data_fetched_at"
+    ],
+    "read_range_utc": [
+      "2026-10-23",
+      "2026-10-24"
+    ],
+    "data_fetched_at_utc": "2026-10-24T04:58:31",
+    "total_rows": 6,
+    "full_account_export": false,
+    "scheduled_destination_tasks": 0,
+    "direct_destination_setup_available_in_chat": false,
+    "note": "All destination types returned create_in_chat=false and had no stored destination credentials; a remote scheduler/export workflow was not created."
+  },
+  "inbox": {
+    "source": "threads/radar/inbox/windsor-2026-10-24-retrieved.json",
+    "reconciliation": "threads/radar/inbox/reconciliation-2026-10-24.json",
+    "preflight": "threads/radar/inbox_check.js",
+    "tests": "threads/radar/inbox_check.test.js",
+    "test_execution": {
+      "isolated_V8": {
+        "passed": 7,
+        "failed": 0,
+        "real_source_data": true
+      },
+      "native_Node": "NOT_YET_RUN"
+    },
+    "author_roots_before": 454,
+    "new_author_roots": 2,
+    "expected_roots_after_checked_promotion": 456,
+    "new_root_ids": [
+      "18058181561570070",
+      "17899242612398487"
+    ],
+    "unchanged_indexed_roots": 3,
+    "skipped_repost_facades": 1,
+    "view_updates": 3,
+    "immutable_conflicts": 0,
+    "state": "INBOX_NOT_INDEXED; NOT_PROMOTED_TO_SNAPSHOTS",
+    "original_texts_changed": 0
+  },
+  "safeguards": [
+    "Source read-only, inbox immutable in the Draft branch",
+    "No automatic index mutation, social post, scheduling or thread replies",
+    "Separate new roots, repost facades and view-only updates",
+    "Block any known ID whose text, permalink, media type or timestamp changes",
+    "Do not pretend short source range is complete account archive",
+    "Native full-corpus rebuild/verify required before promotion and R4 rescreen"
+  ],
+  "automation_feasibility": {
+    "periodic_source_access": "Not yet established. Interactive Windsor.ai reads succeed.",
+    "recurring_export": "Unavailable to create in chat with current destination configuration.",
+    "hosted_runner": "Not configured; GitHub Actions budget previously blocked.",
+    "risk_of_mass_browser_automation": "Excluded entirely.",
+    "account_write_operations": "None",
+    "next_required_actions": [
+      "Determine a supported scheduled export destination or secured runner approved by the owner.",
+      "Implement connector-independent ingest polling with immutable snapshots and retry/no-data controls.",
+      "Perform native full-corpus acceptance and promote this inbox only after successful verification.",
+      "Rescreen all 30 R4 ideas on the expanded archive and keep approval with author."
+    ]
+  },
+  "gate_status": "Stage 5 native Node real-corpus suite and native Python real-corpus build remain incomplete; stage 6 intake pilot may proceed without treating stage 5 as passed."
+}
