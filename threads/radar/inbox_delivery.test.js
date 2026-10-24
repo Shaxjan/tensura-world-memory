@@ -31,7 +31,7 @@ test("an unseen root generates a deterministic unpromoted inbox",()=>{
  assert.equal(a.save_allowed,true);
  assert.equal(a.filename,b.filename);
  assert.equal(a.serialized,b.serialized);
- assert.match(a.filename,/^windsor-20261024T045831-[a-f0-9]{16}-retrieved\.json$/);
+ assert.match(a.filename,/^windsor-20261024T045831Z-[a-f0-9]{16}-retrieved\.json$/);
  assert.equal(a.snapshot.state,"INBOX_NOT_INDEXED");
  assert.equal(a.snapshot.count,7);
  assert.equal(a.snapshot.posts.filter(x=>x.post_id==="18888888888888888").length,1);
