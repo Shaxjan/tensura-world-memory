@@ -3,7 +3,7 @@
   "account": "mirpottera",
   "stage": "6_of_8_source_discovery_and_safe_inbox",
   "date_krasnoyarsk": "2026-10-24",
-  "status": "IN_PROGRESS_READ_ONLY_CONNECTOR_VALIDATED",
+  "status": "READ_ONLY_DAILY_WATCH_SCHEDULED__AUTONOMOUS_INDEX_SYNC_NOT_READY",
   "source": {
     "provider": "Windsor.ai",
     "connector": "threads",
@@ -83,7 +83,12 @@
     "recurring_read_only_monitor": "SCHEDULED_DAILY_KRASNOYARSK",
     "autonomous_ingestion": "NOT_IMPLEMENTED",
     "windsor_plan": "Trial as reported by live Windsor.ai current-user profile on 2026-10-24",
-    "available_manual_destination_setup_url": "https://onboard.windsor.ai/app/destinations/overview#prest"
+    "available_manual_destination_setup_url": "https://onboard.windsor.ai/app/destinations/overview#prest",
+    "read_only_chatgpt_schedule": "CREATED_AND_ENABLED; first successful execution not yet observed",
+    "source_destination_type_checked": "Windsor.ai Cloud Database (prest)",
+    "destination_setup_url": "https://onboard.windsor.ai/app/destinations/overview#prest",
+    "destination_setup_requires_user_action": true,
+    "existing_recurring_export_tasks": 0
   },
   "gate_status": "Stage 5 native Node real-corpus suite and native Python real-corpus build remain incomplete; stage 6 intake pilot may proceed without treating stage 5 as passed.",
   "stage6_read_only_monitor": {
@@ -98,6 +103,24 @@
     "creates_snapshot_files": false,
     "automatically_indexes_posts": false,
     "readiness": "Limited read-only monitoring; does not qualify as autonomous full sync",
-    "note": "Managed by ChatGPT scheduled tasks, outside GitHub; exact task ID deliberately not stored in repository."
+    "note": "Managed by ChatGPT scheduled tasks, outside GitHub; exact task ID deliberately not stored in repository.",
+    "watch_source_file": "threads/radar/watch_check.js",
+    "watch_test_file": "threads/radar/watch_check.test.js",
+    "replay_safe_preflight": {
+      "isolated_v8": {
+        "passed": 9,
+        "failed": 0
+      },
+      "native_node": "PENDING_FULL_NATIVE_GATE",
+      "indexed_root_count": 454,
+      "existing_inbox_root_ids": [
+        "18058181561570070",
+        "17899242612398487"
+      ],
+      "known_inbox_never_alerted_as_fresh": true,
+      "blocks_immutable_conflict": true,
+      "detects_incomplete_pull": true,
+      "excludes_reposts": true
+    }
   }
 }
