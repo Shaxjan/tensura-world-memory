@@ -13,13 +13,15 @@
       "id": "18058181561570070",
       "published_at": "2026-10-23T20:00:51+0000",
       "url": "https://www.threads.com/@mirpottera/post/De2Xf_fAXgQ",
-      "media_type": "TEXT_POST"
+      "media_type": "TEXT_POST",
+      "published_at_krasnoyarsk": "2026-10-24T03:00:51+0700"
     },
     {
       "id": "17899242612398487",
       "published_at": "2026-10-24T04:00:43+0000",
       "url": "https://www.threads.com/@mirpottera/post/De3OanlEW0D",
-      "media_type": "TEXT_POST"
+      "media_type": "TEXT_POST",
+      "published_at_krasnoyarsk": "2026-10-24T11:00:43+0700"
     }
   ],
   "already_indexed_roots": [
