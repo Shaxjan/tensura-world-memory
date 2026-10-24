@@ -54,7 +54,11 @@
     "view_updates": 3,
     "immutable_conflicts": 0,
     "state": "INBOX_NOT_INDEXED; NOT_PROMOTED_TO_SNAPSHOTS",
-    "original_texts_changed": 0
+    "original_texts_changed": 0,
+    "new_root_publish_times_krasnoyarsk": {
+      "18058181561570070": "2026-10-24T03:00:51+0700",
+      "17899242612398487": "2026-10-24T11:00:43+0700"
+    }
   },
   "safeguards": [
     "Source read-only, inbox immutable in the Draft branch",
