@@ -79,7 +79,25 @@
       "Implement connector-independent ingest polling with immutable snapshots and retry/no-data controls.",
       "Perform native full-corpus acceptance and promote this inbox only after successful verification.",
       "Rescreen all 30 R4 ideas on the expanded archive and keep approval with author."
-    ]
+    ],
+    "recurring_read_only_monitor": "SCHEDULED_DAILY_KRASNOYARSK",
+    "autonomous_ingestion": "NOT_IMPLEMENTED",
+    "windsor_plan": "Trial as reported by live Windsor.ai current-user profile on 2026-10-24",
+    "available_manual_destination_setup_url": "https://onboard.windsor.ai/app/destinations/overview#prest"
   },
-  "gate_status": "Stage 5 native Node real-corpus suite and native Python real-corpus build remain incomplete; stage 6 intake pilot may proceed without treating stage 5 as passed."
+  "gate_status": "Stage 5 native Node real-corpus suite and native Python real-corpus build remain incomplete; stage 6 intake pilot may proceed without treating stage 5 as passed.",
+  "stage6_read_only_monitor": {
+    "status": "SCHEDULED",
+    "cadence": "DAILY",
+    "timezone": "Asia/Krasnoyarsk",
+    "schedule_clock_hour_local": 8,
+    "source": "Windsor.ai threads connected account mirpottera",
+    "scope": "Check recent 3 days, compare immutable fields with current index + inbox; notify only meaningful new author roots or failures",
+    "repository_writes": false,
+    "local_browser": false,
+    "creates_snapshot_files": false,
+    "automatically_indexes_posts": false,
+    "readiness": "Limited read-only monitoring; does not qualify as autonomous full sync",
+    "note": "Managed by ChatGPT scheduled tasks, outside GitHub; exact task ID deliberately not stored in repository."
+  }
 }
