@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "source_commit": "310ee3ad7d020f411b024027a3f5cb9b764053eb",
+  "full_archive_blob_sha": "ce1189744057e6bf1141e881d4212785e2a12150",
+  "posts_journal_blob_sha": "b6485bd5d1175f77b785b22cb0f002de445a565c",
+  "source_snapshot": [
+    "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+    "threads/radar/snapshots/windsor-2026-10-21.json",
+    "threads/radar/snapshots/windsor-2026-10-21_rev2.json",
+    "threads/radar/snapshots/windsor-2026-10-22.json",
+    "threads/radar/snapshots/windsor-2026-10-23.json"
+  ],
+  "source_types": [
+    "verified_full_chain",
+    "Windsor.ai Threads",
+    "editorial posts.json"
+  ],
+  "generated_date_utc": "2026-10-23",
+  "counts": {
+    "snapshot_records": 50,
+    "snapshot_reposts": 10,
+    "historic_posts": 414,
+    "new_author_roots": 40,
+    "total_author_roots": 454,
+    "journal_cards": 40,
+    "journal_state_counts": {
+      "published": 32,
+      "scheduled": 8
+    },
+    "duplicate_ids": 0,
+    "unresolved_journal_links": 23,
+    "author_continuation_parts": 16,
+    "author_continuation_roots": 16
+  },
+  "limitations": [
+    "16 direct-root author replies appearing 0–90 seconds after the root are searchable, but remain PROBABLE continuations",
+    "Later self-replies and replies in conversations are not appended to published post text",
+    "All newer root chains remain chain_complete=false until independently verified",
+    "Journal cards without exact permalink remain independent; historical scheduled statuses are preserved",
+    "Publication data after 2026-10-23 is not yet included; periodic sync remains manual",
+    "Semantic event coverage is heuristic; editorial primary-source and originality checks remain required"
+  ],
+  "source_author_continuations": "threads/radar/snapshots/author-continuations-2026-10-23.json"
+}

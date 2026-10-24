@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-20",
+  "scope": "Structural and lexical index validation on saved GitHub JSONL; NOT execution of radar.py or its Python unit tests",
+  "source_branch": "radar-stage-b-index-20261020",
+  "assertions": {
+    "all_sources_present": true,
+    "ids_unique": true,
+    "no_reposts_indexed": true,
+    "all_canonical_permalinks": true,
+    "no_missing_roots": true,
+    "status_isolation": true,
+    "manifest_counts_match": true,
+    "molly_watch_detected": true,
+    "hagrid_album_detected_from_original": true,
+    "recent_scene_included": true
+  },
+  "control_cases": {
+    "molly_watch": {
+      "post_id": "18070777397534641",
+      "url": "https://www.threads.com/@mirpottera/post/DdGW0TdEnrU",
+      "detected": true
+    },
+    "hagrid_album": {
+      "post_id": "18101742425202406",
+      "url": "https://www.threads.com/@mirpottera/post/DczsDigky8U",
+      "query": "Хагрид альбом",
+      "detected_from_full_original": true
+    }
+  },
+  "results": {
+    "indexed_posts": 445,
+    "journal": 40,
+    "source_snapshot": 34,
+    "post_ids_unique": 445,
+    "scheduled": 8,
+    "unresolved_editorial_links": 23
+  },
+  "limitations": [
+    "Python 3.10 CLI and unittest suite committed but not executed in a local runtime",
+    "Lexical candidate retrieval only; no semantic original-story vs new-angle validation",
+    "Synonyms and composite terms such as фотоальбом vs альбом are not yet normalized",
+    "31 newer root posts do not yet include verified author replies"
+  ]
+}

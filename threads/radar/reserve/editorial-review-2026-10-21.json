@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "source_archive_posts": 447,
+  "reviewed_date": "2026-10-21",
+  "status": "HUMAN_EDITORIAL_COMPARISON_NOT_PUBLICATION_APPROVAL",
+  "count": 14,
+  "counts": {
+    "ARCHIVE_DIFFERENT_EVENT": 8,
+    "HOLD_CREATIVE_SCENE": 1,
+    "ARCHIVE_NEW_POV": 2,
+    "ARCHIVE_DIFFERENT_CHAPTER": 1,
+    "REJECT_SAME_THESIS": 1,
+    "ARCHIVE_NEW_CONFLICT": 1
+  },
+  "decisions": [
+    {
+      "id": "G02",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Фрагменты о Добби и дементорах не относятся к поддержке Олливандера Полумной; самостоятельный эпизод.",
+      "action": "Уточнить, что Полумна заботилась о пленнике, не придумывать конкретных диалогов.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/the-kindness-of-luna-lovegood"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G03",
+      "status": "HOLD_CREATIVE_SCENE",
+      "decision": "Смерть Седрика обсуждалась с позиций Гарри и Чжоу; взгляд Помфри иной.",
+      "action": "Пустая койка и действия Помфри вымышлены, в публикации явно пометить это как авторскую сцену.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/which-potion-would-be-right-for-you"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G04",
+      "status": "ARCHIVE_NEW_POV",
+      "decision": "Ранее Кэти упоминалась как пример последствий плана Драко и решений Дамблдора.",
+      "action": "Новая история только от Кэти, без повтора обвинений Дамблдору; сцену пробуждения пометить вымыслом.",
+      "external_source_urls": [
+        "https://www.hp-lexicon.org/character/katie-bell/"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G05",
+      "status": "ARCHIVE_DIFFERENT_CHAPTER",
+      "decision": "Медальон уже описан у Амбридж и в запланированной цепочке; сделка Меропы с Берком — другой период и конфликт.",
+      "action": "Сосредоточиться на бедности беременной Меропы и нечестной цене; не делать очередную хронологию крестража.",
+      "external_source_urls": [
+        "https://www.hp-lexicon.org/character/burke-family/caractacus-burke/"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G06",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Близкие результаты относятся к палочкам вообще или другим героическим сюжетам.",
+      "action": "В разговоре Олливандера с Гарри подтверждён общий источник перьев; его внутреннее сочувствие — авторская интерпретация.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/fact-file/locations/ollivanders"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G07",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Архив обсуждал сущность боггарта в целом; личный страх Люпина создаёт иной конфликт.",
+      "action": "Не путать боггарта Молли и полнолуние Люпина; не выдавать воображаемые мысли за цитату.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/things-you-may-not-have-noticed-about-remus-lupin"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G11",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Ни летающий «Форд», ни история Билла не совпадают с лечением Артура швами.",
+      "action": "Подтверждённая каноническая шутка; не приписывать швам то, чего в книге нет.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/molly-weasleys-most-magnificent-rants"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G12",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Опубликованный Ник после смерти Сириуса — тема привидений; банкет дня смерти — другой эпизод и комедия.",
+      "action": "Опираемся на 500-летний юбилей и гнилую еду; реплики не цитировать по памяти.",
+      "external_source_urls": [
+        "https://www.hp-lexicon.org/thing/deathday-party/"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G14",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Другой опубликованный урок Слизнорта был про Амортенцию; конкурс с учебником Принца — самостоятельная сцена.",
+      "action": "Лучшее зелье - Напиток живой смерти; награда Феликс Фелицис; при подаче не путать с поздними уроками.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/fact-file/plants-and-potions/felix-felicis"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G17",
+      "status": "ARCHIVE_NEW_POV",
+      "decision": "Ранее опубликовано комментирование матча Полумной; у Ли Джордана и Макгонагалл иной механизм комедии.",
+      "action": "Подчеркнуть конфликт со школьным надзором, не повторять вывод «просто смешной комментатор».",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/unsung-heroes-of-harry-potter-stories-lee-jordan"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G21",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Сектумсемпра уже использовалась в тексте о потере уха Джорджем; лечение Драко Снеггом — другое происшествие.",
+      "action": "Показать ответственность изобретателя, но не подменять сцену ранением Джорджа.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/your-guide-to-the-best-spells-in-harry-potter"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G22",
+      "status": "REJECT_SAME_THESIS",
+      "decision": "В опубликованной истории уже раскрыта мысль о непонимании любви Волан-де-Мортом с примерами Лили, Молли, Нарциссы.",
+      "action": "Исключить первоначальную идею. Рекомендована замена: Гюго, Жан Вальжан и подсвечники епископа.",
+      "external_source_urls": [
+        "https://en.wikisource.org/wiki/Les_Mis%C3%A9rables/Volume_1/Book_Second/Chapter_12"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G23",
+      "status": "ARCHIVE_DIFFERENT_EVENT",
+      "decision": "Ближайшие материалы о Запретном лесе относятся к наказанию и кентаврам; открытие снитча — другое время и событие.",
+      "action": "Канон: первый снитч открывается после фразы о скорой смерти, внутри Воскрешающий камень.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/magical-objects-from-philosophers-stone-that-became-important-later"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    },
+    {
+      "id": "G25",
+      "status": "ARCHIVE_NEW_CONFLICT",
+      "decision": "Опубликован викторинный вопрос о жаброслях и отдельный рассказ о честности Гарри перед Седриком на первом испытании.",
+      "action": "Во втором испытании он задержался ради Габриэль. Строить сюжет на ошибочном страхе за неё и оценке судей, не на повторе спора о честности.",
+      "external_source_urls": [
+        "https://www.harrypotter.com/features/twelve-of-our-favourite-moments-from-the-triwizard-tournament-tasks"
+      ],
+      "archive_check_date": "2026-10-21",
+      "approval": "NOT_APPROVED",
+      "rosman_verification": "PENDING"
+    }
+  ]
+}

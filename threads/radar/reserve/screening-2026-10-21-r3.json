@@ -1,0 +1,1324 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "checked_at": "2026-10-21",
+  "snapshot_date": "2026-10-21",
+  "compared_author_posts": 448,
+  "compared_editorial_cards": 40,
+  "ideas_count": 30,
+  "distrib": {
+    "03:00": 10,
+    "11:00": 10,
+    "15:00": 10
+  },
+  "summary": {
+    "PRECHECKED_LOW_SIMILARITY": 17,
+    "REVIEW_REQUIRED": 13
+  },
+  "exclusions": [
+    {
+      "topic": "Кикимер готовит пирог, которого герои не дождались",
+      "post_id": "18124917808689599",
+      "reason": "То же событие, тот же конфликт и финал. Первоначальный кандидат исключён."
+    },
+    {
+      "topic": "Упырь изображает заболевшего Рона",
+      "post_id": "18407809276080562",
+      "reason": "Сюжет и комическая функция уже повторяют опубликованный пост. Первоначальный кандидат исключён."
+    },
+    {
+      "topic": "Письмо Петунии директору с просьбой взять её в Хогвартс",
+      "post_id": "17889884388671268",
+      "reason": "То же событие, психологическая причина и смысл уже подробно раскрыты в опубликованном тексте. Первоначальный G04 исключён."
+    },
+    {
+      "topic": "Невилл и обёртка от матери",
+      "post_id": "17948465820318555",
+      "reason": "Уже опубликованная эмоциональная сцена."
+    },
+    {
+      "topic": "Отец Дина Томаса",
+      "post_id": "18092802638545644",
+      "reason": "Уже опубликованное раскрытие судьбы отца."
+    },
+    {
+      "topic": "Жук Рита Скитер и расследование Гермионы",
+      "post_id": "17900136351510191",
+      "reason": "Уже опубликованная детективная цепочка."
+    },
+    {
+      "topic": "Шутка Фреда с плюшевым медведем Рона",
+      "post_id": "18112139308787863",
+      "reason": "Уже опубликованное объяснение арахнофобии."
+    }
+  ],
+  "ideas": [
+    {
+      "id": "G01",
+      "title": "Патронус, который выдал Тонкс",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18076049738682412",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbDyV23ie1D",
+          "status": "published",
+          "score": 0.316,
+          "event_overlap": 0.29,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18049764185598588",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcCHwFxjVZu",
+          "status": "published",
+          "score": 0.316,
+          "event_overlap": 0.29,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18233596039321325",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdJd8hNjZ6v",
+          "status": "published",
+          "score": 0.316,
+          "event_overlap": 0.29,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Книжная сцена HBP; мотивы рассказчицы - авторская интерпретация"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G02",
+      "title": "Полумна, которая делала подвал менее страшным",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18131077768735591",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dbs7ypsCP2V",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.5,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18098660969211214",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Da_0SSmAKIf",
+          "status": "published",
+          "score": 0.244,
+          "event_overlap": 0.38,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18118551427910664",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db1Px2XD4Ws",
+          "status": "published",
+          "score": 0.244,
+          "event_overlap": 0.38,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Олливандер свидетельствует, что Полумна стала для него утешением; реплики и внутренний монолог вымышлены"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G03",
+      "title": "Пустая койка после третьего испытания",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17900136351510191",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbhuFMUjml_",
+          "status": "published",
+          "score": 0.371,
+          "event_overlap": 0.57,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18007264379766608",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcHRV0zjSTk",
+          "status": "published",
+          "score": 0.279,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18020716094910293",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcMGSwCCId4",
+          "status": "published",
+          "score": 0.279,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Предлагаемое действие Помфри не описано в книгах; художественный вымысел"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G04",
+      "title": "Пострадавшая, которую никто не собирался убивать",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18434719531134355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dbkwg4ziNAg",
+          "status": "published",
+          "note": "Кэти уже фигурировала в споре о цене решения Дамблдора защищать Драко. Новый взгляд - пострадавшая, переживающая случайное ранение."
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Принц-полукровка, проклятие Кэти и лечение; мысли и сцена пробуждения - авторский вымысел",
+        "Кэти уже фигурировала в споре о цене решения Дамблдора защищать Драко. Новый взгляд - пострадавшая, переживающая случайное ранение."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G05",
+      "title": "Десять галлеонов за прошлую жизнь",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18103660046524436",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdLgaNFAWiY",
+          "status": "published",
+          "note": "О медальоне уже был пост, но о его владельце Амбридж. Новый ракурс посвящён нужде Меропы при продаже."
+        },
+        {
+          "id": "2026-10-13-1500-locket-fletcher-umbridge",
+          "kind": "editorial",
+          "url": null,
+          "status": "scheduled",
+          "note": "В журнале медальон уже запланирован как цепочка переходов. История Меропы не должна повторить эту структуру."
+        },
+        {
+          "id": "18147339193545401",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcd1-b3iHaF",
+          "status": "published",
+          "score": 0.313,
+          "event_overlap": 0.14,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17913115647264281",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc26DDGAE9p",
+          "status": "published",
+          "score": 0.313,
+          "event_overlap": 0.14,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18224801689323097",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Da-zAw5iCfy",
+          "status": "published",
+          "score": 0.22,
+          "event_overlap": 0,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Канон: продажа медальона; монолог Меропы вымышлен",
+        "О медальоне уже был пост, но о его владельце Амбридж. Новый ракурс посвящён нужде Меропы при продаже.",
+        "В журнале медальон уже запланирован как цепочка переходов. История Меропы не должна повторить эту структуру."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G06",
+      "title": "Брат палочки, которая уже убивала",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18496829506101355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+          "status": "published",
+          "score": 0.363,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18100693901590261",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DamSEddimvB",
+          "status": "published",
+          "score": 0.29,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18125853286675567",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbSl6XhCYlt",
+          "status": "published",
+          "score": 0.29,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Каноническая сцена первой палочки; мысли Олливандера - вымысел"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G07",
+      "title": "Боггарт учителя защиты",
+      "slot": "03:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17969400099169195",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeRB4DpClWI",
+          "status": "published",
+          "note": "Ранее объясняли природу боггартов в целом, новый рассказ о личном страхе учителя."
+        },
+        {
+          "id": "18114493298102851",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcQSH4QCezc",
+          "status": "published",
+          "score": 0.435,
+          "event_overlap": 0.5,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18641246971032767",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcVdDq1CCB1",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.5,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18385798864204017",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcWF_IdiDLG",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.5,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Каноническая форма боггарта Люпина; внутренние чувства - интерпретация",
+        "Ранее объясняли природу боггартов в целом, новый рассказ о личном страхе учителя."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G08",
+      "title": "Когда слова снова стали простыми",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17996995787796663",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcS27K2Al9Y",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18616302796042543",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcTqSUJCHaY",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18113503363973898",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcfFsfoErJ7",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Цветы для Элджернона; сверить эпизод и перевод перед постом"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G09",
+      "title": "Уйти от человека, которого любишь",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17914137741431315",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dbf_ruDCPP5",
+          "status": "published",
+          "score": 0.191,
+          "event_overlap": 0.13,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18108379094009103",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db8ToWhCGwg",
+          "status": "published",
+          "score": 0.191,
+          "event_overlap": 0.13,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18107963314841837",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcAFRkgCMD8",
+          "status": "published",
+          "score": 0.191,
+          "event_overlap": 0.13,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Джейн Эйр; требуется сверка конкретных сцен"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G10",
+      "title": "На похоронах не оказалось гостей",
+      "slot": "03:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17976528630070263",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbiqOYHCD7A",
+          "status": "published",
+          "score": 0.217,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Великий Гэтсби; сверить детали эпизода"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G11",
+      "title": "Больница, где маггловские швы признали опасной магией",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18184452538404715",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcPvy6yknHp",
+          "status": "published",
+          "score": 0.282,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18033376667909778",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DevgC08jXOF",
+          "status": "published",
+          "score": 0.282,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "2026-10-12-0300-fleur-bill-scars",
+          "kind": "editorial",
+          "url": "https://www.threads.com/@mirpottera/post/DeXd4tZgX1O",
+          "status": "published",
+          "score": 0.282,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Орден Феникса, лечение раны после Нагайны; проверить детали швов и причину неудачи"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G12",
+      "title": "Вечеринка, на которой еда должна протухнуть",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17932249074366851",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcecf3MkvQQ",
+          "status": "published",
+          "note": "С Ником уже было рассуждение о призраках после гибели Сириуса; здесь другой эпизод и жанр."
+        },
+        {
+          "id": "18075597314703139",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbcIz_mCIak",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18024840989855614",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcr9qyKjMs9",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17983209807073213",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdXF_RDCDPT",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Тайная комната; нужно сверить детали банкета",
+        "С Ником уже было рассуждение о призраках после гибели Сириуса; здесь другой эпизод и жанр."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G13",
+      "title": "В теплицах Хогвартса снова танцы",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18206385616368241",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdcPlGxgckF",
+          "status": "published",
+          "score": 0.217,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17975931087131206",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeNKrsqijVV",
+          "status": "published",
+          "score": 0.217,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18015539756984642",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeSNaISAvY7",
+          "status": "published",
+          "score": 0.217,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Тайная комната; проверить возрастные признаки мандрагор"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G14",
+      "title": "Приз за лучший рецепт достался шпаргалке",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18496829506101355",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeYUypOEwbE",
+          "status": "published",
+          "score": 0.403,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18009814946952340",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dcvt_q2jSNa",
+          "status": "published",
+          "score": 0.39,
+          "event_overlap": 0.5,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18173648203382335",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbV5OIDiIhE",
+          "status": "published",
+          "score": 0.338,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Принц-полукровка; не называть помощь списыванием канонически"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G15",
+      "title": "Собака, у которой хозяйка превратилась в воздушный шар",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17889884388671268",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dbvg0OoiItg",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18212731411352146",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcW0-0FCIsP",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18333807931256440",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc5e17okmlu",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Канон: Мардж раздулась; мысли собаки вымышлены"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G16",
+      "title": "Подпольное радио с паролем и юмором",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17962858053195651",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdYYYscCOrB",
+          "status": "published",
+          "score": 0.436,
+          "event_overlap": 0.57,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18057792662603776",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbiJjTQCMhX",
+          "status": "published",
+          "score": 0.371,
+          "event_overlap": 0.57,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18066432002494633",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db13EwXCLTh",
+          "status": "published",
+          "score": 0.371,
+          "event_overlap": 0.57,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Дары Смерти; проверить состав ведущих конкретного выпуска"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G17",
+      "title": "Самая опасная профессия на квиддиче: комментатор",
+      "slot": "11:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17902019613561331",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc41pSBE7dt",
+          "status": "published",
+          "note": "В архиве есть комментирование квиддича Полумной. Здесь Ли Джордан, преподавательский контроль и спорт."
+        },
+        {
+          "id": "18072011939416713",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbpchzGiPc7",
+          "status": "published",
+          "score": 0.39,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17983645464051977",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcOPqSzDCzh",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18101751887459670",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc03l6oCoyL",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Книги 1–3; дословные реплики не воспроизводить",
+        "В архиве есть комментирование квиддича Полумной. Здесь Ли Джордан, преподавательский контроль и спорт."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G18",
+      "title": "Все болезни, кроме одной",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18135045418611118",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbfbZyPiDdg",
+          "status": "published",
+          "score": 0.24,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Трое в лодке, не считая собаки; уточнить перевод шутки"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G19",
+      "title": "Приговоры Королевы, которые король тихо отменял",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17906934237310266",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dc0VQOpEe7U",
+          "status": "published",
+          "score": 0.217,
+          "event_overlap": 0.33,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Алиса в Стране чудес; точную механику помилований проверить"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G20",
+      "title": "Кот с билетом всё равно не пассажир",
+      "slot": "11:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18020716094910293",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcMGSwCCId4",
+          "status": "published",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17906002683548623",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdGJFY5gKdL",
+          "status": "published",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17962858053195651",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdYYYscCOrB",
+          "status": "published",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Мастер и Маргарита; факт и реплики обязательно сверить с главой"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G21",
+      "title": "Автор заклинания лечит его жертву",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17962858053195651",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdYYYscCOrB",
+          "status": "published",
+          "note": "Сектумсемпра ранее упоминалась в истории о ранении Джорджа. Новая сцена: Снегг лечит Драко."
+        },
+        {
+          "id": "18063529991760337",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbuvrdICJcC",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17966647431148724",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcrUeVTAT2n",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "2026-10-14-1500-elder-wand-draco-harry",
+          "kind": "editorial",
+          "url": null,
+          "status": "scheduled",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Принц-полукровка; атрибуцию создания заклинания сверить",
+        "Сектумсемпра ранее упоминалась в истории о ранении Джорджа. Новая сцена: Снегг лечит Драко."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G22",
+      "title": "Подсвечники, которых вор не украл",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18026922956899451",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdqZ8lgANhK",
+          "status": "published",
+          "score": 0.203,
+          "event_overlap": 0.14,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Виктор Гюго, Отверженные, том I, книга II, глава XII; эпизод сверён по английскому общественному достоянию на Wikisource, русское издание ещё не проверено"
+      ],
+      "canon_review": "SCENE_CONFIRMED_EXTERNAL_RUSSIAN_TEXT_PENDING",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G23",
+      "title": "Снитч открылся только перед смертью",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17965205451136687",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbPpJIMiJM0",
+          "status": "published",
+          "score": 0.344,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17974428626919416",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcZS59zjhfb",
+          "status": "published",
+          "score": 0.344,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18033376667909778",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DevgC08jXOF",
+          "status": "published",
+          "score": 0.344,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Дары Смерти; проверить точную фразу активации и свойства снитча"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G24",
+      "title": "Снегг привёл Гарри к мечу, но спас его Рон",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17902631118328842",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db-Qj2Wj5H2",
+          "status": "published",
+          "score": 0.325,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18120216271701902",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DapSVJcimCo",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18098744789007645",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db7rxGngOfE",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Дары Смерти; разграничить физическую и косвенную помощь"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G25",
+      "title": "Баллы за то, что не бросил чужую сестру",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "REVIEW_REQUIRED",
+      "algorithm_verdict": "REVIEW_REQUIRED",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18088445684561400",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Da9gWUfiITi",
+          "status": "published",
+          "note": "В архиве есть викторина о подводном дыхании, но не моральный выбор, связанный с сестрой Флёр."
+        },
+        {
+          "id": "18127695295756991",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdEUXGSgnsC",
+          "status": "published",
+          "score": 0.436,
+          "event_overlap": 0.57,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "17872795971549284",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbKwqQcjaGB",
+          "status": "published",
+          "score": 0.344,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18436930054132027",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcH6iw1j1rb",
+          "status": "published",
+          "score": 0.344,
+          "event_overlap": 0.43,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Кубок огня; проверить официальную оценку судей",
+        "В архиве есть викторина о подводном дыхании, но не моральный выбор, связанный с сестрой Флёр."
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G26",
+      "title": "Что Слизнорт пытался стереть из собственной памяти",
+      "slot": "15:00",
+      "universe": "Гарри Поттер",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18107875034132797",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdQAzLfjXYA",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18102269942165372",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DbFnEn6CUGt",
+          "status": "published",
+          "score": 0.24,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18121526620878716",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Db6gO73E57s",
+          "status": "published",
+          "score": 0.24,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Принц-полукровка; нужно сверить степень осведомлённости Слизнорта"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G27",
+      "title": "Бильбо отдал самое ценное врагам друга",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18616302796042543",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcTqSUJCHaY",
+          "status": "published",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18070777397534641",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdGW0TdEnrU",
+          "status": "published",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "2026-10-14-1500-elder-wand-draco-harry",
+          "kind": "editorial",
+          "url": null,
+          "status": "scheduled",
+          "score": 0.163,
+          "event_overlap": 0.25,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Хоббит; сверить последовательность переговоров и перевод"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G28",
+      "title": "Дом, который сгорел вместе с хозяйкой книг",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18184846126419210",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dd3fp_3k3OA",
+          "status": "published",
+          "score": 0.37,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18022069205873743",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DdHpNxoDdwY",
+          "status": "published",
+          "score": 0.24,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18113142665099434",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/Dd14rQQgce-",
+          "status": "published",
+          "score": 0.24,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "451° по Фаренгейту; сверить способ поджигания и авторские формулировки"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G29",
+      "title": "Добрый поступок, который не спас портрет",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "17958487599194205",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DcBXsM2k4jR",
+          "status": "published",
+          "score": 0.22,
+          "event_overlap": 0,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Портрет Дориана Грея; нужны сверка имен и последовательности"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    },
+    {
+      "id": "G30",
+      "title": "Франкенштейн уничтожил обещанную подругу",
+      "slot": "15:00",
+      "universe": "Book Threads",
+      "screen_status": "PRECHECKED_LOW_SIMILARITY",
+      "algorithm_verdict": "NEW_STORY",
+      "algorithm_confidence": "low",
+      "similar_refs": [
+        {
+          "id": "18104239348865519",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DaHnhfhiLd4",
+          "status": "published",
+          "score": 0.26,
+          "event_overlap": 0.4,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "18225723613333202",
+          "kind": "published",
+          "url": "https://www.threads.com/@mirpottera/post/DeU5ITjDpgw",
+          "status": "published",
+          "score": 0.195,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        },
+        {
+          "id": "rita-skeeter-real-world",
+          "kind": "editorial",
+          "url": "https://www.threads.com/@mirpottera/post/DeU5ITjDpgw",
+          "status": "published",
+          "score": 0.195,
+          "event_overlap": 0.2,
+          "note": "Алгоритмический кандидат; требует редакторского сравнения сюжета"
+        }
+      ],
+      "editorial_notes": [
+        "Сопоставлено с полным индексом опубликованных корневых постов и редакционным журналом; не гарантия отсутствия повторов.",
+        "Франкенштейн; проверить нюансы обещания и последствий"
+      ],
+      "canon_review": "PENDING_SOURCE_VERIFICATION",
+      "requires_human_approval": true
+    }
+  ]
+}

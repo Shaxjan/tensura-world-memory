@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "source": "Windsor.ai Threads",
+  "retrieval_date_utc": "2026-10-21",
+  "period_utc": [
+    "2026-10-21",
+    "2026-10-21"
+  ],
+  "read_fields": [
+    "post_id",
+    "post_timestamp",
+    "post_text",
+    "post_permalink",
+    "post_media_type",
+    "post_views"
+  ],
+  "count": 6,
+  "posts": [
+    {
+      "post_id": "18033376667909778",
+      "post_timestamp": "2026-10-21T04:00:50+0000",
+      "post_text": "Самое удивительное в летающем \"Форде\" Артура Уизли даже не то, что он умел летать.\nПосле аварии машина сбежала в Запретный лес, одичала и стала жить сама по себе. А потом вернулась, чтобы спасти Гарри и Рона от гигантских пауков.\nТо есть автомобиль уволился из семьи Уизли, ушёл жить в лес, но при первой серьёзной опасности всё равно приехал за детьми.\n\nОтветственности у этой машины было больше, чем у некоторых взрослых в Хогвартсе.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DevgC08jXOF",
+      "post_media_type": "TEXT_POST",
+      "post_views": 388
+    },
+    {
+      "post_id": "18642678358014244",
+      "post_timestamp": "2026-10-21T08:00:01+0000",
+      "post_text": "Джеймс, прости. Я обещал присмотреть за твоим сыном. А сегодня он сам бросился спасать меня.\nТы бы его видел. Пятнадцать лет, а уже готов сражаться со взрослыми Пожирателями смерти. Такой же упрямый, как ты. Я даже успел забыть, что передо мной не мой старый друг, а его ребёнок.\nДжеймс, я бы отдал жизнь за Гарри. Только сейчас я понял, как страшно видеть, что он готов сделать то же самое за меня.\n\nСириус Блэк\n\nМоя авторская версия последних мыслей Сириуса. В книге этого монолога нет.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Dev7atwCayJ",
+      "post_media_type": "TEXT_POST",
+      "post_views": 1066
+    },
+    {
+      "post_id": "18014477816973930",
+      "post_timestamp": "2026-10-21T08:59:42+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DewCP4WiEwG",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "18146030470567036",
+      "post_timestamp": "2026-10-21T13:07:13+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/Deweks1iJUA",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "18102221255164354",
+      "post_timestamp": "2026-10-21T13:12:06+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DewfIgRCEUA",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "17908392576329292",
+      "post_timestamp": "2026-10-21T14:00:36+0000",
+      "post_text": "Драко Малфой доигрался. Причём не только в фильме.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DewkrqeDTwF",
+      "post_media_type": "VIDEO",
+      "post_views": 154
+    }
+  ]
+}

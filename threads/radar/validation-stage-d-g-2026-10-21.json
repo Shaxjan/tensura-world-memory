@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "date": "2026-10-21",
+  "branch": "radar-stage-b-index-20261020",
+  "scope": "Source-level regression tests executed in V8 with compatibility stubs for node:test, assert/strict and fs; NOT a direct Node.js executable or local Python test run",
+  "suites": [
+    {
+      "suite": "semantic.test.js",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "suite": "reserve.test.js",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "suite": "snapshot_intake.test.js",
+      "passed": 10,
+      "failed": 0
+    }
+  ],
+  "total_tests": 35,
+  "passed": 35,
+  "failed": 0,
+  "checked_index": {
+    "author_root_posts": 447,
+    "editorial_cards": 40
+  },
+  "reserve": {
+    "version": 2,
+    "concepts": 30,
+    "harry_potter": 19,
+    "book_threads": 11,
+    "algorithm_low_similarity": 16,
+    "algorithm_review_required": 14,
+    "manual_review_notes": 14,
+    "rejected_old_G22": true,
+    "new_G22": "Подсвечники, которых вор не украл",
+    "all_editorial_status": "IDEA_NOT_APPROVED"
+  },
+  "intake": {
+    "read_only_default": true,
+    "local_write_requires_dedicated_branch": true,
+    "never_overwrite_snapshot": true,
+    "duplicate_and_changed_id_checks": true
+  },
+  "limitations": [
+    "The tests use a V8 harness with compatible Node-module substitutes. Direct node --test on a cloned repository remains unverified.",
+    "Direct Python tests and build on the edited repository remain unverified.",
+    "30 ideas are preliminary; full Russian-language primary-source canon verification is not complete.",
+    "The latest indexed Threads root post snapshot is from 21 October 2026.",
+    "Recent author replies and continuation chains after 12 October are not fully reconciled.",
+    "No real-time or scheduled autonomous import from Windsor.ai has been implemented."
+  ],
+  "release_gate": "DRAFT_NOT_MERGED"
+}

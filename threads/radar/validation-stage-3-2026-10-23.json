@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "stage": "3_of_4_technical_validation",
+  "date_krasnoyarsk": "2026-10-23",
+  "status": "PARTIAL_PASS_NATIVE_NODE_AND_FULL_CORPUS_REBUILD_OPEN",
+  "scope": "Draft PR #33 only; no merge, Threads publication, Chrome mass operation, game repo or production changes",
+  "source_branch": "radar-stage-b-index-20261020",
+  "archive": {
+    "verified_historical_roots": 414,
+    "snapshot_rows_total": 53,
+    "snapshot_unique_rows": 50,
+    "reposts_excluded": 10,
+    "new_author_roots": 40,
+    "current_author_roots": 454,
+    "journal_entries": 40,
+    "probable_author_continuations": 16,
+    "other_own_replies_excluded": 14
+  },
+  "execution": [
+    {
+      "name": "Direct Python unittest discovery: continuation, core indexing and snapshot consistency",
+      "mode": "Real Python 3.13.5 unittest discover against local byte-exact copies of five GitHub source files, testing with temporary synthetic fixtures",
+      "passed": 22,
+      "failed": 0,
+      "suites": {
+        "test_continuations.py": 8,
+        "test_radar.py": 11,
+        "test_snapshot_consistency.py": 3
+      },
+      "source_blobs_verified": {
+        "continuations.py": "46567e0dc6cce4277d668bf0291a0a620338ae75",
+        "test_continuations.py": "01403a96b74271a332cc507d2e6bbb0637cbff0c",
+        "radar.py": "6d141c3cadd4f65dbc4230c4ab43350cd213ead0",
+        "test_radar.py": "e1bd3fb6814a31b09d9d9bf7af2c9116631037d4",
+        "test_snapshot_consistency.py": "bcaea8dcba6dc4adbfb295f15c6120241ee7d3f1"
+      },
+      "includes": [
+        "safe continuation classification",
+        "source text preservation",
+        "deterministic rebuild on synthetic data",
+        "journal statuses",
+        "FTS scoring among 360 candidate posts",
+        "snapshot conflict rejection",
+        "manifest notes preservation on no-op build",
+        "manifest notes refresh when source date changes"
+      ],
+      "limit": "Executed genuine Python on synthetic fixtures; full 454-root Python rebuild from the entire raw repository remains unrun."
+    },
+    {
+      "name": "Prior Javascript suites: semantic.test.js, reserve.test.js, snapshot_intake.test.js",
+      "mode": "V8 with stubbed Node.js built-ins using actual full 454-root index and GitHub code, earlier stage-3 execution",
+      "passed": 35,
+      "failed": 0,
+      "breakdown": {
+        "semantic": 14,
+        "historical_reserve": 11,
+        "snapshot_intake": 10
+      },
+      "limit": "Not a native node --test run; executed before two view-only corrections"
+    },
+    {
+      "name": "Current reserve Javascript suite: reserve-current.test.js",
+      "mode": "V8 with stubbed Node.js built-ins, actual updated 454-root index and all relevant source files",
+      "passed": 14,
+      "failed": 0,
+      "limit": "Not a native node --test run"
+    },
+    {
+      "name": "Independent archive reconstruction and comparison",
+      "mode": "In-memory JavaScript implementation of the documented Python build transformation, using original 414-root archive + 5 Windsor snapshots + 16 continuations + editorial journal",
+      "reconstructed_roots": 454,
+      "root_mismatches": 0,
+      "reconstructed_editorial_entries": 40,
+      "editorial_mismatches": 0,
+      "unchanged_snapshot_immutables": true,
+      "manifest_counts_match": true,
+      "limit": "Independent reconstruction validates output data but is not direct execution of radar.py build or verify"
+    },
+    {
+      "name": "Integrity of original historical posts",
+      "mode": "Comparison to GitHub original verified archive and current index",
+      "historical_roots": 414,
+      "modified_original_texts": 0,
+      "modified_search_texts": 0,
+      "modified_urls": 0,
+      "modified_part_counts": 0
+    },
+    {
+      "name": "Updated metrics replay",
+      "mode": "Latest immutable Windsor snapshot wins; derived indexed metrics only",
+      "changed": [
+        {
+          "post_id": "18033376667909778",
+          "prior_views": 271,
+          "corrected_views": 388
+        },
+        {
+          "post_id": "18642678358014244",
+          "prior_views": 460,
+          "corrected_views": 1066
+        }
+      ],
+      "unchanged_new_post_texts": 40,
+      "unchanged_historical_post_texts": 414
+    },
+    {
+      "name": "FTS search cutoff fix",
+      "mode": "Code change plus real Python regression test",
+      "result": "PASS",
+      "change": "Removed pre-scoring SQL LIMIT 350 from FTS5 query to prevent strong late-indexed matches from being omitted",
+      "test": "test_large_fts_candidate_set_does_not_hide_strong_match",
+      "tested_candidates": 360,
+      "notes": "Final user-facing result limit remains enforced after relevance scoring."
+    },
+    {
+      "name": "Manifest rebuild stability fix",
+      "mode": "Code change plus 2 directly executed Python regression tests",
+      "result": "PASS",
+      "details": "Reviewed limitations survive unchanged-source build; limitations refresh when retrieval date changes. Reviewed current manifest serialization matches current index representation."
+    }
+  ],
+  "regression_source": "threads/radar/reserve-current.test.js",
+  "remaining_gates": [
+    {
+      "gate": "native_node_test_full_suite",
+      "status": "NOT_RUN",
+      "command": "node --test threads/radar/semantic.test.js threads/radar/reserve.test.js threads/radar/snapshot_intake.test.js threads/radar/reserve-current.test.js",
+      "why": "No network/DNS access from isolated runtime to fetch full GitHub repository tree. No GitHub Actions jobs were started."
+    },
+    {
+      "gate": "native_python_full_index_rebuild_and_verify",
+      "status": "NOT_RUN",
+      "command": "python threads/radar/radar.py build && python threads/radar/radar.py verify",
+      "why": "Full writable clone not present in isolated Python runtime; independent output reconstruction completed instead. Never use main as a rebuild target."
+    },
+    {
+      "gate": "source_primary_book_check",
+      "status": "NOT_DONE",
+      "why": "Canonical Russian/Росмэн source checks remain required for 30 ideas"
+    },
+    {
+      "gate": "fresh_data_after_oct23",
+      "status": "NOT_YET_AVAILABLE",
+      "why": "Latest indexed Threads snapshot is 23 October 2026; manual sync required before future originality recommendations"
+    }
+  ],
+  "editorial_semantics": {
+    "candidates": 30,
+    "low_similarity_not_certified": 15,
+    "review_required": 15,
+    "automatically_approved": 0
+  },
+  "conclusion": "Stage-3 implementation and all executable tests passed, with source hashes verified. Native Node.js suite and native full-corpus Python rebuild still require separate environment; independent JS reconstruction of all 454 roots and 40 journal entries found zero mismatches. Do not claim unconditional release certification.",
+  "native_runtime_summary": {
+    "python_3_13_full_suite_passed": 22,
+    "python_3_13_full_suite_failed": 0,
+    "isolated_V8_suite_passed": 49,
+    "isolated_V8_suite_failed": 0,
+    "real_Node_suite_executed": false,
+    "full_454_root_Python_build_executed": false
+  }
+}
