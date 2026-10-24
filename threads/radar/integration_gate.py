@@ -29,6 +29,7 @@ NODE_TESTS = (
     "semantic-safety.test.js",
     "snapshot-safety.test.js",
     "reserve-freshness.test.js",
+    "inbox_check.test.js",
 )
 
 
