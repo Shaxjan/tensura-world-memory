@@ -30,6 +30,7 @@ NODE_TESTS = (
     "snapshot-safety.test.js",
     "reserve-freshness.test.js",
     "inbox_check.test.js",
+    "watch_check.test.js",
 )
 
 
