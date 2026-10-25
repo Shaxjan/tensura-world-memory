@@ -5,6 +5,7 @@ on:
       - radar-stage-b-index-20261020
     paths:
       - ".github/workflows/radar-stage7-regression.yml"
+      - "threads/radar/**"
   workflow_dispatch:
 permissions:
   contents: read
