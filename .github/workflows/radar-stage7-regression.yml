@@ -25,4 +25,11 @@ jobs:
       - name: Native rebuild and complete Python Node regression suite
         run: python -B threads/radar/integration_gate.py --repo-root .
       - name: Validate active R5 report against current 459 roots
+      - name: Diagnose failing assertions if native gate fails
+        if: failure()
+        shell: bash
+        run: |
+          node --test threads/radar/*.test.js > /tmp/radar-tap.log 2>&1 || true
+          grep -A 30 '^not ok ' /tmp/radar-tap.log || true
+          tail -n 10 /tmp/radar-tap.log
         run: node threads/radar/reserve_check.js 2026-10-25 > /tmp/r5-report.json
