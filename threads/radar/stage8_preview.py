@@ -137,6 +137,18 @@ def preview(root: Path = ROOT) -> dict:
             or checked_index["posts"] != counts["total_author_roots"]
             or new_ids - old_ids != pending or old_ids - new_ids):
             raise ValueError("Candidate rebuild lost, replaced or duplicated published IDs")
+        # Rebuild the candidate twice and require byte-identical outputs.
+        candidate_index = scratch / "threads/radar/index"
+        candidate_hashes = {
+            name: hashlib.sha256((candidate_index / name).read_bytes()).hexdigest()
+            for name in NAMES
+        }
+        second = build(scratch)
+        if second != counts or any(
+            hashlib.sha256((candidate_index / name).read_bytes()).hexdigest() != digest
+            for name, digest in candidate_hashes.items()
+        ):
+            raise ValueError("Candidate index is not reproducible")
         # Recheck source checkout: the rehearsal is never permitted to write there.
         if any(hashlib.sha256((index / name).read_bytes()).hexdigest() != digest
                for name, digest in old_index_hashes.items()):
@@ -145,6 +157,7 @@ def preview(root: Path = ROOT) -> dict:
             "result": "CANDIDATE_PASS", "baseline_roots": len(baseline),
             "candidate_roots": len(updated), "pending_ids": sorted(pending),
             "candidate_snapshots": promoted,
+            "candidate_index_sha256": candidate_hashes, "rebuilds": 2,
             "source_checkout_modified": False, "index_sha256": old_index_hashes,
             "source_completeness_unverified": True,
             "editorial_approval_granted": False,
