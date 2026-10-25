@@ -6,6 +6,7 @@ on:
       - ".github/workflows/radar-stage8-460-simulation.yml"
       - "threads/radar/stage8_upgrade.py"
       - "threads/radar/stage8_rescreen.js"
+      - "threads/radar/test_stage8_preview.py"
 permissions:
   contents: read
 jobs:
