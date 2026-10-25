@@ -29,3 +29,5 @@ jobs:
           git diff --cached --check
           git commit -m "radar: save provisional R5 screening against 459 posts"
           git push origin HEAD:radar-stage-b-index-20261020
+
+# Rebuild candidate neighbor references after 2026-10-25 editorial crosscheck.
