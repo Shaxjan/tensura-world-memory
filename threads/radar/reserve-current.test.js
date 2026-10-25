@@ -133,7 +133,7 @@ test("all current new-root metrics follow the latest immutable Windsor snapshot"
   assert.equal(doc.count,doc.posts.length);
   return {file,doc};
  }).sort((a,b)=>a.doc.retrieval_date_utc.localeCompare(b.doc.retrieval_date_utc)
-         ||a.file.localeCompare(b.file));
+         ||(a.file<b.file?-1:a.file>b.file?1:0));
  const latest=new Map(),stable=new Map();
  for(const {doc} of ordered){
   for(const p of doc.posts){
