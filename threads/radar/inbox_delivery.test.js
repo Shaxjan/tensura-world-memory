@@ -5,7 +5,8 @@ const fs=require("node:fs");
 const path=require("node:path");
 const {planDelivery}=require("./inbox_delivery.js");
 const inbox=JSON.parse(fs.readFileSync(path.join(__dirname,"inbox","windsor-2026-10-24-retrieved.json"),"utf8"));
-const index=fs.readFileSync(path.join(__dirname,"index","posts.jsonl"),"utf8").trim().split(/\r?\n/).map(JSON.parse);
+const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const index=legacyIndex;
 const copy=x=>JSON.parse(JSON.stringify(x));
 const clock=new Date("2026-10-24T05:30:00Z");
 const live=()=>({status:"done",total_rows:inbox.count,data:inbox.posts.map(p=>({...p,data_fetched_at:inbox.data_fetched_at_utc}))});
@@ -78,4 +79,11 @@ test("future-dated publication cannot be delivered",()=>{
  const source=addNew(live());
  source.data.find(x=>x.post_id==="18888888888888888").post_timestamp="2026-10-24T07:00:00+0000";
  assert.throws(()=>planDelivery(source,index,[inbox],{now:clock}),/after provider fetch/);
+});
+
+
+test("already promoted roots cannot create another inbox delivery",()=>{
+ const p=planDelivery(live(),currentIndex,[],{now:clock});
+ assert.equal(p.status,"NO_NEW_ROOTS");
+ assert.equal(p.save_allowed,false);
 });
