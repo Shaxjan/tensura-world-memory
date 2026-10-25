@@ -83,6 +83,39 @@ def run_suite(command: list[str], root: Path, timeout: int = 180) -> dict:
     }
 
 
+
+def validate_inventory(inventory: dict, rebuilt_roots: int) -> dict:
+    """Reject contradictory or malformed native inventory reports."""
+    if not isinstance(inventory, dict):
+        raise ValueError("Native inbox inventory report must be an object")
+    keys = ("baseline_roots", "unique_pending_roots",
+            "expected_roots_after_verified_promotion", "distinct_repost_facades")
+    if any(type(inventory.get(k)) is not int or inventory[k] < 0 for k in keys):
+        raise ValueError("Native inbox inventory counts must be nonnegative integers")
+    baseline = inventory["baseline_roots"]
+    pending = inventory["unique_pending_roots"]
+    roots = inventory.get("pending_roots")
+    if (inventory.get("status") != "PENDING_NATIVE_ACCEPTANCE"
+        or inventory.get("conflicts") != []
+        or baseline != rebuilt_roots
+        or inventory["expected_roots_after_verified_promotion"] != baseline + pending
+        or not isinstance(roots, list) or len(roots) != pending
+        or inventory.get("index_modified") is not False
+        or inventory.get("source_promoted") is not False
+        or inventory.get("source_completeness_unverified") is not True):
+        raise ValueError("Native cumulative inbox inventory failed safe acceptance checks")
+    ids = [r.get("post_id") if isinstance(r, dict) else None for r in roots]
+    if any(not isinstance(i, str) or not i.isdigit() for i in ids) or len(set(ids)) != len(ids):
+        raise ValueError("Native cumulative inbox inventory has duplicate or invalid root IDs")
+    return {
+        "status": inventory["status"],
+        "baseline_roots": baseline,
+        "pending_roots": pending,
+        "reposts": inventory["distinct_repost_facades"],
+        "conflicts": 0,
+        "index_modified": False,
+    }
+
 def execute(root: Path, *, run_tests: bool = True) -> dict:
     if not root.is_dir():
         raise NotADirectoryError(str(root))
@@ -139,23 +172,7 @@ def execute(root: Path, *, run_tests: bool = True) -> dict:
         if completed.returncode:
             raise RuntimeError("Native inbox inventory failed: " + completed.stderr[-3000:])
         inventory = json.loads(completed.stdout)
-        if (inventory.get("status") != "PENDING_NATIVE_ACCEPTANCE"
-            or inventory.get("conflicts") != []
-            or inventory.get("baseline_roots") != first["total_author_roots"]
-            or inventory.get("expected_roots_after_verified_promotion")
-               != inventory.get("baseline_roots", 0) + inventory.get("unique_pending_roots", -1)
-            or inventory.get("index_modified") is not False
-            or inventory.get("source_promoted") is not False
-            or inventory.get("source_completeness_unverified") is not True):
-            raise ValueError("Native cumulative inbox inventory failed safe acceptance checks")
-        output["native_inbox_inventory"] = {
-            "status": inventory["status"],
-            "baseline_roots": inventory["baseline_roots"],
-            "pending_roots": inventory["unique_pending_roots"],
-            "reposts": inventory["distinct_repost_facades"],
-            "conflicts": 0,
-            "index_modified": False,
-        }
+        output["native_inbox_inventory"] = validate_inventory(inventory, first["total_author_roots"])
         output["native_test_suites"].append(run_suite(
             [sys.executable, "-B", "-m", "unittest", "discover",
              "-s", "threads/radar", "-p", "test_*.py"], root,
