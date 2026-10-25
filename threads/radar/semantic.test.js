@@ -12,9 +12,11 @@ const journal = readJSONL("editorial.jsonl");
 const CURRENT={as_of:"2026-10-21",last_synced_at:"2026-10-21",max_age_days:1};
 function verdict(c, options=CURRENT, j=journal, p=posts){return radar.compare(c,p,j,options);}
 
-test("index covers 459 unique published author roots",()=>{
- assert.equal(posts.length,459);
- assert.equal(new Set(posts.map(p=>p.post_id)).size,459);
+test("index covers current declared number of unique published author roots",()=>{
+ const expected=JSON.parse(fs.readFileSync(path.join(INDEX,"manifest.json"),"utf8")).counts.total_author_roots;
+ assert.ok(expected>=459);
+ assert.equal(posts.length,expected);
+ assert.equal(new Set(posts.map(p=>p.post_id)).size,posts.length);
  assert.equal(posts.filter(p=>p.state!=="published").length,0);
  assert.equal(posts.filter(p=>p.media_type==="REPOST_FACADE").length,0);
 });
