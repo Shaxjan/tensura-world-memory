@@ -3,7 +3,7 @@
   "account": "mirpottera",
   "stage": "6_of_8",
   "date_krasnoyarsk": "2026-10-25",
-  "status": "FIRST_IMMUTABLE_INBOX_GITHUB_WRITE_VERIFIED__FULL_SYNC_PENDING",
+  "status": "FIRST_SCHEDULED_WINDSOR_TO_GITHUB_INBOX_DELIVERY_CONFIRMED__INDEX_SYNC_PENDING",
   "observed_delivery": {
     "file": "threads/radar/inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json",
     "github_commit": "2fcffe79e95800fc31eed1886cf20f2542e00b44",
@@ -18,7 +18,11 @@
       "2026-10-24"
     ],
     "verified_no_main_write": true,
-    "note": "GitHub confirms the draft-branch inbox file was created shortly after the Windsor read. No external scheduler execution logs were reviewed; this establishes repository persistence, not complete end-to-end autonomous indexing."
+    "note": "Scheduled task metadata shows last_run_time 2026-10-25T00:37:35.303818Z, 22 seconds after GitHub created the immutable inbox file at 00:37:13Z and ~2 minutes after Windsor.ai fetch 00:35:29Z. First scheduled inbox delivery therefore CONFIRMED by run metadata + persisted commit. Complete internal execution logs were not inspected; this does not establish end-to-end archive sync.",
+    "scheduled_task_last_run_time_utc": "2026-10-25T00:37:35.303818Z",
+    "scheduled_task_enabled": true,
+    "scheduled_task_timezone": "Asia/Krasnoyarsk",
+    "scheduled_run_correlated_with_commit": true
   },
   "comparison": {
     "indexed_author_roots_before": 454,
