@@ -116,8 +116,7 @@ function readLines(p){
  const contents=fs.readFileSync(p,"utf8").trim();
  return contents?contents.split(/\r?\n/).map(JSON.parse):[];
 }
-function main(){
- const base=__dirname;
+function main(base=__dirname){
  const index=readLines(path.join(base,"index","posts.jsonl"));
  const dir=path.join(base,"inbox");
  const boxes=fs.readdirSync(dir).filter(x=>/^windsor-.*-retrieved\.json$/.test(x)).map(name=>({
@@ -127,5 +126,5 @@ function main(){
  console.log(JSON.stringify(result,null,2));
  if(result.conflicts.length)process.exitCode=2;
 }
-if(require.main===module){try{main()}catch(e){console.error("Radar inbox inventory:",e.message);process.exitCode=1}}
+if(require.main===module){try{main(process.argv[2]?path.resolve(process.argv[2]):__dirname)}catch(e){console.error("Radar inbox inventory:",e.message);process.exitCode=1}}
 module.exports={inventory,parseSourceTimestamp,localKrasnoyarsk,main};
