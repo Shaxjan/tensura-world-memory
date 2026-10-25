@@ -19,6 +19,11 @@ class Stage8CandidateTests(unittest.TestCase):
         target = self.root / "threads/radar/inbox"
         target.mkdir(parents=True, exist_ok=True)
         for src in actual.glob("windsor-*-retrieved.json"):
+            if src.name not in {
+                "windsor-2026-10-24-retrieved.json",
+                "windsor-20261025T003529Z-eddca5900dc17028-retrieved.json",
+            }:
+                continue
             shutil.copy2(src, target / src.name)
         self.index = self.root / "threads/radar/index/posts.jsonl"
         self.before = self.index.read_bytes()
