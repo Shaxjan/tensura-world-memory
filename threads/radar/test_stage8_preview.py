@@ -18,13 +18,19 @@ class Stage8CandidateTests(unittest.TestCase):
         actual = ROOT / "threads/radar/inbox"
         target = self.root / "threads/radar/inbox"
         target.mkdir(parents=True, exist_ok=True)
-        for src in actual.glob("windsor-*-retrieved.json"):
-            if src.name not in {
-                "windsor-2026-10-24-retrieved.json",
-                "windsor-20261025T003529Z-eddca5900dc17028-retrieved.json",
-            }:
-                continue
-            shutil.copy2(src, target / src.name)
+        # Copy precisely the immutable inbox sources referenced by all promoted
+        # snapshots. Ignore future *pending* inbox data while testing an
+        # already-settled baseline, regardless of its root count.
+        promoted = set()
+        for snap in (self.root / "threads/radar/snapshots").glob("windsor-*.json"):
+            name = json.loads(snap.read_text(encoding="utf-8")).get("source_inbox_file")
+            if name:
+                promoted.add(name)
+        for name in sorted(promoted):
+            source = actual / name
+            if not source.is_file():
+                raise FileNotFoundError("Missing promoted test fixture: " + name)
+            shutil.copy2(source, target / name)
         self.index = self.root / "threads/radar/index/posts.jsonl"
         self.before = self.index.read_bytes()
         self.count = len(self.before.splitlines())
