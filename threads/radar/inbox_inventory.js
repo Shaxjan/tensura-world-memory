@@ -72,13 +72,15 @@ function inventory(index,boxes){
   snapshots.push({filename:name,source_rows:rows.length,retrieved_at_utc:fetched.toISOString()});
   for(const p of rows){
    const id=p.post_id;
-   if(p.post_media_type==="REPOST_FACADE"){reposts.add(id);continue}
    const was=seen.get(id);
    if(was){
     const diff=IMMUTABLE.filter(k=>String(was.row[k]??"")!==String(p[k]??""));
     if(diff.length)conflicts.push({post_id:id,fields:diff,previous_source:was.source,new_source:name});
    }else{
     seen.set(id,{row:p,source:name});
+   }
+   if(p.post_media_type==="REPOST_FACADE"){
+    reposts.add(id);continue;
    }
    if(!indexIDs.has(id)){
     const existing=pending.get(id);
