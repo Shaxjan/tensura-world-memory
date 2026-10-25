@@ -66,7 +66,7 @@ def preserved_source_pairs(radar: Path, inboxes: list[Path]) -> set[str]:
     return seen
 
 
-def preview(root: Path = ROOT) -> dict:
+def preview(root: Path = ROOT, *, prepared_dir: Path | None = None) -> dict:
     root = root.resolve()
     radar = root / "threads/radar"
     index = radar / "index"
@@ -149,6 +149,23 @@ def preview(root: Path = ROOT) -> dict:
             for name, digest in candidate_hashes.items()
         ):
             raise ValueError("Candidate index is not reproducible")
+        # Stage validated candidate files OUTSIDE the source repository only.
+        # The caller tests the candidate checkout before committing anything.
+        if prepared_dir is not None:
+            destination = prepared_dir.resolve()
+            if destination == root or root in destination.parents:
+                raise ValueError("Candidate output may not be inside the source checkout")
+            if destination.exists() and any(destination.iterdir()):
+                raise ValueError("Candidate output must be empty")
+            destination.mkdir(parents=True, exist_ok=True)
+            for snapname in promoted:
+                staged = destination / "threads/radar/snapshots" / snapname
+                staged.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(out / snapname, staged)
+            for name in NAMES:
+                staged = destination / "threads/radar/index" / name
+                staged.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(candidate_index / name, staged)
         # Recheck source checkout: the rehearsal is never permitted to write there.
         if any(hashlib.sha256((index / name).read_bytes()).hexdigest() != digest
                for name, digest in old_index_hashes.items()):
