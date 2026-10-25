@@ -12,7 +12,7 @@ const reserve=load("reserve/ideas-2026-10-23-r4.json");
 const screening=load("reserve/screening-2026-10-23-r4.json");
 const manifest=load("index/manifest.json");
 const replies=load("snapshots/author-continuations-2026-10-23.json");
-const {legacyIndex}=require("./test_index_fixtures.js");
+const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
 // R4 is a frozen 454-root historical screening, tested against its original corpus.
 const posts=legacyIndex;
 const journal=lines("index/editorial.jsonl");
@@ -131,7 +131,9 @@ test("all stored new-root metrics use the latest immutable Windsor snapshot",()=
   "windsor-2026-10-21.json",
   "windsor-2026-10-21_rev2.json",
   "windsor-2026-10-22.json",
-  "windsor-2026-10-23.json"
+  "windsor-2026-10-23.json",
+  "windsor-promoted-0-windsor-2026-10-24-retrieved.json",
+  "windsor-promoted-1-windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"
  ];
  const latest=new Map();
  const stable=new Map();
@@ -147,11 +149,12 @@ test("all stored new-root metrics use the latest immutable Windsor snapshot",()=
    latest.set(p.post_id,p);
   }
  }
- assert.equal(latest.size,50);
+ assert.equal(latest.size,55);
  assert.equal([...latest.values()].filter(p=>p.post_media_type==="REPOST_FACADE").length,10);
+ const byLatestPost=new Map(currentIndex.map(p=>[p.post_id,p]));
  for(const p of latest.values()){
   if(p.post_media_type==="REPOST_FACADE")continue;
-  const row=byPost.get(p.post_id);
+  const row=byLatestPost.get(p.post_id);
   assert.ok(row);
   assert.equal(row.original_text,p.post_text);
   assert.equal(row.url,p.post_permalink);
