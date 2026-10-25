@@ -7,7 +7,7 @@ const {inventory}=require("./inbox_inventory.js");
 
 const root=__dirname;
 const raw=rel=>fs.readFileSync(path.join(root,rel),"utf8");
-const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const {legacyIndex,r5Index,currentIndex}=require("./test_index_fixtures.js");
 const index=legacyIndex;
 const first=JSON.parse(raw("inbox/windsor-2026-10-24-retrieved.json"));
 const next=JSON.parse(raw("inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"));
@@ -101,7 +101,7 @@ test("known root cannot be changed in inbox without conflict",()=>{
 
 
 test("post-promotion inventory has no pending roots in 459-root index",()=>{
- const r=inventory(currentIndex,boxes());
+ const r=inventory(r5Index,boxes());
  assert.equal(r.status,"PENDING_NATIVE_ACCEPTANCE");
  assert.equal(r.baseline_roots,459);
  assert.equal(r.unique_pending_roots,0);
