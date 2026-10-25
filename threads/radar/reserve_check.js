@@ -124,7 +124,8 @@ function evaluate(data, posts, journal, opts={}){
  return {schema_version:1,account:"mirpottera",checked_at:asOf,snapshot_date:data.source_index_date,compared_author_posts:posts.length,compared_editorial_cards:journal.length,ideas_count:out.length,distrib:dist,summary:out.reduce((o,c)=>(o[c.screen_status]=(o[c.screen_status]||0)+1,o),{}),exclusions:EXCLUDED,ideas:out};
 }
 if(require.main===module){
- const doc=readJSON(path.join(ROOT,"reserve","ideas-2026-10-25-r5.json"));
+ const automated=path.join(ROOT,"reserve","automated-current-ideas.json");
+ const doc=readJSON(fs.existsSync(automated)?automated:path.join(ROOT,"reserve","ideas-2026-10-25-r5.json"));
  const posts=readJSONL(path.join(ROOT,"index","posts.jsonl"));
  const journal=readJSONL(path.join(ROOT,"index","editorial.jsonl"));
  const report=evaluate(doc,posts,journal,{as_of:process.argv[2]||krasnoyarskToday()});
