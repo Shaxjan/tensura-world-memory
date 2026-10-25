@@ -1,0 +1,28 @@
+name: Threads Radar Stage 7 Native Regression
+on:
+  push:
+    branches:
+      - radar-stage-b-index-20261020
+    paths:
+      - ".github/workflows/radar-stage7-regression.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Native rebuild and complete Python Node regression suite
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Validate active R5 report against current 459 roots
+        run: node threads/radar/reserve_check.js 2026-10-25 > /tmp/r5-report.json
