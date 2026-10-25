@@ -57,7 +57,8 @@ test("refuses to overwrite already staged current reserve",()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),"mirpottera-radar-no-overwrite-"));
  try{
   const dest=path.join(root,"output");
-  run(base,dest,"2026-10-25");
-  assert.throws(()=>run(base,dest,"2026-10-25"),/Refusing to overwrite/);
+  const date=readJSON(path.join(base,"threads/radar/index/manifest.json")).generated_date_utc;
+  run(base,dest,date);
+  assert.throws(()=>run(base,dest,date),/Refusing to overwrite/);
  }finally{fs.rmSync(root,{recursive:true,force:true})}
 });
