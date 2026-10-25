@@ -81,42 +81,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
-          import json, subprocess
-          from pathlib import Path
-          report=json.loads(Path('/tmp/radar-stage8-action.json').read_text())
-          snapshots=report['snapshots']
-          if len(snapshots)!=len(set(snapshots)) or not snapshots:
-              raise SystemExit('Unsafe snapshot list')
-          allowed={
-            'threads/radar/index/posts.jsonl',
-            'threads/radar/index/editorial.jsonl',
-            'threads/radar/index/manifest.json',
-            'threads/radar/reserve/automated-current-ideas.json',
-            'threads/radar/reserve/automated-current-screening.json',
-          }
-          for name in snapshots:
-              if not name.startswith('windsor-promoted-') or '/' in name or '..' in name:
-                  raise SystemExit('Unsafe source snapshot path')
-              allowed.add('threads/radar/snapshots/'+name)
-          subprocess.run(['git','add','--',*sorted(allowed)],check=True)
-          staged=set(subprocess.check_output(
-              ['git','diff','--cached','--name-only'],text=True).splitlines())
-          if (not staged or not staged<=allowed or
-              'threads/radar/index/posts.jsonl' not in staged or
-              'threads/radar/index/manifest.json' not in staged or
-              not all('threads/radar/snapshots/'+n in staged for n in snapshots) or
-              'threads/radar/reserve/automated-current-screening.json' not in staged):
-              raise SystemExit('Unexpected Git changes; no commit')
-          unstaged=subprocess.check_output(['git','diff','--name-only'],text=True).strip()
-          if unstaged:
-              raise SystemExit('Unstaged tracked modifications; no commit')
-          untracked=set(subprocess.check_output(
-              ['git','ls-files','--others','--exclude-standard'],text=True).splitlines())
-          if untracked:
-              raise SystemExit('Untracked files outside the intended commit: '+str(sorted(untracked)))
-          print('Validated files:', sorted(staged))
-          PY
+          python -B threads/radar/stage8_commit_guard.py /tmp/radar-stage8-action.json
           git diff --cached --check
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
