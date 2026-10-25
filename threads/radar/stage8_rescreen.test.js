@@ -17,7 +17,8 @@ function tempRun(transform){
    fs.copyFileSync(path.join(__dirname,"index",name),path.join(idx,name));
   if(transform)transform(idx);
   const dest=path.join(root,"output");
-  const result=run(root,dest,"2026-10-25");
+  const day=readJSON(path.join(idx,"manifest.json")).generated_date_utc;
+  const result=run(root,dest,day);
   return {result,ideas:readJSON(path.join(dest,"automated-current-ideas.json")),
    report:readJSON(path.join(dest,"automated-current-screening.json"))};
  }finally{fs.rmSync(root,{recursive:true,force:true})}
