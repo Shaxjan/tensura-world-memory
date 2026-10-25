@@ -2,7 +2,7 @@
 import json
 import unittest
 
-from integration_gate import execute
+from integration_gate import execute, validate_inventory
 from radar import build
 from test_radar import RadarStageBTests
 
@@ -44,6 +44,50 @@ class IntegrationGateTests(unittest.TestCase):
         (self.fixture.root / "threads" / "full-posts-verified.json").unlink()
         with self.assertRaises(FileNotFoundError):
             execute(self.fixture.root, run_tests=False)
+
+
+class NativeInventoryContractTests(unittest.TestCase):
+    def sample(self):
+        return {
+            "status": "PENDING_NATIVE_ACCEPTANCE",
+            "conflicts": [],
+            "baseline_roots": 454,
+            "unique_pending_roots": 2,
+            "expected_roots_after_verified_promotion": 456,
+            "distinct_repost_facades": 1,
+            "pending_roots": [{"post_id": "18058181561570070"},
+                              {"post_id": "17899242612398487"}],
+            "index_modified": False, "source_promoted": False,
+            "source_completeness_unverified": True,
+        }
+
+    def test_native_inventory_contract_accepts_consistent_report(self):
+        self.assertEqual(validate_inventory(self.sample(), 454)["pending_roots"], 2)
+
+    def test_native_inventory_contract_rejects_boolean_and_fractional_counts(self):
+        for value in (True, 2.5, -1, "2"):
+            with self.subTest(value=value):
+                report = self.sample()
+                report["unique_pending_roots"] = value
+                with self.assertRaises(ValueError):
+                    validate_inventory(report, 454)
+
+    def test_native_inventory_contract_rejects_missing_or_duplicate_roots(self):
+        for roots in ([], [{"post_id": "18058181561570070"}] * 2):
+            with self.subTest(roots=roots):
+                report = self.sample()
+                report["pending_roots"] = roots
+                with self.assertRaises(ValueError):
+                    validate_inventory(report, 454)
+
+    def test_native_inventory_contract_rejects_mismatched_baseline_or_writes(self):
+        for key, value in (("baseline_roots", 453), ("index_modified", True),
+                           ("source_promoted", True), ("conflicts", [{"post_id": "1"}])):
+            with self.subTest(key=key):
+                report = self.sample()
+                report[key] = value
+                with self.assertRaises(ValueError):
+                    validate_inventory(report, 454)
 
 
 if __name__ == "__main__":
