@@ -6,7 +6,7 @@ const path=require("node:path");
 const {scrutinize}=require("./watch_check.js");
 const root=__dirname;
 const inbox=JSON.parse(fs.readFileSync(path.join(root,"inbox","windsor-2026-10-24-retrieved.json"),"utf8"));
-const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const {legacyIndex,r5Index}=require("./test_index_fixtures.js");
 const index=legacyIndex;
 const clone=x=>JSON.parse(JSON.stringify(x));
 const source=()=>({status:"done",total_rows:inbox.count,data:clone(inbox.posts)});
@@ -82,7 +82,7 @@ test("foreign or promoted inbox is rejected",()=>{
 
 
 test("current 459-root index suppresses alerts even without old inbox files",()=>{
- const r=scrutinize(source(),currentIndex,[]);
+ const r=scrutinize(source(),r5Index,[]);
  assert.equal(r.status,"NO_NEW_AUTHOR_ROOTS");
  assert.deepEqual(r.new_author_roots,[]);
 });
