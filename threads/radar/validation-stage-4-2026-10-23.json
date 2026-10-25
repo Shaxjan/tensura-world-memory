@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "date_krasnoyarsk": "2026-10-23",
+  "account": "mirpottera",
+  "stage": "4_of_4_final_handoff",
+  "decision": "CONDITIONAL_EDITORIAL_ACCEPTANCE__TECHNICAL_RELEASE_NOT_FULLY_CERTIFIED",
+  "reviewed_branch": "radar-stage-b-index-20261020",
+  "pr_number": 33,
+  "pr_state_expected": "OPEN_DRAFT_NO_MERGE",
+  "evidence": {
+    "archive_roots": 454,
+    "historical_roots_preserved": 414,
+    "new_roots": 40,
+    "probable_author_continuations": 16,
+    "other_author_replies_excluded": 14,
+    "excluded_reposts": 10,
+    "editorial_journal_cards": 40,
+    "reserve_cards": 30,
+    "reserve_status_counts": {
+      "PRECHECKED_LOW_SIMILARITY": 15,
+      "REVIEW_REQUIRED": 15
+    },
+    "approved_ideas": 0,
+    "native_python_tests_passed": 22,
+    "native_python_tests_failed": 0,
+    "isolated_V8_scenarios_passed": 49,
+    "isolated_V8_scenarios_failed": 0,
+    "independent_rebuild_post_disagreements": 0,
+    "independent_rebuild_journal_disagreements": 0,
+    "fts350_truncation_fixed": true,
+    "reviewed_manifest_noop_rebuild_preserved": true,
+    "external_threads_publication_performed": false
+  },
+  "allow_now": [
+    "Read-only inspection of archived root posts, probable continuations and journal",
+    "Research and editorial candidate comparison within dated source limitations",
+    "Manual selection of up to three ideas as options; final approval remains with the author"
+  ],
+  "disallow_without_more_evidence": [
+    "Claim complete absence of narrative repeats",
+    "Claim complete 16 reply chains verified",
+    "Automatic approval, scheduling or publication to Threads",
+    "Production deployment, merge to main or edits to game repository",
+    "Claims of self-running scheduled Windsor/Threads sync"
+  ],
+  "pending": [
+    "Native Node.js complete test suite against an actual branch clone",
+    "Native Python full 454-root rebuild and verify against immutable source files",
+    "Primary-source literary verification for all 30 ideas",
+    "Fresh Threads retrieval beyond October 23 before later usage",
+    "Human review of all 15 REVIEW_REQUIRED cards"
+  ],
+  "links": {
+    "stage_1": "threads/radar/index/recovery-2026-10-23.json",
+    "stage_2": "threads/radar/reserve/screening-2026-10-23-r4.json",
+    "stage_3": "threads/radar/validation-stage-3-2026-10-23.json",
+    "handoff": "threads/radar/FINAL_HANDOFF_2026-10-23.md"
+  },
+  "rollback": "Only scoped changes in Draft PR #33; revert targeted commits on radar branch, never rewrite main or delete original archives."
+}

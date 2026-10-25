@@ -1,0 +1,33 @@
+name: Threads Radar R5 Automated Rescreen
+on:
+  push:
+    branches: [radar-stage-b-index-20261020]
+    paths: [.github/workflows/radar-r5-rescreen.yml]
+permissions:
+  contents: write
+jobs:
+  rescreen:
+    if: github.ref == 'refs/heads/radar-stage-b-index-20261020'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: radar-stage-b-index-20261020
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Produce preliminary unapproved R5 screening
+        run: node threads/radar/rescreen_459.js
+      - name: Commit only R5 candidate reports to draft
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- threads/radar/reserve/ideas-2026-10-25-r5.json threads/radar/reserve/screening-2026-10-25-r5.json
+          git diff --cached --check
+          git commit -m "radar: save provisional R5 screening against 459 posts"
+          git push origin HEAD:radar-stage-b-index-20261020
+
+# Rebuild candidate neighbor references after 2026-10-25 editorial crosscheck.

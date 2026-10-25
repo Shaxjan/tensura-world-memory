@@ -1,0 +1,38 @@
+name: Threads Radar Promote Five Reviewed Roots
+on:
+  push:
+    branches: [radar-stage-b-index-20261020]
+    paths: [.github/workflows/radar-promote-reviewed.yml]
+permissions:
+  contents: write
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/radar-stage-b-index-20261020'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: radar-stage-b-index-20261020
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify original 454-root index natively
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Promote only reviewed inbox snapshots to draft
+        run: python -B threads/radar/promote_reviewed_inbox.py
+      - name: Commit only derived archive data to draft
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- threads/radar/snapshots/windsor-promoted-*.json threads/radar/index/posts.jsonl threads/radar/index/editorial.jsonl threads/radar/index/manifest.json
+          git diff --cached --check
+          git diff --cached --name-only
+          git commit -m "radar: promote five verified author roots to draft index (459)"
+          git push origin HEAD:radar-stage-b-index-20261020

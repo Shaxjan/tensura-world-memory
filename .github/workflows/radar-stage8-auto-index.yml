@@ -1,0 +1,98 @@
+name: Threads Radar Safe Automatic Draft Index
+on:
+  push:
+    branches:
+      - radar-stage-b-index-20261020
+    paths:
+      - "threads/radar/inbox/windsor-*-retrieved.json"
+      - ".github/workflows/radar-stage8-auto-index.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mirpottera-radar-stage8-auto-draft
+  cancel-in-progress: false
+jobs:
+  guarded-draft-index:
+    if: github.repository == 'Shaxjan/tensura-world-memory' && github.ref == 'refs/heads/radar-stage-b-index-20261020'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: radar-stage-b-index-20261020
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify existing full archive and safety regressions
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Stage verified draft-only incremental update and unapproved screening
+        id: stage
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B threads/radar/stage8_upgrade.py > /tmp/radar-stage8-action.json
+          cat /tmp/radar-stage8-action.json
+          python - <<'PY'
+          import json, os
+          with open('/tmp/radar-stage8-action.json',encoding='utf-8') as f:
+              report=json.load(f)
+          if report["result"] not in ("STAGED_UNCOMMITTED", "NO_NEW_ROOTS"):
+              raise SystemExit("Unknown stage-8 result")
+          changed=report["result"]=="STAGED_UNCOMMITTED"
+          if changed and (report.get("editorial_approval") is not False or
+                          report.get("no_git_push_performed") is not True or
+                          report.get("simulation") is not False):
+              raise SystemExit("Unsafe proposed mutation")
+          with open(os.environ["GITHUB_OUTPUT"],'a',encoding='utf-8') as f:
+              f.write("changed="+str(changed).lower()+"\n")
+          PY
+      - name: Recheck expanded index and every Python Node regression
+        if: steps.stage.outputs.changed == 'true'
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Confirm all 30 current candidate ideas still require human approval
+        if: steps.stage.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node threads/radar/reserve_check.js > /tmp/radar-automated-current-check.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('threads/radar')
+          incoming=json.loads(Path('/tmp/radar-stage8-action.json').read_text())
+          reserve=json.loads((root/'reserve/automated-current-ideas.json').read_text())
+          screened=json.loads((root/'reserve/automated-current-screening.json').read_text())
+          verified=json.loads(Path('/tmp/radar-automated-current-check.json').read_text())
+          target=incoming['candidate_roots']
+          assert reserve['source_index_posts']==target==screened['compared_author_posts']
+          assert verified['compared_author_posts']==target
+          assert len(screened['ideas'])==30==len(reserve['ideas'])
+          assert [x['screen_status'] for x in verified['ideas']]==[x['screen_status'] for x in screened['ideas']]
+          assert all(x['editorial_status']=='IDEA_NOT_APPROVED' for x in reserve['ideas'])
+          assert all(x['requires_human_approval'] is True for x in screened['ideas'])
+          PY
+      - name: Atomically commit validated data only to the draft branch
+        if: steps.stage.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B threads/radar/stage8_commit_guard.py /tmp/radar-stage8-action.json
+          git diff --cached --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "radar: safely index new roots and rescreen 30 unapproved ideas"
+          git push origin HEAD:radar-stage-b-index-20261020
+      - name: Summarize audit result
+        if: always()
+        shell: bash
+        run: |
+          if [ -f /tmp/radar-stage8-action.json ]; then
+            echo "### Threads Radar draft index update" >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/radar-stage8-action.json >> "$GITHUB_STEP_SUMMARY"
+            echo "No editorial approval, Threads posting, main-branch merge, or game changes." >> "$GITHUB_STEP_SUMMARY"
+          fi
