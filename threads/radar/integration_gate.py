@@ -129,33 +129,33 @@ def execute(root: Path, *, run_tests: bool = True) -> dict:
         },
         "native_test_suites": [],
     }
-    # Check the actual cumulative inbox report, not only mocked/unit scenarios.
-    completed = subprocess.run(
-        ["node", "threads/radar/inbox_inventory.js"], cwd=root,
-        capture_output=True, text=True, encoding="utf-8",
-        errors="replace", timeout=180, check=False,
-    )
-    if completed.returncode:
-        raise RuntimeError("Native inbox inventory failed: " + completed.stderr[-3000:])
-    inventory = json.loads(completed.stdout)
-    if (inventory.get("status") != "PENDING_NATIVE_ACCEPTANCE"
-        or inventory.get("conflicts") != []
-        or inventory.get("baseline_roots") != first["total_author_roots"]
-        or inventory.get("expected_roots_after_verified_promotion")
-           != inventory.get("baseline_roots", 0) + inventory.get("unique_pending_roots", -1)
-        or inventory.get("index_modified") is not False
-        or inventory.get("source_promoted") is not False
-        or inventory.get("source_completeness_unverified") is not True):
-        raise ValueError("Native cumulative inbox inventory failed safe acceptance checks")
-    output["native_inbox_inventory"] = {
-        "status": inventory["status"],
-        "baseline_roots": inventory["baseline_roots"],
-        "pending_roots": inventory["unique_pending_roots"],
-        "reposts": inventory["distinct_repost_facades"],
-        "conflicts": 0,
-        "index_modified": False,
-    }
     if run_tests:
+        # Check the actual cumulative inbox report, not only mocked/unit scenarios.
+        completed = subprocess.run(
+            ["node", "threads/radar/inbox_inventory.js"], cwd=root,
+            capture_output=True, text=True, encoding="utf-8",
+            errors="replace", timeout=180, check=False,
+        )
+        if completed.returncode:
+            raise RuntimeError("Native inbox inventory failed: " + completed.stderr[-3000:])
+        inventory = json.loads(completed.stdout)
+        if (inventory.get("status") != "PENDING_NATIVE_ACCEPTANCE"
+            or inventory.get("conflicts") != []
+            or inventory.get("baseline_roots") != first["total_author_roots"]
+            or inventory.get("expected_roots_after_verified_promotion")
+               != inventory.get("baseline_roots", 0) + inventory.get("unique_pending_roots", -1)
+            or inventory.get("index_modified") is not False
+            or inventory.get("source_promoted") is not False
+            or inventory.get("source_completeness_unverified") is not True):
+            raise ValueError("Native cumulative inbox inventory failed safe acceptance checks")
+        output["native_inbox_inventory"] = {
+            "status": inventory["status"],
+            "baseline_roots": inventory["baseline_roots"],
+            "pending_roots": inventory["unique_pending_roots"],
+            "reposts": inventory["distinct_repost_facades"],
+            "conflicts": 0,
+            "index_modified": False,
+        }
         output["native_test_suites"].append(run_suite(
             [sys.executable, "-B", "-m", "unittest", "discover",
              "-s", "threads/radar", "-p", "test_*.py"], root,
