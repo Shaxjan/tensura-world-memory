@@ -27,6 +27,7 @@ NODE_TESTS = (
     "snapshot_intake.test.js",
     "reserve-current.test.js",
     "reserve-r5.test.js",
+    "stage8_rescreen.test.js",
     "semantic-safety.test.js",
     "snapshot-safety.test.js",
     "reserve-freshness.test.js",
