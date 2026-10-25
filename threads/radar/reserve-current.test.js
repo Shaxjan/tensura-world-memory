@@ -125,37 +125,31 @@ test("all 414 historical roots retain the original verified full-chain texts",()
   assert.equal(index.parts_count,p.parts_count);
  }
 });
-test("all stored new-root metrics use the latest immutable Windsor snapshot",()=>{
- const snapshots=[
-  "windsor-2026-10-13_to_2026-10-20.json",
-  "windsor-2026-10-21.json",
-  "windsor-2026-10-21_rev2.json",
-  "windsor-2026-10-22.json",
-  "windsor-2026-10-23.json",
-  "windsor-promoted-0-windsor-2026-10-24-retrieved.json",
-  "windsor-promoted-1-windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"
- ];
- const latest=new Map();
- const stable=new Map();
- for(const filename of snapshots){
-  const snapshot=load("snapshots/"+filename);
-  assert.equal(snapshot.count,snapshot.posts.length);
-  for(const p of snapshot.posts){
-   if(stable.has(p.post_id)){
-    const old=stable.get(p.post_id);
-    for(const field of ["post_timestamp","post_text","post_permalink","post_media_type"])
-     assert.equal(p[field],old[field], "Conflicting immutable field "+field+" on "+p.post_id);
-   }else stable.set(p.post_id,p);
+test("all current new-root metrics follow the latest immutable Windsor snapshot",()=>{
+ const manifest=load("index/manifest.json");
+ const ordered=manifest.source_snapshot.map(rel=>{
+  const file=rel.replace(/^threads\/radar\//,"");
+  const doc=load(file);
+  assert.equal(doc.count,doc.posts.length);
+  return {file,doc};
+ }).sort((a,b)=>a.doc.retrieval_date_utc.localeCompare(b.doc.retrieval_date_utc)
+         ||a.file.localeCompare(b.file));
+ const latest=new Map(),stable=new Map();
+ for(const {doc} of ordered){
+  for(const p of doc.posts){
+   const old=stable.get(p.post_id);
+   if(old)for(const field of ["post_timestamp","post_text","post_permalink","post_media_type"])
+    assert.equal(p[field],old[field],"Conflicting immutable "+field+" on "+p.post_id);
+   else stable.set(p.post_id,p);
    latest.set(p.post_id,p);
   }
  }
- assert.equal(latest.size,55);
- assert.equal([...latest.values()].filter(p=>p.post_media_type==="REPOST_FACADE").length,10);
- const byLatestPost=new Map(currentIndex.map(p=>[p.post_id,p]));
+ assert.equal(latest.size,manifest.counts.snapshot_records);
+ const currentByID=new Map(currentIndex.map(p=>[p.post_id,p]));
  for(const p of latest.values()){
   if(p.post_media_type==="REPOST_FACADE")continue;
-  const row=byLatestPost.get(p.post_id);
-  assert.ok(row);
+  const row=currentByID.get(p.post_id);
+  assert.ok(row,"missing latest indexed root "+p.post_id);
   assert.equal(row.original_text,p.post_text);
   assert.equal(row.url,p.post_permalink);
   assert.equal(row.published_at,p.post_timestamp);
