@@ -1,0 +1,21 @@
+name: Threads Radar Promotion Rehearsal
+on:
+  push:
+    branches: [radar-stage-b-index-20261020]
+    paths: [.github/workflows/radar-promotion-rehearsal.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Simulate five-root promotion on scratch copy
+        run: python -B threads/radar/promotion_rehearsal.py
