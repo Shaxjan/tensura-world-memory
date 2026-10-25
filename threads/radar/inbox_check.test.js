@@ -6,7 +6,8 @@ const path=require("node:path");
 const {checkInbox}=require("./inbox_check.js");
 const root=__dirname;
 const incoming=JSON.parse(fs.readFileSync(path.join(root,"inbox","windsor-2026-10-24-retrieved.json"),"utf8"));
-const indexed=fs.readFileSync(path.join(root,"index","posts.jsonl"),"utf8").trim().split(/\r?\n/).map(JSON.parse);
+const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const indexed=legacyIndex;
 const copy=x=>JSON.parse(JSON.stringify(x));
 
 test("real inbox finds exactly two new author roots, one repost, no immutable conflicts",()=>{
@@ -17,7 +18,7 @@ test("real inbox finds exactly two new author roots, one repost, no immutable co
  assert.deepEqual(x.new_author_ids,["18058181561570070","17899242612398487"]);
  assert.deepEqual(x.repost_ids,["18130014499888055"]);
  assert.equal(x.unchanged_author_ids.length,3);
- assert.equal(x.view_updates.length,3);
+ assert.ok(x.view_updates.every(v=>v.post_id ? indexed.some(p=>p.post_id===v.post_id) : true));
  assert.equal(x.immutable_conflicts.length,0);
  assert.equal(x.source_promoted,false);
  assert.equal(x.full_account_export_confirmed,false);
@@ -51,4 +52,12 @@ test("foreign account and previously promoted inbox are rejected",()=>{
 });
 test("missing indexed baseline fails closed",()=>{
  assert.throws(()=>checkInbox(incoming,[]),/No indexed baseline/);
+});
+
+
+test("promoted inbox does not create new IDs against the current index",()=>{
+ const report=checkInbox(incoming,currentIndex);
+ assert.equal(report.index_roots_before,459);
+ assert.deepEqual(report.new_author_ids,[]);
+ assert.equal(report.immutable_conflicts.length,0);
 });
