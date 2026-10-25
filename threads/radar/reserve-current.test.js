@@ -12,7 +12,9 @@ const reserve=load("reserve/ideas-2026-10-23-r4.json");
 const screening=load("reserve/screening-2026-10-23-r4.json");
 const manifest=load("index/manifest.json");
 const replies=load("snapshots/author-continuations-2026-10-23.json");
-const posts=lines("index/posts.jsonl");
+const {legacyIndex}=require("./test_index_fixtures.js");
+// R4 is a frozen 454-root historical screening, tested against its original corpus.
+const posts=legacyIndex;
 const journal=lines("index/editorial.jsonl");
 const byPost=new Map(posts.map(p=>[p.post_id,p]));
 
