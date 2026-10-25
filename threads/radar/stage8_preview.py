@@ -58,6 +58,8 @@ def preserved_source_pairs(radar: Path, inboxes: list[Path]) -> set[str]:
             raise ValueError("Previous source no longer has quarantine state")
         expected = {k: v for k, v in raw.items() if k != "state"}
         expected["source_inbox_file"] = name
+        if "source_inbox_sha256" in doc:
+            expected["source_inbox_sha256"] = hashlib.sha256(incoming[name].read_bytes()).hexdigest()
         if doc != expected:
             raise ValueError("Promoted source differs from immutable inbox: " + name)
         seen.add(name)
