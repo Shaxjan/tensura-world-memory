@@ -7,7 +7,8 @@ const {inventory}=require("./inbox_inventory.js");
 
 const root=__dirname;
 const raw=rel=>fs.readFileSync(path.join(root,rel),"utf8");
-const index=raw("index/posts.jsonl").trim().split(/\r?\n/).map(JSON.parse);
+const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const index=legacyIndex;
 const first=JSON.parse(raw("inbox/windsor-2026-10-24-retrieved.json"));
 const next=JSON.parse(raw("inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"));
 const copy=x=>JSON.parse(JSON.stringify(x));
@@ -96,4 +97,16 @@ test("known root cannot be changed in inbox without conflict",()=>{
  const r=inventory(index,b);
  assert.equal(r.status,"BLOCKED_CONFLICTS");
  assert.ok(r.conflicts.some(x=>x.post_id==="18109268174261128"));
+});
+
+
+test("post-promotion inventory has no pending roots in 459-root index",()=>{
+ const r=inventory(currentIndex,boxes());
+ assert.equal(r.status,"PENDING_NATIVE_ACCEPTANCE");
+ assert.equal(r.baseline_roots,459);
+ assert.equal(r.unique_pending_roots,0);
+ assert.equal(r.expected_roots_after_verified_promotion,459);
+ assert.deepEqual(r.pending_roots,[]);
+ assert.equal(r.conflicts.length,0);
+ assert.equal(r.index_modified,false);
 });
