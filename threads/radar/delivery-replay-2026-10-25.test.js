@@ -11,7 +11,8 @@ const root=__dirname;
 const readJSON=rel=>JSON.parse(fs.readFileSync(path.join(root,rel),"utf8"));
 const prior=readJSON("inbox/windsor-2026-10-24-retrieved.json");
 const saved=readJSON("inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json");
-const index=fs.readFileSync(path.join(root,"index","posts.jsonl"),"utf8").trim().split(/\r?\n/).map(JSON.parse);
+const {legacyIndex,currentIndex}=require("./test_index_fixtures.js");
+const index=legacyIndex;
 const source=()=>({status:"done",total_rows:saved.count,data:saved.posts.map(x=>({...x}))});
 const clock=new Date("2026-10-25T01:00:00Z");
 const ids=["18152771278539108","18472636933140300","17915165559493626"];
@@ -63,4 +64,11 @@ test("known source text conflict blocks staging of unrelated fresh roots",()=>{
  assert.equal(p.status,"BLOCKED_CONFLICTS");
  assert.equal(p.save_allowed,false);
  assert.equal(p.report.conflicts.length,1);
+});
+
+
+test("replayed October 25 sources are known after actual 459-root promotion",()=>{
+ const r=scrutinize(source(),currentIndex,[]);
+ assert.equal(r.status,"NO_NEW_AUTHOR_ROOTS");
+ assert.deepEqual(r.new_author_roots,[]);
 });
