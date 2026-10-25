@@ -22,6 +22,7 @@ class Stage8CandidateTests(unittest.TestCase):
             shutil.copy2(src, target / src.name)
         self.index = self.root / "threads/radar/index/posts.jsonl"
         self.before = self.index.read_bytes()
+        self.count = len(self.before.splitlines())
 
     def add_synthetic(self, *, altered_known=False):
         previous = json.loads((self.root / "threads/radar/inbox" /
@@ -57,7 +58,7 @@ class Stage8CandidateTests(unittest.TestCase):
     def test_legacy_inboxes_are_noop_after_promotion(self):
         answer = preview(self.root)
         self.assertEqual(answer["result"], "NO_NEW_ROOTS")
-        self.assertEqual(answer["baseline_roots"], 459)
+        self.assertEqual(answer["baseline_roots"], self.count)
         self.assertEqual(answer["pending_ids"], [])
         self.assertEqual(self.index.read_bytes(), self.before)
 
@@ -65,13 +66,30 @@ class Stage8CandidateTests(unittest.TestCase):
         self.add_synthetic()
         answer = preview(self.root)
         self.assertEqual(answer["result"], "CANDIDATE_PASS")
-        self.assertEqual(answer["candidate_roots"], 460)
+        self.assertEqual(answer["candidate_roots"], self.count + 1)
         self.assertEqual(answer["pending_ids"], ["19999887766554433"])
         self.assertFalse(answer["source_checkout_modified"])
         self.assertFalse(answer["editorial_approval_granted"])
         self.assertEqual(self.index.read_bytes(), self.before)
         self.assertFalse(list((self.root / "threads/radar/snapshots").glob(
             "*stage8-synthetic*")))
+
+    def test_candidate_output_contains_only_temporary_verified_files(self):
+        self.add_synthetic()
+        out = self.root.parent / (self.root.name + "-validated")
+        self.addCleanup(lambda: shutil.rmtree(out, ignore_errors=True))
+        answer = preview(self.root, prepared_dir=out)
+        self.assertEqual(answer["result"], "CANDIDATE_PASS")
+        self.assertEqual(answer["rebuilds"], 2)
+        self.assertEqual(len(list((out / "threads/radar/snapshots").glob("windsor-*.json"))), 1)
+        self.assertEqual(len(list((out / "threads/radar/index").iterdir())), 3)
+        self.assertEqual(self.index.read_bytes(), self.before)
+
+    def test_cannot_stage_candidate_inside_source(self):
+        self.add_synthetic()
+        with self.assertRaises(ValueError):
+            preview(self.root, prepared_dir=self.root / "untrusted")
+        self.assertEqual(self.index.read_bytes(), self.before)
 
     def test_conflicting_existing_post_blocks_everything(self):
         self.add_synthetic(altered_known=True)
