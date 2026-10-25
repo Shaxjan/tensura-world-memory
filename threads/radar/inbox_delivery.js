@@ -8,7 +8,7 @@
 const crypto=require("node:crypto");
 const {scrutinize}=require("./watch_check.js");
 const {validateInput,utcDate}=require("./snapshot_intake.js");
-const FIELDS=["post_id","post_timestamp","post_text","post_permalink","post_media_type","post_views"];
+const FIELDS=["post_id","post_timestamp","post_text","post_permalink","post_media_type","post_views","data_fetched_at"];
 const ACCOUNT="mirpottera";
 const ACCOUNT_ID="28902703019346338";
 
@@ -40,6 +40,8 @@ function planDelivery(live,index,inboxes=[],options={}){
   return {status:"NO_NEW_ROOTS",report:status,snapshot:null,filename:null,save_allowed:false};
  if(!fetched)throw Error("New roots are impossible without source rows");
  const rows=validateInput({account:ACCOUNT,count:live.total_rows,posts:live.data});
+ const timestamp=fetched.toISOString().slice(0,19);
+ const rowsWithProvenance=rows.map(row=>({...row,data_fetched_at:timestamp}));
  if(rows.some(p=>Date.parse(p.post_timestamp.replace(/\+0000$/,"Z"))>fetched.getTime()))
   throw Error("Publication after provider fetch");
  const dates=rows.map(p=>utcDate(p.post_timestamp)).sort();
@@ -51,7 +53,7 @@ function planDelivery(live,index,inboxes=[],options={}){
   data_fetched_at_utc:fetched.toISOString().slice(0,19),
   period_utc:[dates[0],dates[dates.length-1]],
   count:rows.length,read_fields:FIELDS,state:"INBOX_NOT_INDEXED",
-  full_account_export_confirmed:false,posts:rows
+  full_account_export_confirmed:false,posts:rowsWithProvenance
  };
  const serialized=JSON.stringify(snapshot,null,2)+"\n";
  const digest=crypto.createHash("sha256").update(serialized).digest("hex").slice(0,16);
