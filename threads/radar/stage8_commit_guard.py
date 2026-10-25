@@ -60,8 +60,9 @@ def stage(root: Path, report: dict, *, simulation: bool = False) -> list[str]:
     planned = allowed_paths(report, simulation=simulation)
     if command(root, "diff", "--cached", "--name-only"):
         raise RuntimeError("Unexpected previously staged changes")
-    if command(root, "diff", "--name-only"):
-        raise RuntimeError("Unstaged tracked changes outside prepared artifacts")
+    modified = set(command(root, "diff", "--name-only").splitlines())
+    if not modified <= planned:
+        raise RuntimeError("Tracked changes outside prepared candidate artifacts")
     other = set(command(root, "ls-files", "--others", "--exclude-standard").splitlines())
     accepted_untracked = set(planned)
     if simulation:
