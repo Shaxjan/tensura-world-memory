@@ -32,6 +32,7 @@ NODE_TESTS = (
     "inbox_check.test.js",
     "watch_check.test.js",
     "inbox_delivery.test.js",
+    "delivery-replay-2026-10-25.test.js",
 )
 
 
