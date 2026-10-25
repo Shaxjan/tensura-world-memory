@@ -2,7 +2,10 @@ name: Threads Radar 460-root Synthetic Upgrade Test
 on:
   push:
     branches: [radar-stage-b-index-20261020]
-    paths: [.github/workflows/radar-stage8-460-simulation.yml]
+    paths:
+      - ".github/workflows/radar-stage8-460-simulation.yml"
+      - "threads/radar/stage8_upgrade.py"
+      - "threads/radar/stage8_rescreen.js"
 permissions:
   contents: read
 jobs:
