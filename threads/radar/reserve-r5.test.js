@@ -43,3 +43,15 @@ test("R5 becomes stale on next Krasnoyarsk day without new sync",()=>{
  const report=evaluate(r5,currentIndex,journal,{as_of:"2026-10-27"});
  assert.equal(report.ideas.filter(x=>x.screen_status==="STALE_RECHECK").length,30);
 });
+
+
+test("newly promoted Nick and McGonagall near-misses remain linked for human review",()=>{
+ for(const [id,published] of [["G12","17915165559493626"],["G17","17899242612398487"]]){
+   const idea=screening.ideas.find(x=>x.id===id);
+   assert.ok(idea);
+   assert.equal(idea.screen_status,"REVIEW_REQUIRED");
+   assert.ok(idea.similar_refs.some(ref=>ref.id===published &&
+     typeof ref.note==="string" && ref.note.length>40));
+   assert.equal(idea.requires_human_approval,true);
+ }
+});
