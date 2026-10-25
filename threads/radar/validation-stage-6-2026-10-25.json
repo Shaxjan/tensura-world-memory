@@ -3,7 +3,7 @@
   "account": "mirpottera",
   "stage": "6_of_8",
   "date_krasnoyarsk": "2026-10-25",
-  "status": "FIRST_SCHEDULED_WINDSOR_TO_GITHUB_INBOX_DELIVERY_CONFIRMED__INDEX_SYNC_PENDING",
+  "status": "SCHEDULED_INBOX_DELIVERY_CONFIRMED__CUMULATIVE_5_ROOT_BACKLOG_VERIFIED__INDEX_PENDING",
   "observed_delivery": {
     "file": "threads/radar/inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json",
     "github_commit": "2fcffe79e95800fc31eed1886cf20f2542e00b44",
@@ -78,5 +78,36 @@
     "Source completeness and author continuation verification.",
     "Check successful next scheduled runs and connector access after Trial expiry.",
     "Stage 7 re-screen all ideas on the updated index; no automated approval."
-  ]
+  ],
+  "cumulative_inbox_backlog": {
+    "source_snapshots": [
+      "threads/radar/inbox/windsor-2026-10-24-retrieved.json",
+      "threads/radar/inbox/windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"
+    ],
+    "module": "threads/radar/inbox_inventory.js",
+    "test_file": "threads/radar/inbox_inventory.test.js",
+    "execution": {
+      "mode": "isolated V8 with exact 454-record GitHub index and real source snapshots, mock Node builtins",
+      "tests_passed": 11,
+      "tests_failed": 0,
+      "native_node": "NOT_RUN"
+    },
+    "current_index_roots": 454,
+    "unique_pending_roots": 5,
+    "expected_after_full_native_promotion": 459,
+    "pending_root_ids": [
+      "18058181561570070",
+      "17899242612398487",
+      "18152771278539108",
+      "18472636933140300",
+      "17915165559493626"
+    ],
+    "unique_repost_facades": 4,
+    "immutable_conflicts": 0,
+    "replay_safe": true,
+    "scheduled_new_inbox_delivery_confirmed": true,
+    "index_modified": false,
+    "source_promoted": false,
+    "notes": "Read-only cross-snapshot inventory, including republication/repost conflicts. Still cannot establish account-wide completeness. Full native Stage 5 gate and source promotion pending."
+  }
 }
