@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "checked_at_local": "2026-10-21",
+  "timezone": "Asia/Krasnoyarsk",
+  "scope": "Technical acceptance partial in isolated Linux container plus 448-post GitHub index structural verification",
+  "branch": "radar-stage-b-index-20261020",
+  "index": {
+    "historic_roots": 414,
+    "newer_author_roots": 34,
+    "total_author_roots": 448,
+    "editorial_cards": 40,
+    "unique_known_reposts": 6,
+    "snapshot_files": 3,
+    "author_reply_metadata_count": 20,
+    "author_reply_root_count": 17,
+    "reply_texts_fully_verified": false
+  },
+  "direct_execution": [
+    {
+      "runtime": "Python 3.13.5",
+      "command": "python -m unittest test_radar -q",
+      "result": "PASS",
+      "tests": 11,
+      "source_equivalence": "radar.py exact FNV-1a 32-bit checksum match against GitHub source 5cce76ac",
+      "dataset": "synthetic fixture with base tests and cross-snapshot collision tests, in isolated container; source equivalent"
+    },
+    {
+      "runtime": "Node.js 22.16.0",
+      "command": "node --test snapshot_intake.test.js",
+      "result": "PASS",
+      "tests": 10,
+      "source_equivalence": "snapshot_intake.js exact FNV-1a 32-bit checksum match against GitHub source 215bcfc0",
+      "dataset": "synthetic 448-row index with real-format IDs and URLs, and 3-row snapshot fixture; original repo test source mirrored"
+    },
+    {
+      "runtime": "Node.js 22.16.0",
+      "command": "node --test intake-direct.test.js",
+      "result": "PASS",
+      "tests": 10,
+      "source_equivalence": "uses same snapshot_intake.js module",
+      "dataset": "additional acceptance tests including command-line preview and protected local-write check"
+    }
+  ],
+  "isolated_v8_real_data_tests": {
+    "semantic": 14,
+    "reserve": 11,
+    "snapshot_intake": 10,
+    "total": 35,
+    "pass": 35,
+    "source": "GitHub scripts on 448 real author roots and 40 editorial cards with equivalent Node test/FS bindings"
+  },
+  "safety_changes": [
+    "Python builder now rejects changed stable fields on duplicate ID across different Windsor snapshots; view count refresh remains allowed",
+    "Reserve G22's previous story-specific hardcoded archive anchor was removed after replacement with Les Misérables episode",
+    "New 21:00 video post was indexed; two reposts excluded from author roots",
+    "Only author's reply ID metadata saved, not reader comments or unverified content"
+  ],
+  "remaining_gates": [
+    "No raw Git checkout inside this sandbox because GitHub cannot be resolved from this environment",
+    "Full index build from all 414 historical originals + all snapshots has not been executed directly in local Python; only synthetic tests executed",
+    "Existing Python test cases extended in additional test_snapshot_consistency.py have not yet been directly executed from actual repo checkout",
+    "No complete audit of author reply content/order for 34 recent posts",
+    "Book-source/translation verification of all 30 reserve stories remains incomplete",
+    "No unattended Windsor.ai update or publishing workflows implemented"
+  ],
+  "merge_approval": false
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "as_of_utc_date": "2026-10-23",
+  "stage": "1_of_4_restore_author_post_continuations",
+  "input_sources": [
+    "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+    "threads/radar/snapshots/windsor-2026-10-21.json",
+    "threads/radar/snapshots/windsor-2026-10-21_rev2.json",
+    "threads/radar/snapshots/windsor-2026-10-22.json",
+    "threads/radar/snapshots/windsor-2026-10-23.json",
+    "threads/radar/snapshots/author-continuations-2026-10-23.json"
+  ],
+  "counts": {
+    "historical_roots_unchanged": 414,
+    "additional_author_roots": 40,
+    "total_author_roots": 454,
+    "unique_snapshot_rows": 50,
+    "reposts_excluded": 10,
+    "editorial_cards_preserved": 40,
+    "own_replies_reviewed": 30,
+    "probable_continuations_in_search": 16,
+    "late_self_replies_excluded": 4,
+    "nested_conversation_replies_excluded": 5,
+    "external_root_comments_excluded": 5
+  },
+  "validation": {
+    "structural_assertions": 12,
+    "structural_assertions_passed": 12,
+    "semantic_js_tests_in_v8_with_node_stubs": 14,
+    "reserve_guard_js_tests_in_v8_with_node_stubs": 11,
+    "intake_js_tests_in_v8_with_node_stubs": 10,
+    "total_js_scenarios": 35,
+    "passed": 35,
+    "failed": 0,
+    "current_reserve_screening": "STALE: prior screening uses 448 roots; current index contains 454. Fail-closed validation is intentional.",
+    "python_continuation_tests": "Added eight test cases, but real execution pending"
+  },
+  "method": "Only replies to own root posts appearing 0–90 seconds after the root's post_timestamp are searchable as likely continuations. Original root text is preserved, while search_text contains the appended reply. chain_complete stays false. Other own replies are logged by ID only and excluded from core story text.",
+  "limitations": [
+    "Classification by time and reply parent is highly indicative but not a manual proof of a complete chain",
+    "Data after 23 October 2026 is not included",
+    "Other user comments were not saved",
+    "Book-canon and independent originality review remain pending",
+    "Reserve r3 is blocked from certifying originality until rescreened on 454 roots"
+  ]
+}

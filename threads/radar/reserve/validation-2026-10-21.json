@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-21",
+  "execution": "V8 JavaScript executor with equivalent Node.js module/test stubs; Node.js CLI and Python were NOT executed",
+  "branch": "radar-stage-b-index-20261020",
+  "snapshot_date": "2026-10-21",
+  "index_count": 447,
+  "editorial_cards_count": 40,
+  "ideas_count": 30,
+  "slot_distribution": {
+    "03:00": 10,
+    "11:00": 10,
+    "15:00": 10
+  },
+  "universe_distribution": {
+    "Гарри Поттер": 20,
+    "Book Threads": 10
+  },
+  "screening_counts": {
+    "PRECHECKED_LOW_SIMILARITY": 16,
+    "REVIEW_REQUIRED": 14
+  },
+  "excluded_prior_topics": 7,
+  "tests": [
+    {
+      "name": "exactly thirty unique concepts, ten in each text slot",
+      "status": "PASS"
+    },
+    {
+      "name": "20 Harry Potter and 10 Book Threads concepts",
+      "status": "PASS"
+    },
+    {
+      "name": "21:00 is reserved for author-provided videos, not concepts",
+      "status": "PASS"
+    },
+    {
+      "name": "no reserved idea was approved, planned or published",
+      "status": "PASS"
+    },
+    {
+      "name": "former duplicate concepts excluded and linked to actual published IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "screening recorded thirty concepts against all 447 author posts and 40 journal cards",
+      "status": "PASS"
+    },
+    {
+      "name": "sensitive known-neighbor ideas include direct linked post evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "no saved candidate was proven DUPLICATE or SAME_STORY",
+      "status": "PASS"
+    },
+    {
+      "name": "full-corpus screening is deterministic on fixed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "new day requires recheck; old snapshot cannot certify any concept",
+      "status": "PASS"
+    },
+    {
+      "name": "missing source post blocks reserve validation",
+      "status": "PASS"
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "limits": [
+    "14 of 30 are REVIEW_REQUIRED and remain blocked from automatic promotion",
+    "Canon and primary source checking pending on all 30 cards",
+    "Last confirmed archive snapshot covers 2026-10-21; later publishing not indexed",
+    "Follow-up author replies for new root posts are not yet recovered",
+    "Not a certified large-scale semantic classifier"
+  ]
+}

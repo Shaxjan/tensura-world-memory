@@ -1,0 +1,75 @@
+name: Threads Radar 460-root Synthetic Upgrade Test
+on:
+  push:
+    branches: [radar-stage-b-index-20261020]
+    paths:
+      - ".github/workflows/radar-stage8-460-simulation.yml"
+      - "threads/radar/stage8_upgrade.py"
+      - "threads/radar/stage8_rescreen.js"
+      - "threads/radar/test_stage8_preview.py"
+permissions:
+  contents: read
+jobs:
+  synthetic-upgrade:
+    if: github.ref == 'refs/heads/radar-stage-b-index-20261020'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify original 459-root baseline
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Simulate additional root and stage new index and reserve
+        run: |
+          python -B threads/radar/stage8_upgrade.py --simulate > /tmp/radar-stage8-simulation.json
+          cat /tmp/radar-stage8-simulation.json
+      - name: Require full native gate on simulated expanded corpus
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Inspect candidate without any Git remote writes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node threads/radar/reserve_check.js 2026-10-25 > /tmp/legacy-r5.json || true
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("threads/radar")
+          manifest = json.loads((root/"index/manifest.json").read_text())
+          reserve = json.loads((root/"reserve/automated-current-ideas.json").read_text())
+          report = json.loads((root/"reserve/automated-current-screening.json").read_text())
+          assert manifest["counts"]["total_author_roots"] == 460
+          assert reserve["source_index_posts"] == 460
+          assert report["compared_author_posts"] == 460
+          assert report["ideas_count"] == 30
+          assert all(i["requires_human_approval"] for i in report["ideas"])
+          assert all(i["editorial_status"] == "IDEA_NOT_APPROVED" for i in reserve["ideas"])
+          print("SYNTHETIC_INCREMENTAL_460_PASS; no Git push or publication")
+          PY
+          git status --short
+
+      - name: Rehearse exact Git staging and offline commit without push access
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B threads/radar/stage8_commit_guard.py /tmp/radar-stage8-simulation.json --simulate
+          git diff --cached --check
+          git config user.name "stage8-local-test"
+          git config user.email "stage8-local-test@invalid.example"
+          git commit -m "TEST ONLY: offline simulated radar promotion"
+          python - <<'PY'
+          import subprocess
+          names=set(subprocess.check_output(
+              ["git","show","--pretty=format:","--name-only","HEAD"],text=True).splitlines())
+          assert "threads/radar/index/posts.jsonl" in names
+          assert "threads/radar/index/manifest.json" in names
+          assert "threads/radar/reserve/automated-current-screening.json" in names
+          assert not any(name.startswith("threads/radar/inbox/") for name in names)
+          print("STAGE8_GIT_COMMIT_GUARD_PASS: local test-only commit; no remote push")
+          PY

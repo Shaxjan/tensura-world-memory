@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "project": "Threads / Мир Поттера / Редакционный радар",
+  "stage": 5,
+  "date_krasnoyarsk": "2026-10-23",
+  "branch": "radar-stage-b-index-20261020",
+  "pr_number": 33,
+  "status": "PARTIAL_PASS__FULL_CORPUS_INTEGRATION_PENDING",
+  "description": "Stage 5 not finished: release gate prepared, exact gate file Python-compiles and basic input cloning tested natively. Actual 454-root native rebuild and full Node test suite remain open. New staging code and new tests require native execution.",
+  "runtime": {
+    "python": "Python 3.13.5",
+    "node": "Node.js 22.16.0",
+    "native_python": {
+      "passed": 41,
+      "failed": 0,
+      "command": "python -m unittest discover -p 'test_*.py' (41/41, real Python 3.13.5, isolated source-identical fixtures)",
+      "environment": "isolated local copy, synthetic fixtures",
+      "source_files_verified": {
+        "threads/radar/radar.py": "6dffbb08379b02886eb83b8a69dc5c7b0d2ee026",
+        "threads/radar/test_radar.py": "c0bf4c7c8ff0abe21af8b944b462d701c0a67405",
+        "threads/radar/continuations.py": "46567e0dc6cce4277d668bf0291a0a620338ae75",
+        "threads/radar/test_continuations.py": "01403a96b74271a332cc507d2e6bbb0637cbff0c",
+        "threads/radar/test_snapshot_consistency.py": "bcaea8dcba6dc4adbfb295f15c6120241ee7d3f1"
+      }
+    },
+    "native_node": {
+      "passed": 17,
+      "failed": 0,
+      "command": "node --test snapshot-safety.test.js semantic-safety.test.js",
+      "environment": "isolated local copy, standalone synthetic fixtures",
+      "source_files_verified": {
+        "threads/radar/snapshot_intake.js": "d876cffab11417366b8ba02cd82f638fdcf43e28",
+        "threads/radar/semantic.js": "55e054ae69e952a632df0f2265f3ec5664c83596",
+        "threads/radar/snapshot-safety.test.js": "e2acc92bde55442679d478e1a7e4ad5db1e920a6",
+        "threads/radar/semantic-safety.test.js": "7e99486db6259b484c57d2b49ea2b4dfa556961b"
+      }
+    },
+    "previous_isolated_V8": {
+      "passed": 49,
+      "failed": 0,
+      "description": "Historical suites with actual 454 index: 35, R4 checks: 14; emulated Node, not native full suite"
+    },
+    "current_r4_isolated_v8": {
+      "passed": 17,
+      "failed": 0,
+      "mode": "isolate JavaScript with real GitHub source, all 454 true archived roots, 40 journal records and mock builtins; not native Node.js",
+      "includes": "post/journal ID checkpoints disallow same-count replacements"
+    },
+    "isolated_V8_current_reserve_date": {
+      "passed": 3,
+      "failed": 0,
+      "description": "Exact GitHub reserve_check.js + semantic.js and regression tests in isolated JavaScript evaluator, not native Node.js"
+    }
+  },
+  "changes": [
+    {
+      "path": "threads/radar/radar.py",
+      "risk": "filename-sorted imports can overwrite newer metrics with older ones",
+      "fix": "sort all Windsor snapshots by retrieval_date_utc then name",
+      "native_test": "test_mixed_snapshot_filenames_use_retrieval_date_order"
+    },
+    {
+      "path": "threads/radar/snapshot_intake.js",
+      "risk": "JS Date rollover and preview under-detection of immutable timestamp/media changes",
+      "fix": "strict calendar round-trip; compare immutable date and media as well as text/URL; reject retrieval before publication",
+      "native_test": "snapshot-safety.test.js (9 tests)"
+    },
+    {
+      "path": "threads/radar/semantic.js",
+      "risk": "invalid date normalized to another day or NaN could mark stale archive fresh",
+      "fix": "invalid ISO dates parse to null and force REVIEW_REQUIRED",
+      "native_test": "semantic-safety.test.js (8 tests)"
+    }
+  ],
+  "known_repository_index": {
+    "published_roots": 454,
+    "historical": 414,
+    "new_roots": 40,
+    "probable_continuations": 16,
+    "editorial_cards": 40,
+    "ideas": 30,
+    "last_snapshot_date": "2026-10-23",
+    "source_ID_checkpoints_added": true,
+    "source_ID_checkpoint_posts": 454,
+    "source_ID_checkpoint_journal": 40,
+    "source_is_current_on_2026_10_24": false,
+    "stale_status": "STALE_RECHECK"
+  },
+  "safety": {
+    "main_edited": false,
+    "merged": false,
+    "threads_published": false,
+    "game_repo_edited": false,
+    "changed_paths_scope": "threads/radar/ only"
+  },
+  "blockers": [
+    "Full repository clone unavailable from this runtime: github.com DNS cannot resolve and no public download was authorized.",
+    "Native full Node test suite on actual 454 published post index has NOT run in this turn.",
+    "Native Python full-corpus rebuild of actual 414 verified texts + 40 new posts still NOT run; synthetic 454-root two-build integration PASS and read-only full corpus cross-check PASS.",
+    "Automated periodic Threads sync NOT implemented, belongs to later stage.",
+    "New staged index output and regression tests have not been executed in the native complete source context; previous 41 Python successes predate these changes."
+  ],
+  "next_action": "Run full native integration suite and full 454-root deterministic build in a restricted throwaway clone, compare source SHA and index output, then close stage 5. Do not promote conditional evidence to full PASS.",
+  "additional_native_checks": [
+    "Rebuild refuses dropping previously indexed author root IDs when a source snapshot disappears.",
+    "Rebuild refuses modifying immutable text, date, URL, media type or provenance of indexed roots.",
+    "Index verify cross-checks all historical original/search text, URLs, part counts and chain_complete flags against original archive.",
+    "Index verify rejects falsely marked complete chains for newer Windsor roots.",
+    "Source validation rejects wrong account, invalid date, retrieval predating publication, negative metrics, and forged Threads hostnames.",
+    "Source validation accepts both threads.com and www.threads.com.",
+    "Native Python fixture exercises 414 historical roots + 40 new roots + 10 excluded reposts + 40 editorial records + 16 continuations and confirms byte-identical no-op rebuild.",
+    "Existing continuation snapshots and editorial journal ID/status are protected from silent loss during rebuild.",
+    "An existing manifest requires both posts.jsonl and editorial.jsonl to exist before rebuild.",
+    "Concurrent Python index writers blocked by O_EXCL .build.lock. Lock preserved on competing request; released following successful or failed owning build."
+  ],
+  "source_fixture_reconstruction": {
+    "kind": "SYNTHETIC_454_ROOT_NATIVE_INTEGRATION",
+    "historical": 414,
+    "new_roots": 40,
+    "excluded_reposts": 10,
+    "editorial_journal_cards": 40,
+    "probable_continuations": 16,
+    "rebuilds": 2,
+    "identical_outputs": true,
+    "result": "PASS",
+    "qualification": "Artificial root texts and URLs, not the real published user corpus"
+  },
+  "actual_repository_source_crosscheck": {
+    "kind": "EXACT_GITHUB_READ_ONLY_BLOB_COMPARISON",
+    "historical_verified": 414,
+    "new_roots_chain_complete_false": 40,
+    "snapshot_rows": 53,
+    "invalid_snapshots_under_new_validation": 0,
+    "modified_historical_source_texts": 0,
+    "result": "PASS",
+    "qualification": "Read-only cross-check in V8, not a native 454-root Python rebuild"
+  },
+  "date_krasnoyarsk_last_checked": "2026-10-24",
+  "additional_v8_checks": [
+    "R4's 454 root IDs and 40 journal IDs are recorded and verified even if total counts do not change.",
+    "17/17 current R4 checks passed with real GitHub data; direct Node.js runtime still unverified for full corpus.",
+    "Default reserve screening now uses current date in Asia/Krasnoyarsk; 2026-10-23 snapshot is stale on 2026-10-24 unless a new snapshot is retrieved."
+  ],
+  "stage5_addendum_2026_10_24": {
+    "status": "INTEGRATION_GATE_PREPARED_BUT_NOT_COMPLETE",
+    "new_prewrite_safety": {
+      "details": "Load old manifest and prepare three index files in a staging directory before committing; on ordinary os.replace OSError restore previous bytes. Hard-process crash between multiple renames is not an atomic three-file transaction.",
+      "code_sha": "9e3a0df226dd0bb2e8fd93f69f838f886dd96fb6",
+      "tests_added": 2,
+      "native_tests_executed": false
+    },
+    "native_offline_release_gate": {
+      "path": "threads/radar/integration_gate.py",
+      "code_git_blob_sha": "1f3026e15763c2076569c43c1afa2991bc7cc023",
+      "tested_exact_file": true,
+      "native_python_version": "3.13.5",
+      "native_syntax_compilation": "PASS",
+      "native_copy_input_smoke": "PASS (eight synthetic input files, including one Windsor snapshot and one continuation source)",
+      "native_missing_snapshot_refusal": "PASS",
+      "real_full_corpus_rebuild": "NOT_RUN",
+      "native_full_node_suite": "NOT_RUN",
+      "usage": "python -B threads/radar/integration_gate.py --repo-root .",
+      "mode": "Read-only full-corpus rebuild into scratch temp dir, 2 reproductions and compare three artifacts byte for byte; followed by native Python and Node test suites"
+    },
+    "new_gate_unit_tests": {
+      "path": "threads/radar/test_integration_gate.py",
+      "added": 3,
+      "native_executed": false
+    },
+    "previously_verified_tests_only": {
+      "python_native": 41,
+      "node_native": 17,
+      "last_verified_python_code_sha": "6dffbb08379b02886eb83b8a69dc5c7b0d2ee026",
+      "note": "Later code edits and newly added tests require full native suite rerun. Do not report 41 as newly confirmed on this newer code."
+    },
+    "confirmed_constraint": "Container GitHub DNS unavailable and full archive not mounted. GitHub connector can inspect and edit exact files but cannot transfer raw repository into native test container via the available file interface."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "as_of_krasnoyarsk": "2026-10-24",
+  "account": "mirpottera",
+  "source_file": "threads/radar/inbox/windsor-2026-10-24-retrieved.json",
+  "source_blob_sha": "b03c07450cc1df7e51f922c746f06fedc979025e",
+  "index_state": "NOT_PROMOTED",
+  "source_rows": 6,
+  "index_author_roots_before": 454,
+  "expected_author_roots_after_accepted_rebuild": 456,
+  "new_author_roots": [
+    {
+      "id": "18058181561570070",
+      "published_at": "2026-10-23T20:00:51+0000",
+      "url": "https://www.threads.com/@mirpottera/post/De2Xf_fAXgQ",
+      "media_type": "TEXT_POST",
+      "published_at_krasnoyarsk": "2026-10-24T03:00:51+0700"
+    },
+    {
+      "id": "17899242612398487",
+      "published_at": "2026-10-24T04:00:43+0000",
+      "url": "https://www.threads.com/@mirpottera/post/De3OanlEW0D",
+      "media_type": "TEXT_POST",
+      "published_at_krasnoyarsk": "2026-10-24T11:00:43+0700"
+    }
+  ],
+  "already_indexed_roots": [
+    "18117730213795741",
+    "17994264717116182",
+    "18109268174261128"
+  ],
+  "repost_facades_skipped": [
+    "18130014499888055"
+  ],
+  "view_refresh_candidates": [
+    {
+      "id": "18117730213795741",
+      "old_views": 250,
+      "new_views": 272
+    },
+    {
+      "id": "17994264717116182",
+      "old_views": 696,
+      "new_views": 982
+    },
+    {
+      "id": "18109268174261128",
+      "old_views": 471,
+      "new_views": 1118
+    }
+  ],
+  "immutable_field_conflicts": [],
+  "decision": "SAFE_FOR_SOURCE_PROMOTION_ONLY_AFTER_NATIVE_BUILD_AND_VERIFY",
+  "limitations": [
+    "The 16 probable continuations still need chain completeness checks.",
+    "This is a partial two-day source query, not verified full-account export.",
+    "Review source timestamps and completeness before indexing.",
+    "R4 reserve is stale and must be re-screened against 456 root records.",
+    "No threads publication, main merge, or production deployment performed."
+  ]
+}

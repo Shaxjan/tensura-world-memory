@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "source_commit": "310ee3ad7d020f411b024027a3f5cb9b764053eb",
+  "full_archive_blob_sha": "ce1189744057e6bf1141e881d4212785e2a12150",
+  "posts_journal_blob_sha": "b6485bd5d1175f77b785b22cb0f002de445a565c",
+  "source_snapshot": [
+    "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+    "threads/radar/snapshots/windsor-2026-10-21.json",
+    "threads/radar/snapshots/windsor-2026-10-21_rev2.json",
+    "threads/radar/snapshots/windsor-2026-10-22.json",
+    "threads/radar/snapshots/windsor-2026-10-23.json",
+    "threads/radar/snapshots/windsor-promoted-0-windsor-2026-10-24-retrieved.json",
+    "threads/radar/snapshots/windsor-promoted-1-windsor-20261025T003529Z-eddca5900dc17028-retrieved.json"
+  ],
+  "source_types": [
+    "verified_full_chain",
+    "Windsor.ai Threads",
+    "editorial posts.json"
+  ],
+  "generated_date_utc": "2026-10-25",
+  "counts": {
+    "snapshot_records": 55,
+    "snapshot_reposts": 10,
+    "historic_posts": 414,
+    "new_author_roots": 45,
+    "total_author_roots": 459,
+    "journal_cards": 40,
+    "journal_state_counts": {
+      "published": 32,
+      "scheduled": 8
+    },
+    "duplicate_ids": 0,
+    "unresolved_journal_links": 23,
+    "author_continuation_parts": 16,
+    "author_continuation_roots": 16
+  },
+  "limitations": [
+    "16 probable author continuations may be searched but are not fully verified",
+    "Later self-replies and conversational comments must not be appended to root post text",
+    "New root chains remain chain_complete=false until independently verified",
+    "Unlinked journal cards remain independent, and scheduled is not proof of publication",
+    "Publication data after 2026-10-25 is not indexed; sync remains manual",
+    "Semantic comparison is heuristic; literary canon and narrative originality need editor approval"
+  ],
+  "source_author_continuations": "threads/radar/snapshots/author-continuations-2026-10-23.json"
+}

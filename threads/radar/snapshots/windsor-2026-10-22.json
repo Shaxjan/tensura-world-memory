@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "source": "Windsor.ai Threads",
+  "retrieval_date_utc": "2026-10-23",
+  "period_utc": [
+    "2026-10-22",
+    "2026-10-22"
+  ],
+  "read_fields": [
+    "post_id",
+    "post_timestamp",
+    "post_text",
+    "post_permalink",
+    "post_media_type",
+    "post_views"
+  ],
+  "count": 6,
+  "posts": [
+    {
+      "post_id": "18108890942350335",
+      "post_timestamp": "2026-10-22T20:00:23+0000",
+      "post_text": "Когда Гарри пригласил Полумну на рождественскую вечеринку Слизнорта, он смущённо уточнил, что зовёт её просто как друга. А Полумна вдруг просияла. Никто прежде не приглашал её на вечеринку именно как друга. Девочку, над которой в Хогвартсе постоянно смеялись, наконец-то кто-то захотел видеть рядом с собой. И мне особенно нравится одна деталь: Гарри боялся, что Полумна неправильно поймёт его приглашение. А она поняла его именно так, как мечтала.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DezypopiPlO",
+      "post_media_type": "TEXT_POST",
+      "post_views": 25326
+    },
+    {
+      "post_id": "17943551229093594",
+      "post_timestamp": "2026-10-22T14:00:50+0000",
+      "post_text": "Олливандер бы заплакал, узнав, что творилось на съёмках.",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DezJgPcDUWn",
+      "post_media_type": "VIDEO",
+      "post_views": 770
+    },
+    {
+      "post_id": "17961997119079024",
+      "post_timestamp": "2026-10-22T13:55:26+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DezI4tgiEEo",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "18502342567102273",
+      "post_timestamp": "2026-10-22T10:50:32+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeyzuadCI8s",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "18636574702034920",
+      "post_timestamp": "2026-10-22T04:14:32+0000",
+      "post_text": null,
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeyGaDUiDTF",
+      "post_media_type": "REPOST_FACADE",
+      "post_views": 0
+    },
+    {
+      "post_id": "18104629274128714",
+      "post_timestamp": "2026-10-22T04:00:26+0000",
+      "post_text": "В Британии волшебникам запретили летать на коврах. Почему? Потому что ковёр считается магловским предметом, а заколдовывать такие вещи нельзя. Торговец Али Башир пытался объяснить Артуру Уизли, что это прекрасный семейный транспорт. Были даже ковры на двенадцать человек! Но Артур стоял на своём: закон есть закон. И всё бы ничего, если бы у самого Артура в гараже не стоял заколдованный летающий \"Форд\"",
+      "post_permalink": "https://www.threads.com/@mirpottera/post/DeyEy24DfT5",
+      "post_media_type": "TEXT_POST",
+      "post_views": 8635
+    }
+  ]
+}

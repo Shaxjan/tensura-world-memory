@@ -1,0 +1,49 @@
+name: Threads Radar Stage 8 Inbox Candidate Check
+on:
+  push:
+    branches:
+      - radar-stage-b-index-20261020
+    paths:
+      - "threads/radar/inbox/**"
+      - "threads/radar/stage8_preview.py"
+      - "threads/radar/test_stage8_preview.py"
+      - ".github/workflows/radar-stage8-inbox-preview.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: radar-stage8-preview-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  read-only-preview:
+    if: github.ref == 'refs/heads/radar-stage-b-index-20261020'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Native full-corpus baseline acceptance
+        run: python -B threads/radar/integration_gate.py --repo-root .
+      - name: Read-only incremental candidate preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B threads/radar/stage8_preview.py | tee /tmp/radar-stage8-preview.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report = json.loads(Path('/tmp/radar-stage8-preview.json').read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as out:
+              out.write('## Threads Radar — Stage 8 (read-only)\n')
+              out.write('Result: **' + report['result'] + '**\n\n')
+              out.write('Current roots: ' + str(report['baseline_roots']) + '\n\n')
+              out.write('Candidate roots: ' + str(report['candidate_roots']) + '\n\n')
+              out.write('No archive write, no approval, no merge, no Threads publication.\n')
+          PY

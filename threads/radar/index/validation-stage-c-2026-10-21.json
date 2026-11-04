@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-21",
+  "scope": "Full 447-post saved index + current semantic.js and semantic.test.js source; executed in V8 with node:test/assert/fs compatible test stubs, not a standalone Node process",
+  "index_size": 447,
+  "source_snapshots": [
+    "threads/radar/snapshots/windsor-2026-10-13_to_2026-10-20.json",
+    "threads/radar/snapshots/windsor-2026-10-21.json"
+  ],
+  "structured_checks": {
+    "unique_post_ids": true,
+    "author_posts_447": true,
+    "journal_40": true,
+    "scheduled_8": true,
+    "new_snap_3": true,
+    "source_refreshed_through_21": true,
+    "symlink_and_repo_changes_none": true,
+    "no_reposts": true,
+    "no_exact_url_dups": true,
+    "latest_post_imported": true,
+    "check_date_format": true
+  },
+  "tests": [
+    {
+      "name": "index covers 447 unique published author roots",
+      "status": "PASS"
+    },
+    {
+      "name": "Molly's seventeenth-birthday gift is SAME_STORY, not new",
+      "status": "PASS"
+    },
+    {
+      "name": "Hagrid's parents-photo album is SAME_STORY even if hidden in original continuation",
+      "status": "PASS"
+    },
+    {
+      "name": "verbatim copy is DUPLICATE",
+      "status": "PASS"
+    },
+    {
+      "name": "different narrator AND conflict produces provisional NEW_ANGLE",
+      "status": "PASS"
+    },
+    {
+      "name": "new event with familiar character not automatically classified as repetition",
+      "status": "PASS"
+    },
+    {
+      "name": "known different event with same Molly and watches not confused with Fabian gift",
+      "status": "PASS"
+    },
+    {
+      "name": "nearby scheduled storyline is not silently ignored",
+      "status": "PASS"
+    },
+    {
+      "name": "low-score scheduled reference does not block different Molly watch angle",
+      "status": "PASS"
+    },
+    {
+      "name": "canceled draft ignored; schedule retains separate state",
+      "status": "PASS"
+    },
+    {
+      "name": "stale snapshot never proves NEW_STORY",
+      "status": "PASS"
+    },
+    {
+      "name": "drafted metadata without evidence is REVIEW_REQUIRED",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate source post_id is not surfaced twice",
+      "status": "PASS"
+    },
+    {
+      "name": "empty archive cannot certify novelty",
+      "status": "PASS"
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "limits": [
+    "Rule-based comparison has not been calibrated on a broad independent human-labeled dataset",
+    "Only explicitly modeled events receive deeper conflict analysis; other texts use conservative lexical candidates",
+    "Replies/continuations after 12 October remain incomplete",
+    "The Python builder and direct node --test command have not been executed in an external runtime",
+    "NEW_STORY and NEW_ANGLE are preliminary editorial assessments, not originality guarantees"
+  ]
+}

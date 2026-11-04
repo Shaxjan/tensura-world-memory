@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "account": "mirpottera",
+  "checked_period_utc": [
+    "2026-10-13",
+    "2026-10-23"
+  ],
+  "source": "Windsor.ai own replies, 5 date-scoped requests",
+  "total_self_replies_found": 30,
+  "continued_direct_root_within_90_seconds": 16,
+  "excluded_from_root_search_text": 14,
+  "exclusion_counts": {
+    "LATE_SELF_REPLY": 4,
+    "OTHER_ROOT_COMMENT": 5,
+    "NESTED_CONVERSATION_COMMENT": 5
+  },
+  "record_policy": "Only own reply IDs and root IDs recorded; no readers' comments stored. Non-continuations are excluded from published post texts.",
+  "non_continuation_evidence": [
+    {
+      "reply_id": "18127496233861575",
+      "root_post_id": "17919660228445413",
+      "published_at": "2026-10-13T06:50:09+0000",
+      "decision": "LATE_SELF_REPLY",
+      "seconds_after_root": 10211
+    },
+    {
+      "reply_id": "18130782050306483",
+      "root_post_id": "18033716087893576",
+      "published_at": "2026-10-14T06:33:19+0000",
+      "decision": "LATE_SELF_REPLY",
+      "seconds_after_root": 9201
+    },
+    {
+      "reply_id": "18119318546066288",
+      "root_post_id": "17960241744011499",
+      "published_at": "2026-10-14T06:19:17+0000",
+      "decision": "LATE_SELF_REPLY",
+      "seconds_after_root": 58716
+    },
+    {
+      "reply_id": "17929651977422724",
+      "root_post_id": "18119550259962793",
+      "published_at": "2026-10-14T05:49:54+0000",
+      "decision": "LATE_SELF_REPLY",
+      "seconds_after_root": 78595
+    },
+    {
+      "reply_id": "18105286820000862",
+      "root_post_id": "17917255698259784",
+      "published_at": "2026-10-21T16:22:15+0000",
+      "decision": "OTHER_ROOT_COMMENT",
+      "seconds_after_root": null
+    },
+    {
+      "reply_id": "18098423735403340",
+      "root_post_id": "17917255698259784",
+      "published_at": "2026-10-21T16:21:04+0000",
+      "decision": "OTHER_ROOT_COMMENT",
+      "seconds_after_root": null
+    },
+    {
+      "reply_id": "18130908496839736",
+      "root_post_id": "17917255698259784",
+      "published_at": "2026-10-21T16:19:38+0000",
+      "decision": "OTHER_ROOT_COMMENT",
+      "seconds_after_root": null
+    },
+    {
+      "reply_id": "17967067659192221",
+      "root_post_id": "17917255698259784",
+      "published_at": "2026-10-21T16:18:15+0000",
+      "decision": "OTHER_ROOT_COMMENT",
+      "seconds_after_root": null
+    },
+    {
+      "reply_id": "18071006855764590",
+      "root_post_id": "17917255698259784",
+      "published_at": "2026-10-21T16:16:42+0000",
+      "decision": "OTHER_ROOT_COMMENT",
+      "seconds_after_root": null
+    },
+    {
+      "reply_id": "18071619452781074",
+      "root_post_id": "18104629274128714",
+      "published_at": "2026-10-22T09:00:47+0000",
+      "decision": "NESTED_CONVERSATION_COMMENT",
+      "seconds_after_root": 18021
+    },
+    {
+      "reply_id": "18111983354226097",
+      "root_post_id": "18104629274128714",
+      "published_at": "2026-10-22T08:55:43+0000",
+      "decision": "NESTED_CONVERSATION_COMMENT",
+      "seconds_after_root": 17717
+    },
+    {
+      "reply_id": "18069842078598109",
+      "root_post_id": "18104629274128714",
+      "published_at": "2026-10-22T08:54:20+0000",
+      "decision": "NESTED_CONVERSATION_COMMENT",
+      "seconds_after_root": 17634
+    },
+    {
+      "reply_id": "18114369671140547",
+      "root_post_id": "18104629274128714",
+      "published_at": "2026-10-22T08:52:57+0000",
+      "decision": "NESTED_CONVERSATION_COMMENT",
+      "seconds_after_root": 17551
+    },
+    {
+      "reply_id": "18023746514926660",
+      "root_post_id": "18104629274128714",
+      "published_at": "2026-10-22T08:51:34+0000",
+      "decision": "NESTED_CONVERSATION_COMMENT",
+      "seconds_after_root": 17468
+    }
+  ]
+}
